@@ -43,8 +43,24 @@ h2 {
   @apply font-roc text-base uppercase font-medium text-white leading-tight;
 }
 
+h3 {
+  @apply font-roc font-medium text-4xl text-white leading-tight;
+}
+
+p {
+  @apply text-base leading-tight font-normal;
+}
+
 .body1 {
-  @apply text-xs text-white font-medium;
+  @apply text-sm text-white font-medium font-roc;
+}
+
+.body2 {
+  @apply text-xs font-light text-white leading-snug;
+}
+
+.body3 {
+  @apply font-roc text-2xl leading-tight font-medium;
 }
 
 .caption {
@@ -55,4 +71,8 @@ h2 {
 
 .btn-play {
   @apply bg-white py-3 px-8 text-black font-roc font-medium uppercase text-sm rounded-full w-56 leading-none;
+}
+
+.tools_wrapper div:not(:first-child) {
+  @apply -ml-2;
 }

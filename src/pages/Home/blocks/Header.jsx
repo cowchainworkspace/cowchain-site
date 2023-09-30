@@ -6,7 +6,7 @@ import clutch from "../../../assets/homepage/clutch.svg";
 
 const Header = () => {
   return (
-    <section className="overflow-hidden border-b border-b-th-grey" id="header">
+    <section className="overflow-hidden border-b border-b-th-fade" id="header">
       <div className="video-wrapper">
         <video playsInline autoPlay muted loop poster={poster}>
           <source src={video_bg} type="video/mp4" />

@@ -1,8 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "./index.html",
     "./src/*.{js,jsx,ts,tsx}",
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/tw-elements-react/dist/js/**/*.js"
   ],
   theme: {
     extend: {
@@ -10,8 +12,9 @@ module.exports = {
         'roc': ['Roc Grotesk', 'sans-serif'],
       },
       colors: {
-        'th-grey': "#bbb",
-        'th-violet': "EABBFF",
+        'th-fade': "#ffffff41",
+        'th-grey': "#ffffff71",
+        'th-violet': "#EABBFF",
       }
     },
   },
