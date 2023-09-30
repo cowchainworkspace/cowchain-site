@@ -51,6 +51,10 @@ p {
   @apply text-base leading-tight font-normal;
 }
 
+.header {
+  @apply text-lg uppercase underline font-roc;
+}
+
 .body {
   @apply text-xs text-white font-normal leading-relaxed;
 }
@@ -83,4 +87,19 @@ p {
 
 .tools_wrapper div:not(:first-child) {
   @apply -ml-2;
+}
+
+/* Interactive */
+
+.expertise_wrapper {
+  transition: 0.3s;
+}
+.expertise_wrapper:hover {
+  background: linear-gradient(
+    164deg,
+    #873cbc 0.26%,
+    #5f2c91 16.97%,
+    #11011f 42.6%,
+    #000 53.68%
+  );
 }

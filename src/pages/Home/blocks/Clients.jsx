@@ -1,6 +1,31 @@
 import React from "react";
 import bg from "../../../assets/homepage/clients_bg.png";
 import arrow from "../../../assets/arrow_right.svg";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+
+const Counter = ({ target, duration }) => {
+  const [ref, inView] = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
+  return (
+    <div ref={ref}>
+      <CountUp
+        start={0}
+        end={inView ? target : 0}
+        duration={duration}
+        suffix="+"
+        useEasing={true}
+      >
+        {({ countUpRef }) => (
+          <span className="num_lg text-white" ref={countUpRef} />
+        )}
+      </CountUp>
+    </div>
+  );
+};
 
 const Clients = () => {
   return (
@@ -10,15 +35,15 @@ const Clients = () => {
         <h3 className="text-white">OUR CLIENTS</h3>
         <div className="grid grid-cols-3 gap-x-8 mt-12">
           <div>
-            <p className="num_lg text-whites">30+</p>
+            <Counter duration={4} target={30} />
             <p className="body1 uppercase mt-2">Techonologies</p>
           </div>
           <div>
-            <p className="num_lg text-whites">84+</p>
+            <Counter duration={4} target={84} />
             <p className="body1 uppercase mt-2">Projects</p>
           </div>
           <div>
-            <p className="num_lg text-whites">50+</p>
+            <Counter duration={4} target={50} />
             <p className="body1 uppercase mt-2">Clients</p>
           </div>
         </div>
@@ -31,7 +56,9 @@ const Clients = () => {
         </p>
         <a href="#">
           <div className="flex items-center gap-x-2">
-            <p className="text-lg text-white uppercase underline font-roc">ALL PROJECTS</p>
+            <p className="header text-white uppercase underline">
+              ALL PROJECTS
+            </p>
             <img className="w-6" src={arrow} alt=""></img>
           </div>
         </a>

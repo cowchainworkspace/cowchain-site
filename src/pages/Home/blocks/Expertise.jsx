@@ -104,8 +104,11 @@ const CollapsedIcon = ({ logo, alt }) => {
     duration: 100,
   });
   return (
-    <div className="p-3 min-h-[48px] min-w-[48px] border bg-black border-white rounded-full flex items-center justify-center gap-x-2">
-      <div {...getToggleProps()}>
+    <div
+      className="p-3 min-h-[48px] min-w-[48px] border bg-black border-white rounded-full flex items-center justify-center gap-x-2"
+      {...getToggleProps()}
+    >
+      <div>
         <img alt={alt} src={logo}></img>
       </div>
       <div className="pl-2" {...getCollapseProps()}>
@@ -117,7 +120,7 @@ const CollapsedIcon = ({ logo, alt }) => {
 
 const ExpertiseBlock = ({ title, text, tools }) => {
   return (
-    <article className="border-b border-b-th-fade px-4 py-12">
+    <article className="border-b border-b-th-fade px-4 py-12 expertise_wrapper">
       <p className="body3 text-white">{title}</p>
       <p className="text-th-grey mt-8">{text}</p>
       <div className="flex items-center tools_wrapper mt-8">

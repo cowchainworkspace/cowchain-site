@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'roc': ['Roc Grotesk', 'sans-serif'],
+        'roc': ["roc-grotesk", 'sans-serif'],
       },
       colors: {
         'th-fade': "#ffffff41",
