@@ -4,6 +4,7 @@ import bg_top from "../../assets/bg/navbar_top.png";
 import Header from "./blocks/Header";
 import Benefits from "./blocks/Benefits";
 import Expertise from "./blocks/Expertise";
+import Clients from "./blocks/Clients";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <Header />
         <Benefits />
         <Expertise />
+        <Clients />
       </div>
     </section>
   );

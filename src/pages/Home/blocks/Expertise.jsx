@@ -14,7 +14,7 @@ import ts from "../../../assets/homepage/expertises/typescript.svg";
 import aws from "../../../assets/homepage/expertises/aws.svg";
 import google from "../../../assets/homepage/expertises/google.svg";
 import azure from "../../../assets/homepage/expertises/azure.svg";
-import bg from "../../../assets/homepage/expertise_bg.png"
+import bg from "../../../assets/homepage/expertise_bg.png";
 
 const expertiseData = [
   {
@@ -132,7 +132,7 @@ const ExpertiseBlock = ({ title, text, tools }) => {
 const Expertise = () => {
   return (
     <section id="expertise" className="relative">
-        <img className="absolute bottom-0 right-0" src={bg} alt=""></img>
+      <img className="absolute bottom-0 right-0" src={bg} alt=""></img>
       <div className="relative grid grid-cols-1">
         <div className="border-b border-b-th-fade py-16 text-center px-4">
           <h3 className="text-center">
