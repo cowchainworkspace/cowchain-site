@@ -89,6 +89,10 @@ p {
   @apply -ml-2;
 }
 
+.team_wrapper div:nth-child(odd) {
+  @apply border-r border-r-th-fade;
+}
+
 /* Interactive */
 
 .expertise_wrapper {

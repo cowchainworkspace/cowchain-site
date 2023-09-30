@@ -6,6 +6,7 @@ import Benefits from "./blocks/Benefits";
 import Expertise from "./blocks/Expertise";
 import Clients from "./blocks/Clients";
 import Projects from "./blocks/Projects";
+import Team from "./blocks/Team";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <Expertise />
         <Clients />
         <Projects />
+        <Team />
       </div>
     </section>
   );
