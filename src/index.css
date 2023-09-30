@@ -1,13 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+video {
+  object-fit: cover;
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: 100%;
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  /*text-align: center;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text styles */
+
+h1 {
+  @apply font-roc text-5xl font-medium text-white leading-tight;
+}
+
+h2 {
+  @apply font-roc text-base uppercase font-medium text-white leading-tight;
+}
+
+.body1 {
+  @apply text-xs text-white font-medium;
+}
+
+.caption {
+  @apply text-[12px] text-th-grey font-normal;
+}
+
+/* Element styles */
+
+.btn-play {
+  @apply bg-white py-3 px-8 text-black font-roc font-medium uppercase text-sm rounded-full w-56 leading-none;
 }
