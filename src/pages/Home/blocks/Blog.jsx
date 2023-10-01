@@ -16,7 +16,7 @@ const Post = ({ id, title, description, photo }) => {
         className="w-full h-72 bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${photo})` }}
       ></div>
-      <div className="flex flex-col p-6 h-full max-h-[280px]">
+      <div className="flex flex-col p-6 min-h-[280px]">
         <h2 className="mb-auto">{title}</h2>
         <TextTruncate className="body" line={5} text={toText(description)} />
         <div className="mt-auto">

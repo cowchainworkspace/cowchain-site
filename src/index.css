@@ -140,3 +140,23 @@ p {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.styles_faq-row__2YF3c {
+  @apply !border-b !border-b-th-fade;
+}
+
+.styles_icon-wrapper__2cftw {
+  @apply !top-6;
+}
+
+.faq-row {
+  @apply p-0 !important;
+}
+
+.styles_row-title__1YiiY[aria-expanded="true"] {
+  background: linear-gradient(184deg, #4d2c91 -8.83%, #000 90.23%) !important;
+}
+
+.row-content-text p{
+  @apply text-th-grey !important;
+}
