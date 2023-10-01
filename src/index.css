@@ -95,10 +95,10 @@ p {
 
 /* Interactive */
 
-.expertise_wrapper {
-  transition: 0.3s;
-}
-.expertise_wrapper:hover {
+.expertise_wrapper_bg {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
   background: linear-gradient(
     164deg,
     #873cbc 0.26%,
@@ -106,4 +106,37 @@ p {
     #11011f 42.6%,
     #000 53.68%
   );
+}
+
+.expertise_wrapper:hover > .expertise_wrapper_bg {
+  visibility: visible;
+  opacity: 1;
+}
+
+.expertise_wrapper {
+  -webkit-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+}
+
+.expertise_wrapper:hover {
+}
+
+.team_card_wrapper > .team_card_overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.team_card_wrapper:hover > .team_card_overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.blog_wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.blog_wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

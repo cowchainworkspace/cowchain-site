@@ -8,7 +8,7 @@ const teamData = [
     name: "mikhailo",
     role: "founder & CTO",
     photo: photo,
-    socail: {
+    social: {
       network: "LinkedIn",
       icon: linkedin,
       url: "#",
@@ -18,7 +18,7 @@ const teamData = [
     name: "Vladyslav",
     role: "full-stack dev",
     photo: photo,
-    socail: {
+    social: {
       network: "LinkedIn",
       icon: linkedin,
       url: "#",
@@ -28,7 +28,7 @@ const teamData = [
     name: "Nikita",
     role: "web 3 & solidity  dev",
     photo: photo,
-    socail: {
+    social: {
       network: "LinkedIn",
       icon: linkedin,
       url: "#",
@@ -38,7 +38,7 @@ const teamData = [
     name: "Vladyslav",
     role: "full-stack dev",
     photo: photo,
-    socail: {
+    social: {
       network: "LinkedIn",
       icon: linkedin,
       url: "#",
@@ -48,7 +48,7 @@ const teamData = [
     name: "jurii",
     role: "full-stack dev",
     photo: photo,
-    socail: {
+    social: {
       network: "LinkedIn",
       icon: linkedin,
       url: "#",
@@ -58,7 +58,7 @@ const teamData = [
     name: "oleh",
     role: "development lead",
     photo: photo,
-    socail: {
+    social: {
       network: "LinkedIn",
       icon: linkedin,
       url: "#",
@@ -68,7 +68,7 @@ const teamData = [
     name: "Bohdan",
     role: "web 3 full-stack dev",
     photo: photo,
-    socail: {
+    social: {
       network: "LinkedIn",
       icon: linkedin,
       url: "#",
@@ -78,7 +78,7 @@ const teamData = [
     name: "Vladyslav",
     role: "full-stack dev",
     photo: photo,
-    socail: {
+    social: {
       network: "LinkedIn",
       icon: linkedin,
       url: "#",
@@ -88,13 +88,34 @@ const teamData = [
     name: "jurii",
     role: "full-stack dev",
     photo: photo,
-    socail: {
+    social: {
       network: "LinkedIn",
       icon: linkedin,
       url: "#",
     },
   },
 ];
+
+const TeamCard = ({ name, role, photo, social }) => {
+  return (
+    <div className="relative py-[8vh] px-4 flex flex-col gap-y-2 border-b border-b-th-fade team_card_wrapper">
+      <div className="team_card_overlay absolute top-0 left-0 h-full w-full flex">
+        <div
+          className="bg-cover bg-center bg-no-repeat p-8 h-full w-full flex"
+          style={{ backgroundImage: `url(${photo})` }}
+        >
+          <div className="relative mt-auto ml-auto">
+            <a href="#" rel="nofollow" target="_blank">
+              <img className="w-12" src={social?.icon}></img>
+            </a>
+          </div>
+        </div>
+      </div>
+      <h2 className="text-center">{name}</h2>
+      <p className="text-center caption uppercase">{role}</p>
+    </div>
+  );
+};
 
 const Team = () => {
   return (
@@ -113,10 +134,7 @@ const Team = () => {
         </div>
         <div className="grid grid-cols-2 team_wrapper">
           {teamData.map((member, index) => (
-            <div className="py-[8vh] px-4 flex flex-col gap-y-2 border-b border-b-th-fade">
-              <h2 className="text-center">{member.name}</h2>
-              <p className="text-center caption uppercase">{member.role}</p>
-            </div>
+            <TeamCard key={index} {...member} />
           ))}
         </div>
       </div>
