@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&display=swap");
+@import "~/node_modules/react-modal-video/scss/modal-video.scss";
 
 body {
   margin: 0;
@@ -16,7 +17,7 @@ body {
 /* Text styles */
 
 h1 {
-  @apply font-roc text-5xl font-medium text-white leading-tight;
+  @apply font-roc text-5xl md:text-6xl lg:text-8xl font-medium text-white leading-tight;
 }
 
 h2 {
@@ -63,14 +64,18 @@ p {
   @apply text-red-500 text-base font-bold;
 }
 
+.navlink {
+  @apply text-sm lg:text-base uppercase font-roc font-normal text-white leading-none;
+}
+
 /* Element styles */
 
 .btn-play {
-  @apply bg-white py-3 px-8 text-black font-roc font-medium uppercase text-sm rounded-full w-56 leading-none;
+  @apply cursor-pointer bg-white pb-2 pt-3 px-8 text-black font-roc font-medium uppercase text-sm rounded-full w-56 leading-none;
 }
 
 .btn-contact {
-  @apply bg-white w-36 h-36 flex rounded-full items-center justify-center uppercase text-base text-black font-roc font-medium;
+  @apply cursor-pointer bg-white w-36 h-36 flex rounded-full items-center justify-center uppercase text-base text-black font-roc font-medium;
   transition: color 0.3s, background-color 0.3s ease-in-out;
 }
 
@@ -80,7 +85,7 @@ p {
 }
 
 .btn-submit {
-  @apply bg-white text-base font-medium font-roc uppercase pb-3 pt-4 px-8 text-black;
+  @apply cursor-pointer bg-white text-base font-medium font-roc uppercase h-12 lg:h-16 flex items-center pt-1 px-8 text-black;
   transition: color 0.3s, background-color 0.3s ease-in-out;
 }
 
@@ -100,6 +105,7 @@ video {
   top: auto;
   left: auto;
   width: 100%;
+  @apply max-w-3xl;
 }
 
 .video-wrapper {
@@ -115,6 +121,35 @@ video {
   z-index: 10;
 }
 
+.modal-video {
+  @apply w-36 left-auto right-0;
+}
+
+.modal-video-inner {
+  @apply h-36 mt-auto;
+}
+
+.modal-video-movie-wrap {
+  @apply rounded-full;
+}
+
+.modal-video-movie-wrap iframe {
+  @apply border-2 border-white rounded-full;
+}
+
+.modal-video-close-btn {
+  @apply w-6 h-6 -top-6 -right-1;
+}
+
+.modal-video-close-btn::before,
+.modal-video-close-btn::after {
+  @apply mt-0;
+}
+
+.ytp-title-text {
+  @apply !hidden;
+}
+
 .expertise_wrapper_bg {
   visibility: hidden;
   opacity: 0;
@@ -124,7 +159,7 @@ video {
     #873cbc 0.26%,
     #5f2c91 16.97%,
     #11011f 42.6%,
-    #000 53.68%
+    transparent 53.68%
   );
 }
 

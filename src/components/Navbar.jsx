@@ -69,8 +69,19 @@ const Navbar = () => {
 
   return (
     <section className="bg-transparent relative">
-      <img alt="" src={bg_top} className="absolute -top-24 left-0 w-full"></img>
-      <div className="relative px-4 h-24 flex items-center">
+      <img
+        alt=""
+        src={bg_top}
+        className="absolute bottom-0 w-full h-full"
+      ></img>
+      <div className="relative px-4 lg:pr-0 h-24 md:h-16 flex items-center gap-x-8 border-b border-b-[#ffffff50] justify-between">
+        <nav className="hidden lg:flex items-center justify-between w-full max-w-[400px]">
+          {anchorLinks.map((link, index) => (
+            <AnchorLink key={index} href={link.link}>
+              <p className="navlink mt-1">{link.title}</p>
+            </AnchorLink>
+          ))}
+        </nav>
         <a href="/" rel="nofollow">
           <img
             className="w-32"
@@ -81,19 +92,27 @@ const Navbar = () => {
         </a>
         {toggleMenu ? (
           <img
-            className="w-6 ml-auto cursor-pointer md:hidden"
+            className="w-6 ml-auto cursor-pointer lg:hidden"
             src={menu_close}
             onClick={() => setToggleMenu(false)}
             alt=""
           ></img>
         ) : (
           <img
-            className="w-6 ml-auto cursor-pointer"
+            className="w-6 ml-auto cursor-pointer lg:hidden"
             alt=""
             src={menu_open}
             onClick={() => setToggleMenu(true)}
           ></img>
         )}
+        <div className="hidden lg:flex items-center justify-between w-full max-w-[400px]">
+          {routerLinks.map((link, index) => (
+            <Link key={index * 4} to={link.link}>
+              <p className="navlink mt-1">{link.title}</p>
+            </Link>
+          ))}
+          <AnchorLink className="btn-submit h-16">GET IN TOUCH</AnchorLink>
+        </div>
         <AnimatePresence>
           {toggleMenu && (
             <motion.div
@@ -108,7 +127,7 @@ const Navbar = () => {
                 animate={toggleMenu ? "open" : "closed"}
                 variants={sideVariants}
               >
-                <motion.div className="relative px-4 h-24 flex items-center border-b border-b-th-fade">
+                <motion.div className="relative px-4 h-24 md:h-16 flex items-center border-b border-b-th-fade">
                   <a href="/" rel="nofollow">
                     <img
                       className="w-32"
@@ -118,7 +137,7 @@ const Navbar = () => {
                     ></img>
                   </a>
                   <img
-                    className="w-8 ml-auto cursor-pointer md:hidden"
+                    className="w-8 ml-auto cursor-pointer lg:hidden"
                     src={menu_close}
                     onClick={() => setToggleMenu(false)}
                     alt=""
@@ -128,7 +147,6 @@ const Navbar = () => {
                   {anchorLinks.map((link, index) => (
                     <AnchorLink
                       key={index}
-                      className="navlink"
                       href={link.link}
                       onClick={() => setToggleMenu(false)}
                       variants={linkVariants}
@@ -150,7 +168,6 @@ const Navbar = () => {
                   {routerLinks.map((link, index) => (
                     <Link
                       key={index * 4}
-                      className="navlink"
                       to={link.link}
                       onClick={() => setToggleMenu(false)}
                       variants={linkVariants}
