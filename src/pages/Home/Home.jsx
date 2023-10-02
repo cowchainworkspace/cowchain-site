@@ -9,6 +9,7 @@ import Projects from "./blocks/Projects";
 import Team from "./blocks/Team";
 import Blog from "./blocks/Blog";
 import FAQ from "./blocks/FAQ";
+import Contact from "./blocks/Contact";
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
         <Team />
         <Blog />
         <FAQ />
+        <Contact />
       </div>
     </section>
   );

@@ -79,10 +79,27 @@ p {
   @apply font-roc font-medium text-4xl text-white leading-tight;
 }
 
+.error-span {
+  @apply text-red-500 text-base font-bold;
+}
+
 /* Element styles */
 
 .btn-play {
   @apply bg-white py-3 px-8 text-black font-roc font-medium uppercase text-sm rounded-full w-56 leading-none;
+}
+
+.btn-contact {
+  @apply bg-white w-36 h-36 flex rounded-full items-center justify-center uppercase text-base text-black font-roc font-medium;
+  transition: color 0.3s, background-color 0.3s ease-in-out;
+}
+
+.btn-contact:hover {
+  @apply bg-[#ffffff10] text-white;
+}
+
+.btn-submit {
+  @apply bg-white text-base font-medium font-roc uppercase py-4 text-black;
 }
 
 .tools_wrapper div:not(:first-child) {
@@ -157,6 +174,56 @@ p {
   background: linear-gradient(184deg, #4d2c91 -8.83%, #000 90.23%) !important;
 }
 
-.row-content-text p{
+.row-content-text p {
   @apply text-th-grey !important;
+}
+
+.popup-modal-overlay {
+  /*background: rgba(209, 24, 13, 0.8);*/
+  background: rgba(0, 0, 0, 0.8);
+  @apply px-4;
+}
+
+.form_label_for_check {
+  @apply border border-th-grey;
+}
+
+.form_label_div {
+  @apply text-white pb-2 pt-3 px-4 uppercase font-roc font-medium text-base;
+}
+
+.form_check {
+  @apply hidden;
+}
+
+.form_check:checked + .form_label_div {
+  @apply text-black border-white bg-white;
+}
+
+.modal .text_input {
+  @apply border-b border-b-th-grey py-4 text-base font-normal text-white bg-black;
+}
+
+.modal .text_input::placeholder {
+  @apply text-base font-normal text-white;
+}
+
+.modal .text_input:focus {
+  @apply border-b border-b-white bg-black outline-none;
+}
+
+.modal .text_input:active {
+  @apply bg-black;
+}
+
+.modal input:-internal-autofill-selected {
+  @apply !bg-black;
+}
+
+.modal input:-webkit-autofill,
+.modal input:-webkit-autofill:hover, 
+.modal input:-webkit-autofill:focus, 
+.modal input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
 }
