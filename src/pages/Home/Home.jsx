@@ -10,12 +10,12 @@ import Team from "./blocks/Team";
 import Blog from "./blocks/Blog";
 import FAQ from "./blocks/FAQ";
 import Contact from "./blocks/Contact";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   return (
     <section className="overflow-hidden">
       <div className="bg-black relative">
-        <img alt="" src={bg_top} className="absolute top-0 left-0 w-full"></img>
         <Navbar />
         <Header />
         <Benefits />
@@ -26,6 +26,7 @@ const Home = () => {
         <Blog />
         <FAQ />
         <Contact />
+        <Footer />
       </div>
     </section>
   );

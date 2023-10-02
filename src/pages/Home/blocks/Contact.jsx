@@ -11,15 +11,21 @@ const Contact = () => {
     reset,
     formState: { errors },
   } = useForm();
+
+  const [sendError, setSendError] = useState(false);
   const [sendSuccess, setSendSuccess] = useState(false);
 
   const sendFormData = async (data, error) => {
-    send(
-      process.env.REACT_APP_SERVICE_ID,
-      process.env.REACT_APP_TEMPLATE_ID,
-      data,
-      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-    );
+    try {
+      send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        data,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      );
+    } catch (e) {
+      setSendError(true);
+    }
     reset();
     setSendSuccess(true);
   };
@@ -56,7 +62,7 @@ const Contact = () => {
             className="popup-modal"
             lockScroll
           >
-            <div className="modal max-h-[90vh] min-w-full h-full overflow-y-scroll p-4 bg-black max-w-5xl border-2 border-white">
+            <div className="modal max-h-[95vh] min-w-full h-full overflow-y-scroll p-4 bg-black max-w-5xl border-2 border-white">
               <div className="flex">
                 <img
                   className="cursor-pointer w-8 ml-auto"
@@ -76,7 +82,7 @@ const Contact = () => {
                   <p className="text-white">Services</p>
                   <div className="services_group_wrapper flex flex-wrap gap-2 mt-4">
                     {checkboxes.map((checkbox, index) => (
-                      <label className="form_label_for_check">
+                      <label key={index} className="form_label_for_check">
                         <input
                           type="checkbox"
                           name="services"
@@ -98,7 +104,7 @@ const Contact = () => {
                   <p className="text-white">Budget (optional)</p>
                   <div className="services_group_wrapper flex flex-wrap gap-2 mt-4">
                     {radioBtns.map((radioBtn, index) => (
-                      <label className="form_label_for_check">
+                      <label key={index * 10} className="form_label_for_check">
                         <input
                           type="radio"
                           name="services"

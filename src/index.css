@@ -13,26 +13,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-video {
-  object-fit: cover;
-  position: absolute;
-  top: auto;
-  left: auto;
-  width: 100%;
-}
-
-.video-wrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  /*text-align: center;*/
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Text styles */
 
 h1 {
@@ -94,12 +74,14 @@ p {
   transition: color 0.3s, background-color 0.3s ease-in-out;
 }
 
-.btn-contact:hover {
+.btn-contact:hover,
+.btn-submit:hover {
   @apply bg-[#ffffff10] text-white;
 }
 
 .btn-submit {
-  @apply bg-white text-base font-medium font-roc uppercase py-4 text-black;
+  @apply bg-white text-base font-medium font-roc uppercase pb-3 pt-4 px-8 text-black;
+  transition: color 0.3s, background-color 0.3s ease-in-out;
 }
 
 .tools_wrapper div:not(:first-child) {
@@ -111,6 +93,27 @@ p {
 }
 
 /* Interactive */
+
+video {
+  object-fit: cover;
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: 100%;
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  /*text-align: center;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
 
 .expertise_wrapper_bg {
   visibility: hidden;
@@ -158,7 +161,7 @@ p {
   scrollbar-width: none; /* Firefox */
 }
 
-.styles_faq-row__2YF3c {
+#faq .styles_faq-row__2YF3c {
   @apply !border-b !border-b-th-fade;
 }
 
@@ -170,11 +173,11 @@ p {
   @apply p-0 !important;
 }
 
-.styles_row-title__1YiiY[aria-expanded="true"] {
+#faq .styles_row-title__1YiiY[aria-expanded="true"] {
   background: linear-gradient(184deg, #4d2c91 -8.83%, #000 90.23%) !important;
 }
 
-.row-content-text p {
+#faq .row-content-text p {
   @apply text-th-grey !important;
 }
 
@@ -200,30 +203,50 @@ p {
   @apply text-black border-white bg-white;
 }
 
-.modal .text_input {
+.userform .text_input {
   @apply border-b border-b-th-grey py-4 text-base font-normal text-white bg-black;
 }
 
-.modal .text_input::placeholder {
+.userform .text_input::placeholder {
   @apply text-base font-normal text-white;
 }
 
-.modal .text_input:focus {
+.userform .text_input:focus {
   @apply border-b border-b-white bg-black outline-none;
 }
 
-.modal .text_input:active {
+.userform .text_input:active {
   @apply bg-black;
 }
 
-.modal input:-internal-autofill-selected {
+input:-internal-autofill-selected {
   @apply !bg-black;
 }
 
-.modal input:-webkit-autofill,
-.modal input:-webkit-autofill:hover, 
-.modal input:-webkit-autofill:focus, 
-.modal input:-webkit-autofill:active  {
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
   transition: background-color 5000s;
   -webkit-text-fill-color: #fff !important;
+}
+
+.footerform input {
+  @apply bg-[#ffffff10] text-base font-roc px-4 py-3 text-white;
+}
+
+.footerform input:placeholder {
+  @apply text-base font-normal text-white font-roc;
+}
+
+.footerform .text_input:focus {
+  @apply bg-[#ffffff10] outline-none;
+}
+
+.footerform .text_input:active {
+  @apply bg-[#ffffff10];
+}
+
+#footer .styles_faq-row__2YF3c {
+  @apply !border-none;
 }

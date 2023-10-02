@@ -3,16 +3,17 @@ import video_bg from "../../../assets/homepage/element-compress.mp4";
 import poster from "../../../assets/homepage/thumbnail.png";
 import upwork from "../../../assets/homepage/upwork.svg";
 import clutch from "../../../assets/homepage/clutch.svg";
+import bg_top from "../../../assets/bg/navbar_top.png";
 
 const Header = () => {
   return (
-    <section className="overflow-hidden border-b border-b-th-fade" id="header">
+    <section className="overflow-x-hidden overflow-y-visible border-b border-b-th-fade" id="header">
       <div className="video-wrapper">
         <video playsInline autoPlay muted loop poster={poster}>
           <source src={video_bg} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="px-4 relative">
+        <div className="px-4 relative pb-8">
           <h1 className="mt-4">
             COWCHAIN. <br></br> DEVELOPERS OF WEB3
           </h1>
@@ -24,7 +25,7 @@ const Header = () => {
               <img className="w-12" src={clutch} alt=""></img>
             </a>
           </div>
-          <div className="my-8 flex flex-col gap-y-4">
+          <div className="my-4 flex flex-col gap-y-4">
             <h2>We turn your startup ideas into viable Web3 businesses</h2>
             <div className="flex flex-col gap-y-1">
               <p className="body1">Mykhailo Adzhoiev</p>
