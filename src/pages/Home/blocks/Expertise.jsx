@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useCollapse } from "react-collapsed";
 import eth from "../../../assets/homepage/expertises/ethereum.svg";
 import ava from "../../../assets/homepage/expertises/avalanche.svg";
@@ -100,19 +100,30 @@ const expertiseData = [
   },
 ];
 
-const CollapsedIcon = ({ logo, alt }) => {
-  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse({
-    duration: 100,
-  });
-  return (
-    <div
+/* <div
       className="p-3 min-h-[48px] min-w-[48px] border bg-black border-white rounded-full flex items-center justify-center gap-x-2"
-      {...getToggleProps()}
+      {...getToggleProps({
+        onClick: () => setExpanded((prevExpanded) => !prevExpanded),
+      })}
     >
       <div>
         <img alt={alt} src={logo}></img>
       </div>
       <div className="pl-2" {...getCollapseProps()}>
+        <p className="body1">{alt}</p>
+      </div>
+    </div> */
+
+const CollapsedIcon = ({ logo, alt }) => {
+  /* const [isExpanded, setExpanded] = useState(false);
+  const { getCollapseProps, getToggleProps } = useCollapse({
+    duration: 100,
+    isExpanded,
+  }); */
+  return (
+    <div className="tool-icon-container p-3 min-h-[48px] min-w-[48px] border bg-black border-th-grey rounded-full flex items-center justify-center gap-x-2">
+      <img className="" src={logo}></img>
+      <div className="hidden tool-text pl-2 text-center">
         <p className="body1">{alt}</p>
       </div>
     </div>

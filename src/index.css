@@ -99,14 +99,6 @@ p {
   transition: color 0.3s, background-color 0.3s ease-in-out;
 }
 
-.tools_wrapper div:not(:first-child) {
-  @apply -ml-2;
-}
-
-/* .team_wrapper div:nth-child(odd) {
-  @apply border-r border-r-th-fade;
-} */
-
 .md-border-r {
   @apply md:border-r md:border-r-th-fade;
 }
@@ -169,6 +161,36 @@ video {
 
 .ytp-title-text {
   @apply !hidden;
+}
+
+.tools_wrapper {
+  @apply max-w-[296px];
+}
+
+.tools_wrapper div:not(:first-child) {
+  @apply -ml-2;
+}
+
+.tool-icon-container {
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.tool-icon-container:hover {
+  flex: 1 1 50%;
+}
+
+.tool-text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.tool-icon-container:hover > .tool-text {
+  @apply block;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
 }
 
 .expertise_wrapper_bg {
@@ -312,10 +334,10 @@ input:-webkit-autofill:active {
   @apply !border-none;
 }
 
-.footer-links p{
+.footer-links p {
   @apply text-[#bbb];
 }
 
-.footer-links p:hover{
+.footer-links p:hover {
   @apply text-white;
 }

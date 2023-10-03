@@ -44,7 +44,7 @@ const faqData = [
 const FAQ = () => {
 
   return (
-    <section id="faq" className="relative">
+    <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-5">
         <div className="border-b border-b-th-fade py-heading text-center px-default md:col-span-2 md-border-r">
           <h3 className="text-center md:text-left">

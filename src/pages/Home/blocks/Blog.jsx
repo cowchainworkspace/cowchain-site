@@ -33,7 +33,7 @@ const Post = ({ id, title, description, photo }) => {
 
 const Blog = () => {
   return (
-    <section id="blog">
+    <section id="blog" className="relative">
       <div className="grid grid-cols-1 md:grid-cols-5">
         <div className="border-b border-b-th-fade py-heading px-default flex flex-col gap-y-6 md:col-span-2 md-border-r">
           <h3 className="text-center md:text-left">STAY UP TO DATE</h3>

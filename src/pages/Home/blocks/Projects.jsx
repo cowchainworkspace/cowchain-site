@@ -35,7 +35,7 @@ const Project = ({ title, description, photo, tags }) => {
       style={{ backgroundImage: `url(${photo})` }}
     >
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent"></div>
-      <div className="absolute top-0 left-0 w-full h-full hidden flex-col gap-y-4 project-overlay px-12 py-16">
+      <div className="absolute top-0 left-0 w-full h-full hidden flex-col gap-y-4 project-overlay px-12 py-8">
         <Link to="/" className="btn-contact ml-auto">
           VIEW PROJECT
         </Link>
@@ -43,12 +43,12 @@ const Project = ({ title, description, photo, tags }) => {
           <div className="flex items-center gap-x-1">
             {tags.map((tag, index) => (
               <div key={index} className="bg-white rounded-full py-2 px-3">
-                <p className="text-black text-xs font-normal">{tag}</p>
+                <p className="text-black text-xs font-medium">{tag}</p>
               </div>
             ))}
           </div>
           <p className="text-white header uppercase">{title}</p>
-          <p className="body !text-[#bbb] max-w-xs">{description}</p>
+          <p className="body !text-[#bbb] max-w-sm">{description}</p>
         </div>
       </div>
       <div className="mt-auto flex flex-col gap-y-4 relative md:hidden">
