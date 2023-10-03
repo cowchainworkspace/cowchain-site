@@ -14,7 +14,7 @@ import twitter from "../assets/footer/twitter.svg";
 import medium from "../assets/footer/medium.svg";
 import mail from "../assets/footer/mail.svg";
 
-const Navbar = () => {
+const Navbar = ({ setBurgerOpen }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const sideVariants = {
     open: {
@@ -68,6 +68,16 @@ const Navbar = () => {
     },
   ];
 
+  const openBurger = () => {
+    setToggleMenu(true);
+    setBurgerOpen(true);
+  };
+
+  const closeBurger = () => {
+    setToggleMenu(false);
+    setBurgerOpen(false);
+  };
+
   return (
     <section className="bg-transparent relative">
       <img
@@ -97,7 +107,7 @@ const Navbar = () => {
           <img
             className="w-6 ml-auto cursor-pointer lg:hidden"
             src={menu_close}
-            onClick={() => setToggleMenu(false)}
+            onClick={closeBurger}
             alt=""
           ></img>
         ) : (
@@ -105,7 +115,7 @@ const Navbar = () => {
             className="w-6 ml-auto cursor-pointer lg:hidden"
             alt=""
             src={menu_open}
-            onClick={() => setToggleMenu(true)}
+            onClick={openBurger}
           ></img>
         )}
         <div className="hidden lg:flex items-center justify-between w-full max-w-[400px] xl:max-w-lg">
@@ -114,7 +124,9 @@ const Navbar = () => {
               <p className="navlink mt-1">{link.title}</p>
             </Link>
           ))}
-          <AnchorLink href="#contact" className="btn-submit h-16">GET IN TOUCH</AnchorLink>
+          <AnchorLink href="#contact" className="btn-submit h-16">
+            GET IN TOUCH
+          </AnchorLink>
         </div>
         <AnimatePresence>
           {toggleMenu && (
@@ -142,7 +154,7 @@ const Navbar = () => {
                   <img
                     className="w-8 ml-auto cursor-pointer lg:hidden"
                     src={menu_close}
-                    onClick={() => setToggleMenu(false)}
+                    onClick={closeBurger}
                     alt=""
                   ></img>
                 </motion.div>
@@ -151,7 +163,7 @@ const Navbar = () => {
                     <AnchorLink
                       key={index}
                       href={link.link}
-                      onClick={() => setToggleMenu(false)}
+                      onClick={closeBurger}
                       variants={linkVariants}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
@@ -172,7 +184,7 @@ const Navbar = () => {
                     <Link
                       key={index * 4}
                       to={link.link}
-                      onClick={() => setToggleMenu(false)}
+                      onClick={closeBurger}
                       variants={linkVariants}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
@@ -193,7 +205,7 @@ const Navbar = () => {
                 <AnchorLink
                   href="#contact"
                   className="btn-submit text-center mt-auto mx-4"
-                  onClick={() => setToggleMenu(false)}
+                  onClick={closeBurger}
                 >
                   GET IN TOUCH
                 </AnchorLink>

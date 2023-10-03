@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import bg_top from "../../assets/bg/navbar_top.png";
 import Header from "./blocks/Header";
@@ -13,10 +13,12 @@ import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
 
 const Home = () => {
+  const [burgerOpen, setBurgerOpen] = useState(false);
+  document.body.style.overflow = burgerOpen ? "hidden" : "visible";
   return (
     <section className="overflow-hidden">
       <div className="bg-black relative">
-        <Navbar />
+        <Navbar setBurgerOpen={setBurgerOpen} />
         <Header />
         <Benefits />
         <Expertise />

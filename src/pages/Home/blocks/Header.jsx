@@ -27,7 +27,7 @@ const Header = () => {
           <h1 className="mt-8 md:mt-16 lg:mt-24 relative">
             COWCHAIN. <br></br> DEVELOPERS OF WEB3
           </h1>
-          <div className="mt-[25vh] lg:mt-[30vh] grid grid-cols-1 md:grid-cols-2">
+          <div className="mt-[25vh] lg:mt-[30vh] xl:mt-[35vh] grid grid-cols-1 md:grid-cols-2">
             <div className="flex items-center relative md:gap-x-1">
               <a
                 href="https://www.upwork.com/ag/cowchain/"
@@ -51,7 +51,7 @@ const Header = () => {
                   <p className="body1">Mykhailo Adzhoiev</p>
                   <p className="caption">Founder & CTO</p>
                 </div>
-                <button className="btn-play" onClick={() => setOpen(true)}>
+                <button className="btn-play mt-4 md:mt-0" onClick={() => setOpen(true)}>
                   <div className="flex items-center justify-center gap-x-2">
                     <div className="mb-1">
                       <svg
