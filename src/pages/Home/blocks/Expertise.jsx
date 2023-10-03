@@ -15,6 +15,7 @@ import aws from "../../../assets/homepage/expertises/aws.svg";
 import google from "../../../assets/homepage/expertises/google.svg";
 import azure from "../../../assets/homepage/expertises/azure.svg";
 import bg from "../../../assets/homepage/expertise_bg.png";
+import bg_lg from "../../../assets/homepage/expertise_bg_lg.png";
 
 const expertiseData = [
   {
@@ -120,11 +121,11 @@ const CollapsedIcon = ({ logo, alt }) => {
 
 const ExpertiseBlock = ({ title, text, tools }) => {
   return (
-    <article className="relative border-b border-b-th-fade px-4 py-12 expertise_wrapper">
+    <article className="relative border-b border-b-th-fade px-4 xl:px-8 py-12 lg:py-16 xl:py-20 expertise_wrapper md-border-r">
       <div className="absolute top-0 left-0 w-full h-full expertise_wrapper_bg"></div>
       <div className="relative">
         <p className="body3 text-white">{title}</p>
-        <p className="text-th-grey mt-8">{text}</p>
+        <p className="text-[#bbb] mt-8">{text}</p>
         <div className="flex items-center tools_wrapper mt-8">
           {tools.map((tool, index) => (
             <CollapsedIcon key={index} {...tool} />
@@ -138,14 +139,20 @@ const ExpertiseBlock = ({ title, text, tools }) => {
 const Expertise = () => {
   return (
     <section id="expertise" className="relative">
-      <img className="absolute bottom-0 right-0" src={bg} alt=""></img>
-      <div className="relative grid grid-cols-1">
-        <div className="border-b border-b-th-fade py-16 text-center px-4">
-          <h3 className="text-center">
+      <img
+        srcSet={`${bg} 700w, ${bg_lg} 1000w`}
+        sizes="(max-width: 640px) 70vw, 70vw"
+        alt=""
+        className="absolute bottom-0 right-0 w-full"
+        src={bg_lg}
+      />
+      <div className="relative grid grid-cols-1 md:grid-cols-5">
+        <div className="border-b border-b-th-fade py-heading text-center px-default md:col-span-2 md-border-r">
+          <h3 className="text-center md:text-left">
             OUR<br></br>EXPERTISE
           </h3>
         </div>
-        <div>
+        <div className="md:col-span-3 grid grid-cols-1 xl:grid-cols-2">
           {expertiseData.map((expertise, index) => (
             <ExpertiseBlock key={index * 2} {...expertise} />
           ))}

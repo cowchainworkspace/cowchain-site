@@ -21,27 +21,27 @@ h1 {
 }
 
 h2 {
-  @apply font-roc text-base uppercase font-medium text-white leading-tight;
+  @apply font-roc text-base md:text-lg lg:text-2xl uppercase font-medium text-white leading-tight md:leading-none;
 }
 
 h3 {
-  @apply font-roc font-medium text-4xl text-white leading-tight;
+  @apply font-roc font-medium text-4xl md:text-5xl lg:text-[60px] xl:text-7xl text-white leading-tight;
 }
 
 p {
-  @apply text-base leading-tight font-normal;
+  @apply text-white text-base leading-tight font-normal;
 }
 
 .header {
-  @apply text-lg uppercase underline font-roc;
+  @apply text-lg md:text-xl lg:text-2xl uppercase underline font-roc font-medium;
 }
 
 .body {
-  @apply text-xs text-white font-normal leading-relaxed;
+  @apply text-xs md:text-sm lg:text-base text-white font-normal leading-relaxed;
 }
 
 .body1 {
-  @apply text-sm text-white font-medium font-roc;
+  @apply text-sm md:text-base text-white font-medium font-roc;
 }
 
 .body2 {
@@ -49,15 +49,15 @@ p {
 }
 
 .body3 {
-  @apply font-roc text-2xl leading-tight font-medium;
+  @apply font-roc text-2xl md:text-3xl lg:text-[42px] xl:text-5xl leading-tight font-medium;
 }
 
 .caption {
-  @apply text-[12px] text-th-grey font-normal;
+  @apply text-[12px] md:text-xs text-th-grey font-normal;
 }
 
 .num_lg {
-  @apply font-roc font-medium text-4xl text-white leading-tight;
+  @apply font-roc font-medium text-4xl md:text-[42px] lg:text-6xl text-white leading-tight;
 }
 
 .error-span {
@@ -66,6 +66,16 @@ p {
 
 .navlink {
   @apply text-sm lg:text-base uppercase font-roc font-normal text-white leading-none;
+}
+
+/* Paddings */
+
+.px-default {
+  @apply px-4 md:px-8 lg:px-16 xl:px-24;
+}
+
+.py-heading {
+  @apply py-16 lg:py-24 xl:py-32;
 }
 
 /* Element styles */
@@ -85,7 +95,7 @@ p {
 }
 
 .btn-submit {
-  @apply cursor-pointer bg-white text-base font-medium font-roc uppercase h-12 lg:h-16 flex items-center pt-1 px-8 text-black;
+  @apply cursor-pointer bg-white text-base text-center font-medium font-roc uppercase h-12 lg:h-16 flex items-center justify-center pt-1 px-8 text-black;
   transition: color 0.3s, background-color 0.3s ease-in-out;
 }
 
@@ -93,8 +103,19 @@ p {
   @apply -ml-2;
 }
 
-.team_wrapper div:nth-child(odd) {
+/* .team_wrapper div:nth-child(odd) {
   @apply border-r border-r-th-fade;
+} */
+
+.md-border-r {
+  @apply md:border-r md:border-r-th-fade;
+}
+
+.violet-gradient-text {
+  background: linear-gradient(146deg, #e9bbff 32.8%, #8e66ff 61.09%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Interactive */
@@ -177,6 +198,10 @@ video {
 .expertise_wrapper:hover {
 }
 
+.project-card:hover > .project-overlay {
+  @apply flex;
+}
+
 .team_card_wrapper > .team_card_overlay {
   visibility: hidden;
   opacity: 0;
@@ -196,24 +221,20 @@ video {
   scrollbar-width: none; /* Firefox */
 }
 
-#faq .styles_faq-row__2YF3c {
-  @apply !border-b !border-b-th-fade;
+.chakra-accordion__item {
+  @apply border-b border-th-fade;
 }
 
-.styles_icon-wrapper__2cftw {
-  @apply !top-6;
+.chakra-collapse p {
+  @apply text-th-grey;
 }
 
-.faq-row {
-  @apply p-0 !important;
+.chakra-accordion__button {
+  @apply px-default py-4 md:py-8;
 }
 
-#faq .styles_row-title__1YiiY[aria-expanded="true"] {
-  background: linear-gradient(184deg, #4d2c91 -8.83%, #000 90.23%) !important;
-}
-
-#faq .row-content-text p {
-  @apply text-th-grey !important;
+.chakra-accordion__button[aria-expanded="true"] {
+  background: linear-gradient(184deg, #4d2c91 -8.83%, #000 76.23%) !important;
 }
 
 .popup-modal-overlay {
@@ -228,10 +249,15 @@ video {
 
 .form_label_div {
   @apply text-white pb-2 pt-3 px-4 uppercase font-roc font-medium text-base;
+  transition: background-color 300ms, color 300ms linear;
 }
 
 .form_check {
   @apply hidden;
+}
+
+.form_label_div:hover {
+  @apply text-black border-white bg-white;
 }
 
 .form_check:checked + .form_label_div {
@@ -284,4 +310,12 @@ input:-webkit-autofill:active {
 
 #footer .styles_faq-row__2YF3c {
   @apply !border-none;
+}
+
+.footer-links p{
+  @apply text-[#bbb];
+}
+
+.footer-links p:hover{
+  @apply text-white;
 }

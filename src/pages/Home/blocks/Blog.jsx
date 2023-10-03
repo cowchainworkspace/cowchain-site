@@ -11,12 +11,12 @@ const Post = ({ id, title, description, photo }) => {
     return node;
   };
   return (
-    <article className="relative min-w-[320px] w-[320px] border-r border-r-th-fade">
+    <article className="relative min-w-[320px] lg:min-w-[480px] w-[320px] lg:w-[480px] border-r border-r-th-fade">
       <div
-        className="w-full h-72 bg-cover bg-no-repeat bg-center"
+        className="w-full h-72 lg:h-96 bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${photo})` }}
       ></div>
-      <div className="flex flex-col p-6 min-h-[280px]">
+      <div className="flex flex-col p-6 lg:p-12 min-h-[280px] lg:min-h-[420px]">
         <h2 className="mb-auto">{title}</h2>
         <TextTruncate className="body" line={5} text={toText(description)} />
         <div className="mt-auto">
@@ -34,10 +34,10 @@ const Post = ({ id, title, description, photo }) => {
 const Blog = () => {
   return (
     <section id="blog">
-      <div className="grid grid-cols-1">
-        <div className="border-b border-b-th-fade py-16 text-center px-4 flex flex-col gap-y-6">
-          <h3 className="text-center">STAY UP TO DATE</h3>
-          <a href="#" className="mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-5">
+        <div className="border-b border-b-th-fade py-heading px-default flex flex-col gap-y-6 md:col-span-2 md-border-r">
+          <h3 className="text-center md:text-left">STAY UP TO DATE</h3>
+          <a href="#" className="mx-auto md:mx-0">
             <div className="flex items-center gap-x-2">
               <p className="header text-white uppercase underline">
                 ALL ARTICLES
@@ -46,7 +46,7 @@ const Blog = () => {
             </div>
           </a>
         </div>
-        <div className="border-b border-b-th-fade flex items-stretch overflow-y-scroll blog_wrapper">
+        <div className="border-b border-b-th-fade flex items-stretch overflow-y-scroll blog_wrapper md:col-span-3">
           {blogData &&
             blogData.map((postData, index) => (
               <Post key={index} {...postData} />

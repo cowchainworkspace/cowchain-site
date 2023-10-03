@@ -8,6 +8,7 @@ import mail from "../assets/footer/mail.svg";
 import Faq from "react-faq-component";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import logofont from "../assets/footer/logofont.svg";
+import { Link } from "react-router-dom";
 
 const faqRows = {
   title: "",
@@ -15,15 +16,15 @@ const faqRows = {
     {
       title: <h2>WHAT WE DO</h2>,
       content: (
-        <div className="flex flex-col gap-y-4 mt-4 mb-8">
+        <div className="flex flex-col gap-y-4 mt-4 mb-8 footer-links">
           <AnchorLink href="#expertise">
-            <p className="text-[#bbb]">Services & Techonologies</p>
+            <p>Services & Techonologies</p>
           </AnchorLink>
           <AnchorLink href="#projects">
-            <p className="text-[#bbb]">Cases</p>
+            <p>Cases</p>
           </AnchorLink>
           <AnchorLink href="#clients">
-            <p className="text-[#bbb]">Clients</p>
+            <p>Clients</p>
           </AnchorLink>
         </div>
       ),
@@ -31,31 +32,28 @@ const faqRows = {
     {
       title: <h2>AGENCY</h2>,
       content: (
-        <div className="flex flex-col gap-y-4 mt-4 mb-8">
-          <AnchorLink href="#expertise">
-            <p className="text-[#bbb]">Services & Techonologies</p>
-          </AnchorLink>
-          <AnchorLink href="#projects">
-            <p className="text-[#bbb]">Cases</p>
-          </AnchorLink>
-          <AnchorLink href="#clients">
-            <p className="text-[#bbb]">Clients</p>
-          </AnchorLink>
+        <div className="flex flex-col gap-y-4 mt-4 mb-8 footer-links">
+          <Link to="/">
+            <p>Team</p>
+          </Link>
+          <Link to="/">
+            <p>Blog</p>
+          </Link>
         </div>
       ),
     },
     {
       title: <h2>HELP</h2>,
       content: (
-        <div className="flex flex-col gap-y-4 mt-4 mb-8">
-          <AnchorLink href="#expertise">
-            <p className="text-[#bbb]">Services & Techonologies</p>
+        <div className="flex flex-col gap-y-4 mt-4 mb-8 footer-links">
+          <AnchorLink href="#contact">
+            <p>Contact Us</p>
           </AnchorLink>
-          <AnchorLink href="#projects">
-            <p className="text-[#bbb]">Cases</p>
-          </AnchorLink>
-          <AnchorLink href="#clients">
-            <p className="text-[#bbb]">Clients</p>
+          <a href="#" target="_blank" rel="nofollow">
+            <p>Privacy Policy</p>
+          </a>
+          <AnchorLink href="#faq">
+            <p>FAQs</p>
           </AnchorLink>
         </div>
       ),
@@ -114,21 +112,22 @@ const faqStyles = {
 const Footer = () => {
   return (
     <section id="footer" className="relative">
-      <div className="grid grid-cols-1">
-        <div className="border-b border-b-th-fade py-16 text-center px-4 flex flex-col gap-y-8">
-          <h2 className="text-center">What’s on your mind?</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="border-b border-b-th-fade md-border-r py-heading text-center px-default flex flex-col gap-y-8">
+          <h2 className="text-center md:text-left">What’s on your mind?</h2>
           <div>
-            <p className="text-[#bbb] text-center">
+            <p className="text-[#bbb] text-center md:text-left">
               Submit your email address and our team will get in touch with you
               within 48 hours. Or drop us a line at{" "}
             </p>
             <a href="mailto:sales@cowchain.io">
-              <p className="text-white underline">sales@cowchain.io</p>
+              <p className="text-white underline md:text-left">
+                sales@cowchain.io
+              </p>
             </a>
           </div>
-
           <FooterForm />
-          <div className="flex items-center justify-center gap-x-2 mx-auto">
+          <div className="flex items-center justify-center md:justify-start gap-x-2 mx-auto md:mx-0">
             <a
               href="https://www.linkedin.com/company/cowchain/"
               rel="nofollow"
@@ -154,10 +153,55 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="border-b border-b-th-fade py-16 px-4">
+        <div className="border-b border-b-th-fade py-heading px-default lg:hidden">
           <Faq data={faqRows} styles={faqStyles} config={faqConfig} />
         </div>
-        <div className="px-2 py-3">
+        <div className="border-b border-b-th-fade py-heading px-default hidden lg:block">
+          <div className="grid grid-cols-3 gap-x-8">
+            <div className="footer-links">
+              <h2>WHAT WE DO</h2>
+              <div className="flex flex-col gap-y-4 my-8">
+                <AnchorLink href="#expertise">
+                  <p className="text-[#bbb]">
+                    Services &<br></br> Techonologies
+                  </p>
+                </AnchorLink>
+                <AnchorLink href="#projects">
+                  <p className="text-[#bbb]">Cases</p>
+                </AnchorLink>
+                <AnchorLink href="#clients">
+                  <p className="text-[#bbb]">Clients</p>
+                </AnchorLink>
+              </div>
+            </div>
+            <div className="footer-links">
+              <h2>AGENCY</h2>
+              <div className="flex flex-col gap-y-4 my-8">
+                <Link to="/">
+                  <p className="text-[#bbb]">Team</p>
+                </Link>
+                <Link to="/">
+                  <p className="text-[#bbb]">Blog</p>
+                </Link>
+              </div>
+            </div>
+            <div className="footer-links">
+              <h2>HELP</h2>
+              <div className="flex flex-col gap-y-4 my-8">
+                <AnchorLink href="#contact">
+                  <p className="text-[#bbb]">Contact Us</p>
+                </AnchorLink>
+                <a href="#" target="_blank" rel="nofollow">
+                  <p className="text-[#bbb]">Privacy Policy</p>
+                </a>
+                <AnchorLink href="#faq">
+                  <p className="text-[#bbb]">FAQs</p>
+                </AnchorLink>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="px-2 py-3 md:py-8 md:col-span-2">
           <a href="/">
             <img className="w-full" src={logofont} alt=""></img>
           </a>

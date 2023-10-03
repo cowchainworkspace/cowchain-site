@@ -2,6 +2,7 @@ import React from "react";
 import pic1 from "../../../assets/homepage/projects/1.jpg";
 import pic2 from "../../../assets/homepage/projects/2.jpg";
 import pic3 from "../../../assets/homepage/projects/3.jpg";
+import { Link } from "react-router-dom";
 
 const projectsData = [
   {
@@ -30,11 +31,27 @@ const projectsData = [
 const Project = ({ title, description, photo, tags }) => {
   return (
     <article
-      className="relative bg-cover bg-no-repeat bg-bottom border-b border-b-th-fade py-8 px-4"
+      className="relative cursor-pointer bg-cover bg-no-repeat bg-bottom border-b border-b-th-fade py-8 px-4 md:px-8 lg:px-16 flex h-[30vh] md:h-[40vh] lg:h-[50vh] project-card"
       style={{ backgroundImage: `url(${photo})` }}
     >
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent"></div>
-      <div className="mt-[20vh] flex flex-col gap-y-4 relative">
+      <div className="absolute top-0 left-0 w-full h-full hidden flex-col gap-y-4 project-overlay px-12 py-16">
+        <Link to="/" className="btn-contact ml-auto">
+          VIEW PROJECT
+        </Link>
+        <div className="mt-auto flex flex-col gap-y-4">
+          <div className="flex items-center gap-x-1">
+            {tags.map((tag, index) => (
+              <div key={index} className="bg-white rounded-full py-2 px-3">
+                <p className="text-black text-xs font-normal">{tag}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-white header uppercase">{title}</p>
+          <p className="body !text-[#bbb] max-w-xs">{description}</p>
+        </div>
+      </div>
+      <div className="mt-auto flex flex-col gap-y-4 relative md:hidden">
         <p className="text-white heading uppercase">{title}</p>
         <p className="caption">{description}</p>
       </div>
@@ -45,7 +62,7 @@ const Project = ({ title, description, photo, tags }) => {
 const Projects = () => {
   return (
     <section id="projects" className="relative">
-      <div className="grid grid-cols-1">
+      <div className="grid grid-cols-1 md:grid-cols-3">
         {projectsData.map((project, index) => (
           <Project key={index} {...project} />
         ))}

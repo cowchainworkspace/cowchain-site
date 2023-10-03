@@ -9,7 +9,7 @@ import Projects from "./blocks/Projects";
 import Team from "./blocks/Team";
 import Blog from "./blocks/Blog";
 import FAQ from "./blocks/FAQ";
-import Contact from "./blocks/Contact";
+import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
 
 const Home = () => {

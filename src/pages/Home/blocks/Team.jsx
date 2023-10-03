@@ -2,6 +2,7 @@ import React from "react";
 import arrow from "../../../assets/arrow_right.svg";
 import photo from "../../../assets/homepage/team/mykhailo.jpg";
 import linkedin from "../../../assets/homepage/linkedin.svg";
+import bg from "../../../assets/bg/team_bg.png";
 
 const teamData = [
   {
@@ -98,7 +99,7 @@ const teamData = [
 
 const TeamCard = ({ name, role, photo, social }) => {
   return (
-    <div className="relative py-[8vh] px-4 flex flex-col gap-y-2 border-b border-b-th-fade team_card_wrapper">
+    <div className="relative py-[8vh] lg:py-[12vh] px-4 flex flex-col gap-y-2 border-b border-r border-b-th-fade border-r-th-fade team_card_wrapper ">
       <div className="team_card_overlay absolute top-0 left-0 h-full w-full flex">
         <div
           className="bg-cover bg-center bg-no-repeat p-8 h-full w-full flex"
@@ -120,10 +121,15 @@ const TeamCard = ({ name, role, photo, social }) => {
 const Team = () => {
   return (
     <section id="team" className="relative">
-      <div className="relative grid grid-cols-1">
-        <div className="border-b border-b-th-fade py-16 text-center px-4 flex flex-col gap-y-6">
-          <h3 className="text-center">OUR TEAM</h3>
-          <a href="#" className="mx-auto">
+      <img
+        className="hidden lg:block absolute bottom-0 h-full w-1/2 left-0"
+        src={bg}
+        alt=""
+      ></img>
+      <div className="relative grid grid-cols-1 lg:grid-cols-5">
+        <div className="border-b border-b-th-fade md-border-r py-heading text-center lg:text-left px-default flex flex-col gap-y-6 lg:col-span-2">
+          <h3 className="text-center lg:text-left">OUR TEAM</h3>
+          <a href="#" className="mx-auto lg:mx-0">
             <div className="flex items-center gap-x-2">
               <p className="header text-white uppercase underline">
                 MEET COWCHAIN
@@ -132,7 +138,7 @@ const Team = () => {
             </div>
           </a>
         </div>
-        <div className="grid grid-cols-2 team_wrapper">
+        <div className="grid grid-cols-2 bg-black md:grid-cols-3 team_wrapper lg:col-span-3">
           {teamData.map((member, index) => (
             <TeamCard key={index} {...member} />
           ))}

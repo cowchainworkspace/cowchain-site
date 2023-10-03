@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 const benefitsData = [
   {
     title: "Transforming raw concepts into results-driven code",
@@ -38,11 +37,13 @@ const Benefit = ({ title, text }) => {
 const Benefits = () => {
   return (
     <section id="benefits">
-      <div className="grid grid-cols-1">
-        <div className="flex flex-col py-16 px-4 justify-center items-center border-b border-b-th-fade">
-          <p className="body3 text-center text-white uppercase">
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="flex flex-col py-16 px-default justify-center items-center md:items-start border-b border-b-th-fade md-border-r">
+          <p className="body3 text-center md:text-left text-white uppercase max-w-xl">
             Being fully immersed in Web3, we’re not just devs —{" "}
-            <span className="text-th-violet">we’re product visionaries</span>{" "}
+            <span className="violet-gradient-text">
+              we’re product visionaries
+            </span>{" "}
             working as an in-house team{" "}
             <span className="text-th-grey">
               with you to grow your business with Web3

@@ -3,6 +3,7 @@ import logo_light from "../assets/logo_light.svg";
 import menu_open from "../assets/menu_open.svg";
 import menu_close from "../assets/homepage/modal_close.svg";
 import bg_top from "../assets/bg/navbar_top.png";
+import bg_top_lg from "../assets/bg/navbar_top_lg.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import arrow from "../assets/arrow_right.svg";
@@ -70,12 +71,14 @@ const Navbar = () => {
   return (
     <section className="bg-transparent relative">
       <img
+        srcSet={`${bg_top} 760w, ${bg_top_lg} 1000w`}
+        sizes="(max-width: 640px) 100vw, 100vw"
         alt=""
-        src={bg_top}
-        className="absolute bottom-0 w-full h-full"
-      ></img>
-      <div className="relative px-4 lg:pr-0 h-24 md:h-16 flex items-center gap-x-8 border-b border-b-[#ffffff50] justify-between">
-        <nav className="hidden lg:flex items-center justify-between w-full max-w-[400px]">
+        className="absolute bottom-0 left-0 w-full h-full"
+        src={bg_top_lg}
+      />
+      <div className="relative px-default lg:pr-0 h-24 md:h-16 flex items-center gap-x-8 border-b border-b-[#ffffff50] justify-between">
+        <nav className="hidden lg:flex items-center justify-between w-full max-w-[400px] xl:max-w-lg">
           {anchorLinks.map((link, index) => (
             <AnchorLink key={index} href={link.link}>
               <p className="navlink mt-1">{link.title}</p>
@@ -105,13 +108,13 @@ const Navbar = () => {
             onClick={() => setToggleMenu(true)}
           ></img>
         )}
-        <div className="hidden lg:flex items-center justify-between w-full max-w-[400px]">
+        <div className="hidden lg:flex items-center justify-between w-full max-w-[400px] xl:max-w-lg">
           {routerLinks.map((link, index) => (
             <Link key={index * 4} to={link.link}>
               <p className="navlink mt-1">{link.title}</p>
             </Link>
           ))}
-          <AnchorLink className="btn-submit h-16">GET IN TOUCH</AnchorLink>
+          <AnchorLink href="#contact" className="btn-submit h-16">GET IN TOUCH</AnchorLink>
         </div>
         <AnimatePresence>
           {toggleMenu && (
