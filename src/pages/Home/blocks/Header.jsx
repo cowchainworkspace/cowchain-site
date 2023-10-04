@@ -27,7 +27,7 @@ const Header = () => {
           <h1 className="mt-8 md:mt-16 lg:mt-24 relative">
             COWCHAIN. <br></br> DEVELOPERS OF WEB3
           </h1>
-          <div className="mt-[25vh] lg:mt-[30vh] xl:mt-[35vh] grid grid-cols-1 md:grid-cols-2">
+          <div className="mt-[25vh] lg:mt-[30vh] xl:mt-[40vh] grid grid-cols-1 md:grid-cols-2">
             <div className="flex items-center relative md:gap-x-1">
               <a
                 href="https://www.upwork.com/ag/cowchain/"
