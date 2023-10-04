@@ -17,7 +17,7 @@ body {
 /* Text styles */
 
 h1 {
-  @apply font-roc text-5xl md:text-6xl lg:text-[86px] font-medium text-white leading-tight;
+  @apply font-roc text-5xl md:text-6xl lg:text-[80px] font-medium text-white leading-tight;
 }
 
 h2 {
@@ -25,11 +25,12 @@ h2 {
 }
 
 h3 {
-  @apply font-roc font-medium text-4xl md:text-5xl lg:text-[60px] xl:text-7xl text-white leading-tight;
+  @apply font-roc font-medium text-4xl md:text-5xl lg:text-[60px] text-white leading-tight;
 }
 
-p {
-  @apply text-white text-base leading-tight font-normal;
+p,
+.p {
+  @apply text-white text-sm md:text-base leading-normal font-normal;
 }
 
 .header {
@@ -41,7 +42,7 @@ p {
 }
 
 .body1 {
-  @apply text-sm md:text-base text-white font-medium font-roc;
+  @apply text-sm md:text-base text-white font-medium;
 }
 
 .body2 {
@@ -49,11 +50,11 @@ p {
 }
 
 .body3 {
-  @apply font-roc text-2xl md:text-3xl lg:text-[42px] xl:text-5xl leading-tight font-medium;
+  @apply font-roc text-2xl leading-tight font-medium;
 }
 
 .caption {
-  @apply text-[12px] md:text-xs text-th-grey font-normal;
+  @apply text-xs md:text-sm text-th-grey font-normal;
 }
 
 .num_lg {
@@ -69,6 +70,16 @@ p {
 }
 
 /* Paddings */
+
+.fullheight {
+  height: calc(100vh - 6rem);
+}
+
+@media (min-width: 768px) {
+  .fullheight {
+    height: calc(100vh - 4rem);
+  }
+}
 
 .px-default {
   @apply px-4 md:px-8 lg:px-16 xl:px-24;
@@ -124,6 +135,7 @@ video {
 .video-wrapper {
   width: 100%;
   height: 100%;
+  min-height: 100%;
   position: relative;
   overflow: hidden;
   /*text-align: center;*/
@@ -220,8 +232,15 @@ video {
 .expertise_wrapper:hover {
 }
 
+.project-card > .project-overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s linear;
+}
+
 .project-card:hover > .project-overlay {
-  @apply md:flex;
+  visibility: visible;
+  opacity: 1;
 }
 
 .team_card_wrapper > .team_card_overlay {
@@ -256,7 +275,7 @@ video {
 }
 
 .chakra-accordion__button[aria-expanded="true"] {
-  background: linear-gradient(184deg, #4d2c91 -8.83%, #000 76.23%) !important;
+  background: linear-gradient(180deg, #4d2c91 -8.83%, #000 76.23%) !important;
 }
 
 .popup-modal-overlay {
@@ -292,10 +311,24 @@ video {
 
 .userform .text_input::placeholder {
   @apply text-base font-normal text-white;
+  transition: color 100ms linear;
 }
 
 .userform .text_input:focus {
   @apply border-b border-b-white bg-black outline-none;
+}
+
+.userform .text_input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.userform .text_input:focus:-moz-placeholder {
+  color: transparent;
+} /* FF 4-18 */
+.userform .text_input:focus::-moz-placeholder {
+  color: transparent;
+} /* FF 19+ */
+.userform .text_input:focus:-ms-input-placeholder {
+  color: transparent;
 }
 
 .userform .text_input:active {

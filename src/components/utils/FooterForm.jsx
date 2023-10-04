@@ -35,7 +35,7 @@ const FooterForm = () => {
     <section>
       <form
         onSubmit={handleSubmit(sendFormData)}
-        className="footerform flex items-stretch mb-2"
+        className="footerform flex items-stretch mb-2 max-w-xl"
       >
         <input
           type="email"
@@ -48,7 +48,7 @@ const FooterForm = () => {
           })}
           aria-invalid={errors.email ? "true" : "false"}
         />
-        <button type="submit" className="btn-submit">
+        <button type="submit" className="btn-submit xl:px-12">
           Submit
         </button>
       </form>

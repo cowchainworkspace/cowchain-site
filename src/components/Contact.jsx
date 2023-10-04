@@ -48,7 +48,7 @@ const Contact = () => {
   return (
     <section id="contact" className="relative">
       <img
-        className="hidden md:block absolute bottom-0 top-0 w-3/4 m-auto left-0 right-0 text-center"
+        className="hidden md:block absolute bottom-0 top-0 w-full m-auto -left-[5vw] text-center"
         src={bg}
         alt=""
       ></img>

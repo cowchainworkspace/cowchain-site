@@ -34,52 +34,37 @@ const Project = ({ title, description, photo, tags, id }) => {
   return (
     <article
       id={"project-" + id}
-      className="relative cursor-pointer w-full bg-cover bg-no-repeat bg-center border-b border-b-th-fade py-8 px-4 md:px-8 lg:px-16 flex h-[35vh] md:h-[50vh] lg:h-[50vh] project-card md:min-w-[25vw]"
+      className="relative cursor-pointer w-full bg-cover bg-no-repeat bg-center border-b border-b-th-fade py-8 px-4 md:px-8 lg:px-16 flex h-80 md:h-96 lg:h-[480px] xl:h-[624px] project-card md:min-w-[25vw]"
       style={{ backgroundImage: `url(${photo})` }}
     >
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent"></div>
-      <div className="absolute top-0 left-0 w-full h-full hidden flex-col gap-y-4 project-overlay lg:px-12 px-6 py-4 lg:py-8">
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-full flex flex-col gap-y-4 project-overlay lg:px-12 px-6 py-4 md:py-8 lg:py-16">
         <Link to="/" className="btn-contact ml-auto">
           VIEW PROJECT
         </Link>
         <div className="mt-auto flex flex-col gap-y-4">
-          <div className="flex items-center gap-x-1">
+          <div className="flex items-center gap-x-1 md:gap-x-2">
             {tags.map((tag, index) => (
               <div key={index} className="bg-white rounded-full py-2 px-3">
                 <p className="text-black text-xs font-medium">{tag}</p>
               </div>
             ))}
           </div>
-          <p className="text-white header uppercase">{title}</p>
+          <h2 className="mt-2">{title}</h2>
           <p className="body !text-[#bbb] max-w-sm">{description}</p>
         </div>
       </div>
       <div className="mt-auto flex flex-col gap-y-4 relative md:hidden">
-        <p className="text-white heading uppercase">{title}</p>
-        <p className="caption">{description}</p>
+        <h2>{title}</h2>
+        <p className="text-sm font-normal text-[#bbb] leading-normal">{description}</p>
       </div>
     </article>
   );
 };
 
 const Projects = () => {
-  const handleScroll = (e) => {
-    console.log("scroll scroll scroll");
-    /* if (
-      document.body.scrollTop > 50 ||
-      document.documentElement.scrollTop > 50
-    ) {
-      document.getElementById("header").style.fontSize = "30px";
-    } else {
-      document.getElementById("header").style.fontSize = "90px";
-    } */
-  };
   return (
-    <section
-      onScroll={(e) => handleScroll(e)}
-      id="projects"
-      className="relative"
-    >
+    <section id="projects" className="relative">
       <div className="grid grid-cols-1 md:flex md:w-full">
         {projectsData.map((project, index) => (
           <Project key={index} {...project} id={index} />

@@ -63,7 +63,7 @@ const faqRows = {
 
 const faqConfig = {
   animate: true,
-  openOnload: 0,
+  openOnload: false,
   expandIcon: (
     <svg
       width="12"
@@ -115,7 +115,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="border-b border-b-th-fade md-border-r py-heading text-center px-default flex flex-col gap-y-8">
           <h2 className="text-center md:text-left">What’s on your mind?</h2>
-          <div>
+          <div className="max-w-xl">
             <p className="text-[#bbb] text-center md:text-left">
               Submit your email address and our team will get in touch with you
               within 48 hours. Or drop us a line at{" "}
@@ -133,23 +133,23 @@ const Footer = () => {
               rel="nofollow"
               target="_blank"
             >
-              <img className="w-12" src={linkedin}></img>
+              <img className="w-12 lg:w-16" src={linkedin}></img>
             </a>
             <a href="https://t.me/cowchain_team" rel="nofollow" target="_blank">
-              <img className="w-12" src={telegram}></img>
+              <img className="w-12 lg:w-16" src={telegram}></img>
             </a>
             <a
               href="https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw"
               rel="nofollow"
               target="_blank"
             >
-              <img className="w-12" src={twitter}></img>
+              <img className="w-12 lg:w-16" src={twitter}></img>
             </a>
             <a href="#" rel="nofollow" target="_blank">
-              <img className="w-12" src={medium}></img>
+              <img className="w-12 lg:w-16" src={medium}></img>
             </a>
             <a href="mailto:sales@cowchain.io" rel="nofollow" target="_blank">
-              <img className="w-12" src={mail}></img>
+              <img className="w-12 lg:w-16" src={mail}></img>
             </a>
           </div>
         </div>
@@ -159,7 +159,9 @@ const Footer = () => {
         <div className="border-b border-b-th-fade py-heading px-default hidden lg:block">
           <div className="grid grid-cols-3 gap-x-8">
             <div className="footer-links">
-              <h2>WHAT WE DO</h2>
+              <p className="text-base font-roc font-medium !text-white">
+                WHAT WE DO
+              </p>
               <div className="flex flex-col gap-y-4 my-8">
                 <AnchorLink href="#expertise">
                   <p className="text-[#bbb]">
@@ -175,7 +177,9 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer-links">
-              <h2>AGENCY</h2>
+              <p className="text-base font-roc font-medium !text-white">
+                AGENCY
+              </p>
               <div className="flex flex-col gap-y-4 my-8">
                 <Link to="/">
                   <p className="text-[#bbb]">Team</p>
@@ -186,7 +190,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer-links">
-              <h2>HELP</h2>
+              <p className="text-base font-roc font-medium !text-white">HELP</p>
               <div className="flex flex-col gap-y-4 my-8">
                 <AnchorLink href="#contact">
                   <p className="text-[#bbb]">Contact Us</p>

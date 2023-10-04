@@ -47,7 +47,9 @@ const Benefit = ({ title, text }) => {
     >
       <motion.div variants={cardVariants}>
         <h2>{title}</h2>
-        <p className="text-th-grey mt-8">{text}</p>
+        <p className="text-th-grey mt-8 text-xs md:text-base lg:text-lg leading-[180%]">
+          {text}
+        </p>
       </motion.div>
     </motion.article>
   );
@@ -55,7 +57,7 @@ const Benefit = ({ title, text }) => {
 
 const Benefits = () => {
   return (
-    <section id="benefits" className="max-w-[100vh]">
+    <section id="benefits">
       <div className="grid grid-cols-1 md:grid-cols-2 relative">
         <div className="flex flex-col py-16 px-default justify-center items-center md:items-start border-b border-b-th-fade md-border-r">
           <p className="body3 text-center md:text-left text-white uppercase max-w-xl">

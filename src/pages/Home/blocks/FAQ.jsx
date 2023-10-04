@@ -105,8 +105,8 @@ const FAQ = () => {
                       )}
                     </AccordionButton>
                     <AccordionPanel>
-                      <div className="px-default pb-8 md:pb-12 max-w-5xl">
-                        <p className="body text-th-grey">{faq.content}</p>
+                      <div className="px-default pb-8 md:pb-12 max-w-5xl bg-black">
+                        <p className="!text-[#bbb] !leading-[160%]">{faq.content}</p>
                       </div>
                     </AccordionPanel>
                   </>

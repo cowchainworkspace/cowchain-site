@@ -10,13 +10,17 @@ import ModalVideo from "react-modal-video";
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
   return (
-    <section className="overflow-hidden border-b border-b-th-fade" id="header">
-      <div className="video-wrapper">
-        <video playsInline autoPlay muted loop poster={poster}>
+    <section
+      className="fullheight overflow-hidden border-b border-b-th-fade"
+      id="header"
+    >
+      <div className="video-wrapper min-h-full">
+        <video id="bg_vid" playsInline autoPlay muted loop poster={poster}>
           <source src={video_bg} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="px-default relative pb-8 w-full">
+        <script>document.getElementById('bg_vid').play();</script>
+        <div className="px-default flex flex-col relative pb-8 w-full min-h-full">
           <img
             srcSet={`${bg_top} 700w, ${bg_top_lg} 1000w`}
             sizes="(max-width: 640px) 100vw, 100vw"
@@ -27,7 +31,7 @@ const Header = () => {
           <h1 className="mt-8 md:mt-16 lg:mt-24 relative">
             COWCHAIN. <br></br> DEVELOPERS OF WEB3
           </h1>
-          <div className="mt-[25vh] lg:mt-[30vh] xl:mt-[40vh] grid grid-cols-1 md:grid-cols-2">
+          <div className="mt-auto grid grid-cols-1 md:grid-cols-2">
             <div className="flex items-center relative md:gap-x-1">
               <a
                 href="https://www.upwork.com/ag/cowchain/"
@@ -44,14 +48,17 @@ const Header = () => {
                 <img className="w-12 md:w-16" src={clutch} alt=""></img>
               </a>
             </div>
-            <div className="my-4 flex flex-col gap-y-4 md:pl-[10vw] lg:pl-[15vw]">
+            <div className="my-4 flex flex-col gap-y-4 lg:pl-[5vw] xl:pl-[20vw]">
               <h2>We turn your startup ideas into viable Web3 businesses</h2>
               <div className="md:flex md:justify-between md:items-center md:mt-4">
                 <div className="flex flex-col gap-y-1">
                   <p className="body1">Mykhailo Adzhoiev</p>
                   <p className="caption">Founder & CTO</p>
                 </div>
-                <button className="btn-play mt-4 md:mt-0" onClick={() => setOpen(true)}>
+                <button
+                  className="btn-play mt-4 md:mt-0"
+                  onClick={() => setOpen(true)}
+                >
                   <div className="flex items-center justify-center gap-x-2">
                     <div className="mb-1">
                       <svg

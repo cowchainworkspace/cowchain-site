@@ -18,10 +18,10 @@ const Post = ({ id, title, description, photo }) => {
       ></div>
       <div className="flex flex-col p-6 lg:p-12 min-h-[280px] lg:min-h-[420px]">
         <h2 className="mb-auto">{title}</h2>
-        <TextTruncate className="body" line={5} text={toText(description)} />
+        <TextTruncate className="p !text-[#bbb]" line={5} text={toText(description)} />
         <div className="mt-auto">
           <a href="#">
-            <p className="text-base font-roc text-white uppercase underline">
+            <p className="text-base font-medium font-roc text-white uppercase underline">
               READ MORE
             </p>
           </a>
