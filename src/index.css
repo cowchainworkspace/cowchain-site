@@ -221,7 +221,7 @@ video {
 }
 
 .project-card:hover > .project-overlay {
-  @apply flex;
+  @apply md:flex;
 }
 
 .team_card_wrapper > .team_card_overlay {

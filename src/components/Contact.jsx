@@ -70,7 +70,7 @@ const Contact = () => {
             className="popup-modal"
             lockScroll
           >
-            <div className="modal max-h-[95vh] min-w-full h-full p-4 md:p-8 lg:p-16 bg-black max-w-5xl border-2 border-white">
+            <div className="modal overflow-y-auto max-h-[95vh] min-w-full h-full p-4 md:p-8 lg:p-16 bg-black max-w-5xl border-2 border-white">
               <div className="flex">
                 <img
                   className="cursor-pointer w-8 ml-auto"

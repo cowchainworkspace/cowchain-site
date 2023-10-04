@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import Faq from "react-faq-component";
-import faq_exp from "../../../assets/homepage/faq_exp.svg";
-import faq_col from "../../../assets/homepage/faq_col.svg";
 import {
   Accordion,
   AccordionItem,
