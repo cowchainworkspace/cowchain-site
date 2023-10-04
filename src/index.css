@@ -17,11 +17,11 @@ body {
 /* Text styles */
 
 h1 {
-  @apply font-roc text-5xl md:text-6xl lg:text-8xl font-medium text-white leading-tight;
+  @apply font-roc text-5xl md:text-6xl lg:text-[86px] font-medium text-white leading-tight;
 }
 
 h2 {
-  @apply font-roc text-base md:text-lg lg:text-2xl uppercase font-medium text-white leading-tight md:leading-none;
+  @apply font-roc text-base md:text-lg lg:text-2xl uppercase font-medium text-white leading-tight md:leading-none lg:leading-[90%];
 }
 
 h3 {
@@ -65,7 +65,7 @@ p {
 }
 
 .navlink {
-  @apply text-sm lg:text-base uppercase font-roc font-normal text-white leading-none;
+  @apply text-sm uppercase font-roc font-normal text-white leading-none;
 }
 
 /* Paddings */
@@ -81,7 +81,7 @@ p {
 /* Element styles */
 
 .btn-play {
-  @apply cursor-pointer bg-white pb-2 pt-3 px-8 text-black font-roc font-medium uppercase text-sm rounded-full w-56 leading-none;
+  @apply cursor-pointer bg-white pb-[6px] pt-[10px] px-6 text-black font-roc font-medium uppercase text-sm rounded-full leading-none;
 }
 
 .btn-contact {
@@ -95,7 +95,7 @@ p {
 }
 
 .btn-submit {
-  @apply cursor-pointer bg-white text-base text-center font-medium font-roc uppercase h-12 lg:h-16 flex items-center justify-center pt-1 px-8 text-black;
+  @apply cursor-pointer bg-white text-sm text-center font-medium font-roc uppercase h-12 lg:h-16 flex items-center justify-center pt-1 px-8 text-black;
   transition: color 0.3s, background-color 0.3s ease-in-out;
 }
 

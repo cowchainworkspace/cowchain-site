@@ -124,7 +124,7 @@ const Navbar = ({ setBurgerOpen }) => {
               <p className="navlink mt-1">{link.title}</p>
             </Link>
           ))}
-          <AnchorLink href="#contact" className="btn-submit h-16">
+          <AnchorLink href="#contact" className="btn-submit h-16 w-[200px]">
             GET IN TOUCH
           </AnchorLink>
         </div>

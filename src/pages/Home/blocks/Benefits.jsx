@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 
 const benefitsData = [
   {
@@ -24,20 +25,38 @@ const benefitsData = [
 ];
 
 const Benefit = ({ title, text }) => {
-  const [isHide, setHide] = useState(true);
+  const cardVariants = {
+    offscreen: {
+      y: 300,
+    },
+    onscreen: {
+      y: 0,
+      transition: {
+        type: "srping",
+        duration: 0.5,
+      },
+    },
+  };
 
   return (
-    <article className="border-b border-b-th-fade px-4 py-12">
-      <h2 onClick={() => setHide(!isHide)}>{title}</h2>
-      {!isHide && <p className="text-th-grey mt-8">{text}</p>}
-    </article>
+    <motion.article
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.8 }}
+      className="border-b border-b-th-fade px-default py-12 flex overflow-hidden relative"
+    >
+      <motion.div variants={cardVariants}>
+        <h2>{title}</h2>
+        <p className="text-th-grey mt-8">{text}</p>
+      </motion.div>
+    </motion.article>
   );
 };
 
 const Benefits = () => {
   return (
-    <section id="benefits">
-      <div className="grid grid-cols-1 md:grid-cols-2">
+    <section id="benefits" className="max-w-[100vh]">
+      <div className="grid grid-cols-1 md:grid-cols-2 relative">
         <div className="flex flex-col py-16 px-default justify-center items-center md:items-start border-b border-b-th-fade md-border-r">
           <p className="body3 text-center md:text-left text-white uppercase max-w-xl">
             Being fully immersed in Web3, we’re not just devs —{" "}

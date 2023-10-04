@@ -3,6 +3,7 @@ import pic1 from "../../../assets/homepage/projects/1.jpg";
 import pic2 from "../../../assets/homepage/projects/2.jpg";
 import pic3 from "../../../assets/homepage/projects/3.jpg";
 import { Link } from "react-router-dom";
+import { motion, useScroll } from "framer-motion";
 
 const projectsData = [
   {
@@ -28,14 +29,16 @@ const projectsData = [
   },
 ];
 
-const Project = ({ title, description, photo, tags }) => {
+const Project = ({ title, description, photo, tags, id }) => {
+  const { scrollYProgress } = useScroll();
   return (
     <article
-      className="relative cursor-pointer bg-cover bg-no-repeat bg-bottom border-b border-b-th-fade py-8 px-4 md:px-8 lg:px-16 flex h-[30vh] md:h-[40vh] lg:h-[50vh] project-card"
+      id={"project-" + id}
+      className="relative cursor-pointer w-full bg-cover bg-no-repeat bg-center border-b border-b-th-fade py-8 px-4 md:px-8 lg:px-16 flex h-[35vh] md:h-[50vh] lg:h-[50vh] project-card md:min-w-[25vw]"
       style={{ backgroundImage: `url(${photo})` }}
     >
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent"></div>
-      <div className="absolute top-0 left-0 w-full h-full hidden flex-col gap-y-4 project-overlay px-12 py-8">
+      <div className="absolute top-0 left-0 w-full h-full hidden flex-col gap-y-4 project-overlay lg:px-12 px-6 py-4 lg:py-8">
         <Link to="/" className="btn-contact ml-auto">
           VIEW PROJECT
         </Link>
@@ -60,11 +63,26 @@ const Project = ({ title, description, photo, tags }) => {
 };
 
 const Projects = () => {
+  const handleScroll = (e) => {
+    console.log("scroll scroll scroll");
+    /* if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      document.getElementById("header").style.fontSize = "30px";
+    } else {
+      document.getElementById("header").style.fontSize = "90px";
+    } */
+  };
   return (
-    <section id="projects" className="relative">
-      <div className="grid grid-cols-1 md:grid-cols-3">
+    <section
+      onScroll={(e) => handleScroll(e)}
+      id="projects"
+      className="relative"
+    >
+      <div className="grid grid-cols-1 md:flex md:w-full">
         {projectsData.map((project, index) => (
-          <Project key={index} {...project} />
+          <Project key={index} {...project} id={index} />
         ))}
       </div>
     </section>

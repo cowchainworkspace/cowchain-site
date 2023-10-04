@@ -2,7 +2,7 @@ import React from "react";
 import eth from "../../../assets/homepage/expertises/ethereum.svg";
 import ava from "../../../assets/homepage/expertises/avalanche.svg";
 import polygon from "../../../assets/homepage/expertises/polygon.svg";
-import binance from "../../../assets/homepage/expertises/ethereum.svg";
+import binance from "../../../assets/homepage/expertises/binance.svg";
 import nodejs from "../../../assets/homepage/expertises/nodejs.svg";
 import mongodb from "../../../assets/homepage/expertises/mongodb.svg";
 import mssql from "../../../assets/homepage/expertises/mssql.svg";
@@ -101,7 +101,7 @@ const expertiseData = [
 
 const CollapsedIcon = ({ logo, alt }) => {
   return (
-    <div className="tool-icon-container p-3 min-h-[48px] min-w-[48px] border bg-black border-th-grey rounded-full flex items-center justify-center gap-x-2">
+    <div className="tool-icon-container h-12 min-h-[48px] min-w-[48px] border bg-black border-th-grey rounded-full flex items-center justify-center gap-x-2">
       <img className="" src={logo}></img>
       <div className="hidden tool-text pl-2 text-center">
         <p className="body1">{alt}</p>

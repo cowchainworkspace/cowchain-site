@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
-import bg_top from "../../assets/bg/navbar_top.png";
 import Header from "./blocks/Header";
 import Benefits from "./blocks/Benefits";
 import Expertise from "./blocks/Expertise";

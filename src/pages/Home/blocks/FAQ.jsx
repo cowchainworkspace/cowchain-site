@@ -39,7 +39,6 @@ const faqData = [
 ];
 
 const FAQ = () => {
-
   return (
     <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-5">
@@ -49,7 +48,7 @@ const FAQ = () => {
           </h3>
         </div>
         <div className="md:col-span-3">
-          <Accordion>
+          <Accordion allowToggle>
             {faqData.map((faq, index) => (
               <AccordionItem key={index}>
                 {({ isExpanded }) => (
