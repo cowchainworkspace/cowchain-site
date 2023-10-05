@@ -39,6 +39,7 @@ const faqData = [
 ];
 
 const FAQ = () => {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   return (
     <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-5">
@@ -55,12 +56,14 @@ const FAQ = () => {
                   <>
                     <AccordionButton>
                       <div className="pr-4 py-4 md:py-8 w-full max-w-3xl mr-auto">
-                        <h2 className="text-left">{faq.title}</h2>
+                        <h2 className="text-left lg:!text-lg lg:!leading-none">
+                          {faq.title}
+                        </h2>
                       </div>
                       {isExpanded ? (
                         <svg
-                          width="32"
-                          height="32"
+                          width={screenWidth > 768 ? "50" : "32"}
+                          height={screenWidth > 768 ? "50" : "32"}
                           viewBox="0 0 32 32"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -75,8 +78,8 @@ const FAQ = () => {
                         </svg>
                       ) : (
                         <svg
-                          width="32"
-                          height="32"
+                          width={screenWidth > 768 ? "50" : "32"}
+                          height={screenWidth > 768 ? "50" : "32"}
                           viewBox="0 0 32 32"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +109,9 @@ const FAQ = () => {
                     </AccordionButton>
                     <AccordionPanel>
                       <div className="px-default pb-8 md:pb-12 max-w-5xl bg-black">
-                        <p className="!text-[#bbb] !leading-[160%]">{faq.content}</p>
+                        <p className="!text-[#bbb] !leading-[160%] lg:!leading-[175%]">
+                          {faq.content}
+                        </p>
                       </div>
                     </AccordionPanel>
                   </>

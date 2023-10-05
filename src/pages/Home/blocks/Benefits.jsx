@@ -46,7 +46,7 @@ const Benefit = ({ title, text }) => {
       className="border-b border-b-th-fade px-default py-12 flex overflow-hidden relative"
     >
       <motion.div variants={cardVariants}>
-        <h2>{title}</h2>
+        <h2 className="max-w-xl">{title}</h2>
         <p className="text-th-grey mt-8 text-xs md:text-base lg:text-lg leading-[180%]">
           {text}
         </p>
@@ -60,7 +60,7 @@ const Benefits = () => {
     <section id="benefits">
       <div className="grid grid-cols-1 md:grid-cols-2 relative">
         <div className="flex flex-col py-16 px-default justify-center items-center md:items-start border-b border-b-th-fade md-border-r">
-          <p className="body3 text-center md:text-left text-white uppercase max-w-xl">
+          <p className="font-roc text-2xl leading-tight font-medium md:text-3xl lg:text-4xl xl:text-[42px] text-center md:text-left text-white uppercase max-w-xl">
             Being fully immersed in Web3, we’re not just devs —{" "}
             <span className="violet-gradient-text">
               we’re product visionaries

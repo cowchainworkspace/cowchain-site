@@ -123,13 +123,18 @@ p,
 
 /* Interactive */
 
+.navbar-wrapper {
+  @apply lg:grid;
+  grid-template-columns: 5fr 1.5fr 5fr;
+}
+
 video {
   object-fit: cover;
   position: absolute;
-  top: auto;
+  bottom: auto;
   left: auto;
-  width: 100%;
-  @apply max-w-3xl;
+  right: auto;
+  @apply max-w-5xl w-[120%] md:w-full top-[10vh] sm:top-[5vh] md:top-auto;
 }
 
 .video-wrapper {
@@ -138,7 +143,6 @@ video {
   min-height: 100%;
   position: relative;
   overflow: hidden;
-  /*text-align: center;*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,23 +151,29 @@ video {
 }
 
 .modal-video {
-  @apply w-36 left-auto right-0;
+  @apply w-36 md:w-64 left-auto right-0 md:right-8 border-none;
 }
 
 .modal-video-inner {
-  @apply h-36 mt-auto;
+  @apply h-36 mt-auto md:mb-8 border-none;
+}
+
+@media (orientation: landscape) {
+  .modal-video-inner {
+    @apply p-0;
+  }
 }
 
 .modal-video-movie-wrap {
-  @apply rounded-full;
+  @apply rounded-full md:rounded-xl;
 }
 
 .modal-video-movie-wrap iframe {
-  @apply border-2 border-white rounded-full;
+  @apply border-2 border-white rounded-full md:rounded-xl;
 }
 
 .modal-video-close-btn {
-  @apply w-6 h-6 -top-6 -right-1;
+  @apply w-6 h-6 -top-6 md:-top-8 -right-1;
 }
 
 .modal-video-close-btn::before,
@@ -238,9 +248,11 @@ video {
   transition: visibility 0s, opacity 0.2s linear;
 }
 
-.project-card:hover > .project-overlay {
-  visibility: visible;
-  opacity: 1;
+@media (min-width: 1024px) {
+  .project-card:hover > .project-overlay {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .team_card_wrapper > .team_card_overlay {
@@ -260,6 +272,11 @@ video {
 .blog_wrapper {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
+}
+
+#blog-scroll {
+  filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.3));
 }
 
 .chakra-accordion__item {

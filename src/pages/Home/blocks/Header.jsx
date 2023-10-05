@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import video_bg from "../../../assets/homepage/element-compress.mp4";
 import poster from "../../../assets/homepage/thumbnail.png";
 import upwork from "../../../assets/homepage/upwork.svg";
@@ -8,6 +8,8 @@ import bg_top_lg from "../../../assets/bg/header_top_lg.png";
 import ModalVideo from "react-modal-video";
 
 const Header = () => {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
   const [isOpen, setOpen] = useState(false);
   return (
     <section
@@ -93,8 +95,8 @@ const Header = () => {
           autoplay
           start
           isOpen={isOpen}
-          videoId="Qfn2budIyTc"
-          ratio="1:1"
+          videoId="0L38Z9hIi5s"
+          ratio={screenWidth > 768 ? "16:9" : "1:1"}
           onClose={() => setOpen(false)}
         />
       </div>

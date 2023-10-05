@@ -134,7 +134,7 @@ const Expertise = () => {
         srcSet={`${bg} 700w, ${bg_lg} 1000w`}
         sizes="(max-width: 640px) 70vw, 70vw"
         alt=""
-        className="absolute bottom-0 right-0 w-full"
+        className="absolute bottom-0 -right-[10%] w-full"
         src={bg_lg}
       />
       <div className="relative grid grid-cols-1 md:grid-cols-5">

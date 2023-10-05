@@ -87,8 +87,8 @@ const Navbar = ({ setBurgerOpen }) => {
         className="absolute bottom-0 left-0 w-full h-full"
         src={bg_top_lg}
       />
-      <div className="relative px-default lg:pr-0 h-24 md:h-16 flex items-center gap-x-8 border-b border-b-[#ffffff50] justify-between">
-        <nav className="hidden lg:flex items-center justify-between w-full max-w-[400px] xl:max-w-lg">
+      <div className="relative px-4 md:px-8 lg:px-0 h-24 md:h-16 flex items-center gap-x-8 border-b border-b-[#ffffff50] justify-between navbar-wrapper">
+        <nav className="hidden pl-12 lg:flex items-center justify-between w-full max-w-[360px] xl:max-w-md">
           {anchorLinks.map((link, index) => (
             <AnchorLink key={index} href={link.link}>
               <p className="navlink mt-1">{link.title}</p>
@@ -97,7 +97,7 @@ const Navbar = ({ setBurgerOpen }) => {
         </nav>
         <a href="/" rel="nofollow">
           <img
-            className="w-32"
+            className="w-32 md:w-36 lg:w-40"
             title="Home"
             alt="Home-1"
             src={logo_light}
@@ -118,7 +118,7 @@ const Navbar = ({ setBurgerOpen }) => {
             onClick={openBurger}
           ></img>
         )}
-        <div className="hidden lg:flex items-center justify-between w-full max-w-[400px] xl:max-w-lg">
+        <div className="hidden lg:flex ml-auto items-center justify-between w-full max-w-[360px] xl:max-w-md">
           {routerLinks.map((link, index) => (
             <Link key={index * 4} to={link.link}>
               <p className="navlink mt-1">{link.title}</p>
@@ -137,7 +137,7 @@ const Navbar = ({ setBurgerOpen }) => {
               className="absolute w-full top-0 right-0 z-50"
             >
               <motion.div
-                className="h-[100vh] relative bg-black flex flex-col pb-8"
+                className="overflow-y-scroll h-[100vh] relative bg-black flex flex-col pb-8"
                 initial="closed"
                 animate={toggleMenu ? "open" : "closed"}
                 variants={sideVariants}
@@ -158,7 +158,7 @@ const Navbar = ({ setBurgerOpen }) => {
                     alt=""
                   ></img>
                 </motion.div>
-                <motion.nav className="flex flex-col mt-16 px-4 gap-y-12">
+                <motion.nav className="flex flex-col mt-12 px-4 gap-y-8">
                   {anchorLinks.map((link, index) => (
                     <AnchorLink
                       key={index}

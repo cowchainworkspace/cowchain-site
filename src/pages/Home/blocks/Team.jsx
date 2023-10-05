@@ -99,7 +99,7 @@ const teamData = [
 
 const TeamCard = ({ name, role, photo, social }) => {
   return (
-    <div className="relative py-[8vh] lg:py-[12vh] px-4 flex flex-col gap-y-2 border-b border-r border-b-th-fade border-r-th-fade team_card_wrapper ">
+    <div className="relative py-[8vh] xl:py-[12vh] px-4 flex flex-col gap-y-2 border-b border-r border-b-th-fade border-r-th-fade team_card_wrapper ">
       <div className="team_card_overlay absolute top-0 left-0 h-full w-full flex">
         <div
           className="bg-cover bg-center bg-no-repeat p-8 h-full w-full flex"

@@ -38,7 +38,7 @@ const Project = ({ title, description, photo, tags, id }) => {
       style={{ backgroundImage: `url(${photo})` }}
     >
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/70 to-transparent"></div>
-      <div className="absolute top-0 left-0 w-full h-full flex flex-col gap-y-4 project-overlay lg:px-12 px-6 py-4 md:py-8 lg:py-16">
+      <div className="absolute top-0 left-0 w-full h-full flex flex-col gap-y-4 project-overlay px-12 py-8 xl:py-12">
         <Link to="/" className="btn-contact ml-auto">
           VIEW PROJECT
         </Link>
@@ -46,7 +46,7 @@ const Project = ({ title, description, photo, tags, id }) => {
           <div className="flex items-center gap-x-1 md:gap-x-2">
             {tags.map((tag, index) => (
               <div key={index} className="bg-white rounded-full py-2 px-3">
-                <p className="text-black text-xs font-medium">{tag}</p>
+                <p className="text-black text-xs lg:text-sm font-medium">{tag}</p>
               </div>
             ))}
           </div>
@@ -54,9 +54,9 @@ const Project = ({ title, description, photo, tags, id }) => {
           <p className="body !text-[#bbb] max-w-sm">{description}</p>
         </div>
       </div>
-      <div className="mt-auto flex flex-col gap-y-4 relative md:hidden">
+      <div className="mt-auto flex flex-col gap-y-4 relative lg:hidden">
         <h2>{title}</h2>
-        <p className="text-sm font-normal text-[#bbb] leading-normal">{description}</p>
+        <p className="text-sm font-normal text-[#bbb] leading-normal max-w-xs">{description}</p>
       </div>
     </article>
   );
