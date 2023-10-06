@@ -67,24 +67,36 @@ const Project = ({ title, description, photo, tags, id }) => {
 
 const Projects = () => {
   const scrollRef = useRef(null);
-  const proj1 = useRef(null);
-  const proj2 = useRef(null);
-  const proj3 = useRef(null);
 
+  const [scrollTop, setScrollTop] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      setScrollTop(window.scrollY);
+    };
+
+    console.log(window.scrollY);
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <section id="projects" className="relative">
       <div
         ref={scrollRef}
-        className="grid projects-wrapper grid-cols-1 md:flex md:w-full"
+        className="grid projects-wrapper grid-cols-1 md:flex md:w-full box-border max-w-100vw"
       >
         <motion.article
-          ref={proj1}
           id="project-1"
           className="relative cursor-pointer bg-cover bg-no-repeat bg-center border-b border-b-th-fade py-8 px-4 md:px-8 lg:px-16 flex h-80 md:h-96 lg:h-[480px] xl:h-[624px] project-card md:min-w-[25vw]"
           style={{
             backgroundImage: `url(${pic1})`,
           }}
+          active={scrollTop < 2800 ? "true" : "false"}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/70 to-transparent"></div>
           <div className="absolute top-0 left-0 w-full h-full flex flex-col gap-y-4 project-overlay px-12 py-8 xl:py-12">
@@ -117,10 +129,10 @@ const Projects = () => {
           </div>
         </motion.article>
         <article
-          ref={proj2}
           id="project-2"
           className="relative cursor-pointer w-full bg-cover bg-no-repeat bg-center border-b border-b-th-fade py-8 px-4 md:px-8 lg:px-16 flex h-80 md:h-96 lg:h-[480px] xl:h-[624px] project-card md:min-w-[25vw]"
           style={{ backgroundImage: `url(${pic2})` }}
+          active={scrollTop >= 2800 && scrollTop < 3200 ? "true" : "false"}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/70 to-transparent"></div>
           <div className="absolute top-0 left-0 w-full h-full flex flex-col gap-y-4 project-overlay px-12 py-8 xl:py-12">
@@ -153,10 +165,10 @@ const Projects = () => {
           </div>
         </article>
         <article
-          ref={proj3}
           id="project-3"
           className="relative cursor-pointer w-full bg-cover bg-no-repeat bg-center border-b border-b-th-fade py-8 px-4 md:px-8 lg:px-16 flex h-80 md:h-96 lg:h-[480px] xl:h-[624px] project-card md:min-w-[25vw]"
           style={{ backgroundImage: `url(${pic3})` }}
+          active={scrollTop >= 3200 ? "true" : "false"}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/70 to-transparent"></div>
           <div className="absolute top-0 left-0 w-full h-full flex flex-col gap-y-4 project-overlay px-12 py-8 xl:py-12">

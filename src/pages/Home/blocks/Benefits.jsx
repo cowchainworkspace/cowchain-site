@@ -59,8 +59,8 @@ const Benefits = () => {
     <section id="benefits" className="relative">
       <div className="flex flex-col md:flex-row">
         <div className="w-full flex py-16 md:py-0 px-default border-b border-b-th-fade md-border-r md:w-1/2">
-          <div className="sticky bottom-[30vh] self-end md:my-12 lg:my-16 xl:my-20">
-            <p className="font-roc text-2xl leading-tight font-medium md:text-3xl lg:text-4xl xl:text-[42px] text-center md:text-left text-white uppercase max-w-xl">
+          <div className="sticky bottom-[30vh] self-end box-border">
+            <p className="font-roc text-2xl leading-tight font-medium md:text-3xl lg:text-4xl xl:text-[42px] text-center md:text-left text-white uppercase max-w-xl md:my-12 lg:my-16 xl:my-20">
               Being fully immersed in Web3, we’re not just devs —{" "}
               <span className="violet-gradient-text">
                 we’re product visionaries

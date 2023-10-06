@@ -56,7 +56,7 @@ const FAQ = () => {
                   <>
                     <AccordionButton>
                       <div className="pr-4 py-4 md:py-8 w-full max-w-3xl mr-auto">
-                        <h2 className="text-left lg:!text-lg lg:!leading-none">
+                        <h2 className="text-left !text-sm !leading-none lg:!text-lg lg:!leading-none">
                           {faq.title}
                         </h2>
                       </div>
