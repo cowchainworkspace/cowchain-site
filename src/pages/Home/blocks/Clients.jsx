@@ -30,7 +30,7 @@ const Counter = ({ target, duration }) => {
 
 const Clients = () => {
   return (
-    <section id="clients" className="relative">
+    <section id="clients" className="relative overflow-hidden">
       <img
         srcSet={`${bg} 700w, ${bg_lg} 1000w`}
         sizes="(max-width: 640px) 70vw, 70vw"

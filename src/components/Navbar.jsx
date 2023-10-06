@@ -13,8 +13,10 @@ import telegram from "../assets/footer/telegram.svg";
 import twitter from "../assets/footer/twitter.svg";
 import medium from "../assets/footer/medium.svg";
 import mail from "../assets/footer/mail.svg";
+import ContactForm from "./utils/ContactForm";
 
 const Navbar = ({ setBurgerOpen }) => {
+  const [openForm, setOpenForm] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
   const sideVariants = {
     open: {
@@ -78,6 +80,11 @@ const Navbar = ({ setBurgerOpen }) => {
     setBurgerOpen(false);
   };
 
+  const handleMobileFormOpen = () => {
+    setBurgerOpen(false);
+    setOpenForm(true);
+  };
+
   return (
     <section className="bg-transparent relative">
       <img
@@ -124,10 +131,14 @@ const Navbar = ({ setBurgerOpen }) => {
               <p className="navlink mt-1">{link.title}</p>
             </Link>
           ))}
-          <AnchorLink href="#contact" className="btn-submit h-16 w-[200px]">
+          <button
+            onClick={() => setOpenForm(true)}
+            className="btn-submit h-16 w-[200px]"
+          >
             GET IN TOUCH
-          </AnchorLink>
+          </button>
         </div>
+        <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />
         <AnimatePresence>
           {toggleMenu && (
             <motion.div
@@ -202,13 +213,12 @@ const Navbar = ({ setBurgerOpen }) => {
                     </Link>
                   ))}
                 </motion.nav>
-                <AnchorLink
-                  href="#contact"
+                <button
                   className="btn-submit text-center mt-auto mx-4"
-                  onClick={closeBurger}
+                  onClick={handleMobileFormOpen}
                 >
                   GET IN TOUCH
-                </AnchorLink>
+                </button>
                 <motion.div className="flex items-center justify-center gap-x-2 mx-auto mt-8">
                   <a
                     href="https://www.linkedin.com/company/cowchain/"
@@ -247,6 +257,7 @@ const Navbar = ({ setBurgerOpen }) => {
           )}
         </AnimatePresence>
       </div>
+      <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />
     </section>
   );
 };

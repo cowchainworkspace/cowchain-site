@@ -15,7 +15,7 @@ const Home = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
   document.body.style.overflow = burgerOpen ? "hidden" : "visible";
   return (
-    <section className="overflow-hidden">
+    <section>
       <div className="bg-black relative">
         <Navbar setBurgerOpen={setBurgerOpen} />
         <Header />

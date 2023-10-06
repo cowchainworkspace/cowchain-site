@@ -129,7 +129,7 @@ const ExpertiseBlock = ({ title, text, tools }) => {
 
 const Expertise = () => {
   return (
-    <section id="expertise" className="relative">
+    <section id="expertise" className="relative overflow-hidden">
       <img
         srcSet={`${bg} 700w, ${bg_lg} 1000w`}
         sizes="(max-width: 640px) 70vw, 70vw"

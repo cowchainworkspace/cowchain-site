@@ -50,7 +50,7 @@ const Header = () => {
                 <img className="w-12 md:w-16" src={clutch} alt=""></img>
               </a>
             </div>
-            <div className="my-4 flex flex-col gap-y-4 lg:pl-[5vw] xl:pl-[20vw]">
+            <div className="my-4 flex flex-col gap-y-4 lg:pl-[5vw] xl:pl-[15vw]">
               <h2>We turn your startup ideas into viable Web3 businesses</h2>
               <div className="md:flex md:justify-between md:items-center md:mt-4">
                 <div className="flex flex-col gap-y-1">

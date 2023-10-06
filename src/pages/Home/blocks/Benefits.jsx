@@ -1,5 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import { Scrollama, Step } from "react-scrollama";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useSpring, animated } from "react-spring";
+import { useCollapse } from "react-collapsed";
 
 const benefitsData = [
   {
@@ -24,57 +34,99 @@ const benefitsData = [
   },
 ];
 
-const Benefit = ({ title, text }) => {
-  const cardVariants = {
-    offscreen: {
-      y: 300,
-    },
-    onscreen: {
-      y: 0,
-      transition: {
-        type: "srping",
-        duration: 0.5,
-      },
-    },
+const Benefits = () => {
+  const [currentStepIndex, setCurrentStepIndex] = useState(null);
+
+  const onStepEnter = ({ data }) => {
+    setCurrentStepIndex(data);
+  };
+
+  const onStepExit = ({ direction, data }) => {
+    if (direction === "up" && currentStepIndex === 1) setCurrentStepIndex(0);
+  };
+
+  const expandVariants = {
+    visible: { height: "auto" },
+    hidden: { height: 0 },
+  };
+
+  const textVariants = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
   };
 
   return (
-    <motion.article
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ amount: 0.8 }}
-      className="border-b border-b-th-fade px-default py-12 flex overflow-hidden relative"
-    >
-      <motion.div variants={cardVariants}>
-        <h2 className="max-w-xl">{title}</h2>
-        <p className="text-th-grey mt-8 text-xs md:text-base lg:text-lg leading-[180%]">
-          {text}
-        </p>
-      </motion.div>
-    </motion.article>
-  );
-};
-
-const Benefits = () => {
-  return (
-    <section id="benefits">
-      <div className="grid grid-cols-1 md:grid-cols-2 relative">
-        <div className="flex flex-col py-16 px-default justify-center items-center md:items-start border-b border-b-th-fade md-border-r">
-          <p className="font-roc text-2xl leading-tight font-medium md:text-3xl lg:text-4xl xl:text-[42px] text-center md:text-left text-white uppercase max-w-xl">
-            Being fully immersed in Web3, we’re not just devs —{" "}
-            <span className="violet-gradient-text">
-              we’re product visionaries
-            </span>{" "}
-            working as an in-house team{" "}
-            <span className="text-th-grey">
-              with you to grow your business with Web3
-            </span>
-          </p>
+    <section id="benefits" className="relative">
+      <div className="flex flex-col md:flex-row">
+        <div className="w-full flex py-16 md:py-0 px-default border-b border-b-th-fade md-border-r md:w-1/2">
+          <div className="sticky bottom-[30vh] self-end md:my-12 lg:my-16 xl:my-20">
+            <p className="font-roc text-2xl leading-tight font-medium md:text-3xl lg:text-4xl xl:text-[42px] text-center md:text-left text-white uppercase max-w-xl">
+              Being fully immersed in Web3, we’re not just devs —{" "}
+              <span className="violet-gradient-text">
+                we’re product visionaries
+              </span>{" "}
+              working as an in-house team{" "}
+              <span className="text-th-grey">
+                with you to grow your business with Web3
+              </span>
+            </p>
+          </div>
         </div>
-        <div>
-          {benefitsData.map((benefit, index) => (
-            <Benefit title={benefit.title} text={benefit.text} key={index} />
-          ))}
+        <div className="md:w-1/2 md:flex md:flex-col">
+          <Scrollama
+            offset={0.5}
+            onStepEnter={onStepEnter}
+            onStepExit={onStepExit}
+          >
+            {benefitsData.map((benefit, index) => {
+              const active = index + 1 === currentStepIndex;
+              return (
+                <Step data={index + 1} key={index}>
+                  <article className="benefit-wrapper border-b border-b-th-fade px-default py-12 lg:pt-16 xl:pt-20 flex overflow-hidden relative">
+                    <div>
+                      <h2 className="max-w-xl">{benefit.title}</h2>
+                      {active && (
+                        <motion.div
+                          initial="hidden"
+                          animate="visible"
+                          exit="hidden"
+                          variants={expandVariants}
+                          id={"b-expandable-" + index}
+                        >
+                          <motion.p
+                            initial="hidden"
+                            animate="visible"
+                            variants={textVariants}
+                            className="text-th-grey mt-8 text-sm md:text-base lg:text-lg !leading-[180%]"
+                          >
+                            {benefit.text}
+                          </motion.p>
+                        </motion.div>
+                      )}
+                      {!active && (
+                        <motion.div
+                          initial="visible"
+                          animate="hidden"
+                          exit="hidden"
+                          variants={expandVariants}
+                          id={"b-expandable-" + index}
+                        >
+                          <motion.p
+                            initial="visible"
+                            animate="hidden"
+                            variants={textVariants}
+                            className="text-th-grey mt-8 text-sm md:text-base lg:text-lg !leading-[180%]"
+                          >
+                            {benefit.text}
+                          </motion.p>
+                        </motion.div>
+                      )}
+                    </div>
+                  </article>
+                </Step>
+              );
+            })}
+          </Scrollama>
         </div>
       </div>
     </section>
