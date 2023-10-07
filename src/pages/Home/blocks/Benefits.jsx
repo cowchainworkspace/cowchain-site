@@ -7,7 +7,7 @@ import {
   AccordionPanel,
   AccordionIcon,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useSpring, animated } from "react-spring";
 import { useCollapse } from "react-collapsed";
 
@@ -82,45 +82,29 @@ const Benefits = () => {
               const active = index + 1 === currentStepIndex;
               return (
                 <Step data={index + 1} key={index}>
-                  <article className="benefit-wrapper border-b border-b-th-fade px-default py-12 lg:pt-16 xl:pt-20 flex overflow-hidden relative">
+                  <article className="benefit-wrapper border-b border-b-th-fade px-default py-12 lg:py-16 flex overflow-hidden relative">
                     <div>
                       <h2 className="max-w-xl">{benefit.title}</h2>
-                      {active && (
-                        <motion.div
-                          initial="hidden"
-                          animate="visible"
-                          exit="hidden"
-                          variants={expandVariants}
-                          id={"b-expandable-" + index}
-                        >
-                          <motion.p
+                      <AnimatePresence>
+                        {active && (
+                          <motion.div
                             initial="hidden"
                             animate="visible"
-                            variants={textVariants}
-                            className="text-th-grey mt-8 text-sm md:text-base lg:text-lg !leading-[180%]"
+                            exit="hidden"
+                            variants={expandVariants}
+                            id={"b-expandable-" + index}
                           >
-                            {benefit.text}
-                          </motion.p>
-                        </motion.div>
-                      )}
-                      {!active && (
-                        <motion.div
-                          initial="visible"
-                          animate="hidden"
-                          exit="hidden"
-                          variants={expandVariants}
-                          id={"b-expandable-" + index}
-                        >
-                          <motion.p
-                            initial="visible"
-                            animate="hidden"
-                            variants={textVariants}
-                            className="text-th-grey mt-8 text-sm md:text-base lg:text-lg !leading-[180%]"
-                          >
-                            {benefit.text}
-                          </motion.p>
-                        </motion.div>
-                      )}
+                            <motion.p
+                              initial="hidden"
+                              animate="visible"
+                              variants={textVariants}
+                              className="text-th-grey mt-8 text-sm md:text-base lg:text-lg !leading-[180%]"
+                            >
+                              {benefit.text}
+                            </motion.p>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   </article>
                 </Step>
