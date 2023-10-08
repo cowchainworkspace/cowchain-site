@@ -3,7 +3,9 @@ import pic1 from "../../../assets/homepage/projects/1.jpg";
 import pic2 from "../../../assets/homepage/projects/2.jpg";
 import pic3 from "../../../assets/homepage/projects/3.jpg";
 import { Link } from "react-router-dom";
-import { useInView, motion, useScroll } from "framer-motion";
+import { useInView, motion } from "framer-motion";
+import useIntersection from "../../../hooks/useIntersection";
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 const projectsData = [
   {
@@ -67,36 +69,63 @@ const Project = ({ title, description, photo, tags, id }) => {
 
 const Projects = () => {
   const scrollRef = useRef(null);
+  const isInView = useInView(scrollRef, { amount: 0.9 });
+  const isInViewport = useIntersection(scrollRef, "300px");
 
-  const [scrollTop, setScrollTop] = useState(0);
+  const [elementHeight, setElementHeight] = useState(0);
+  const [elementTop, setElementTop] = useState(0);
+
+  const windowHeight = document.documentElement.clientHeight;
+  const animationHeight = windowHeight - elementHeight * 0.5;
 
   useEffect(() => {
     const handleScroll = (event) => {
-      setScrollTop(window.scrollY);
+      setElementTop(scrollRef.current.getBoundingClientRect().top);
     };
 
-    console.log(window.scrollY);
+    const homeWrapper = document.querySelector("#home-wrapper");
+
+    const wheelScrollHandler = (wheelEvent) => {
+      //wheelEvent.preventDefault();
+      var wheelDelta = wheelEvent.wheelDelta;
+      let deltaY = wheelEvent.wheelDeltaY;
+      // CHROME WIN/MAC | SAFARI 7 MAC | OPERA WIN/MAC | EDGE
+      if (wheelDelta) {
+        let speed = deltaY / 3;
+        homeWrapper.scrollTop += speed;
+      }
+      // FIREFOX WIN / MAC | IE
+      if (deltaY) {
+        let delta = deltaY / 3;
+        homeWrapper.scrollTop += delta;
+      }
+    };
+
+    setElementHeight(scrollRef.current.getBoundingClientRect().height);
 
     window.addEventListener("scroll", handleScroll);
-
+    homeWrapper.addEventListener("wheel", wheelScrollHandler);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      homeWrapper.removeEventListener("wheel", wheelScrollHandler);
     };
-  }, []);
+  }, [isInView]);
 
   return (
-    <section id="projects" className="relative">
-      <div
-        ref={scrollRef}
-        className="grid projects-wrapper grid-cols-1 md:flex md:w-full box-border max-w-100vw"
-      >
+    <section ref={scrollRef} id="projects" className="relative">
+      <div className="grid projects-wrapper grid-cols-1 md:flex md:w-full box-border max-w-100vw">
         <motion.article
           id="project-1"
           className="relative cursor-pointer bg-cover bg-no-repeat bg-center border-b border-b-th-fade py-8 px-4 md:px-8 lg:px-16 flex h-80 md:h-96 lg:h-[480px] xl:h-[624px] project-card md:min-w-[25vw]"
           style={{
             backgroundImage: `url(${pic1})`,
           }}
-          active={scrollTop < 2800 ? "true" : "false"}
+          active={
+            animationHeight >= elementTop &&
+            elementTop > (animationHeight / 3) * 2 - elementHeight * 0.15
+              ? "true"
+              : "false"
+          }
         >
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/70 to-transparent"></div>
           <div className="absolute top-0 left-0 w-full h-full flex flex-col gap-y-4 project-overlay px-12 py-8 xl:py-12">
@@ -132,7 +161,12 @@ const Projects = () => {
           id="project-2"
           className="relative cursor-pointer w-full bg-cover bg-no-repeat bg-center border-b border-b-th-fade py-8 px-4 md:px-8 lg:px-16 flex h-80 md:h-96 lg:h-[480px] xl:h-[624px] project-card md:min-w-[25vw]"
           style={{ backgroundImage: `url(${pic2})` }}
-          active={scrollTop >= 2800 && scrollTop < 3200 ? "true" : "false"}
+          active={
+            (animationHeight / 3) * 2 - elementHeight * 0.15 >= elementTop &&
+            elementTop > animationHeight / 3 - elementHeight * 0.33
+              ? "true"
+              : "false"
+          }
         >
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/70 to-transparent"></div>
           <div className="absolute top-0 left-0 w-full h-full flex flex-col gap-y-4 project-overlay px-12 py-8 xl:py-12">
@@ -168,7 +202,12 @@ const Projects = () => {
           id="project-3"
           className="relative cursor-pointer w-full bg-cover bg-no-repeat bg-center border-b border-b-th-fade py-8 px-4 md:px-8 lg:px-16 flex h-80 md:h-96 lg:h-[480px] xl:h-[624px] project-card md:min-w-[25vw]"
           style={{ backgroundImage: `url(${pic3})` }}
-          active={scrollTop >= 3200 ? "true" : "false"}
+          active={
+            animationHeight / 3 - elementHeight * 0.33 >= elementTop &&
+            elementTop > elementHeight * -0.5
+              ? "true"
+              : "false"
+          }
         >
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/70 to-transparent"></div>
           <div className="absolute top-0 left-0 w-full h-full flex flex-col gap-y-4 project-overlay px-12 py-8 xl:py-12">

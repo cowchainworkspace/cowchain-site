@@ -190,6 +190,51 @@ video {
   @apply !hidden;
 }
 
+.benefit-expandable {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s;
+  -moz-transition: max-height 0.3s;
+  -ms-transition: max-height 0.3s;
+  -o-transition: max-height 0.3s;
+  transition: max-height 0.3s;
+}
+
+.benefit-expandable[active="true"] {
+  max-height: 600px;
+}
+
+@keyframes expandAnimation {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 600px;
+  }
+}
+
+@keyframes collapseAnimation {
+  from {
+    max-height: 600px;
+  }
+  to {
+    max-height: 0;
+  }
+}
+
+/* .benefit-expandable > p {
+  @apply hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+.benefit-expandable[active="true"] > p {
+  @apply block;
+  visibility: visible;
+  opacity: 1;
+} */
+
 .tools_wrapper {
   @apply max-w-[296px];
 }
