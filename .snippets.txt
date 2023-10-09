@@ -1,0 +1,22 @@
+{active && (
+                          <motion.div
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                            variants={expandVariants}
+                            id={"b-expandable-" + index}
+                          >
+                            <motion.p
+                              initial="hidden"
+                              animate="visible"
+                              variants={textVariants}
+                              className="text-th-grey mt-8 text-sm md:text-base lg:text-lg !leading-[180%]"
+                            >
+                              {benefit.text}
+                            </motion.p>
+                          </motion.div>
+                        )}
+
+
+
+                        
