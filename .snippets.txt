@@ -18,5 +18,83 @@
                         )}
 
 
-
-                        
+<Scrollama
+          offset={0.7}
+          onStepEnter={onStepEnter}
+          onStepExit={onStepExit}
+          debug
+        >
+          {sectionsData &&
+            sectionsData.map((section, index) => {
+              const active = index + 1 === currentStepIndex;
+              return (
+                <Step data={index + 1} key={index}>
+                  <article className="px-4 md:px-8 flex flex-col py-10 border-t border-t-th-fade">
+                    <p className="text-xl font-roc text-white uppercase leading-none font-medium">
+                      {section.title}
+                    </p>
+                    {active && (
+                      <motion.div
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                        variants={expandVariants}
+                        className="mt-10 bg-black"
+                      >
+                        <p className="text-th-grey">{section.description}</p>
+                        <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
+                          {section.projects &&
+                            section.projects.map((project, index) => (
+                              <div
+                                key={index}
+                                className="relative flex flex-col p-4 w-full max-w-sm h-[30vh]"
+                              >
+                                <div
+                                  className="absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat"
+                                  style={{
+                                    backgroundImage: `url(${project.pic})`,
+                                  }}
+                                ></div>
+                                <h2 className="relative text-white max-w-[140px] mt-auto">
+                                  {project.name}
+                                </h2>
+                              </div>
+                            ))}
+                        </div>
+                      </motion.div>
+                    )}
+                    {!active && (
+                      <motion.div
+                        initial="visible"
+                        animate="hidden"
+                        exit="hidden"
+                        variants={expandVariants}
+                        className="mt-10 bg-black"
+                      >
+                        <p className="text-th-grey">{section.description}</p>
+                        <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
+                          {section.projects &&
+                            section.projects.map((project, index) => (
+                              <div
+                                key={index}
+                                className="relative flex flex-col p-4 w-full max-w-sm h-[30vh]"
+                              >
+                                <div
+                                  className="absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat"
+                                  style={{
+                                    backgroundImage: `url(${project.pic})`,
+                                  }}
+                                ></div>
+                                <h2 className="relative text-white max-w-[140px] mt-auto">
+                                  {project.name}
+                                </h2>
+                              </div>
+                            ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </article>
+                </Step>
+              );
+            })}
+        </Scrollama>   

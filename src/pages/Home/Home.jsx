@@ -11,6 +11,7 @@ import FAQ from "./blocks/FAQ";
 import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
 import { useInView, motion, useScroll } from "framer-motion";
+import "./home.css";
 
 const Home = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);

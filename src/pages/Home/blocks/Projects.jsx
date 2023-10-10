@@ -4,7 +4,6 @@ import pic2 from "../../../assets/homepage/projects/2.jpg";
 import pic3 from "../../../assets/homepage/projects/3.jpg";
 import { Link } from "react-router-dom";
 import { useInView, motion } from "framer-motion";
-import useIntersection from "../../../hooks/useIntersection";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 const projectsData = [
@@ -70,7 +69,6 @@ const Project = ({ title, description, photo, tags, id }) => {
 const Projects = () => {
   const scrollRef = useRef(null);
   const isInView = useInView(scrollRef, { amount: 0.9 });
-  const isInViewport = useIntersection(scrollRef, "300px");
 
   const [elementHeight, setElementHeight] = useState(0);
   const [elementTop, setElementTop] = useState(0);
@@ -79,35 +77,16 @@ const Projects = () => {
   const animationHeight = windowHeight - elementHeight * 0.5;
 
   useEffect(() => {
+    setElementHeight(scrollRef.current.getBoundingClientRect().height);
+  });
+
+  useEffect(() => {
     const handleScroll = (event) => {
       setElementTop(scrollRef.current.getBoundingClientRect().top);
     };
-
-    const homeWrapper = document.querySelector("#home-wrapper");
-
-    const wheelScrollHandler = (wheelEvent) => {
-      //wheelEvent.preventDefault();
-      var wheelDelta = wheelEvent.wheelDelta;
-      let deltaY = wheelEvent.wheelDeltaY;
-      // CHROME WIN/MAC | SAFARI 7 MAC | OPERA WIN/MAC | EDGE
-      if (wheelDelta) {
-        let speed = deltaY / 3;
-        homeWrapper.scrollTop += speed;
-      }
-      // FIREFOX WIN / MAC | IE
-      if (deltaY) {
-        let delta = deltaY / 3;
-        homeWrapper.scrollTop += delta;
-      }
-    };
-
-    setElementHeight(scrollRef.current.getBoundingClientRect().height);
-
     window.addEventListener("scroll", handleScroll);
-    homeWrapper.addEventListener("wheel", wheelScrollHandler);
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      homeWrapper.removeEventListener("wheel", wheelScrollHandler);
     };
   }, [isInView]);
 
