@@ -95,7 +95,7 @@ const Navbar = ({ setBurgerOpen }) => {
     <section className="bg-transparent relative">
       {isHomePage ? (
         <img
-          srcSet={`${bg} 760w, ${bg_lg} 1000w`}
+          srcSet={`${bg} 360w, ${bg} 480w, ${bg} 720w, ${bg_lg} 1920w`}
           sizes="(max-width: 640px) 100vw, 100vw"
           alt=""
           className="absolute bottom-0 left-0 w-full h-full"
@@ -103,10 +103,10 @@ const Navbar = ({ setBurgerOpen }) => {
         />
       ) : (
         <img
-          srcSet={`${bg_clients} 760w, ${bg_clients_lg} 1000w`}
-          sizes="(max-width: 640px) 100vw, 70vw"
+          srcSet={`${bg_clients} 360w, ${bg_clients} 480w, ${bg_clients} 720w, ${bg_clients_lg} 1920w`}
+          sizes="200vw"
           alt=""
-          className="absolute bottom-0 right-0 min-w-[200vw] min-h-[140%]"
+          className="absolute bottom-0 right-0 min-w-[200vw] md:min-w-full min-h-[140%]"
           src={bg_clients_lg}
         />
       )}
@@ -114,8 +114,8 @@ const Navbar = ({ setBurgerOpen }) => {
       <div
         className={
           isHomePage
-            ? "relative px-4 md:px-8 lg:px-0 h-24 md:h-16 flex items-center gap-x-8 justify-between navbar-wrapper border-b border-b-th-fade"
-            : "relative px-4 md:px-8 lg:px-0 h-24 md:h-16 flex items-center gap-x-8 justify-between navbar-wrapper "
+            ? "relative px-4 md:px-8 lg:px-0 h-24 md:h-16 flex items-center gap-x-8 justify-between md:border-b md:border-th-fade navbar-wrapper border-b border-b-th-fade"
+            : "relative px-4 md:px-8 lg:px-0 h-24 md:h-16 flex items-center gap-x-8 justify-between navbar-wrapper md:border-b md:border-th-fade"
         }
       >
         <nav className="hidden pl-12 lg:flex items-center justify-between w-full max-w-[360px] xl:max-w-md">

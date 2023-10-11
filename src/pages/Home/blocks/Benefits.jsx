@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import { AnimatePresence, motion } from "framer-motion";
-import { useCollapse } from "react-collapsed";
 
 const benefitsData = [
   {

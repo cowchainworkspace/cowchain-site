@@ -28,6 +28,10 @@ h3 {
   @apply font-roc font-medium text-4xl md:text-5xl lg:text-[60px] text-white leading-tight;
 }
 
+h4 {
+  @apply font-roc font-medium  text-2xl lg:text-[28px] xl:text-[32px] uppercase leading-[90%];
+}
+
 p,
 .p {
   @apply text-white text-sm md:text-base leading-normal font-normal;
