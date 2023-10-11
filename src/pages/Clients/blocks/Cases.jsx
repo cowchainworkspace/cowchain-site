@@ -34,7 +34,7 @@ const Cases = () => {
               style={{
                 backgroundImage: `url(${project.pic})`,
               }}
-              className="flex h-64 w-full max-w-[256px] lg:h-[30vw] lg:min-w-[30vw] relative p-6 md:p-8 lg:p-10 bg-cover bg-center bg-no-repeat"
+              className="flex h-64 w-full min-w-[256px] max-w-[256px] lg:h-[30vw] lg:min-w-[30vw] relative p-6 md:p-8 lg:p-10 bg-cover bg-center bg-no-repeat"
             >
               <h2 className="text-white mt-auto max-w-xs">{project.title}</h2>
             </div>
