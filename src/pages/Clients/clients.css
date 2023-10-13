@@ -25,3 +25,14 @@
   transform: scale(2);
   @apply text-white mb-6;
 }
+
+.scroll-container {
+  position: sticky;
+  left: 0;
+  right: 0;
+  will-change: transform;
+}
+
+.scroll-container .ghost {
+  width: 100vw;
+}

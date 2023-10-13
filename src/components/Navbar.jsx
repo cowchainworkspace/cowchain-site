@@ -89,6 +89,7 @@ const Navbar = ({ setBurgerOpen }) => {
   };
 
   const location = useLocation();
+  const windowHeight = window.innerHeight;
   const isHomePage = location.pathname === "/";
 
   return (
@@ -168,10 +169,13 @@ const Navbar = ({ setBurgerOpen }) => {
               initial={{ width: 0 }}
               exit={{ width: 0 }}
               animate={{ width: "100%", maxWidth: "100%" }}
-              className="absolute w-full top-0 right-0 z-50"
+              className="absolute w-full min-h-full top-0 right-0 z-50"
             >
               <motion.div
-                className="overflow-y-scroll h-[100vh] relative bg-black flex flex-col pb-8"
+                style={{
+                  height: `${windowHeight}px`,
+                }}
+                className="overflow-y-scroll relative bg-black flex flex-col pb-8"
                 initial="closed"
                 animate={toggleMenu ? "open" : "closed"}
                 variants={sideVariants}
@@ -192,7 +196,7 @@ const Navbar = ({ setBurgerOpen }) => {
                     alt=""
                   ></img>
                 </motion.div>
-                <motion.nav className="flex flex-col mt-12 px-4 gap-y-8">
+                <motion.nav className="flex flex-col mt-8 px-4 gap-y-6">
                   {anchorLinks.map((link, index) => (
                     <Link
                       key={index}

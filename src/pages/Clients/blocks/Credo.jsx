@@ -6,7 +6,7 @@ const Credo = () => {
   const [openForm, setOpenForm] = useState(false);
   return (
     <section id="clients-credo">
-      <div className="credo-wrapper bg-black relative px-default gap-y-8 md:gap-y-12 py-heading xl:py-48 flex flex-col bg-credo bg-contain bg-no-repeat bg-top border-b border-b-th-fade">
+      <div className="credo-wrapper bg-black relative px-default gap-y-8 md:gap-y-12 py-heading xl:py-48 flex flex-col bg-credo bg-contain bg-no-repeat bg-top">
         <div className="flex items-center gap-x-2 mt-20 mx-auto">
           <img className="w-[140px]" src={icons} alt=""></img>
           <p className="text-white font-roc !font-medium">happy clients</p>

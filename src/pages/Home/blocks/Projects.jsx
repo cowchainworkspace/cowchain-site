@@ -4,7 +4,6 @@ import pic2 from "../../../assets/homepage/projects/2.jpg";
 import pic3 from "../../../assets/homepage/projects/3.jpg";
 import { Link } from "react-router-dom";
 import { useInView, motion } from "framer-motion";
-import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 const projectsData = [
   {
@@ -68,31 +67,60 @@ const Project = ({ title, description, photo, tags, id }) => {
 
 const Projects = () => {
   const scrollRef = useRef(null);
-  const isInView = useInView(scrollRef, { amount: 0.9 });
+  const scrollContainer = useRef(null);
+  const isInView = useInView(scrollRef, { amount: 0.5 });
 
   const [elementHeight, setElementHeight] = useState(0);
+  const [elementWidth, setElementWidth] = useState(0);
   const [elementTop, setElementTop] = useState(0);
 
   const windowHeight = document.documentElement.clientHeight;
   const animationHeight = windowHeight - elementHeight * 0.5;
 
+  const [scrollProgress, setScrollProgress] = useState(0);
+
   useEffect(() => {
     setElementHeight(scrollRef.current.getBoundingClientRect().height);
+    setElementWidth(scrollRef.current.getBoundingClientRect().width);
   });
 
   useEffect(() => {
-    const handleScroll = (event) => {
-      setElementTop(scrollRef.current.getBoundingClientRect().top);
+    const project1 = document.querySelector("#project1");
+    const project2 = document.querySelector("#project2");
+    const project3 = document.querySelector("#project3");
+
+    let scroll = 0;
+
+    const handleWheel = (e) => {
+      setElementTop(scrollContainer.current.getBoundingClientRect().top);
+      /* const isScrollingDown = Math.sign(e.deltaY) === 1;
+      if ((windowHeight - elementHeight) / 2 > elementTop) {
+        e.preventDefault();
+        if (scroll < 900) {
+          setScrollProgress(scrollProgress + 10);
+          scroll += scroll + 10;
+          console.log("scrollProgress" + scrollProgress);
+        } else {
+          e.originalEvent();
+        }
+      } */
     };
-    window.addEventListener("scroll", handleScroll);
+
+    if (isInView && window.innerWidth > 768) {
+      window.addEventListener("wheel", handleWheel, { passive: false });
+    }
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("wheel", handleWheel);
     };
   }, [isInView]);
 
   return (
-    <section ref={scrollRef} id="projects" className="relative">
-      <div className="grid projects-wrapper grid-cols-1 md:flex md:w-full box-border max-w-100vw">
+    <section ref={scrollContainer} id="projects" className="relative">
+      <div
+        ref={scrollRef}
+        className="grid projects-wrapper grid-cols-1 md:flex md:w-full box-border max-w-100vw"
+      >
         <motion.article
           id="project-1"
           className="relative cursor-pointer bg-cover bg-no-repeat bg-center border-b border-b-th-fade py-8 px-4 md:px-8 lg:px-16 flex h-80 md:h-96 lg:h-[480px] xl:h-[624px] project-card md:min-w-[25vw]"

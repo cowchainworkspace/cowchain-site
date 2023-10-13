@@ -1,98 +1,106 @@
 import React from "react";
 import arrow from "../../../assets/arrow_right.svg";
-import photo from "../../../assets/homepage/team/mykhailo.jpg";
+import photo1 from "../../../assets/homepage/team/mykhailo.jpg";
+import photo2 from "../../../assets/homepage/team/vyacheslav.jpg";
+import photo3 from "../../../assets/homepage/team/oleh.jpg";
+import photo4 from "../../../assets/homepage/team/andrii.jpg";
+import photo5 from "../../../assets/homepage/team/bohdan.jpg";
+import photo6 from "../../../assets/homepage/team/veronika.jpg";
+import photo7 from "../../../assets/homepage/team/ruslan.jpg";
+import photo8 from "../../../assets/homepage/team/saminu.jpg";
+import photo9 from "../../../assets/homepage/team/alexandr.jpg";
 import linkedin from "../../../assets/homepage/linkedin.svg";
 import bg from "../../../assets/bg/team_bg.png";
 
 const teamData = [
   {
-    name: "mikhailo",
-    role: "founder & CTO",
-    photo: photo,
+    name: "Michael",
+    role: "Founder & CEO",
+    photo: photo1,
     social: {
       network: "LinkedIn",
       icon: linkedin,
-      url: "#",
+      url: "https://www.linkedin.com/in/onchainmichael",
     },
   },
   {
-    name: "Vladyslav",
-    role: "full-stack dev",
-    photo: photo,
+    name: "Viacheslav",
+    role: "COO",
+    photo: photo2,
     social: {
       network: "LinkedIn",
       icon: linkedin,
-      url: "#",
+      url: "https://www.linkedin.com/in/%D0%B2%D1%8F%D1%87%D0%B5%D1%81%D0%BB%D0%B0%D0%B2-%D0%B8%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE-549988195",
     },
   },
   {
-    name: "Nikita",
-    role: "web 3 & solidity  dev",
-    photo: photo,
+    name: "Oleh",
+    role: "Development lead",
+    photo: photo3,
     social: {
       network: "LinkedIn",
       icon: linkedin,
-      url: "#",
+      url: "https://www.linkedin.com/in/oleh-shutiak-%F0%9F%87%BA%F0%9F%87%A6-92786b229",
     },
   },
   {
-    name: "Vladyslav",
-    role: "full-stack dev",
-    photo: photo,
+    name: "Andrii",
+    role: "Full-stack Web3 developer",
+    photo: photo4,
     social: {
       network: "LinkedIn",
       icon: linkedin,
-      url: "#",
-    },
-  },
-  {
-    name: "jurii",
-    role: "full-stack dev",
-    photo: photo,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "#",
-    },
-  },
-  {
-    name: "oleh",
-    role: "development lead",
-    photo: photo,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "#",
+      url: "https://www.linkedin.com/in/%D0%B0%D0%BD%D0%B4%D1%80%D0%B5%D0%B9-%D0%B3%D1%80%D0%BE%D0%BC%D0%B0%D0%B4%D0%B5%D1%86%D0%BA%D0%B8%D0%B9-1b26231b8",
     },
   },
   {
     name: "Bohdan",
-    role: "web 3 full-stack dev",
-    photo: photo,
+    role: "Full-stack Web3 developer",
+    photo: photo5,
     social: {
       network: "LinkedIn",
       icon: linkedin,
-      url: "#",
+      url: "https://www.linkedin.com/in/bohdan-solomakha-750a14240/",
     },
   },
   {
-    name: "Vladyslav",
-    role: "full-stack dev",
-    photo: photo,
+    name: "Veronika",
+    role: "Marketing manager",
+    photo: photo6,
     social: {
       network: "LinkedIn",
       icon: linkedin,
-      url: "#",
+      url: "https://www.linkedin.com/in/veronika-volkonovska-12318b250/",
     },
   },
   {
-    name: "jurii",
-    role: "full-stack dev",
-    photo: photo,
+    name: "Ruslan",
+    role: "Lead Generation manager",
+    photo: photo7,
     social: {
       network: "LinkedIn",
       icon: linkedin,
-      url: "#",
+      url: "https://www.linkedin.com/in/ruslan-siniaiev-600340240/",
+    },
+  },
+  {
+    name: "Saminu",
+    role: "Full-stack Web3 developer",
+    photo: photo8,
+    social: {
+      network: "LinkedIn",
+      icon: linkedin,
+      url: "https://www.linkedin.com/in/smailafiiia/",
+    },
+  },
+  {
+    name: "Alexander",
+    role: "Full-stack Web3 developer",
+    photo: photo9,
+    social: {
+      network: "LinkedIn",
+      icon: linkedin,
+      url: "https://www.linkedin.com/in/alexander-barabash-9a76aa217/",
     },
   },
 ];
@@ -106,7 +114,7 @@ const TeamCard = ({ name, role, photo, social }) => {
           style={{ backgroundImage: `url(${photo})` }}
         >
           <div className="relative mt-auto ml-auto">
-            <a href="#" rel="nofollow" target="_blank">
+            <a href={social?.url} rel="nofollow" target="_blank">
               <img className="w-12" src={social?.icon}></img>
             </a>
           </div>
