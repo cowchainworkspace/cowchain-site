@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import logo_light from "../assets/logo_light.svg";
 import menu_open from "../assets/menu_open.svg";
 import menu_close from "../assets/homepage/modal_close.svg";
-import bg_top from "../assets/bg/navbar_top.png";
-import bg_top_lg from "../assets/bg/navbar_top_lg.png";
+import bg from "../assets/bg/navbar_top.png";
+import bg_lg from "../assets/bg/navbar_top_lg.png";
+import bg_clients from "../assets/bg/clients_navbar_bg_sm.png";
+import bg_clients_lg from "../assets/bg/clients_navbar_bg_lg.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import arrow from "../assets/arrow_right.svg";
@@ -14,6 +16,7 @@ import twitter from "../assets/footer/twitter.svg";
 import medium from "../assets/footer/medium.svg";
 import mail from "../assets/footer/mail.svg";
 import ContactForm from "./utils/ContactForm";
+import { useLocation } from "react-router-dom";
 
 const Navbar = ({ setBurgerOpen }) => {
   const [openForm, setOpenForm] = useState(false);
@@ -47,15 +50,15 @@ const Navbar = ({ setBurgerOpen }) => {
   const anchorLinks = [
     {
       title: "Services & Technologies",
-      link: "#expertise",
+      link: "/expertise",
     },
     {
       title: "Cases",
-      link: "#projects",
+      link: "/projects",
     },
     {
       title: "Clients",
-      link: "#clients",
+      link: "/clients",
     },
   ];
 
@@ -85,21 +88,42 @@ const Navbar = ({ setBurgerOpen }) => {
     setOpenForm(true);
   };
 
+  const location = useLocation();
+  const windowHeight = window.innerHeight;
+  const isHomePage = location.pathname === "/";
+
   return (
     <section className="bg-transparent relative">
-      <img
-        srcSet={`${bg_top} 760w, ${bg_top_lg} 1000w`}
-        sizes="(max-width: 640px) 100vw, 100vw"
-        alt=""
-        className="absolute bottom-0 left-0 w-full h-full"
-        src={bg_top_lg}
-      />
-      <div className="relative px-4 md:px-8 lg:px-0 h-24 md:h-16 flex items-center gap-x-8 border-b border-b-[#ffffff50] justify-between navbar-wrapper">
+      {isHomePage ? (
+        <img
+          srcSet={`${bg} 360w, ${bg} 480w, ${bg} 720w, ${bg_lg} 1920w`}
+          sizes="(max-width: 640px) 100vw, 100vw"
+          alt=""
+          className="absolute bottom-0 left-0 w-full h-full"
+          src={bg_lg}
+        />
+      ) : (
+        <img
+          srcSet={`${bg_clients} 360w, ${bg_clients} 480w, ${bg_clients} 720w, ${bg_clients_lg} 1920w`}
+          sizes="200vw"
+          alt=""
+          className="absolute bottom-0 right-0 min-w-[200vw] md:min-w-full min-h-[140%]"
+          src={bg_clients_lg}
+        />
+      )}
+
+      <div
+        className={
+          isHomePage
+            ? "relative px-4 md:px-8 lg:px-0 h-24 md:h-16 flex items-center gap-x-8 justify-between md:border-b md:border-th-fade navbar-wrapper border-b border-b-th-fade"
+            : "relative px-4 md:px-8 lg:px-0 h-24 md:h-16 flex items-center gap-x-8 justify-between navbar-wrapper md:border-b md:border-th-fade"
+        }
+      >
         <nav className="hidden pl-12 lg:flex items-center justify-between w-full max-w-[360px] xl:max-w-md">
           {anchorLinks.map((link, index) => (
-            <AnchorLink key={index} href={link.link}>
+            <Link key={index} to={link.link}>
               <p className="navlink mt-1">{link.title}</p>
-            </AnchorLink>
+            </Link>
           ))}
         </nav>
         <a href="/" rel="nofollow">
@@ -145,10 +169,13 @@ const Navbar = ({ setBurgerOpen }) => {
               initial={{ width: 0 }}
               exit={{ width: 0 }}
               animate={{ width: "100%", maxWidth: "100%" }}
-              className="absolute w-full top-0 right-0 z-50"
+              className="absolute w-full min-h-full top-0 right-0 z-50"
             >
               <motion.div
-                className="overflow-y-scroll h-[100vh] relative bg-black flex flex-col pb-8"
+                style={{
+                  height: `${windowHeight}px`,
+                }}
+                className="overflow-y-scroll relative bg-black flex flex-col pb-8"
                 initial="closed"
                 animate={toggleMenu ? "open" : "closed"}
                 variants={sideVariants}
@@ -169,14 +196,13 @@ const Navbar = ({ setBurgerOpen }) => {
                     alt=""
                   ></img>
                 </motion.div>
-                <motion.nav className="flex flex-col mt-12 px-4 gap-y-8">
+                <motion.nav className="flex flex-col mt-8 px-4 gap-y-6">
                   {anchorLinks.map((link, index) => (
-                    <AnchorLink
+                    <Link
                       key={index}
-                      href={link.link}
+                      to={link.link}
                       onClick={closeBurger}
                       variants={linkVariants}
-                      whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                     >
                       <div className="flex items-center">
@@ -189,7 +215,7 @@ const Navbar = ({ setBurgerOpen }) => {
                           alt=""
                         ></img>
                       </div>
-                    </AnchorLink>
+                    </Link>
                   ))}
                   {routerLinks.map((link, index) => (
                     <Link

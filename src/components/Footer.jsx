@@ -145,7 +145,11 @@ const Footer = () => {
             >
               <img className="w-12 lg:w-16" src={twitter}></img>
             </a>
-            <a href="#" rel="nofollow" target="_blank">
+            <a
+              href="https://cowchain.medium.com/"
+              rel="nofollow"
+              target="_blank"
+            >
               <img className="w-12 lg:w-16" src={medium}></img>
             </a>
             <a href="mailto:sales@cowchain.io" rel="nofollow" target="_blank">
@@ -163,17 +167,17 @@ const Footer = () => {
                 WHAT WE DO
               </p>
               <div className="flex flex-col gap-y-4 my-8">
-                <AnchorLink href="#expertise">
+                <Link to="/">
                   <p className="text-[#bbb]">
                     Services &<br></br> Techonologies
                   </p>
-                </AnchorLink>
-                <AnchorLink href="#projects">
+                </Link>
+                <Link to="/">
                   <p className="text-[#bbb]">Cases</p>
-                </AnchorLink>
-                <AnchorLink href="#clients">
+                </Link>
+                <Link to="/clients">
                   <p className="text-[#bbb]">Clients</p>
-                </AnchorLink>
+                </Link>
               </div>
             </div>
             <div className="footer-links">

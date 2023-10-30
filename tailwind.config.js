@@ -14,6 +14,9 @@ module.exports = {
         'th-fade': "#ffffff41",
         'th-grey': "#ffffff71",
         'th-violet': "#EABBFF",
+      },
+      backgroundImage: {
+        'credo': 'url("assets/clients/credo_bg.jpg")',
       }
     },
   },

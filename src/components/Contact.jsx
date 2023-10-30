@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import ContactForm from "./utils/ContactForm";
-import bg from "../assets/bg/contact_bg.png";
+import bg_lg from "../assets/bg/contact_bg.png";
+import bg from "../assets/bg/clients_cases.png";
 
 const Contact = () => {
-  
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <section id="contact" className="relative">
+    <section id="contact" className="relative overflow-hidden">
       <img
-        className="hidden md:block absolute bottom-0 top-0 w-full m-auto -left-[5vw] text-center"
-        src={bg}
+        sizes="100vw"
+        srcSet={`${bg} 360w, ${bg} 480w, ${bg} 720w, ${bg_lg} 1920w`}
+        className="absolute min-w-[200vw] -left-[50%] -top-[40%] md:min-w-0 md:bottom-0 md:top-0 md:m-auto md:left-0 xl:left-[10vw] md:h-[150%]"
+        src={bg_lg}
         alt=""
       ></img>
       <div className="grid grid-cols-1 relative">

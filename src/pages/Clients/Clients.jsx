@@ -1,34 +1,27 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
+import "./clients.css";
 import Navbar from "../../components/Navbar";
 import Header from "./blocks/Header";
-import Benefits from "./blocks/Benefits";
-import Expertise from "./blocks/Expertise";
-import Clients from "./blocks/Clients";
 import Projects from "./blocks/Projects";
-import Team from "./blocks/Team";
-import Blog from "./blocks/Blog";
-import FAQ from "./blocks/FAQ";
+import Feedback from "./blocks/Feedback";
+import Credo from "./blocks/Credo";
+import Cases from "./blocks/Cases";
 import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
-import { useInView, motion, useScroll } from "framer-motion";
-import "./home.css";
 
-const Home = () => {
+const Clients = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
   document.body.style.overflow = burgerOpen ? "hidden" : "visible";
 
   return (
-    <section id="home-wrapper">
+    <section id="clients-wrapper">
       <div className="bg-black relative">
         <Navbar setBurgerOpen={setBurgerOpen} />
         <Header />
-        <Benefits />
-        <Expertise />
-        <Clients />
         <Projects />
-        <Team />
-        <Blog />
-        <FAQ />
+        <Feedback />
+        <Credo />
+        <Cases />
         <Contact />
         <Footer />
       </div>
@@ -36,4 +29,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Clients;

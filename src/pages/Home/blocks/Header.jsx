@@ -24,7 +24,7 @@ const Header = () => {
         <script>document.getElementById('bg_vid').play();</script>
         <div className="px-default flex flex-col relative pb-8 w-full min-h-full">
           <img
-            srcSet={`${bg_top} 700w, ${bg_top_lg} 1000w`}
+            srcSet={`${bg_top} 360w, ${bg_top} 480w, ${bg_top} 720w, ${bg_top_lg} 1920w`}
             sizes="(max-width: 640px) 100vw, 100vw"
             alt="Photo 1"
             className="absolute top-0 left-0 w-full"
