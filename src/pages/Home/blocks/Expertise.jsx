@@ -23,21 +23,21 @@ const expertiseData = [
     tools: [
       {
         logo: eth,
-        alt: "Ethereum",
+        alt: "Ethereum"
       },
       {
         logo: ava,
-        alt: "Avalanche",
+        alt: "Avalanche"
       },
       {
         logo: polygon,
-        alt: "Polygon",
+        alt: "Polygon"
       },
       {
         logo: binance,
-        alt: "Binance",
-      },
-    ],
+        alt: "Binance"
+      }
+    ]
   },
   {
     title: "BACK-END",
@@ -45,21 +45,21 @@ const expertiseData = [
     tools: [
       {
         logo: nodejs,
-        alt: "NodeJS",
+        alt: "NodeJS"
       },
       {
         logo: mongodb,
-        alt: "MongoDB",
+        alt: "MongoDB"
       },
       {
         logo: mssql,
-        alt: "MicrosoftSQL",
+        alt: "MicrosoftSQL"
       },
       {
         logo: postgres,
-        alt: "PostgreSQL",
-      },
-    ],
+        alt: "PostgreSQL"
+      }
+    ]
   },
   {
     title: "FRONT-END",
@@ -67,17 +67,17 @@ const expertiseData = [
     tools: [
       {
         logo: react,
-        alt: "ReactJS",
+        alt: "ReactJS"
       },
       {
         logo: nextjs,
-        alt: "NextJS",
+        alt: "NextJS"
       },
       {
         logo: ts,
-        alt: "Typescript",
-      },
-    ],
+        alt: "Typescript"
+      }
+    ]
   },
   {
     title: "CLOUD",
@@ -85,25 +85,25 @@ const expertiseData = [
     tools: [
       {
         logo: aws,
-        alt: "Amazon",
+        alt: "Amazon"
       },
       {
         logo: google,
-        alt: "Google",
+        alt: "Google"
       },
       {
         logo: azure,
-        alt: "Azure",
-      },
-    ],
-  },
+        alt: "Azure"
+      }
+    ]
+  }
 ];
 
 const CollapsedIcon = ({ logo, alt }) => {
   return (
-    <div className="tool-icon-container h-12 min-h-[48px] min-w-[48px] border bg-black border-th-grey rounded-full flex items-center justify-center gap-x-2">
+    <div className="tool-icon-container flex h-12 min-h-[48px] min-w-[48px] items-center justify-center gap-x-2 rounded-full border border-th-grey bg-black">
       <img className="" src={logo}></img>
-      <div className="hidden tool-text pl-2 text-center">
+      <div className="tool-text hidden pl-2 text-center">
         <p className="body1">{alt}</p>
       </div>
     </div>
@@ -112,12 +112,12 @@ const CollapsedIcon = ({ logo, alt }) => {
 
 const ExpertiseBlock = ({ title, text, tools }) => {
   return (
-    <article className="relative border-b border-b-th-fade px-4 lg:px-8 xl:px-16 py-12 lg:py-16 xl:py-20 expertise_wrapper md-border-r">
-      <div className="absolute top-0 left-0 w-full h-full expertise_wrapper_bg"></div>
+    <article className="expertise_wrapper md-border-r relative border-b border-b-th-fade px-4 py-12 lg:px-8 lg:py-16 xl:px-16 xl:py-20">
+      <div className="expertise_wrapper_bg absolute left-0 top-0 h-full w-full"></div>
       <div className="relative">
         <p className="body3 text-white">{title}</p>
-        <p className="text-[#bbb] mt-8">{text}</p>
-        <div className="flex items-center tools_wrapper mt-8">
+        <p className="mt-8 text-[#bbb]">{text}</p>
+        <div className="tools_wrapper mt-8 flex items-center">
           {tools.map((tool, index) => (
             <CollapsedIcon key={index} {...tool} />
           ))}
@@ -134,16 +134,16 @@ const Expertise = () => {
         srcSet={`${bg} 700w, ${bg_lg} 1000w`}
         sizes="(max-width: 640px) 70vw, 70vw"
         alt=""
-        className="absolute bottom-0 -right-[10%] w-full"
+        className="absolute -right-[10%] bottom-0 w-full"
         src={bg_lg}
       />
       <div className="relative grid grid-cols-1 md:grid-cols-5">
-        <div className="border-b border-b-th-fade py-heading text-center px-default md:col-span-2 md-border-r">
+        <div className="py-heading px-default md-border-r border-b border-b-th-fade text-center md:col-span-2">
           <h3 className="text-center md:text-left">
             OUR<br></br>EXPERTISE
           </h3>
         </div>
-        <div className="md:col-span-3 grid grid-cols-1 xl:grid-cols-2">
+        <div className="grid grid-cols-1 md:col-span-3 xl:grid-cols-2">
           {expertiseData.map((expertise, index) => (
             <ExpertiseBlock key={index * 2} {...expertise} />
           ))}

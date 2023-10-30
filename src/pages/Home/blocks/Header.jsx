@@ -22,19 +22,19 @@ const Header = () => {
           Your browser does not support the video tag.
         </video>
         <script>document.getElementById('bg_vid').play();</script>
-        <div className="px-default flex flex-col relative pb-8 w-full min-h-full">
+        <div className="px-default relative flex min-h-full w-full flex-col pb-8">
           <img
             srcSet={`${bg_top} 360w, ${bg_top} 480w, ${bg_top} 720w, ${bg_top_lg} 1920w`}
             sizes="(max-width: 640px) 100vw, 100vw"
             alt="Photo 1"
-            className="absolute top-0 left-0 w-full"
+            className="absolute left-0 top-0 w-full"
             src={bg_top_lg}
           />
-          <h1 className="mt-8 md:mt-16 lg:mt-24 relative">
+          <h1 className="relative mt-8 md:mt-16 lg:mt-24">
             COWCHAIN. <br></br> DEVELOPERS OF WEB3
           </h1>
           <div className="mt-auto grid grid-cols-1 md:grid-cols-2">
-            <div className="flex items-center relative md:gap-x-1">
+            <div className="relative flex items-center md:gap-x-1">
               <a
                 href="https://www.upwork.com/ag/cowchain/"
                 rel="nofollow"
@@ -52,7 +52,7 @@ const Header = () => {
             </div>
             <div className="my-4 flex flex-col gap-y-4 lg:pl-[5vw] xl:pl-[15vw]">
               <h2>We turn your startup ideas into viable Web3 businesses</h2>
-              <div className="md:flex md:justify-between md:items-center md:mt-4">
+              <div className="md:mt-4 md:flex md:items-center md:justify-between">
                 <div className="flex flex-col gap-y-1">
                   <p className="body1">Mykhailo Adzhoiev</p>
                   <p className="caption">Founder & CTO</p>
@@ -90,7 +90,7 @@ const Header = () => {
             autoplay: 1,
             controls: 0,
             showinfo: 0,
-            disablekb: 1,
+            disablekb: 1
           }}
           autoplay
           start

@@ -5,24 +5,24 @@ import { AnimatePresence, motion } from "framer-motion";
 const benefitsData = [
   {
     title: "Transforming raw concepts into results-driven code",
-    text: "If you have an idea or an existing product that you want to upgrade with Web3, we’ll suggest and develop a custom solution for your business that will bring you tangible results ",
+    text: "If you have an idea or an existing product that you want to upgrade with Web3, we’ll suggest and develop a custom solution for your business that will bring you tangible results "
   },
   {
     title: "Expanding business opportunities for fintech products",
-    text: "If you want to integrate crypto and blockchain into your fintech product, we’ll do it in a way that’ll bring your business to its full potential",
+    text: "If you want to integrate crypto and blockchain into your fintech product, we’ll do it in a way that’ll bring your business to its full potential"
   },
   {
     title: "Building impactful and functional Web3 products",
-    text: "If you need to develop a Web3 product of any complexity, as a team who lives and breathes Web3, we’ll streamline the entire process and provide clean, secure, and scalable code ",
+    text: "If you need to develop a Web3 product of any complexity, as a team who lives and breathes Web3, we’ll streamline the entire process and provide clean, secure, and scalable code "
   },
   {
     title: "Creating a custom-tailored strategy for every product",
-    text: "Our team moves in sync with the market, adapting and reacting to the changes on the go. We’re proactive to the bone and provide milestone updates regularly & promptly",
+    text: "Our team moves in sync with the market, adapting and reacting to the changes on the go. We’re proactive to the bone and provide milestone updates regularly & promptly"
   },
   {
     title: "Taking full responsibility for the product development",
-    text: "You can save yourself a headache by delegating the development process to us. Focus on other things that matter for your business while we deliver the product shaped by your vision",
-  },
+    text: "You can save yourself a headache by delegating the development process to us. Focus on other things that matter for your business while we deliver the product shaped by your vision"
+  }
 ];
 
 const Benefits = () => {
@@ -38,20 +38,20 @@ const Benefits = () => {
 
   const expandVariants = {
     visible: { height: "auto" },
-    hidden: { height: 0 },
+    hidden: { height: 0 }
   };
 
   const textVariants = {
     visible: { opacity: 1 },
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
   };
 
   return (
     <section id="benefits" className="relative">
       <div className="flex flex-col md:flex-row">
-        <div className="w-full flex py-16 md:py-0 px-default border-b border-b-th-fade md-border-r md:w-1/2">
-          <div className="sticky bottom-[30vh] self-end box-border">
-            <p className="font-roc text-2xl leading-tight font-medium md:text-3xl lg:text-4xl xl:text-[42px] text-center md:text-left text-white uppercase max-w-xl md:my-12 lg:my-16 xl:my-20">
+        <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-16 md:w-1/2 md:py-0">
+          <div className="sticky bottom-[30vh] box-border self-end">
+            <p className="max-w-xl text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
               Being fully immersed in Web3, we’re not just devs —{" "}
               <span className="violet-gradient-text">
                 we’re product visionaries
@@ -63,7 +63,7 @@ const Benefits = () => {
             </p>
           </div>
         </div>
-        <div className="md:w-1/2 md:flex md:flex-col">
+        <div className="md:flex md:w-1/2 md:flex-col">
           <Scrollama
             offset={0.5}
             onStepEnter={onStepEnter}
@@ -73,7 +73,7 @@ const Benefits = () => {
               const active = index + 1 === currentStepIndex;
               return (
                 <Step data={index + 1} key={index}>
-                  <article className="benefit-wrapper border-b border-b-th-fade px-default py-12 lg:py-16 flex overflow-hidden relative">
+                  <article className="benefit-wrapper px-default relative flex overflow-hidden border-b border-b-th-fade py-12 lg:py-16">
                     <div>
                       <h2 className="max-w-xl">{benefit.title}</h2>
                       {active && (
@@ -88,7 +88,7 @@ const Benefits = () => {
                             initial="hidden"
                             animate="visible"
                             variants={textVariants}
-                            className="text-th-grey mt-8 text-sm md:text-base lg:text-lg !leading-[180%]"
+                            className="mt-8 text-sm !leading-[180%] text-th-grey md:text-base lg:text-lg"
                           >
                             {benefit.text}
                           </motion.p>
@@ -106,7 +106,7 @@ const Benefits = () => {
                             initial="visible"
                             animate="hidden"
                             variants={textVariants}
-                            className="text-th-grey mt-8 text-sm md:text-base lg:text-lg !leading-[180%]"
+                            className="mt-8 text-sm !leading-[180%] text-th-grey md:text-base lg:text-lg"
                           >
                             {benefit.text}
                           </motion.p>

@@ -8,28 +8,28 @@ import bg from "../../../assets/bg/clients_feedback.png";
 const feedbackData = [
   {
     text: '"We were impressed with their extensive experience in blockchain development."',
-    author: "CEO, Mobile Gaming Company",
+    author: "CEO, Mobile Gaming Company"
   },
   {
     text: '"They exhibit a proactive approach and showcase remarkable talent as developers."',
-    author: "Antoine Marsan, CEO & Founder, Marsan Exchange Inc.",
+    author: "Antoine Marsan, CEO & Founder, Marsan Exchange Inc."
   },
   {
     text: '"The project manager was always in touch and answered all questions."',
-    author: "Vlafymyr Dovzhuk \n PO, Web3 Development Company",
+    author: "Vlafymyr Dovzhuk \n PO, Web3 Development Company"
   },
   {
     text: '"We were impressed with their extensive experience in blockchain development."',
-    author: "CEO, Mobile Gaming Company",
+    author: "CEO, Mobile Gaming Company"
   },
   {
     text: '"We were impressed with their extensive experience in blockchain development."',
-    author: "CEO, Mobile Gaming Company",
+    author: "CEO, Mobile Gaming Company"
   },
   {
     text: '"We were impressed with their extensive experience in blockchain development."',
-    author: "CEO, Mobile Gaming Company",
-  },
+    author: "CEO, Mobile Gaming Company"
+  }
 ];
 
 const Quote = ({ text, author, index }) => {
@@ -37,11 +37,11 @@ const Quote = ({ text, author, index }) => {
     <article
       className={
         index === feedbackData.length - 1
-          ? "relative flex flex-col px-default py-10 md:py-16 lg:py-20 border-r md:border-r-0 border-r-th-fade w-full min-w-[320px]"
-          : "relative flex flex-col px-default py-10 md:py-16 lg:py-20 border-r md:border-r-0 md:border-b border-r-th-fade md:border-b-th-fade w-full min-w-[320px]"
+          ? "px-default relative flex w-full min-w-[320px] flex-col border-r border-r-th-fade py-10 md:border-r-0 md:py-16 lg:py-20"
+          : "px-default relative flex w-full min-w-[320px] flex-col border-r border-r-th-fade py-10 md:border-b md:border-r-0 md:border-b-th-fade md:py-16 lg:py-20"
       }
     >
-      <p className="header !no-underline !leading-none !font-normal max-w-2xl">
+      <p className="header max-w-2xl !font-normal !leading-none !no-underline">
         {text}
       </p>
       <div className="mt-8">
@@ -51,9 +51,9 @@ const Quote = ({ text, author, index }) => {
               <img key={index} className="w-4" src={star} alt=""></img>
             ))}
           </div>
-          <p className="markup !font-normal text-white mt-1">5.0</p>
+          <p className="markup mt-1 !font-normal text-white">5.0</p>
         </div>
-        <p className="mt-4 caption">{author}</p>
+        <p className="caption mt-4">{author}</p>
       </div>
     </article>
   );
@@ -62,19 +62,19 @@ const Quote = ({ text, author, index }) => {
 const Feedback = () => {
   return (
     <section id="clients-feedback">
-      <div className="relative grid grid-cols-1 md:grid-cols-5 border-t border-t-th-fade">
-        <div className="relative border-b border-b-th-fade flex md-border-r md:col-span-2 box-border">
+      <div className="relative grid grid-cols-1 border-t border-t-th-fade md:grid-cols-5">
+        <div className="md-border-r relative box-border flex border-b border-b-th-fade md:col-span-2">
           <img
-            className="absolute left-0 w-full -top-[40%] md:-top-[15vw] md:-left-[20%] md:h-1/2"
+            className="absolute -top-[40%] left-0 w-full md:-left-[20%] md:-top-[15vw] md:h-1/2"
             src={bg}
             alt=""
           ></img>
           <div className="h-[1px]"></div>
-          <div className="sticky bottom-[30vh] self-end mx-default my-heading w-full ">
-            <h3 className="text-white !leading-none">
+          <div className="mx-default my-heading sticky bottom-[30vh] w-full self-end ">
+            <h3 className="!leading-none text-white">
               YOU CAN<br></br>TRUST US
             </h3>
-            <div className="flex flex-col gap-y-4 mt-10 md:mt-16 lg:mt-24 xl:mt-36">
+            <div className="mt-10 flex flex-col gap-y-4 md:mt-16 lg:mt-24 xl:mt-36">
               <div className="flex items-center gap-x-[28px]">
                 <a
                   href="https://clutch.co/profile/cowchain"
@@ -85,7 +85,7 @@ const Feedback = () => {
                 </a>
                 <div>
                   <div className="flex items-center gap-x-4">
-                    <p className="markup text-white mt-1">5.0</p>
+                    <p className="markup mt-1 text-white">5.0</p>
                     <div className="flex items-center gap-x-1">
                       {[0, 1, 2, 3, 4].map((n, index) => (
                         <img
@@ -97,7 +97,7 @@ const Feedback = () => {
                       ))}
                     </div>
                   </div>
-                  <p className="text-white mt-[2px]">
+                  <p className="mt-[2px] text-white">
                     Based on 20 Clutch reviews
                   </p>
                 </div>
@@ -110,7 +110,7 @@ const Feedback = () => {
                 >
                   <img className="w-12 md:w-16" src={upwork} alt=""></img>
                 </a>
-                <div className="flex gap-x-2 items-center">
+                <div className="flex items-center gap-x-2">
                   <img className="w-8" src={upwork_star} alt=""></img>
                   <p className="text-white">Top Rated Plus</p>
                 </div>
@@ -118,7 +118,7 @@ const Feedback = () => {
             </div>
           </div>
         </div>
-        <div className="quote_wrapper flex md:flex-col items-stretch overflow-x-scroll md:overflow-x-hidden md:overflow-y-visible border-b border-b-th-fade md:col-span-3">
+        <div className="quote_wrapper flex items-stretch overflow-x-scroll border-b border-b-th-fade md:col-span-3 md:flex-col md:overflow-x-hidden md:overflow-y-visible">
           {feedbackData &&
             feedbackData.map((feedback, index) => (
               <Quote key={index} {...feedback} index={index} />

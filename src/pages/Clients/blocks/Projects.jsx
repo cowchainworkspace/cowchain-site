@@ -13,13 +13,13 @@ const sectionsData = [
     projects: [
       {
         pic: pic1,
-        name: "Decentralized Exchange (DEX)",
+        name: "Decentralized Exchange (DEX)"
       },
       {
         pic: pic2,
-        name: "Decentralized Exchange (DEX)",
-      },
-    ],
+        name: "Decentralized Exchange (DEX)"
+      }
+    ]
   },
   {
     title: "Startups riding the blockchain wave 2",
@@ -28,13 +28,13 @@ const sectionsData = [
     projects: [
       {
         pic: pic1,
-        name: "Decentralized Exchange (DEX)",
+        name: "Decentralized Exchange (DEX)"
       },
       {
         pic: pic2,
-        name: "Decentralized Exchange (DEX)",
-      },
-    ],
+        name: "Decentralized Exchange (DEX)"
+      }
+    ]
   },
   {
     title: "Startups riding the blockchain wave 3",
@@ -43,14 +43,14 @@ const sectionsData = [
     projects: [
       {
         pic: pic1,
-        name: "Decentralized Exchange (DEX)",
+        name: "Decentralized Exchange (DEX)"
       },
       {
         pic: pic2,
-        name: "Decentralized Exchange (DEX)",
-      },
-    ],
-  },
+        name: "Decentralized Exchange (DEX)"
+      }
+    ]
+  }
 ];
 
 const Projects = () => {
@@ -72,23 +72,23 @@ const Projects = () => {
   return (
     <section id="clients-projects">
       <div className="relative grid grid-cols-1 md:grid-cols-7">
-        <div className="hidden md:block md:col-span-3 px-default py-10 pb-48">
+        <div className="px-default hidden py-10 pb-48 md:col-span-3 md:block">
           <div className="h-[1px]"></div>
           <div className="sticky top-48 flex flex-col gap-y-12 lg:gap-y-16">
             <h4
-              className="text-th-fade clients-projects-marker"
+              className="clients-projects-marker text-th-fade"
               active={currentStepIndex === 1 ? "true" : "false"}
             >
               Startups
             </h4>
             <h4
-              className="text-th-fade clients-projects-marker"
+              className="clients-projects-marker text-th-fade"
               active={currentStepIndex === 2 ? "true" : "false"}
             >
               Enterprises
             </h4>
             <h4
-              className="text-th-fade clients-projects-marker"
+              className="clients-projects-marker text-th-fade"
               active={currentStepIndex === 3 ? "true" : "false"}
             >
               Web3 natives
@@ -117,8 +117,8 @@ const Projects = () => {
                     <article
                       className={
                         index !== 2
-                          ? "bg-black sticky px-4 md:px-8 flex flex-col"
-                          : "bg-black sticky px-4 md:px-8 flex flex-col"
+                          ? "sticky flex flex-col bg-black px-4 md:px-8"
+                          : "sticky flex flex-col bg-black px-4 md:px-8"
                       }
                       style={{
                         top: `${
@@ -128,37 +128,37 @@ const Projects = () => {
                           windowWidth < 768
                             ? (2 - index) * 128
                             : (2 - index) * 108
-                        }px`,
+                        }px`
                       }}
                     >
                       <div
                         className={
                           index === 0
                             ? "h-[1px] py-6"
-                            : "border-t border-t-th-fade h-[1px] py-6"
+                            : "h-[1px] border-t border-t-th-fade py-6"
                         }
                       ></div>
-                      <p className="text-xl font-roc text-white uppercase leading-none font-medium max-w-xs md:max-w-none">
+                      <p className="max-w-xs font-roc text-xl font-medium uppercase leading-none text-white md:max-w-none">
                         {section.title}
                       </p>
                       <div className="mt-10 bg-black">
-                        <p className="text-th-grey max-w-xl">
+                        <p className="max-w-xl text-th-grey">
                           {section.description}
                         </p>
-                        <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 lg:gap-6 my-8 md:my-12 lg:mb-20 xl:mb-32 md:grid md:grid-cols-2 md:mr-8 lg:mr-16 xl:mr-24 max-w-3xl">
+                        <div className="my-8 flex max-w-3xl flex-wrap items-center justify-center gap-4 md:my-12 md:mr-8 md:grid md:grid-cols-2 md:justify-start lg:mb-20 lg:mr-16 lg:gap-6 xl:mb-32 xl:mr-24">
                           {section.projects &&
                             section.projects.map((project, index) => (
                               <div
                                 key={index}
-                                className="relative flex flex-col p-4 md:p-8 w-full max-w-[320px] md:max-w-none md:w-full h-[30vh] md:h-[420px]"
+                                className="relative flex h-[30vh] w-full max-w-[320px] flex-col p-4 md:h-[420px] md:w-full md:max-w-none md:p-8"
                               >
                                 <div
-                                  className="absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat"
+                                  className="absolute left-0 top-0 h-full w-full bg-cover bg-center bg-no-repeat"
                                   style={{
-                                    backgroundImage: `url(${project.pic})`,
+                                    backgroundImage: `url(${project.pic})`
                                   }}
                                 ></div>
-                                <h2 className="relative text-white max-w-[140px] md:max-w-[216px] mt-auto">
+                                <h2 className="relative mt-auto max-w-[140px] text-white md:max-w-[216px]">
                                   {project.name}
                                 </h2>
                               </div>

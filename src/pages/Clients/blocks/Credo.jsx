@@ -6,19 +6,19 @@ const Credo = () => {
   const [openForm, setOpenForm] = useState(false);
   return (
     <section id="clients-credo">
-      <div className="credo-wrapper bg-black relative px-default gap-y-8 md:gap-y-12 py-heading xl:py-48 flex flex-col bg-credo bg-contain bg-no-repeat bg-top">
-        <div className="flex items-center gap-x-2 mt-20 mx-auto">
+      <div className="credo-wrapper px-default py-heading relative flex flex-col gap-y-8 bg-black bg-credo bg-contain bg-top bg-no-repeat md:gap-y-12 xl:py-48">
+        <div className="mx-auto mt-20 flex items-center gap-x-2">
           <img className="w-[140px]" src={icons} alt=""></img>
-          <p className="text-white font-roc !font-medium">happy clients</p>
+          <p className="font-roc !font-medium text-white">happy clients</p>
         </div>
-        <p className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-roc uppercase font-medium text-center mx-auto max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-4xl leading-[120%]">
+        <p className="mx-auto max-w-sm text-center font-roc text-xl font-medium uppercase leading-[120%] md:max-w-lg md:text-2xl lg:max-w-2xl lg:text-3xl xl:max-w-4xl xl:text-4xl">
           Our commitment to code excellence and seamless collaboration drives us
           to provide custom blockchain solutions that are shaped by clients’
           visions and resonate with their audiences.
         </p>
         <button
           onClick={() => setOpenForm(true)}
-          className="btn-submit w-[200px] mx-auto"
+          className="btn-submit mx-auto w-[200px]"
         >
           GET IN TOUCH
         </button>

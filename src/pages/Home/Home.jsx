@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <section id="home-wrapper">
-      <div className="bg-black relative">
+      <div className="relative bg-black">
         <Navbar setBurgerOpen={setBurgerOpen} />
         <Header />
         <Benefits />

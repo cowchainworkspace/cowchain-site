@@ -6,14 +6,14 @@ const Header = () => {
     <section id="clients-header" className="relative">
       <img
         alt=""
-        className="absolute top-0 right-0 min-w-[200vw] md:min-w-full min-h-[150%] md:min-h-[130%] lg:min-h-[120%] xl:max-h-[85%]"
+        className="absolute right-0 top-0 min-h-[150%] min-w-[200vw] md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
         src={bg_lg}
       />
-      <div className="px-default flex flex-col pb-16 md:pb-32 lg:pb-48 lg:pt-16 relative">
-        <div className="mt-16 border border-white rounded-full py-[6px] lg:py-3 px-8 mr-auto">
+      <div className="px-default relative flex flex-col pb-16 md:pb-32 lg:pb-48 lg:pt-16">
+        <div className="mr-auto mt-16 rounded-full border border-white px-8 py-[6px] lg:py-3">
           <p className="body1 text-white">clients</p>
         </div>
-        <h1 className="text-white mt-4 lg:mt-6 uppercase xl:!text-[100px]">
+        <h1 className="mt-4 uppercase text-white lg:mt-6 xl:!text-[100px]">
           cowchain <br></br> works with
         </h1>
       </div>

@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionButton,
   AccordionPanel,
-  AccordionIcon,
+  AccordionIcon
 } from "@chakra-ui/react";
 
 const faqData = [
@@ -12,30 +12,30 @@ const faqData = [
     title:
       "What is Web3 development, and how is it different from traditional web development?",
     content:
-      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards.",
+      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards."
   },
   {
     title:
       "What measures are taken to ensure the security of Web3 applications?",
     content:
-      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards.",
+      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards."
   },
   {
     title: "How can I monetize my Web3 application?",
     content:
-      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards.",
+      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards."
   },
   {
     title: "What are the benefits of using Web3 applications for my business?",
     content:
-      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards.",
+      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards."
   },
   {
     title:
       "How can a Web3 development agency help my business implement blockchain technology effectively?",
     content:
-      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards.",
-  },
+      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards."
+  }
 ];
 
 const FAQ = () => {
@@ -43,7 +43,7 @@ const FAQ = () => {
   return (
     <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-5">
-        <div className="border-b border-b-th-fade py-heading text-center px-default md:col-span-2 md-border-r">
+        <div className="py-heading px-default md-border-r border-b border-b-th-fade text-center md:col-span-2">
           <h3 className="text-center md:text-left">
             FREQUENTLY<br></br>ASKED<br></br>QUESTIONS
           </h3>
@@ -55,7 +55,7 @@ const FAQ = () => {
                 {({ isExpanded }) => (
                   <>
                     <AccordionButton>
-                      <div className="pr-4 py-4 md:py-8 w-full max-w-3xl mr-auto">
+                      <div className="mr-auto w-full max-w-3xl py-4 pr-4 md:py-8">
                         <h2 className="text-left !text-sm !leading-none lg:!text-lg lg:!leading-none">
                           {faq.title}
                         </h2>
@@ -108,8 +108,8 @@ const FAQ = () => {
                       )}
                     </AccordionButton>
                     <AccordionPanel>
-                      <div className="px-default pb-8 md:pb-12 max-w-5xl bg-black">
-                        <p className="!text-[#bbb] !leading-[160%] lg:!leading-[175%]">
+                      <div className="px-default max-w-5xl bg-black pb-8 md:pb-12">
+                        <p className="!leading-[160%] !text-[#bbb] lg:!leading-[175%]">
                           {faq.content}
                         </p>
                       </div>

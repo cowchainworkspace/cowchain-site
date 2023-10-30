@@ -9,7 +9,7 @@ video {
   bottom: auto;
   left: auto;
   right: auto;
-  @apply max-w-4xl w-[120%] md:w-full top-[10vh] sm:top-[5vh] md:top-auto;
+  @apply top-[10vh] w-[120%] max-w-4xl sm:top-[5vh] md:top-auto md:w-full;
 }
 
 .video-wrapper {
@@ -26,13 +26,13 @@ video {
 }
 
 .modal-video {
-  @apply w-36 md:w-64 left-auto top-auto bottom-0 right-0 md:right-8 border-none outline-0 mt-auto h-auto;
+  @apply bottom-0 left-auto right-0 top-auto mt-auto h-auto w-36 border-none outline-0 md:right-8 md:w-64;
   -moz-outline: 0;
   -webkit-outline: 0;
 }
 
 .modal-video-inner {
-  @apply h-36 mt-auto md:mb-8 border-none;
+  @apply mt-auto h-36 border-none md:mb-8;
 }
 
 .modal-video-body {
@@ -50,11 +50,11 @@ video {
 }
 
 .modal-video-movie-wrap iframe {
-  @apply border-2 border-white rounded-full md:rounded-xl;
+  @apply rounded-full border-2 border-white md:rounded-xl;
 }
 
 .modal-video-close-btn {
-  @apply w-6 h-6 -top-6 md:-top-8 -right-1;
+  @apply -right-1 -top-6 h-6 w-6 md:-top-8;
 }
 
 .modal-video-close-btn::before,
@@ -93,13 +93,17 @@ video {
   @apply block;
   visibility: visible;
   opacity: 1;
-  transition: visibility 0s, opacity 0.3s ease-in-out;
+  transition:
+    visibility 0s,
+    opacity 0.3s ease-in-out;
 }
 
 .expertise_wrapper_bg {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.3s ease-in-out;
+  transition:
+    visibility 0s,
+    opacity 0.3s ease-in-out;
   background: linear-gradient(
     164deg,
     #873cbc 0.26%,
@@ -143,7 +147,9 @@ video {
 .project-card > .project-overlay {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.2s linear;
+  transition:
+    visibility 0s,
+    opacity 0.2s linear;
 }
 
 @media (min-width: 1024px) {
@@ -156,7 +162,9 @@ video {
 .team_card_wrapper > .team_card_overlay {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
+  transition:
+    visibility 0s,
+    opacity 0.5s linear;
 }
 .team_card_wrapper:hover > .team_card_overlay {
   visibility: visible;
@@ -186,7 +194,7 @@ video {
 }
 
 .chakra-accordion__button {
-  @apply px-4 md:px-8 lg:px-16 xl:px-24 py-4 md:py-8;
+  @apply px-4 py-4 md:px-8 md:py-8 lg:px-16 xl:px-24;
 }
 
 .chakra-accordion__button[aria-expanded="true"] {

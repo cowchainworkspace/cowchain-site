@@ -15,7 +15,7 @@ const Clients = () => {
 
   return (
     <section id="clients-wrapper">
-      <div className="bg-black relative">
+      <div className="relative bg-black">
         <Navbar setBurgerOpen={setBurgerOpen} />
         <Header />
         <Projects />

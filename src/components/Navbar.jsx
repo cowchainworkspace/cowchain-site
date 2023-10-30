@@ -6,7 +6,6 @@ import bg from "../assets/bg/navbar_top.png";
 import bg_lg from "../assets/bg/navbar_top_lg.png";
 import bg_clients from "../assets/bg/clients_navbar_bg_sm.png";
 import bg_clients_lg from "../assets/bg/clients_navbar_bg_lg.png";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import arrow from "../assets/arrow_right.svg";
 import { Link } from "react-router-dom";
@@ -23,11 +22,11 @@ const Navbar = ({ setBurgerOpen }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const sideVariants = {
     open: {
-      transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+      transition: { staggerChildren: 0.07, delayChildren: 0.2 }
     },
     closed: {
-      transition: { staggerChildren: 0.05, staggerDirection: -1 },
-    },
+      transition: { staggerChildren: 0.05, staggerDirection: -1 }
+    }
   };
 
   const linkVariants = {
@@ -35,42 +34,42 @@ const Navbar = ({ setBurgerOpen }) => {
       y: 0,
       opacity: 1,
       transition: {
-        y: { stiffness: 1000, velocity: -100 },
-      },
+        y: { stiffness: 1000, velocity: -100 }
+      }
     },
     closed: {
       y: 50,
       opacity: 0,
       transition: {
-        y: { stiffness: 1000 },
-      },
-    },
+        y: { stiffness: 1000 }
+      }
+    }
   };
 
   const anchorLinks = [
     {
       title: "Services & Technologies",
-      link: "/expertise",
+      link: "/expertise"
     },
     {
       title: "Cases",
-      link: "/projects",
+      link: "/projects"
     },
     {
       title: "Clients",
-      link: "/clients",
-    },
+      link: "/clients"
+    }
   ];
 
   const routerLinks = [
     {
       title: "Team",
-      link: "/",
+      link: "/"
     },
     {
       title: "Blog",
-      link: "/",
-    },
+      link: "/"
+    }
   ];
 
   const openBurger = () => {
@@ -93,13 +92,13 @@ const Navbar = ({ setBurgerOpen }) => {
   const isHomePage = location.pathname === "/";
 
   return (
-    <section className="bg-transparent relative">
+    <section className="relative bg-transparent">
       {isHomePage ? (
         <img
           srcSet={`${bg} 360w, ${bg} 480w, ${bg} 720w, ${bg_lg} 1920w`}
           sizes="(max-width: 640px) 100vw, 100vw"
           alt=""
-          className="absolute bottom-0 left-0 w-full h-full"
+          className="absolute bottom-0 left-0 h-full w-full"
           src={bg_lg}
         />
       ) : (
@@ -107,7 +106,7 @@ const Navbar = ({ setBurgerOpen }) => {
           srcSet={`${bg_clients} 360w, ${bg_clients} 480w, ${bg_clients} 720w, ${bg_clients_lg} 1920w`}
           sizes="200vw"
           alt=""
-          className="absolute bottom-0 right-0 min-w-[200vw] md:min-w-full min-h-[140%]"
+          className="absolute bottom-0 right-0 min-h-[140%] min-w-[200vw] md:min-w-full"
           src={bg_clients_lg}
         />
       )}
@@ -115,11 +114,11 @@ const Navbar = ({ setBurgerOpen }) => {
       <div
         className={
           isHomePage
-            ? "relative px-4 md:px-8 lg:px-0 h-24 md:h-16 flex items-center gap-x-8 justify-between md:border-b md:border-th-fade navbar-wrapper border-b border-b-th-fade"
-            : "relative px-4 md:px-8 lg:px-0 h-24 md:h-16 flex items-center gap-x-8 justify-between navbar-wrapper md:border-b md:border-th-fade"
+            ? "navbar-wrapper relative flex h-24 items-center justify-between gap-x-8 border-b border-b-th-fade px-4 md:h-16 md:border-b md:border-th-fade md:px-8 lg:px-0"
+            : "navbar-wrapper relative flex h-24 items-center justify-between gap-x-8 px-4 md:h-16 md:border-b md:border-th-fade md:px-8 lg:px-0"
         }
       >
-        <nav className="hidden pl-12 lg:flex items-center justify-between w-full max-w-[360px] xl:max-w-md">
+        <nav className="hidden w-full max-w-[360px] items-center justify-between pl-12 lg:flex xl:max-w-md">
           {anchorLinks.map((link, index) => (
             <Link key={index} to={link.link}>
               <p className="navlink mt-1">{link.title}</p>
@@ -136,20 +135,20 @@ const Navbar = ({ setBurgerOpen }) => {
         </a>
         {toggleMenu ? (
           <img
-            className="w-6 ml-auto cursor-pointer lg:hidden"
+            className="ml-auto w-6 cursor-pointer lg:hidden"
             src={menu_close}
             onClick={closeBurger}
             alt=""
           ></img>
         ) : (
           <img
-            className="w-6 ml-auto cursor-pointer lg:hidden"
+            className="ml-auto w-6 cursor-pointer lg:hidden"
             alt=""
             src={menu_open}
             onClick={openBurger}
           ></img>
         )}
-        <div className="hidden lg:flex ml-auto items-center justify-between w-full max-w-[360px] xl:max-w-md">
+        <div className="ml-auto hidden w-full max-w-[360px] items-center justify-between lg:flex xl:max-w-md">
           {routerLinks.map((link, index) => (
             <Link key={index * 4} to={link.link}>
               <p className="navlink mt-1">{link.title}</p>
@@ -169,18 +168,18 @@ const Navbar = ({ setBurgerOpen }) => {
               initial={{ width: 0 }}
               exit={{ width: 0 }}
               animate={{ width: "100%", maxWidth: "100%" }}
-              className="absolute w-full min-h-full top-0 right-0 z-50"
+              className="absolute right-0 top-0 z-50 min-h-full w-full"
             >
               <motion.div
                 style={{
-                  height: `${windowHeight}px`,
+                  height: `${windowHeight}px`
                 }}
-                className="overflow-y-scroll relative bg-black flex flex-col pb-8"
+                className="relative flex flex-col overflow-y-scroll bg-black pb-8"
                 initial="closed"
                 animate={toggleMenu ? "open" : "closed"}
                 variants={sideVariants}
               >
-                <motion.div className="relative px-4 h-24 md:h-16 flex items-center border-b border-b-th-fade">
+                <motion.div className="relative flex h-24 items-center border-b border-b-th-fade px-4 md:h-16">
                   <a href="/" rel="nofollow">
                     <img
                       className="w-32"
@@ -190,13 +189,13 @@ const Navbar = ({ setBurgerOpen }) => {
                     ></img>
                   </a>
                   <img
-                    className="w-8 ml-auto cursor-pointer lg:hidden"
+                    className="ml-auto w-8 cursor-pointer lg:hidden"
                     src={menu_close}
                     onClick={closeBurger}
                     alt=""
                   ></img>
                 </motion.div>
-                <motion.nav className="flex flex-col mt-8 px-4 gap-y-6">
+                <motion.nav className="mt-8 flex flex-col gap-y-6 px-4">
                   {anchorLinks.map((link, index) => (
                     <Link
                       key={index}
@@ -206,11 +205,11 @@ const Navbar = ({ setBurgerOpen }) => {
                       whileTap={{ scale: 0.95 }}
                     >
                       <div className="flex items-center">
-                        <p className="text-base uppercase font-roc font-medium text-white">
+                        <p className="font-roc text-base font-medium uppercase text-white">
                           {link.title}
                         </p>
                         <img
-                          className="w-6 ml-auto mb-1"
+                          className="mb-1 ml-auto w-6"
                           src={arrow}
                           alt=""
                         ></img>
@@ -227,11 +226,11 @@ const Navbar = ({ setBurgerOpen }) => {
                       whileTap={{ scale: 0.95 }}
                     >
                       <div className="flex items-center">
-                        <p className="text-base uppercase font-roc font-medium text-white">
+                        <p className="font-roc text-base font-medium uppercase text-white">
                           {link.title}
                         </p>
                         <img
-                          className="w-6 ml-auto mb-1"
+                          className="mb-1 ml-auto w-6"
                           src={arrow}
                           alt=""
                         ></img>
@@ -240,12 +239,12 @@ const Navbar = ({ setBurgerOpen }) => {
                   ))}
                 </motion.nav>
                 <button
-                  className="btn-submit text-center mt-auto mx-4"
+                  className="btn-submit mx-4 mt-auto text-center"
                   onClick={handleMobileFormOpen}
                 >
                   GET IN TOUCH
                 </button>
-                <motion.div className="flex items-center justify-center gap-x-2 mx-auto mt-8">
+                <motion.div className="mx-auto mt-8 flex items-center justify-center gap-x-2">
                   <a
                     href="https://www.linkedin.com/company/cowchain/"
                     rel="nofollow"

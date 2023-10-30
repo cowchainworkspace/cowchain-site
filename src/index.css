@@ -7,9 +7,19 @@
 
 body {
   margin: 0;
-  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family:
+    "Manrope",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,64 +27,64 @@ body {
 /* Text styles */
 
 h1 {
-  @apply font-roc text-5xl md:text-6xl lg:text-[80px] font-medium text-white leading-tight;
+  @apply font-roc text-5xl font-medium leading-tight text-white md:text-6xl lg:text-[80px];
 }
 
 h2 {
-  @apply font-roc text-base md:text-lg lg:text-2xl uppercase font-medium text-white leading-tight md:leading-none lg:leading-[90%];
+  @apply font-roc text-base font-medium uppercase leading-tight text-white md:text-lg md:leading-none lg:text-2xl lg:leading-[90%];
 }
 
 h3 {
-  @apply font-roc font-medium text-4xl md:text-5xl lg:text-[60px] text-white leading-tight;
+  @apply font-roc text-4xl font-medium leading-tight text-white md:text-5xl lg:text-[60px];
 }
 
 h4 {
-  @apply font-roc font-medium  text-2xl lg:text-[28px] xl:text-[32px] uppercase leading-[90%];
+  @apply font-roc text-2xl  font-medium uppercase leading-[90%] lg:text-[28px] xl:text-[32px];
 }
 
 p,
 .p {
-  @apply text-white text-sm md:text-base leading-normal font-normal;
+  @apply text-sm font-normal leading-normal text-white md:text-base;
 }
 
 .header {
-  @apply text-lg md:text-xl lg:text-2xl uppercase underline font-roc font-medium;
+  @apply font-roc text-lg font-medium uppercase underline md:text-xl lg:text-2xl;
 }
 
 .body {
-  @apply text-xs md:text-sm lg:text-base text-white font-normal leading-relaxed;
+  @apply text-xs font-normal leading-relaxed text-white md:text-sm lg:text-base;
 }
 
 .body1 {
-  @apply text-sm md:text-base text-white font-medium;
+  @apply text-sm font-medium text-white md:text-base;
 }
 
 .body2 {
-  @apply text-xs font-light text-white leading-snug;
+  @apply text-xs font-light leading-snug text-white;
 }
 
 .body3 {
-  @apply font-roc text-2xl leading-tight font-medium;
+  @apply font-roc text-2xl font-medium leading-tight;
 }
 
 .caption {
-  @apply text-xs md:text-sm text-th-grey font-normal;
+  @apply text-xs font-normal text-th-grey md:text-sm;
 }
 
 .markup {
-  @apply text-base md:text-lg lg:text-xl xl:text-2xl font-roc font-medium leading-[90%];
+  @apply font-roc text-base font-medium leading-[90%] md:text-lg lg:text-xl xl:text-2xl;
 }
 
 .num_lg {
-  @apply font-roc font-medium text-4xl md:text-[42px] lg:text-6xl text-white leading-tight;
+  @apply font-roc text-4xl font-medium leading-tight text-white md:text-[42px] lg:text-6xl;
 }
 
 .error-span {
-  @apply text-red-500 text-base font-bold;
+  @apply text-base font-bold text-red-500;
 }
 
 .navlink {
-  @apply text-sm uppercase font-roc font-medium text-white leading-none;
+  @apply font-roc text-sm font-medium uppercase leading-none text-white;
 }
 
 /* Paddings */
@@ -108,12 +118,14 @@ p,
 /* Element styles */
 
 .btn-play {
-  @apply cursor-pointer bg-white pb-[6px] pt-[10px] px-6 text-black font-roc font-medium uppercase text-sm rounded-full leading-none;
+  @apply cursor-pointer rounded-full bg-white px-6 pb-[6px] pt-[10px] font-roc text-sm font-medium uppercase leading-none text-black;
 }
 
 .btn-contact {
-  @apply cursor-pointer bg-white w-36 h-36 flex rounded-full items-center justify-center uppercase text-base text-black font-roc font-medium;
-  transition: color 0.3s, background-color 0.3s ease-in-out;
+  @apply flex h-36 w-36 cursor-pointer items-center justify-center rounded-full bg-white font-roc text-base font-medium uppercase text-black;
+  transition:
+    color 0.3s,
+    background-color 0.3s ease-in-out;
 }
 
 .btn-submit:hover {
@@ -121,8 +133,10 @@ p,
 }
 
 .btn-submit {
-  @apply cursor-pointer bg-white text-sm text-center font-medium font-roc uppercase h-12 lg:h-16 flex items-center justify-center pt-1 px-8 text-black;
-  transition: color 0.3s, background-color 0.3s ease-in-out;
+  @apply flex h-12 cursor-pointer items-center justify-center bg-white px-8 pt-1 text-center font-roc text-sm font-medium uppercase text-black lg:h-16;
+  transition:
+    color 0.3s,
+    background-color 0.3s ease-in-out;
 }
 
 .md-border-r {
@@ -149,8 +163,10 @@ p,
 }
 
 .form_label_div {
-  @apply text-white pb-2 pt-3 px-4 uppercase font-roc font-medium text-base;
-  transition: background-color 300ms, color 300ms linear;
+  @apply px-4 pb-2 pt-3 font-roc text-base font-medium uppercase text-white;
+  transition:
+    background-color 300ms,
+    color 300ms linear;
 }
 
 .form_check {
@@ -158,15 +174,15 @@ p,
 }
 
 .form_label_div:hover {
-  @apply text-black border-white bg-white;
+  @apply border-white bg-white text-black;
 }
 
 .form_check:checked + .form_label_div {
-  @apply text-black border-white bg-white;
+  @apply border-white bg-white text-black;
 }
 
 .userform .text_input {
-  @apply border-b border-b-th-grey py-4 text-base font-normal text-white bg-black;
+  @apply border-b border-b-th-grey bg-black py-4 text-base font-normal text-white;
 }
 
 .userform .text_input::placeholder {
@@ -208,11 +224,11 @@ input:-webkit-autofill:active {
 }
 
 .footerform input {
-  @apply bg-[#ffffff10] text-base font-roc px-4 py-3 text-white;
+  @apply bg-[#ffffff10] px-4 py-3 font-roc text-base text-white;
 }
 
 .footerform input:placeholder {
-  @apply text-base font-normal text-white font-roc;
+  @apply font-roc text-base font-normal text-white;
 }
 
 .footerform .text_input:focus {

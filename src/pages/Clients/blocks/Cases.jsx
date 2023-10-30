@@ -8,7 +8,7 @@ import React, {
   useState,
   useLayoutEffect,
   useCallback,
-  useEffect,
+  useEffect
 } from "react";
 import ResizeObserver from "resize-observer-polyfill";
 import {
@@ -16,7 +16,7 @@ import {
   useViewportScroll,
   useTransform,
   useSpring,
-  useMotionValue,
+  useMotionValue
 } from "framer-motion";
 
 import useScrollPercentage from "react-scroll-percentage-hook";
@@ -24,28 +24,28 @@ import useScrollPercentage from "react-scroll-percentage-hook";
 const casesData = [
   {
     title: "Decentralized Exchange (DEX)",
-    pic: pic1,
+    pic: pic1
   },
   {
     title: "Decentralized Exchange (DEX)",
-    pic: pic2,
+    pic: pic2
   },
   {
     title: "Decentralized Exchange (DEX)",
-    pic: pic3,
+    pic: pic3
   },
   {
     title: "Decentralized Exchange (DEX)",
-    pic: pic4,
+    pic: pic4
   },
   {
     title: "Decentralized Exchange (DEX)",
-    pic: pic1,
+    pic: pic1
   },
   {
     title: "Decentralized Exchange (DEX)",
-    pic: pic3,
-  },
+    pic: pic3
+  }
 ];
 
 const Cases = () => {
@@ -73,7 +73,7 @@ const Cases = () => {
   }, [onResize]);
 
   const { scrollYProgress } = useScroll({
-    target: ghostRef,
+    target: ghostRef
   });
 
   const { containerRef, percentage } = useScrollPercentage();
@@ -92,22 +92,22 @@ const Cases = () => {
 
   return (
     <section ref={containerRef} id="clients-cases" className="relative z-10">
-      <div className="scroll-container top-[30%] xl:top-[20%] md:overflow-hidden border-y border-y-th-fade">
+      <div className="scroll-container top-[30%] border-y border-y-th-fade md:overflow-hidden xl:top-[20%]">
         <motion.div
           ref={scrollRef}
           style={{ x: spring }}
-          className="cases_wrapper overflow-x-scroll md:overflow-x-visible relative flex p-2 lg:py-8 gap-x-2 md:gap-x-4"
+          className="cases_wrapper relative flex gap-x-2 overflow-x-scroll p-2 md:gap-x-4 md:overflow-x-visible lg:py-8"
         >
           {casesData &&
             casesData.map((project, index) => (
               <div
                 key={index}
                 style={{
-                  backgroundImage: `url(${project.pic})`,
+                  backgroundImage: `url(${project.pic})`
                 }}
-                className="flex h-64 w-full min-w-[256px] max-w-[256px] lg:h-[30vw] lg:min-w-[30vw] relative p-6 md:p-8 lg:p-10 bg-cover bg-center bg-no-repeat"
+                className="relative flex h-64 w-full min-w-[256px] max-w-[256px] bg-cover bg-center bg-no-repeat p-6 md:p-8 lg:h-[30vw] lg:min-w-[30vw] lg:p-10"
               >
-                <h2 className="text-white mt-auto max-w-xs">{project.title}</h2>
+                <h2 className="mt-auto max-w-xs text-white">{project.title}</h2>
               </div>
             ))}
         </motion.div>
