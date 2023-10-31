@@ -53,7 +53,7 @@ const Navbar = ({ setBurgerOpen }) => {
     },
     {
       title: "Cases",
-      link: "/projects"
+      link: "/cases"
     },
     {
       title: "Clients",
@@ -247,34 +247,38 @@ const Navbar = ({ setBurgerOpen }) => {
                 <motion.div className="mx-auto mt-8 flex items-center justify-center gap-x-2">
                   <a
                     href="https://www.linkedin.com/company/cowchain/"
-                    rel="nofollow"
+                    rel="nofollow noreferrer"
                     target="_blank"
                   >
-                    <img className="w-14" src={linkedin}></img>
+                    <img className="w-14" alt="linkedIn" src={linkedin}></img>
                   </a>
                   <a
                     href="https://t.me/cowchain_team"
-                    rel="nofollow"
+                    rel="nofollow noreferrer"
                     target="_blank"
                   >
-                    <img className="w-14" src={telegram}></img>
+                    <img className="w-14" alt="telegram" src={telegram}></img>
                   </a>
                   <a
                     href="https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw"
-                    rel="nofollow"
+                    rel="nofollow noreferrer"
                     target="_blank"
                   >
-                    <img className="w-14" src={twitter}></img>
+                    <img className="w-14" alt="twitter" src={twitter}></img>
                   </a>
-                  <a href="#" rel="nofollow" target="_blank">
-                    <img className="w-14" src={medium}></img>
+                  <a
+                    href="https://medium.com/"
+                    rel="nofollow noreferrer"
+                    target="_blank"
+                  >
+                    <img className="w-14" alt="medium" src={medium}></img>
                   </a>
                   <a
                     href="mailto:sales@cowchain.io"
-                    rel="nofollow"
+                    rel="nofollow noreferrer"
                     target="_blank"
                   >
-                    <img className="w-14" src={mail}></img>
+                    <img className="w-14" alt="mail" src={mail}></img>
                   </a>
                 </motion.div>
               </motion.div>

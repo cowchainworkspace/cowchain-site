@@ -6,6 +6,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "10px",
+      screens: {
+        "2xl": "1220px"
+      }
+    },
     extend: {
       fontFamily: {
         roc: ["roc-grotesk", "sans-serif"]
