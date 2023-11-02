@@ -130,30 +130,38 @@ const Footer = () => {
           <div className="mx-auto flex items-center justify-center gap-x-2 md:mx-0 md:justify-start">
             <a
               href="https://www.linkedin.com/company/cowchain/"
-              rel="nofollow"
+              rel="nofollow noreferrer"
               target="_blank"
             >
-              <img className="w-12 lg:w-16" src={linkedin}></img>
+              <img alt="linkedin" className="w-12 lg:w-16" src={linkedin}></img>
             </a>
-            <a href="https://t.me/cowchain_team" rel="nofollow" target="_blank">
-              <img className="w-12 lg:w-16" src={telegram}></img>
+            <a
+              href="https://t.me/cowchain_team"
+              rel="nofollow noreferrer"
+              target="_blank"
+            >
+              <img alt="telegram" className="w-12 lg:w-16" src={telegram}></img>
             </a>
             <a
               href="https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw"
-              rel="nofollow"
+              rel="nofollow noreferrer"
               target="_blank"
             >
-              <img className="w-12 lg:w-16" src={twitter}></img>
+              <img alt="twitter" className="w-12 lg:w-16" src={twitter}></img>
             </a>
             <a
               href="https://cowchain.medium.com/"
-              rel="nofollow"
+              rel="nofollow noreferrer"
               target="_blank"
             >
-              <img className="w-12 lg:w-16" src={medium}></img>
+              <img alt="medium" className="w-12 lg:w-16" src={medium}></img>
             </a>
-            <a href="mailto:sales@cowchain.io" rel="nofollow" target="_blank">
-              <img className="w-12 lg:w-16" src={mail}></img>
+            <a
+              href="mailto:sales@cowchain.io"
+              rel="nofollow noreferrer"
+              target="_blank"
+            >
+              <img alt="mail" className="w-12 lg:w-16" src={mail}></img>
             </a>
           </div>
         </div>

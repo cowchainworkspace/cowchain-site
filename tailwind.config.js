@@ -20,7 +20,8 @@ module.exports = {
       colors: {
         "th-fade": "#ffffff41",
         "th-grey": "#ffffff71",
-        "th-violet": "#EABBFF"
+        "th-violet": "#EABBFF",
+        secondary: "#BBBBBB"
       },
       backgroundImage: {
         credo: 'url("assets/clients/credo_bg.jpg")'

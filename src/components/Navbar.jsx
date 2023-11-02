@@ -16,8 +16,9 @@ import medium from "../assets/footer/medium.svg";
 import mail from "../assets/footer/mail.svg";
 import ContactForm from "./utils/ContactForm";
 import { useLocation } from "react-router-dom";
+import { cn } from "lib/utils";
 
-const Navbar = ({ setBurgerOpen }) => {
+const Navbar = ({ setBurgerOpen, isGradient = true }) => {
   const [openForm, setOpenForm] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
   const sideVariants = {
@@ -49,7 +50,7 @@ const Navbar = ({ setBurgerOpen }) => {
   const anchorLinks = [
     {
       title: "Services & Technologies",
-      link: "/expertise"
+      link: "/services"
     },
     {
       title: "Cases",
@@ -68,7 +69,7 @@ const Navbar = ({ setBurgerOpen }) => {
     },
     {
       title: "Blog",
-      link: "/"
+      link: "/blog"
     }
   ];
 
@@ -98,7 +99,9 @@ const Navbar = ({ setBurgerOpen }) => {
           srcSet={`${bg} 360w, ${bg} 480w, ${bg} 720w, ${bg_lg} 1920w`}
           sizes="(max-width: 640px) 100vw, 100vw"
           alt=""
-          className="absolute bottom-0 left-0 h-full w-full"
+          className={cn("absolute bottom-0 left-0 h-full w-full", {
+            hidden: !isGradient
+          })}
           src={bg_lg}
         />
       ) : (
@@ -106,7 +109,12 @@ const Navbar = ({ setBurgerOpen }) => {
           srcSet={`${bg_clients} 360w, ${bg_clients} 480w, ${bg_clients} 720w, ${bg_clients_lg} 1920w`}
           sizes="200vw"
           alt=""
-          className="absolute bottom-0 right-0 min-h-[140%] min-w-[200vw] md:min-w-full"
+          className={cn(
+            "absolute bottom-0 right-0 min-h-[140%] min-w-[200vw] md:min-w-full",
+            {
+              hidden: !isGradient
+            }
+          )}
           src={bg_clients_lg}
         />
       )}
@@ -125,7 +133,7 @@ const Navbar = ({ setBurgerOpen }) => {
             </Link>
           ))}
         </nav>
-        <a href="/" rel="nofollow">
+        <a className="flex items-center justify-center" href="/" rel="nofollow">
           <img
             className="w-32 md:w-36 lg:w-40"
             title="Home"

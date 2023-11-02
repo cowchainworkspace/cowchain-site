@@ -4,11 +4,11 @@ export default function Tag({ title, className }) {
   return (
     <div
       className={cn(
-        "mr-auto rounded-full border border-white px-3 py-[6px] lg:px-8 lg:py-3",
+        "rounded-full border border-white px-3 py-2 lg:px-6",
         className
       )}
     >
-      <p className="text-sm font-medium text-white md:text-base">{title}</p>
+      <p className="text-sm  font-medium text-white">{title}</p>
     </div>
   );
 }

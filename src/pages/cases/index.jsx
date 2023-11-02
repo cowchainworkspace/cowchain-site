@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./case-studies.css";
 import Navbar from "components/Navbar";
-import HeroSection from "./blocks/HeroSection";
+import { HeroSection } from "./blocks/HeroSection";
 import Footer from "components/Footer";
 import phones_desktop from "assets/cases/phones-desktop.png";
 import phones_mobile from "assets/cases/phones-mobile.png";
@@ -14,7 +14,7 @@ import eye_mobile from "assets/cases/eye-mobile.png";
 import Tag from "components/ui/tag";
 import { Link } from "react-router-dom";
 
-const Cases = () => {
+export const Cases = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
   document.body.style.overflow = burgerOpen ? "hidden" : "visible";
 
@@ -60,11 +60,9 @@ const Cases = () => {
   );
 };
 
-export default Cases;
-
 const CaseSplash = ({ title, tags, img_mobile, img_desktop }) => {
   return (
-    <div className="relative flex w-full items-end justify-start border-t-[1px] border-white/50">
+    <div className="relative flex w-full items-end justify-start border-t border-th-fade">
       <img
         src={img_desktop}
         className=" hidden max-h-[560px] w-full object-cover lg:block"

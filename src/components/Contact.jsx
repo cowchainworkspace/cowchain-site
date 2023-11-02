@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import ContactForm from "./utils/ContactForm";
-import bg_lg from "../assets/bg/contact_bg.png";
-import bg from "../assets/bg/clients_cases.png";
+import bg_lg from "assets/bg/contact_bg.png";
+import bg from "assets/bg/clients_cases.png";
+import { cn } from "lib/utils";
 
-const Contact = () => {
+const Contact = ({ className }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <section id="contact" className="relative overflow-hidden">
+    <section id="contact" className={cn("relative overflow-hidden", className)}>
       <img
         sizes="100vw"
         srcSet={`${bg} 360w, ${bg} 480w, ${bg} 720w, ${bg_lg} 1920w`}

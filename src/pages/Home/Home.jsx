@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Header from "./blocks/Header";
 import Benefits from "./blocks/Benefits";
@@ -8,9 +8,8 @@ import Projects from "./blocks/Projects";
 import Team from "./blocks/Team";
 import Blog from "./blocks/Blog";
 import FAQ from "./blocks/FAQ";
-import Contact from "../../components/Contact";
-import Footer from "../../components/Footer";
-import { useInView, motion, useScroll } from "framer-motion";
+import Contact from "components/Contact";
+import Footer from "components/Footer";
 import "./home.css";
 
 const Home = () => {

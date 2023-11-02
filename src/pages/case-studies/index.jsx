@@ -54,7 +54,7 @@ const CaseStudies = () => {
   return (
     <section id="clients-wrapper">
       <div className="relative bg-black">
-        <Navbar setBurgerOpen={setBurgerOpen} />
+        <Navbar isGradient={false} setBurgerOpen={setBurgerOpen} />
         <HeroSection />
         <div className="relative flex w-full items-end justify-start">
           <img
