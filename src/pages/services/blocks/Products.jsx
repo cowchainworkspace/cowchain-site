@@ -41,7 +41,7 @@ const products = [
 
 const ProductCard = ({ name, photo }) => {
   return (
-    <div className="team_card_wrapper relative flex flex-col items-start justify-start border-b border-r border-b-th-fade border-r-th-fade ">
+    <div className="team_card_wrapper relative flex flex-col items-start justify-start border-b border-b-th-fade border-r-th-fade md:border-r ">
       <span className=" justify-start px-3 py-8 text-left text-base uppercase text-white lg:px-16 lg:pb-48 lg:pt-20 lg:font-roc lg:text-xl">
         {name}
       </span>
