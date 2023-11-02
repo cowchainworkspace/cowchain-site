@@ -5,6 +5,7 @@ import CaseStudies from "./pages/case-studies";
 import { Cases } from "./pages/cases";
 import { Blog } from "./pages/blog";
 import { Services } from "./pages/services";
+import { Article } from "pages/article";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/cases" element={<Cases />} />
           <Route path="/cases/case_study" element={<CaseStudies />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/article" element={<Article />} />
           <Route path="/services" element={<Services />} />
         </Routes>
       </BrowserRouter>

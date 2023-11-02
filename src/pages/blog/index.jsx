@@ -4,13 +4,12 @@ import Navbar from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
 import Footer from "components/Footer";
 import Contact from "components/Contact";
-import Tag from "components/ui/tag";
 import stone from "assets/blog/posts/stone.png";
 import sphere from "assets/blog/posts/sphere.png";
 import robot from "assets/blog/posts/robot.png";
 import dics from "assets/blog/posts/dics.png";
 import human from "assets/blog/posts/human.png";
-import { cn } from "lib/utils";
+import { Post } from "./components/post";
 
 const posts = {
   main: [
@@ -85,29 +84,6 @@ export const Blog = () => {
         <Footer />
       </div>
     </section>
-  );
-};
-
-const Post = ({ tag, title, content, imgSrc, className }) => {
-  return (
-    <div
-      className={cn(
-        "relative flex w-full cursor-pointer flex-col justify-start p-6",
-        className
-      )}
-    >
-      <img
-        className="mb-8 h-[360px] w-full  self-center object-none md:h-auto md:object-fill"
-        src={imgSrc}
-        alt=""
-      />
-
-      <Tag className="mb-6 mr-auto" title={tag} />
-      <span className="mb-4 font-roc text-lg font-medium uppercase leading-6 text-white">
-        {title}
-      </span>
-      <span className="text-sm  text-secondary">{content}</span>
-    </div>
   );
 };
 
