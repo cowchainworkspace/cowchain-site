@@ -26,7 +26,7 @@ export const Article = () => {
             Building Trust in the Metaverse: Security and Privacy in Web3
             Development
           </h3>
-          <span className="text-secondary  text-sm">
+          <span className="text-sm  text-secondary">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -48,7 +48,7 @@ export const Article = () => {
           <h3 className="mb-2 text-2xl uppercase">
             Subscribe to our newsletter
           </h3>
-          <span className="text-secondary mb-10">
+          <span className="mb-10 text-secondary">
             Receive weekly updates on new posts and features
           </span>
           <FooterForm />

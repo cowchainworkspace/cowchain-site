@@ -6,6 +6,7 @@ import { Cases } from "./pages/cases";
 import { Blog } from "./pages/blog";
 import { Services } from "./pages/services";
 import { Article } from "pages/article";
+import { Team } from "pages/team";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/article" element={<Article />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/team" element={<Team />} />
         </Routes>
       </BrowserRouter>
     </div>

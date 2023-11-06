@@ -65,7 +65,7 @@ const Navbar = ({ setBurgerOpen, isGradient = true }) => {
   const routerLinks = [
     {
       title: "Team",
-      link: "/"
+      link: "/team"
     },
     {
       title: "Blog",

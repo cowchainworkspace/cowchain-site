@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./case-studies.css";
 import Navbar from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
 import Footer from "components/Footer";

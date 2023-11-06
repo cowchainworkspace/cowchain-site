@@ -1,16 +1,16 @@
 import React from "react";
-import arrow from "../../../assets/arrow_right.svg";
-import photo1 from "../../../assets/homepage/team/mykhailo.jpg";
-import photo2 from "../../../assets/homepage/team/vyacheslav.jpg";
-import photo3 from "../../../assets/homepage/team/oleh.jpg";
-import photo4 from "../../../assets/homepage/team/andrii.jpg";
-import photo5 from "../../../assets/homepage/team/bohdan.jpg";
-import photo6 from "../../../assets/homepage/team/veronika.jpg";
-import photo7 from "../../../assets/homepage/team/ruslan.jpg";
-import photo8 from "../../../assets/homepage/team/saminu.jpg";
-import photo9 from "../../../assets/homepage/team/alexandr.jpg";
-import linkedin from "../../../assets/homepage/linkedin.svg";
-import bg from "../../../assets/bg/team_bg.png";
+import arrow from "assets/arrow_right.svg";
+import photo1 from "assets/homepage/team/mykhailo.jpg";
+import photo2 from "assets/homepage/team/vyacheslav.jpg";
+import photo3 from "assets/homepage/team/oleh.jpg";
+import photo4 from "assets/homepage/team/andrii.jpg";
+import photo5 from "assets/homepage/team/bohdan.jpg";
+import photo6 from "assets/homepage/team/veronika.jpg";
+import photo7 from "assets/homepage/team/ruslan.jpg";
+import photo8 from "assets/homepage/team/saminu.jpg";
+import photo9 from "assets/homepage/team/alexandr.jpg";
+import linkedin from "assets/homepage/linkedin.svg";
+import bg from "assets/bg/team_bg.png";
 
 const teamData = [
   {
@@ -114,8 +114,8 @@ const TeamCard = ({ name, role, photo, social }) => {
           style={{ backgroundImage: `url(${photo})` }}
         >
           <div className="relative ml-auto mt-auto">
-            <a href={social?.url} rel="nofollow" target="_blank">
-              <img className="w-12" src={social?.icon}></img>
+            <a href={social?.url} rel="nofollow noreferrer" target="_blank">
+              <img alt={""} className="w-12" src={social?.icon}></img>
             </a>
           </div>
         </div>
