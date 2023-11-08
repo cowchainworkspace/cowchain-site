@@ -101,10 +101,10 @@ const expertiseData = [
 
 const CollapsedIcon = ({ logo, alt }) => {
   return (
-    <div className="tool-icon-container flex h-12 min-h-[48px] min-w-[48px] items-center justify-center gap-x-2 rounded-full border border-th-grey bg-black">
-      <img className="" src={logo}></img>
+    <div className="tool-icon-container flex h-12 min-h-[48px] min-w-[48px] max-w-[135px] items-center justify-center gap-x-2 rounded-full border border-th-grey bg-black text-sm">
+      <img className="" alt="logo" src={logo}></img>
       <div className="tool-text hidden pl-2 text-center">
-        <p className="body1">{alt}</p>
+        <p className="md:text-sm">{alt}</p>
       </div>
     </div>
   );

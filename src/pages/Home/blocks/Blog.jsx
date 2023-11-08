@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import arrow from "../../../assets/arrow_right.svg";
 import TextTruncate from "react-text-truncate";
 import { blogData } from "../../../data/blogData";
 import arrow_btn from "../../../assets/homepage/arrow-btn.png";
+import { cn } from "lib/utils";
 
 const Post = ({ id, title, description, photo }) => {
   const toText = (node) => {
@@ -47,9 +48,11 @@ const Blog = () => {
     <section id="blog" className="relative">
       <button
         id="blog-scroll"
-        className="absolute right-24 top-1/3 z-30 hidden h-[50px] w-[50px] md:block"
+        className={cn(
+          "absolute right-24 top-1/3 z-30 hidden h-[50px] w-[50px] md:block"
+        )}
         onClick={() => {
-          scroll(480, wrapper.current);
+          scroll(550, wrapper.current);
         }}
       >
         <img className="h-full w-full" src={arrow_btn} alt=""></img>

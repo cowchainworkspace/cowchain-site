@@ -12,6 +12,7 @@ import marsan_mobile_black from "assets/case-study/marsan-black-mobile.png";
 import { Link } from "react-router-dom";
 import Chevron from "components/icons/chevron";
 import CaseStudyCarousel from "./components/caseCarousel";
+import { ProjectDetail } from "./components/project-detail";
 
 const project_details = [
   {
@@ -47,7 +48,7 @@ const team_details = [
   }
 ];
 
-const CaseStudies = () => {
+export const CaseStudies = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
   document.body.style.overflow = burgerOpen ? "hidden" : "visible";
 
@@ -146,16 +147,5 @@ const CaseStudies = () => {
         <Footer />
       </div>
     </section>
-  );
-};
-
-export default CaseStudies;
-
-const ProjectDetail = ({ title, content }) => {
-  return (
-    <div className="flex flex-col gap-4 border-y-[1px] border-white/50 px-4 py-8">
-      <span className="pb-4 text-base uppercase text-white/20">{title}</span>
-      <div className="text-white">{content}</div>
-    </div>
   );
 };

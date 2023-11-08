@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import pic1 from "../../../assets/homepage/projects/1.jpg";
 import pic2 from "../../../assets/homepage/projects/2.jpg";
-import pic3 from "../../../assets/homepage/projects/3.jpg";
 import { Scrollama, Step } from "react-scrollama";
-import { motion } from "framer-motion";
 
 const sectionsData = [
   {

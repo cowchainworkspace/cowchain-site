@@ -11,7 +11,7 @@ const photos = [team1, team2, team3, team4, team5];
 export const HeroSection = () => {
   return (
     <section className="scrollbar-none container  relative  w-full border-b border-b-th-fade pt-20  md:max-w-full lg:pt-[120px]">
-      <div className="relative flex  flex-col items-start justify-center px-5 pb-8 md:px-8 md:pb-12 lg:items-center lg:px-16 xl:px-24">
+      <div className="relative flex cursor-default flex-col items-start justify-center px-5 pb-8 md:px-8 md:pb-12 lg:items-center lg:px-16 xl:px-24">
         <Tag title={"team"} className={"mb-4 md:mb-8"} />
         <h1 className="mb-10 max-w-[1270px] text-[32px] uppercase text-white lg:mt-6 lg:text-[82px] xl:text-center   xl:text-7xl">
           We are a team of{" "}

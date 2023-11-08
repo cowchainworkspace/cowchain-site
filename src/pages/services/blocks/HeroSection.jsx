@@ -12,12 +12,12 @@ export const HeroSection = () => {
         className="absolute right-0 top-0 min-h-[100%]   min-w-[200vw] md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
         src={bg_lg}
       />
-      <div className="relative flex  flex-col items-center justify-center px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
+      <div className="relative flex cursor-default flex-col items-center justify-center px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
         <Tag title={"services"} className={"mb-4 md:mb-8"} />
         <h1 className="mb-10 max-w-[570px]  text-center   text-5xl uppercase text-white lg:mt-6   lg:text-[82px]">
           Services & Technologies
         </h1>
-        <span className="max-w-lg text-center text-sm text-white md:text-base">
+        <span className="max-w-lg   text-center text-sm text-white md:text-base">
           We treat all products we develop as if they’re ours. This is why we go
           the extra mile for every client, providing consultancy and guidance
           from the architecture, design, and marketing strategy standpoints to

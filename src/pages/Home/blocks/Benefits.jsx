@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 
 const benefitsData = [
   {
@@ -50,16 +51,18 @@ const Benefits = () => {
     <section id="benefits" className="relative">
       <div className="flex flex-col md:flex-row">
         <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-16 md:w-1/2 md:py-0">
-          <div className="sticky bottom-[30vh] box-border self-end">
+          <div className="sticky  my-auto box-border">
             <p className="max-w-xl text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
-              Being fully immersed in Web3, we’re not just devs —{" "}
-              <span className="violet-gradient-text">
-                we’re product visionaries
-              </span>{" "}
-              working as an in-house team{" "}
-              <span className="text-th-grey">
-                with you to grow your business with Web3
-              </span>
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString(
+                      'Being fully immersed in Web3, we’re not just devs — <span style="background: linear-gradient(146deg, #e9bbff 32.8%, #8e66ff 61.09%);  background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;"> we’re product visionaries </span> working as an in-house team <span style="color: #ffffff71">with you to grow your business with Web3</span> '
+                    )
+                    .changeDelay(100)
+                    .start();
+                }}
+              />
             </p>
           </div>
         </div>
@@ -73,9 +76,9 @@ const Benefits = () => {
               const active = index + 1 === currentStepIndex;
               return (
                 <Step data={index + 1} key={index}>
-                  <article className="benefit-wrapper px-default relative flex overflow-hidden border-b border-b-th-fade py-12 lg:py-16">
+                  <article className="benefit-wrapper px-default relative flex overflow-hidden border-b border-b-th-fade py-6 lg:py-8">
                     <div>
-                      <h2 className="max-w-xl">{benefit.title}</h2>
+                      <h2 className="max-w-xl text-xl">{benefit.title}</h2>
                       {active && (
                         <motion.div
                           initial="hidden"

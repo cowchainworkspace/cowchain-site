@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Clients from "./pages/Clients/Clients";
-import CaseStudies from "./pages/case-studies";
+import { CaseStudies } from "./pages/case-studies";
 import { Cases } from "./pages/cases";
 import { Blog } from "./pages/blog";
 import { Services } from "./pages/services";
