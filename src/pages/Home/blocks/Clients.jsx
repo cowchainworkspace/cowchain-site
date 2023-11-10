@@ -21,7 +21,7 @@ const Counter = ({ target, duration }) => {
         useEasing={true}
       >
         {({ countUpRef }) => (
-          <span className="num_lg text-white" ref={countUpRef} />
+          <span className="num_lg  text-white" ref={countUpRef} />
         )}
       </CountUp>
     </div>

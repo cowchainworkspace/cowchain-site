@@ -40,14 +40,14 @@ const Header = () => {
                 rel="nofollow"
                 target="_blank"
               >
-                <img className="w-12 md:w-16" src={upwork} alt=""></img>
+                <img className="w-11 md:w-[70px]" src={upwork} alt=""></img>
               </a>
               <a
                 href="https://clutch.co/profile/cowchain"
                 rel="nofollow"
                 target="_blank"
               >
-                <img className="w-12 md:w-16" src={clutch} alt=""></img>
+                <img className="w-11 md:w-[70px]" src={clutch} alt=""></img>
               </a>
             </div>
             <div className="my-4 flex flex-col gap-y-4 lg:pl-[5vw] xl:pl-[15vw]">
@@ -55,7 +55,7 @@ const Header = () => {
               <div className="md:mt-4 md:flex md:items-center md:justify-between">
                 <div className="flex flex-col gap-y-1">
                   <p className="body1">Mykhailo Adzhoiev</p>
-                  <p className="caption">Founder & CTO</p>
+                  <p className="  text-secondary">Founder & CTO</p>
                 </div>
                 <button
                   className="btn-play mt-4 md:mt-0"

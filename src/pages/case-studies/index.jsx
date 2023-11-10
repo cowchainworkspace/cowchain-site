@@ -11,7 +11,6 @@ import marsan_mobile from "assets/case-study/marsan-mobile.png";
 import marsan_mobile_black from "assets/case-study/marsan-black-mobile.png";
 import { Link } from "react-router-dom";
 import Chevron from "components/icons/chevron";
-import CaseStudyCarousel from "./components/caseCarousel";
 import { ProjectDetail } from "./components/project-detail";
 
 const project_details = [
@@ -88,7 +87,7 @@ export const CaseStudies = () => {
               ))}
             </div>
           </div>
-          <CaseStudyCarousel />
+          {/* <CaseStudyCarousel /> */}
           <div className="gap-18 my-10 flex flex-col items-center justify-center lg:my-16 lg:gap-36">
             <div className="w-full">
               <h3 className="mb-4 flex justify-center uppercase lg:items-start lg:justify-start">

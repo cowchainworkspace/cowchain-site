@@ -137,7 +137,7 @@ const Team = () => {
       <div className="relative grid grid-cols-1 lg:grid-cols-5">
         <div className="md-border-r py-heading px-default flex flex-col gap-y-6 border-b border-b-th-fade text-center lg:col-span-2 lg:text-left">
           <h3 className="text-center lg:text-left">OUR TEAM</h3>
-          <a href="#" className="mx-auto lg:mx-0">
+          <a href="/team" className="mx-auto lg:mx-0">
             <div className="flex items-center gap-x-2">
               <p className="header uppercase text-white underline">
                 MEET COWCHAIN

@@ -4,6 +4,7 @@ import pic2 from "../../../assets/homepage/projects/2.jpg";
 import pic3 from "../../../assets/homepage/projects/3.jpg";
 import { Link } from "react-router-dom";
 import { useInView, motion } from "framer-motion";
+import { Scrollama, Step } from "react-scrollama";
 
 const projectsData = [
   {

@@ -101,7 +101,7 @@ const expertiseData = [
 
 const CollapsedIcon = ({ logo, alt }) => {
   return (
-    <div className="tool-icon-container flex h-12 min-h-[48px] min-w-[48px] max-w-[135px] items-center justify-center gap-x-2 rounded-full border border-th-grey bg-black text-sm">
+    <div className="tool-icon-container flex h-[42px] min-h-[42px] min-w-[42px] max-w-[135px] items-center justify-center gap-x-2 rounded-full border border-th-grey bg-black text-sm">
       <img className="" alt="logo" src={logo}></img>
       <div className="tool-text hidden pl-2 text-center">
         <p className="md:text-sm">{alt}</p>
@@ -113,11 +113,12 @@ const CollapsedIcon = ({ logo, alt }) => {
 const ExpertiseBlock = ({ title, text, tools }) => {
   return (
     <article className="expertise_wrapper md-border-r relative border-b border-b-th-fade px-4 py-12 lg:px-8 lg:py-16 xl:px-16 xl:py-20">
-      <div className="expertise_wrapper_bg absolute left-0 top-0 h-full w-full"></div>
       <div className="relative">
-        <p className="body3 text-white">{title}</p>
-        <p className="mt-8 text-[#bbb]">{text}</p>
-        <div className="tools_wrapper mt-8 flex items-center">
+        <p className="body3 leading-[22px] text-white">{title}</p>
+        <p className="mt-6 max-w-[336px] leading-[22px] text-secondary">
+          {text}
+        </p>
+        <div className="tools_wrapper mt-6 flex items-center">
           {tools.map((tool, index) => (
             <CollapsedIcon key={index} {...tool} />
           ))}

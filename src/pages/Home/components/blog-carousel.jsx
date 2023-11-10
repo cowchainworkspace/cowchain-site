@@ -1,11 +1,11 @@
 "use client";
 
-import EmblaCarousel from "./emblaCaseCarousel";
+import EmblaCarousel from "./embla-carousel";
 import { cn } from "lib/utils";
 
-export default function CaseStudyCarousel() {
-  const SLIDE_COUNT = 6;
-  const OPTIONS = { loop: true };
+export default function BlogCarousel() {
+  const SLIDE_COUNT = 2;
+  const OPTIONS = { containScroll: "trimSnaps" };
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
   return (

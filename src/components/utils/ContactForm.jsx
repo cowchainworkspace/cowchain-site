@@ -28,6 +28,7 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
     }
     reset();
     setSendSuccess(true);
+    setModalOpen(false);
   };
 
   const checkboxes = [
@@ -48,6 +49,7 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
       onClose={() => setModalOpen(false)}
       className="popup-modal"
       lockScroll
+      nested
     >
       <div className="modal h-full max-h-[95vh] min-w-full max-w-5xl overflow-y-auto border-2 border-white bg-black p-4 md:p-8 lg:p-16">
         <div className="flex">
@@ -117,7 +119,7 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
               aria-invalid={errors.email ? "true" : "false"}
             />
             {errors.email?.type === "required" && (
-              <span className="error-span">Pleasae, enter your email!</span>
+              <span className="error-span">Please, enter your email!</span>
             )}
             {errors.email?.type === "pattern" && (
               <span className="error-span">

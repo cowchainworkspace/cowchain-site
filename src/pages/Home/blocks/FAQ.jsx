@@ -51,12 +51,12 @@ const FAQ = () => {
         <div className="md:col-span-3">
           <Accordion allowToggle>
             {faqData.map((faq, index) => (
-              <AccordionItem key={index}>
+              <AccordionItem className="" key={index}>
                 {({ isExpanded }) => (
                   <>
                     <AccordionButton>
-                      <div className="mr-auto w-full max-w-3xl py-4 pr-4 md:py-8">
-                        <h2 className="text-left !text-sm !leading-none lg:!text-lg lg:!leading-none">
+                      <div className="mr-auto w-full max-w-3xl py-4 pr-4 md:pb-6 md:pt-8">
+                        <h2 className="max-w-2xl text-left !text-sm !leading-none lg:!text-lg lg:!leading-none">
                           {faq.title}
                         </h2>
                       </div>
@@ -108,8 +108,8 @@ const FAQ = () => {
                       )}
                     </AccordionButton>
                     <AccordionPanel>
-                      <div className="px-default max-w-5xl bg-black pb-8 md:pb-12">
-                        <p className="!leading-[160%] !text-[#bbb] lg:!leading-[175%]">
+                      <div className="px-default  bg-black pb-8 md:pb-12">
+                        <p className="max-w-2xl !leading-[160%] !text-[#bbb] lg:!leading-[175%]">
                           {faq.content}
                         </p>
                       </div>

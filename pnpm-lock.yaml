@@ -1,5 +1,9 @@
 lockfileVersion: "6.0"
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   "@chakra-ui/react":
     specifier: ^2.8.1
@@ -3747,6 +3751,7 @@ packages:
       {
         integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==
       }
+    requiresBuild: true
     dev: false
     optional: true
 

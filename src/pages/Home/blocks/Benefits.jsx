@@ -91,7 +91,7 @@ const Benefits = () => {
                             initial="hidden"
                             animate="visible"
                             variants={textVariants}
-                            className="mt-8 text-sm !leading-[180%] text-th-grey md:text-base lg:text-lg"
+                            className="mt-8 text-sm !leading-[180%] text-secondary md:text-base lg:text-lg"
                           >
                             {benefit.text}
                           </motion.p>
@@ -109,7 +109,7 @@ const Benefits = () => {
                             initial="visible"
                             animate="hidden"
                             variants={textVariants}
-                            className="mt-8 text-sm !leading-[180%] text-th-grey md:text-base lg:text-lg"
+                            className="mt-8 text-sm !leading-[180%] text-secondary md:text-base lg:text-lg"
                           >
                             {benefit.text}
                           </motion.p>

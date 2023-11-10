@@ -198,5 +198,5 @@ video {
 }
 
 .chakra-accordion__button[aria-expanded="true"] {
-  background: linear-gradient(180deg, #4d2c91 -8.83%, #000 76.23%) !important;
+  background: linear-gradient(180deg, #4d2c91 -8.83%, #000 100.56%) !important;
 }

@@ -76,7 +76,7 @@ p,
 }
 
 .num_lg {
-  @apply font-roc text-4xl font-medium leading-tight text-white md:text-[42px] lg:text-6xl;
+  @apply font-roc text-4xl font-medium leading-tight text-white md:text-[42px] lg:text-5xl;
 }
 
 .error-span {
