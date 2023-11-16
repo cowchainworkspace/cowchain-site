@@ -7,11 +7,13 @@ import { Blog } from "./pages/blog";
 import { Services } from "./pages/services";
 import { Article } from "pages/article";
 import { Team } from "pages/team";
+import { ScrollToTop } from "components/ScrollToTop";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/clients" element={<Clients />} />

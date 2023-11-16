@@ -11,6 +11,7 @@ import FAQ from "./blocks/FAQ";
 import Contact from "components/Contact";
 import Footer from "components/Footer";
 import "./home.css";
+import Parallax from "./blocks/Parallax";
 
 const Home = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
@@ -22,6 +23,7 @@ const Home = () => {
         <Navbar setBurgerOpen={setBurgerOpen} />
         <Header />
         <Benefits />
+        <Parallax />
         <Expertise />
         <Clients />
         <Projects />

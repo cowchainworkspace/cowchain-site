@@ -140,7 +140,7 @@ video {
   transition: flex 1s ease; /* Плавная анимация transform */
 }
 
-.project-card[active="true"] {
+.project-card.expanded {
   flex: 1 1 50%;
 }
 
@@ -191,12 +191,4 @@ video {
 
 .chakra-collapse p {
   @apply text-th-grey;
-}
-
-.chakra-accordion__button {
-  @apply px-4 py-4 md:px-8 md:py-8 lg:px-16 xl:px-24;
-}
-
-.chakra-accordion__button[aria-expanded="true"] {
-  background: linear-gradient(180deg, #4d2c91 -8.83%, #000 100.56%) !important;
 }

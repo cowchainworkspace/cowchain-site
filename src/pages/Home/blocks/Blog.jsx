@@ -1,9 +1,6 @@
 import React, { useRef, useState } from "react";
 import arrow from "../../../assets/arrow_right.svg";
 import TextTruncate from "react-text-truncate";
-import { blogData } from "../../../data/blogData";
-import arrow_btn from "../../../assets/homepage/arrow-btn.png";
-import { cn } from "lib/utils";
 import BlogCarousel from "../components/blog-carousel";
 
 export const Post = ({ id, title, description, photo }) => {
@@ -27,7 +24,7 @@ export const Post = ({ id, title, description, photo }) => {
           text={toText(description)}
         />
         <div className="mt-auto">
-          <a href="#">
+          <a href="/blog">
             <p className="font-roc text-base font-medium uppercase text-white underline">
               READ MORE
             </p>
@@ -55,7 +52,7 @@ const Blog = () => {
             </div>
           </a>
         </div>
-        <div className="blog_wrapper overflow-x-scroll border-b border-b-th-fade md:col-span-3">
+        <div className="blog_wrapper overflow-x-scroll   md:col-span-3">
           <BlogCarousel />
         </div>
       </div>

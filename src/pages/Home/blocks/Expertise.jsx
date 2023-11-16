@@ -112,7 +112,8 @@ const CollapsedIcon = ({ logo, alt }) => {
 
 const ExpertiseBlock = ({ title, text, tools }) => {
   return (
-    <article className="expertise_wrapper md-border-r relative border-b border-b-th-fade px-4 py-12 lg:px-8 lg:py-16 xl:px-16 xl:py-20">
+    <article className="expertise_wrapper md-border-r relative cursor-default border-b border-b-th-fade px-4 py-12 lg:px-8 lg:py-16 xl:px-16 xl:py-20">
+      <div className="expertise_wrapper_bg absolute left-0 top-0 h-full w-full"></div>
       <div className="relative">
         <p className="body3 leading-[22px] text-white">{title}</p>
         <p className="mt-6 max-w-[336px] leading-[22px] text-secondary">

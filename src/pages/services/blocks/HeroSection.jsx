@@ -6,7 +6,10 @@ import stack_mobile from "assets/services/stack-mobile.png";
 
 export const HeroSection = () => {
   return (
-    <section className="scrollbar-none container  relative mb-9 w-full border-b border-b-th-fade pt-20 md:mb-[100px]  md:max-w-full lg:pt-[120px]">
+    <section
+      id="hero-services"
+      className="scrollbar-none container  relative mb-9 w-full border-b border-b-th-fade pt-20 md:mb-[100px]  md:max-w-full lg:pt-[120px]"
+    >
       <img
         alt=""
         className="absolute right-0 top-0 min-h-[100%]   min-w-[200vw] md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"

@@ -59,7 +59,10 @@ const Benefits = () => {
                     .typeString(
                       'Being fully immersed in Web3, we’re not just devs — <span style="background: linear-gradient(146deg, #e9bbff 32.8%, #8e66ff 61.09%);  background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;"> we’re product visionaries </span> working as an in-house team <span style="color: #ffffff71">with you to grow your business with Web3</span> '
                     )
-                    .changeDelay(100)
+                    .callFunction(({ elements }) => {
+                      elements.cursor.hidden = true;
+                    })
+                    .changeDelay(10)
                     .start();
                 }}
               />

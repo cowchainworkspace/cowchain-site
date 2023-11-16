@@ -3,9 +3,9 @@ import {
   Accordion,
   AccordionItem,
   AccordionButton,
-  AccordionPanel,
-  AccordionIcon
+  AccordionPanel
 } from "@chakra-ui/react";
+import { cn } from "lib/utils";
 
 const faqData = [
   {
@@ -39,7 +39,7 @@ const faqData = [
 ];
 
 const FAQ = () => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth] = useState(window.innerWidth);
   return (
     <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-5">
@@ -51,11 +51,19 @@ const FAQ = () => {
         <div className="md:col-span-3">
           <Accordion allowToggle>
             {faqData.map((faq, index) => (
-              <AccordionItem className="" key={index}>
+              <AccordionItem>
                 {({ isExpanded }) => (
-                  <>
-                    <AccordionButton>
-                      <div className="mr-auto w-full max-w-3xl py-4 pr-4 md:pb-6 md:pt-8">
+                  <div
+                    className={cn(
+                      "relative bg-cover px-5 py-6 xl:px-[60px] xl:py-8",
+                      {
+                        "bg-[url('assets/bg/faq-gradient.png')]": isExpanded
+                      }
+                    )}
+                    key={index}
+                  >
+                    <AccordionButton className={cn("relative")}>
+                      <div className="mr-auto w-full max-w-3xl ">
                         <h2 className="max-w-2xl text-left !text-sm !leading-none lg:!text-lg lg:!leading-none">
                           {faq.title}
                         </h2>
@@ -107,14 +115,18 @@ const FAQ = () => {
                         </svg>
                       )}
                     </AccordionButton>
-                    <AccordionPanel>
-                      <div className="px-default  bg-black pb-8 md:pb-12">
+                    <AccordionPanel
+                      className={cn("opacity-0  will-change-transform", {
+                        "pt-6 opacity-100 ": isExpanded
+                      })}
+                    >
+                      <div className=" ">
                         <p className="max-w-2xl !leading-[160%] !text-[#bbb] lg:!leading-[175%]">
                           {faq.content}
                         </p>
                       </div>
                     </AccordionPanel>
-                  </>
+                  </div>
                 )}
               </AccordionItem>
             ))}

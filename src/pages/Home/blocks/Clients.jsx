@@ -30,7 +30,7 @@ const Counter = ({ target, duration }) => {
 
 const Clients = () => {
   return (
-    <section id="clients" className="relative overflow-hidden">
+    <section className="relative overflow-hidden">
       <img
         srcSet={`${bg} 700w, ${bg_lg} 1000w`}
         sizes="(max-width: 640px) 70vw, 70vw"
@@ -42,7 +42,7 @@ const Clients = () => {
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 lg:gap-16">
           <h3 className="lg:order-0 text-white">OUR CLIENTS</h3>
           <a
-            href="#"
+            href="/cases"
             className="hidden lg:order-1 lg:my-auto lg:ml-auto lg:block"
           >
             <div className="flex items-center gap-x-2">

@@ -107,7 +107,7 @@ const teamData = [
 
 const TeamCard = ({ name, role, photo, social }) => {
   return (
-    <div className="team_card_wrapper relative flex flex-col gap-y-2 border-b border-r border-b-th-fade border-r-th-fade px-4 py-[8vh] xl:py-[12vh] ">
+    <div className="team_card_wrapper relative flex   flex-col gap-y-2 border-b border-r border-b-th-fade border-r-th-fade px-4 py-[8vh] xl:py-[12vh] ">
       <div className="team_card_overlay absolute left-0 top-0 flex h-full w-full">
         <div
           className="flex h-full w-full bg-cover bg-center bg-no-repeat p-8"
@@ -129,13 +129,13 @@ const TeamCard = ({ name, role, photo, social }) => {
 const Team = () => {
   return (
     <section id="team" className="relative">
-      <img
-        className="absolute bottom-0 left-0 hidden h-full w-1/2 lg:block"
-        src={bg}
-        alt=""
-      ></img>
-      <div className="relative grid grid-cols-1 lg:grid-cols-5">
-        <div className="md-border-r py-heading px-default flex flex-col gap-y-6 border-b border-b-th-fade text-center lg:col-span-2 lg:text-left">
+      <div className="relative grid grid-cols-1 overflow-hidden lg:grid-cols-5">
+        <img
+          className="absolute -bottom-1/2 z-[1] hidden    lg:block"
+          src={bg}
+          alt=""
+        />
+        <div className="md-border-r py-heading   px-default z-10 flex flex-col gap-y-6 border-b border-b-th-fade text-center lg:col-span-2 lg:text-left">
           <h3 className="text-center lg:text-left">OUR TEAM</h3>
           <a href="/team" className="mx-auto lg:mx-0">
             <div className="flex items-center gap-x-2">

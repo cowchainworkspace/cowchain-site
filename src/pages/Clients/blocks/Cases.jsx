@@ -91,7 +91,7 @@ const Cases = () => {
   const spring = useSpring(transform, physics);
 
   return (
-    <section ref={containerRef} id="clients-cases" className="relative z-10">
+    <section ref={containerRef} className="relative z-10">
       <div className="scroll-container top-[30%] border-y border-y-th-fade md:overflow-hidden xl:top-[20%]">
         <motion.div
           ref={scrollRef}

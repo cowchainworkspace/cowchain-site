@@ -175,15 +175,16 @@ const Footer = () => {
                 WHAT WE DO
               </p>
               <div className="my-8 flex flex-col gap-y-4">
-                <Link to="/">
+                <Link to="/services">
                   <p className="text-[#bbb]">
                     Services &<br></br> Techonologies
                   </p>
                 </Link>
-                <Link to="/">
+                <Link to="/cases">
                   <p className="text-[#bbb]">Cases</p>
                 </Link>
                 <Link to="/clients">
+                  {" "}
                   <p className="text-[#bbb]">Clients</p>
                 </Link>
               </div>
@@ -193,10 +194,10 @@ const Footer = () => {
                 AGENCY
               </p>
               <div className="my-8 flex flex-col gap-y-4">
-                <Link to="/">
+                <Link to="/team">
                   <p className="text-[#bbb]">Team</p>
                 </Link>
-                <Link to="/">
+                <Link to="/blog">
                   <p className="text-[#bbb]">Blog</p>
                 </Link>
               </div>
