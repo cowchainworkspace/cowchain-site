@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/modal_close.svg";
 import error from "../../assets/footer/error.svg";

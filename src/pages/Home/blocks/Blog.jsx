@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import arrow from "../../../assets/arrow_right.svg";
 import TextTruncate from "react-text-truncate";
 import BlogCarousel from "../components/blog-carousel";
