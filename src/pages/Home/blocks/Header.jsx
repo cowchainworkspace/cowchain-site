@@ -30,8 +30,8 @@ const Header = () => {
             className="absolute left-0 top-0 w-full"
             src={bg_top_lg}
           />
-          <h1 className="relative mt-8 md:mt-16 lg:mt-24">
-            COWCHAIN. <br></br> DEVELOPERS OF WEB3
+          <h1 className="relative mt-8 uppercase md:mt-16 lg:mt-24">
+            We turn your startup ideas into viable Web3 businesses
           </h1>
           <div className="mt-auto grid grid-cols-1 md:grid-cols-2">
             <div className="relative flex items-center md:gap-x-1">

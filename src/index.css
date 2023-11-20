@@ -6,6 +6,7 @@
 @import "~/node_modules/react-modal-video/scss/modal-video.scss";
 
 body {
+  background: #000;
   margin: 0;
   font-family:
     "Manrope",

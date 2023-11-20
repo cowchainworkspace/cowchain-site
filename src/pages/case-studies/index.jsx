@@ -39,7 +39,7 @@ const team_details = [
   },
   {
     title: "marketing & Seo",
-    content: "Ruslan Surname"
+    content: "Ruslan Siniaiev"
   },
   {
     title: "ui/ux design",

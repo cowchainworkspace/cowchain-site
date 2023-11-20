@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
+import { cn } from "lib/utils";
 
 const benefitsData = [
   {
@@ -49,7 +50,7 @@ const Benefits = () => {
 
   return (
     <section id="benefits" className="relative">
-      <div className="flex flex-col md:flex-row">
+      <div className="flex  flex-col md:flex-row">
         <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-16 md:w-1/2 md:py-0">
           <div className="sticky  my-auto box-border">
             <p className="max-w-xl text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
@@ -69,7 +70,7 @@ const Benefits = () => {
             </p>
           </div>
         </div>
-        <div className="md:flex md:w-1/2 md:flex-col">
+        <div className="min-h-[800px]  md:flex md:w-1/2 md:flex-col">
           <Scrollama
             offset={0.5}
             onStepEnter={onStepEnter}
@@ -79,46 +80,33 @@ const Benefits = () => {
               const active = index + 1 === currentStepIndex;
               return (
                 <Step data={index + 1} key={index}>
-                  <article className="benefit-wrapper px-default relative flex overflow-hidden border-b border-b-th-fade py-6 lg:py-8">
-                    <div>
+                  <article
+                    className={cn(
+                      " px-default relative flex grow flex-col items-center justify-center  overflow-hidden border-b border-b-th-fade py-6 will-change-transform lg:py-8",
+                      {
+                        "max-h-max": active
+                      }
+                    )}
+                  >
+                    <motion.div
+                      variants={expandVariants}
+                      id={"b-expandable-" + index}
+                      className="flex flex-col  justify-center"
+                    >
                       <h2 className="max-w-xl text-xl">{benefit.title}</h2>
-                      {active && (
-                        <motion.div
-                          initial="hidden"
-                          animate="visible"
-                          exit="hidden"
-                          variants={expandVariants}
-                          id={"b-expandable-" + index}
-                        >
-                          <motion.p
-                            initial="hidden"
-                            animate="visible"
-                            variants={textVariants}
-                            className="mt-8 text-sm !leading-[180%] text-secondary md:text-base lg:text-lg"
-                          >
-                            {benefit.text}
-                          </motion.p>
-                        </motion.div>
-                      )}
-                      {!active && (
-                        <motion.div
-                          initial="visible"
-                          animate="hidden"
-                          exit="hidden"
-                          variants={expandVariants}
-                          id={"b-expandable-" + index}
-                        >
-                          <motion.p
-                            initial="visible"
-                            animate="hidden"
-                            variants={textVariants}
-                            className="mt-8 text-sm !leading-[180%] text-secondary md:text-base lg:text-lg"
-                          >
-                            {benefit.text}
-                          </motion.p>
-                        </motion.div>
-                      )}
-                    </div>
+                      <motion.p
+                        variants={textVariants}
+                        className={cn(
+                          " h-min max-h-0  text-sm !leading-[180%] text-secondary opacity-0 transition-all duration-500 will-change-transform md:text-base lg:text-lg",
+                          {
+                            "mt-6 block h-auto max-h-[300px] opacity-100":
+                              active
+                          }
+                        )}
+                      >
+                        {benefit.text}
+                      </motion.p>
+                    </motion.div>
                   </article>
                 </Step>
               );
