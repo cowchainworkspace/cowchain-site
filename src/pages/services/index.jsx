@@ -1,16 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
 import Footer from "components/Footer";
 import Contact from "components/Contact";
-import { Stack } from "./blocks/Stack";
 import { Products } from "./blocks/Products";
 import { ViewMoreSection } from "./blocks/ViewMore";
+import { Stack } from "components/stack";
 
-export const Services = () => {
-  const [burgerOpen, setBurgerOpen] = useState(false);
-  document.body.style.overflow = burgerOpen ? "hidden" : "visible";
-
+export const Services = ({ setBurgerOpen }) => {
   return (
     <section>
       <div className="relative overflow-x-hidden bg-black">
@@ -18,7 +15,7 @@ export const Services = () => {
         <HeroSection />
         <ViewMoreSection />
         <Products />
-        <Stack />
+        <Stack title={"Out tech stack"} />
         <Contact />
         <Footer />
       </div>

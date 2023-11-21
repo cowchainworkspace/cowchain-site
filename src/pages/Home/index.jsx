@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "../../components/Navbar";
 import Header from "./blocks/Header";
 import Benefits from "./blocks/Benefits";
-import Expertise from "./blocks/Expertise";
 import Clients from "./blocks/Clients";
 import Projects from "./blocks/Projects";
 import Team from "./blocks/Team";
@@ -12,11 +11,9 @@ import Contact from "components/Contact";
 import Footer from "components/Footer";
 import "./home.css";
 import Parallax from "./blocks/Parallax";
+import { Stack } from "components/stack";
 
-const Home = () => {
-  const [burgerOpen, setBurgerOpen] = useState(false);
-  document.body.style.overflow = burgerOpen ? "hidden" : "visible";
-
+export const Home = ({ setBurgerOpen }) => {
   return (
     <section id="home-wrapper">
       <div className="relative bg-black">
@@ -24,7 +21,7 @@ const Home = () => {
         <Header />
         <Benefits />
         <Parallax />
-        <Expertise />
+        <Stack title={"Our Expertise"} />
         <Clients />
         <Projects />
         <Team />
@@ -36,5 +33,3 @@ const Home = () => {
     </section>
   );
 };
-
-export default Home;

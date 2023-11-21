@@ -1,16 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
 import Footer from "components/Footer";
 import splash from "assets/blog/articles/splash.png";
 import planet from "assets/blog/articles/planet.png";
 import FooterForm from "components/utils/FooterForm";
-import Blog from "./blocks/Blog";
+import { Blog } from "./blocks/Blog";
 
-export const Article = () => {
-  const [burgerOpen, setBurgerOpen] = useState(false);
-  document.body.style.overflow = burgerOpen ? "hidden" : "visible";
-
+export const Article = ({ setBurgerOpen }) => {
   return (
     <section>
       <div className="relative overflow-x-hidden bg-black">

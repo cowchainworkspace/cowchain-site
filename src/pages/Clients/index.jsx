@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./clients.css";
 import Navbar from "../../components/Navbar";
 import Header from "./blocks/Header";
@@ -9,10 +9,7 @@ import Cases from "./blocks/Cases";
 import Contact from "components/Contact";
 import Footer from "components/Footer";
 
-const Clients = () => {
-  const [burgerOpen, setBurgerOpen] = useState(false);
-  document.body.style.overflow = burgerOpen ? "hidden" : "visible";
-
+export const Clients = ({ setBurgerOpen }) => {
   return (
     <section id="clients-wrapper">
       <div className="relative bg-black">
@@ -28,5 +25,3 @@ const Clients = () => {
     </section>
   );
 };
-
-export default Clients;

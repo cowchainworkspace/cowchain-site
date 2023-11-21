@@ -8,8 +8,8 @@ import sphere from "assets/blog/posts/sphere.png";
 import robot from "assets/blog/posts/robot.png";
 import dics from "assets/blog/posts/dics.png";
 import human from "assets/blog/posts/human.png";
-import { Post } from "./components/post";
 import { ViewMoreSection } from "./blocks/ViewMore";
+import { Post } from "./components/Post";
 
 const posts = {
   main: [
@@ -58,10 +58,7 @@ const posts = {
   ]
 };
 
-export const Blog = () => {
-  const [burgerOpen, setBurgerOpen] = useState(false);
-  document.body.style.overflow = burgerOpen ? "hidden" : "visible";
-
+export const Blog = ({ setBurgerOpen }) => {
   return (
     <section>
       <div className="relative overflow-x-hidden bg-black">
@@ -79,7 +76,7 @@ export const Blog = () => {
             ))}
           </div>
         </section>
-        <ViewMoreSection />
+        <ViewMoreSection count={41} current={5} />
         <Contact className={"overflow-visible"} />
         <Footer />
       </div>

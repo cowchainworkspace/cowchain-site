@@ -13,10 +13,7 @@ import eye_mobile from "assets/cases/eye-mobile.png";
 import { ViewMoreSection } from "./blocks/ViewMore";
 import { CaseSplash } from "./components/case-splash";
 
-export const Cases = () => {
-  const [burgerOpen, setBurgerOpen] = useState(false);
-  document.body.style.overflow = burgerOpen ? "hidden" : "visible";
-
+export const Cases = ({ setBurgerOpen }) => {
   const cases = [
     {
       title: "Decentralized Exchange (DEX)",

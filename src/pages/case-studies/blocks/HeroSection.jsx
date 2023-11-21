@@ -3,7 +3,7 @@ import Chevron from "components/icons/chevron";
 import { Link } from "react-router-dom";
 import Tag from "components/ui/tag";
 
-const HeroSection = () => {
+export const HeroSection = () => {
   return (
     <section className="relative px-4 md:pt-16">
       <div className="relative pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
@@ -22,5 +22,3 @@ const HeroSection = () => {
     </section>
   );
 };
-
-export default HeroSection;

@@ -18,10 +18,9 @@ import ua from "assets/ua.png";
 
 const photos = [team1, team2, team3];
 
-export const Team = () => {
-  const [burgerOpen, setBurgerOpen] = useState(false);
+export const Team = ({ setBurgerOpen }) => {
   const ref = useRef(null);
-  document.body.style.overflow = burgerOpen ? "hidden" : "visible";
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["end end", "start start"]

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "components/Navbar";
 import "./case-studies.css";
-import HeroSection from "./blocks/HeroSection";
+import { HeroSection } from "./blocks/HeroSection";
 import Footer from "components/Footer";
 import Contact from "components/Contact";
 import Projects from "./blocks/Projects";
@@ -47,10 +47,7 @@ const team_details = [
   }
 ];
 
-export const CaseStudies = () => {
-  const [burgerOpen, setBurgerOpen] = useState(false);
-  document.body.style.overflow = burgerOpen ? "hidden" : "visible";
-
+export const CaseStudies = ({ setBurgerOpen }) => {
   return (
     <section id="clients-wrapper">
       <div className="relative bg-black">
