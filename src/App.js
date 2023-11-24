@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {Home} from "./pages/home";
-import {Clients} from "./pages/clients";
-import { CaseStudies } from "./pages/case-studies";
-import { Cases } from "./pages/cases";
-import { Blog } from "./pages/blog";
-import { Services } from "./pages/services";
+import { Home } from "pages/home";
+import { Clients } from "pages/clients";
+import { CaseStudies } from "pages/case-studies";
+import { Cases } from "pages/cases";
+import { Blog } from "pages/blog";
+import { Services } from "pages/services";
 import { Article } from "pages/article";
 import { Team } from "pages/team";
 import { ScrollToTop } from "components/ScrollToTop";
