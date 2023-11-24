@@ -2,33 +2,9 @@ import React from "react";
 import bg from "../../../assets/homepage/clients_bg.png";
 import bg_lg from "../../../assets/homepage/clients_bg_lg.png";
 import arrow from "../../../assets/arrow_right.svg";
-import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
+import { Counter } from "../components/counter";
 
-const Counter = ({ target, duration }) => {
-  const [ref, inView] = useInView({
-    threshold: 0.3,
-    triggerOnce: true
-  });
-
-  return (
-    <div ref={ref}>
-      <CountUp
-        start={0}
-        end={inView ? target : 0}
-        duration={duration}
-        suffix="+"
-        useEasing={true}
-      >
-        {({ countUpRef }) => (
-          <span className="num_lg  text-white" ref={countUpRef} />
-        )}
-      </CountUp>
-    </div>
-  );
-};
-
-const Clients = () => {
+export const Clients = () => {
   return (
     <section className="relative overflow-hidden">
       <img
@@ -86,5 +62,3 @@ const Clients = () => {
     </section>
   );
 };
-
-export default Clients;

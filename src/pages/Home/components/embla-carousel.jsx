@@ -2,7 +2,7 @@ import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { usePrevNextButtons } from "./embla-buttons";
 import { blogData } from "data/blogData";
-import { Post } from "../blocks/Blog";
+import { Post } from "../components/post";
 import { cn } from "lib/utils";
 import arrow_btn from "../../../assets/homepage/arrow-btn.png";
 

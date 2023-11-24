@@ -1,0 +1,37 @@
+import { Link } from "react-router-dom";
+
+export const Project = ({ title, description, photo, tags, id }) => {
+  return (
+    <article
+      id={"project-" + id}
+      className="project-card relative flex min-h-[320px] w-full cursor-pointer border-b border-b-th-fade bg-cover bg-center bg-no-repeat px-4 py-8 will-change-transform md:h-96 md:min-w-[25vw] md:px-8 lg:h-[480px] lg:px-16 xl:h-[624px]"
+      style={{ backgroundImage: `url(${photo})` }}
+    >
+      <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div className="project-overlay absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 xl:py-12">
+        <Link to="/" className="btn-contact ml-auto">
+          VIEW PROJECT
+        </Link>
+        <div className="mt-auto flex flex-col gap-y-4">
+          <div className="flex items-center gap-x-1 md:gap-x-2">
+            {tags.map((tag, index) => (
+              <div key={index} className="rounded-full bg-white px-3 py-2">
+                <p className="text-xs font-medium text-black lg:text-sm">
+                  {tag}
+                </p>
+              </div>
+            ))}
+          </div>
+          <h2 className="mt-2">{title}</h2>
+          <p className="body max-w-sm !text-[#bbb]">{description}</p>
+        </div>
+      </div>
+      <div className="relative mt-auto flex flex-col gap-y-4 lg:hidden">
+        <h2>{title}</h2>
+        <p className="max-w-xs text-sm font-normal leading-normal text-[#bbb]">
+          {description}
+        </p>
+      </div>
+    </article>
+  );
+};

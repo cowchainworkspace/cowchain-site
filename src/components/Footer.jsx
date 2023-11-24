@@ -109,7 +109,7 @@ const faqStyles = {
   timingFunc: "ease"
 };
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <section id="footer" className="relative">
       <div className="grid grid-cols-1 md:grid-cols-2">
@@ -227,5 +227,3 @@ const Footer = () => {
     </section>
   );
 };
-
-export default Footer;

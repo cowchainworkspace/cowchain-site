@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
-import Navbar from "components/Navbar";
+import { Navbar } from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
-import Footer from "components/Footer";
+import { Footer } from "components/Footer";
 import TeamContact from "./blocks/TeamContact";
 import TeamGallery from "./blocks/TeamGallery";
 import { Values } from "./blocks/Values";

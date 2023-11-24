@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Navbar from "components/Navbar";
+import { Navbar } from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
-import Footer from "components/Footer";
+import { Footer } from "components/Footer";
 import phones_desktop from "assets/cases/phones-desktop.png";
 import phones_mobile from "assets/cases/phones-mobile.png";
 import alien_desktop from "assets/cases/alien-desktop.png";

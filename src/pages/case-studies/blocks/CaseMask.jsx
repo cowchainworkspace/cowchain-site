@@ -1,6 +1,6 @@
 import React from "react";
 
-const Parallax = () => {
+export const CaseMask = () => {
   return (
     <div className="relative overflow-hidden">
       <div className="w-full">
@@ -9,5 +9,3 @@ const Parallax = () => {
     </div>
   );
 };
-
-export default Parallax;

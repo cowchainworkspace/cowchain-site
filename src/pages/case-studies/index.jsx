@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import Navbar from "components/Navbar";
+import React from "react";
+import { Navbar } from "components/Navbar";
 import "./case-studies.css";
 import { HeroSection } from "./blocks/HeroSection";
-import Footer from "components/Footer";
-import Contact from "components/Contact";
+import { Footer } from "components/Footer";
+import { Contact } from "components/Contact";
 import Projects from "./blocks/Projects";
 import splash_desktop from "assets/case-study/splash-desktop.png";
 import splash_mobile from "assets/case-study/splash-mobile.png";
@@ -16,7 +16,8 @@ import { ProjectDetail } from "./components/project-detail";
 const project_details = [
   {
     title: "Tech Stack",
-    content: "React Native, Node.js, Solidity, ethers.js, web3.js, Personal KYC"
+    content:
+      "React Native, Node.js, Solidity, ethers.js, web3.js, bitcoin.js, Persona KYC, Interac E-transfer, Chat support, email templating"
   },
   {
     title: "project duration",
@@ -78,7 +79,7 @@ export const CaseStudies = ({ setBurgerOpen }) => {
                 <Chevron className="h-4 w-4 rotate-180" />
               </Link>
             </div>
-            <div className="border-y-2 border-white/50 lg:min-w-[490px]">
+            <div className="border-b-[1px] border-white/50 lg:min-w-[490px]">
               {project_details.map((detail, index) => (
                 <ProjectDetail key={detail.title + index} {...detail} />
               ))}

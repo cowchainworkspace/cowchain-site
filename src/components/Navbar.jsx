@@ -18,7 +18,7 @@ import ContactForm from "./utils/ContactForm";
 import { useLocation } from "react-router-dom";
 import { cn } from "lib/utils";
 
-const Navbar = ({ setBurgerOpen, isGradient = true }) => {
+export const Navbar = ({ setBurgerOpen, isGradient = true }) => {
   const [openForm, setOpenForm] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
   const sideVariants = {
@@ -298,5 +298,3 @@ const Navbar = ({ setBurgerOpen, isGradient = true }) => {
     </section>
   );
 };
-
-export default Navbar;

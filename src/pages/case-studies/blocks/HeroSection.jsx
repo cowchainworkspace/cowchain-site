@@ -7,9 +7,12 @@ export const HeroSection = () => {
   return (
     <section className="relative px-4 md:pt-16">
       <div className="relative pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
-        <Link to={"/cases"} className="flex items-center gap-2">
+        <Link
+          to={"/cases"}
+          className="flex items-center gap-2 text-white  underline-offset-4 hover:underline"
+        >
           <Chevron className="h-4 w-4" />
-          <span className=" text-slate-600">back to all projects</span>
+          <span className="text-xs text-secondary">back to all projects</span>
         </Link>
         <div className="flex flex-col items-center justify-center">
           <h1 className="my-6 text-center uppercase">Marsan</h1>

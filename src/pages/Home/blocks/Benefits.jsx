@@ -27,7 +27,7 @@ const benefitsData = [
   }
 ];
 
-const Benefits = () => {
+export const Benefits = () => {
   const [currentStepIndex, setCurrentStepIndex] = useState(null);
 
   const onStepEnter = ({ data }) => {
@@ -117,5 +117,3 @@ const Benefits = () => {
     </section>
   );
 };
-
-export default Benefits;

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Navbar from "components/Navbar";
+import { Navbar } from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
-import Footer from "components/Footer";
-import Contact from "components/Contact";
+import { Footer } from "components/Footer";
+import { Contact } from "components/Contact";
 import stone from "assets/blog/posts/stone.png";
 import sphere from "assets/blog/posts/sphere.png";
 import robot from "assets/blog/posts/robot.png";

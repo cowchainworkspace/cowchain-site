@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "components/Navbar";
+import { Navbar } from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
-import Footer from "components/Footer";
-import Contact from "components/Contact";
+import { Footer } from "components/Footer";
+import { Contact } from "components/Contact";
 import { Products } from "./blocks/Products";
 import { ViewMoreSection } from "./blocks/ViewMore";
 import { Stack } from "components/stack";

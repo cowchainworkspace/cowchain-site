@@ -1,16 +1,16 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
-import Header from "./blocks/Header";
-import Benefits from "./blocks/Benefits";
-import Clients from "./blocks/Clients";
-import Projects from "./blocks/Projects";
-import Team from "./blocks/Team";
-import Blog from "./blocks/Blog";
-import FAQ from "./blocks/FAQ";
-import Contact from "components/Contact";
-import Footer from "components/Footer";
+import { Navbar } from "../../components/Navbar";
+import { Header } from "./blocks/Header";
+import { Benefits } from "./blocks/Benefits";
+import { Clients } from "./blocks/Clients";
+import { Projects } from "./blocks/Projects";
+import { Team } from "./blocks/Team";
+import { Blog } from "./blocks/Blog";
+import { FAQ } from "./blocks/FAQ";
+import { Contact } from "components/Contact";
+import { Footer } from "components/Footer";
 import "./home.css";
-import Parallax from "./blocks/Parallax";
+import { HomeMask } from "./blocks/HomeMask";
 import { Stack } from "components/stack";
 
 export const Home = ({ setBurgerOpen }) => {
@@ -20,7 +20,7 @@ export const Home = ({ setBurgerOpen }) => {
         <Navbar setBurgerOpen={setBurgerOpen} />
         <Header />
         <Benefits />
-        <Parallax />
+        <HomeMask />
         <Stack title={"Our Expertise"} />
         <Clients />
         <Projects />

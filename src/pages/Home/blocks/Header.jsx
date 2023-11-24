@@ -7,7 +7,7 @@ import bg_top from "../../../assets/bg/header_top.png";
 import bg_top_lg from "../../../assets/bg/header_top_lg.png";
 import ModalVideo from "react-modal-video";
 
-const Header = () => {
+export const Header = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const [isOpen, setOpen] = useState(false);
@@ -103,5 +103,3 @@ const Header = () => {
     </section>
   );
 };
-
-export default Header;

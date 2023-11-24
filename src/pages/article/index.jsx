@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "components/Navbar";
+import { Navbar } from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
-import Footer from "components/Footer";
+import { Footer } from "components/Footer";
 import splash from "assets/blog/articles/splash.png";
 import planet from "assets/blog/articles/planet.png";
 import FooterForm from "components/utils/FooterForm";
