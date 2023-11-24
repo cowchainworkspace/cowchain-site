@@ -4,7 +4,7 @@ export const CaseMask = () => {
   return (
     <div className="relative overflow-hidden">
       <div className="w-full">
-        <div className="min-h-[280px] bg-[url('assets/parallax/parallax.png')] bg-cover bg-fixed bg-[50%] " />
+        <div className="min-h-[264px] bg-[url('assets/case-study/splash-mobile.png')] bg-cover bg-fixed bg-[50%]  lg:min-h-[500px]  lg:bg-[url('assets/case-study/desktop.png')]" />
       </div>
     </div>
   );

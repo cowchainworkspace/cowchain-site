@@ -5,13 +5,12 @@ import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
 import { Contact } from "components/Contact";
 import Projects from "./blocks/Projects";
-import splash_desktop from "assets/case-study/splash-desktop.png";
-import splash_mobile from "assets/case-study/splash-mobile.png";
 import marsan_mobile from "assets/case-study/marsan-mobile.png";
 import marsan_mobile_black from "assets/case-study/marsan-black-mobile.png";
 import { Link } from "react-router-dom";
 import Chevron from "components/icons/chevron";
 import { ProjectDetail } from "./components/project-detail";
+import { CaseMask } from "./blocks/CaseMask";
 
 const project_details = [
   {
@@ -54,22 +53,11 @@ export const CaseStudies = ({ setBurgerOpen }) => {
       <div className="relative bg-black">
         <Navbar isGradient={false} setBurgerOpen={setBurgerOpen} />
         <HeroSection />
-        <div className="relative flex w-full items-end justify-start">
-          <img
-            src={splash_desktop}
-            className=" hidden max-h-[550px] w-full object-cover md:block"
-            alt=""
-          />
-          <img
-            src={splash_mobile}
-            className=" block max-h-[260px] w-full object-cover md:hidden"
-            alt=""
-          />
-        </div>
+        <CaseMask />
         <div className="container flex w-full flex-col items-center justify-center xl:max-w-[1300px]">
           <div className="my-20 flex flex-col justify-center gap-20 lg:my-36 lg:min-w-[440px] lg:flex-row lg:gap-36">
             <div className="flex flex-col items-center justify-center lg:min-w-[512px] lg:items-start lg:justify-start">
-              <h1 className="mb-6 text-3xl uppercase lg:mb-12  lg:text-6xl">
+              <h1 className="mb-6 whitespace-nowrap text-3xl uppercase lg:mb-12  lg:text-6xl">
                 project details
               </h1>
               <Link className="flex items-center gap-2">
