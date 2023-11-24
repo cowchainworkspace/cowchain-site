@@ -1,6 +1,6 @@
 import React from "react";
 import "./clients.css";
-import { Navbar } from "../../components/Navbar";
+import { Navbar } from "components/Navbar";
 import Header from "./blocks/Header";
 import Projects from "./blocks/Projects";
 import Feedback from "./blocks/Feedback";
