@@ -2,7 +2,7 @@ import React from "react";
 import bg from "../../../assets/homepage/clients_bg.png";
 import bg_lg from "../../../assets/homepage/clients_bg_lg.png";
 import arrow from "../../../assets/arrow_right.svg";
-import { Counter } from "../components/counter";
+import { Counter } from "../../home/components/counter";
 
 export const Clients = () => {
   return (

@@ -11,7 +11,7 @@ import photo8 from "assets/homepage/team/saminu.jpg";
 import photo9 from "assets/homepage/team/alexandr.jpg";
 import linkedin from "assets/homepage/linkedin.svg";
 import bg from "assets/bg/team_bg.png";
-import { TeamCard } from "../components/team-card";
+import { TeamCard } from "../../home/components/team-card";
 
 const teamData = [
   {

@@ -4,7 +4,7 @@ import pic2 from "../../../assets/homepage/projects/2.jpg";
 import pic3 from "../../../assets/homepage/projects/3.jpg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Project } from "../components/project";
+import { Project } from "../../home/components/project";
 
 const projectsData = [
   {

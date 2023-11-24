@@ -9,7 +9,7 @@ import robot from "assets/blog/posts/robot.png";
 import dics from "assets/blog/posts/dics.png";
 import human from "assets/blog/posts/human.png";
 import { ViewMoreSection } from "./blocks/ViewMore";
-import { Post } from "./components/Post";
+import { Post } from "./components/post";
 
 const posts = {
   main: [

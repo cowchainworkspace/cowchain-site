@@ -1,6 +1,6 @@
 import React from "react";
 import arrow from "../../../assets/arrow_right.svg";
-import BlogCarousel from "../components/blog-carousel";
+import BlogCarousel from "../../home/components/blog-carousel";
 
 export const Blog = () => {
   return (
