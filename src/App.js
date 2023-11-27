@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Home } from "pages/home";
 import { Clients } from "pages/clients";
 import { CaseStudies } from "pages/case-studies";
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home setBurgerOpen={setBurgerOpen} />} />
@@ -58,7 +58,7 @@ function App() {
             element={<Team setBurgerOpen={setBurgerOpen} />}
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
