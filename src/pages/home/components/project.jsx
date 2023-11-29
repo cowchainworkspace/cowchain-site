@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export const Project = ({ title, description, photo, tags, id }) => {
+export const Project = ({ title, description, photo, tags, id, link }) => {
   return (
     <article
       id={"project-" + id}
@@ -9,7 +9,7 @@ export const Project = ({ title, description, photo, tags, id }) => {
     >
       <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></div>
       <div className="project-overlay absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 xl:py-12">
-        <Link to="/" className="btn-contact ml-auto">
+        <Link to={link} className="btn-contact ml-auto">
           VIEW PROJECT
         </Link>
         <div className="mt-auto flex flex-col gap-y-4">

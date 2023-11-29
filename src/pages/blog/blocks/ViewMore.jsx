@@ -2,7 +2,7 @@ export const ViewMoreSection = ({ current, count }) => {
   return (
     <section
       id="view_more"
-      className="relative z-10 mt-16  overflow-hidden md:mt-20"
+      className="relative z-10 mt-10 overflow-hidden border-b  border-b-th-fade"
     >
       <div className="relative grid grid-cols-1">
         <div className="flex flex-col items-center justify-center gap-y-8 px-4 py-16 text-center ">

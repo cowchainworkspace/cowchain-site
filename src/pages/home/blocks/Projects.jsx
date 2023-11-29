@@ -9,6 +9,7 @@ import { Project } from "../../home/components/project";
 const projectsData = [
   {
     title: "Marsan Exchange",
+    link: "/cases/case_study",
     description:
       "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
     photo: pic1,
@@ -19,6 +20,7 @@ const projectsData = [
     description:
       "Multichain mobile wallet development with AI integration for an optimized portfolio management",
     photo: pic2,
+    link: "",
     tags: ["React.js", "Solidity", "Subgraph"]
   },
   {
@@ -26,6 +28,7 @@ const projectsData = [
     description:
       "Decentralized plugin development for travelers’ review verification. Proof-of-attendance protocol and reward system integration",
     photo: pic3,
+    link: "",
     tags: ["React.js", "Solidity", "Subgraph"]
   }
 ];

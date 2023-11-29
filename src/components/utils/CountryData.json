@@ -1,0 +1,307 @@
+[  {
+        "label": "+380",
+        "value": "+380",
+        "emoji": "🇦🇫",
+        "code": "UA"
+    },
+    {
+        "label": "+93",
+        "value": "+93",
+        "emoji": "🇦🇫",
+        "code": "AF"
+    },
+    {
+        "label": "+358",
+        "value": "+358",
+        "emoji": "🇦🇽",
+        "code": "AX"
+    },
+    {
+        "label": "+355",
+        "value": "+355",
+        "emoji": "🇦🇱",
+        "code": "AL"
+    },
+    {
+        "label": "+213",
+        "value": "+213",
+        "emoji": "🇩🇿",
+        "code": "DZ"
+    },
+{
+    "label": "+1684",
+    "value": "+1684",
+    "emoji": "🇦🇸",
+    "code": "AS"
+},
+{
+    "label": "+376",
+    "value": "+376",
+    "emoji": "🇦🇩",
+    "code": "AD"
+},
+{
+    "label": "+244",
+    "value": "+244",
+    "emoji": "🇦🇴",
+    "code": "AO"
+},
+{
+    "label": "+1264",
+    "value": "+1264",
+    "emoji": "🇦🇮",
+    "code": "AI"
+},
+{
+    "label": "+672",
+    "value": "+672",
+    "emoji": "🇦🇶",
+    "code": "AQ"
+},
+{
+    "label": "+1268",
+    "value": "+1268",
+    "emoji": "🇦🇬",
+    "code": "AG"
+},
+{
+    "label": "+54",
+    "value": "+54",
+    "emoji": "🇦🇷",
+    "code": "AR"
+},
+{
+        "label": "+374",
+        "value": "+374",
+        "emoji": "🇦🇲",
+        "code": "AM"
+    },
+    {
+        "label": "+297",
+        "value": "+297",
+        "emoji": "🇦🇼",
+        "code": "AW"
+    },
+    {
+        "label": "+61",
+        "value": "+61",
+        "emoji": "🇦🇺",
+        "code": "AU"
+    },
+    {
+        "label": "+43",
+        "value": "+43",
+        "emoji": "🇦🇹",
+        "code": "AT"
+    },
+    {
+        "label": "+994",
+        "value": "+994",
+        "emoji": "🇦🇿",
+        "code": "AZ"
+    },
+    {
+        "label": "+1242",
+        "value": "+1242",
+        "emoji": "🇧🇸",
+        "code": "BS"
+    },
+    {
+        "label": "+973",
+        "value": "+973",
+        "emoji": "🇧🇭",
+        "code": "BH"
+    },
+    {
+        "label": "+880",
+        "value": "+880",
+        "emoji": "🇧🇩",
+        "code": "BD"
+    },
+    {
+        "label": "+1246",
+        "value": "+1246",
+        "emoji": "🇧🇧",
+        "code": "BB"
+    },
+    {
+        "label": "+375",
+        "value": "+375",
+        "emoji": "🇧🇾",
+        "code": "BY"
+    },
+    {
+        "label": "+32",
+        "value": "+32",
+        "emoji": "🇧🇪",
+        "code": "BE"
+    },
+    {
+        "label": "+501",
+        "value": "+501",
+        "emoji": "🇧🇿",
+        "code": "BZ"
+    },
+    {
+        "label": "+229",
+        "value": "+229",
+        "emoji": "🇧🇯",
+        "code": "BJ"
+    },
+    {
+        "label": "+1441",
+        "value": "+1441",
+        "emoji": "🇧🇲",
+        "code": "BM"
+    },
+    {
+        "label": "+975",
+        "value": "+975",
+        "emoji": "🇧🇹",
+        "code": "BT"
+    },
+    {
+        "label": "+591",
+        "value": "+591",
+        "emoji": "🇧🇴",
+        "code": "BO"
+    },
+    {
+        "label": "+387",
+        "value": "+387",
+        "emoji": "🇧🇦",
+        "code": "BA"
+    },
+    {
+        "label": "+267",
+        "value": "+267",
+        "emoji": "🇧🇼",
+        "code": "BW"
+    },
+    {
+        "label": "+55",
+        "value": "+55",
+        "emoji": "🇧🇷",
+        "code": "BR"
+    },
+    {
+        "label": "+246",
+        "value": "+246",
+        "emoji": "🇮🇴",
+        "code": "IO"
+    },
+    {
+        "label": "+673",
+        "value": "+673",
+        "emoji": "🇧🇳",
+        "code": "BN"
+    },
+    {
+        "label": "+359",
+        "value": "+359",
+        "emoji": "🇧🇬",
+        "code": "BG"
+    },
+    {
+        "label": "+226",
+        "value": "+226",
+        "emoji": "🇧🇫",
+        "code": "BF"
+    },
+    {
+        "label": "+257",
+        "value": "+257",
+        "emoji": "🇧🇮",
+        "code": "BI"
+    },
+    {
+        "label": "+855",
+        "value": "+855",
+        "emoji": "🇰🇭",
+        "code": "KH"
+    },
+    {
+        "label": "+237",
+        "value": "+237",
+        "emoji": "🇨🇲",
+        "code": "CM"
+    },
+    {
+        "label": "+1",
+        "value": "+1",
+        "emoji": "🇨🇦",
+        "code": "CA"
+    },
+    {
+        "label": "+238",
+        "value": "+238",
+        "emoji": "🇨🇻",
+        "code": "CV"
+    },
+    {
+        "label": "+345",
+        "value": "+345",
+        "emoji": "🇰🇾",
+        "code": "KY"
+    },
+    {
+        "label": "+236",
+        "value": "+236",
+        "emoji": "🇨🇫",
+        "code": "CF"
+    },
+    {
+        "label": "+235",
+        "value": "+235",
+        "emoji": "🇹🇩",
+        "code": "TD"
+    },
+    {
+        "label": "+56",
+        "value": "+56",
+        "emoji": "🇨🇱",
+        "code": "CL"
+    },
+    {
+        "label": "+86",
+        "value": "+86",
+        "emoji": "🇨🇳",
+        "code": "CN"
+    },
+    {
+        "label": "+61",
+        "value": "+61",
+        "emoji": "🇨🇽",
+        "code": "CX"
+    },
+    {
+        "label": "+57",
+        "value": "+57",
+        "emoji": "🇨🇴",
+        "code": "CO"
+    },
+    {
+        "label": "+269",
+        "value": "+269",
+        "emoji": "🇰🇲",
+        "code": "KM"
+    },
+    {
+        "label": "+242",
+        "value": "+242",
+        "emoji": "🇨🇬",
+        "code": "CG"
+    },
+    {
+        "label": "+243",
+        "value": "+243",
+        "emoji": "🇨🇩",
+        "code": "CD"
+    },
+    {
+        "label": "+682",
+        "value": "+682",
+        "emoji": "🇨🇰",
+        "code": "CK"
+    }
+]

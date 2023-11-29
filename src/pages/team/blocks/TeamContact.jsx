@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ContactForm from "components/utils/ContactForm";
+import ConnectForm from "components/utils/ConnectForm";
 import bg_lg from "assets/bg/contact_bg.png";
 import bg from "assets/bg/clients_cases.png";
 import { cn } from "lib/utils";
@@ -30,9 +30,9 @@ const TeamContact = ({ className }) => {
             className="btn-contact mx-auto lg:h-48 lg:w-48"
             onClick={() => setModalOpen(true)}
           >
-            Submit cV
+            Apply to connect
           </button>
-          <ContactForm modalOpen={modalOpen} setModalOpen={setModalOpen} />
+          <ConnectForm modalOpen={modalOpen} setModalOpen={setModalOpen} />
         </div>
       </div>
     </section>

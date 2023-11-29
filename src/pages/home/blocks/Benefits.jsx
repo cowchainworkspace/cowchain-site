@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Scrollama, Step } from "react-scrollama";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { cn } from "lib/utils";
 
@@ -28,16 +28,6 @@ const benefitsData = [
 ];
 
 export const Benefits = () => {
-  const [currentStepIndex, setCurrentStepIndex] = useState(null);
-
-  const onStepEnter = ({ data }) => {
-    setCurrentStepIndex(data);
-  };
-
-  const onStepExit = ({ direction, data }) => {
-    if (direction === "up" && currentStepIndex === 1) setCurrentStepIndex(0);
-  };
-
   const expandVariants = {
     visible: { height: "auto" },
     hidden: { height: 0 }
@@ -48,9 +38,23 @@ export const Benefits = () => {
     hidden: { opacity: 0 }
   };
 
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({ target: sectionRef });
+
+  const [scrollIndex, setScrollIndex] = useState(null);
+
+  scrollYProgress.on("change", (yProgress) => {
+    if (yProgress <= 0.2 && yProgress >= 0) setScrollIndex(0);
+    if (yProgress <= 0.4 && yProgress >= 0.2) setScrollIndex(1);
+    if (yProgress <= 0.6 && yProgress >= 0.4) setScrollIndex(2);
+    if (yProgress <= 0.8 && yProgress >= 0.6) setScrollIndex(3);
+    if (yProgress <= 1 && yProgress >= 0.8) setScrollIndex(4);
+  });
+
   return (
-    <section id="benefits" className="relative">
-      <div className="flex  flex-col md:flex-row">
+    <section id="benefits" ref={sectionRef} className="relative h-[3200px]">
+      <div className="sticky top-0 flex flex-col md:flex-row">
         <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-16 md:w-1/2 md:py-0">
           <div className="sticky  my-auto box-border">
             <p className="max-w-xl text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
@@ -70,21 +74,16 @@ export const Benefits = () => {
             </p>
           </div>
         </div>
-        <div className="min-h-[800px]  md:flex md:w-1/2 md:flex-col">
-          <Scrollama
-            offset={0.5}
-            onStepEnter={onStepEnter}
-            onStepExit={onStepExit}
-          >
+        <div className="md:flex  md:h-screen md:w-1/2 md:flex-col">
+          <Scrollama offset={0.5}>
             {benefitsData.map((benefit, index) => {
-              const active = index + 1 === currentStepIndex;
               return (
-                <Step data={index + 1} key={index}>
+                <Step data={index + 1} key={benefit.title + index}>
                   <article
                     className={cn(
                       " px-default relative flex grow flex-col items-center justify-center  overflow-hidden border-b border-b-th-fade py-6 will-change-transform lg:py-8",
                       {
-                        "max-h-max": active
+                        "max-h-max": scrollIndex === index
                       }
                     )}
                   >
@@ -100,7 +99,7 @@ export const Benefits = () => {
                           " h-min max-h-0  text-sm !leading-[180%] text-secondary opacity-0 transition-all duration-500 will-change-transform md:text-base lg:text-lg",
                           {
                             "mt-6 block h-auto max-h-[300px] opacity-100":
-                              active
+                              scrollIndex === index
                           }
                         )}
                       >

@@ -252,6 +252,43 @@ input:-webkit-autofill:active {
   @apply text-white;
 }
 
+.ant-select-selector {
+  background-color: transparent !important;
+  color: white !important;
+  border: none !important;
+
+}
+
+.ant-select-selector:focus {
+  border: none !important;
+}
+
+.ant-select-selection-item {
+  color:white !important;
+}
+
+.ant-select-arrow {
+  color: white !important;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: #000 !important;
+}
+
+.ant-select-popup {
+  background-color: black !important;
+  width: 120px !important;
+  border: #fff;
+  border-width: 1px !important;
+  border-style: solid;
+  border-radius: 0%;
+  margin-top: 5px !important;
+ }
+
+ .ant-space-item {
+  width: 20px !important;
+ }
+
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
