@@ -53,10 +53,14 @@ export const Benefits = () => {
   });
 
   return (
-    <section id="benefits" ref={sectionRef} className="relative h-[3200px]">
+    <section
+      id="benefits"
+      ref={sectionRef}
+      className="relative h-[2100px] md:h-[3200px]"
+    >
       <div className="sticky top-0 flex flex-col md:flex-row">
         <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-16 md:w-1/2 md:py-0">
-          <div className="sticky  my-auto box-border">
+          <div className="my-auto  box-border md:sticky">
             <p className="max-w-xl text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
               <Typewriter
                 onInit={(typewriter) => {
@@ -74,16 +78,18 @@ export const Benefits = () => {
             </p>
           </div>
         </div>
-        <div className="md:flex  md:h-screen md:w-1/2 md:flex-col">
+        <div className="md:flex md:h-screen md:w-1/2 md:flex-col">
           <Scrollama offset={0.5}>
             {benefitsData.map((benefit, index) => {
               return (
                 <Step data={index + 1} key={benefit.title + index}>
                   <article
                     className={cn(
-                      " px-default relative flex grow flex-col items-center justify-center  overflow-hidden border-b border-b-th-fade py-6 will-change-transform lg:py-8",
+                      "px-default relative flex grow flex-col items-center justify-center  overflow-hidden border-b border-b-th-fade py-6   will-change-transform lg:py-8",
                       {
-                        "max-h-max": scrollIndex === index
+                        "max-h-max": scrollIndex === index,
+                        "hidden md:flex":
+                          scrollIndex > index && (index === 0 || index === 1)
                       }
                     )}
                   >

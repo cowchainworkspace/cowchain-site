@@ -10,6 +10,7 @@ import { Article } from "pages/article";
 import { Team } from "pages/team";
 import { ScrollToTop } from "components/ScrollToTop";
 import { Loading } from "components/loader/Loading";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,40 +26,42 @@ function App() {
 
   return (
     <div className="App">
-      <HashRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home setBurgerOpen={setBurgerOpen} />} />
-          <Route
-            path="/clients"
-            element={<Clients setBurgerOpen={setBurgerOpen} />}
-          />
-          <Route
-            path="/cases"
-            element={<Cases setBurgerOpen={setBurgerOpen} />}
-          />
-          <Route
-            path="/cases/case_study"
-            element={<CaseStudies setBurgerOpen={setBurgerOpen} />}
-          />
-          <Route
-            path="/blog"
-            element={<Blog setBurgerOpen={setBurgerOpen} />}
-          />
-          <Route
-            path="/blog/article"
-            element={<Article setBurgerOpen={setBurgerOpen} />}
-          />
-          <Route
-            path="/services"
-            element={<Services setBurgerOpen={setBurgerOpen} />}
-          />
-          <Route
-            path="/team"
-            element={<Team setBurgerOpen={setBurgerOpen} />}
-          />
-        </Routes>
-      </HashRouter>
+      <ParallaxProvider>
+        <HashRouter>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home setBurgerOpen={setBurgerOpen} />} />
+            <Route
+              path="/clients"
+              element={<Clients setBurgerOpen={setBurgerOpen} />}
+            />
+            <Route
+              path="/cases"
+              element={<Cases setBurgerOpen={setBurgerOpen} />}
+            />
+            <Route
+              path="/cases/case_study"
+              element={<CaseStudies setBurgerOpen={setBurgerOpen} />}
+            />
+            <Route
+              path="/blog"
+              element={<Blog setBurgerOpen={setBurgerOpen} />}
+            />
+            <Route
+              path="/blog/article"
+              element={<Article setBurgerOpen={setBurgerOpen} />}
+            />
+            <Route
+              path="/services"
+              element={<Services setBurgerOpen={setBurgerOpen} />}
+            />
+            <Route
+              path="/team"
+              element={<Team setBurgerOpen={setBurgerOpen} />}
+            />
+          </Routes>
+        </HashRouter>
+      </ParallaxProvider>
     </div>
   );
 }

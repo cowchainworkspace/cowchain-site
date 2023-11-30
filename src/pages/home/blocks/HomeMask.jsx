@@ -1,11 +1,13 @@
 import React from "react";
+import { ParallaxBanner } from "react-scroll-parallax";
 
 export const HomeMask = () => {
   return (
-    <div className="relative overflow-hidden">
-      <div className="w-full">
-        <div className="min-h-[280px] bg-[url('assets/parallax/parallax.png')] bg-cover bg-fixed bg-[50%] " />
-      </div>
+    <div className="h-[280px]">
+      <ParallaxBanner
+        layers={[{ image: "/images/parallax.png", speed: -15 }]}
+        className="relative m-auto aspect-[2/1] h-[280px]"
+      />
     </div>
   );
 };

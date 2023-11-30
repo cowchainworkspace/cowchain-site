@@ -33,6 +33,7 @@
     "react-modal-video": "^2.0.1",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.9.0",
+    "react-scroll-parallax": "^3.4.5",
     "react-scroll-percentage-hook": "^1.2.1",
     "react-scroll-wheel-handler": "^2.2.0",
     "react-scrollama": "^2.3.3",

@@ -153,7 +153,9 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
                                 svg
                                 countryCode={option.data.code}
                               />
-                              <span className="text-white">{option.value}</span>
+                              <span className="text-base text-white">
+                                {option.value}
+                              </span>
                             </Space>
                           )}
                         />
