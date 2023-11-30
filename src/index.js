@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 /* import "../src/fonts/Roc-Grotesk/fonts.css"
  */
 
-const EVENTS_TO_MODIFY = ['wheel'];
+const EVENTS_TO_MODIFY = ["wheel"];
 
 /* const originalAddEventListener = document.addEventListener.bind();
 document.addEventListener = (type, listener, options, wantsUntrusted) => {
@@ -46,11 +46,10 @@ document.removeEventListener = (type, listener, options) => {
   return originalRemoveEventListener(type, listener, modOptions);
 }; */
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-

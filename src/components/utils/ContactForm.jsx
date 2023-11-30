@@ -9,7 +9,7 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors }
   } = useForm();
 
   const [sendError, setSendError] = useState(false);
@@ -28,6 +28,7 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
     }
     reset();
     setSendSuccess(true);
+    setModalOpen(false);
   };
 
   const checkboxes = [
@@ -37,7 +38,7 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
     "Consultation",
     "Marketing",
     "SEO",
-    "Other",
+    "Other"
   ];
 
   const radioBtns = ["$2-3K", "$5-10K", "$10K <", "Other"];
@@ -48,27 +49,28 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
       onClose={() => setModalOpen(false)}
       className="popup-modal"
       lockScroll
+      nested
     >
-      <div className="modal overflow-y-auto max-h-[95vh] min-w-full h-full p-4 md:p-8 lg:p-16 bg-black max-w-5xl border-2 border-white">
+      <div className="modal h-full max-h-[95vh] min-w-full max-w-7xl overflow-y-auto border-2 border-white bg-black p-4 md:p-8 lg:p-16">
         <div className="flex">
           <img
-            className="cursor-pointer w-8 ml-auto"
+            className="ml-auto w-8 cursor-pointer"
             alt=""
             onClick={() => setModalOpen(false)}
             src={modal_close}
           />
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <p className="font-roc text-4xl md:text-5xl font-bold text-white text-center lg:text-left lg:mt-6">
+          <p className="text-center font-roc text-4xl font-bold text-white md:text-5xl lg:mt-6 lg:text-left">
             let`s work <br></br> together
           </p>
           <form
             onSubmit={handleSubmit(sendFormData)}
-            className="userform flex flex-col gap-y-6 mt-6"
+            className="userform mt-6 flex flex-col gap-y-6"
           >
             <div>
               <p className="text-white">Services</p>
-              <div className="services_group_wrapper flex flex-wrap gap-2 mt-4">
+              <div className="services_group_wrapper mt-4 flex flex-wrap gap-2">
                 {checkboxes.map((checkbox, index) => (
                   <label key={index} className="form_label_for_check">
                     <input
@@ -90,7 +92,7 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
             )}
             <div>
               <p className="text-white">Budget (optional)</p>
-              <div className="services_group_wrapper flex flex-wrap gap-2 mt-4">
+              <div className="services_group_wrapper mt-4 flex flex-wrap gap-2">
                 {radioBtns.map((radioBtn, index) => (
                   <label key={index * 10} className="form_label_for_check">
                     <input
@@ -112,12 +114,12 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
               {...register("email", {
                 required: true,
                 pattern:
-                  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
+                  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
               })}
               aria-invalid={errors.email ? "true" : "false"}
             />
             {errors.email?.type === "required" && (
-              <span className="error-span">Pleasae, enter your email!</span>
+              <span className="error-span">Please, enter your email!</span>
             )}
             {errors.email?.type === "pattern" && (
               <span className="error-span">

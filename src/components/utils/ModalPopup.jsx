@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/modal_close.svg";
 import error from "../../assets/footer/error.svg";
@@ -7,8 +7,8 @@ import success from "../../assets/footer/success.svg";
 const ModalPopup = ({ isOpen, toggleOpen, isError }) => {
   const successText = (
     <div className="flex flex-col">
-      <img className="w-12 mx-auto" src={success}></img>
-      <p className="text-2xl uppercase font-roc font-medium text-white text-center mt-4">
+      <img className="mx-auto w-12" src={success}></img>
+      <p className="mt-4 text-center font-roc text-2xl font-medium uppercase text-white">
         Thanks! <br></br>
         Your request was sent successfully. <br></br> We will contact you in
         next 48 ours!
@@ -18,15 +18,15 @@ const ModalPopup = ({ isOpen, toggleOpen, isError }) => {
 
   const errorText = (
     <div className="flex flex-col">
-      <img className="w-12 mx-auto" src={error}></img>
-      <p className="text-xl font-roc font-normal text-[#bbb] text-center mt-4">
+      <img className="mx-auto w-12" src={error}></img>
+      <p className="mt-4 text-center font-roc text-xl font-normal text-[#bbb]">
         Sorry, an error occured...
       </p>
-      <p className="text-xl font-roc font-normal text-[#bbb] text-center mt-4">
+      <p className="mt-4 text-center font-roc text-xl font-normal text-[#bbb]">
         Please, contact us directly on
       </p>
       <a href="mailto:sales@cowchain.io" onClick={toggleOpen}>
-        <p className="text-[#bbb] underline text-center text-xl">
+        <p className="text-center text-xl text-[#bbb] underline">
           sales@cowchain.io
         </p>
       </a>
@@ -40,10 +40,10 @@ const ModalPopup = ({ isOpen, toggleOpen, isError }) => {
       className="popup-modal"
       lockScroll
     >
-      <div className="modal max-h-[90vh] min-w-full pt-4 pb-12 px-8 bg-black max-w-5xl border-2 border-white">
+      <div className="modal max-h-[90vh] min-w-full max-w-5xl border-2 border-white bg-black px-8 pb-12 pt-4">
         <div className="flex">
           <img
-            className="cursor-pointer w-8 ml-auto"
+            className="ml-auto w-8 cursor-pointer"
             alt=""
             onClick={toggleOpen}
             src={modal_close}

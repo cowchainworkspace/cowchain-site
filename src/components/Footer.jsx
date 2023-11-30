@@ -16,7 +16,7 @@ const faqRows = {
     {
       title: <h2>WHAT WE DO</h2>,
       content: (
-        <div className="flex flex-col gap-y-4 mt-4 mb-8 footer-links">
+        <div className="footer-links mb-8 mt-4 flex flex-col gap-y-4">
           <AnchorLink href="#expertise">
             <p>Services & Techonologies</p>
           </AnchorLink>
@@ -27,12 +27,12 @@ const faqRows = {
             <p>Clients</p>
           </AnchorLink>
         </div>
-      ),
+      )
     },
     {
       title: <h2>AGENCY</h2>,
       content: (
-        <div className="flex flex-col gap-y-4 mt-4 mb-8 footer-links">
+        <div className="footer-links mb-8 mt-4 flex flex-col gap-y-4">
           <Link to="/">
             <p>Team</p>
           </Link>
@@ -40,12 +40,12 @@ const faqRows = {
             <p>Blog</p>
           </Link>
         </div>
-      ),
+      )
     },
     {
       title: <h2>HELP</h2>,
       content: (
-        <div className="flex flex-col gap-y-4 mt-4 mb-8 footer-links">
+        <div className="footer-links mb-8 mt-4 flex flex-col gap-y-4">
           <AnchorLink href="#contact">
             <p>Contact Us</p>
           </AnchorLink>
@@ -56,9 +56,9 @@ const faqRows = {
             <p>FAQs</p>
           </AnchorLink>
         </div>
-      ),
-    },
-  ],
+      )
+    }
+  ]
 };
 
 const faqConfig = {
@@ -91,7 +91,7 @@ const faqConfig = {
         fill="white"
       />
     </svg>
-  ),
+  )
 };
 
 const faqStyles = {
@@ -106,17 +106,17 @@ const faqStyles = {
   rowContentPaddingRight: "0px",
   arrowColor: "none",
   transitionDuration: "0.3s",
-  timingFunc: "ease",
+  timingFunc: "ease"
 };
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <section id="footer" className="relative">
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="border-b border-b-th-fade md-border-r py-heading text-center px-default flex flex-col gap-y-8">
+        <div className="md-border-r py-heading px-default flex flex-col gap-y-8 border-b border-b-th-fade text-center">
           <h2 className="text-center md:text-left">What’s on your mind?</h2>
           <div className="max-w-xl">
-            <p className="text-[#bbb] text-center md:text-left">
+            <p className="text-center text-[#bbb] md:text-left">
               Submit your email address and our team will get in touch with you
               within 48 hours. Or drop us a line at{" "}
             </p>
@@ -127,75 +127,84 @@ const Footer = () => {
             </a>
           </div>
           <FooterForm />
-          <div className="flex items-center justify-center md:justify-start gap-x-2 mx-auto md:mx-0">
+          <div className="mx-auto flex items-center justify-center gap-x-2 md:mx-0 md:justify-start">
             <a
               href="https://www.linkedin.com/company/cowchain/"
-              rel="nofollow"
+              rel="nofollow noreferrer"
               target="_blank"
             >
-              <img className="w-12 lg:w-16" src={linkedin}></img>
+              <img alt="linkedin" className="w-12 lg:w-16" src={linkedin}></img>
             </a>
-            <a href="https://t.me/cowchain_team" rel="nofollow" target="_blank">
-              <img className="w-12 lg:w-16" src={telegram}></img>
+            <a
+              href="https://t.me/cowchain_team"
+              rel="nofollow noreferrer"
+              target="_blank"
+            >
+              <img alt="telegram" className="w-12 lg:w-16" src={telegram}></img>
             </a>
             <a
               href="https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw"
-              rel="nofollow"
+              rel="nofollow noreferrer"
               target="_blank"
             >
-              <img className="w-12 lg:w-16" src={twitter}></img>
+              <img alt="twitter" className="w-12 lg:w-16" src={twitter}></img>
             </a>
             <a
               href="https://cowchain.medium.com/"
-              rel="nofollow"
+              rel="nofollow noreferrer"
               target="_blank"
             >
-              <img className="w-12 lg:w-16" src={medium}></img>
+              <img alt="medium" className="w-12 lg:w-16" src={medium}></img>
             </a>
-            <a href="mailto:sales@cowchain.io" rel="nofollow" target="_blank">
-              <img className="w-12 lg:w-16" src={mail}></img>
+            <a
+              href="mailto:sales@cowchain.io"
+              rel="nofollow noreferrer"
+              target="_blank"
+            >
+              <img alt="mail" className="w-12 lg:w-16" src={mail}></img>
             </a>
           </div>
         </div>
-        <div className="border-b border-b-th-fade py-heading px-default lg:hidden">
+        <div className="py-heading px-default border-b border-b-th-fade lg:hidden">
           <Faq data={faqRows} styles={faqStyles} config={faqConfig} />
         </div>
-        <div className="border-b border-b-th-fade py-heading px-default hidden lg:block">
+        <div className="py-heading px-default hidden border-b border-b-th-fade lg:block">
           <div className="grid grid-cols-3 gap-x-8">
             <div className="footer-links">
-              <p className="text-base font-roc font-medium !text-white">
+              <p className="font-roc text-base font-medium !text-white">
                 WHAT WE DO
               </p>
-              <div className="flex flex-col gap-y-4 my-8">
-                <Link to="/">
+              <div className="my-8 flex flex-col gap-y-4">
+                <Link to="/services">
                   <p className="text-[#bbb]">
                     Services &<br></br> Techonologies
                   </p>
                 </Link>
-                <Link to="/">
+                <Link to="/cases">
                   <p className="text-[#bbb]">Cases</p>
                 </Link>
                 <Link to="/clients">
+                  {" "}
                   <p className="text-[#bbb]">Clients</p>
                 </Link>
               </div>
             </div>
             <div className="footer-links">
-              <p className="text-base font-roc font-medium !text-white">
+              <p className="font-roc text-base font-medium !text-white">
                 AGENCY
               </p>
-              <div className="flex flex-col gap-y-4 my-8">
-                <Link to="/">
+              <div className="my-8 flex flex-col gap-y-4">
+                <Link to="/team">
                   <p className="text-[#bbb]">Team</p>
                 </Link>
-                <Link to="/">
+                <Link to="/blog">
                   <p className="text-[#bbb]">Blog</p>
                 </Link>
               </div>
             </div>
             <div className="footer-links">
-              <p className="text-base font-roc font-medium !text-white">HELP</p>
-              <div className="flex flex-col gap-y-4 my-8">
+              <p className="font-roc text-base font-medium !text-white">HELP</p>
+              <div className="my-8 flex flex-col gap-y-4">
                 <AnchorLink href="#contact">
                   <p className="text-[#bbb]">Contact Us</p>
                 </AnchorLink>
@@ -209,7 +218,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="px-2 py-3 md:py-8 md:col-span-2">
+        <div className="px-2 py-3 md:col-span-2 md:py-8">
           <a href="/">
             <img className="w-full" src={logofont} alt=""></img>
           </a>
@@ -218,5 +227,3 @@ const Footer = () => {
     </section>
   );
 };
-
-export default Footer;

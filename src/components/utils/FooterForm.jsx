@@ -9,7 +9,7 @@ const FooterForm = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors }
   } = useForm();
 
   const [error, setError] = useState(null);
@@ -35,7 +35,7 @@ const FooterForm = () => {
     <section>
       <form
         onSubmit={handleSubmit(sendFormData)}
-        className="footerform flex items-stretch mb-2 max-w-xl"
+        className="footerform mb-2 flex max-w-xl items-stretch"
       >
         <input
           type="email"
@@ -44,7 +44,7 @@ const FooterForm = () => {
           {...register("email", {
             required: true,
             pattern:
-              /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
+              /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
           })}
           aria-invalid={errors.email ? "true" : "false"}
         />
