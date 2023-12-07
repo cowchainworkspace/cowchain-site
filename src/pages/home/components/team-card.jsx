@@ -1,6 +1,15 @@
-export const TeamCard = ({ name, role, photo, social }) => {
+import { cn } from "lib/utils";
+
+export const TeamCard = ({ name, role, photo, social, index }) => {
   return (
-    <div className="team_card_wrapper relative flex   flex-col gap-y-2 border-b border-r border-b-th-fade border-r-th-fade px-4 py-[8vh] xl:py-[12vh] ">
+    <div
+      className={cn(
+        "team_card_wrapper relative flex   flex-col gap-y-2 border-b border-b-th-fade border-r-th-fade px-4 py-[8vh] md:border-r xl:py-[12vh]",
+        {
+          "border-r": index % 2 === 0
+        }
+      )}
+    >
       <div className="team_card_overlay absolute left-0 top-0 flex h-full w-full">
         <div
           className="flex h-full w-full bg-cover bg-center bg-no-repeat p-8"

@@ -56,7 +56,7 @@ export const Benefits = () => {
     <section
       id="benefits"
       ref={sectionRef}
-      className="relative h-[2100px] md:h-[3200px]"
+      className="relative h-[2100px] md:h-[4000px]"
     >
       <div className="sticky top-0 flex flex-col md:flex-row">
         <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-16 md:w-1/2 md:py-0">
@@ -102,7 +102,7 @@ export const Benefits = () => {
                       <motion.p
                         variants={textVariants}
                         className={cn(
-                          " h-min max-h-0  text-sm !leading-[180%] text-secondary opacity-0 transition-all duration-500 will-change-transform md:text-base lg:text-lg",
+                          " h-min max-h-0  text-sm !leading-[180%] text-secondary opacity-0  will-change-transform md:text-base lg:text-lg",
                           {
                             "mt-6 block h-auto max-h-[300px] opacity-100":
                               scrollIndex === index

@@ -1,27 +1,27 @@
 import React, { useRef, useEffect, useState } from "react";
-import pic1 from "../../../assets/homepage/projects/1.jpg";
-import pic2 from "../../../assets/homepage/projects/2.jpg";
-import pic3 from "../../../assets/homepage/projects/3.jpg";
+import pic1 from "assets/homepage/projects/1.jpg";
+import pic2 from "assets/homepage/projects/2.jpg";
+import pic3 from "assets/homepage/projects/3.jpg";
 import { Link } from "react-router-dom";
 import { useInView, motion } from "framer-motion";
 
 const projectsData = [
   {
-    title: "Marsan Exchange",
+    title: "Crypto payment app",
     description:
       "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
     photo: pic1,
     tags: ["React.js", "Solidity", "Subgraph"]
   },
   {
-    title: "Eva Crypto Wallet",
+    title: "CRYPTO WALLET APP",
     description:
       "Multichain mobile wallet development with AI integration for an optimized portfolio management",
     photo: pic2,
     tags: ["React.js", "Solidity", "Subgraph"]
   },
   {
-    title: "Triend",
+    title: "Blockchain integration into hotel business",
     description:
       "Decentralized plugin development for travelers’ review verification. Proof-of-attendance protocol and reward system integration",
     photo: pic3,
@@ -99,8 +99,11 @@ const Projects = () => {
           }
         >
           <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></div>
-          <div className="project-overlay absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 xl:py-12">
-            <Link to="/" className="btn-contact ml-auto">
+          <Link
+            to="/cases/payment"
+            className="project-overlay absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 xl:py-12"
+          >
+            <Link to="/cases/payment" className="btn-contact ml-auto">
               VIEW PROJECT
             </Link>
             <div className="mt-auto flex flex-col gap-y-4">
@@ -113,15 +116,15 @@ const Projects = () => {
                   </div>
                 ))}
               </div>
-              <h2 className="mt-2">Marsan Exchange</h2>
+              <h2 className="mt-2">Crypto payment app</h2>
               <p className="body max-w-sm !text-[#bbb]">
                 Mobile app development for a non-custodial Canadian exchange.
                 KYC integration. Chat support
               </p>
             </div>
-          </div>
+          </Link>
           <div className="relative mt-auto flex flex-col gap-y-4 lg:hidden">
-            <h2>Marsan Exchange</h2>
+            <h2>Crypto payment app</h2>
             <p className="max-w-xs text-sm font-normal leading-normal text-[#bbb]">
               Mobile app development for a non-custodial Canadian exchange. KYC
               integration. Chat support
@@ -140,8 +143,11 @@ const Projects = () => {
           }
         >
           <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></div>
-          <div className="project-overlay absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 xl:py-12">
-            <Link to="/" className="btn-contact ml-auto">
+          <Link
+            to="/cases/wallet"
+            className="project-overlay absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 xl:py-12"
+          >
+            <Link to="/cases/wallet" className="btn-contact ml-auto">
               VIEW PROJECT
             </Link>
             <div className="mt-auto flex flex-col gap-y-4">
@@ -154,15 +160,15 @@ const Projects = () => {
                   </div>
                 ))}
               </div>
-              <h2 className="mt-2">Eva Crypto Wallet</h2>
+              <h2 className="mt-2">CRYPTO WALLET APP</h2>
               <p className="body max-w-sm !text-[#bbb]">
                 Multichain mobile wallet development with AI integration for an
                 optimized portfolio management
               </p>
             </div>
-          </div>
+          </Link>
           <div className="relative mt-auto flex flex-col gap-y-4 lg:hidden">
-            <h2>Eva Crypto Wallet</h2>
+            <h2>CRYPTO WALLET APP</h2>
             <p className="max-w-xs text-sm font-normal leading-normal text-[#bbb]">
               Multichain mobile wallet development with AI integration for an
               optimized portfolio management
@@ -181,8 +187,11 @@ const Projects = () => {
           }
         >
           <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></div>
-          <div className="project-overlay absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 xl:py-12">
-            <Link to="/" className="btn-contact ml-auto">
+          <Link
+            to="/cases/hotel"
+            className="project-overlay absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 xl:py-12"
+          >
+            <Link to="/cases/hotel" className="btn-contact ml-auto">
               VIEW PROJECT
             </Link>
             <div className="mt-auto flex flex-col gap-y-4">
@@ -195,16 +204,18 @@ const Projects = () => {
                   </div>
                 ))}
               </div>
-              <h2 className="mt-2">Triend</h2>
+              <h2 className="mt-2">
+                Blockchain integration into hotel business
+              </h2>
               <p className="body max-w-sm !text-[#bbb]">
                 Decentralized plugin development for travelers’ review
                 verification. Proof-of-attendance protocol and reward system
                 integration
               </p>
             </div>
-          </div>
+          </Link>
           <div className="relative mt-auto flex flex-col gap-y-4 lg:hidden">
-            <h2>Triend</h2>
+            <h2>Blockchain integration into hotel business</h2>
             <p className="max-w-xs text-sm font-normal leading-normal text-[#bbb]">
               Decentralized plugin development for travelers’ review
               verification. Proof-of-attendance protocol and reward system

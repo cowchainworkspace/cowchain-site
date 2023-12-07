@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import bg_lg from "assets/bg/clients_header_bg_lg.png";
 import Tag from "components/ui/tag";
 import Filters from "components/icons/filters";
 import { Category } from "components/ui/category";
+import { Popover } from "antd";
+import { AllFilters } from "../components/all-filters";
 
 const categories = [
   "staking",
@@ -15,6 +17,16 @@ const categories = [
 ];
 
 export const HeroSection = () => {
+  const [open, setOpen] = useState(false);
+
+  const hide = () => {
+    setOpen(false);
+  };
+
+  const handleOpenChange = (newOpen) => {
+    setOpen(newOpen);
+  };
+
   return (
     <section className="relative pt-20 lg:pt-[120px]">
       <img
@@ -33,10 +45,19 @@ export const HeroSection = () => {
               <Category key={index} title={title} />
             ))}
           </div>
-          <button className="flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-[36px] border border-white bg-transparent px-6 py-[11px] text-sm uppercase leading-[14px] text-white xl:text-base">
-            <Filters className={"h-4 w-4"} />
-            All filters
-          </button>
+          <Popover
+            titleMinWidth={300}
+            trigger="click"
+            placement="bottom"
+            open={open}
+            onOpenChange={handleOpenChange}
+            content={<AllFilters />}
+          >
+            <button className="flex  cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-[36px] border border-white bg-transparent px-6 py-[11px] text-sm uppercase leading-[14px] text-white xl:text-base">
+              <Filters className={"h-4 w-4"} />
+              All filters
+            </button>
+          </Popover>
         </div>
       </div>
     </section>

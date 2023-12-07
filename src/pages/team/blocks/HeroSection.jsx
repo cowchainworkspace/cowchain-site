@@ -15,7 +15,7 @@ export const HeroSection = () => {
         <Tag title={"team"} className={"mb-4 md:mb-8"} />
         <h1 className="mb-10 max-w-[1270px] text-[32px] uppercase text-white lg:mt-6 lg:text-[82px] xl:text-center   xl:text-7xl">
           We are a team of{" "}
-          <span className="violet-gradient-text">20+ web3 natives</span> making
+          <span className="violet-gradient-text">30+ web3 natives</span> making
           crypto simple since 2020
         </h1>
         <div className="mt-9 flex max-w-[110%] items-start justify-start gap-2 overflow-x-scroll md:items-center   md:overflow-auto  lg:max-w-full  lg:justify-between  xl:max-w-none ">

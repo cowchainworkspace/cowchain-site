@@ -15,7 +15,7 @@ export const Services = ({ setBurgerOpen }) => {
         <HeroSection />
         <ViewMoreSection />
         <Products />
-        <Stack title={"Out tech stack"} />
+        <Stack title={"Our tech stack"} />
         <Contact />
         <Footer />
       </div>

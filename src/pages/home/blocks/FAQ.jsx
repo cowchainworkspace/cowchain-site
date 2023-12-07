@@ -55,7 +55,7 @@ export const FAQ = () => {
                 {({ isExpanded }) => (
                   <div
                     className={cn(
-                      "relative bg-cover px-5 py-6 xl:px-[60px] xl:py-8",
+                      "relative bg-cover px-5 py-8 xl:px-[60px] xl:py-10",
                       {
                         "bg-[url('assets/bg/faq-gradient.png')]": isExpanded
                       }
@@ -64,7 +64,7 @@ export const FAQ = () => {
                   >
                     <AccordionButton className={cn("relative")}>
                       <div className="mr-auto w-full max-w-3xl ">
-                        <h2 className="max-w-2xl text-left !text-sm !leading-none lg:!text-lg lg:!leading-none">
+                        <h2 className="max-w-2xl text-left !text-base !leading-none lg:!text-xl lg:!leading-none">
                           {faq.title}
                         </h2>
                       </div>

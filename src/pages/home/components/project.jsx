@@ -8,7 +8,10 @@ export const Project = ({ title, description, photo, tags, id, link }) => {
       style={{ backgroundImage: `url(${photo})` }}
     >
       <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></div>
-      <div className="project-overlay absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 xl:py-12">
+      <Link
+        to={link}
+        className="project-overlay absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 xl:py-12"
+      >
         <Link to={link} className="btn-contact ml-auto">
           VIEW PROJECT
         </Link>
@@ -25,7 +28,7 @@ export const Project = ({ title, description, photo, tags, id, link }) => {
           <h2 className="mt-2">{title}</h2>
           <p className="body max-w-sm !text-[#bbb]">{description}</p>
         </div>
-      </div>
+      </Link>
       <div className="relative mt-auto flex flex-col gap-y-4 lg:hidden">
         <h2>{title}</h2>
         <p className="max-w-xs text-sm font-normal leading-normal text-[#bbb]">

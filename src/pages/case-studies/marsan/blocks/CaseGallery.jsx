@@ -1,13 +1,12 @@
 import React from "react";
-import photo1 from "assets/case-study/carousel/buy.png";
+import photo1 from "assets/case-study/carousel/details.png";
 import photo2 from "assets/case-study/carousel/interface.png";
-import photo3 from "assets/case-study/carousel/review.png";
+import photo3 from "assets/case-study/carousel/x.png";
 import photo4 from "assets/case-study/carousel/buy.png";
-import photo5 from "assets/case-study/carousel/x.png";
-import photo6 from "assets/case-study/carousel/x.png";
-import photo7 from "assets/case-study/carousel/interface.png";
+import photo5 from "assets/case-study/carousel/review.png";
+import photo6 from "assets/case-study/carousel/interface.png";
 
-const photos = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo1];
+const photos = [photo1, photo2, photo3, photo4, photo5, photo1, photo6];
 
 export const CaseGallery = () => {
   return (

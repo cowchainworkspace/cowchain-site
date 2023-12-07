@@ -1,34 +1,35 @@
 import React, { useRef, useLayoutEffect } from "react";
-import pic1 from "../../../assets/homepage/projects/1.jpg";
-import pic2 from "../../../assets/homepage/projects/2.jpg";
-import pic3 from "../../../assets/homepage/projects/3.jpg";
+import pic1 from "assets/homepage/projects/1.jpg";
+import pic2 from "assets/homepage/projects/2.jpg";
+import pic3 from "assets/homepage/projects/3.jpg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Project } from "../../home/components/project";
 
 const projectsData = [
   {
-    title: "Marsan Exchange",
-    link: "/cases/case_study",
+    title: "Crypto payment app",
+    link: "/cases/payment",
     description:
       "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
     photo: pic1,
     tags: ["React.js", "Solidity", "Subgraph"]
   },
   {
-    title: "Eva Crypto Wallet",
+    title: "CRYPTO WALLET APP",
+    link: "/cases/wallet",
     description:
       "Multichain mobile wallet development with AI integration for an optimized portfolio management",
     photo: pic2,
-    link: "",
     tags: ["React.js", "Solidity", "Subgraph"]
   },
   {
-    title: "Triend",
+    title: "Blockchain integration into hotel business",
+    link: "/cases/hotel",
+
     description:
       "Decentralized plugin development for travelers’ review verification. Proof-of-attendance protocol and reward system integration",
     photo: pic3,
-    link: "",
     tags: ["React.js", "Solidity", "Subgraph"]
   }
 ];

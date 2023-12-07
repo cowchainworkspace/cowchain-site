@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/modal_close.svg";
 import { useForm, Controller } from "react-hook-form";
@@ -34,13 +34,7 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
     setModalOpen(false);
   };
 
-  const [countries, setCountries] = useState([]);
-
-  useEffect(() => {
-    const data = require("./CountryData.json");
-    console.log("data", data);
-    setCountries(data);
-  }, []);
+  const searchInput = useRef(null);
 
   return (
     <Popup
@@ -74,10 +68,11 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
 
           <form
             onSubmit={handleSubmit(sendFormData)}
-            className="userform flex flex-col gap-y-6"
+            className="userform  flex flex-col gap-y-6"
           >
+            <input type="text" autofocus="autofocus" className={"hidden"} />
             <input
-              className="text_input"
+              className="text_input placeholder:text-yellow-200"
               type="text"
               placeholder="Full Name"
               {...register("full_name", {
@@ -118,77 +113,9 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
               </span>
             )}
 
-            <div>
-              <label className="text-xs text-secondary" htmlFor="cv_link">
-                Phone Number (optional)
-              </label>
-              <div className="text_input flex gap-2">
-                <Controller
-                  name="select"
-                  control={control}
-                  defaultValue={"+380"}
-                  render={({ field }) => {
-                    return (
-                      <div>
-                        <ReactCountryFlag
-                          style={{ width: "15px", height: "15px" }}
-                          svg
-                          countryCode={
-                            countries.find(
-                              (country) => country.value === field.value
-                            ).code
-                          }
-                        />
-                        <Select
-                          defaultValue={"+380"}
-                          style={{ width: 80 }}
-                          bordered={false}
-                          {...field}
-                          popupClassName="ant-select-popup"
-                          options={[...countries]}
-                          optionRender={(option) => (
-                            <Space key={option.label}>
-                              <ReactCountryFlag
-                                style={{ width: "15px", height: "15px" }}
-                                svg
-                                countryCode={option.data.code}
-                              />
-                              <span className="text-base text-white">
-                                {option.value}
-                              </span>
-                            </Space>
-                          )}
-                        />
-                      </div>
-                    );
-                  }}
-                />
-
-                <input
-                  type="tel"
-                  className="bg-transparent  text-white focus:outline-0"
-                  {...register("phone", {
-                    required: {
-                      value: true,
-                      message: "Phone is required"
-                    },
-                    pattern: {
-                      value:
-                        /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
-                      message: "Please enter a valid phone number"
-                    }
-                  })}
-                />
-              </div>
-            </div>
-
-            {errors.phone?.type === "pattern" && (
-              <span className="error-span">Please enter correct phone</span>
-            )}
-
             <input
               className="text_input"
-              placeholder="Why you are a good fit for Cowchain (optional)"
+              placeholder="Why you are a good fit?"
               type="text"
               defaultValue=""
               {...register("details", {
@@ -205,7 +132,7 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
               <input
                 id="cv_link"
                 className="text_input"
-                placeholder="http:/"
+                placeholder="https://"
                 type="text"
                 defaultValue=""
                 {...register("cv_link")}

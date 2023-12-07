@@ -4,12 +4,12 @@ import "./case-studies.css";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
 import { Contact } from "components/Contact";
-import Projects from "./blocks/Projects";
-import marsan_mobile from "assets/case-study/marsan-mobile.png";
-import marsan_mobile_black from "assets/case-study/marsan-black-mobile.png";
+import Projects from "../components/Projects";
+import hotel from "assets/case-study/hotel/hotel-left.png";
+import hotel_2 from "assets/case-study/hotel/hotel-right.png";
 import { Link } from "react-router-dom";
 import Chevron from "components/icons/chevron";
-import { ProjectDetail } from "./components/project-detail";
+import { ProjectDetail } from "../components/project-detail";
 import { CaseMask } from "./blocks/CaseMask";
 import Canada from "assets/icons/canada";
 import { CaseGallery } from "./blocks/CaseGallery";
@@ -54,7 +54,7 @@ const team_details = [
   }
 ];
 
-export const CaseStudies = ({ setBurgerOpen }) => {
+export const CaseStudiesTriend = ({ setBurgerOpen }) => {
   return (
     <section id="clients-wrapper">
       <div className="relative bg-black">
@@ -92,20 +92,22 @@ export const CaseStudies = ({ setBurgerOpen }) => {
                   What we did
                 </h3>
               </div>
-              <div className="flex flex-col items-start justify-start gap-16  lg:flex-row ">
-                <div className="w-full border-t-2  border-white/50 px-5 pt-4 lg:max-w-[600px] lg:px-0">
-                  <h3 className="mb-4 text-xs uppercase tracking-[2px] text-secondary">
-                    challenge
-                  </h3>
-                  <span className="mb-10 text-white lg:min-w-[570px]">
-                    Design & develop a fiat-to-crypto exchange mobile app with
-                    seamless user experience. We had to avoid Canadian
-                    regulatory complications to deploy this non-custodial app,
-                    while still creating a robust solution for exchanging $CAD
-                    for BTC and ETH
-                  </span>
+              <div className="flex  h-full flex-col items-start justify-start gap-16  lg:flex-row ">
+                <div className="flex w-full  flex-col justify-between border-t-2 border-white/50 px-5  pt-4 md:min-h-[702px]   lg:max-w-[600px] lg:px-0">
+                  <div>
+                    <h3 className="mb-4 text-xs uppercase tracking-[2px] text-secondary">
+                      challenge
+                    </h3>
+                    <span className="mb-10 text-white lg:min-w-[570px]">
+                      Design & develop a plugin for travel, hotel, and
+                      recreation apps with a blockchain-powered review system
+                      and unique incentives for honest reviews from their
+                      customers
+                    </span>
+                  </div>
+
                   <img
-                    src={marsan_mobile}
+                    src={hotel}
                     className="mt-8 min-h-[270px] w-full object-cover lg:mt-14 lg:min-h-[500px]"
                     alt=""
                   />
@@ -115,15 +117,15 @@ export const CaseStudies = ({ setBurgerOpen }) => {
                     challenge
                   </h3>
                   <span className="text-white">
-                    A full-fledged app for Android and iOS for exchanging $CAD
-                    to BTC & ETH with integrated Persona KYC for regulatory
-                    compliance and Canadian funds transfer service Interac
-                    E-transfer for seamless fiat transactions. We also created
-                    convenient chat support for real-time assistance and branded
-                    email templates for targeted marketing
+                    An easy-to-integrate website widget running on a
+                    proof-of-attendance protocol that allows travel providers to
+                    have a secure and transparent review system while also
+                    incentivizing honest reviews with special rewards. With
+                    Triend, travel businesses can optimize their offerings based
+                    on valid data and build trust & credibility among customers
                   </span>
                   <img
-                    src={marsan_mobile_black}
+                    src={hotel_2}
                     className="mt-8 min-h-[270px] w-full object-cover lg:min-h-[500px]"
                     alt=""
                   />

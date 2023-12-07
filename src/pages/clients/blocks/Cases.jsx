@@ -80,14 +80,19 @@ const Cases = () => {
 
   useEffect(() => {
     scrollPerc.set(percentage.vertical);
-  }, [percentage.vertical]);
+  }, [percentage.vertical, scrollPerc]);
 
   const transform = useTransform(
     scrollYProgress,
     [0, 1],
     [0, -scrollRange + viewportW]
   );
-  const physics = { damping: 15, mass: 0.27, stiffness: 55 };
+  const physics = {
+    damping: 0.9,
+    mass: 0.2,
+    stiffness: 1,
+    restSpeed: 0.5
+  };
   const spring = useSpring(transform, physics);
 
   return (

@@ -15,7 +15,7 @@ export const HeroSection = () => {
           <span className="text-xs text-secondary">back to all projects</span>
         </Link>
         <div className="flex flex-col items-center justify-center">
-          <h1 className="my-6 text-center uppercase">Marsan</h1>
+          <h1 className="my-6 text-center uppercase">website widget</h1>
           <div className="flex justify-center gap-2">
             <Tag title={"Mobile App"} />
             <Tag title={"Non-custodial exchange"} />

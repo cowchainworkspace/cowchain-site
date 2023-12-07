@@ -98,21 +98,8 @@ const Feedback = () => {
                     </div>
                   </div>
                   <p className="mt-[2px] text-white">
-                    Based on 20 Clutch reviews
+                    Based on 9 Clutch reviews
                   </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-x-6">
-                <a
-                  href="https://www.upwork.com/ag/cowchain/"
-                  rel="nofollow"
-                  target="_blank"
-                >
-                  <img className="w-12 md:w-16" src={upwork} alt=""></img>
-                </a>
-                <div className="flex items-center gap-x-2">
-                  <img className="w-8" src={upwork_star} alt=""></img>
-                  <p className="text-white">Top Rated Plus</p>
                 </div>
               </div>
             </div>

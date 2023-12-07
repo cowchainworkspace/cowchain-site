@@ -115,7 +115,7 @@ export const Team = () => {
           src={bg}
           alt=""
         />
-        <div className="md-border-r py-heading   px-default z-10 flex flex-col gap-y-6 border-b border-b-th-fade text-center lg:col-span-2 lg:text-left">
+        <div className="md-border-r py-heading px-default z-10 flex flex-col gap-y-6 border-b border-b-th-fade text-center lg:col-span-2 lg:text-left">
           <h3 className="text-center lg:text-left">OUR TEAM</h3>
           <a href="/team" className="mx-auto lg:mx-0">
             <div className="flex items-center gap-x-2">
@@ -128,7 +128,7 @@ export const Team = () => {
         </div>
         <div className="team_wrapper grid grid-cols-2 bg-black md:grid-cols-3 lg:col-span-3">
           {teamData.map((member, index) => (
-            <TeamCard key={index} {...member} />
+            <TeamCard key={index} index={index} {...member} />
           ))}
         </div>
       </div>
