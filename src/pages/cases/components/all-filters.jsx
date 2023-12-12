@@ -1,15 +1,26 @@
+import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel
+} from "@chakra-ui/react";
+import Open from "components/icons/open";
+import CloseCircle from "components/icons/close-circle";
+import { cn } from "lib/utils";
+import Check from "components/icons/check";
+
 const treeData = [
   {
     value: "Technology",
     title: "Technology",
     children: [
       {
-        value: "parent 1-0",
-        title: "parent 1-0"
+        value: "staking",
+        title: "staking"
       },
       {
-        value: "parent 1-1",
-        title: "parent 1-1"
+        value: "Mobile App",
+        title: "Mobile App"
       }
     ]
   },
@@ -18,12 +29,40 @@ const treeData = [
     title: "Project Type",
     children: [
       {
-        value: "parent 1-0",
-        title: "parent 1-0"
+        value: "staking",
+        title: "staking"
       },
       {
-        value: "parent 1-1",
-        title: "parent 1-1"
+        value: "Mobile App",
+        title: "Mobile App"
+      },
+      {
+        value: "dex",
+        title: "dex"
+      },
+      {
+        value: "NFT",
+        title: "NFT"
+      },
+      {
+        value: "Wallet",
+        title: "Wallet"
+      },
+      {
+        value: "play2earn",
+        title: "play2earn"
+      },
+      {
+        value: "dashboard",
+        title: "dashboard"
+      },
+      {
+        value: "trading",
+        title: "trading"
+      },
+      {
+        value: "deFi",
+        title: "deFi"
       }
     ]
   },
@@ -55,9 +94,42 @@ export const AllFilters = () => {
       {treeData.map((tree) => {
         return (
           <div className="mx-10 my-8" key={tree.value}>
-            <button className="flex justify-between font-roc text-xl text-white">
-              {tree.title}
-            </button>
+            <Accordion allowMultiple>
+              <AccordionItem>
+                {({ isExpanded }) => (
+                  <div>
+                    <AccordionButton>
+                      <div className="flex w-full items-center justify-between  font-roc text-xl text-white">
+                        <p className="max-w-2xl text-left !text-base !leading-none lg:!text-xl lg:!leading-none">
+                          {tree.title}
+                        </p>
+                        {!isExpanded ? (
+                          <Open className={"h-8 w-8"} />
+                        ) : (
+                          <CloseCircle className={"h-8 w-8"} />
+                        )}
+                      </div>
+                    </AccordionButton>
+                    <AccordionPanel
+                      className={cn("opacity-0  will-change-transform", {
+                        "pt-6 opacity-100 ": isExpanded
+                      })}
+                    >
+                      <div className="flex flex-col gap-6 ">
+                        {tree.children.map((children) => {
+                          return (
+                            <button className="flex max-w-2xl items-center gap-6 text-left font-roc !text-base uppercase !leading-none text-white lg:!text-base lg:!leading-none">
+                              <Check className={"h-4 w-4"} />
+                              {children.title}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </AccordionPanel>
+                  </div>
+                )}
+              </AccordionItem>
+            </Accordion>
           </div>
         );
       })}

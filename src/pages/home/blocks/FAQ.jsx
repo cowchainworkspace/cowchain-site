@@ -51,7 +51,7 @@ export const FAQ = () => {
         <div className="md:col-span-3">
           <Accordion allowToggle>
             {faqData.map((faq, index) => (
-              <AccordionItem>
+              <AccordionItem className="border-b border-th-fade">
                 {({ isExpanded }) => (
                   <div
                     className={cn(

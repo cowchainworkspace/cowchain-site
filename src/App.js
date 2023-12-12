@@ -1,6 +1,5 @@
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
-import { Home } from "pages/home";
 import { Clients } from "pages/clients";
 import { CaseStudiesMarsan } from "pages/case-studies/marsan";
 import { CaseStudiesEva } from "pages/case-studies/eva";
@@ -14,12 +13,15 @@ import { ScrollToTop } from "components/ScrollToTop";
 import { Loading } from "components/loader/Loading";
 import { ParallaxProvider } from "react-scroll-parallax";
 
+const Home = lazy(() => import('pages/home'));
+
+
 function App() {
   const [loading, setLoading] = useState(true);
   const [burgerOpen, setBurgerOpen] = useState(false);
   document.body.style.overflow = burgerOpen ? "hidden" : "visible";
   useEffect(() => {
-    setTimeout(() => setLoading(false), 3300);
+    setTimeout(() => setLoading(false), 4000);
   }, []);
 
   if (loading) {

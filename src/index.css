@@ -293,8 +293,8 @@ input:-webkit-autofill:active {
 }
 
 .ant-popover-inner {
-  min-width: 399px;
-  margin-right: 90px;
+  min-width: 300px;
+  margin-right: 20px;
   border-radius: 0px !important;
   border-color: white !important;
   border-width: 1px !important;
@@ -335,4 +335,15 @@ input:-webkit-autofill:active {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+}
+
+@media (min-width: 1024px) {
+  .ant-popover-inner {
+      min-width: 399px;
+      margin-right: 90px;
+      border-radius: 0px !important;
+      border-color: white !important;
+      border-width: 1px !important;
+      background-color: #000 !important;
+    }
 }

@@ -13,7 +13,7 @@ import "./home.css";
 import { HomeMask } from "./blocks/HomeMask";
 import { Stack } from "components/stack";
 
-export const Home = ({ setBurgerOpen }) => {
+const Home = ({ setBurgerOpen }) => {
   return (
     <section id="home-wrapper">
       <div className="relative bg-black">
@@ -33,3 +33,5 @@ export const Home = ({ setBurgerOpen }) => {
     </section>
   );
 };
+
+export default Home;
