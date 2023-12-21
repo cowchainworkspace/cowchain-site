@@ -30,15 +30,15 @@ export const Clients = () => {
           </a>
           <div className="mt-8 grid w-full max-w-xl grid-cols-3 gap-x-8 lg:order-3 lg:ml-auto">
             <div>
-              <Counter duration={4} target={30} />
+              <Counter duration={4} target={35} />
               <p className="body1 mt-2 uppercase">Techonologies</p>
             </div>
             <div>
-              <Counter duration={4} target={84} />
+              <Counter duration={4} target={93} />
               <p className="body1 mt-2 uppercase">Projects</p>
             </div>
             <div>
-              <Counter duration={4} target={50} />
+              <Counter duration={4} target={57} />
               <p className="body1 mt-2 uppercase">Clients</p>
             </div>
           </div>

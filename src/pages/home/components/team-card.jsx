@@ -4,7 +4,7 @@ export const TeamCard = ({ name, role, photo, social, index }) => {
   return (
     <div
       className={cn(
-        "team_card_wrapper relative flex   flex-col gap-y-2 border-b border-b-th-fade border-r-th-fade px-4 py-[8vh] md:border-r xl:py-[12vh]",
+        "  relative flex   flex-col gap-y-2 border-b border-b-th-fade border-r-th-fade px-4 py-[8vh] md:border-r xl:py-[12vh]",
         {
           "border-r": index % 2 === 0
         }
@@ -17,7 +17,7 @@ export const TeamCard = ({ name, role, photo, social, index }) => {
         >
           <div className="relative ml-auto mt-auto">
             <a href={social?.url} rel="nofollow noreferrer" target="_blank">
-              <img alt={""} className="w-12" src={social?.icon}></img>
+              <img alt={""} className="w-8 xl:w-12" src={social?.icon}></img>
             </a>
           </div>
         </div>
@@ -34,8 +34,8 @@ export const TeamCard = ({ name, role, photo, social, index }) => {
           </div>
         </div>
       </div>
-      <h2 className="z-10 text-center md:z-auto ">{name}</h2>
-      <p className="caption z-10 text-center uppercase md:z-auto">{role}</p>
+      <h2 className="z-10 text-center ">{name}</h2>
+      <p className="caption z-10   text-center uppercase">{role}</p>
     </div>
   );
 };

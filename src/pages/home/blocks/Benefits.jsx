@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import { motion, useScroll } from "framer-motion";
 import Typewriter from "typewriter-effect";
@@ -85,7 +85,7 @@ export const Benefits = () => {
                 <Step data={index + 1} key={benefit.title + index}>
                   <article
                     className={cn(
-                      "px-default relative flex grow flex-col items-center justify-center  overflow-hidden border-b border-b-th-fade py-6   will-change-transform lg:py-8",
+                      "px-default relative flex max-h-[278px] grow flex-col items-center justify-center  overflow-hidden border-b border-b-th-fade py-6   will-change-transform lg:py-8",
                       {
                         "max-h-max": scrollIndex === index,
                         "hidden md:flex":

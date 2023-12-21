@@ -50,12 +50,12 @@ export const Header = () => {
                 <img className="w-11 md:w-[70px]" src={clutch} alt=""></img>
               </a>
             </div>
-            <div className="my-4 flex flex-col gap-y-4 uppercase lg:pl-[5vw] xl:pl-[15vw]">
+            <div className="my-4 flex flex-col gap-y-4  lg:pl-[5vw] xl:pl-[15vw]">
               <h2>developers of web3</h2>
               <div className="md:mt-4 md:flex md:items-center md:justify-between">
                 <div className="flex flex-col gap-y-1">
-                  <p className="body1">Mykhailo Adzhoiev</p>
-                  <p className="  text-secondary">Founder & CTO</p>
+                  <p className="body1 text-base">Mykhailo Adzhoiev</p>
+                  <p className="text-sm  text-secondary">Founder & CTO</p>
                 </div>
                 <button
                   className="btn-play mt-4 md:mt-0"

@@ -16,7 +16,7 @@ export const HeroSection = () => {
         src={bg_lg}
       />
       <div className="relative flex cursor-default flex-col items-center justify-center px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
-        <Tag title={"services"} className={"mb-4 md:mb-8"} />
+        <Tag title={"services"} className={"mb-4 text-base md:mb-8"} />
         <h1 className="mb-10 max-w-[570px]  text-center   text-5xl uppercase text-white lg:mt-6   lg:text-[82px]">
           Services & Technologies
         </h1>

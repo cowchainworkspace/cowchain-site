@@ -33,11 +33,11 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
 
   const checkboxes = [
     "Web Development",
-    "UI/UX",
-    "Branding",
-    "Consultation",
-    "Marketing",
-    "SEO",
+    "smart contracts",
+    "blockchain development",
+    "mobile development",
+    "dapp development",
+    "consultancy",
     "Other"
   ];
 

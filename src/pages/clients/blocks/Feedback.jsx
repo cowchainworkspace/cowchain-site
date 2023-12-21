@@ -2,7 +2,6 @@ import React from "react";
 import clutch from "../../../assets/homepage/clutch.svg";
 import upwork from "../../../assets/homepage/upwork.svg";
 import star from "../../../assets/clients/reate-star.svg";
-import upwork_star from "../../../assets/clients/upwork_rate.svg";
 import bg from "../../../assets/bg/clients_feedback.png";
 
 const feedbackData = [
@@ -101,6 +100,15 @@ const Feedback = () => {
                     Based on 9 Clutch reviews
                   </p>
                 </div>
+              </div>
+              <div className="flex items-center gap-x-6">
+                <a
+                  href="https://www.upwork.com/ag/cowchain/"
+                  rel="nofollow"
+                  target="_blank"
+                >
+                  <img className="w-12 md:w-16" src={upwork} alt=""></img>
+                </a>
               </div>
             </div>
           </div>

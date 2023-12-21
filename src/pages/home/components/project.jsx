@@ -1,13 +1,29 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { cn } from "lib/utils";
 
-export const Project = ({ title, description, photo, tags, id, link }) => {
+export const Project = ({
+  title,
+  description,
+  photo,
+  tags,
+  id,
+  link,
+  index,
+  scrollIndex
+}) => {
   return (
-    <article
+    <motion.div
       id={"project-" + id}
-      className="project-card relative flex min-h-[320px] w-full cursor-pointer border-b border-b-th-fade bg-cover bg-center bg-no-repeat px-4 py-8 will-change-transform md:h-96 md:min-w-[25vw] md:px-8 lg:h-[480px] lg:px-16 xl:h-[624px]"
+      className={cn(
+        "project-card relative flex h-screen min-h-[320px] w-full cursor-pointer border-b border-b-th-fade bg-cover bg-center bg-no-repeat px-4 py-8 will-change-transform md:h-96 md:min-w-[25vw] md:px-8 lg:h-screen lg:px-16 xl:h-screen",
+        {
+          expanded: scrollIndex === index
+        }
+      )}
       style={{ backgroundImage: `url(${photo})` }}
     >
-      <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></div>
+      <motion.div className="absolute  left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></motion.div>
       <Link
         to={link}
         className="project-overlay absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 xl:py-12"
@@ -29,12 +45,12 @@ export const Project = ({ title, description, photo, tags, id, link }) => {
           <p className="body max-w-sm !text-[#bbb]">{description}</p>
         </div>
       </Link>
-      <div className="relative mt-auto flex flex-col gap-y-4 lg:hidden">
+      <motion.div className="relative mt-auto flex flex-col gap-y-4 lg:hidden">
         <h2>{title}</h2>
         <p className="max-w-xs text-sm font-normal leading-normal text-[#bbb]">
           {description}
         </p>
-      </div>
-    </article>
+      </motion.div>
+    </motion.div>
   );
 };

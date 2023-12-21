@@ -66,10 +66,6 @@ export const Navbar = ({ setBurgerOpen, isGradient = true }) => {
     {
       title: "Team",
       link: "/team"
-    },
-    {
-      title: "Blog",
-      link: "/blog"
     }
   ];
 
@@ -162,7 +158,7 @@ export const Navbar = ({ setBurgerOpen, isGradient = true }) => {
               onClick={openBurger}
             ></img>
           )}
-          <div className="ml-auto hidden w-full max-w-[360px] items-center justify-between lg:flex xl:max-w-md">
+          <div className="ml-auto hidden w-full max-w-[360px] items-center justify-end gap-16 lg:flex xl:max-w-md">
             {routerLinks.map((link, index) => (
               <Link key={index * 4} to={link.link}>
                 <p className="navlink mt-1">{link.title}</p>

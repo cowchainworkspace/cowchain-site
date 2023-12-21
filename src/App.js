@@ -13,8 +13,7 @@ import { ScrollToTop } from "components/ScrollToTop";
 import { Loading } from "components/loader/Loading";
 import { ParallaxProvider } from "react-scroll-parallax";
 
-const Home = lazy(() => import('pages/home'));
-
+const Home = lazy(() => import("pages/home"));
 
 function App() {
   const [loading, setLoading] = useState(true);
