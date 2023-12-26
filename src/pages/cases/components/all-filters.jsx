@@ -8,21 +8,13 @@ import Open from "components/icons/open";
 import CloseCircle from "components/icons/close-circle";
 import { cn } from "lib/utils";
 import Check from "components/icons/check";
+import CheckFill from "components/icons/check-fill";
 
 const treeData = [
   {
     value: "Technology",
     title: "Technology",
-    children: [
-      {
-        value: "staking",
-        title: "staking"
-      },
-      {
-        value: "Mobile App",
-        title: "Mobile App"
-      }
-    ]
+    children: []
   },
   {
     value: "Project Type",
@@ -88,7 +80,15 @@ const treeData = [
   }
 ];
 
-export const AllFilters = () => {
+export const AllFilters = ({ setTags, tags }) => {
+  const handleClick = (isInclude, title) => {
+    if (!isInclude) {
+      setTags((tags) => [...tags, title]);
+    } else {
+      setTags((tags) => tags.filter((tag) => tag !== title));
+    }
+  };
+
   return (
     <div>
       {treeData.map((tree) => {
@@ -118,8 +118,21 @@ export const AllFilters = () => {
                       <div className="flex flex-col gap-6 ">
                         {tree.children.map((children) => {
                           return (
-                            <button className="flex max-w-2xl items-center gap-6 text-left font-roc !text-base uppercase !leading-none text-white lg:!text-base lg:!leading-none">
-                              <Check className={"h-4 w-4"} />
+                            <button
+                              key={children.title}
+                              onClick={() =>
+                                handleClick(
+                                  tags.includes(children.title),
+                                  children.title
+                                )
+                              }
+                              className="flex max-w-2xl items-center gap-6 text-left font-roc !text-base uppercase !leading-none text-white lg:!text-base lg:!leading-none"
+                            >
+                              {tags.includes(children.title) ? (
+                                <CheckFill className={"h-4 w-4"} />
+                              ) : (
+                                <Check className={"h-4 w-4"} />
+                              )}
                               {children.title}
                             </button>
                           );

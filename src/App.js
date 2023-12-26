@@ -4,6 +4,9 @@ import { Clients } from "pages/clients";
 import { CaseStudiesMarsan } from "pages/case-studies/marsan";
 import { CaseStudiesEva } from "pages/case-studies/eva";
 import { CaseStudiesTriend } from "pages/case-studies/triend";
+import { CaseStudiesFinance } from "pages/case-studies/finance";
+import { CaseStudiesStep } from "pages/case-studies/step";
+import { CaseStudiesRetroBridge } from "pages/case-studies/retrobridge";
 import { Cases } from "pages/cases";
 import { Blog } from "pages/blog";
 import { Services } from "pages/services";
@@ -57,6 +60,20 @@ function App() {
               <Route
                 path="/cases/hotel"
                 element={<CaseStudiesTriend setBurgerOpen={setBurgerOpen} />}
+              />
+              <Route
+                path="/cases/finance"
+                element={<CaseStudiesFinance setBurgerOpen={setBurgerOpen} />}
+              />
+              <Route
+                path="/cases/step"
+                element={<CaseStudiesStep setBurgerOpen={setBurgerOpen} />}
+              />
+              <Route
+                path="/cases/retrobridge"
+                element={
+                  <CaseStudiesRetroBridge setBurgerOpen={setBurgerOpen} />
+                }
               />
               <Route
                 path="/blog"

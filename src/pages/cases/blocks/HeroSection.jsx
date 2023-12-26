@@ -9,15 +9,15 @@ import { AllFilters } from "../components/all-filters";
 
 const categories = [
   "staking",
-  "mobile app",
+  "Mobile App",
   "dex",
-  "nft",
+  "NFT",
   "play2earn",
   "dashboard",
   "trading"
 ];
 
-export const HeroSection = () => {
+export const HeroSection = ({ setTags, tags }) => {
   const [open, setOpen] = useState(false);
 
   const hide = () => {
@@ -43,7 +43,7 @@ export const HeroSection = () => {
         <div className="my-14 flex items-center justify-end gap-2 lg:justify-between">
           <div className=" hidden max-h-[46px] items-center gap-2 lg:flex">
             {categories.map((title, index) => (
-              <Category key={index} title={title} />
+              <Category setTags={setTags} key={index} title={title} />
             ))}
           </div>
           <Popover
@@ -53,7 +53,7 @@ export const HeroSection = () => {
             placement="bottom"
             open={open}
             onOpenChange={handleOpenChange}
-            content={<AllFilters />}
+            content={<AllFilters tags={tags} setTags={setTags} />}
           >
             <button className="flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-[36px] border border-white bg-transparent px-6 py-[11px] text-sm uppercase leading-[14px] text-white xl:text-base">
               {!open ? (

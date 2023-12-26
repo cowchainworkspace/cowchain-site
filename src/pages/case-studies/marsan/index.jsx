@@ -38,11 +38,11 @@ const project_details = [
 const team_details = [
   {
     title: "development",
-    content: "Oleh Shutiak, Bogdan Solomakha, Nikita Chernega"
+    content: "Saminu Mailafiiia, Daniil Stoian, Oleh Proidakov"
   },
   {
     title: "project management",
-    content: "Viacheslav Ivchenko"
+    content: "Aleksandr Bohdanov"
   },
   {
     title: "marketing & Seo",
@@ -50,7 +50,7 @@ const team_details = [
   },
   {
     title: "ui/ux design",
-    content: "Nadiia Nikiforova"
+    content: "Valeriya Bobko"
   }
 ];
 

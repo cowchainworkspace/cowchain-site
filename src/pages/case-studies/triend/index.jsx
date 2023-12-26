@@ -11,14 +11,13 @@ import { Link } from "react-router-dom";
 import Chevron from "components/icons/chevron";
 import { ProjectDetail } from "../components/project-detail";
 import { CaseMask } from "./blocks/CaseMask";
-import Canada from "assets/icons/canada";
 import { CaseGallery } from "./blocks/CaseGallery";
+import GreatBritain from "assets/icons/gb";
 
 const project_details = [
   {
     title: "Tech Stack",
-    content:
-      "React Native, Node.js, Solidity, ethers.js, web3.js, bitcoin.js, Persona KYC, Interac E-transfer, Chat support, email templating"
+    content: "React, Node.js, OpenAI , Solidity, ethers.js, web3.js, MongoDB"
   },
   {
     title: "project duration",
@@ -29,7 +28,7 @@ const project_details = [
     content: (
       <div className="flex flex-row items-center gap-2">
         {" "}
-        <Canada className={"h-3 w-4 "} /> Canada
+        <GreatBritain className={"h-3 w-4 "} /> Great Britain
       </div>
     )
   }
