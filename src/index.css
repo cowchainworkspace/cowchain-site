@@ -123,7 +123,7 @@ p,
 }
 
 .btn-contact {
-  @apply flex h-24 w-24 cursor-pointer   items-center justify-center rounded-full bg-white text-center font-roc text-base font-medium uppercase text-black;
+  @apply flex h-36 w-36 cursor-pointer   items-center justify-center rounded-full bg-white text-center font-roc text-base font-medium uppercase text-black;
   transition:
     color 0.3s,
     background-color 0.3s ease-in-out;

@@ -36,9 +36,6 @@ const faqRows = {
           <Link to="/">
             <p>Team</p>
           </Link>
-          <Link to="/">
-            <p>Blog</p>
-          </Link>
         </div>
       )
     },
@@ -196,9 +193,6 @@ export const Footer = () => {
               <div className="my-8 flex flex-col gap-y-4">
                 <Link to="/team">
                   <p className="text-[#bbb]">Team</p>
-                </Link>
-                <Link to="/blog">
-                  <p className="text-[#bbb]">Blog</p>
                 </Link>
               </div>
             </div>

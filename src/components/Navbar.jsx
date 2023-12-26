@@ -131,9 +131,9 @@ export const Navbar = ({ setBurgerOpen, isGradient = true }) => {
               </Link>
             ))}
           </nav>
-          <a
+          <Link
+            to={"/"}
             className="flex items-center justify-center"
-            href="/"
             rel="nofollow"
           >
             <img
@@ -142,7 +142,7 @@ export const Navbar = ({ setBurgerOpen, isGradient = true }) => {
               alt="Home-1"
               src={logo_light}
             ></img>
-          </a>
+          </Link>
           {toggleMenu ? (
             <img
               className="ml-auto w-6 cursor-pointer lg:hidden"
@@ -158,7 +158,7 @@ export const Navbar = ({ setBurgerOpen, isGradient = true }) => {
               onClick={openBurger}
             ></img>
           )}
-          <div className="ml-auto hidden w-full max-w-[360px] items-center justify-end gap-16 lg:flex xl:max-w-md">
+          <div className="hidden w-full max-w-[360px] items-center justify-end gap-16 lg:flex xl:max-w-md">
             {routerLinks.map((link, index) => (
               <Link key={index * 4} to={link.link}>
                 <p className="navlink mt-1">{link.title}</p>

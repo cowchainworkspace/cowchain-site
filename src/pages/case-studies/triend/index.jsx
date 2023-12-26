@@ -116,9 +116,9 @@ export const CaseStudiesTriend = ({ setBurgerOpen }) => {
                     challenge
                   </h3>
                   <span className="text-white">
-                    An easy-to-integrate website widget running on a
-                    proof-of-attendance protocol that allows travel providers to
-                    have a secure and transparent review system while also
+                    An easy-to-integrate website widget running on a proof of
+                    attendance protocol that allows travel providers to have a
+                    secure and transparent review system while also
                     incentivizing honest reviews with special rewards. With
                     Triend, travel businesses can optimize their offerings based
                     on valid data and build trust & credibility among customers

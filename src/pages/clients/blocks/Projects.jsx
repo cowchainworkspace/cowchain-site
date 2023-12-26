@@ -5,7 +5,7 @@ import { Scrollama, Step } from "react-scrollama";
 
 const sectionsData = [
   {
-    title: "Startups riding the blockchain wave 1",
+    title: "Startups riding the blockchain wave",
     description:
       "Got an idea keeping you up at night? Let's turn it into a tangible and effective solution. We'll guide you through the development process, ensuring that your product is both functional and aligned with your business goals",
     projects: [
@@ -20,9 +20,9 @@ const sectionsData = [
     ]
   },
   {
-    title: "Startups riding the blockchain wave 2",
+    title: "Enterprises leveraging blockchain tech advancements",
     description:
-      "Got an idea keeping you up at night? Let's turn it into a tangible and effective solution. We'll guide you through the development process, ensuring that your product is both functional and aligned with your business goals",
+      "Unlock new business opportunities by incorporating blockchain and crypto functionalities into your existing products. With our Web3 expertise, we'll bring your business to the intersection of Web2 and blockchain tech in a way that will continuously drive increased profit for your company",
     projects: [
       {
         pic: pic1,
@@ -35,9 +35,9 @@ const sectionsData = [
     ]
   },
   {
-    title: "Startups riding the blockchain wave 3",
+    title: "Web3 entrepreneurs pioneering the future",
     description:
-      "Got an idea keeping you up at night? Let's turn it into a tangible and effective solution. We'll guide you through the development process, ensuring that your product is both functional and aligned with your business goals",
+      "From concept to polished product, we provide you with clean, secure, and adaptable code aligned with market trends. We live and breathe Web3, so we can fully cover the development of your impactful Web3 ventures while you do other things that matter for your business",
     projects: [
       {
         pic: pic1,

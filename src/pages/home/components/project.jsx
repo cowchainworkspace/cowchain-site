@@ -16,19 +16,22 @@ export const Project = ({
     <motion.div
       id={"project-" + id}
       className={cn(
-        "project-card relative flex h-screen min-h-[320px] w-full cursor-pointer border-b border-b-th-fade bg-cover bg-center bg-no-repeat px-4 py-8 will-change-transform md:h-96 md:min-w-[25vw] md:px-8 lg:h-screen lg:px-16 xl:h-screen",
+        "project-card group relative flex h-screen min-h-[320px] w-full cursor-pointer border-b border-b-th-fade bg-cover bg-center bg-no-repeat px-4 py-8 will-change-transform md:h-96 md:min-w-[25vw] md:px-8 lg:h-screen lg:px-16 xl:h-screen",
         {
           expanded: scrollIndex === index
         }
       )}
       style={{ backgroundImage: `url(${photo})` }}
     >
-      <motion.div className="absolute  left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></motion.div>
+      <motion.div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></motion.div>
       <Link
         to={link}
-        className="project-overlay absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 xl:py-12"
+        className="absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 group-hover:flex md:hidden xl:py-12"
       >
-        <Link to={link} className="btn-contact ml-auto">
+        <Link
+          to={link}
+          className="btn-contact ml-auto max-h-24 max-w-[96px] md:max-h-none md:max-w-none"
+        >
           VIEW PROJECT
         </Link>
         <div className="mt-auto flex flex-col gap-y-4">
@@ -45,12 +48,6 @@ export const Project = ({
           <p className="body max-w-sm !text-[#bbb]">{description}</p>
         </div>
       </Link>
-      <motion.div className="relative mt-auto flex flex-col gap-y-4 lg:hidden">
-        <h2>{title}</h2>
-        <p className="max-w-xs text-sm font-normal leading-normal text-[#bbb]">
-          {description}
-        </p>
-      </motion.div>
     </motion.div>
   );
 };

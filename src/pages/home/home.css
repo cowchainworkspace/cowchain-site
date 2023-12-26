@@ -1,8 +1,3 @@
-.navbar-wrapper {
-  @apply lg:grid;
-  grid-template-columns: 5fr 1.5fr 5fr;
-}
-
 video {
   object-fit: cover;
   position: absolute;

@@ -22,16 +22,16 @@ const projectsData = [
     description:
       "Multichain mobile wallet development with AI integration for an optimized portfolio management",
     photo: pic2,
-    tags: ["React.js", "Solidity", "Subgraph"]
+    tags: ["React Native", "Web3Auth", "Subgraph"]
   },
   {
     title: "Blockchain integration into hotel business",
     link: "/cases/hotel",
 
     description:
-      "Decentralized plugin development for travelers’ review verification. Proof-of-attendance protocol and reward system integration",
+      "Decentralized plugin development for travelers’ review verification. Proof of attendance protocol and reward system integration",
     photo: pic3,
-    tags: ["React.js", "Solidity", "Subgraph"]
+    tags: ["React.js", "Solidity", "Node.js"]
   }
 ];
 

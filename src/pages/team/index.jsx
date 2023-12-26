@@ -29,8 +29,8 @@ export const Team = ({ setBurgerOpen }) => {
   const marginTop = useTransform(scrollYProgress, [0.5, 0], [-50, 0]);
 
   return (
-    <section className="">
-      <div className="relative overflow-x-hidden bg-black">
+    <section>
+      <div className="relative   bg-black">
         <Navbar isGradient={false} setBurgerOpen={setBurgerOpen} />
         <HeroSection />
         <Values />

@@ -18,14 +18,14 @@ const projectsData = [
     description:
       "Multichain mobile wallet development with AI integration for an optimized portfolio management",
     photo: pic2,
-    tags: ["React.js", "Solidity", "Subgraph"]
+    tags: ["React Native", "Web3Auth", "Subgraph"]
   },
   {
     title: "Blockchain integration into hotel business",
     description:
-      "Decentralized plugin development for travelers’ review verification. Proof-of-attendance protocol and reward system integration",
+      "Decentralized plugin development for travelers’ review verification. Proof of attendance protocol and reward system integration",
     photo: pic3,
-    tags: ["React.js", "Solidity", "Subgraph"]
+    tags: ["React.js", "Solidity", "Node.js"]
   }
 ];
 
@@ -209,7 +209,7 @@ const Projects = () => {
               </h2>
               <p className="body max-w-sm !text-[#bbb]">
                 Decentralized plugin development for travelers’ review
-                verification. Proof-of-attendance protocol and reward system
+                verification. Proof of attendance protocol and reward system
                 integration
               </p>
             </div>
@@ -218,7 +218,7 @@ const Projects = () => {
             <h2>Blockchain integration into hotel business</h2>
             <p className="max-w-xs text-sm font-normal leading-normal text-[#bbb]">
               Decentralized plugin development for travelers’ review
-              verification. Proof-of-attendance protocol and reward system
+              verification. Proof of attendance protocol and reward system
               integration
             </p>
           </div>
