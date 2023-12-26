@@ -49,7 +49,7 @@ export const Projects = () => {
   });
 
   return (
-    <section ref={sectionRef} className="relative h-[2100px] md:h-[4000px]">
+    <section ref={sectionRef} className="relative h-full md:h-[4000px]">
       <div className="sticky top-0 flex flex-col flex-nowrap lg:flex-row">
         <Scrollama offset={0.5}>
           {projectsData.map((project, index) => (
