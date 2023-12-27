@@ -40,6 +40,8 @@ const assets = [
   },
 ]
 
+
+
 function App() {
   const [loading, setLoading] = useState(true);
   const [burgerOpen, setBurgerOpen] = useState(false);
@@ -63,10 +65,11 @@ function App() {
     })
   })
   await Promise.all(promises);
+   setLoading(false) 
+
 }
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 3000);
     cacheAssets(assets)
   }, [])
 

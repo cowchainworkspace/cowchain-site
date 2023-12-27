@@ -25,7 +25,6 @@ const Home = ({ setBurgerOpen }) => {
         <Clients />
         <Projects />
         <Team />
-        <Blog />
         <FAQ />
         <Contact />
         <Footer />
