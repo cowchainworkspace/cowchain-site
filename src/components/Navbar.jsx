@@ -16,7 +16,6 @@ import mail from "../assets/footer/mail.svg";
 import ContactForm from "./utils/ContactForm";
 import { useLocation } from "react-router-dom";
 import team_bg from "assets/bg/team.png";
-import mobile_bg from "assets/bg/home-mobile.png";
 import { cn } from "lib/utils";
 
 export const Navbar = ({
@@ -122,7 +121,7 @@ export const Navbar = ({
                   hidden: !isGradient
                 }
               )}
-              src={mobile_bg}
+              src={process.env.PUBLIC_URL + "/homepage/home-mobile.png"}
               alt=""
             />
           </>

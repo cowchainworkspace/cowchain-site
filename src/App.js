@@ -18,11 +18,10 @@ import { Loading } from "components/loader/Loading";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 const assets = [
-  '/homepage/video.mp4',
   '/images/desktop.png',
   '/images/eva-bg.png',
   '/homepage/logo_light.svg',
-  '/homepage/navbar.png'
+  '/homepage/home-mobile.png'
 ]
 
 function App() {
@@ -40,15 +39,12 @@ function App() {
     })
   })
   await Promise.all(promises);
-  
-
 }
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000);
+    setTimeout(() => setLoading(false), 3000);
     cacheAssets(assets)
   }, [])
-
 
   if (loading) {
     return <Loading />;
@@ -56,8 +52,8 @@ function App() {
 
   return (
     <div className="App">
-     
-        <ParallaxProvider>
+     <Suspense loading={<Loading/>}>
+       <ParallaxProvider>
           <HashRouter>
             <ScrollToTop />
             <Routes>
@@ -118,6 +114,8 @@ function App() {
             </Routes>
           </HashRouter>
         </ParallaxProvider>
+     </Suspense>
+       
        
     </div>
   );
