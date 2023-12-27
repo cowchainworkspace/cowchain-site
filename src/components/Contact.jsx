@@ -3,7 +3,7 @@ import ContactForm from "./utils/ContactForm";
 import bg from "assets/bg/get-contact.png";
 import { cn } from "lib/utils";
 
-export const Contact = ({ className }) => {
+const Contact = ({ className }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -30,3 +30,5 @@ export const Contact = ({ className }) => {
     </section>
   );
 };
+
+export default Contact;

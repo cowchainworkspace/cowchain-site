@@ -101,7 +101,7 @@ const expertiseData = [
   }
 ];
 
-export const Stack = ({ title, isGradient = false }) => {
+const Stack = ({ title, isGradient = false }) => {
   return (
     <section id="expertise" className="-mt-8 md:-mt-0 relative overflow-hidden">
       <img
@@ -131,3 +131,5 @@ export const Stack = ({ title, isGradient = false }) => {
     </section>
   );
 };
+
+export default Stack

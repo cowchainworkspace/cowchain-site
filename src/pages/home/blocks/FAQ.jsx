@@ -38,7 +38,7 @@ const faqData = [
   }
 ];
 
-export const FAQ = () => {
+ const FAQ = () => {
   const [screenWidth] = useState(window.innerWidth);
   return (
     <section id="faq" className="relative z-30">
@@ -136,3 +136,5 @@ export const FAQ = () => {
     </section>
   );
 };
+
+export default FAQ

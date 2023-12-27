@@ -3,7 +3,7 @@ import { Navbar } from "components/Navbar";
 import "./case-studies.css";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
-import { Contact } from "components/Contact";
+import Contact from "components/Contact";
 import Projects from "../components/Projects";
 import marsan_mobile from "assets/case-study/wallet-app/wallet-blue.png";
 import marsan_mobile_black from "assets/case-study/wallet-app/wallet-black.png";
@@ -163,3 +163,5 @@ export const CaseStudiesEva = ({ setBurgerOpen }) => {
     </section>
   );
 };
+
+export default CaseStudiesEva

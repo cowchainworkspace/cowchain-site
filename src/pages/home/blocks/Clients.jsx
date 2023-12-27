@@ -5,7 +5,7 @@ import bg_lg from "assets/homepage/clients_bg_lg.png";
 import arrow from "assets/arrow_right.svg";
 import { Counter } from "../../home/components/counter";
 
-export const Clients = () => {
+ const Clients = () => {
   return (
     <section className="relative overflow-hidden">
       <img
@@ -64,3 +64,5 @@ export const Clients = () => {
     </section>
   );
 };
+
+export default Clients

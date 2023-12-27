@@ -3,7 +3,7 @@ import { Navbar } from "components/Navbar";
 import "./case-studies.css";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
-import { Contact } from "components/Contact";
+import   Contact   from "components/Contact";
 import Projects from "../components/Projects";
 import hotel from "assets/case-study/step/1-left.png";
 import hotel_2 from "assets/case-study/step/1-right.png";

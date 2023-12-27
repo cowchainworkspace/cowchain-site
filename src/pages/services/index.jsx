@@ -2,10 +2,10 @@ import React from "react";
 import { Navbar } from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
-import { Contact } from "components/Contact";
+import   Contact   from "components/Contact";
 import { Products } from "./blocks/Products";
 import { ViewMoreSection } from "./blocks/ViewMore";
-import { Stack } from "components/stack";
+import  Stack  from "components/stack";
 
 export const Services = ({ setBurgerOpen }) => {
   return (

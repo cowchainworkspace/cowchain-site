@@ -35,7 +35,7 @@ const projectsData = [
   }
 ];
 
-export const Projects = () => {
+  const Projects = () => {
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({ target: sectionRef });
@@ -66,3 +66,5 @@ export const Projects = () => {
     </section>
   );
 };
+
+export default Projects;
