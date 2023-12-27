@@ -16,9 +16,15 @@ import medium from "../assets/footer/medium.svg";
 import mail from "../assets/footer/mail.svg";
 import ContactForm from "./utils/ContactForm";
 import { useLocation } from "react-router-dom";
+import team_bg from "assets/bg/team.png";
+import mobile_bg from "assets/bg/home-mobile.png";
 import { cn } from "lib/utils";
 
-export const Navbar = ({ setBurgerOpen, isGradient = true }) => {
+export const Navbar = ({
+  setBurgerOpen,
+  isGradient = true,
+  isTeamBg = false
+}) => {
   const [openForm, setOpenForm] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
   const sideVariants = {
@@ -91,17 +97,36 @@ export const Navbar = ({ setBurgerOpen, isGradient = true }) => {
 
   return (
     <>
-      <section className="relative bg-transparent">
+      <section
+        className={cn("relative  bg-transparent", {
+          "pb-36 md:pb-0": isHomePage
+        })}
+      >
         {isHomePage ? (
-          <img
-            srcSet={`${bg} 360w, ${bg} 480w, ${bg} 720w, ${bg_lg} 1920w`}
-            sizes="(max-width: 640px) 100vw, 100vw"
-            alt=""
-            className={cn("absolute bottom-0 left-0 h-full w-full", {
-              hidden: !isGradient
-            })}
-            src={bg_lg}
-          />
+          <>
+            <img
+              srcSet={`${bg} 360w, ${bg} 480w, ${bg} 720w, ${bg_lg} 1920w`}
+              sizes="(max-width: 640px) 100vw, 100vw"
+              alt=""
+              className={cn(
+                "absolute bottom-0 left-0 hidden h-full w-full md:block",
+                {
+                  hidden: !isGradient
+                }
+              )}
+              src={bg_lg}
+            />
+            <img
+              className={cn(
+                "absolute bottom-0 left-0 block h-full w-full md:hidden",
+                {
+                  hidden: !isGradient
+                }
+              )}
+              src={mobile_bg}
+              alt=""
+            />
+          </>
         ) : (
           <img
             srcSet={`${bg_clients} 360w, ${bg_clients} 480w, ${bg_clients} 720w, ${bg_clients_lg} 1920w`}
@@ -117,10 +142,18 @@ export const Navbar = ({ setBurgerOpen, isGradient = true }) => {
           />
         )}
 
+        {isTeamBg && (
+          <img
+            className="absolute inset-0 top-0"
+            alt="gradient"
+            src={team_bg}
+          />
+        )}
+
         <div
           className={
             isHomePage
-              ? "navbar-wrapper relative flex h-24 items-center justify-between gap-x-8 border-b border-b-th-fade px-4 md:h-16 md:border-b md:border-th-fade md:px-8 lg:px-0"
+              ? "navbar-wrapper relative flex h-24 items-center justify-between gap-x-8   px-4 md:h-16 md:border-b  md:border-th-fade md:border-b-th-fade md:px-8 lg:px-0"
               : "navbar-wrapper relative flex h-24 items-center justify-between gap-x-8 px-4 md:h-16 md:border-b md:border-th-fade md:px-8 lg:px-0"
           }
         >

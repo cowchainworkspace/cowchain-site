@@ -1,7 +1,8 @@
 import React from "react";
-import bg from "../../../assets/homepage/clients_bg.png";
-import bg_lg from "../../../assets/homepage/clients_bg_lg.png";
-import arrow from "../../../assets/arrow_right.svg";
+import bg from "assets/homepage/clients_bg.png";
+import gradient from "assets/homepage/clients.png";
+import bg_lg from "assets/homepage/clients_bg_lg.png";
+import arrow from "assets/arrow_right.svg";
 import { Counter } from "../../home/components/counter";
 
 export const Clients = () => {
@@ -14,6 +15,7 @@ export const Clients = () => {
         className="absolute -right-[10%] top-0 w-full"
         src={bg_lg}
       />
+
       <div className="py-heading px-default relative border-b border-b-th-fade">
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 lg:gap-16">
           <h3 className="lg:order-0 text-white">OUR CLIENTS</h3>
@@ -28,7 +30,7 @@ export const Clients = () => {
               <img className="w-6" src={arrow} alt=""></img>
             </div>
           </a>
-          <div className="mt-8 grid w-full max-w-xl grid-cols-3 gap-x-8 lg:order-3 lg:ml-auto">
+          <div className="mt-8 flex w-full max-w-xl justify-between  lg:order-3 lg:ml-auto">
             <div>
               <Counter duration={4} target={35} />
               <p className="body1 mt-2 uppercase">Techonologies</p>

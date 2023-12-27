@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import video_bg from "../../../assets/homepage/element-compress.mp4";
-import poster from "../../../assets/homepage/thumbnail.png";
-import upwork from "../../../assets/homepage/upwork.svg";
-import clutch from "../../../assets/homepage/clutch.svg";
-import bg_top from "../../../assets/bg/header_top.png";
-import bg_top_lg from "../../../assets/bg/header_top_lg.png";
+import video_bg from "assets/homepage/element-compress.mp4";
+import poster from "assets/homepage/thumbnail.png";
+import upwork from "assets/homepage/upwork.svg";
+import clutch from "assets/homepage/clutch.svg";
+import bg_top from "assets/bg/header_top.png";
+import bg_top_lg from "assets/bg/header_top_lg.png";
 import ModalVideo from "react-modal-video";
 
 export const Header = () => {
@@ -13,11 +13,19 @@ export const Header = () => {
   const [isOpen, setOpen] = useState(false);
   return (
     <section
-      className="fullheight overflow-hidden border-b border-b-th-fade"
+      className="fullheight -mt-40 overflow-hidden border-b border-b-th-fade md:-mt-0"
       id="header"
     >
       <div className="video-wrapper min-h-full">
-        <video id="bg_vid" playsInline autoPlay muted loop poster={poster}>
+        <video
+          className="mt-[68px]"
+          id="bg_vid"
+          playsInline
+          autoPlay
+          muted
+          loop
+          poster={poster}
+        >
           <source src={video_bg} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -27,9 +35,10 @@ export const Header = () => {
             srcSet={`${bg_top} 360w, ${bg_top} 480w, ${bg_top} 720w, ${bg_top_lg} 1920w`}
             sizes="(max-width: 640px) 100vw, 100vw"
             alt="Photo 1"
-            className="absolute left-0 top-0 w-full"
+            className="absolute left-0 top-0 hidden w-full md:block"
             src={bg_top_lg}
           />
+
           <h1 className="relative mt-8 uppercase md:mt-16 lg:mt-24">
             We turn your startup ideas into viable Web3 businesses
           </h1>

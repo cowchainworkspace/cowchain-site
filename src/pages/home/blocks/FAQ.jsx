@@ -44,8 +44,8 @@ export const FAQ = () => {
     <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-5">
         <div className="py-heading px-default md-border-r border-b border-b-th-fade text-center md:col-span-2">
-          <h3 className="text-center md:text-left">
-            FREQUENTLY<br></br>ASKED<br></br>QUESTIONS
+          <h3 className="max-w-[321px] text-center md:max-w-[365px] md:text-left">
+            FREQUENTLY ASKED QUESTIONS
           </h3>
         </div>
         <div className="md:col-span-3">

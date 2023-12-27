@@ -16,6 +16,7 @@ import azure from "assets/homepage/expertises/azure.svg";
 import bg from "assets/homepage/expertise_bg.png";
 import bg_lg from "assets/homepage/expertise_bg_lg.png";
 import { ExpertiseBlock } from "./components/expertise";
+import clients from "assets/homepage/clients.png";
 
 const expertiseData = [
   {
@@ -111,8 +112,15 @@ export const Stack = ({ title }) => {
         src={bg_lg}
       />
       <div className="relative grid lg:grid-cols-3">
-        <div className="py-heading px-default md-border-r border-b border-b-th-fade text-center md:col-span-1">
-          <h3 className="text-center uppercase md:text-left">{title}</h3>
+        <div className="py-heading px-default md-border-r relative  flex justify-center  border-b border-b-th-fade text-center md:col-span-1">
+          <h3 className="z-10 max-w-[183px] text-center text-4xl uppercase leading-[40px] md:max-w-none md:text-left md:text-[60px] md:leading-[53px]">
+            {title}
+          </h3>
+          <img
+            src={clients}
+            className="absolute -bottom-2/3 -right-20 block  h-[526px] w-[526px] md:hidden"
+            alt=""
+          />
         </div>
         <div className="grid lg:col-span-2 lg:grid-cols-2">
           {expertiseData.map((expertise, index) => (

@@ -31,7 +31,11 @@ export const Team = ({ setBurgerOpen }) => {
   return (
     <section>
       <div className="relative   bg-black">
-        <Navbar isGradient={false} setBurgerOpen={setBurgerOpen} />
+        <Navbar
+          isTeamBg={true}
+          isGradient={false}
+          setBurgerOpen={setBurgerOpen}
+        />
         <HeroSection />
         <Values />
         <div className=" mt-14 border-b border-b-th-fade pb-28  xl:mt-28">

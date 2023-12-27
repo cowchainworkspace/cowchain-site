@@ -96,7 +96,7 @@ const teamData = [
   },
   {
     name: "Alexander",
-    role: "Full-stack Web3 developer",
+    role: "Project Manager",
     photo: photo9,
     social: {
       network: "LinkedIn",
@@ -111,7 +111,7 @@ export const Team = () => {
     <section id="team" className="relative">
       <div className="relative grid grid-cols-1 overflow-hidden lg:grid-cols-5">
         <img
-          className="absolute -bottom-1/2 z-[1] hidden    lg:block"
+          className="absolute -bottom-[35%] z-[1] hidden    lg:block"
           src={bg}
           alt=""
         />
@@ -126,7 +126,7 @@ export const Team = () => {
             </div>
           </a>
         </div>
-        <div className="team_wrapper grid grid-cols-2 bg-black md:grid-cols-3 lg:col-span-3">
+        <div className="team_wrapper grid grid-cols-2 border-b border-b-th-fade bg-black md:grid-cols-3 lg:col-span-3">
           {teamData.map((member, index) => (
             <TeamCard key={index} index={index} {...member} />
           ))}

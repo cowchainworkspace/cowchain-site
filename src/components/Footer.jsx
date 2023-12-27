@@ -116,12 +116,13 @@ export const Footer = () => {
             <p className="text-center text-[#bbb] md:text-left">
               Submit your email address and our team will get in touch with you
               within 48 hours. Or drop us a line at{" "}
-            </p>
-            <a href="mailto:sales@cowchain.io">
-              <p className="text-white underline md:text-left">
+              <a
+                className="ml-1 inline text-white underline md:text-left"
+                href="mailto:sales@cowchain.io"
+              >
                 sales@cowchain.io
-              </p>
-            </a>
+              </a>
+            </p>
           </div>
           <FooterForm />
           <div className="mx-auto flex items-center justify-center gap-x-2 md:mx-0 md:justify-start">

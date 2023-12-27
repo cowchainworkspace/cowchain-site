@@ -15,8 +15,8 @@ export const Contact = ({ className }) => {
       />
       <div className="relative grid grid-cols-1">
         <div className="flex flex-col gap-y-8 border-b border-b-th-fade px-4 py-16 text-center md:gap-y-24 md:py-24 xl:py-36">
-          <h3 className="mx-auto text-center lg:max-w-xl">
-            HAVE PROJECT IN MIND?
+          <h3 className="mx-auto max-w-[303px] text-center lg:max-w-xl">
+            HAVE PROJECT <br /> IN MIND?
           </h3>
           <button
             className="btn-contact mx-auto lg:h-48 lg:w-48"

@@ -33,9 +33,6 @@ const products = [
   {
     name: "AI products",
     photo: phones
-  },
-  {
-    name: ""
   }
 ];
 
@@ -57,7 +54,10 @@ const ProductCard = ({ name, photo }) => {
 
 export const Products = () => {
   return (
-    <section id="products" className="relative border-t border-t-th-fade">
+    <section
+      id="products"
+      className="relative border-t border-b-th-fade border-t-th-fade"
+    >
       <div className="glid-cols-1 relative grid  md:grid-cols-3">
         {products.map((member, index) => (
           <ProductCard key={index} {...member} />

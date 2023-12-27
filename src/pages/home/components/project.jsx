@@ -34,7 +34,7 @@ export const Project = ({
         >
           VIEW PROJECT
         </Link>
-        <div className="mt-auto flex flex-col gap-y-4">
+        <div className="absolute bottom-5 flex max-w-[270px] flex-col gap-y-4 md:max-w-none">
           <div className="flex items-center gap-x-1 md:gap-x-2">
             {tags.map((tag, index) => (
               <div key={index} className="rounded-full bg-white px-3 py-2">

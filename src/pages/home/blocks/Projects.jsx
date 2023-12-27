@@ -29,7 +29,7 @@ const projectsData = [
     link: "/cases/hotel",
 
     description:
-      "Decentralized plugin development for travelers’ review verification. Proof of attendance protocol (POAP) and reward system integration",
+      "Decentralized plugin development for travelers’ review verification. Proof of Attendance Protocol (POAP) (POAP) and reward system integration",
     photo: pic3,
     tags: ["React.js", "Solidity", "Node.js"]
   }
