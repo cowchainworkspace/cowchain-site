@@ -18,13 +18,11 @@ import { Loading } from "components/loader/Loading";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 const assets = [
+  '/homepage/video.mp4',
   '/images/desktop.png',
   '/images/eva-bg.png',
-  '/images/bg/clients_cases.png',
-  '/images/logo_light.svg',
-  '/images/cases/eva.png',
-  '/images/cases/finance.png',
-  '/images/cases/marsan.png',
+  '/homepage/logo_light.svg',
+  '/homepage/navbar.png'
 ]
 
 function App() {
@@ -42,6 +40,7 @@ function App() {
     })
   })
   await Promise.all(promises);
+  
 
 }
 
