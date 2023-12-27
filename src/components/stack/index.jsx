@@ -103,7 +103,7 @@ const expertiseData = [
 
 export const Stack = ({ title, isGradient = false }) => {
   return (
-    <section id="expertise" className="-mt-20 relative overflow-hidden">
+    <section id="expertise" className="-mt-20 md:-mt-0 relative overflow-hidden">
       <img
         srcSet={`${bg} 700w, ${bg_lg} 1000w`}
         sizes="(max-width: 640px) 70vw, 70vw"
