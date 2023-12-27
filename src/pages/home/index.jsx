@@ -10,8 +10,8 @@ import { FAQ } from "./blocks/FAQ";
 import { Contact } from "components/Contact";
 import { Footer } from "components/Footer";
 import "./home.css";
-import { HomeMask } from "./blocks/HomeMask";
 import { Stack } from "components/stack";
+import { BenefitsMobiles } from "./blocks/BenefitMobiles";
 
 const Home = ({ setBurgerOpen }) => {
   return (
@@ -20,7 +20,7 @@ const Home = ({ setBurgerOpen }) => {
         <Navbar setBurgerOpen={setBurgerOpen} />
         <Header />
         <Benefits />
-        <HomeMask />
+        <BenefitsMobiles />
         <Stack title={"Our Expertise"} />
         <Clients />
         <Projects />

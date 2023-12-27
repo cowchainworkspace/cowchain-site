@@ -101,9 +101,9 @@ const expertiseData = [
   }
 ];
 
-export const Stack = ({ title }) => {
+export const Stack = ({ title, isGradient = false }) => {
   return (
-    <section id="expertise" className="relative overflow-hidden">
+    <section id="expertise" className="-mt-20 relative overflow-hidden">
       <img
         srcSet={`${bg} 700w, ${bg_lg} 1000w`}
         sizes="(max-width: 640px) 70vw, 70vw"
@@ -116,11 +116,11 @@ export const Stack = ({ title }) => {
           <h3 className="z-10 max-w-[183px] text-center text-4xl uppercase leading-[40px] md:max-w-none md:text-left md:text-[60px] md:leading-[53px]">
             {title}
           </h3>
-          <img
+         {isGradient && <img
             src={clients}
             className="absolute -bottom-2/3 -right-20 block  h-[526px] w-[526px] md:hidden"
             alt=""
-          />
+          />}
         </div>
         <div className="grid lg:col-span-2 lg:grid-cols-2">
           {expertiseData.map((expertise, index) => (

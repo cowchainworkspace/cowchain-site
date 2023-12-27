@@ -9,6 +9,7 @@ import { CaseStudiesStep } from "pages/case-studies/step";
 import { CaseStudiesRetroBridge } from "pages/case-studies/retrobridge";
 import { Cases } from "pages/cases";
 import { Blog } from "pages/blog";
+import Home  from "pages/home";
 import { Services } from "pages/services";
 import { Article } from "pages/article";
 import { Team } from "pages/team";
@@ -16,7 +17,6 @@ import { ScrollToTop } from "components/ScrollToTop";
 import { Loading } from "components/loader/Loading";
 import { ParallaxProvider } from "react-scroll-parallax";
 
-const Home = lazy(() => import("pages/home"));
 
 function App() {
   const [loading, setLoading] = useState(true);

@@ -27,7 +27,7 @@ const benefitsData = [
   }
 ];
 
-export const Benefits = () => {
+export const BenefitsMobiles = () => {
   const expandVariants = {
     visible: { height: "auto" },
     hidden: { height: 0 }
@@ -56,26 +56,11 @@ export const Benefits = () => {
     <section
       id="benefits"
       ref={sectionRef}
-      className="hidden md:block relative h-[1800px] md:h-[4000px]"
+      className="block md:hidden relative h-[2000px] md:h-[4000px]"
     >
-      <div className="sticky top-0 flex flex-col md:flex-row">
-        <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-10 md:w-1/2 md:py-0">
+      <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-10 md:w-1/2 md:py-0">
           <div className="my-auto box-border md:sticky">
-            <p className="hidden max-w-xl text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:block md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(
-                      'Being fully immersed in Web3, we’re not just devs — <span style="background: linear-gradient(146deg, #e9bbff 32.8%, #8e66ff 61.09%);  background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;"> we’re product visionaries </span> working as an in-house team <span style="color: #ffffff71">with you to grow your business with Web3</span> '
-                    )
-                    .callFunction(({ elements }) => {
-                      elements.cursor.hidden = true;
-                    })
-                    .changeDelay(10)
-                    .start();
-                }}
-              />
-            </p>
+             
             <p className="block max-w-xl text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:hidden md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
               Being fully immersed in Web3, we’re not just devs —{" "}
               <span className="violet-gradient-text">
@@ -88,7 +73,9 @@ export const Benefits = () => {
             </p>
           </div>
         </div>
-        <div className="md:flex md:h-screen md:w-1/2 md:flex-col">
+      <div className="h-screen sticky top-0 flex flex-col md:flex-row">
+        
+        <div className="h-screen md:flex md:h-screen md:w-1/2 md:flex-col">
           <Scrollama offset={0.5}>
             {benefitsData.map((benefit, index) => {
               return (
