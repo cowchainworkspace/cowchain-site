@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo_light from "../assets/logo_light.svg";
 import menu_open from "../assets/menu_open.svg";
 import menu_close from "../assets/homepage/modal_close.svg";
 import bg from "../assets/bg/navbar_top.png";
@@ -173,7 +172,7 @@ export const Navbar = ({
               className="w-32 md:w-36 lg:w-40"
               title="Home"
               alt="Home-1"
-              src={logo_light}
+              src={process.env.PUBLIC_URL + "/homepage/logo_light.svg" } 
             ></img>
           </Link>
           {toggleMenu ? (
@@ -228,7 +227,7 @@ export const Navbar = ({
                         className="w-32"
                         title="Home"
                         alt="Home-1"
-                        src={logo_light}
+                        src={process.env.PUBLIC_URL + "/homepage/logo_light.svg"}
                       ></img>
                     </a>
                     <img

@@ -53,12 +53,11 @@ export const Projects = () => {
       <div className="sticky top-0 flex flex-col flex-nowrap lg:flex-row">
         <Scrollama offset={0.5}>
           {projectsData.map((project, index) => (
-            <Step data={index + 1}>
+            <Step key={project.title} >
               <Project
                 index={index}
                 scrollIndex={scrollIndex}
                 {...project}
-                key={project.title}
               />
             </Step>
           ))}

@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, Suspense, useEffect } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { Clients } from "pages/clients";
 import { CaseStudiesMarsan } from "pages/case-studies/marsan";
@@ -17,14 +17,39 @@ import { ScrollToTop } from "components/ScrollToTop";
 import { Loading } from "components/loader/Loading";
 import { ParallaxProvider } from "react-scroll-parallax";
 
+const assets = [
+  '/images/desktop.png',
+  '/images/eva-bg.png',
+  '/images/bg/clients_cases.png',
+  '/images/logo_light.svg',
+  '/images/cases/eva.png',
+  '/images/cases/finance.png',
+  '/images/cases/marsan.png',
+]
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [burgerOpen, setBurgerOpen] = useState(false);
   document.body.style.overflow = burgerOpen ? "hidden" : "visible";
+   
+  const cacheAssets = async (assets) => {
+  const promises = await assets.map((asset) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = asset;
+      img.onload = resolve();
+      img.onerror = reject();
+    })
+  })
+  await Promise.all(promises);
+
+}
+
   useEffect(() => {
     setTimeout(() => setLoading(false), 2000);
-  }, []);
+    cacheAssets(assets)
+  }, [])
+
 
   if (loading) {
     return <Loading />;
@@ -32,7 +57,7 @@ function App() {
 
   return (
     <div className="App">
-      <Suspense fallback={<Loading />}>
+     
         <ParallaxProvider>
           <HashRouter>
             <ScrollToTop />
@@ -94,7 +119,7 @@ function App() {
             </Routes>
           </HashRouter>
         </ParallaxProvider>
-      </Suspense>
+       
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import video_bg from "assets/homepage/element-compress.mp4";
 import poster from "assets/homepage/thumbnail.png";
 import upwork from "assets/homepage/upwork.svg";
 import clutch from "assets/homepage/clutch.svg";
@@ -24,9 +23,10 @@ export const Header = () => {
           autoPlay
           muted
           loop
+          preload="auto"
           poster={poster}
         >
-          <source src={video_bg} type="video/mp4" />
+          <source src={process.env.PUBLIC_URL + "/homepage/video.mp4"} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <script>document.getElementById('bg_vid').play();</script>

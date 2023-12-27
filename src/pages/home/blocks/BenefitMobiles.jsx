@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import { motion, useScroll } from "framer-motion";
-import Typewriter from "typewriter-effect";
 import { cn } from "lib/utils";
 
 const benefitsData = [
