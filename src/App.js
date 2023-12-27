@@ -18,10 +18,26 @@ import { Loading } from "components/loader/Loading";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 const assets = [
-  '/images/desktop.png',
-  '/images/eva-bg.png',
-  '/homepage/logo_light.svg',
-  '/homepage/home-mobile.png'
+   {
+    src:  '/homepage/video.mp4',
+    type: 'video'
+  },
+  {
+    src:  '/images/desktop.png',
+    type: 'img'
+  },
+  {
+    src:   '/images/eva-bg.png',
+    type: 'img'
+  },
+  {
+    src:   '/homepage/logo_light.svg',
+    type: 'img'
+  },
+  {
+    src:  '/homepage/home-mobile.png',
+    type: 'img'
+  },
 ]
 
 function App() {
@@ -32,10 +48,18 @@ function App() {
   const cacheAssets = async (assets) => {
   const promises = await assets.map((asset) => {
     return new Promise((resolve, reject) => {
-      const img = new Image();
-      img.src = asset;
-      img.onload = resolve();
-      img.onerror = reject();
+      if(asset.type === 'img') {
+        const img = new Image();
+        img.src = asset.src;
+        img.onload = resolve();
+        img.onerror = reject();
+      }
+      else {
+         const source = document.createElement('source');
+         source.srcset = asset;
+         source.onload = resolve();
+        source.onerror = reject();
+      }
     })
   })
   await Promise.all(promises);
