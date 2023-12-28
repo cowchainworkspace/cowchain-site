@@ -79,7 +79,7 @@ export const BenefitsMobiles = () => {
                 <Step data={index + 1} key={benefit.title + index}>
                   <article
                     className={cn(
-                      "px-default relative flex  max-h-[270px] grow flex-col items-center justify-center  overflow-hidden border-b border-b-th-fade py-6   will-change-transform lg:py-8",
+                      "px-default relative flex  max-h-[290px] grow flex-col items-center justify-center  overflow-hidden border-b border-b-th-fade py-6   will-change-transform lg:py-8",
                       {
                         "max-h-max": scrollIndex === index
                       }
