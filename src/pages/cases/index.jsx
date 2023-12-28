@@ -5,9 +5,12 @@ import { Footer } from "components/Footer";
 import marsan from "assets/cases/marsan.png";
 import eva from "assets/cases/eva.png";
 import triend from "assets/cases/triend.png";
+import triend_mobile from "assets/cases/triend-mobile.png";
 import retrobridge from "assets/cases/retrobridge.png";
+import retrobridge_mobile from "assets/cases/retrobridge-mobile.png";
 import step from "assets/cases/step.png";
 import finance from "assets/cases/finance.png";
+import finance_mobile from "assets/cases/finance-mobile.png";
 import { ViewMoreSection } from "./blocks/ViewMore";
 import { CaseSplash } from "./components/case-splash";
 
@@ -23,14 +26,14 @@ const cases = [
     title: "Integration blockchain into hotel business",
     link: "/cases/hotel",
     img_desktop: triend,
-    img_mobile: triend,
+    img_mobile: triend_mobile,
     tags: ["NFT", "Proof Of Attendance (POA)"]
   },
   {
     title: "Cross-chain transfer bridge",
     link: "/cases/retrobridge",
     img_desktop: retrobridge,
-    img_mobile: retrobridge,
+    img_mobile: retrobridge_mobile,
     tags: ["DEFI", "Crosschain", "Multichain", "Bridge"]
   },
   {
@@ -44,7 +47,7 @@ const cases = [
     title: "decentralized crypto exchange",
     link: "/cases/finance",
     img_desktop: finance,
-    img_mobile: finance,
+    img_mobile: finance_mobile,
     tags: ["DEX", "DEFI"]
   },
   {

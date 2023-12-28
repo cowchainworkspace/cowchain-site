@@ -30,7 +30,7 @@ export const Project = ({
       >
         <Link
           to={link}
-          className="btn-contact ml-auto max-h-24 max-w-[96px] md:max-h-none md:max-w-none"
+          className="btn-contact ml-auto max-h-24 max-w-[96px] opacity-0 md:max-h-none md:max-w-none md:opacity-100"
         >
           VIEW PROJECT
         </Link>
