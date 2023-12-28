@@ -2,10 +2,10 @@ import React from "react";
 import { Navbar } from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
-import   Contact   from "components/Contact";
+import Contact from "components/Contact";
 import { Products } from "./blocks/Products";
 import { ViewMoreSection } from "./blocks/ViewMore";
-import  Stack  from "components/stack";
+import Stack from "components/stack";
 
 export const Services = ({ setBurgerOpen }) => {
   return (
@@ -15,7 +15,11 @@ export const Services = ({ setBurgerOpen }) => {
         <HeroSection />
         <ViewMoreSection />
         <Products />
-        <Stack title={"Our tech stack"} />
+        <Stack
+          gradientStyles="absolute -bottom-1/2 -right-40 block  h-[426px] w-[526px] md:hidden"
+          isGradient={true}
+          title={"Our tech stack"}
+        />
         <Contact />
         <Footer />
       </div>

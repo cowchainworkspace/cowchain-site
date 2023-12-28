@@ -16,7 +16,7 @@ export const HeroSection = () => {
         </Link>
         <div className="flex flex-col items-center justify-center">
           <h1 className="my-6 text-center uppercase">
-            Integration blockchain into hotel business NFT Proof of attendance
+            Integration blockchain into hotel business
           </h1>
           <div className="flex justify-center gap-2">
             <Tag title={"Mobile App"} />

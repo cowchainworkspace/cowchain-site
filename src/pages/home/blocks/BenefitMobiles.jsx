@@ -55,35 +55,33 @@ export const BenefitsMobiles = () => {
     <section
       id="benefits"
       ref={sectionRef}
-      className="block md:hidden relative h-[2000px] md:h-[4000px]"
+      className="relative block h-[2500px]  md:hidden md:h-[4000px]"
     >
       <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-10 md:w-1/2 md:py-0">
-          <div className="my-auto box-border md:sticky">
-             
-            <p className="block max-w-xl text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:hidden md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
-              Being fully immersed in Web3, we’re not just devs —{" "}
-              <span className="violet-gradient-text">
-                we’re product visionaries
-              </span>{" "}
-              working as an in-house team{" "}
-              <span className="text-[#ffffff71]">
-                with you to grow your business with Web3
-              </span>
-            </p>
-          </div>
+        <div className="my-auto box-border md:sticky">
+          <p className="block max-w-xl text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:hidden md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
+            Being fully immersed in Web3, we’re not just devs —{" "}
+            <span className="violet-gradient-text">
+              we’re product visionaries
+            </span>{" "}
+            working as an in-house team{" "}
+            <span className="text-[#ffffff71]">
+              with you to grow your business with Web3
+            </span>
+          </p>
         </div>
-      <div className="h-screen sticky top-0 flex flex-col md:flex-row">
-        
-        <div className="h-screen md:flex md:h-screen md:w-1/2 md:flex-col">
+      </div>
+      <div className="sticky top-0 flex h-screen flex-col md:flex-row">
+        <div className=" flex h-screen flex-col justify-between md:flex md:h-screen md:w-1/2 md:flex-col">
           <Scrollama offset={0.5}>
             {benefitsData.map((benefit, index) => {
               return (
                 <Step data={index + 1} key={benefit.title + index}>
                   <article
                     className={cn(
-                      "px-default relative flex max-h-[278px] grow flex-col items-center justify-center  overflow-hidden border-b border-b-th-fade py-6   will-change-transform lg:py-8",
+                      "px-default relative flex  max-h-[270px] grow flex-col items-center justify-center  overflow-hidden border-b border-b-th-fade py-6   will-change-transform lg:py-8",
                       {
-                        "max-h-max": scrollIndex === index,
+                        "max-h-max": scrollIndex === index
                       }
                     )}
                   >

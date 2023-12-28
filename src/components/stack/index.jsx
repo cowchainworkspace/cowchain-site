@@ -101,26 +101,21 @@ const expertiseData = [
   }
 ];
 
-const Stack = ({ title, isGradient = false }) => {
+const Stack = ({
+  title,
+  isGradient = false,
+  gradientStyles = "absolute -bottom-2/3 -right-20 block  h-[526px] w-[526px] md:hidden"
+}) => {
   return (
-    <section id="expertise" className="-mt-8 md:-mt-0 relative overflow-hidden">
-      <img
-        srcSet={`${bg} 700w, ${bg_lg} 1000w`}
-        sizes="(max-width: 640px) 70vw, 70vw"
-        alt=""
-        className="absolute -right-[10%] bottom-0 w-full"
-        src={bg_lg}
-      />
+    <section id="expertise" className="relative  overflow-hidden md:-mt-0">
       <div className="relative grid lg:grid-cols-3">
         <div className="py-heading px-default md-border-r relative  flex justify-center  border-b border-b-th-fade text-center md:col-span-1">
           <h3 className="z-10 max-w-[183px] text-center text-4xl uppercase leading-[40px] md:max-w-none md:text-left md:text-[60px] md:leading-[53px]">
             {title}
           </h3>
-         {isGradient && <img
-            src={clients}
-            className="absolute -bottom-2/3 -right-20 block  h-[526px] w-[526px] md:hidden"
-            alt=""
-          />}
+          {isGradient && (
+            <img src={clients} className={gradientStyles} alt="" />
+          )}
         </div>
         <div className="grid lg:col-span-2 lg:grid-cols-2">
           {expertiseData.map((expertise, index) => (
@@ -132,4 +127,4 @@ const Stack = ({ title, isGradient = false }) => {
   );
 };
 
-export default Stack
+export default Stack;

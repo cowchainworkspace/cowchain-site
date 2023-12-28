@@ -26,7 +26,10 @@ export const Header = () => {
           preload="auto"
           poster={poster}
         >
-          <source src={process.env.PUBLIC_URL + "/homepage/video.mp4"} type="video/mp4" />
+          <source
+            src={process.env.PUBLIC_URL + "/homepage/video.mp4"}
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
         <script>document.getElementById('bg_vid').play();</script>
@@ -66,7 +69,7 @@ export const Header = () => {
                   <p className="body1 text-base">Mykhailo Adzhoiev</p>
                   <p className="text-sm  text-secondary">Founder & CTO</p>
                 </div>
-                <button
+                {/* <button
                   className="btn-play mt-4 md:mt-0"
                   onClick={() => setOpen(true)}
                 >
@@ -87,7 +90,7 @@ export const Header = () => {
                     </div>
                     WATCH INTERVIEW
                   </div>
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

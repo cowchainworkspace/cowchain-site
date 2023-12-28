@@ -16,7 +16,7 @@ export const HeroSection = () => {
         </Link>
         <div className="flex flex-col items-center justify-center">
           <h1 className="my-6 text-center uppercase">m2e platform</h1>
-          <div className="flex justify-center gap-2">
+          <div className="mb-2 flex flex-wrap gap-[6px] md:mb-8 md:flex-nowrap">
             <Tag title={"DEX"} />
             <Tag title={"Non-custodial exchange"} />
             <Tag title={"Staking"} />
