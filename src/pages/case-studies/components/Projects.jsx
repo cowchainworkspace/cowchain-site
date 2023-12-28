@@ -209,8 +209,8 @@ const Projects = () => {
               </h2>
               <p className="body max-w-sm !text-[#bbb]">
                 Decentralized plugin development for travelers’ review
-                verification. Proof of Attendance Protocol (POAP) (POAP) and
-                reward system integration
+                verification. Proof of Attendance Protocol (POAP) and reward
+                system integration
               </p>
             </div>
           </Link>
@@ -218,8 +218,8 @@ const Projects = () => {
             <h2>Blockchain integration into hotel business</h2>
             <p className="max-w-xs text-sm font-normal leading-normal text-[#bbb]">
               Decentralized plugin development for travelers’ review
-              verification. Proof of Attendance Protocol (POAP) (POAP) and
-              reward system integration
+              verification. Proof of Attendance Protocol (POAP) and reward
+              system integration
             </p>
           </div>
         </article>

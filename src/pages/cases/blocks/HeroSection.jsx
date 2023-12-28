@@ -7,15 +7,7 @@ import { Category } from "components/ui/category";
 import { Popover } from "antd";
 import { AllFilters } from "../components/all-filters";
 
-const categories = [
-  "staking",
-  "Mobile App",
-  "dex",
-  "NFT",
-  "play2earn",
-  "dashboard",
-  "trading"
-];
+const categories = ["Staking", "Mobile App", "DEX", "NFT"];
 
 export const HeroSection = ({ setTags, tags }) => {
   const [open, setOpen] = useState(false);
@@ -36,14 +28,19 @@ export const HeroSection = ({ setTags, tags }) => {
         src={bg_lg}
       />
       <div className="relative flex flex-col px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
-        <Tag className={"mr-auto"} title={"case studies"} />
-        <h1 className="mt-4 text-5xl uppercase text-white lg:mt-6 lg:max-w-[1200px] lg:text-[100px]">
+        <Tag className={"mr-auto cursor-default"} title={"case studies"} />
+        <h1 className="mt-4 cursor-default text-5xl uppercase text-white lg:mt-6 lg:max-w-[1200px] lg:text-[100px]">
           we offer the diversity of skills
         </h1>
         <div className="my-14 flex items-center justify-end gap-2 lg:justify-between">
           <div className=" hidden max-h-[46px] items-center gap-2 lg:flex">
             {categories.map((title, index) => (
-              <Category setTags={setTags} key={index} title={title} />
+              <Category
+                tags={tags}
+                setTags={setTags}
+                key={index}
+                title={title}
+              />
             ))}
           </div>
           <Popover

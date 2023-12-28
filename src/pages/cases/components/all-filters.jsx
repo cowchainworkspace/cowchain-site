@@ -21,32 +21,32 @@ const treeData = [
     title: "Project Type",
     children: [
       {
-        value: "staking",
-        title: "staking"
+        value: "Staking",
+        title: "Staking"
       },
       {
         value: "Mobile App",
         title: "Mobile App"
       },
       {
-        value: "dex",
-        title: "dex"
+        value: "DEX",
+        title: "DEX"
       },
       {
         value: "NFT",
         title: "NFT"
       },
       {
-        value: "deFi",
-        title: "deFi"
+        value: "DeFi",
+        title: "DeFi"
       },
       {
         value: "Non-custodial exchange",
         title: "Non-custodial exchange"
       },
       {
-        value: "Proof Of Attendance (POA)",
-        title: "Proof Of Attendance (POA)"
+        value: "Proof Of Attendance (POAP)",
+        title: "Proof Of Attendance (POAP)"
       },
       {
         value: "Crosschain",

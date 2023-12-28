@@ -4,46 +4,56 @@ import eva from "assets/cases/eva.png";
 import retrobridge from "assets/cases/retrobridge.png";
 import step from "assets/cases/step.png";
 import finance from "assets/cases/finance.png";
+import { Link } from "react-router-dom";
 const products = [
   {
     name: "Crypto exchanges",
-    photo: finance
+    photo: finance,
+    link: "/cases/finance"
   },
   {
     name: "NFT marketplace",
-    photo: step
+    photo: step,
+    link: "/cases/step"
   },
   {
     name: "Crypto wallets with fiat payment processing",
-    photo: marsan
+    photo: marsan,
+    link: "/cases/payment"
   },
   {
     name: "Play-to-earn, Move-to-earn",
-    photo: step
+    photo: step,
+    link: "/cases/step"
   },
   {
     name: "Cross chain and multichain briges",
-    photo: retrobridge
+    photo: retrobridge,
+    link: "/cases/retrobridge"
   },
   {
     name: "AI products",
-    photo: eva
+    photo: eva,
+    link: "/cases/wallet"
   }
 ];
 
-const ProductCard = ({ name, photo }) => {
+const ProductCard = ({ name, photo, link }) => {
   return (
-    <div className="team_card_wrapper relative flex flex-col items-start justify-start border-b border-b-th-fade border-r-th-fade md:border-r ">
-      <span className=" justify-start px-3 py-8 text-left text-base uppercase text-white lg:px-16 lg:pb-48 lg:pt-20 lg:font-roc lg:text-xl">
+    <Link
+      to={link}
+      className="team_card_wrapper relative flex  h-[112px] flex-col items-start justify-center border-b border-b-th-fade border-r-th-fade md:h-full md:border-r "
+    >
+      <span className="justify-center px-3 py-8 text-left text-base uppercase text-white lg:px-16 lg:pb-48 lg:pt-20 lg:font-roc lg:text-xl">
         {name}
       </span>
       <div className="team_card_overlay absolute left-0 top-0 flex h-full w-full">
         <div
-          className="flex h-full w-full bg-cover bg-center bg-no-repeat p-8"
+          className="flex h-full w-full bg-cover bg-top bg-no-repeat p-8"
           style={{ backgroundImage: `url(${photo})` }}
         />
       </div>
-    </div>
+    </Link>
   );
 };
 

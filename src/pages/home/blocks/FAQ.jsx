@@ -38,13 +38,13 @@ const faqData = [
   }
 ];
 
- const FAQ = () => {
+const FAQ = () => {
   const [screenWidth] = useState(window.innerWidth);
   return (
     <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-5">
-        <div className="py-heading px-default md-border-r border-b border-b-th-fade text-center md:col-span-2">
-          <h3 className="max-w-[321px] text-center md:max-w-[365px] md:text-left">
+        <div className="py-heading px-default md-border-r flex justify-center border-b border-b-th-fade text-center md:col-span-2">
+          <h3 className="flex max-w-[321px] justify-center text-center md:max-w-[365px] md:text-left">
             FREQUENTLY ASKED QUESTIONS
           </h3>
         </div>
@@ -137,4 +137,4 @@ const faqData = [
   );
 };
 
-export default FAQ
+export default FAQ;

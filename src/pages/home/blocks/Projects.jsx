@@ -29,13 +29,13 @@ const projectsData = [
     link: "/cases/hotel",
 
     description:
-      "Decentralized plugin development for travelers’ review verification. Proof of Attendance Protocol (POAP) (POAP) and reward system integration",
+      "Decentralized plugin development for travelers’ review verification. Proof of Attendance Protocol (POAP) and reward system integration",
     photo: pic3,
     tags: ["React.js", "Solidity", "Node.js"]
   }
 ];
 
-  const Projects = () => {
+const Projects = () => {
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({ target: sectionRef });
@@ -53,12 +53,8 @@ const projectsData = [
       <div className="sticky top-0 flex flex-col flex-nowrap lg:flex-row">
         <Scrollama offset={0.5}>
           {projectsData.map((project, index) => (
-            <Step key={project.title} >
-              <Project
-                index={index}
-                scrollIndex={scrollIndex}
-                {...project}
-              />
+            <Step key={project.title}>
+              <Project index={index} scrollIndex={scrollIndex} {...project} />
             </Step>
           ))}
         </Scrollama>

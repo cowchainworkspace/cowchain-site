@@ -8,7 +8,7 @@ export const CaseMask = () => {
         layers={[
           {
             image: "/images/retrobridge.png",
-            speed: -15
+            speed: -2
           }
         ]}
         className="relative m-auto aspect-[2/1] h-[264px] lg:h-[654px]"

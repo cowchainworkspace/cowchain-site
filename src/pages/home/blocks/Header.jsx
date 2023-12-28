@@ -42,7 +42,7 @@ export const Header = () => {
             src={bg_top_lg}
           />
 
-          <h1 className="relative mt-8 uppercase md:mt-16 lg:mt-24">
+          <h1 className="relative mt-8 cursor-default uppercase md:mt-16 lg:mt-24">
             We turn your startup ideas into viable Web3 businesses
           </h1>
           <div className="mt-auto grid grid-cols-1 md:grid-cols-2">
@@ -62,7 +62,7 @@ export const Header = () => {
                 <img className="w-11 md:w-[70px]" src={clutch} alt=""></img>
               </a>
             </div>
-            <div className="my-4 flex flex-col gap-y-4  lg:pl-[5vw] xl:pl-[15vw]">
+            <div className="my-4 flex cursor-default flex-col gap-y-4 lg:pl-[5vw] xl:pl-[15vw]">
               <h2>developers of web3</h2>
               <div className="md:mt-4 md:flex md:items-center md:justify-between">
                 <div className="flex flex-col gap-y-1">

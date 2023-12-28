@@ -56,12 +56,12 @@ export const Benefits = () => {
     <section
       id="benefits"
       ref={sectionRef}
-      className="hidden md:block relative h-[1800px] md:h-[4000px]"
+      className="relative hidden h-[1800px] md:block md:h-[4000px]"
     >
       <div className="sticky top-0 flex flex-col md:flex-row">
         <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-10 md:w-1/2 md:py-0">
           <div className="my-auto box-border md:sticky">
-            <div className="hidden max-w-xl text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:block md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
+            <div className="hidden max-w-xl cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:block md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
@@ -76,7 +76,7 @@ export const Benefits = () => {
                 }}
               />
             </div>
-            <p className="block max-w-xl text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:hidden md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
+            <p className="block max-w-xl cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:hidden md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
               Being fully immersed in Web3, we’re not just devs —{" "}
               <span className="violet-gradient-text">
                 we’re product visionaries
@@ -95,9 +95,9 @@ export const Benefits = () => {
                 <Step data={index + 1} key={benefit.title + index}>
                   <article
                     className={cn(
-                      "px-default relative flex max-h-[278px] grow flex-col items-center justify-center  overflow-hidden border-b border-b-th-fade py-6   will-change-transform lg:py-8",
+                      "px-default relative flex max-h-[278px] grow cursor-default flex-col items-center justify-center  overflow-hidden border-b border-b-th-fade py-6   will-change-transform lg:py-8",
                       {
-                        "max-h-max": scrollIndex === index,
+                        "max-h-max": scrollIndex === index
                       }
                     )}
                   >

@@ -117,7 +117,7 @@ export const CaseStudiesTriend = ({ setBurgerOpen }) => {
                   </h3>
                   <span className="text-white">
                     An easy-to-integrate website widget running on a Proof Of
-                    Attendance (POA) protocol that allows travel providers to
+                    Attendance (POAP) protocol that allows travel providers to
                     have a secure and transparent review system while also
                     incentivizing honest reviews with special rewards. With
                     Triend, travel businesses can optimize their offerings based

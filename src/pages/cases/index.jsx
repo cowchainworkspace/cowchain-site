@@ -27,7 +27,7 @@ const cases = [
     link: "/cases/hotel",
     img_desktop: triend,
     img_mobile: triend_mobile,
-    tags: ["NFT", "Proof Of Attendance (POA)"]
+    tags: ["NFT", "Proof Of Attendance (POAP)"]
   },
   {
     title: "Cross-chain transfer bridge",
@@ -61,6 +61,7 @@ const cases = [
 
 export const Cases = ({ setBurgerOpen }) => {
   const [tags, setTags] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const filteredCases = useMemo(() => {
     if (tags.length === 0) return cases;
     return cases.filter((product) => {
@@ -70,18 +71,38 @@ export const Cases = ({ setBurgerOpen }) => {
   const [count, setCount] = useState(3);
 
   useEffect(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
     if (tags.length === 0) setCount(3);
     else setCount(filteredCases.length);
   }, [tags]);
 
   return (
     <section id="clients-wrapper">
-      <div className="relative bg-black">
+      <div className="relative  bg-black">
         <Navbar setBurgerOpen={setBurgerOpen} />
         <HeroSection tags={tags} setTags={setTags} />
-        {filteredCases.slice(0, count).map((product, index) => (
-          <CaseSplash key={`${product.title + index}`} {...product} />
-        ))}
+        <div className="flex flex-col items-center">
+          {isLoading ? (
+            <div
+              class="flex h-8 w-8 animate-spin items-center justify-center rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-white motion-reduce:animate-[spin_1.5s_linear_infinite]"
+              role="status"
+            >
+              <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+                Loading...
+              </span>
+            </div>
+          ) : (
+            filteredCases
+              .slice(0, count)
+              .map((product, index) => (
+                <CaseSplash key={`${product.title + index}`} {...product} />
+              ))
+          )}
+        </div>
+
         <ViewMoreSection
           setCount={setCount}
           count={count}
