@@ -1,38 +1,33 @@
 import React from "react";
-import phones from "assets/products/phones-desktop.png";
-
+import marsan from "assets/cases/marsan.png";
+import eva from "assets/cases/eva.png";
+import retrobridge from "assets/cases/retrobridge.png";
+import step from "assets/cases/step.png";
+import finance from "assets/cases/finance.png";
 const products = [
   {
-    name: "Full-fledged blockchain ecosystems",
-    photo: phones
+    name: "Crypto exchanges",
+    photo: finance
   },
   {
-    name: "All kinds of dApps (decentralized applications)",
-    photo: phones
-  },
-  {
-    name: "Crypto exchanges, including DEXes with staking, lending/borrowing, farming features",
-    photo: phones
+    name: "NFT marketplace",
+    photo: step
   },
   {
     name: "Crypto wallets with fiat payment processing",
-    photo: phones
+    photo: marsan
   },
   {
-    name: "Cross-chain and multichain bridges",
-    photo: phones
+    name: "Play-to-earn, Move-to-earn",
+    photo: step
   },
   {
-    name: "NFT marketplaces",
-    photo: phones
-  },
-  {
-    name: "Play-to-earn, move-to-earn, and similar GameFi systems",
-    photo: phones
+    name: "Cross chain and multichain briges",
+    photo: retrobridge
   },
   {
     name: "AI products",
-    photo: phones
+    photo: eva
   }
 ];
 

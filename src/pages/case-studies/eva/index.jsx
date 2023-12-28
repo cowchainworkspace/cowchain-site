@@ -11,14 +11,14 @@ import { Link } from "react-router-dom";
 import Chevron from "components/icons/chevron";
 import { ProjectDetail } from "../components/project-detail";
 import { CaseMask } from "./blocks/CaseMask";
-import Canada from "assets/icons/canada";
+import Dubai from "assets/icons/dubai";
 import { CaseGallery } from "./blocks/CaseGallery";
 
 const project_details = [
   {
     title: "Tech Stack",
     content:
-      "React Native, Node.js, Solidity, ethers.js, web3.js, bitcoin.js, Persona KYC, Interac E-transfer, Chat support, email templating"
+      "React Native, Node.js, Solidity, ethers.js, Chat support, OpenAi, Web3Auth"
   },
   {
     title: "project duration",
@@ -29,7 +29,7 @@ const project_details = [
     content: (
       <div className="flex flex-row items-center gap-2">
         {" "}
-        <Canada className={"h-3 w-4 "} /> Canada
+        <Dubai className={"h-3 w-4 "} /> United Dubai
       </div>
     )
   }
@@ -111,7 +111,7 @@ export const CaseStudiesEva = ({ setBurgerOpen }) => {
                 </div>
                 <div className="w-full border-t-2 border-white/50 px-5 pt-4 lg:max-w-[600px] lg:px-0">
                   <h3 className="mb-4  text-xs uppercase tracking-[2px] text-secondary">
-                    challenge
+                    Result
                   </h3>
                   <span className="text-white">
                     A crypto wallet app for iOS and Android designed to be
@@ -164,4 +164,4 @@ export const CaseStudiesEva = ({ setBurgerOpen }) => {
   );
 };
 
-export default CaseStudiesEva
+export default CaseStudiesEva;

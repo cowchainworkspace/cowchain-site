@@ -3,7 +3,7 @@ import { Navbar } from "components/Navbar";
 import "./case-studies.css";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
-import   Contact   from "components/Contact";
+import Contact from "components/Contact";
 import Projects from "../components/Projects";
 import hotel from "assets/case-study/retrobridge/rb-left.png";
 import hotel_2 from "assets/case-study/retrobridge/rb-right.png";
@@ -37,19 +37,19 @@ const project_details = [
 const team_details = [
   {
     title: "development",
-    content: "Oleh Shutiak, Bogdan Solomakha, Nikita Chernega"
+    content: "Bohdan Solomakha, Saminu Mailafiiia, Yevgen Nevidim"
   },
   {
     title: "project management",
-    content: "Viacheslav Ivchenko"
+    content: "Aleksandr Bohdanov"
   },
   {
     title: "marketing & Seo",
-    content: "Ruslan Siniaiev"
+    content: "Alexandr Yaremenko"
   },
   {
     title: "ui/ux design",
-    content: "Nadiia Nikiforova"
+    content: "Valeriya Bobko"
   }
 ];
 
@@ -114,7 +114,7 @@ export const CaseStudiesRetroBridge = ({ setBurgerOpen }) => {
                 </div>
                 <div className="w-full border-t-2 border-white/50 px-5 pt-4 lg:max-w-[600px] lg:px-0">
                   <h3 className="mb-4  text-xs uppercase tracking-[2px] text-secondary">
-                    challenge
+                    Result
                   </h3>
                   <span className="text-white">
                     A full-fledged app for Android and iOS for exchanging $CAD

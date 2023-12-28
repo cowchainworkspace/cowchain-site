@@ -37,24 +37,28 @@ const treeData = [
         title: "NFT"
       },
       {
-        value: "Wallet",
-        title: "Wallet"
-      },
-      {
-        value: "play2earn",
-        title: "play2earn"
-      },
-      {
-        value: "dashboard",
-        title: "dashboard"
-      },
-      {
-        value: "trading",
-        title: "trading"
-      },
-      {
         value: "deFi",
         title: "deFi"
+      },
+      {
+        value: "Non-custodial exchange",
+        title: "Non-custodial exchange"
+      },
+      {
+        value: "Proof Of Attendance (POA)",
+        title: "Proof Of Attendance (POA)"
+      },
+      {
+        value: "Crosschain",
+        title: "Crosschain"
+      },
+      {
+        value: "Multichain",
+        title: "Multichain"
+      },
+      {
+        value: "Bridge",
+        title: "Bridge"
       }
     ]
   },

@@ -29,8 +29,8 @@ export const Team = ({ setBurgerOpen }) => {
   const marginTop = useTransform(scrollYProgress, [0.5, 0], [-50, 0]);
 
   return (
-    <section>
-      <div className="relative   bg-black">
+    <section className=" ">
+      <div className="scrollbar-none relative  bg-black">
         <Navbar
           isTeamBg={true}
           isGradient={false}

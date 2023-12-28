@@ -19,8 +19,10 @@ export const HeroSection = () => {
             Cross-chain transfer bridge
           </h1>
           <div className="flex justify-center gap-2">
-            <Tag title={"Mobile App"} />
-            <Tag title={"Non-custodial exchange"} />
+            <Tag title={"DEFI"} />
+            <Tag title={"Crosschain"} />
+            <Tag title={"Multichain"} />
+            <Tag title={"Bridge"} />
           </div>
         </div>
       </div>

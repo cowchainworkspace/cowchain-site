@@ -3,7 +3,7 @@ import { Navbar } from "components/Navbar";
 import "./case-studies.css";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
-import   Contact   from "components/Contact";
+import Contact from "components/Contact";
 import Projects from "../components/Projects";
 import hotel from "assets/case-study/hotel/hotel-left.png";
 import hotel_2 from "assets/case-study/hotel/hotel-right.png";
@@ -37,7 +37,7 @@ const project_details = [
 const team_details = [
   {
     title: "development",
-    content: "Oleh Shutiak, Bogdan Solomakha, Nikita Chernega"
+    content: "Oleh Shutiak, Andrii Demakov, Vadim Kudelskiy"
   },
   {
     title: "project management",
@@ -113,12 +113,12 @@ export const CaseStudiesTriend = ({ setBurgerOpen }) => {
                 </div>
                 <div className="w-full border-t-2 border-white/50 px-5 pt-4 lg:max-w-[600px] lg:px-0">
                   <h3 className="mb-4  text-xs uppercase tracking-[2px] text-secondary">
-                    challenge
+                    Result
                   </h3>
                   <span className="text-white">
-                    An easy-to-integrate website widget running on a proof of
-                    attendance protocol that allows travel providers to have a
-                    secure and transparent review system while also
+                    An easy-to-integrate website widget running on a Proof Of
+                    Attendance (POA) protocol that allows travel providers to
+                    have a secure and transparent review system while also
                     incentivizing honest reviews with special rewards. With
                     Triend, travel businesses can optimize their offerings based
                     on valid data and build trust & credibility among customers
@@ -166,4 +166,4 @@ export const CaseStudiesTriend = ({ setBurgerOpen }) => {
   );
 };
 
-export default CaseStudiesTriend
+export default CaseStudiesTriend;

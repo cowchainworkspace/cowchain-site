@@ -20,7 +20,7 @@ export const HeroSection = () => {
           </h1>
           <div className="flex justify-center gap-2">
             <Tag title={"Mobile App"} />
-            <Tag title={"Non-custodial exchange"} />
+            <Tag title={"Proof Of Attendance (POA)"} />
           </div>
         </div>
       </div>

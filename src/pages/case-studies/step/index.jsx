@@ -3,7 +3,7 @@ import { Navbar } from "components/Navbar";
 import "./case-studies.css";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
-import   Contact   from "components/Contact";
+import Contact from "components/Contact";
 import Projects from "../components/Projects";
 import hotel from "assets/case-study/step/1-left.png";
 import hotel_2 from "assets/case-study/step/1-right.png";
@@ -38,7 +38,7 @@ const project_details = [
 const team_details = [
   {
     title: "development",
-    content: "Oleh Shutiak, Bogdan Solomakha, Nikita Chernega"
+    content: "Vakhtang Chikhladze, Daniil Stoian, Nikita Chernega"
   },
   {
     title: "project management",
@@ -46,7 +46,7 @@ const team_details = [
   },
   {
     title: "marketing & Seo",
-    content: "Ruslan Siniaiev"
+    content: "Alexandr Yaremenko"
   },
   {
     title: "ui/ux design",
@@ -114,7 +114,7 @@ export const CaseStudiesStep = ({ setBurgerOpen }) => {
                 </div>
                 <div className="w-full border-t-2 border-white/50 px-5 pt-4 lg:max-w-[600px] lg:px-0">
                   <h3 className="mb-4  text-xs uppercase tracking-[2px] text-secondary">
-                    challenge
+                    Result
                   </h3>
                   <span className="text-white">
                     An easy-to-integrate website widget running on a proof of

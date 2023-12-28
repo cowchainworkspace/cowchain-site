@@ -24,28 +24,28 @@ const cases = [
     link: "/cases/hotel",
     img_desktop: triend,
     img_mobile: triend,
-    tags: ["NFT", "Proof of attendance"]
+    tags: ["NFT", "Proof Of Attendance (POA)"]
   },
   {
     title: "Cross-chain transfer bridge",
     link: "/cases/retrobridge",
     img_desktop: retrobridge,
     img_mobile: retrobridge,
-    tags: ["Mobile App", "Non-custodial wallet"]
+    tags: ["DEFI", "Crosschain", "Multichain", "Bridge"]
   },
   {
     title: "m2e platform",
     link: "/cases/step",
     img_desktop: step,
     img_mobile: step,
-    tags: ["Mobile App", "Non-custodial wallet"]
+    tags: ["DEX", "Non-custodial exchange", "Staking", "Move-to-Earn"]
   },
   {
     title: "decentralized crypto exchange",
     link: "/cases/finance",
     img_desktop: finance,
     img_mobile: finance,
-    tags: ["Mobile App", "Non-custodial wallet"]
+    tags: ["DEX", "DEFI"]
   },
   {
     title: "Crypto wallet app",

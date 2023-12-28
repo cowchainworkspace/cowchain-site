@@ -17,8 +17,10 @@ export const HeroSection = () => {
         <div className="flex flex-col items-center justify-center">
           <h1 className="my-6 text-center uppercase">m2e platform</h1>
           <div className="flex justify-center gap-2">
-            <Tag title={"Mobile App"} />
+            <Tag title={"DEX"} />
             <Tag title={"Non-custodial exchange"} />
+            <Tag title={"Staking"} />
+            <Tag title={"Move-to-Earn"} />
           </div>
         </div>
       </div>

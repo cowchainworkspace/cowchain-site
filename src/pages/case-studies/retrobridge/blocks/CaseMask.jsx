@@ -3,7 +3,7 @@ import { ParallaxBanner } from "react-scroll-parallax";
 
 export const CaseMask = () => {
   return (
-    <div className="h-[264px] lg:h-[504px]">
+    <div className="h-[264px] lg:h-[654px]">
       <ParallaxBanner
         layers={[
           {
@@ -11,7 +11,7 @@ export const CaseMask = () => {
             speed: -15
           }
         ]}
-        className="relative m-auto aspect-[2/1] h-[264px] lg:h-[504px]"
+        className="relative m-auto aspect-[2/1] h-[264px] lg:h-[654px]"
       />
     </div>
   );

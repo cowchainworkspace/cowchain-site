@@ -19,8 +19,8 @@ export const HeroSection = () => {
             decentralized crypto exchange
           </h1>
           <div className="flex justify-center gap-2">
-            <Tag title={"Mobile App"} />
-            <Tag title={"Non-custodial exchange"} />
+            <Tag title={"DEX"} />
+            <Tag title={"DEFI"} />
           </div>
         </div>
       </div>
