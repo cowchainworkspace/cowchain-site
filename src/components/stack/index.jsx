@@ -109,7 +109,7 @@ const Stack = ({
   return (
     <section
       id="expertise"
-      className="relative mt-[calc(26vh_+_1.5625vh)] overflow-hidden md:mt-0"
+      className="relative mt-[calc(35vh_+_1.5625vh)] overflow-hidden md:mt-0"
     >
       <div className="relative grid lg:grid-cols-3">
         <div className="py-heading px-default md-border-r relative  flex justify-center  border-b border-b-th-fade text-center md:col-span-1">
