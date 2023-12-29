@@ -99,7 +99,22 @@ export const CaseStudiesEva = ({ setBurgerOpen }) => {
                       challenge
                     </h3>
                     <span className="mb-10 text-white lg:min-w-[570px]">
-                      Develop a non-custodial multichain crypto wallet
+                      The development of Eva, the industry's first user-friendly
+                      crypto wallet, presented numerous challenges. Integrating
+                      multi-chain compatibility was a complex task, requiring a
+                      deep understanding of various blockchain technologies to
+                      ensure seamless interoperability. Implementing a
+                      non-custodial framework, essential for user autonomy,
+                      demanded robust security measures akin to those in
+                      international banking apps. A significant hurdle was the
+                      development of bio-authentication to replace traditional
+                      key management, ensuring high-level security and user
+                      convenience. Additionally, integrating AI to translate
+                      voice and text commands into on-chain actions was pivotal
+                      in making cryptocurrency accessible to non-technical
+                      users. Establishing easy fiat rails posed challenges in
+                      navigating regulatory landscapes while maintaining
+                      user-friendliness for seamless crypto-fiat interactions.
                     </span>
                   </div>
 
@@ -116,10 +131,21 @@ export const CaseStudiesEva = ({ setBurgerOpen }) => {
                   <span className="text-white">
                     A crypto wallet app for iOS and Android designed to be
                     accessible for billions of non-technical people around the
-                    world. Key features: bio authentication instead of
-                    traditional private key management, AI integration that
-                    turns voice and text commands into on-chain actions, easy
-                    and quick crypto-fiat transactions
+                    world. We successfully implemented a versatile multi-chain
+                    access system, allowing users to interact with different
+                    blockchains effortlessly. The innovative bio-authentication
+                    system offers bank-level security, setting a new standard in
+                    the crypto wallet space. The integration of AI has
+                    revolutionized the way users manage crypto transactions,
+                    significantly flattening the learning curve and making
+                    crypto accessible to billions worldwide. The implementation
+                    of easy fiat rails has enhanced financial flexibility,
+                    enabling smooth crypto-fiat transactions. Eva's design,
+                    focusing on user-friendliness and intuitive navigation, has
+                    made it a gateway for non-technical users to enter the world
+                    of cryptocurrency, fostering wider adoption and community
+                    engagement through features like game playing and token
+                    allocations.
                   </span>
                   <img
                     src={marsan_mobile_black}

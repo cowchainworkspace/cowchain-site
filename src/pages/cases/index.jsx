@@ -61,21 +61,21 @@ const cases = [
 
 export const Cases = ({ setBurgerOpen }) => {
   const [tags, setTags] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
   const filteredCases = useMemo(() => {
     if (tags.length === 0) return cases;
     return cases.filter((product) => {
       return tags.some((tag) => product.tags.includes(tag));
     });
   }, [tags]);
-  const [count, setCount] = useState(3);
+  const [count, setCount] = useState(6);
 
   useEffect(() => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-    if (tags.length === 0) setCount(3);
+    // setIsLoading(true);
+    // setTimeout(() => {
+    //   setIsLoading(false);
+    // }, 1000);
+    if (tags.length === 0) setCount(6);
     else setCount(filteredCases.length);
   }, [tags]);
 
@@ -85,29 +85,16 @@ export const Cases = ({ setBurgerOpen }) => {
         <Navbar setBurgerOpen={setBurgerOpen} />
         <HeroSection tags={tags} setTags={setTags} />
         <div className="flex flex-col items-center">
-          {isLoading ? (
-            <div
-              class="flex h-8 w-8 animate-spin items-center justify-center rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-white motion-reduce:animate-[spin_1.5s_linear_infinite]"
-              role="status"
-            >
-              <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-                Loading...
-              </span>
-            </div>
-          ) : (
-            filteredCases
-              .slice(0, count)
-              .map((product, index) => (
-                <CaseSplash key={`${product.title + index}`} {...product} />
-              ))
-          )}
+          {filteredCases.slice(0, count).map((product, index) => (
+            <CaseSplash key={`${product.title + index}`} {...product} />
+          ))}
         </div>
 
-        <ViewMoreSection
+        {/* <ViewMoreSection
           setCount={setCount}
           count={count}
           casesCount={filteredCases.length}
-        />
+        /> */}
         <Footer />
       </div>
     </section>

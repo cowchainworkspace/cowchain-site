@@ -99,10 +99,27 @@ export const CaseStudiesStep = ({ setBurgerOpen }) => {
                       challenge
                     </h3>
                     <span className="mb-10 text-white lg:min-w-[570px]">
-                      Design & develop a plugin for travel, hotel, and
-                      recreation apps with a blockchain-powered review system
-                      and unique incentives for honest reviews from their
-                      customers
+                      In the development of our move-to-earn mobile application,
+                      we encountered a unique set of challenges. Primarily,
+                      integrating real-world physical activity, represented by
+                      car movement, with digital asset tracking presented a
+                      complex technical hurdle. Ensuring accurate and seamless
+                      tracking of user movements via the map interface required
+                      sophisticated location-based technologies and algorithms.
+                      Another significant challenge was the integration of
+                      blockchain technology to manage the native token system
+                      for user incentivization. This demanded not only expertise
+                      in blockchain development but also a deep understanding of
+                      user interaction with the token economy. Furthermore, the
+                      implementation of a staking mechanism for the native token
+                      added another layer of complexity, necessitating robust
+                      security measures to protect user assets. The development
+                      of an in-game marketplace for asset trading also posed
+                      challenges, particularly in creating a user-friendly
+                      interface that could handle real-time transactions
+                      efficiently. Balancing these technical demands while
+                      maintaining a smooth and engaging user experience was a
+                      critical and ongoing challenge throughout the project.
                     </span>
                   </div>
 
@@ -117,12 +134,28 @@ export const CaseStudiesStep = ({ setBurgerOpen }) => {
                     Result
                   </h3>
                   <span className="text-white">
-                    An easy-to-integrate website widget running on a proof of
-                    attendance protocol that allows travel providers to have a
-                    secure and transparent review system while also
-                    incentivizing honest reviews with special rewards. With
-                    Triend, travel businesses can optimize their offerings based
-                    on valid data and build trust & credibility among customers
+                    Despite the challenges, our team successfully launched a
+                    sophisticated move-to-earn mobile application that has been
+                    enthusiastically received by users. The app's core feature,
+                    allowing users to choose an avatar and move with a car,
+                    while their progress is tracked on a map, functions
+                    seamlessly, offering an engaging and motivating user
+                    experience. The integration of blockchain technology was
+                    executed flawlessly, enabling users to be incentivized with
+                    our native token for their physical activities. This feature
+                    not only added an exciting dimension to the app but also
+                    introduced users to the world of digital currencies in a fun
+                    and interactive way. The staking of the native token has
+                    been a particular success, encouraging long-term engagement
+                    with the app. Additionally, the in-game marketplace for
+                    asset trading has been well-received, providing users with a
+                    platform to trade assets earned or purchased within the app.
+                    The dashboard feature, allowing users to manage assets both
+                    in-game and on the blockchain, has provided a high level of
+                    utility and convenience, further enhancing the user
+                    experience. Overall, the project has not only overcome
+                    technical and user experience challenges but has also set a
+                    new standard in the move-to-earn space.
                   </span>
                   <img
                     src={hotel_2}

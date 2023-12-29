@@ -2,27 +2,48 @@ import React, { useState, useRef } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import { motion, useScroll } from "framer-motion";
 import { cn } from "lib/utils";
+import bg from "assets/homepage/bg.png";
 
 const benefitsData = [
   {
     title: "Transforming raw concepts into results-driven code",
-    text: "If you have an idea or an existing product that you want to upgrade with Web3, we’ll suggest and develop a custom solution for your business that will bring you tangible results "
+    text: "If you have an idea or an existing product that you want to upgrade with Web3, we’ll suggest and develop a custom solution for your business that will bring you tangible results ",
+    transformStyle: ""
   },
   {
     title: "Expanding business opportunities for fintech products",
-    text: "If you want to integrate crypto and blockchain into your fintech product, we’ll do it in a way that’ll bring your business to its full potential"
+    text: "If you want to integrate crypto and blockchain into your fintech product, we’ll do it in a way that’ll bring your business to its full potential",
+    transformStyle: "max-h-max -translate-y-[55%] duration-1000",
+    initialStyle: "max-h-max duration-1000",
+    headerStyle: "max-w-[320px]"
   },
   {
     title: "Building impactful and functional Web3 products",
-    text: "If you need to develop a Web3 product of any complexity, as a team who lives and breathes Web3, we’ll streamline the entire process and provide clean, secure, and scalable code "
+    text: "If you need to develop a Web3 product of any complexity, as a team who lives and breathes Web3, we’ll streamline the entire process and provide clean, secure, and scalable code ",
+    transformStyle: "max-h-max -translate-y-[110%] duration-1000",
+    initialStyle: "max-h-max -translate-y-[55%] duration-1000"
   },
   {
     title: "Creating a custom-tailored strategy for every product",
-    text: "Our team moves in sync with the market, adapting and reacting to the changes on the go. We’re proactive to the bone and provide milestone updates regularly & promptly"
+    text: "Our team moves in sync with the market, adapting and reacting to the changes on the go. We’re proactive to the bone and provide milestone updates regularly & promptly",
+    transformStyle: "max-h-max -translate-y-[165%] duration-1000",
+    initialStyle: "max-h-max -translate-y-[110%] duration-1000"
   },
   {
     title: "Taking full responsibility for the product development",
-    text: "You can save yourself a headache by delegating the development process to us. Focus on other things that matter for your business while we deliver the product shaped by your vision"
+    text: "You can save yourself a headache by delegating the development process to us. Focus on other things that matter for your business while we deliver the product shaped by your vision",
+    transformStyle: "max-h-max -translate-y-[220%] duration-1000",
+    initialStyle: "max-h-max -translate-y-[165%] duration-1000",
+    isLast: true
+  },
+  {
+    title: "Taking full responsibility for the product development",
+    text: "You can save yourself a headache by delegating the development process to us. Focus on other things that matter for your business while we deliver the product shaped by your vision",
+
+    initialStyle:
+      "max-h-max h-[250px] border-b border-b-th-fade  bg-cover bg-center bg-no-repeat -translate-y-[220%] duration-1000",
+    style: { backgroundImage: `url(${bg})` },
+    textStyle: "text-transparent"
   }
 ];
 
@@ -55,7 +76,7 @@ export const BenefitsMobiles = () => {
     <section
       id="benefits"
       ref={sectionRef}
-      className="relative block h-[2500px]  md:hidden md:h-[4000px]"
+      className="relative  h-[2800px]  md:hidden md:h-[4000px]"
     >
       <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-10 md:w-1/2 md:py-0">
         <div className="my-auto box-border md:sticky">
@@ -72,31 +93,44 @@ export const BenefitsMobiles = () => {
         </div>
       </div>
       <div className="sticky top-0 flex h-screen flex-col md:flex-row">
-        <div className=" flex h-screen flex-col justify-between md:flex md:h-screen md:w-1/2 md:flex-col">
-          <Scrollama offset={0.5}>
+        <div className="relative flex flex-col justify-between md:flex md:h-screen md:w-1/2 md:flex-col">
+          <Scrollama className="relative" offset={0.5}>
             {benefitsData.map((benefit, index) => {
               return (
-                <Step data={index + 1} key={benefit.title + index}>
+                <Step
+                  className="relative"
+                  data={index + 1}
+                  key={benefit.title + index}
+                >
                   <article
+                    style={benefit.style}
                     className={cn(
-                      "px-default relative flex   grow flex-col items-center justify-center  overflow-hidden border-b border-b-th-fade py-6   will-change-transform lg:py-8",
-                      {
-                        "max-h-max": scrollIndex === index
-                      }
+                      "relative flex h-[250px] min-h-[250px] grow flex-col items-center justify-center overflow-hidden border-t border-t-th-fade bg-black px-5    duration-1000  will-change-transform ",
+                      benefit.initialStyle,
+                      scrollIndex >= index ? benefit.transformStyle : ""
                     )}
                   >
                     <motion.div
                       variants={expandVariants}
                       id={"b-expandable-" + index}
-                      className="flex flex-col  justify-center"
+                      className={"flex  flex-col justify-center py-10"}
                     >
-                      <h2 className="max-w-xl text-xl">{benefit.title}</h2>
+                      <h2
+                        className={cn(
+                          "mb-6 max-w-[285px]   text-base text-white",
+                          benefit.textStyle,
+                          benefit.headerStyle
+                        )}
+                      >
+                        {benefit.title}
+                      </h2>
                       <motion.p
                         variants={textVariants}
                         className={cn(
-                          " h-min max-h-0  text-sm !leading-[180%] text-secondary opacity-0  will-change-transform md:text-base lg:text-lg",
+                          " min-h-[100px] text-sm !leading-[180%] text-secondary  transition-all  duration-[1000ms] ease-in will-change-transform lg:text-lg",
+                          benefit.textStyle,
                           {
-                            "mt-6 block h-auto max-h-[300px] opacity-100":
+                            "block  transition-all duration-1000":
                               scrollIndex === index
                           }
                         )}

@@ -33,7 +33,7 @@ export const HeroSection = ({ setTags, tags }) => {
           we offer the diversity of skills
         </h1>
         <div className="my-14 flex items-center justify-end gap-2 lg:justify-between">
-          <div className=" hidden max-h-[46px] items-center gap-2 lg:flex">
+          {/* <div className=" hidden max-h-[46px] items-center gap-2 lg:flex">
             {categories.map((title, index) => (
               <Category
                 tags={tags}
@@ -42,8 +42,8 @@ export const HeroSection = ({ setTags, tags }) => {
                 title={title}
               />
             ))}
-          </div>
-          <Popover
+          </div> */}
+          {/* <Popover
             className="relative"
             titleMinWidth={300}
             trigger="click"
@@ -60,7 +60,7 @@ export const HeroSection = ({ setTags, tags }) => {
               )}
               All filters
             </button>
-          </Popover>
+          </Popover> */}
         </div>
       </div>
     </section>

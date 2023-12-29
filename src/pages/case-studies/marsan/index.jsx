@@ -3,7 +3,7 @@ import { Navbar } from "components/Navbar";
 import "./case-studies.css";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
-import   Contact   from "components/Contact";
+import Contact from "components/Contact";
 import Projects from "../components/Projects";
 import marsan_mobile from "assets/case-study/marsan-mobile.png";
 import marsan_mobile_black from "assets/case-study/marsan-black-mobile.png";
@@ -112,7 +112,7 @@ export const CaseStudiesMarsan = ({ setBurgerOpen }) => {
                 </div>
                 <div className="w-full border-t-2 border-white/50 px-5 pt-4 lg:max-w-[600px] lg:px-0">
                   <h3 className="mb-4  text-xs uppercase tracking-[2px] text-secondary">
-                    challenge
+                    Result
                   </h3>
                   <span className="text-white">
                     A full-fledged app for Android and iOS for exchanging $CAD
@@ -165,4 +165,4 @@ export const CaseStudiesMarsan = ({ setBurgerOpen }) => {
   );
 };
 
-export default CaseStudiesMarsan
+export default CaseStudiesMarsan;

@@ -98,10 +98,21 @@ export const CaseStudiesFinance = ({ setBurgerOpen }) => {
                       challenge
                     </h3>
                     <span className="mb-10 text-white lg:min-w-[570px]">
-                      Design & develop a plugin for travel, hotel, and
-                      recreation apps with a blockchain-powered review system
-                      and unique incentives for honest reviews from their
-                      customers
+                      The development of the platform, which involved
+                      multifaceted challenges. Among the most daunting were the
+                      technical complexities inherent in adapting and enhancing
+                      an established DeFi protocol, particularly in integrating
+                      an additional transaction fee while ensuring platform
+                      liquidity and user engagement. The incorporation of native
+                      token demanded extensive work on smart contract
+                      development and integration. Additionally, constructing a
+                      comprehensive admin page for efficient management of
+                      users, pools, and assets posed a significant challenge,
+                      necessitating a delicate balance between backend
+                      robustness and frontend usability. Ensuring top-tier
+                      security standards for financial transactions and data
+                      integrity was also a critical focus, given the high risks
+                      associated with blockchain technologies.
                     </span>
                   </div>
 
@@ -116,16 +127,24 @@ export const CaseStudiesFinance = ({ setBurgerOpen }) => {
                     Result
                   </h3>
                   <span className="text-white">
-                    An easy-to-integrate website widget running on a proof of
-                    attendance protocol that allows travel providers to have a
-                    secure and transparent review system while also
-                    incentivizing honest reviews with special rewards. With
-                    Triend, travel businesses can optimize their offerings based
-                    on valid data and build trust & credibility among customers
+                    Despite these challenges, the project achieved notable
+                    success. The team skillfully forked and enhanced the Uniswap
+                    protocol, creating a robust and versatile DeFi platform. A
+                    key achievement was the effective implementation of an
+                    innovative transaction fee structure that added a new
+                    revenue stream without undermining the competitive edge. The
+                    seamless integration of the platform token has boosted user
+                    engagement and platform loyalty. The development of a
+                    user-friendly and efficient admin page significantly
+                    improved operational efficiency and decision-making
+                    capabilities. Most importantly, the platform's security was
+                    fortified at every level, ensuring the safety and integrity
+                    of all transactions and bolstering user trust in the
+                    ecosystem.
                   </span>
                   <img
                     src={hotel_2}
-                    className="mt-8 min-h-[270px] w-full object-cover lg:min-h-[500px]"
+                    className="mt-8 min-h-[270px] w-full object-cover md:mt-20 lg:min-h-[500px]"
                     alt=""
                   />
                 </div>

@@ -98,11 +98,12 @@ export const CaseStudiesRetroBridge = ({ setBurgerOpen }) => {
                       challenge
                     </h3>
                     <span className="mb-10 text-white lg:min-w-[570px]">
-                      Design & develop a fiat-to-crypto exchange mobile app with
-                      seamless user experience. We had to avoid Canadian
-                      regulatory complications to deploy this non-custodial app,
-                      while still creating a robust solution for exchanging $CAD
-                      for BTC and ETH
+                      Develop a cross-chain bridge that would allow users to
+                      swap tokens across multiple blockchain networks with
+                      minimized commissions. Navigating the complexities of
+                      different consensus mechanisms, transaction speeds, and
+                      security protocols across various blockchains added layers
+                      of complexity to the project
                     </span>
                   </div>
 
@@ -117,16 +118,17 @@ export const CaseStudiesRetroBridge = ({ setBurgerOpen }) => {
                     Result
                   </h3>
                   <span className="text-white">
-                    A full-fledged app for Android and iOS for exchanging $CAD
-                    to BTC & ETH with integrated Persona KYC for regulatory
-                    compliance and Canadian funds transfer service Interac
-                    E-transfer for seamless fiat transactions. We also created
-                    convenient chat support for real-time assistance and branded
-                    email templates for targeted marketing
+                    A cost-effective (~$3 per transaction) multichain bridge
+                    that processes cross-chain asset bridging in 1 minute and
+                    cross-chain asset swapping in 3 minutes. With plenty of
+                    supported blockchain networks, including EVM, EVM Layer 2,
+                    and other chains (StarkNet, Aptos, Cosmos, etc.),
+                    Retrobridge is also easy to integrate into users’ &
+                    businesses’ software via API
                   </span>
                   <img
                     src={hotel_2}
-                    className="mt-8 min-h-[270px] w-full object-cover lg:min-h-[500px]"
+                    className="mt-8 min-h-[270px] w-full object-cover md:mt-14 lg:min-h-[500px]"
                     alt=""
                   />
                 </div>
