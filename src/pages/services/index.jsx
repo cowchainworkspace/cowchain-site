@@ -19,6 +19,7 @@ export const Services = ({ setBurgerOpen }) => {
           gradientStyles="absolute -bottom-1/2 -right-40 block  h-[426px] w-[526px] md:hidden"
           isGradient={true}
           title={"Our tech stack"}
+          margin={""}
         />
         <Contact />
         <Footer />

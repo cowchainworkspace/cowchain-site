@@ -99,20 +99,21 @@ export const CaseStudiesEva = ({ setBurgerOpen }) => {
                       challenge
                     </h3>
                     <span className="mb-10 text-white lg:min-w-[570px]">
-                      The development of Eva, the industry's first user-friendly
-                      crypto wallet, presented numerous challenges. Integrating
-                      multi-chain compatibility was a complex task, requiring a
-                      deep understanding of various blockchain technologies to
-                      ensure seamless interoperability. Implementing a
-                      non-custodial framework, essential for user autonomy,
-                      demanded robust security measures akin to those in
-                      international banking apps. A significant hurdle was the
-                      development of bio-authentication to replace traditional
-                      key management, ensuring high-level security and user
-                      convenience. Additionally, integrating AI to translate
-                      voice and text commands into on-chain actions was pivotal
-                      in making cryptocurrency accessible to non-technical
-                      users. Establishing easy fiat rails posed challenges in
+                      The development of Wallet App, the industry's first
+                      user-friendly crypto wallet, presented numerous
+                      challenges. Integrating multi-chain compatibility was a
+                      complex task, requiring a deep understanding of various
+                      blockchain technologies to ensure seamless
+                      interoperability. Implementing a non-custodial framework,
+                      essential for user autonomy, demanded robust security
+                      measures akin to those in international banking apps. A
+                      significant hurdle was the development of
+                      bio-authentication to replace traditional key management,
+                      ensuring high-level security and user convenience.
+                      Additionally, integrating AI to translate voice and text
+                      commands into on-chain actions was pivotal in making
+                      cryptocurrency accessible to non-technical users.
+                      Establishing easy fiat rails posed challenges in
                       navigating regulatory landscapes while maintaining
                       user-friendliness for seamless crypto-fiat interactions.
                     </span>

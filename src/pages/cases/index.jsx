@@ -11,7 +11,6 @@ import retrobridge_mobile from "assets/cases/retrobridge-mobile.png";
 import step from "assets/cases/step.png";
 import finance from "assets/cases/finance.png";
 import finance_mobile from "assets/cases/finance-mobile.png";
-import { ViewMoreSection } from "./blocks/ViewMore";
 import { CaseSplash } from "./components/case-splash";
 
 const cases = [
@@ -31,14 +30,14 @@ const cases = [
   },
   {
     title: "Cross-chain transfer bridge",
-    link: "/cases/retrobridge",
+    link: "/cases/bridge",
     img_desktop: retrobridge,
     img_mobile: retrobridge_mobile,
     tags: ["DEFI", "Crosschain", "Multichain", "Bridge"]
   },
   {
     title: "m2e platform",
-    link: "/cases/step",
+    link: "/cases/move",
     img_desktop: step,
     img_mobile: step,
     tags: ["DEX", "Non-custodial exchange", "Staking", "Move-to-Earn"]

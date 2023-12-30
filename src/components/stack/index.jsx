@@ -13,10 +13,9 @@ import ts from "assets/homepage/expertises/typescript.svg";
 import aws from "assets/homepage/expertises/aws.svg";
 import google from "assets/homepage/expertises/google.svg";
 import azure from "assets/homepage/expertises/azure.svg";
-import bg from "assets/homepage/expertise_bg.png";
-import bg_lg from "assets/homepage/expertise_bg_lg.png";
 import { ExpertiseBlock } from "./components/expertise";
 import clients from "assets/homepage/clients.png";
+import { cn } from "lib/utils";
 
 const expertiseData = [
   {
@@ -104,13 +103,11 @@ const expertiseData = [
 const Stack = ({
   title,
   isGradient = false,
-  gradientStyles = "absolute -bottom-2/3 -right-20 block  h-[526px] w-[526px] md:hidden"
+  gradientStyles = "absolute -bottom-2/3 -right-20 block z-10 h-[526px] w-[526px] md:hidden",
+  margin = "mt-[calc(35vh_+_1.5625vh)]"
 }) => {
   return (
-    <section
-      id="expertise"
-      className="relative mt-[calc(35vh_+_1.5625vh)] overflow-hidden md:mt-0"
-    >
+    <section id="expertise" className={cn("relative   md:mt-0", margin)}>
       <div className="relative grid lg:grid-cols-3">
         <div className="py-heading px-default md-border-r relative  flex justify-center  border-b border-b-th-fade text-center md:col-span-1">
           <h3 className="z-10 max-w-[183px] cursor-default text-center text-4xl uppercase leading-[40px] md:max-w-none md:text-left md:text-[60px] md:leading-[53px]">

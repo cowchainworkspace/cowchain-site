@@ -1,18 +1,18 @@
 import React from "react";
 import bg from "assets/homepage/clients_bg.png";
 import gradient from "assets/homepage/clients.png";
-import bg_lg from "assets/homepage/clients_bg_lg.png";
+import bg_lg from "assets/clients/main.png";
 import arrow from "assets/arrow_right.svg";
 import { Counter } from "../../home/components/counter";
 
- const Clients = () => {
+const Clients = () => {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative ">
       <img
         srcSet={`${bg} 700w, ${bg_lg} 1000w`}
         sizes="(max-width: 640px) 70vw, 70vw"
         alt=""
-        className="absolute -right-[10%] top-0 w-full"
+        className="absolute  top-10 w-full"
         src={bg_lg}
       />
 
@@ -65,4 +65,4 @@ import { Counter } from "../../home/components/counter";
   );
 };
 
-export default Clients
+export default Clients;

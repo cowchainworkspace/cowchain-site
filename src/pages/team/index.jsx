@@ -68,7 +68,7 @@ export const Team = ({ setBurgerOpen }) => {
             title={"founded and run by"}
           />
           <div className="flex flex-col justify-between xl:flex-row">
-            <div className=" flex max-w-[370px] flex-col items-start justify-start gap-4 pb-7 xl:pb-28 ">
+            <div className="flex max-w-[370px] flex-col items-start justify-start gap-4 pb-7 xl:pb-28 ">
               <h3 className="text-4xl uppercase xl:text-7xl">
                 Mykhailo Adzhoiev
               </h3>

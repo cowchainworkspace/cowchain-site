@@ -4,7 +4,6 @@ import eva from "assets/cases/eva.png";
 import retrobridge from "assets/cases/retrobridge.png";
 import step from "assets/cases/step.png";
 import finance from "assets/cases/finance.png";
-import { Link } from "react-router-dom";
 const products = [
   {
     name: "Crypto exchanges",
@@ -14,7 +13,7 @@ const products = [
   {
     name: "NFT marketplace",
     photo: step,
-    link: "/cases/step"
+    link: "/cases/move"
   },
   {
     name: "Crypto wallets with fiat payment processing",
@@ -24,12 +23,12 @@ const products = [
   {
     name: "Play-to-earn, Move-to-earn",
     photo: step,
-    link: "/cases/step"
+    link: "/cases/move"
   },
   {
     name: "Cross chain and multichain briges",
     photo: retrobridge,
-    link: "/cases/retrobridge"
+    link: "/cases/bridge"
   },
   {
     name: "AI products",
@@ -40,10 +39,7 @@ const products = [
 
 const ProductCard = ({ name, photo, link }) => {
   return (
-    <Link
-      to={link}
-      className="team_card_wrapper relative flex  h-[112px] flex-col items-start justify-center border-b border-b-th-fade border-r-th-fade md:h-full md:border-r "
-    >
+    <div className="team_card_wrapper relative flex h-[112px]  select-none flex-col items-start justify-center border-b border-b-th-fade border-r-th-fade md:h-full md:border-r ">
       <span className="justify-center px-3 py-8 text-left text-base uppercase text-white lg:px-16 lg:pb-48 lg:pt-20 lg:font-roc lg:text-xl">
         {name}
       </span>
@@ -53,7 +49,7 @@ const ProductCard = ({ name, photo, link }) => {
           style={{ backgroundImage: `url(${photo})` }}
         />
       </div>
-    </Link>
+    </div>
   );
 };
 
@@ -61,7 +57,7 @@ export const Products = () => {
   return (
     <section
       id="products"
-      className="relative border-t border-b-th-fade border-t-th-fade"
+      className="relative z-20  border-t border-b-th-fade border-t-th-fade"
     >
       <div className="glid-cols-1 relative grid  md:grid-cols-3">
         {products.map((member, index) => (

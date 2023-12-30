@@ -115,11 +115,11 @@ function App() {
                 element={<CaseStudiesFinance setBurgerOpen={setBurgerOpen} />}
               />
               <Route
-                path="/cases/step"
+                path="/cases/move"
                 element={<CaseStudiesStep setBurgerOpen={setBurgerOpen} />}
               />
               <Route
-                path="/cases/retrobridge"
+                path="/cases/bridge"
                 element={
                   <CaseStudiesRetroBridge setBurgerOpen={setBurgerOpen} />
                 }

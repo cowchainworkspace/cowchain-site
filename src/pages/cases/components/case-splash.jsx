@@ -20,7 +20,7 @@ export const CaseSplash = ({ title, tags, img_mobile, img_desktop, link }) => {
       <div className="absolute  bottom-1/2 right-10 ">
         <Link
           to={link}
-          className="mx-auto flex h-24 w-24 cursor-pointer items-center justify-center rounded-full bg-white text-center font-roc text-sm font-medium uppercase text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg:h-48 lg:w-48 lg:text-base"
+          className="mx-auto  hidden h-24 w-24 cursor-pointer items-center justify-center rounded-full bg-white text-center font-roc text-sm font-medium uppercase text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:flex lg:h-48 lg:w-48 lg:text-base"
         >
           View Project
         </Link>
