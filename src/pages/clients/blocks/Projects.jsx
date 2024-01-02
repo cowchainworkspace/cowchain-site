@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import marsan from "assets/cases/marsan.png";
-import eva from "assets/cases/eva.png";
+import eva from "assets/cases/eva-mobile.png";
 import retrobridge from "assets/cases/retrobridge-mobile.png";
 import step from "assets/cases/step.png";
-import finance from "assets/cases/finance.png";
+import finance from "assets/cases/finance-mobile2.png";
 import triend from "assets/cases/triend-mobile.png";
 import { Scrollama, Step } from "react-scrollama";
 import { Link } from "react-router-dom";
@@ -16,12 +16,12 @@ const sectionsData = [
     projects: [
       {
         pic: finance,
-        name: "Chief Finance",
+        name: "Decentralized crypto exchange",
         link: "/cases/finance"
       },
       {
         pic: triend,
-        name: "Triend",
+        name: "Integration blockchain into hotel business",
         link: "/cases/hotel"
       }
     ]
@@ -33,12 +33,12 @@ const sectionsData = [
     projects: [
       {
         pic: step,
-        name: "Step",
+        name: "m2e platform",
         link: "/cases/move"
       },
       {
         pic: marsan,
-        name: "Marsan",
+        name: "Exchange wallet app",
         link: "/cases/payment"
       }
     ]
@@ -50,12 +50,12 @@ const sectionsData = [
     projects: [
       {
         pic: eva,
-        name: "Eva",
+        name: "Crypto wallet app",
         link: "/cases/wallet"
       },
       {
         pic: retrobridge,
-        name: "Retrobriedge",
+        name: "Cross-chain transfer bridge",
         link: "/cases/bridge"
       }
     ]
