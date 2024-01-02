@@ -123,8 +123,8 @@ export const CaseStudiesRetroBridge = ({ setBurgerOpen }) => {
                     cross-chain asset swapping in 3 minutes. With plenty of
                     supported blockchain networks, including EVM, EVM Layer 2,
                     and other chains (StarkNet, Aptos, Cosmos, etc.),
-                    Retrobridge is also easy to integrate into users’ &
-                    businesses’ software via API
+                    Cross-chain transfer bridge is also easy to integrate into
+                    users’ & businesses’ software via API
                   </span>
                   <img
                     src={hotel_2}

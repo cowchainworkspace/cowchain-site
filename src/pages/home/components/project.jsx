@@ -16,7 +16,7 @@ export const Project = ({
     <motion.div
       id={"project-" + id}
       className={cn(
-        "project-card group relative flex h-screen min-h-[350px] w-full cursor-pointer border-b border-b-th-fade bg-cover bg-center bg-no-repeat px-4 py-8 will-change-transform md:h-96 md:min-w-[25vw] md:px-8 lg:h-screen lg:px-16 xl:h-screen",
+        "project-card group relative flex h-screen min-h-[420px] w-full cursor-pointer border-b border-b-th-fade bg-cover bg-center bg-no-repeat px-4 py-8 will-change-transform md:h-96 md:min-w-[25vw] md:px-8 lg:h-screen lg:px-16 xl:h-screen",
         {
           expanded: scrollIndex === index
         }

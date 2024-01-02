@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import pic1 from "../../../assets/homepage/projects/1.jpg";
-import pic2 from "../../../assets/homepage/projects/2.jpg";
+import marsan from "assets/cases/marsan.png";
+import eva from "assets/cases/eva.png";
+import retrobridge from "assets/cases/retrobridge-mobile.png";
+import step from "assets/cases/step.png";
+import finance from "assets/cases/finance.png";
+import triend from "assets/cases/triend-mobile.png";
 import { Scrollama, Step } from "react-scrollama";
+import { Link } from "react-router-dom";
 
 const sectionsData = [
   {
@@ -10,12 +15,14 @@ const sectionsData = [
       "Got an idea keeping you up at night? Let's turn it into a tangible and effective solution. We'll guide you through the development process, ensuring that your product is both functional and aligned with your business goals",
     projects: [
       {
-        pic: pic1,
-        name: "Decentralized Exchange (DEX)"
+        pic: finance,
+        name: "Chief Finance",
+        link: "/cases/finance"
       },
       {
-        pic: pic2,
-        name: "Decentralized Exchange (DEX)"
+        pic: triend,
+        name: "Triend",
+        link: "/cases/hotel"
       }
     ]
   },
@@ -25,12 +32,14 @@ const sectionsData = [
       "Unlock new business opportunities by incorporating blockchain and crypto functionalities into your existing products. With our Web3 expertise, we'll bring your business to the intersection of Web2 and blockchain tech in a way that will continuously drive increased profit for your company",
     projects: [
       {
-        pic: pic1,
-        name: "Decentralized Exchange (DEX)"
+        pic: step,
+        name: "Step",
+        link: "/cases/move"
       },
       {
-        pic: pic2,
-        name: "Decentralized Exchange (DEX)"
+        pic: marsan,
+        name: "Marsan",
+        link: "/cases/payment"
       }
     ]
   },
@@ -40,12 +49,14 @@ const sectionsData = [
       "From concept to polished product, we provide you with clean, secure, and adaptable code aligned with market trends. We live and breathe Web3, so we can fully cover the development of your impactful Web3 ventures while you do other things that matter for your business",
     projects: [
       {
-        pic: pic1,
-        name: "Decentralized Exchange (DEX)"
+        pic: eva,
+        name: "Eva",
+        link: "/cases/wallet"
       },
       {
-        pic: pic2,
-        name: "Decentralized Exchange (DEX)"
+        pic: retrobridge,
+        name: "Retrobriedge",
+        link: "/cases/bridge"
       }
     ]
   }
@@ -146,7 +157,8 @@ const Projects = () => {
                         <div className="my-8 flex max-w-3xl flex-wrap items-center justify-center gap-4 md:my-12 md:mr-8 md:grid md:grid-cols-2 md:justify-start lg:mb-20 lg:mr-16 lg:gap-6 xl:mb-32 xl:mr-24">
                           {section.projects &&
                             section.projects.map((project, index) => (
-                              <div
+                              <Link
+                                to={project.link}
                                 key={index}
                                 className="relative flex h-[30vh] w-full max-w-[320px] flex-col p-4 md:h-[420px] md:w-full md:max-w-none md:p-8"
                               >
@@ -159,7 +171,7 @@ const Projects = () => {
                                 <h2 className="relative mt-auto max-w-[140px] text-white md:max-w-[216px]">
                                   {project.name}
                                 </h2>
-                              </div>
+                              </Link>
                             ))}
                         </div>
                       </div>

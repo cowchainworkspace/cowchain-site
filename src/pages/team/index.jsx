@@ -122,7 +122,7 @@ export const Team = ({ setBurgerOpen }) => {
               </div>
             </div>
           </div>
-          <div className="mt-9 flex max-w-[110%] items-start justify-start gap-2 overflow-x-scroll md:items-center md:overflow-auto   lg:max-w-full  lg:justify-between">
+          <div className="mb-16 mt-9 flex max-w-[110%] items-start  justify-start gap-2 overflow-x-scroll md:mt-0 md:items-center md:overflow-auto   lg:max-w-full  lg:justify-between">
             {photos.map((imgSrc, index) => (
               <img
                 src={imgSrc}
@@ -132,18 +132,18 @@ export const Team = ({ setBurgerOpen }) => {
               />
             ))}
           </div>
-          <div className="mx-auto my-16  text-center  xl:my-56">
-            <h3 className="mb-10 max-w-[890px] text-2xl font-light uppercase xl:text-4xl">
-              “I think Web3 is amazing because, in this industry, everything
-              doesn’t revolve merely around the product and its idea. In Web3,
-              most solutions are community-centric. If you have a brilliant idea
-              and manage to find like-minded people who also believe in it, then
-              you’re almost destined for success.”
-            </h3>
-            <span className="  text-center text-white">
-              Mykhailo Adzhoiev, CEO of Cowchain
-            </span>
-          </div>
+        </div>
+        <div className=" flex flex-col items-center justify-center border-t border-t-th-fade px-8 py-16 text-center md:border-0  xl:my-24">
+          <h3 className="mb-10 max-w-[890px] text-2xl font-light uppercase xl:text-4xl">
+            “I think Web3 is amazing because, in this industry, everything
+            doesn’t revolve merely around the product and its idea. In Web3,
+            most solutions are community-centric. If you have a brilliant idea
+            and manage to find like-minded people who also believe in it, then
+            you’re almost destined for success.”
+          </h3>
+          <span className="  text-center text-white">
+            Mykhailo Adzhoiev, CEO of Cowchain
+          </span>
         </div>
         <TeamGallery />
         <TeamContact />

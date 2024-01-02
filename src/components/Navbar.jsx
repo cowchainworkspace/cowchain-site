@@ -15,7 +15,8 @@ import medium from "../assets/footer/medium.svg";
 import mail from "../assets/footer/mail.svg";
 import ContactForm from "./utils/ContactForm";
 import { useLocation } from "react-router-dom";
-import team_bg from "assets/bg/team.png";
+import team_bg from "assets/bg/team-mobile.png";
+import team from "assets/bg/team.png";
 import { cn } from "lib/utils";
 
 export const Navbar = ({
@@ -97,7 +98,8 @@ export const Navbar = ({
     <>
       <section
         className={cn("relative  bg-transparent", {
-          "pb-36 md:pb-0": isHomePage
+          "pb-36 md:pb-0": isHomePage,
+          "pb-[440px] lg:pb-[670px]": isTeamBg
         })}
       >
         {isHomePage ? (
@@ -141,11 +143,18 @@ export const Navbar = ({
         )}
 
         {isTeamBg && (
-          <img
-            className="absolute inset-0 top-0"
-            alt="gradient"
-            src={team_bg}
-          />
+          <>
+            <img
+              className="absolute right-0 top-0 h-full w-full lg:hidden"
+              alt="gradient"
+              src={team_bg}
+            />
+            <img
+              className="absolute top-0 hidden h-full w-full lg:block"
+              alt="gradient"
+              src={team}
+            />
+          </>
         )}
 
         <div
@@ -171,7 +180,7 @@ export const Navbar = ({
               className="w-32 md:w-36 lg:w-40"
               title="Home"
               alt="Home-1"
-              src={process.env.PUBLIC_URL + "/homepage/logo_light.svg" } 
+              src={process.env.PUBLIC_URL + "/homepage/logo_light.svg"}
             ></img>
           </Link>
           {toggleMenu ? (
@@ -226,7 +235,9 @@ export const Navbar = ({
                         className="w-32"
                         title="Home"
                         alt="Home-1"
-                        src={process.env.PUBLIC_URL + "/homepage/logo_light.svg"}
+                        src={
+                          process.env.PUBLIC_URL + "/homepage/logo_light.svg"
+                        }
                       ></img>
                     </a>
                     <img

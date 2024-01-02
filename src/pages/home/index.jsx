@@ -1,4 +1,4 @@
-import React, {Suspense, lazy} from "react";
+import React, { Suspense, lazy } from "react";
 import { Navbar } from "../../components/Navbar";
 import { Header } from "./blocks/Header";
 import { Benefits } from "./blocks/Benefits";
@@ -8,11 +8,11 @@ import "./home.css";
 import { BenefitsMobiles } from "./blocks/BenefitMobiles";
 import { Loading } from "components/loader/Loading";
 
-const  Clients = lazy(() => import("./blocks/Clients"))
-const  Stack = lazy(() => import("components/stack") ) 
-const  Projects = lazy(() => import("./blocks/Projects") )  
-const  FAQ = lazy(() => import("./blocks/FAQ") ) 
-const  Contact = lazy(() => import("components/Contact") ) 
+const Clients = lazy(() => import("./blocks/Clients"));
+const Stack = lazy(() => import("components/stack"));
+const Projects = lazy(() => import("./blocks/Projects"));
+const FAQ = lazy(() => import("./blocks/FAQ"));
+const Contact = lazy(() => import("components/Contact"));
 
 const Home = ({ setBurgerOpen }) => {
   return (
@@ -22,7 +22,7 @@ const Home = ({ setBurgerOpen }) => {
         <Header />
         <Benefits />
         <BenefitsMobiles />
-        <Suspense loading={<Loading/>}>
+        <Suspense loading={<Loading />}>
           <Stack title={"Our Expertise"} />
           <Clients />
           <Projects />
@@ -31,7 +31,6 @@ const Home = ({ setBurgerOpen }) => {
           <Contact />
           <Footer />
         </Suspense>
-        
       </div>
     </section>
   );

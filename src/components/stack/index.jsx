@@ -103,12 +103,12 @@ const expertiseData = [
 const Stack = ({
   title,
   isGradient = false,
-  gradientStyles = "absolute -bottom-2/3 -right-20 block z-10 h-[526px] w-[526px] md:hidden",
+  gradientStyles = "absolute -bottom-2/3 -right-20 block h-[526px] w-[526px] md:hidden",
   margin = "mt-[calc(35vh_+_1.5625vh)]"
 }) => {
   return (
     <section id="expertise" className={cn("relative   md:mt-0", margin)}>
-      <div className="relative grid lg:grid-cols-3">
+      <div className="relative z-20 grid lg:grid-cols-3">
         <div className="py-heading px-default md-border-r relative  flex justify-center  border-b border-b-th-fade text-center md:col-span-1">
           <h3 className="z-10 max-w-[183px] cursor-default text-center text-4xl uppercase leading-[40px] md:max-w-none md:text-left md:text-[60px] md:leading-[53px]">
             {title}

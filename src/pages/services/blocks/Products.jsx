@@ -6,27 +6,27 @@ import step from "assets/cases/step.png";
 import finance from "assets/cases/finance.png";
 const products = [
   {
-    name: "Crypto exchanges",
+    name: "Full-fledged blockchain ecosystems",
     photo: finance,
     link: "/cases/finance"
   },
   {
-    name: "NFT marketplace",
+    name: "All kinds of dApps (decentralized applications)",
     photo: step,
     link: "/cases/move"
   },
   {
-    name: "Crypto wallets with fiat payment processing",
+    name: "Crypto exchanges, including DEXes with staking, lending/borrowing, farming features",
     photo: marsan,
     link: "/cases/payment"
   },
   {
-    name: "Play-to-earn, Move-to-earn",
+    name: "Crypto wallets with fiat payment processing",
     photo: step,
     link: "/cases/move"
   },
   {
-    name: "Cross chain and multichain briges",
+    name: "Cross-chain and multichain bridges",
     photo: retrobridge,
     link: "/cases/bridge"
   },
