@@ -9,7 +9,7 @@ export default function TeamCarousel() {
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
   return (
-    <section className={cn("relative")}>
+    <section className={cn("relative z-20")}>
       <TeamEmblaCarousel slides={SLIDES} options={OPTIONS} />
     </section>
   );

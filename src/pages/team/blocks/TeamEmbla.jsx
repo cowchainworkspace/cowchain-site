@@ -7,7 +7,7 @@ import { cn } from "lib/utils";
 const TeamEmblaCarousel = (props) => {
   const { options, slides } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    Autoplay({ delay: 5000 })
+    Autoplay({ delay: 2500 })
   ]);
 
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
@@ -69,7 +69,7 @@ const TeamEmblaCarousel = (props) => {
           </div>
         </div>
 
-        <div className="my-2 flex items-center justify-center gap-2">
+        <div className="my-2 hidden items-center justify-center gap-2">
           {scrollSnaps.map((_, index) => (
             <button
               key={index}
