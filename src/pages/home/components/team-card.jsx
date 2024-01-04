@@ -12,7 +12,7 @@ export const TeamCard = ({ name, role, photo, social, index }) => {
     >
       <div className="team_card_overlay  absolute left-0 top-0 hidden h-full w-full md:flex">
         <div
-          className="flex h-full w-full bg-cover bg-center bg-no-repeat p-8"
+          className="flex h-full w-full bg-cover bg-top bg-no-repeat p-8"
           style={{ backgroundImage: `url(${photo})` }}
         ></div>
       </div>

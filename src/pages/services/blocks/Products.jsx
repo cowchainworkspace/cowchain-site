@@ -3,6 +3,7 @@ import marsan from "assets/cases/marsan.png";
 import eva from "assets/cases/eva.png";
 import retrobridge from "assets/cases/retrobridge.png";
 import step from "assets/cases/step.png";
+import triend from "assets/cases/triend.png";
 import finance from "assets/cases/finance.png";
 const products = [
   {
@@ -22,7 +23,7 @@ const products = [
   },
   {
     name: "Crypto wallets with fiat payment processing",
-    photo: step,
+    photo: triend,
     link: "/cases/move"
   },
   {

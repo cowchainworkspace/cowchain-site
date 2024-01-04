@@ -6,8 +6,12 @@ import bg from "../../../assets/bg/clients_feedback.png";
 
 const feedbackData = [
   {
-    text: '"We were impressed with their extensive experience in blockchain development."',
-    author: "CEO, Mobile Gaming Company"
+    text: '"The company most impressive trait was their innovative integration of web3 technology, which set them apart."',
+    author: "Davyd Koriahin, Co-CEO, Retro Bridge"
+  },
+  {
+    text: '"Their adeptness in navigating blockchain issues and clear communication made our collaboration productive and seamless."',
+    author: "Artem Poliakoff, CEO,  Biometric technologies"
   },
   {
     text: '"They exhibit a proactive approach and showcase remarkable talent as developers."',
@@ -15,19 +19,19 @@ const feedbackData = [
   },
   {
     text: '"The project manager was always in touch and answered all questions."',
-    author: "Vlafymyr Dovzhuk \n PO, Web3 Development Company"
+    author: "Vlafymyr Dovzhuk PO, Web3 Development Company"
+  },
+  {
+    text: '"They delivered a ready-to-go ecosystem and app that worked perfectly with all our requests."',
+    author: "COO, Crypto App Provider"
   },
   {
     text: '"We were impressed with their extensive experience in blockchain development."',
     author: "CEO, Mobile Gaming Company"
   },
   {
-    text: '"We were impressed with their extensive experience in blockchain development."',
-    author: "CEO, Mobile Gaming Company"
-  },
-  {
-    text: '"We were impressed with their extensive experience in blockchain development."',
-    author: "CEO, Mobile Gaming Company"
+    text: '"Cowchain is a great team. They have extensive experience in developing blockchain projects. Good communication and responsibility. I am very excited to work with them on future projects. I definitely recommend them for cooperation."',
+    author: "CEO, Crypto project development"
   }
 ];
 
