@@ -76,7 +76,7 @@ const teamData = [
   },
   {
     name: "Alexander",
-    role: "Full-stack Web3 developer",
+    role: "Project Manager",
     photo: photo9,
     social: {
       network: "LinkedIn",

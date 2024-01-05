@@ -2,13 +2,16 @@ import React from "react";
 import clutch from "../../../assets/homepage/clutch.svg";
 import upwork from "../../../assets/homepage/upwork.svg";
 import star from "../../../assets/clients/reate-star.svg";
-import upwork_star from "../../../assets/clients/upwork_rate.svg";
 import bg from "../../../assets/bg/clients_feedback.png";
 
 const feedbackData = [
   {
-    text: '"We were impressed with their extensive experience in blockchain development."',
-    author: "CEO, Mobile Gaming Company"
+    text: '"The company most impressive trait was their innovative integration of web3 technology, which set them apart."',
+    author: "Davyd Koriahin, Co-CEO, Retro Bridge"
+  },
+  {
+    text: '"Their adeptness in navigating blockchain issues and clear communication made our collaboration productive and seamless."',
+    author: "Artem Poliakoff, CEO,  Biometric technologies"
   },
   {
     text: '"They exhibit a proactive approach and showcase remarkable talent as developers."',
@@ -16,19 +19,19 @@ const feedbackData = [
   },
   {
     text: '"The project manager was always in touch and answered all questions."',
-    author: "Vlafymyr Dovzhuk \n PO, Web3 Development Company"
+    author: "Vlafymyr Dovzhuk PO, Web3 Development Company"
+  },
+  {
+    text: '"They delivered a ready-to-go ecosystem and app that worked perfectly with all our requests."',
+    author: "COO, Crypto App Provider"
   },
   {
     text: '"We were impressed with their extensive experience in blockchain development."',
     author: "CEO, Mobile Gaming Company"
   },
   {
-    text: '"We were impressed with their extensive experience in blockchain development."',
-    author: "CEO, Mobile Gaming Company"
-  },
-  {
-    text: '"We were impressed with their extensive experience in blockchain development."',
-    author: "CEO, Mobile Gaming Company"
+    text: '"Cowchain is a great team. They have extensive experience in developing blockchain projects. Good communication and responsibility. I am very excited to work with them on future projects. I definitely recommend them for cooperation."',
+    author: "CEO, Crypto project development"
   }
 ];
 
@@ -98,7 +101,7 @@ const Feedback = () => {
                     </div>
                   </div>
                   <p className="mt-[2px] text-white">
-                    Based on 20 Clutch reviews
+                    Based on 9 Clutch reviews
                   </p>
                 </div>
               </div>
@@ -110,10 +113,6 @@ const Feedback = () => {
                 >
                   <img className="w-12 md:w-16" src={upwork} alt=""></img>
                 </a>
-                <div className="flex items-center gap-x-2">
-                  <img className="w-8" src={upwork_star} alt=""></img>
-                  <p className="text-white">Top Rated Plus</p>
-                </div>
               </div>
             </div>
           </div>

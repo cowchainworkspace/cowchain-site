@@ -45,8 +45,9 @@ h4 {
 
 p,
 .p {
-  @apply text-sm font-normal leading-normal text-white md:text-base;
+  @apply text-sm font-normal  leading-normal text-white md:text-base;
 }
+ 
 
 .header {
   @apply font-roc text-lg font-medium uppercase underline md:text-xl lg:text-2xl;
@@ -123,7 +124,14 @@ p,
 }
 
 .btn-contact {
-  @apply flex h-36 w-36 cursor-pointer items-center justify-center rounded-full bg-white font-roc text-base font-medium uppercase text-black;
+  @apply flex h-36 w-36 cursor-pointer   items-center justify-center rounded-full bg-white text-center font-roc text-base font-medium uppercase text-black;
+  transition:
+    color 0.3s,
+    background-color 0.3s ease-in-out;
+}
+
+.btn-contact-case {
+  @apply absolute right-5 flex h-24 w-24 cursor-pointer items-center justify-center rounded-full bg-white text-center font-roc text-base font-medium uppercase text-black;
   transition:
     color 0.3s,
     background-color 0.3s ease-in-out;
@@ -187,7 +195,7 @@ p,
 }
 
 .userform .text_input::placeholder {
-  @apply text-base font-normal text-white;
+  @apply text-base font-normal text-secondary;
   transition: color 100ms linear;
 }
 
@@ -288,6 +296,19 @@ input:-webkit-autofill:active {
   width: 20px !important;
 }
 
+.ant-popover-arrow {
+  width: 0px !important;
+}
+
+.ant-popover-inner {
+  min-width: 300px;
+  margin-right: 20px;
+  border-radius: 0px !important;
+  border-color: white !important;
+  border-width: 1px !important;
+  background-color: #000 !important;
+}
+
 .mask {
   backface-visibility: hidden;
 }
@@ -322,4 +343,15 @@ input:-webkit-autofill:active {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+}
+
+@media (min-width: 1024px) {
+  .ant-popover-inner {
+    min-width: 399px;
+    margin-right: 90px;
+    border-radius: 0px !important;
+    border-color: white !important;
+    border-width: 1px !important;
+    background-color: #000 !important;
+  }
 }

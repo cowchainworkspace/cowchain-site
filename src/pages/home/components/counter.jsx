@@ -13,7 +13,6 @@ export const Counter = ({ target, duration }) => {
         start={0}
         end={inView ? target : 0}
         duration={duration}
-        suffix="+"
         useEasing={true}
       >
         {({ countUpRef }) => (

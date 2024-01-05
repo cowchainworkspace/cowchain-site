@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import video_bg from "../../../assets/homepage/element-compress.mp4";
-import poster from "../../../assets/homepage/thumbnail.png";
-import upwork from "../../../assets/homepage/upwork.svg";
-import clutch from "../../../assets/homepage/clutch.svg";
-import bg_top from "../../../assets/bg/header_top.png";
-import bg_top_lg from "../../../assets/bg/header_top_lg.png";
+import poster from "assets/homepage/thumbnail.png";
+import upwork from "assets/homepage/upwork.svg";
+import clutch from "assets/homepage/clutch.svg";
+import bg_top from "assets/bg/header_top.png";
+import bg_top_lg from "assets/bg/header_top_lg.png";
 import ModalVideo from "react-modal-video";
 
 export const Header = () => {
@@ -13,12 +12,24 @@ export const Header = () => {
   const [isOpen, setOpen] = useState(false);
   return (
     <section
-      className="fullheight overflow-hidden border-b border-b-th-fade"
+      className="fullheight -mt-40 overflow-hidden border-b border-b-th-fade md:-mt-0"
       id="header"
     >
       <div className="video-wrapper min-h-full">
-        <video id="bg_vid" playsInline autoPlay muted loop poster={poster}>
-          <source src={video_bg} type="video/mp4" />
+        <video
+          className="mt-[68px]"
+          id="bg_vid"
+          playsInline
+          autoPlay
+          muted
+          loop
+          preload="auto"
+          poster={poster}
+        >
+          <source
+            src={process.env.PUBLIC_URL + "/homepage/video.mp4"}
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
         <script>document.getElementById('bg_vid').play();</script>
@@ -27,10 +38,11 @@ export const Header = () => {
             srcSet={`${bg_top} 360w, ${bg_top} 480w, ${bg_top} 720w, ${bg_top_lg} 1920w`}
             sizes="(max-width: 640px) 100vw, 100vw"
             alt="Photo 1"
-            className="absolute left-0 top-0 w-full"
+            className="absolute left-0 top-0 hidden w-full md:block"
             src={bg_top_lg}
           />
-          <h1 className="relative mt-8 uppercase md:mt-16 lg:mt-24">
+
+          <h1 className="relative mt-8 cursor-default uppercase md:mt-16 lg:mt-24">
             We turn your startup ideas into viable Web3 businesses
           </h1>
           <div className="mt-auto grid grid-cols-1 md:grid-cols-2">
@@ -50,14 +62,15 @@ export const Header = () => {
                 <img className="w-11 md:w-[70px]" src={clutch} alt=""></img>
               </a>
             </div>
-            <div className="my-4 flex flex-col gap-y-4 lg:pl-[5vw] xl:pl-[15vw]">
-              <h2>We turn your startup ideas into viable Web3 businesses</h2>
-              <div className="md:mt-4 md:flex md:items-center md:justify-between">
-                <div className="flex flex-col gap-y-1">
-                  <p className="body1">Mykhailo Adzhoiev</p>
-                  <p className="  text-secondary">Founder & CTO</p>
-                </div>
-                <button
+            <div className="my-4 flex cursor-default flex-col gap-y-4 md:items-end">
+              <div>
+                <h2>developers of web3</h2>
+                <div className="md:mt-4 md:flex md:items-center md:justify-between">
+                  <div className="flex flex-col gap-y-1">
+                    <p className="body1 text-base">Mykhailo Adzhoiev</p>
+                    <p className="text-sm  text-secondary">Founder & CTO</p>
+                  </div>
+                  {/* <button
                   className="btn-play mt-4 md:mt-0"
                   onClick={() => setOpen(true)}
                 >
@@ -78,7 +91,8 @@ export const Header = () => {
                     </div>
                     WATCH INTERVIEW
                   </div>
-                </button>
+                </button> */}
+                </div>
               </div>
             </div>
           </div>

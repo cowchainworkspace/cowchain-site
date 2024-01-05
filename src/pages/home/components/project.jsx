@@ -1,18 +1,40 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { cn } from "lib/utils";
 
-export const Project = ({ title, description, photo, tags, id, link }) => {
+export const Project = ({
+  title,
+  description,
+  photo,
+  tags,
+  id,
+  link,
+  index,
+  scrollIndex
+}) => {
   return (
-    <article
+    <motion.div
       id={"project-" + id}
-      className="project-card relative flex min-h-[320px] w-full cursor-pointer border-b border-b-th-fade bg-cover bg-center bg-no-repeat px-4 py-8 will-change-transform md:h-96 md:min-w-[25vw] md:px-8 lg:h-[480px] lg:px-16 xl:h-[624px]"
+      className={cn(
+        "project-card group relative flex h-screen min-h-[420px] w-full cursor-pointer border-b border-b-th-fade bg-cover bg-center bg-no-repeat px-4 py-8 will-change-transform md:h-96 md:min-w-[25vw] md:px-8 lg:h-screen lg:px-16 xl:h-screen",
+        {
+          expanded: scrollIndex === index
+        }
+      )}
       style={{ backgroundImage: `url(${photo})` }}
     >
-      <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></div>
-      <div className="project-overlay absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 xl:py-12">
-        <Link to={link} className="btn-contact ml-auto">
+      <motion.div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></motion.div>
+      <Link
+        to={link}
+        className="absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 group-hover:flex md:hidden xl:py-12"
+      >
+        <Link
+          to={link}
+          className="btn-contact ml-auto max-h-24 max-w-[96px] opacity-0 md:max-h-none md:max-w-none md:opacity-100"
+        >
           VIEW PROJECT
         </Link>
-        <div className="mt-auto flex flex-col gap-y-4">
+        <div className="absolute bottom-5 flex max-w-[270px] flex-col gap-y-4 md:max-w-none">
           <div className="flex items-center gap-x-1 md:gap-x-2">
             {tags.map((tag, index) => (
               <div key={index} className="rounded-full bg-white px-3 py-2">
@@ -25,13 +47,7 @@ export const Project = ({ title, description, photo, tags, id, link }) => {
           <h2 className="mt-2">{title}</h2>
           <p className="body max-w-sm !text-[#bbb]">{description}</p>
         </div>
-      </div>
-      <div className="relative mt-auto flex flex-col gap-y-4 lg:hidden">
-        <h2>{title}</h2>
-        <p className="max-w-xs text-sm font-normal leading-normal text-[#bbb]">
-          {description}
-        </p>
-      </div>
-    </article>
+      </Link>
+    </motion.div>
   );
 };

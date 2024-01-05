@@ -1,7 +1,9 @@
-import pic1 from "../../../assets/clients/cases/1.jpg";
-import pic2 from "../../../assets/clients/cases/2.jpg";
-import pic3 from "../../../assets/clients/cases/3.jpg";
-import pic4 from "../../../assets/clients/cases/4.jpg";
+import pic1 from "assets/clients/cases/1.png";
+import pic2 from "assets/clients/cases/2.png";
+import pic3 from "assets/clients/cases/3.png";
+import pic4 from "assets/clients/cases/4.png";
+import pic5 from "assets/clients/cases/5.png";
+import pic6 from "assets/clients/cases/6.png";
 import { useInView, useScroll } from "framer-motion";
 import React, {
   useRef,
@@ -23,28 +25,28 @@ import useScrollPercentage from "react-scroll-percentage-hook";
 
 const casesData = [
   {
-    title: "Decentralized Exchange (DEX)",
+    title: "Exchange wallet app",
     pic: pic1
   },
   {
-    title: "Decentralized Exchange (DEX)",
+    title: "Integration blockchain into hotel business",
     pic: pic2
   },
   {
-    title: "Decentralized Exchange (DEX)",
+    title: "Cross-chain transfer bridge",
     pic: pic3
   },
   {
-    title: "Decentralized Exchange (DEX)",
+    title: "m2e platform",
     pic: pic4
   },
   {
-    title: "Decentralized Exchange (DEX)",
-    pic: pic1
+    title: "decentralized crypto exchange",
+    pic: pic5
   },
   {
-    title: "Decentralized Exchange (DEX)",
-    pic: pic3
+    title: "Crypto wallet app",
+    pic: pic6
   }
 ];
 
@@ -80,14 +82,19 @@ const Cases = () => {
 
   useEffect(() => {
     scrollPerc.set(percentage.vertical);
-  }, [percentage.vertical]);
+  }, [percentage.vertical, scrollPerc]);
 
   const transform = useTransform(
     scrollYProgress,
     [0, 1],
     [0, -scrollRange + viewportW]
   );
-  const physics = { damping: 15, mass: 0.27, stiffness: 55 };
+  const physics = {
+    damping: 0.9,
+    mass: 0.2,
+    stiffness: 1,
+    restSpeed: 0.5
+  };
   const spring = useSpring(transform, physics);
 
   return (

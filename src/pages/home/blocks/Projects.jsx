@@ -1,83 +1,66 @@
-import React, { useRef, useLayoutEffect } from "react";
-import pic1 from "../../../assets/homepage/projects/1.jpg";
-import pic2 from "../../../assets/homepage/projects/2.jpg";
-import pic3 from "../../../assets/homepage/projects/3.jpg";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useState, useRef, useLayoutEffect } from "react";
+import pic1 from "assets/homepage/projects/1.jpg";
+import pic2 from "assets/homepage/projects/2.jpg";
+import pic3 from "assets/homepage/projects/3.jpg";
+import { Scrollama, Step } from "react-scrollama";
+import { motion, useScroll } from "framer-motion";
+
 import { Project } from "../../home/components/project";
 
 const projectsData = [
   {
-    title: "Marsan Exchange",
-    link: "/cases/case_study",
+    title: "Crypto payment app",
+    link: "/cases/payment",
     description:
       "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
     photo: pic1,
     tags: ["React.js", "Solidity", "Subgraph"]
   },
   {
-    title: "Eva Crypto Wallet",
+    title: "CRYPTO WALLET APP",
+    link: "/cases/wallet",
     description:
       "Multichain mobile wallet development with AI integration for an optimized portfolio management",
     photo: pic2,
-    link: "",
-    tags: ["React.js", "Solidity", "Subgraph"]
+    tags: ["React Native", "Web3Auth", "Subgraph"]
   },
   {
-    title: "Triend",
+    title: "Blockchain integration into hotel business",
+    link: "/cases/hotel",
+
     description:
-      "Decentralized plugin development for travelers’ review verification. Proof-of-attendance protocol and reward system integration",
+      "Decentralized plugin development for travelers’ review verification. Proof of Attendance Protocol (POAP) and reward system integration",
     photo: pic3,
-    link: "",
-    tags: ["React.js", "Solidity", "Subgraph"]
+    tags: ["React.js", "Solidity", "Node.js"]
   }
 ];
 
-export const Projects = () => {
-  const projectRef = useRef();
-  const scrollTriggerRef = useRef();
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+const Projects = () => {
+  const sectionRef = useRef(null);
 
-    const container = scrollTriggerRef.current;
-    const items = projectRef.current.children;
+  const { scrollYProgress } = useScroll({ target: sectionRef });
 
-    gsap.to(items, {
-      scrollTrigger: {
-        trigger: container,
-        start: "center 83%",
-        pinned: true,
-        pinnedContainer: true,
-        end: () => `+=${container.clientWidth}`,
-        scrub: 2,
-        onUpdate: (scrollTrigger) => {
-          // Update the flex property of the items during scroll
-          [...items].forEach((item, index) => {
-            const progress = scrollTrigger.progress;
-            if (progress > index / 10 && progress < (index + 1) / 10) {
-              item.classList.add("expanded");
-            } else {
-              item.classList.remove("expanded");
-            }
-          });
-        }
-      }
-    });
-  }, []);
+  const [scrollIndex, setScrollIndex] = useState(null);
+
+  scrollYProgress.on("change", (yProgress) => {
+    if (yProgress <= 0.3 && yProgress >= 0) setScrollIndex(0);
+    if (yProgress <= 0.6 && yProgress >= 0.3) setScrollIndex(1);
+    if (yProgress <= 0.9 && yProgress >= 0.6) setScrollIndex(2);
+  });
 
   return (
-    <section
-      ref={scrollTriggerRef}
-      className=" overflow-hidden overscroll-none"
-    >
-      <div
-        ref={projectRef}
-        className="relative flex flex-col flex-nowrap lg:flex-row"
-      >
-        {projectsData.map((project, index) => (
-          <Project {...project} key={project.title} />
-        ))}
+    <section ref={sectionRef} className="relative h-full md:h-[4000px]">
+      <div className="sticky top-0 flex flex-col flex-nowrap lg:flex-row">
+        <Scrollama offset={0.5}>
+          {projectsData.map((project, index) => (
+            <Step key={project.title}>
+              <Project index={index} scrollIndex={scrollIndex} {...project} />
+            </Step>
+          ))}
+        </Scrollama>
       </div>
     </section>
   );
 };
+
+export default Projects;

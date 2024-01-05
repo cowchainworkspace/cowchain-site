@@ -12,23 +12,23 @@ const faqData = [
     title:
       "What is Web3 development, and how is it different from traditional web development?",
     content:
-      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards."
+      "Web3 development represents the evolution of web technologies towards decentralized, blockchain-based systems. Unlike traditional web development, Web3 focuses on creating applications that leverage blockchain, smart contracts, and decentralized protocols to enable trustless, transparent, and secure interactions. In Web3, smart contracts, self-executing pieces of code, automate processes without intermediaries, fostering trust and reducing reliance on central authorities"
   },
   {
     title:
       "What measures are taken to ensure the security of Web3 applications?",
     content:
-      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards."
+      "Web3 applications prioritize security through smart contract audits, secure coding practices, and encryption protocols. Regular penetration testing identifies vulnerabilities, and decentralized identity systems enhance user privacy. Immutable ledgers in blockchain technology ensure data integrity, and community involvement through open-source development contributes to overall security. Continuous monitoring detects and responds to real-time threats, and adaptation to evolving standards is essential for maintaining robust security in the dynamic Web3 landscape."
   },
   {
     title: "How can I monetize my Web3 application?",
     content:
-      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards."
+      "Tokenization: Implement utility tokens within your Web3 app, allowing users to engage in transactions and exchanges with the platform's native token. NFT Sales: Monetize by selling unique digital assets as NFTs, enabling users to buy, sell, and trade these assets within the application. Subscription Plans: Introduce subscription models for premium features, offering users enhanced functionalities in exchange for a recurring fee. DeFi Integration: Explore decentralized finance (DeFi) opportunities, such as lending or yield farming, and generate revenue through associated transaction fees or interest."
   },
   {
     title: "What are the benefits of using Web3 applications for my business?",
     content:
-      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards."
+      "Web3 applications bring transparency and trust to the forefront by leveraging decentralized technologies. This not only reduces dependence on intermediaries but also introduces innovative monetization through utility tokens, creating a dynamic user-centric economy within the application. The result is a more secure and forward-thinking digital environment for your business"
   },
   {
     title:
@@ -38,24 +38,24 @@ const faqData = [
   }
 ];
 
-export const FAQ = () => {
+const FAQ = () => {
   const [screenWidth] = useState(window.innerWidth);
   return (
     <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-5">
-        <div className="py-heading px-default md-border-r border-b border-b-th-fade text-center md:col-span-2">
-          <h3 className="text-center md:text-left">
-            FREQUENTLY<br></br>ASKED<br></br>QUESTIONS
+        <div className="py-heading px-default md-border-r flex justify-center border-b border-b-th-fade text-center md:col-span-2">
+          <h3 className="flex max-w-[321px] justify-center text-center md:max-w-[365px] md:text-left">
+            FREQUENTLY ASKED QUESTIONS
           </h3>
         </div>
         <div className="md:col-span-3">
           <Accordion allowToggle>
             {faqData.map((faq, index) => (
-              <AccordionItem>
+              <AccordionItem className="border-b border-th-fade">
                 {({ isExpanded }) => (
                   <div
                     className={cn(
-                      "relative bg-cover px-5 py-6 xl:px-[60px] xl:py-8",
+                      "relative bg-cover px-5 py-8 xl:px-[60px] xl:py-16",
                       {
                         "bg-[url('assets/bg/faq-gradient.png')]": isExpanded
                       }
@@ -64,7 +64,7 @@ export const FAQ = () => {
                   >
                     <AccordionButton className={cn("relative")}>
                       <div className="mr-auto w-full max-w-3xl ">
-                        <h2 className="max-w-2xl text-left !text-sm !leading-none lg:!text-lg lg:!leading-none">
+                        <h2 className="max-w-2xl text-left !text-base !leading-none lg:!text-xl lg:!leading-none">
                           {faq.title}
                         </h2>
                       </div>
@@ -136,3 +136,5 @@ export const FAQ = () => {
     </section>
   );
 };
+
+export default FAQ;
