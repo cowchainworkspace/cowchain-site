@@ -57,7 +57,7 @@ export const Values = () => {
     <section
       ref={sectionRef}
       id="benefits"
-      className="relative h-[2800px]  md:h-[3200px]"
+      className="relative hidden h-[2800px] md:block  md:h-[3200px]"
     >
       <div className="sticky top-0">
         <img

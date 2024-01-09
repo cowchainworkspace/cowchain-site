@@ -10,9 +10,8 @@ import postgres from "assets/homepage/expertises/postgresql.svg";
 import react from "assets/homepage/expertises/react.svg";
 import nextjs from "assets/homepage/expertises/nextjs.svg";
 import ts from "assets/homepage/expertises/typescript.svg";
-import aws from "assets/homepage/expertises/aws.svg";
-import google from "assets/homepage/expertises/google.svg";
-import azure from "assets/homepage/expertises/azure.svg";
+import ios from "assets/homepage/expertises/ios.svg";
+import android from "assets/homepage/expertises/android.svg";
 import { ExpertiseBlock } from "./components/expertise";
 import clients from "assets/homepage/clients.png";
 import { cn } from "lib/utils";
@@ -41,28 +40,6 @@ const expertiseData = [
     ]
   },
   {
-    title: "BACK-END",
-    text: "Based on factors like project complexity and its scalability needs, we deploy the most suitable and easy-to-maintain product architecture",
-    tools: [
-      {
-        logo: nodejs,
-        alt: "NodeJS"
-      },
-      {
-        logo: mongodb,
-        alt: "MongoDB"
-      },
-      {
-        logo: mssql,
-        alt: "MicrosoftSQL"
-      },
-      {
-        logo: postgres,
-        alt: "PostgreSQL"
-      }
-    ]
-  },
-  {
     title: "FRONT-END",
     text: "Combining your vision and best usability practices, we create products that live up to your business goals and are intuitive for users",
     tools: [
@@ -81,20 +58,42 @@ const expertiseData = [
     ]
   },
   {
-    title: "CLOUD",
-    text: "By incorporating EventBuses, microservices, analytics, and serverless applications, we build flexible, scalable, and data-driven software systems",
+    title: "MOBILE",
+    text: "Expertly crafting native and cross-platform mobile apps, we turn your vision into reality. Focused on performance, user experience, and seamless design, our mobile solutions ensure your app excels in today's dynamic market.",
     tools: [
       {
-        logo: aws,
-        alt: "Amazon"
+        logo: ios,
+        alt: "IOS"
       },
       {
-        logo: google,
-        alt: "Google"
+        logo: android,
+        alt: "Android"
       },
       {
-        logo: azure,
-        alt: "Azure"
+        logo: react,
+        alt: "React Native"
+      }
+    ]
+  },
+  {
+    title: "BACK-END",
+    text: "Based on factors like project complexity and its scalability needs, we deploy the most suitable and easy-to-maintain product architecture",
+    tools: [
+      {
+        logo: nodejs,
+        alt: "NodeJS"
+      },
+      {
+        logo: mongodb,
+        alt: "MongoDB"
+      },
+      {
+        logo: mssql,
+        alt: "MicrosoftSQL"
+      },
+      {
+        logo: postgres,
+        alt: "PostgreSQL"
       }
     ]
   }

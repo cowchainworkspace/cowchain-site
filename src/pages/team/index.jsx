@@ -5,6 +5,7 @@ import { Footer } from "components/Footer";
 import TeamContact from "./blocks/TeamContact";
 import TeamGallery from "./blocks/TeamGallery";
 import { Values } from "./blocks/Values";
+import { ValuesMobile } from "./blocks/ValuesMobile";
 import team from "assets/team/team.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Tag from "components/ui/tag";
@@ -38,7 +39,8 @@ export const Team = ({ setBurgerOpen }) => {
         />
         <HeroSection />
         <Values />
-        <div className=" mt-14 border-b border-b-th-fade pb-28  xl:mt-28">
+        <ValuesMobile />
+        <div className=" -mt-64 border-b border-b-th-fade pb-28  xl:mt-28">
           <h3 className=" mx-5 mb-20 ml-5 max-w-[740px] text-2xl xl:mb-0 xl:ml-28  xl:text-4xl">
             SPLIT ACROSS{" "}
             <img
