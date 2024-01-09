@@ -15,32 +15,33 @@ const benefitsData = [
     title: "Expanding business opportunities for fintech products",
     text: "If you want to integrate crypto and blockchain into your fintech product, we’ll do it in a way that’ll bring your business to its full potential",
     transformStyle:
-      "max-h-max -translate-y-[40%] 2xl:-translate-y-[45%] duration-1000",
+      "max-h-max -translate-y-[40%] xl:-translate-y-[40%] 2xl:-translate-y-[45%] duration-1000",
     initialStyle:
-      "max-h-max translate-y-[30%] 2xl:translate-y-[45%] duration-1000"
+      "max-h-max translate-y-[60%] xl:translate-y-[30%] 2xl:translate-y-[45%] duration-1000"
   },
   {
     title: "Building impactful and functional Web3 products",
     text: "If you need to develop a Web3 product of any complexity, as a team who lives and breathes Web3, we’ll streamline the entire process and provide clean, secure, and scalable code ",
     transformStyle:
-      "max-h-max -translate-y-[80%] 2xl:-translate-y-[85%]   duration-1000",
-    initialStyle: "max-h-max 2xl:translate-y-[10%] duration-1000"
+      "max-h-max -translate-y-[80%] xl:-translate-y-[80%] 2xl:-translate-y-[85%]   duration-1000",
+    initialStyle:
+      "max-h-max translate-y-[25%] 2xl:translate-y-[10%] duration-1000"
   },
   {
     title: "Creating a custom-tailored strategy for every product",
     text: "Our team moves in sync with the market, adapting and reacting to the changes on the go. We’re proactive to the bone and provide milestone updates regularly & promptly",
     transformStyle:
-      "max-h-max -translate-y-[120%] 2xl:-translate-y-[130%] duration-1000",
+      "max-h-max -translate-y-[120%] xl:-translate-y-[120%] 2xl:-translate-y-[130%] duration-1000",
     initialStyle:
-      "max-h-max -translate-y-[35%] 2xl:-translate-y-[30%] duration-1000"
+      "max-h-max -translate-y-[15%] xl:-translate-y-[35%] 2xl:-translate-y-[30%] duration-1000"
   },
   {
     title: "Taking full responsibility for the product development",
     text: "You can save yourself a headache by delegating the development process to us. Focus on other things that matter for your business while we deliver the product shaped by your vision",
     transformStyle:
-      "max-h-max -translate-y-[160%] 2xl:-translate-y-[170%] duration-1000",
+      "max-h-max -translate-y-[160%] xl:-translate-y-[160%] 2xl:-translate-y-[170%] duration-1000",
     initialStyle:
-      "max-h-max -translate-y-[65%] 2xl:-translate-y-[65%]  duration-1000",
+      "max-h-max -translate-y-[55%] xl:-translate-y-[65%] 2xl:-translate-y-[65%]  duration-1000",
     isLast: true
   }
 ];
