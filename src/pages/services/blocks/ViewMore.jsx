@@ -1,4 +1,8 @@
+import React, { useState } from "react";
+import ContactForm from "components/utils/ContactForm";
+
 export const ViewMoreSection = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <section
       id="view_more"
@@ -13,9 +17,14 @@ export const ViewMoreSection = () => {
             Drop us a line about your product idea, and we’ll <br /> schedule a
             call within 24 hours
           </span>
-          <button type="submit" className="btn-submit uppercase xl:px-12">
+          <button
+            onClick={() => setModalOpen(true)}
+            type="submit"
+            className="btn-submit uppercase xl:px-12"
+          >
             get in touch
           </button>
+          <ContactForm modalOpen={modalOpen} setModalOpen={setModalOpen} />
         </div>
       </div>
     </section>

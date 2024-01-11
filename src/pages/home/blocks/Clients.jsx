@@ -3,6 +3,7 @@ import bg from "assets/homepage/clients_bg.png";
 import bg_lg from "assets/bg/home-clients.png";
 import arrow from "assets/arrow_right.svg";
 import { Counter } from "../../home/components/counter";
+import { Link } from "react-router-dom";
 
 const Clients = () => {
   return (
@@ -16,8 +17,8 @@ const Clients = () => {
       <div className="py-heading px-default relative">
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 lg:gap-16">
           <h3 className="lg:order-0 text-white">OUR CLIENTS</h3>
-          <a
-            href="/cases"
+          <Link
+            to="/cases"
             className="hidden lg:order-1 lg:my-auto lg:ml-auto lg:block"
           >
             <div className="flex items-center gap-x-2">
@@ -26,7 +27,7 @@ const Clients = () => {
               </p>
               <img className="w-6" src={arrow} alt=""></img>
             </div>
-          </a>
+          </Link>
           <div className="mt-8 flex w-full max-w-xl justify-between  lg:order-3 lg:ml-auto">
             <div>
               <Counter duration={4} target={35} />
@@ -48,14 +49,15 @@ const Clients = () => {
             wallet? DeFi bridge? Chances are, we’ve done it all. Take a look at
             our portfolio and see for yourself
           </p>
-          <a href="#" className="lg:hidden">
+          <Link to="/cases" className="lg:hidden">
             <div className="flex items-center gap-x-2">
               <p className="header uppercase text-white underline">
-                ALL PROJECTS
+                VIEW ALL PROJECTS
               </p>
+
               <img className="w-6" src={arrow} alt=""></img>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

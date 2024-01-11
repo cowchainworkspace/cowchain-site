@@ -21,10 +21,10 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
   const sendFormData = async (data, error) => {
     try {
       send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        process.env.REACT_APP_DEV_SERVICE_ID,
+        process.env.REACT_APP_DEV_TEMPLATE_ID,
         data,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        process.env.REACT_APP_DEV_EMAILJS_PUBLIC_KEY
       );
     } catch (e) {
       setSendError(true);

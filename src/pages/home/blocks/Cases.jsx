@@ -21,10 +21,10 @@ import useScrollPercentage from "react-scroll-percentage-hook";
 
 const projectsData = [
   {
-    title: "Crypto payment app",
+    title: "Exchange wallet app",
     link: "/cases/payment",
     description:
-      "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
+      "Fiat-to-crypto non-custodial exchange mobile app with seamless user experience for exchanging $CAD for BTC and ETH",
     photo: marsan,
     tags: ["React.js", "Solidity", "Subgraph"]
   },
@@ -33,42 +33,42 @@ const projectsData = [
     link: "/cases/hotel",
 
     description:
-      "Decentralized plugin development for travelers’ review verification. Proof of Attendance Protocol (POAP) and reward system integration",
+      "Plugin for travel, hotel, and recreation apps with a blockchain-powered review system and unique incentives for honest reviews from their customers.",
     photo: triend_mobile,
     tags: ["React.js", "Solidity", "Node.js"]
   },
   {
-    title: "CRYPTO WALLET APP",
+    title: "Cross-chain transfer bridge",
     link: "/cases/bridge",
     description:
-      "Multichain mobile wallet development with AI integration for an optimized portfolio management",
+      "Cross-chain bridge that allows users to swap tokens across multiple blockchain networks with minimized commissions.",
     photo: retrobridge_mobile,
     tags: ["React Native", "Web3Auth", "Subgraph"]
   },
   {
-    title: "Crypto payment app",
-    link: "/cases/payment",
+    title: "m2e platform",
+    link: "/cases/move",
     description:
-      "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
+      "Robust ecosystem for fitness finance that contains multiple various applications: move to earn application, blockchain wallet, dex, launchpad, dashboard etc.",
     photo: step,
-    tags: ["React.js", "Solidity", "Subgraph"]
+    tags: ["DEX", "Staking", "Move-to-earn"]
   },
   {
-    title: "Blockchain integration into hotel business",
-    link: "/cases/hotel",
+    title: "DECENTRALIZED CRYPTO EXCHANGE",
+    link: "/cases/finance",
 
     description:
-      "Decentralized plugin development for travelers’ review verification. Proof of Attendance Protocol (POAP) and reward system integration",
+      "Secure and convenient decentralized cryptocurrency exchange that allows to swap hundreds of crypto assets using liquidity pool mechanism.",
     photo: finance_mobile,
-    tags: ["React.js", "Solidity", "Node.js"]
+    tags: ["DEX", "DEFI"]
   },
   {
     title: "CRYPTO WALLET APP",
     link: "/cases/wallet",
     description:
-      "Multichain mobile wallet development with AI integration for an optimized portfolio management",
+      "Non-custodial multichain crypto wallet which allows users to create a blockchain wallet using web2 socials like Google, Facebook, Apple, email in one click.",
     photo: eva,
-    tags: ["React Native", "Web3Auth", "Subgraph"]
+    tags: ["Mobile App", "Non-custodial wallet"]
   }
 ];
 const Cases = () => {

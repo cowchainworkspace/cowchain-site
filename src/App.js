@@ -70,6 +70,7 @@ function App() {
 
   useEffect(() => {
     emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+    emailjs.init(process.env.REACT_APP_DEV_EMAILJS_PUBLIC_KEY)
     setTimeout(() => {setLoading(false)}, 2000);
     cacheAssets(assets)
   }, [])
