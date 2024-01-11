@@ -18,7 +18,7 @@ export default function TeamInfo() {
   return (
     <motion.div
       transition={{ from: 20, duration: 1 }}
-      className=" -mt-48 border-b border-b-th-fade pb-28 md:mt-24  xl:mt-28"
+      className=" -mt-40 border-b border-b-th-fade pb-28 md:mt-24  xl:mt-28"
     >
       <h3 className=" mx-5 mb-20 ml-5 max-w-[740px] text-2xl xl:mb-0 xl:ml-28  xl:text-4xl">
         SPLIT ACROSS{" "}
