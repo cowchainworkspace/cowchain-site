@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Scrollama, Step } from "react-scrollama";
+import React, { useState, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import Tag from "components/ui/tag";
 import bg from "assets/bg/values.png";
 import { cn } from "lib/utils";
+import TeamInfo from "./team-info";
 
 const benefitsData = [
   {
@@ -28,14 +28,14 @@ export const ValuesMobile = () => {
   const [scrollIndex, setScrollIndex] = useState(0);
 
   scrollYProgress.on("change", (yProgress) => {
-    setScrollIndex(parseInt(yProgress * 100 * 5));
+    setScrollIndex(parseInt(yProgress * 100 * 5.2));
   });
 
   return (
     <section
       ref={sectionRef}
       id="benefits"
-      className="relative h-[1500px] md:hidden  md:h-[3200px]"
+      className="relative h-[2000px] md:hidden  md:h-[3200px]"
     >
       <div className="sticky top-0">
         <img
@@ -47,7 +47,7 @@ export const ValuesMobile = () => {
           Get in touch
         </button>
         <div className="  flex h-screen flex-col xl:flex-row">
-          <div className="z-20 flex items-start justify-start border-b-th-fade border-r-th-fade bg-black md:h-screen xl:w-1/2 xl:items-center xl:border-b xl:border-r ">
+          <div className="z-20 flex items-start justify-start border-b border-b-th-fade border-r-th-fade bg-black md:h-screen xl:w-1/2 xl:items-center xl:border-b xl:border-r ">
             <div className="sticky  mb-12  ml-5 mt-16 flex max-w-[354px] flex-col items-start justify-start xl:mb-0 xl:ml-28">
               <Tag className={"mb-4 justify-start"} title={"our values"} />
               <p className="font-roc text-4xl font-medium  uppercase  text-white  xl:text-7xl">
@@ -65,7 +65,7 @@ export const ValuesMobile = () => {
             animate={{ y: -scrollIndex }}
             transition={{
               opacity: { ease: "linear" },
-              layout: { duration: 0.3 }
+              layout: { duration: 3 }
             }}
           >
             {benefitsData.map((benefit, index) => {
@@ -73,7 +73,7 @@ export const ValuesMobile = () => {
                 <div data={index + 1} key={benefit.title + index}>
                   <article
                     className={cn(
-                      "px-default last:borber-b relative flex max-h-[278px] grow flex-col items-center justify-center  overflow-hidden border-t border-t-th-fade py-6  will-change-transform last:border-b-th-fade lg:py-8"
+                      "px-default last:borber-b relative flex max-h-[278px] grow flex-col items-center justify-center overflow-hidden border-t border-t-th-fade  bg-black py-6 will-change-transform last:border-b  last:border-b-th-fade last:border-b-th-fade lg:py-8"
                     )}
                   >
                     <div className="flex flex-col  justify-center">
@@ -94,6 +94,7 @@ export const ValuesMobile = () => {
             })}
           </motion.div>
         </div>
+        <TeamInfo />
       </div>
     </section>
   );

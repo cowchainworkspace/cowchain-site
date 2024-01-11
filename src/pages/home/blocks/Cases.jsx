@@ -4,7 +4,8 @@ import triend_mobile from "assets/cases/triend-mobile.png";
 import retrobridge_mobile from "assets/cases/retrobridge-mobile.png";
 import step from "assets/cases/step.png";
 import finance_mobile from "assets/cases/finance-mobile.png";
-import { useInView, useScroll } from "framer-motion";
+
+import { useScroll } from "framer-motion";
 import React, {
   useRef,
   useState,
@@ -13,43 +14,63 @@ import React, {
   useEffect
 } from "react";
 import ResizeObserver from "resize-observer-polyfill";
-import {
-  motion,
-  useViewportScroll,
-  useTransform,
-  useSpring,
-  useMotionValue
-} from "framer-motion";
+import { motion, useTransform, useSpring, useMotionValue } from "framer-motion";
+import { ScrollProject } from "./ScrollProject";
 
 import useScrollPercentage from "react-scroll-percentage-hook";
 
-const casesData = [
+const projectsData = [
   {
-    title: "Exchange wallet app",
-    pic: marsan
+    title: "Crypto payment app",
+    link: "/cases/payment",
+    description:
+      "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
+    photo: marsan,
+    tags: ["React.js", "Solidity", "Subgraph"]
   },
   {
-    title: "Integration blockchain into hotel business",
-    pic: triend_mobile
+    title: "Blockchain integration into hotel business",
+    link: "/cases/hotel",
+
+    description:
+      "Decentralized plugin development for travelers’ review verification. Proof of Attendance Protocol (POAP) and reward system integration",
+    photo: triend_mobile,
+    tags: ["React.js", "Solidity", "Node.js"]
   },
   {
-    title: "Cross-chain transfer bridge",
-    pic: retrobridge_mobile
+    title: "CRYPTO WALLET APP",
+    link: "/cases/bridge",
+    description:
+      "Multichain mobile wallet development with AI integration for an optimized portfolio management",
+    photo: retrobridge_mobile,
+    tags: ["React Native", "Web3Auth", "Subgraph"]
   },
   {
-    title: "m2e platform",
-    pic: step
+    title: "Crypto payment app",
+    link: "/cases/payment",
+    description:
+      "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
+    photo: step,
+    tags: ["React.js", "Solidity", "Subgraph"]
   },
   {
-    title: "decentralized crypto exchange",
-    pic: finance_mobile
+    title: "Blockchain integration into hotel business",
+    link: "/cases/hotel",
+
+    description:
+      "Decentralized plugin development for travelers’ review verification. Proof of Attendance Protocol (POAP) and reward system integration",
+    photo: finance_mobile,
+    tags: ["React.js", "Solidity", "Node.js"]
   },
   {
-    title: "Crypto wallet app",
-    pic: eva
+    title: "CRYPTO WALLET APP",
+    link: "/cases/wallet",
+    description:
+      "Multichain mobile wallet development with AI integration for an optimized portfolio management",
+    photo: eva,
+    tags: ["React Native", "Web3Auth", "Subgraph"]
   }
 ];
-
 const Cases = () => {
   const scrollRef = useRef(null);
   const ghostRef = useRef(null);
@@ -103,19 +124,11 @@ const Cases = () => {
         <motion.div
           ref={scrollRef}
           style={{ x: spring }}
-          className="cases_wrapper relative flex gap-x-2 overflow-x-scroll p-2 md:gap-x-4 md:overflow-x-visible lg:py-8"
+          className="cases_wrapper relative flex overflow-x-scroll   md:overflow-x-visible  "
         >
-          {casesData &&
-            casesData.map((project, index) => (
-              <div
-                key={index}
-                style={{
-                  backgroundImage: `url(${project.pic})`
-                }}
-                className="relative flex h-64 w-full min-w-[256px] max-w-[256px] bg-cover bg-center bg-no-repeat p-6 md:p-8 lg:h-[30vw] lg:min-w-[30vw] lg:p-10"
-              >
-                <h2 className="mt-auto max-w-xs text-white">{project.title}</h2>
-              </div>
+          {projectsData &&
+            projectsData.map((project, index) => (
+              <ScrollProject index={index} {...project} />
             ))}
         </motion.div>
       </div>

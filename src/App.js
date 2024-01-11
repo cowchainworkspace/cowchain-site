@@ -10,6 +10,7 @@ import { Team } from "pages/team";
 import { ScrollToTop } from "components/ScrollToTop";
 import { Loading } from "components/loader/Loading";
 import { ParallaxProvider } from "react-scroll-parallax";
+import emailjs from "@emailjs/browser";
 
 const  Clients = lazy(() => import('pages/clients'))
 const  CaseStudiesMarsan = lazy(() => import('pages/case-studies/marsan') ) 
@@ -68,6 +69,7 @@ function App() {
 }
 
   useEffect(() => {
+    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
     setTimeout(() => {setLoading(false)}, 2000);
     cacheAssets(assets)
   }, [])

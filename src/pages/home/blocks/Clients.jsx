@@ -13,7 +13,7 @@ const Clients = () => {
         src={bg_lg}
       />
 
-      <div className="py-heading px-default relative border-b border-b-th-fade">
+      <div className="py-heading px-default relative">
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 lg:gap-16">
           <h3 className="lg:order-0 text-white">OUR CLIENTS</h3>
           <a

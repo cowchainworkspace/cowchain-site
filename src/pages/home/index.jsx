@@ -10,7 +10,7 @@ import { Loading } from "components/loader/Loading";
 
 const Clients = lazy(() => import("./blocks/Clients"));
 const Stack = lazy(() => import("components/stack"));
-const Projects = lazy(() => import("./blocks/Projects"));
+const Cases = lazy(() => import("./blocks/Cases"));
 const FAQ = lazy(() => import("./blocks/FAQ"));
 const Contact = lazy(() => import("components/Contact"));
 
@@ -25,7 +25,7 @@ const Home = ({ setBurgerOpen }) => {
         <Suspense loading={<Loading />}>
           <Stack title={"Our Expertise"} />
           <Clients />
-          <Projects />
+          <Cases />
           <Team />
           <FAQ />
           <Contact />

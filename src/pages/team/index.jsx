@@ -6,8 +6,6 @@ import TeamContact from "./blocks/TeamContact";
 import TeamGallery from "./blocks/TeamGallery";
 import { Values } from "./blocks/Values";
 import { ValuesMobile } from "./blocks/ValuesMobile";
-import team from "assets/team/team.png";
-import { motion, useScroll, useTransform } from "framer-motion";
 import Tag from "components/ui/tag";
 import linkedin from "assets/footer/linkedin.svg";
 import telegram from "assets/footer/telegram.svg";
@@ -15,20 +13,10 @@ import mail from "assets/footer/mail.svg";
 import team1 from "assets/team/team-carousel-2/team1.png";
 import team2 from "assets/team/team-carousel-2/team2.png";
 import team3 from "assets/team/team-carousel-2/team3.png";
-import ua from "assets/ua.png";
 
 const photos = [team1, team2, team3];
 
 export const Team = ({ setBurgerOpen }) => {
-  const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["end end", "start start"]
-  });
-
-  const marginTop = useTransform(scrollYProgress, [0.5, 0], [-50, 0]);
-
   return (
     <section className=" ">
       <div className="scrollbar-none relative  bg-black">
@@ -40,30 +28,7 @@ export const Team = ({ setBurgerOpen }) => {
         <HeroSection />
         <Values />
         <ValuesMobile />
-        <div className=" -mt-64 border-b border-b-th-fade pb-28  xl:mt-28">
-          <h3 className=" mx-5 mb-20 ml-5 max-w-[740px] text-2xl xl:mb-0 xl:ml-28  xl:text-4xl">
-            SPLIT ACROSS{" "}
-            <img
-              src={ua}
-              className="mx-2 mb-2 inline-block max-h-[25px] max-w-[25px]"
-              alt="ua"
-            />
-            UKRAINE AND EUROPE, WE WORK HARD AT FOSTERING AN ENVIRONMENT OF
-            TOGETHERNESS, CREATIVITY, AND CLOSE COLLABORATION.
-          </h3>
-          <div className="flex flex-col items-center">
-            <h1 className="mt-16 hidden text-center text-9xl xl:block">
-              team photo
-            </h1>
-            <motion.div ref={ref} style={{ marginTop }}>
-              <img
-                className="max-w-[375px] xl:max-w-[915px]"
-                src={team}
-                alt=""
-              />
-            </motion.div>
-          </div>
-        </div>
+
         <div className="mx-5 mt-14 flex flex-col gap-4  xl:mx-24 xl:mt-28 ">
           <Tag
             className={"max-w-[166px] xl:max-w-[200px]"}
