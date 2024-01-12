@@ -12,7 +12,7 @@ export const CaseGallery = () => {
       {photos.map((imgSrc, index) => (
         <img
           src={imgSrc}
-          className="h-[420px]  lg:h-[568px] "
+          className="h-[420px] min-w-fit lg:h-[568px] "
           alt=""
           key={index}
         />

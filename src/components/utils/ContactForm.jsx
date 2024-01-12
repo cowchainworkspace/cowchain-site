@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/modal_close.svg";
 import { useForm } from "react-hook-form";
-import { send } from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = ({ modalOpen, setModalOpen }) => {
   const {
@@ -17,7 +17,7 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
 
   const sendFormData = async (data, error) => {
     try {
-      send(
+      emailjs.send(
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         data,

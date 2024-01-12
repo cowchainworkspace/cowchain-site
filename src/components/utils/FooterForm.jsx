@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { send } from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import ModalPopup from "./ModalPopup";
 
@@ -17,7 +17,7 @@ const FooterForm = () => {
 
   const sendFormData = async (data, error) => {
     try {
-      send(
+      emailjs.send(
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         data,
@@ -26,6 +26,7 @@ const FooterForm = () => {
       reset();
       setshowModalPopup(true);
     } catch (e) {
+      console.log(e);
       setError(e);
       reset();
       setshowModalPopup(true);

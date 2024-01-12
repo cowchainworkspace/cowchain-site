@@ -4,7 +4,8 @@ import triend_mobile from "assets/cases/triend-mobile.png";
 import retrobridge_mobile from "assets/cases/retrobridge-mobile.png";
 import step from "assets/cases/step.png";
 import finance_mobile from "assets/cases/finance-mobile.png";
-import { useInView, useScroll } from "framer-motion";
+
+import { useScroll } from "framer-motion";
 import React, {
   useRef,
   useState,
@@ -13,43 +14,63 @@ import React, {
   useEffect
 } from "react";
 import ResizeObserver from "resize-observer-polyfill";
-import {
-  motion,
-  useViewportScroll,
-  useTransform,
-  useSpring,
-  useMotionValue
-} from "framer-motion";
+import { motion, useTransform, useSpring, useMotionValue } from "framer-motion";
+import { ScrollProject } from "./ScrollProject";
 
 import useScrollPercentage from "react-scroll-percentage-hook";
 
-const casesData = [
+const projectsData = [
   {
     title: "Exchange wallet app",
-    pic: marsan
+    link: "/cases/payment",
+    description:
+      "Fiat-to-crypto non-custodial exchange mobile app with seamless user experience for exchanging $CAD for BTC and ETH",
+    photo: marsan,
+    tags: ["React.js", "Solidity", "Subgraph"]
   },
   {
-    title: "Integration blockchain into hotel business",
-    pic: triend_mobile
+    title: "Blockchain integration into hotel business",
+    link: "/cases/hotel",
+
+    description:
+      "Plugin for travel, hotel, and recreation apps with a blockchain-powered review system and unique incentives for honest reviews from their customers.",
+    photo: triend_mobile,
+    tags: ["React.js", "Solidity", "Node.js"]
   },
   {
     title: "Cross-chain transfer bridge",
-    pic: retrobridge_mobile
+    link: "/cases/bridge",
+    description:
+      "Cross-chain bridge that allows users to swap tokens across multiple blockchain networks with minimized commissions.",
+    photo: retrobridge_mobile,
+    tags: ["React Native", "Web3Auth", "Subgraph"]
   },
   {
     title: "m2e platform",
-    pic: step
+    link: "/cases/move",
+    description:
+      "Robust ecosystem for fitness finance that contains multiple various applications: move to earn application, blockchain wallet, dex, launchpad, dashboard etc.",
+    photo: step,
+    tags: ["DEX", "Staking", "Move-to-earn"]
   },
   {
-    title: "decentralized crypto exchange",
-    pic: finance_mobile
+    title: "DECENTRALIZED CRYPTO EXCHANGE",
+    link: "/cases/finance",
+
+    description:
+      "Secure and convenient decentralized cryptocurrency exchange that allows to swap hundreds of crypto assets using liquidity pool mechanism.",
+    photo: finance_mobile,
+    tags: ["DEX", "DEFI"]
   },
   {
-    title: "Crypto wallet app",
-    pic: eva
+    title: "CRYPTO WALLET APP",
+    link: "/cases/wallet",
+    description:
+      "Non-custodial multichain crypto wallet which allows users to create a blockchain wallet using web2 socials like Google, Facebook, Apple, email in one click.",
+    photo: eva,
+    tags: ["Mobile App", "Non-custodial wallet"]
   }
 ];
-
 const Cases = () => {
   const scrollRef = useRef(null);
   const ghostRef = useRef(null);
@@ -103,19 +124,11 @@ const Cases = () => {
         <motion.div
           ref={scrollRef}
           style={{ x: spring }}
-          className="cases_wrapper relative flex gap-x-2 overflow-x-scroll p-2 md:gap-x-4 md:overflow-x-visible lg:py-8"
+          className="cases_wrapper relative flex overflow-x-scroll   md:overflow-x-visible  "
         >
-          {casesData &&
-            casesData.map((project, index) => (
-              <div
-                key={index}
-                style={{
-                  backgroundImage: `url(${project.pic})`
-                }}
-                className="relative flex h-64 w-full min-w-[256px] max-w-[256px] bg-cover bg-center bg-no-repeat p-6 md:p-8 lg:h-[30vw] lg:min-w-[30vw] lg:p-10"
-              >
-                <h2 className="mt-auto max-w-xs text-white">{project.title}</h2>
-              </div>
+          {projectsData &&
+            projectsData.map((project, index) => (
+              <ScrollProject index={index} {...project} />
             ))}
         </motion.div>
       </div>
