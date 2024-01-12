@@ -1,9 +1,10 @@
 import marsan from "assets/cases/marsan.png";
 import eva from "assets/cases/eva.png";
-import triend_mobile from "assets/cases/triend-mobile.png";
-import retrobridge_mobile from "assets/cases/retrobridge-mobile.png";
+import triend from "assets/cases/triend-fit.png";
+import bridge from "assets/cases/bridge-fit.png";
+
 import step from "assets/cases/step.png";
-import finance_mobile from "assets/cases/finance-mobile.png";
+import finance from "assets/cases/finance-fit.png";
 
 import { useScroll } from "framer-motion";
 import React, {
@@ -34,7 +35,7 @@ const projectsData = [
 
     description:
       "Plugin for travel, hotel, and recreation apps with a blockchain-powered review system and unique incentives for honest reviews from their customers.",
-    photo: triend_mobile,
+    photo: triend,
     tags: ["React.js", "Solidity", "Node.js"]
   },
   {
@@ -42,7 +43,7 @@ const projectsData = [
     link: "/cases/bridge",
     description:
       "Cross-chain bridge that allows users to swap tokens across multiple blockchain networks with minimized commissions.",
-    photo: retrobridge_mobile,
+    photo: bridge,
     tags: ["React Native", "Web3Auth", "Subgraph"]
   },
   {
@@ -59,7 +60,7 @@ const projectsData = [
 
     description:
       "Secure and convenient decentralized cryptocurrency exchange that allows to swap hundreds of crypto assets using liquidity pool mechanism.",
-    photo: finance_mobile,
+    photo: finance,
     tags: ["DEX", "DEFI"]
   },
   {
@@ -107,23 +108,23 @@ const Cases = () => {
 
   const transform = useTransform(
     scrollYProgress,
-    [0, 1],
+    [0, 0.7],
     [0, -scrollRange + viewportW]
   );
-  const physics = {
-    damping: 50,
-    mass: 0.2,
-    stiffness: 4500,
-    velocity: 100
-  };
-  const spring = useSpring(transform, physics);
+  // const physics = {
+  //   damping: 20,
+  //   mass: 0.2,
+  //   stiffness: 2000,
+  //   velocity: 100
+  // };
+  // const spring = useSpring(transform, physics);
 
   return (
     <section ref={containerRef} className="relative z-10">
       <div className="scroll-container top-[30%] border-y border-y-th-fade md:overflow-hidden xl:top-[20%]">
         <motion.div
           ref={scrollRef}
-          style={{ x: spring }}
+          style={{ x: transform }}
           className="cases_wrapper relative flex overflow-x-scroll   md:overflow-x-visible  "
         >
           {projectsData &&
@@ -134,7 +135,7 @@ const Cases = () => {
       </div>
       <div
         ref={ghostRef}
-        style={{ height: scrollRange }}
+        style={{ height: scrollRange - scrollRange / 2 }}
         className="ghost hidden md:block"
       />
     </section>
