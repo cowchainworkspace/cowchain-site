@@ -4,7 +4,7 @@ export const TeamCard = ({ name, role, photo, social, index }) => {
   return (
     <div
       className={cn(
-        "relative flex h-full flex-col gap-y-2 border-b  border-b-th-fade border-r-th-fade px-4 py-[8vh] text-left last:border-b-0 md:border-r md:last:border-b xl:py-[12vh]",
+        "relative flex h-full flex-col gap-y-2 border-b  border-b-th-fade border-r-th-fade px-4 py-[8vh] text-left last:border-b-0 md:border-r md:last:border-b xl:py-[15vh]",
         {
           "border-r": index % 2 === 0
         }

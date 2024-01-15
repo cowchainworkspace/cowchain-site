@@ -63,61 +63,16 @@ const teamData = [
       icon: linkedin,
       url: "https://www.linkedin.com/in/bohdan-solomakha-750a14240/"
     }
-  },
-  {
-    name: "Veronika",
-    role: "Marketing manager",
-    photo: photo6,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "https://www.linkedin.com/in/veronika-volkonovska-12318b250/"
-    }
-  },
-  {
-    name: "Ruslan",
-    role: "Lead Generation manager",
-    photo: photo7,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "https://www.linkedin.com/in/ruslan-siniaiev-600340240/"
-    }
-  },
-  {
-    name: "Saminu",
-    role: "Full-stack Web3 developer",
-    photo: photo8,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "https://www.linkedin.com/in/smailafiiia/"
-    }
-  },
-  {
-    name: "Alexander",
-    role: "Project Manager",
-    photo: photo9,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "https://www.linkedin.com/in/alexander-barabash-9a76aa217/"
-    }
   }
 ];
 
 export const Team = () => {
   return (
     <section id="team" className="relative">
-      <div className="relative grid grid-cols-1 overflow-hidden lg:grid-cols-5">
-        <img
-          className="absolute -bottom-[35%] z-[1] hidden    lg:block"
-          src={bg}
-          alt=""
-        />
-        <div className="md-border-r py-heading px-default z-10 flex flex-col gap-y-6 border-b border-b-th-fade text-center lg:col-span-2 lg:text-left">
-          <h3 className="text-center lg:text-left">OUR TEAM</h3>
-          <a href="/team" className="mx-auto lg:mx-0">
+      <div className="relative grid grid-cols-1 overflow-hidden">
+        <div className="md-border-r py-heading px-default z-10 flex flex-col gap-y-6 border-b border-b-th-fade text-center">
+          <h3 className="text-center">OUR TEAM</h3>
+          <a href="/team" className="mx-auto">
             <div className="flex items-center gap-x-2">
               <p className="header uppercase text-white underline">
                 MEET COWCHAIN
@@ -126,7 +81,7 @@ export const Team = () => {
             </div>
           </a>
         </div>
-        <div className="team_wrapper grid grid-cols-2 border-b border-b-th-fade bg-black md:grid-cols-3 lg:col-span-3">
+        <div className="team_wrapper grid grid-cols-2 border-b border-b-th-fade bg-black md:grid-cols-5 lg:grid-cols-5">
           {teamData.map((member, index) => (
             <TeamCard key={index} index={index} {...member} />
           ))}
