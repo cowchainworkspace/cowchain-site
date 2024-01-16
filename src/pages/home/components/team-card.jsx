@@ -4,14 +4,14 @@ export const TeamCard = ({ name, role, photo, social, index }) => {
   return (
     <div
       className={cn(
-        "group relative flex h-full flex-col gap-y-2 border-b  border-b-th-fade border-r-th-fade     text-left last:border-b-0 md:border-r md:last:border-b  ",
+        "group relative flex h-full min-h-[200px] flex-col  justify-start gap-y-2 border-b  border-b-th-fade border-r-th-fade     text-left last:border-b-0 md:border-r md:last:border-b  ",
         {
           "border-r": index % 2 === 0
         }
       )}
     >
       <div
-        className="flex h-full min-h-[398px] w-full bg-cover bg-top bg-no-repeat p-8"
+        className="flex min-h-[187px] w-full  self-center bg-cover bg-top bg-no-repeat p-8 md:min-h-[398px]"
         style={{ backgroundImage: `url(${photo})` }}
       ></div>
       <div>
