@@ -10,6 +10,7 @@ import { Team } from "pages/team";
 import { ScrollToTop } from "components/ScrollToTop";
 import { Loading } from "components/loader/Loading";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { Policy } from "pages/policy";
 import emailjs from "@emailjs/browser";
 
 const  Clients = lazy(() => import('pages/clients'))
@@ -17,7 +18,6 @@ const  CaseStudiesMarsan = lazy(() => import('pages/case-studies/marsan') )
 const  CaseStudiesEva = lazy(() => import('pages/case-studies/eva') )  
 const  CaseStudiesTriend = lazy(() => import('pages/case-studies/triend') ) 
 const  CaseStudiesFinance = lazy(() => import('pages/case-studies/finance') ) 
-
 
 const assets = [
    {
@@ -139,6 +139,10 @@ function App() {
               <Route
                 path="/team"
                 element={<Team setBurgerOpen={setBurgerOpen} />}
+              />
+               <Route
+                path="/policy"
+                element={<Policy setBurgerOpen={setBurgerOpen} />}
               />
             </Routes>
           </HashRouter>

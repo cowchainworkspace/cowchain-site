@@ -203,9 +203,9 @@ export const Footer = () => {
                 <AnchorLink href="#contact">
                   <p className="text-[#bbb]">Contact Us</p>
                 </AnchorLink>
-                <a href="#" target="_blank" rel="nofollow">
+                <Link to={"/policy"}>
                   <p className="text-[#bbb]">Privacy Policy</p>
-                </a>
+                </Link>
                 <AnchorLink href="#faq">
                   <p className="text-[#bbb]">FAQs</p>
                 </AnchorLink>
