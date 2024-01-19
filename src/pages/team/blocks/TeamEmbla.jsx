@@ -60,7 +60,7 @@ const TeamEmblaCarousel = (props) => {
                 key={index}
               >
                 <img
-                  className="block h-[220px] w-full object-cover md:h-[380px]"
+                  className="block h-[220px] w-full object-cover md:h-[590px]"
                   src={imageByIndex(index)}
                   alt="Your alt text"
                 />
