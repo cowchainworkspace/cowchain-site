@@ -1,8 +1,8 @@
 import React from "react";
 import Tag from "components/ui/tag";
 import bg_lg from "assets/bg/clients_header_bg_lg.png";
-import stack from "assets/services/stack.png";
-import stack_mobile from "assets/services/stack-mobile.png";
+import stack from "assets/services/stack.svg";
+import stack_mobile from "assets/services/stack-mobile.svg";
 
 export const HeroSection = () => {
   return (
@@ -29,7 +29,7 @@ export const HeroSection = () => {
       </div>
       <div className="container mt-20 max-w-[360px] md:max-w-[1300px] lg:mt-28">
         <img
-          className="  hidden w-full self-center     md:block md:h-auto md:object-fill"
+          className="  mb-4 hidden w-full self-center antialiased md:block md:h-auto  md:object-fill lg:scale-[1.15] min-[2000px]:mb-6 min-[2000px]:scale-125"
           src={stack}
           alt=""
         />{" "}

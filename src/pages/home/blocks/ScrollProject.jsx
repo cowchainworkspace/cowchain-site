@@ -31,7 +31,7 @@ export const ScrollProject = ({
           VIEW PROJECT
         </Link>
         <div className="absolute bottom-5 flex max-w-[270px] flex-col gap-y-4 md:max-w-none">
-          <div className="flex items-center gap-x-1 md:gap-x-2">
+          <div className="hidden items-center gap-x-1 md:flex md:gap-x-2">
             {tags.map((tag, index) => (
               <div key={index} className="rounded-full bg-white px-3 py-2">
                 <p className="text-xs font-medium text-black lg:text-sm">
