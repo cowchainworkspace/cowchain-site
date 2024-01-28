@@ -56,11 +56,11 @@ const TeamEmblaCarousel = (props) => {
           <div className="flex min-w-0 flex-row">
             {slides.map((index) => (
               <div
-                className="relative flex-[0_0_55%] p-1 md:flex-[0_0_30%]"
+                className="relative flex-[0_0_290px] p-1 md:flex-[0_0_590px]"
                 key={index}
               >
                 <img
-                  className="block h-[220px] w-full object-cover md:h-[380px]"
+                  className="block h-[220px] w-full object-cover md:h-[590px]"
                   src={imageByIndex(index)}
                   alt="Your alt text"
                 />

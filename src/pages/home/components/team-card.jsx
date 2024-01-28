@@ -4,7 +4,7 @@ export const TeamCard = ({ name, role, photo, social, index }) => {
   return (
     <div
       className={cn(
-        "group relative flex h-full min-h-[200px] flex-col  justify-start gap-y-2 border-b  border-b-th-fade border-r-th-fade     text-left last:border-b-0 md:border-r md:last:border-b  ",
+        "group relative flex h-full min-h-[200px] flex-col  justify-start  border-b border-b-th-fade  border-r-th-fade text-left     last:border-b-0 md:gap-y-2 md:border-r md:last:border-b  ",
         {
           "border-r": index % 2 === 0
         }
@@ -15,9 +15,11 @@ export const TeamCard = ({ name, role, photo, social, index }) => {
         style={{ backgroundImage: `url(${photo})` }}
       ></div>
       <div>
-        <div className="flex flex-col justify-between gap-[14px] px-5 py-4">
+        <div className="flex flex-col justify-between  gap-2 px-3 py-4   md:px-5">
           <h2 className="z-10 font-roc text-lg">{name}</h2>
-          <p className="caption z-10 uppercase">{role}</p>
+          <p className="z-10 text-xs  uppercase text-[#BBB] md:text-sm">
+            {role}
+          </p>
         </div>
       </div>
 
