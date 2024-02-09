@@ -109,9 +109,9 @@ const Stack = ({
     <section id="expertise" className={cn("relative   md:mt-0", margin)}>
       <div className="relative z-20 grid lg:grid-cols-3">
         <div className="py-heading px-default md-border-r relative  flex justify-center  border-b border-b-th-fade text-center md:col-span-1">
-          <h3 className="z-10 max-w-[183px] cursor-default text-center text-4xl uppercase leading-[40px] md:max-w-none md:text-left md:text-[60px] md:leading-[53px]">
+          <h2 className="z-10 max-w-[183px] cursor-default text-center text-4xl uppercase leading-[40px] md:max-w-none md:text-left md:text-[60px] md:leading-[53px]">
             {title}
-          </h3>
+          </h2>
           {isGradient && (
             <img src={clients} className={gradientStyles} alt="" />
           )}

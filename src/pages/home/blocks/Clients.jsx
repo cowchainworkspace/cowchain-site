@@ -1,5 +1,4 @@
 import React from "react";
-import bg from "assets/homepage/clients_bg.png";
 import bg_lg from "assets/bg/home-clients.png";
 import arrow from "assets/arrow_right.svg";
 import { Counter } from "../../home/components/counter";
@@ -16,7 +15,9 @@ const Clients = () => {
 
       <div className="py-heading px-default relative">
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 lg:gap-16">
-          <h3 className="lg:order-0 text-white">OUR CLIENTS</h3>
+          <h2 className="lg:order-0 text-4xl uppercase text-white  md:text-[60px]">
+            OUR CLIENTS
+          </h2>
           <Link
             to="/cases"
             className="hidden lg:order-1 lg:my-auto lg:ml-auto lg:block"

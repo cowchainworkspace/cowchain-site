@@ -44,9 +44,9 @@ const FAQ = () => {
     <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-5">
         <div className="py-heading px-default md-border-r flex justify-center border-b border-b-th-fade text-center md:col-span-2">
-          <h3 className="flex max-w-[321px] justify-center text-center md:max-w-[365px] md:text-left">
+          <h2 className="flex max-w-[321px] justify-center text-center text-4xl uppercase leading-[40px]  text-white md:max-w-[365px] md:text-left md:text-[60px] md:leading-[53px]">
             FREQUENTLY ASKED QUESTIONS
-          </h3>
+          </h2>
         </div>
         <div className="md:col-span-3">
           <Accordion allowToggle>
@@ -63,10 +63,10 @@ const FAQ = () => {
                     key={index}
                   >
                     <AccordionButton className={cn("relative")}>
-                      <div className="mr-auto w-full max-w-3xl ">
-                        <h2 className="max-w-2xl text-left !text-base !leading-none lg:!text-xl lg:!leading-none">
+                      <div className="mr-auto w-full max-w-3xl text-left ">
+                        <span className="max-w-2xl text-left font-roc !text-base font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
                           {faq.title}
-                        </h2>
+                        </span>
                       </div>
                       {isExpanded ? (
                         <svg

@@ -46,7 +46,7 @@ const faqRows = {
           <AnchorLink href="#contact">
             <p>Contact Us</p>
           </AnchorLink>
-          <Link to={'/policy'}>
+          <Link to={"/policy"}>
             <p>Privacy Policy</p>
           </Link>
           <AnchorLink href="#faq">
@@ -111,7 +111,9 @@ export const Footer = () => {
     <section id="footer" className="relative">
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="md-border-r py-heading px-default flex flex-col gap-y-8 border-b border-b-th-fade text-center">
-          <h2 className="text-center md:text-left">What’s on your mind?</h2>
+          <span className="text-center font-roc text-xl font-medium uppercase text-white md:text-left">
+            What’s on your mind?
+          </span>
           <div className="max-w-xl">
             <p className="text-center text-[#bbb] md:text-left">
               Submit your email address and our team will get in touch with you

@@ -116,7 +116,9 @@ export const Team = () => {
           alt=""
         />
         <div className="md-border-r py-heading px-default z-10 flex flex-col gap-y-6 border-b border-b-th-fade text-center lg:col-span-2 lg:text-left min-[2000px]:col-span-3">
-          <h3 className="text-center lg:text-left">OUR TEAM</h3>
+          <h2 className="text-center text-4xl uppercase text-white  md:text-[60px] lg:text-left">
+            OUR TEAM
+          </h2>
           <a href="/team" className="mx-auto lg:mx-0">
             <div className="flex items-center gap-x-2">
               <p className="header uppercase text-white underline">

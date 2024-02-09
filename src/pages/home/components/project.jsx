@@ -44,7 +44,7 @@ export const Project = ({
               </div>
             ))}
           </div>
-          <h2 className="mt-2">{title}</h2>
+          <span className="mt-2">{title}</span>
           <p className="body max-w-sm !text-[#bbb]">{description}</p>
         </div>
       </Link>

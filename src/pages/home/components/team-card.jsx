@@ -16,7 +16,9 @@ export const TeamCard = ({ name, role, photo, social, index }) => {
       ></div>
       <div>
         <div className="flex flex-col justify-between  gap-2 px-3 py-4   md:px-5">
-          <h2 className="z-10 font-roc text-lg">{name}</h2>
+          <span className="z-10 font-roc text-lg uppercase text-white">
+            {name}
+          </span>
           <p className="z-10 text-xs  uppercase text-[#BBB] md:text-sm">
             {role}
           </p>
