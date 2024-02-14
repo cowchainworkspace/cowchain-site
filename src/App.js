@@ -147,7 +147,7 @@ function App() {
                 path="/policy"
                 element={<Policy setBurgerOpen={setBurgerOpen} />}
               />
-              <Route path="*" element={<PageNotFound />} />
+              <Route path="*" status={404} element={<PageNotFound />} />
             </Routes>
           </HashRouter>
         </ParallaxProvider>
