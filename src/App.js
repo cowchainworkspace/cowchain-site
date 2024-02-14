@@ -11,8 +11,8 @@ import { ScrollToTop } from "components/ScrollToTop";
 import { Loading } from "components/loader/Loading";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { Policy } from "pages/policy";
-import { PageNotFound } from "components/PageNotFound";
 import emailjs from "@emailjs/browser";
+import { PageNotFound } from "components/PageNotFound";
 
 const Clients = lazy(() => import("pages/clients"));
 const CaseStudiesMarsan = lazy(() => import("pages/case-studies/marsan"));

@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+
 import poster from "assets/homepage/thumbnail.png";
 import upwork from "assets/homepage/upwork.svg";
 import clutch from "assets/homepage/clutch.svg";
