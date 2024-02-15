@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import bg_lg from "assets/bg/clients_header_bg_lg.png";
 import Tag from "components/ui/tag";
-import Filters from "components/icons/filters";
-import Close from "components/icons/close";
-import { Category } from "components/ui/category";
-import { Popover } from "antd";
-import { AllFilters } from "../components/all-filters";
+import { Helmet } from "react-helmet";
 
 const categories = ["Staking", "Mobile App", "DEX", "NFT"];
 
@@ -22,6 +18,9 @@ export const HeroSection = ({ setTags, tags }) => {
 
   return (
     <section className="relative pt-20 lg:pt-[120px]">
+      <Helmet>
+        <link rel="canonical" href={"https://cowchain.io/cases"} />
+      </Helmet>
       <img
         alt=""
         className="absolute right-0 top-0 min-h-[150%] min-w-[200vw] md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"

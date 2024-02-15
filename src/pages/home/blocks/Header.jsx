@@ -6,6 +6,7 @@ import clutch from "assets/homepage/clutch.svg";
 import bg_top from "assets/bg/header_top.png";
 import bg_top_lg from "assets/bg/header_top_lg.png";
 import ModalVideo from "react-modal-video";
+import { Helmet } from "react-helmet";
 
 export const Header = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -17,6 +18,9 @@ export const Header = () => {
       id="header"
     >
       <div className="video-wrapper min-h-full">
+        <Helmet>
+          <link rel="canonical" href={"https://cowchain.io/"} />
+        </Helmet>
         <video
           className="mt-[68px]"
           id="bg_vid"
