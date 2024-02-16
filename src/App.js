@@ -1,5 +1,5 @@
 import React, { useState, Suspense, useEffect, lazy } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CaseStudiesStep } from "pages/case-studies/step";
 import { CaseStudiesRetroBridge } from "pages/case-studies/retrobridge";
 import { Cases } from "pages/cases";
@@ -84,7 +84,7 @@ function App() {
     <div className="App">
       <Suspense loading={<Suspense />}>
         <ParallaxProvider>
-          <HashRouter>
+          <BrowserRouter>
             <ScrollToTop />
             <Routes>
               <Route
@@ -149,7 +149,7 @@ function App() {
               />
               <Route path="*" status={404} element={<PageNotFound />} />
             </Routes>
-          </HashRouter>
+          </BrowserRouter>
         </ParallaxProvider>
       </Suspense>
     </div>
