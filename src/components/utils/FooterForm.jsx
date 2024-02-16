@@ -26,7 +26,6 @@ const FooterForm = () => {
       reset();
       setshowModalPopup(true);
     } catch (e) {
-      console.log(e);
       setError(e);
       reset();
       setshowModalPopup(true);

@@ -63,7 +63,6 @@ const Projects = () => {
         if (scroll < 900) {
           setScrollProgress(scrollProgress + 10);
           scroll += scroll + 10;
-          console.log("scrollProgress" + scrollProgress);
         } else {
           e.originalEvent();
         }
