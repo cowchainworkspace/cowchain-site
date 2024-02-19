@@ -47,7 +47,6 @@ p,
 .p {
   @apply text-sm font-normal  leading-normal text-white md:text-base;
 }
- 
 
 .header {
   @apply font-roc text-lg font-medium uppercase underline md:text-xl lg:text-2xl;
