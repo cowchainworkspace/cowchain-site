@@ -41,32 +41,14 @@ const Projects = () => {
   const windowHeight = document.documentElement.clientHeight;
   const animationHeight = windowHeight - elementHeight * 0.5;
 
-  const [scrollProgress, setScrollProgress] = useState(0);
-
   useEffect(() => {
     setElementHeight(scrollRef.current.getBoundingClientRect().height);
     setElementWidth(scrollRef.current.getBoundingClientRect().width);
   });
 
   useEffect(() => {
-    const project1 = document.querySelector("#project1");
-    const project2 = document.querySelector("#project2");
-    const project3 = document.querySelector("#project3");
-
-    let scroll = 0;
-
     const handleWheel = (e) => {
       setElementTop(scrollContainer.current.getBoundingClientRect().top);
-      /* const isScrollingDown = Math.sign(e.deltaY) === 1;
-      if ((windowHeight - elementHeight) / 2 > elementTop) {
-        e.preventDefault();
-        if (scroll < 900) {
-          setScrollProgress(scrollProgress + 10);
-          scroll += scroll + 10;
-        } else {
-          e.originalEvent();
-        }
-      } */
     };
 
     if (isInView && window.innerWidth > 768) {

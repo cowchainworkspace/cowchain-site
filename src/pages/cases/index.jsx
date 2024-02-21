@@ -60,7 +60,6 @@ const cases = [
 
 export const Cases = ({ setBurgerOpen }) => {
   const [tags, setTags] = useState([]);
-  // const [isLoading, setIsLoading] = useState(false);
   const filteredCases = useMemo(() => {
     if (tags.length === 0) return cases;
     return cases.filter((product) => {
@@ -70,10 +69,6 @@ export const Cases = ({ setBurgerOpen }) => {
   const [count, setCount] = useState(6);
 
   useEffect(() => {
-    // setIsLoading(true);
-    // setTimeout(() => {
-    //   setIsLoading(false);
-    // }, 1000);
     if (tags.length === 0) setCount(6);
     else setCount(filteredCases.length);
   }, [tags]);
@@ -89,11 +84,6 @@ export const Cases = ({ setBurgerOpen }) => {
           ))}
         </div>
 
-        {/* <ViewMoreSection
-          setCount={setCount}
-          count={count}
-          casesCount={filteredCases.length}
-        /> */}
         <Footer />
       </div>
     </section>

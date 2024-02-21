@@ -4,7 +4,7 @@ import triend_mobile from "assets/cases/triend-mobile.png";
 import retrobridge_mobile from "assets/cases/retrobridge-mobile.png";
 import step from "assets/cases/step.png";
 import finance_mobile from "assets/cases/finance-mobile.png";
-import { useInView, useScroll } from "framer-motion";
+import { useScroll } from "framer-motion";
 import React, {
   useRef,
   useState,

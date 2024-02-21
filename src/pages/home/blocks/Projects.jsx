@@ -1,9 +1,9 @@
-import React, { useState, useRef, useLayoutEffect } from "react";
+import React, { useState, useRef } from "react";
 import pic1 from "assets/homepage/projects/1.jpg";
 import pic2 from "assets/homepage/projects/2.jpg";
 import pic3 from "assets/homepage/projects/3.jpg";
 import { Scrollama, Step } from "react-scrollama";
-import { motion, useScroll } from "framer-motion";
+import { useScroll } from "framer-motion";
 
 import { Project } from "../../home/components/project";
 

@@ -1,17 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/modal_close.svg";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { send } from "emailjs-com";
-import { Select, Space } from "antd";
-import ReactCountryFlag from "react-country-flag";
 
 const ConnectForm = ({ modalOpen, setModalOpen }) => {
   const {
     register,
     handleSubmit,
     reset,
-    control,
     formState: { errors }
   } = useForm();
 
@@ -33,8 +30,6 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
     setSendSuccess(true);
     setModalOpen(false);
   };
-
-  const searchInput = useRef(null);
 
   return (
     <Popup

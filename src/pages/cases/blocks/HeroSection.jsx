@@ -1,21 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import bg_lg from "assets/bg/clients_header_bg_lg.png";
 import Tag from "components/ui/tag";
 import { Helmet } from "react-helmet";
 
-const categories = ["Staking", "Mobile App", "DEX", "NFT"];
-
 export const HeroSection = ({ setTags, tags }) => {
-  const [open, setOpen] = useState(false);
-
-  const hide = () => {
-    setOpen(false);
-  };
-
-  const handleOpenChange = (newOpen) => {
-    setOpen(newOpen);
-  };
-
   return (
     <section className="relative pt-20 lg:pt-[120px]">
       <Helmet>
@@ -31,36 +19,7 @@ export const HeroSection = ({ setTags, tags }) => {
         <h1 className="mt-4 cursor-default text-5xl uppercase text-white lg:mt-6 lg:max-w-[1200px] lg:text-[100px]">
           we offer the diversity of skills
         </h1>
-        <div className="my-14 flex items-center justify-end gap-2 lg:justify-between">
-          {/* <div className=" hidden max-h-[46px] items-center gap-2 lg:flex">
-            {categories.map((title, index) => (
-              <Category
-                tags={tags}
-                setTags={setTags}
-                key={index}
-                title={title}
-              />
-            ))}
-          </div> */}
-          {/* <Popover
-            className="relative"
-            titleMinWidth={300}
-            trigger="click"
-            placement="bottom"
-            open={open}
-            onOpenChange={handleOpenChange}
-            content={<AllFilters tags={tags} setTags={setTags} />}
-          >
-            <button className="flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-[36px] border border-white bg-transparent px-6 py-[11px] text-sm uppercase leading-[14px] text-white xl:text-base">
-              {!open ? (
-                <Filters className={"h-4 w-4"} />
-              ) : (
-                <Close className={"h-4 w-4"} />
-              )}
-              All filters
-            </button>
-          </Popover> */}
-        </div>
+        <div className="my-14 flex items-center justify-end gap-2 lg:justify-between"></div>
       </div>
     </section>
   );

@@ -7,7 +7,7 @@ import success from "../../assets/footer/success.svg";
 const ModalPopup = ({ isOpen, toggleOpen, isError }) => {
   const successText = (
     <div className="flex flex-col">
-      <img className="mx-auto w-12" src={success}></img>
+      <img alt="" className="mx-auto w-12" src={success}></img>
       <p className="mt-4 text-center font-roc text-2xl font-medium uppercase text-white">
         Thanks! <br></br>
         Your request was sent successfully. <br></br> We will contact you in
@@ -18,7 +18,7 @@ const ModalPopup = ({ isOpen, toggleOpen, isError }) => {
 
   const errorText = (
     <div className="flex flex-col">
-      <img className="mx-auto w-12" src={error}></img>
+      <img alt="" className="mx-auto w-12" src={error}></img>
       <p className="mt-4 text-center font-roc text-xl font-normal text-[#bbb]">
         Sorry, an error occured...
       </p>
