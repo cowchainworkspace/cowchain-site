@@ -81,7 +81,7 @@ const Feedback = () => {
               <div className="flex items-center gap-x-[28px]">
                 <a
                   href="https://clutch.co/profile/cowchain"
-                  rel="nofollow"
+                  rel="nofollow noreferrer"
                   target="_blank"
                 >
                   <img className="w-12 md:w-16" src={clutch} alt=""></img>
@@ -108,7 +108,7 @@ const Feedback = () => {
               <div className="flex items-center gap-x-6">
                 <a
                   href="https://www.upwork.com/ag/cowchain/"
-                  rel="nofollow"
+                  rel="nofollow noreferrer"
                   target="_blank"
                 >
                   <img className="w-12 md:w-16" src={upwork} alt=""></img>

@@ -13,13 +13,7 @@ import React, {
   useEffect
 } from "react";
 import ResizeObserver from "resize-observer-polyfill";
-import {
-  motion,
-  useViewportScroll,
-  useTransform,
-  useSpring,
-  useMotionValue
-} from "framer-motion";
+import { motion, useTransform, useSpring, useMotionValue } from "framer-motion";
 
 import useScrollPercentage from "react-scroll-percentage-hook";
 

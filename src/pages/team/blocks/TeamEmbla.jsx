@@ -10,19 +10,8 @@ const TeamEmblaCarousel = (props) => {
     Autoplay({ delay: 2500 })
   ]);
 
-  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
-  const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
-
-  const scrollPrev = useCallback(
-    () => emblaApi && emblaApi.scrollPrev(),
-    [emblaApi]
-  );
-  const scrollNext = useCallback(
-    () => emblaApi && emblaApi.scrollNext(),
-    [emblaApi]
-  );
 
   const scrollTo = useCallback(
     (index) => emblaApi && emblaApi.scrollTo(index),
@@ -35,8 +24,6 @@ const TeamEmblaCarousel = (props) => {
 
   const onSelect = useCallback((emblaApi) => {
     setSelectedIndex(emblaApi.selectedScrollSnap());
-    setPrevBtnDisabled(!emblaApi.canScrollPrev());
-    setNextBtnDisabled(!emblaApi.canScrollNext());
   }, []);
 
   useEffect(() => {

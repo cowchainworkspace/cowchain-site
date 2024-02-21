@@ -8,7 +8,7 @@ import ModalVideo from "react-modal-video";
 import { Helmet } from "react-helmet";
 
 export const Header = () => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth] = useState(window.innerWidth);
 
   const [isOpen, setOpen] = useState(false);
   return (
@@ -41,7 +41,7 @@ export const Header = () => {
           <img
             srcSet={`${bg_top} 360w, ${bg_top} 480w, ${bg_top} 720w, ${bg_top_lg} 1920w`}
             sizes="(max-width: 640px) 100vw, 100vw"
-            alt="Photo 1"
+            alt=""
             className="absolute left-0 top-0 hidden w-full md:block"
             src={bg_top_lg}
           />
@@ -53,14 +53,14 @@ export const Header = () => {
             <div className="relative flex items-center md:gap-x-1">
               <a
                 href="https://www.upwork.com/ag/cowchain/"
-                rel="nofollow"
+                rel="nofollow noreferrer"
                 target="_blank"
               >
                 <img className="w-11 md:w-[70px]" src={upwork} alt=""></img>
               </a>
               <a
                 href="https://clutch.co/profile/cowchain"
-                rel="nofollow"
+                rel="nofollow noreferrer"
                 target="_blank"
               >
                 <img className="w-11 md:w-[70px]" src={clutch} alt=""></img>
@@ -74,28 +74,6 @@ export const Header = () => {
                     <p className="body1 text-base">Mykhailo Adzhoiev</p>
                     <p className="text-sm  text-secondary">Founder & CTO</p>
                   </div>
-                  {/* <button
-                  className="btn-play mt-4 md:mt-0"
-                  onClick={() => setOpen(true)}
-                >
-                  <div className="flex items-center justify-center gap-x-2">
-                    <div className="mb-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="14"
-                        viewBox="0 0 12 14"
-                        fill="none"
-                      >
-                        <path
-                          d="M12 7L-6.52533e-07 13.9282L-4.68497e-08 0.0717964L12 7Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </div>
-                    WATCH INTERVIEW
-                  </div>
-                </button> */}
                 </div>
               </div>
             </div>

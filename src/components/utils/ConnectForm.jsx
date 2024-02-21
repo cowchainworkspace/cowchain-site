@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/modal_close.svg";
 import { useForm } from "react-hook-form";
@@ -12,9 +12,6 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
     formState: { errors }
   } = useForm();
 
-  const [sendError, setSendError] = useState(false);
-  const [sendSuccess, setSendSuccess] = useState(false);
-
   const sendFormData = async (data, error) => {
     try {
       send(
@@ -23,11 +20,9 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
         data,
         process.env.REACT_APP_DEV_EMAILJS_PUBLIC_KEY
       );
-    } catch (e) {
-      setSendError(true);
-    }
+    } catch (e) {}
     reset();
-    setSendSuccess(true);
+
     setModalOpen(false);
   };
 

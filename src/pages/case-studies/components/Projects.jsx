@@ -35,7 +35,6 @@ const Projects = () => {
   const isInView = useInView(scrollRef, { amount: 0.5 });
 
   const [elementHeight, setElementHeight] = useState(0);
-  const [elementWidth, setElementWidth] = useState(0);
   const [elementTop, setElementTop] = useState(0);
 
   const windowHeight = document.documentElement.clientHeight;
@@ -43,8 +42,7 @@ const Projects = () => {
 
   useEffect(() => {
     setElementHeight(scrollRef.current.getBoundingClientRect().height);
-    setElementWidth(scrollRef.current.getBoundingClientRect().width);
-  });
+  }, []);
 
   useEffect(() => {
     const handleWheel = (e) => {

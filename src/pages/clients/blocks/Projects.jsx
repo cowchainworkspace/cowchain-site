@@ -105,13 +105,6 @@ const Projects = () => {
           </div>
         </div>
         <div className="relative md:col-span-4">
-          {/* <div
-            className={
-              index === 2
-                ? "section-rendered h-4"
-                : "section-rendered h-4 md:h-[50vh]"
-            }
-          ></div> */}
           <div className="section-rendered h-4"></div>
           <Scrollama
             offset={0.5}
@@ -120,7 +113,6 @@ const Projects = () => {
           >
             {sectionsData &&
               sectionsData.map((section, index) => {
-                const active = index + 1 === currentStepIndex;
                 return (
                   <Step data={index + 1} key={index}>
                     <article

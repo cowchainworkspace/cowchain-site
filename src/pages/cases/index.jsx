@@ -71,7 +71,7 @@ export const Cases = ({ setBurgerOpen }) => {
   useEffect(() => {
     if (tags.length === 0) setCount(6);
     else setCount(filteredCases.length);
-  }, [tags]);
+  }, [filteredCases.length, tags]);
 
   return (
     <section id="clients-wrapper">
