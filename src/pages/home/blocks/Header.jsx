@@ -1,20 +1,19 @@
 import { useState } from "react";
-import poster from "assets/homepage/thumbnail.png";
 import upwork from "assets/homepage/upwork.svg";
 import clutch from "assets/homepage/clutch.svg";
 import bg_top from "assets/bg/header_top.png";
 import bg_top_lg from "assets/bg/header_top_lg.png";
 import ModalVideo from "react-modal-video";
 import { Helmet } from "react-helmet";
-import { useRef, useEffect } from "react";
+import { lazy } from "react";
+
+const Video = lazy(() => import("./Video"));
 
 const Header = () => {
   const [screenWidth] = useState(window.innerWidth);
-  const vidRef = useRef();
+
   const [isOpen, setOpen] = useState(false);
-  useEffect(() => {
-    vidRef.current.play();
-  }, []);
+
   return (
     <section
       className="fullheight -mt-40 overflow-hidden border-b border-b-th-fade md:-mt-0"
@@ -24,19 +23,7 @@ const Header = () => {
         <Helmet>
           <link rel="canonical" href={"https://cowchain.io/"} />
         </Helmet>
-        <video
-          ref={vidRef}
-          className="mt-[68px]"
-          id="bg_vid"
-          playsInline
-          autoPlay={true}
-          muted
-          loop
-          controls=""
-          src={"/homepage/video.mp4"}
-          preload="auto"
-          poster={poster}
-        ></video>
+        <Video />
         <div className="px-default relative flex min-h-full w-full flex-col pb-8">
           <img
             srcSet={`${bg_top} 360w, ${bg_top} 480w, ${bg_top} 720w, ${bg_top_lg} 1920w`}
