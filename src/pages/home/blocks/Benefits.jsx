@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import { motion, useScroll } from "framer-motion";
 import Typewriter from "typewriter-effect";
@@ -46,7 +46,7 @@ const benefitsData = [
   }
 ];
 
-export const Benefits = () => {
+const Benefits = () => {
   const expandVariants = {
     visible: { height: "auto" },
     hidden: { height: 0 }
@@ -162,3 +162,5 @@ export const Benefits = () => {
     </section>
   );
 };
+
+export default Benefits;

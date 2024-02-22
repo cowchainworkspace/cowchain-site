@@ -1,20 +1,23 @@
 import { useState, Suspense, useEffect, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { CaseStudiesStep } from "pages/case-studies/step";
-import { CaseStudiesRetroBridge } from "pages/case-studies/retrobridge";
-import { Cases } from "pages/cases";
-import Home from "pages/home";
-import { Services } from "pages/services";
 import { Article } from "pages/article";
-import { Team } from "pages/team";
 import { ScrollToTop } from "components/ScrollToTop";
 import { Loading } from "components/loader/Loading";
 import { ParallaxProvider } from "react-scroll-parallax";
-import { Policy } from "pages/policy";
 import emailjs from "@emailjs/browser";
 import { PageNotFound } from "pages/404";
 
 const Clients = lazy(() => import("pages/clients"));
+const Cases = lazy(() => import("pages/cases"));
+const Services = lazy(() => import("pages/services"));
+const Policy = lazy(() => import("pages/policy"));
+const Team = lazy(() => import("pages/team"));
+const Home = lazy(() => import("pages/home"));
+const CaseStudiesStep = lazy(() => import("pages/case-studies/step"));
+const CaseStudiesRetroBridge = lazy(
+  () => import("pages/case-studies/retrobridge")
+);
+
 const CaseStudiesMarsan = lazy(() => import("pages/case-studies/marsan"));
 const CaseStudiesEva = lazy(() => import("pages/case-studies/eva"));
 const CaseStudiesTriend = lazy(() => import("pages/case-studies/triend"));

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import { motion, useScroll } from "framer-motion";
 import { cn } from "lib/utils";
@@ -47,7 +47,7 @@ const benefitsData = [
   }
 ];
 
-export const BenefitsMobiles = () => {
+const BenefitsMobiles = () => {
   const expandVariants = {
     visible: { height: "auto" },
     hidden: { height: 0 }
@@ -148,3 +148,5 @@ export const BenefitsMobiles = () => {
     </section>
   );
 };
+
+export default BenefitsMobiles;

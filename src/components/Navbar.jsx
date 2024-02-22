@@ -123,7 +123,7 @@ export const Navbar = ({
                   hidden: !isGradient
                 }
               )}
-              src={import.meta.env.PUBLIC_URL + "/homepage/home-mobile.png"}
+              src={"/homepage/home-mobile.png"}
               alt=""
             />
           </>
@@ -235,10 +235,7 @@ export const Navbar = ({
                         className="w-32"
                         title="Home"
                         alt="Home-1"
-                        src={
-                          import.meta.env.PUBLIC_URL +
-                          "/homepage/logo_light.svg"
-                        }
+                        src={"/homepage/logo_light.svg"}
                       ></img>
                     </a>
                     <img

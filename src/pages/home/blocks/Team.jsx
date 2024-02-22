@@ -1,4 +1,3 @@
-import React from "react";
 import arrow from "assets/arrow_right.svg";
 import photo1 from "assets/homepage/team/mykhailo.jpg";
 import photo2 from "assets/homepage/team/vyacheslav.jpg";
@@ -106,7 +105,7 @@ const teamData = [
   }
 ];
 
-export const Team = () => {
+const Team = () => {
   return (
     <section id="team" className="relative">
       <div className="relative grid grid-cols-1 overflow-hidden lg:grid-cols-5 min-[2000px]:grid-cols-6">
@@ -137,3 +136,5 @@ export const Team = () => {
     </section>
   );
 };
+
+export default Team;
