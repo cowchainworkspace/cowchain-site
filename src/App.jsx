@@ -1,74 +1,33 @@
-import { useState, Suspense, useEffect, lazy } from "react";
+import { useState, useEffect, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Article } from "pages/article";
 import { ScrollToTop } from "components/ScrollToTop";
 import { Loading } from "components/loader/Loading";
 import { ParallaxProvider } from "react-scroll-parallax";
 import emailjs from "@emailjs/browser";
 import { PageNotFound } from "pages/404";
+import { Suspense } from "react";
 
+const Home = lazy(() => import("pages/home"));
 const Clients = lazy(() => import("pages/clients"));
 const Cases = lazy(() => import("pages/cases"));
 const Services = lazy(() => import("pages/services"));
 const Policy = lazy(() => import("pages/policy"));
 const Team = lazy(() => import("pages/team"));
-const Home = lazy(() => import("pages/home"));
 const CaseStudiesStep = lazy(() => import("pages/case-studies/step"));
 const CaseStudiesRetroBridge = lazy(
   () => import("pages/case-studies/retrobridge")
 );
+const Article = lazy(() => import("pages/article"));
 
 const CaseStudiesMarsan = lazy(() => import("pages/case-studies/marsan"));
 const CaseStudiesEva = lazy(() => import("pages/case-studies/eva"));
 const CaseStudiesTriend = lazy(() => import("pages/case-studies/triend"));
 const CaseStudiesFinance = lazy(() => import("pages/case-studies/finance"));
 
-const assets = [
-  {
-    src: "/homepage/video.mp4",
-    type: "video"
-  },
-  {
-    src: "/images/desktop.png",
-    type: "img"
-  },
-  {
-    src: "/images/eva-bg.png",
-    type: "img"
-  },
-  {
-    src: "/homepage/logo_light.svg",
-    type: "img"
-  },
-  {
-    src: "/homepage/home-mobile.png",
-    type: "img"
-  }
-];
-
 function App() {
   const [loading, setLoading] = useState(true);
   const [burgerOpen, setBurgerOpen] = useState(false);
   document.body.style.overflow = burgerOpen ? "hidden" : "visible";
-
-  const cacheAssets = async (assets) => {
-    const promises = await assets.map((asset) => {
-      return new Promise((resolve, reject) => {
-        if (asset.type === "img") {
-          const img = new Image();
-          img.src = asset.src;
-          img.onload = resolve();
-          img.onerror = reject();
-        } else {
-          const source = document.createElement("source");
-          source.srcset = asset;
-          source.onload = resolve();
-          source.onerror = reject();
-        }
-      });
-    });
-    await Promise.all(promises);
-  };
 
   useEffect(() => {
     emailjs.init(import.meta.env.REACT_APP_EMAILJS_PUBLIC_KEY);
@@ -76,7 +35,6 @@ function App() {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
-    cacheAssets(assets);
   }, []);
 
   if (loading) {
@@ -85,76 +43,113 @@ function App() {
 
   return (
     <div className="App">
-      <Suspense loading={<Suspense />}>
-        <ParallaxProvider>
-          <BrowserRouter>
-            <ScrollToTop />
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <Suspense loading={<Loading />}>
-                    <Home setBurgerOpen={setBurgerOpen} />
-                  </Suspense>
-                }
-              />
+      <ParallaxProvider>
+        <BrowserRouter>
+          <ScrollToTop />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Suspense>
+                  {" "}
+                  <Home setBurgerOpen={setBurgerOpen} />
+                </Suspense>
+              }
+            />
 
-              <Route
-                path="/clients"
-                element={<Clients setBurgerOpen={setBurgerOpen} />}
-              />
-              <Route
-                path="/cases"
-                element={<Cases setBurgerOpen={setBurgerOpen} />}
-              />
-              <Route
-                path="/cases/payment"
-                element={<CaseStudiesMarsan setBurgerOpen={setBurgerOpen} />}
-              />
-              <Route
-                path="/cases/wallet"
-                element={<CaseStudiesEva setBurgerOpen={setBurgerOpen} />}
-              />
-              <Route
-                path="/cases/hotel"
-                element={<CaseStudiesTriend setBurgerOpen={setBurgerOpen} />}
-              />
-              <Route
-                path="/cases/finance"
-                element={<CaseStudiesFinance setBurgerOpen={setBurgerOpen} />}
-              />
-              <Route
-                path="/cases/move"
-                element={<CaseStudiesStep setBurgerOpen={setBurgerOpen} />}
-              />
-              <Route
-                path="/cases/bridge"
-                element={
+            <Route
+              path="/clients"
+              element={
+                <Suspense>
+                  <Clients setBurgerOpen={setBurgerOpen} />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/cases"
+              element={
+                <Suspense>
+                  <Cases setBurgerOpen={setBurgerOpen} />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/cases/payment"
+              element={
+                <Suspense>
+                  <CaseStudiesMarsan setBurgerOpen={setBurgerOpen} />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/cases/wallet"
+              element={
+                <Suspense>
+                  <CaseStudiesEva setBurgerOpen={setBurgerOpen} />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/cases/hotel"
+              element={
+                <Suspense>
+                  <CaseStudiesTriend setBurgerOpen={setBurgerOpen} />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/cases/finance"
+              element={
+                <Suspense>
+                  <CaseStudiesFinance setBurgerOpen={setBurgerOpen} />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/cases/move"
+              element={
+                <Suspense>
+                  <CaseStudiesStep setBurgerOpen={setBurgerOpen} />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/cases/bridge"
+              element={
+                <Suspense>
                   <CaseStudiesRetroBridge setBurgerOpen={setBurgerOpen} />
-                }
-              />
+                </Suspense>
+              }
+            />
 
-              <Route
-                path="/blog/article"
-                element={<Article setBurgerOpen={setBurgerOpen} />}
-              />
-              <Route
-                path="/services"
-                element={<Services setBurgerOpen={setBurgerOpen} />}
-              />
-              <Route
-                path="/team"
-                element={<Team setBurgerOpen={setBurgerOpen} />}
-              />
-              <Route
-                path="/policy"
-                element={<Policy setBurgerOpen={setBurgerOpen} />}
-              />
-              <Route path="*" status={404} element={<PageNotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </ParallaxProvider>
-      </Suspense>
+            <Route
+              path="/blog/article"
+              element={
+                <Suspense>
+                  <Article setBurgerOpen={setBurgerOpen} />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/services"
+              element={
+                <Suspense>
+                  <Services setBurgerOpen={setBurgerOpen} />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/team"
+              element={<Team setBurgerOpen={setBurgerOpen} />}
+            />
+            <Route
+              path="/policy"
+              element={<Policy setBurgerOpen={setBurgerOpen} />}
+            />
+            <Route path="*" status={404} element={<PageNotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </ParallaxProvider>
     </div>
   );
 }
