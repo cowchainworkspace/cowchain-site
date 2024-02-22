@@ -1,4 +1,3 @@
-import React from "react";
 import { Navbar } from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
@@ -7,7 +6,7 @@ import planet from "assets/blog/articles/planet.png";
 import FooterForm from "components/utils/FooterForm";
 import { Blog } from "./blocks/Blog";
 
-export const Article = ({ setBurgerOpen }) => {
+const Article = ({ setBurgerOpen }) => {
   return (
     <section>
       <div className="relative overflow-x-hidden bg-black">
@@ -56,3 +55,5 @@ export const Article = ({ setBurgerOpen }) => {
     </section>
   );
 };
+
+export default Article;

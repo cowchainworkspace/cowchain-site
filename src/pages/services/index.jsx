@@ -1,4 +1,3 @@
-import React from "react";
 import { Navbar } from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
@@ -7,7 +6,7 @@ import { Products } from "./blocks/Products";
 import { ViewMoreSection } from "./blocks/ViewMore";
 import Stack from "components/stack";
 
-export const Services = ({ setBurgerOpen }) => {
+const Services = ({ setBurgerOpen }) => {
   return (
     <section>
       <div className="relative overflow-x-hidden bg-black">
@@ -27,3 +26,5 @@ export const Services = ({ setBurgerOpen }) => {
     </section>
   );
 };
+
+export default Services;

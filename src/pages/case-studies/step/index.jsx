@@ -199,3 +199,5 @@ export const CaseStudiesStep = ({ setBurgerOpen }) => {
     </section>
   );
 };
+
+export default CaseStudiesStep;

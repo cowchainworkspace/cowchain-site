@@ -1,4 +1,3 @@
-import React from "react";
 import { Navbar } from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
@@ -16,7 +15,7 @@ import team3 from "assets/team/team-carousel-2/team3.png";
 
 const photos = [team1, team2, team3];
 
-export const Team = ({ setBurgerOpen }) => {
+const Team = ({ setBurgerOpen }) => {
   return (
     <section className=" ">
       <div className="scrollbar-none relative  bg-black">
@@ -119,3 +118,5 @@ export const Team = ({ setBurgerOpen }) => {
     </section>
   );
 };
+
+export default Team;

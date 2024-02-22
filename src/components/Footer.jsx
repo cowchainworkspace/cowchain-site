@@ -1,4 +1,3 @@
-import React from "react";
 import FooterForm from "./utils/FooterForm";
 import linkedin from "../assets/footer/linkedin.svg";
 import telegram from "../assets/footer/telegram.svg";

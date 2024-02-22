@@ -140,11 +140,19 @@ function App() {
             />
             <Route
               path="/team"
-              element={<Team setBurgerOpen={setBurgerOpen} />}
+              element={
+                <Suspense>
+                  <Team setBurgerOpen={setBurgerOpen} />
+                </Suspense>
+              }
             />
             <Route
               path="/policy"
-              element={<Policy setBurgerOpen={setBurgerOpen} />}
+              element={
+                <Suspense>
+                  <Policy setBurgerOpen={setBurgerOpen} />
+                </Suspense>
+              }
             />
             <Route path="*" status={404} element={<PageNotFound />} />
           </Routes>

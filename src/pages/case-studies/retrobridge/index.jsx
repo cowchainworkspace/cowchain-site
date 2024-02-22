@@ -52,7 +52,7 @@ const team_details = [
   }
 ];
 
-export const CaseStudiesRetroBridge = ({ setBurgerOpen }) => {
+const CaseStudiesRetroBridge = ({ setBurgerOpen }) => {
   return (
     <section id="clients-wrapper">
       <div className="relative bg-black">
@@ -167,3 +167,5 @@ export const CaseStudiesRetroBridge = ({ setBurgerOpen }) => {
     </section>
   );
 };
+
+export default CaseStudiesRetroBridge;

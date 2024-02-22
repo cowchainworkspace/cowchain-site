@@ -1,4 +1,3 @@
-import React from "react";
 import "./clients.css";
 import { Navbar } from "components/Navbar";
 import Header from "./blocks/Header";
@@ -67,7 +66,7 @@ const policy = [
   }
 ];
 
-export const Policy = ({ setBurgerOpen }) => {
+const Policy = ({ setBurgerOpen }) => {
   return (
     <section id="clients-wrapper">
       <div className="relative bg-black">
@@ -88,3 +87,5 @@ export const Policy = ({ setBurgerOpen }) => {
     </section>
   );
 };
+
+export default Policy;

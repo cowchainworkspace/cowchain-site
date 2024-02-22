@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Navbar } from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
@@ -58,7 +58,7 @@ const cases = [
   }
 ];
 
-export const Cases = ({ setBurgerOpen }) => {
+const Cases = ({ setBurgerOpen }) => {
   const [tags, setTags] = useState([]);
   const filteredCases = useMemo(() => {
     if (tags.length === 0) return cases;
@@ -89,3 +89,5 @@ export const Cases = ({ setBurgerOpen }) => {
     </section>
   );
 };
+
+export default Cases;
