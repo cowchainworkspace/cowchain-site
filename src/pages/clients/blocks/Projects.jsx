@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import marsan from "assets/cases/marsan.png";
 import eva from "assets/cases/eva-mobile.png";
 import retrobridge from "assets/cases/retrobridge-mobile.png";
@@ -71,7 +71,7 @@ const Projects = () => {
       setCurrentStepIndex(data);
   };
 
-  const onStepExit = ({ direction, data }) => {
+  const onStepExit = ({ direction }) => {
     if (direction === "down" && currentStepIndex === 3) setCurrentStepIndex(0);
     if (direction === "up" && currentStepIndex !== 0)
       setCurrentStepIndex(currentStepIndex - 1);

@@ -12,19 +12,16 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
     formState: { errors }
   } = useForm();
 
-  const [sendError, setSendError] = useState(false);
-  const [sendSuccess, setSendSuccess] = useState(false);
-
-  const sendFormData = async (data, error) => {
+  const sendFormData = async (data) => {
     try {
       emailjs.send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        import.meta.env.REACT_APP_SERVICE_ID,
+        import.meta.env.REACT_APP_TEMPLATE_ID,
         data,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        import.meta.env.REACT_APP_EMAILJS_PUBLIC_KEY
       );
     } catch (e) {
-      setSendError(true);
+      /* empty */
     }
     reset();
     setSendSuccess(true);

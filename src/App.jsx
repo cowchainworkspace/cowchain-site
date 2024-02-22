@@ -1,4 +1,4 @@
-import React, { useState, Suspense, useEffect, lazy } from "react";
+import { useState, Suspense, useEffect, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CaseStudiesStep } from "pages/case-studies/step";
 import { CaseStudiesRetroBridge } from "pages/case-studies/retrobridge";
@@ -68,8 +68,8 @@ function App() {
   };
 
   useEffect(() => {
-    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
-    emailjs.init(process.env.REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
+    emailjs.init(import.meta.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+    emailjs.init(import.meta.env.REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
     setTimeout(() => {
       setLoading(false);
     }, 2000);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Accordion,
   AccordionItem,
@@ -51,7 +51,7 @@ const FAQ = () => {
         <div className="md:col-span-3">
           <Accordion allowToggle>
             {faqData.map((faq, index) => (
-              <AccordionItem className="border-b border-th-fade">
+              <AccordionItem key={index} className="border-b border-th-fade">
                 {({ isExpanded }) => (
                   <div
                     className={cn(

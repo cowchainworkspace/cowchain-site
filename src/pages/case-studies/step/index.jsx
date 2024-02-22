@@ -1,4 +1,3 @@
-import React from "react";
 import { Navbar } from "components/Navbar";
 import "./case-studies.css";
 import { HeroSection } from "./blocks/HeroSection";
@@ -54,6 +53,7 @@ const team_details = [
   }
 ];
 
+// eslint-disable-next-line react/prop-types
 export const CaseStudiesStep = ({ setBurgerOpen }) => {
   return (
     <section id="clients-wrapper">
@@ -136,7 +136,7 @@ export const CaseStudiesStep = ({ setBurgerOpen }) => {
                   <span className="text-white">
                     Despite the challenges, our team successfully launched a
                     sophisticated move-to-earn mobile application that has been
-                    enthusiastically received by users. The app's core feature,
+                    enthusiastically received by users. The app core feature,
                     allowing users to choose an avatar and move with a car,
                     while their progress is tracked on a map, functions
                     seamlessly, offering an engaging and motivating user

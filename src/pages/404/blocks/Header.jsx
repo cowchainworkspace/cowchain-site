@@ -1,4 +1,3 @@
-import React from "react";
 import Tag from "components/ui/tag";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -24,15 +23,17 @@ export const Header = () => {
     }
   }, [isSubmit]);
 
-  const sendFormData = async (data, error) => {
+  const sendFormData = async (data) => {
     try {
       emailjs.send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        import.meta.env.REACT_APP_SERVICE_ID,
+        import.meta.env.REACT_APP_TEMPLATE_ID,
         data,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        import.meta.env.REACT_APP_EMAILJS_PUBLIC_KEY
       );
-    } catch (e) {}
+    } catch (e) {
+      /* empty */
+    }
     setIsSubmit(true);
     console.log(data);
     reset();

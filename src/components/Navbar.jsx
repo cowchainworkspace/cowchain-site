@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import menu_open from "../assets/menu_open.svg";
 import menu_close from "../assets/homepage/modal_close.svg";
 import bg from "../assets/bg/navbar_top.png";
@@ -123,7 +123,7 @@ export const Navbar = ({
                   hidden: !isGradient
                 }
               )}
-              src={process.env.PUBLIC_URL + "/homepage/home-mobile.png"}
+              src={import.meta.env.PUBLIC_URL + "/homepage/home-mobile.png"}
               alt=""
             />
           </>
@@ -180,7 +180,7 @@ export const Navbar = ({
               className="w-32 md:w-36 lg:w-40"
               title="Home"
               alt="Home-1"
-              src={process.env.PUBLIC_URL + "/homepage/logo_light.svg"}
+              src={"/homepage/logo_light.svg"}
             ></img>
           </Link>
           {toggleMenu ? (
@@ -236,7 +236,8 @@ export const Navbar = ({
                         title="Home"
                         alt="Home-1"
                         src={
-                          process.env.PUBLIC_URL + "/homepage/logo_light.svg"
+                          import.meta.env.PUBLIC_URL +
+                          "/homepage/logo_light.svg"
                         }
                       ></img>
                     </a>

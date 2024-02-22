@@ -15,13 +15,13 @@ const FooterForm = () => {
   const [error, setError] = useState(null);
   const [showModalPopup, setshowModalPopup] = useState(false);
 
-  const sendFormData = async (data, error) => {
+  const sendFormData = async (data) => {
     try {
       emailjs.send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        import.meta.env.REACT_APP_SERVICE_ID,
+        import.meta.env.REACT_APP_TEMPLATE_ID,
         data,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        import.meta.env.REACT_APP_EMAILJS_PUBLIC_KEY
       );
       reset();
       setshowModalPopup(true);

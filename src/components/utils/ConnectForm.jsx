@@ -1,4 +1,3 @@
-import React from "react";
 import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/modal_close.svg";
 import { useForm } from "react-hook-form";
@@ -12,15 +11,17 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
     formState: { errors }
   } = useForm();
 
-  const sendFormData = async (data, error) => {
+  const sendFormData = async (data) => {
     try {
       send(
-        process.env.REACT_APP_DEV_SERVICE_ID,
-        process.env.REACT_APP_DEV_TEMPLATE_ID,
+        import.meta.env.REACT_APP_DEV_SERVICE_ID,
+        import.meta.env.REACT_APP_DEV_TEMPLATE_ID,
         data,
-        process.env.REACT_APP_DEV_EMAILJS_PUBLIC_KEY
+        import.meta.env.REACT_APP_DEV_EMAILJS_PUBLIC_KEY
       );
-    } catch (e) {}
+    } catch (e) {
+      /* empty */
+    }
     reset();
 
     setModalOpen(false);
@@ -60,7 +61,7 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
             onSubmit={handleSubmit(sendFormData)}
             className="userform  flex flex-col gap-y-6"
           >
-            <input type="text" autofocus="autofocus" className={"hidden"} />
+            <input type="text" autoFocus="autofocus" className={"hidden"} />
             <input
               className="text_input placeholder:text-yellow-200"
               type="text"
@@ -90,6 +91,7 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
               {...register("email", {
                 required: true,
                 pattern:
+                  // eslint-disable-next-line no-useless-escape
                   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
               })}
               aria-invalid={errors.email ? "true" : "false"}
