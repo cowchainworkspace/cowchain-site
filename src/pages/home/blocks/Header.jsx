@@ -1,18 +1,18 @@
-import { useState } from "react";
+// import { useState } from "react";
 import upwork from "assets/homepage/upwork.svg";
 import clutch from "assets/homepage/clutch.svg";
 import bg_top from "assets/bg/header_top.png";
 import bg_top_lg from "assets/bg/header_top_lg.png";
-import ModalVideo from "react-modal-video";
+// import ModalVideo from "react-modal-video";
 import { Helmet } from "react-helmet";
 import { lazy } from "react";
 
 const Video = lazy(() => import("./Video"));
 
 const Header = () => {
-  const [screenWidth] = useState(window.innerWidth);
+  // const [screenWidth] = useState(window.innerWidth);
 
-  const [isOpen, setOpen] = useState(false);
+  // const [isOpen, setOpen] = useState(false);
 
   return (
     <section
@@ -66,7 +66,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <ModalVideo
+        {/* <ModalVideo
           channel="youtube"
           youtube={{
             mute: 0,
@@ -81,7 +81,7 @@ const Header = () => {
           videoId="0L38Z9hIi5s"
           ratio={screenWidth > 768 ? "16:9" : "1:1"}
           onClose={() => setOpen(false)}
-        />
+        /> */}
       </div>
     </section>
   );

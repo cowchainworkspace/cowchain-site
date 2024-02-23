@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, lazy } from "react";
 import menu_open from "../assets/menu_open.svg";
 import menu_close from "../assets/homepage/modal_close.svg";
 import bg from "../assets/bg/navbar_top.png";
@@ -13,17 +13,14 @@ import telegram from "../assets/footer/telegram.svg";
 import twitter from "../assets/footer/twitter.svg";
 import medium from "../assets/footer/medium.svg";
 import mail from "../assets/footer/mail.svg";
-import ContactForm from "./utils/ContactForm";
 import { useLocation } from "react-router-dom";
 import team_bg from "assets/bg/team-mobile.png";
 import team from "assets/bg/team.png";
 import { cn } from "lib/utils";
 
-export const Navbar = ({
-  setBurgerOpen,
-  isGradient = true,
-  isTeamBg = false
-}) => {
+const ContactForm = lazy(() => import("./utils/ContactForm"));
+
+const Navbar = ({ setBurgerOpen, isGradient = true, isTeamBg = false }) => {
   const [openForm, setOpenForm] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
   const sideVariants = {
@@ -341,3 +338,5 @@ export const Navbar = ({
     </>
   );
 };
+
+export default Navbar;

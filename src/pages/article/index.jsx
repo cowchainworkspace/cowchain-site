@@ -1,4 +1,4 @@
-import { Navbar } from "components/Navbar";
+import Navbar from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
 import splash from "assets/blog/articles/splash.png";

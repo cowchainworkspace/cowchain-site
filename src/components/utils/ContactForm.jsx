@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/modal_close.svg";
 import { useForm } from "react-hook-form";
@@ -24,7 +23,7 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
       /* empty */
     }
     reset();
-    setSendSuccess(true);
+    // setSendSuccess(true);
     setModalOpen(false);
   };
 

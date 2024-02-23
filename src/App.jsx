@@ -1,6 +1,5 @@
 import { useState, useEffect, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ScrollToTop } from "components/ScrollToTop";
 import { Loading } from "components/loader/Loading";
 import { ParallaxProvider } from "react-scroll-parallax";
 import emailjs from "@emailjs/browser";
@@ -18,17 +17,39 @@ const CaseStudiesRetroBridge = lazy(
   () => import("pages/case-studies/retrobridge")
 );
 const Article = lazy(() => import("pages/article"));
+const ScrollToTop = lazy(() => import("components/ScrollToTop"));
 
 const CaseStudiesMarsan = lazy(() => import("pages/case-studies/marsan"));
 const CaseStudiesEva = lazy(() => import("pages/case-studies/eva"));
 const CaseStudiesTriend = lazy(() => import("pages/case-studies/triend"));
 const CaseStudiesFinance = lazy(() => import("pages/case-studies/finance"));
 
+// const x = () => {
+//   const promise = new Promise((resolve) => {
+//     window.setTimeout(() => {
+//       resolve([
+//         {
+//           id: 1,
+//           url: "/homepage/video.mp4"
+//         }
+//       ]);
+//     }, 500);
+//   });
+//   return promise;
+// };
+
+// const y = async () => {
+//   const result = await x();
+//   console.log(result);
+//   return result;
+// };
+
 function App() {
   const [burgerOpen, setBurgerOpen] = useState(false);
   document.body.style.overflow = burgerOpen ? "hidden" : "visible";
 
   useEffect(() => {
+    // y();
     emailjs.init(import.meta.env.REACT_APP_EMAILJS_PUBLIC_KEY);
     emailjs.init(import.meta.env.REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
   }, []);

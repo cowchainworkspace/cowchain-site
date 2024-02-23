@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
-import { Navbar } from "components/Navbar";
+import Navbar from "components/Navbar";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";
 import marsan from "assets/cases/marsan.png";

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import arrow from "../../../assets/arrow_right.svg";
 import { blogData } from "../../../data/blogData";
 import arrow_btn from "../../../assets/homepage/arrow-btn.png";

@@ -1,5 +1,5 @@
 import "./clients.css";
-import { Navbar } from "components/Navbar";
+import Navbar from "components/Navbar";
 import Header from "./blocks/Header";
 import { Footer } from "components/Footer";
 

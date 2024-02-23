@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar } from "components/Navbar";
+import Navbar from "components/Navbar";
 import "./case-studies.css";
 import { HeroSection } from "./blocks/HeroSection";
 import { Footer } from "components/Footer";

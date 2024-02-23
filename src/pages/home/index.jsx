@@ -1,10 +1,9 @@
 import { lazy } from "react";
-import { Navbar } from "../../components/Navbar";
-
-import "./home.css";
 import { HomeContent } from "./blocks/home-content";
+import "./home.css";
 
 const Header = lazy(() => import("./blocks/Header"));
+const Navbar = lazy(() => import("../../components/Navbar"));
 
 const Home = ({ setBurgerOpen }) => {
   return (

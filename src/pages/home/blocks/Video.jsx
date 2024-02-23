@@ -12,7 +12,6 @@ const Video = () => {
       className="mt-[68px]"
       id="bg_vid"
       playsInline
-      autoPlay={true}
       muted
       loop
       controls=""
