@@ -26,7 +26,7 @@ const CaseStudiesFinance = lazy(() => import("pages/case-studies/finance"));
 
 function App() {
   const [burgerOpen, setBurgerOpen] = useState(false);
-  document.body.style.overflow = burgerOpen ? "hidden" : "visible";
+  // document.body.style.overflow = burgerOpen ? "hidden" : "visible";
 
   useEffect(() => {
     // y();

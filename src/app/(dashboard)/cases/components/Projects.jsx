@@ -39,10 +39,11 @@ const Projects = () => {
   const [elementHeight, setElementHeight] = useState(0);
   const [elementTop, setElementTop] = useState(0);
 
-  const windowHeight = document.documentElement.clientHeight;
+  const [windowHeight, setWindowHeight] = useState(0);
   const animationHeight = windowHeight - elementHeight * 0.5;
 
   useEffect(() => {
+    setWindowHeight(document.documentElement.clientHeight);
     setElementHeight(scrollRef.current.getBoundingClientRect().height);
   }, []);
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import marsan from "@/assets/cases/marsan.png";
 import eva from "@/assets/cases/eva-mobile.png";
 import retrobridge from "@/assets/cases/retrobridge-mobile.png";
@@ -66,7 +66,11 @@ const sectionsData = [
 
 const Projects = () => {
   const [currentStepIndex, setCurrentStepIndex] = useState(null);
-  const windowWidth = document.body.clientWidth;
+  const [windowWidth, setWindowWidth] = useState(null);
+
+  useEffect(() => {
+    setWindowWidth(document.body.clientWidth);
+  }, []);
 
   const onStepEnter = ({ direction, data }) => {
     if (direction === "down" || (direction === "up" && currentStepIndex === 0))

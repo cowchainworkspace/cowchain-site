@@ -2,6 +2,7 @@ import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/modal_close.svg";
 import { useForm } from "react-hook-form";
 import { send } from "emailjs-com";
+import Image from "next/image";
 
 const ConnectForm = ({ modalOpen, setModalOpen }) => {
   const {
