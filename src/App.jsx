@@ -24,26 +24,6 @@ const CaseStudiesEva = lazy(() => import("pages/case-studies/eva"));
 const CaseStudiesTriend = lazy(() => import("pages/case-studies/triend"));
 const CaseStudiesFinance = lazy(() => import("pages/case-studies/finance"));
 
-// const x = () => {
-//   const promise = new Promise((resolve) => {
-//     window.setTimeout(() => {
-//       resolve([
-//         {
-//           id: 1,
-//           url: "/homepage/video.mp4"
-//         }
-//       ]);
-//     }, 500);
-//   });
-//   return promise;
-// };
-
-// const y = async () => {
-//   const result = await x();
-//   console.log(result);
-//   return result;
-// };
-
 function App() {
   const [burgerOpen, setBurgerOpen] = useState(false);
   document.body.style.overflow = burgerOpen ? "hidden" : "visible";

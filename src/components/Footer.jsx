@@ -1,13 +1,16 @@
+"use client";
+
 import FooterForm from "./utils/FooterForm";
-import linkedin from "../assets/footer/linkedin.svg";
-import telegram from "../assets/footer/telegram.svg";
-import twitter from "../assets/footer/twitter.svg";
-import medium from "../assets/footer/medium.svg";
-import mail from "../assets/footer/mail.svg";
+import linkedin from "@/assets/footer/linkedin.svg";
+import telegram from "@/assets/footer/telegram.svg";
+import twitter from "@/assets/footer/twitter.svg";
+import medium from "@/assets/footer/medium.svg";
+import mail from "@/assets/footer/mail.svg";
 import Faq from "react-faq-component";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import logofont from "../assets/footer/logofont.svg";
-import { Link } from "react-router-dom";
+import logofont from "@/assets/footer/logofont.svg";
+import Link from "next/link";
+import Image from "next/image";
 
 const faqRows = {
   title: "",
@@ -32,7 +35,7 @@ const faqRows = {
       title: <h2>AGENCY</h2>,
       content: (
         <div className="footer-links mb-8 mt-4 flex flex-col gap-y-4">
-          <Link to="/">
+          <Link href={"/"}>
             <p>Team</p>
           </Link>
         </div>
@@ -45,7 +48,7 @@ const faqRows = {
           <AnchorLink href="#contact">
             <p>Contact Us</p>
           </AnchorLink>
-          <Link to={"/policy"}>
+          <Link href={"/policy"}>
             <p>Privacy Policy</p>
           </Link>
           <AnchorLink href="#faq">
@@ -105,7 +108,7 @@ const faqStyles = {
   timingFunc: "ease"
 };
 
-export const Footer = () => {
+export default function Footer() {
   return (
     <section id="footer" className="relative">
       <div className="grid grid-cols-1 md:grid-cols-2">
@@ -132,41 +135,54 @@ export const Footer = () => {
               rel="nofollow noreferrer"
               target="_blank"
             >
-              <img alt="linkedin" className="w-12 lg:w-16" src={linkedin}></img>
+              <Image
+                alt="linkedin"
+                className="w-12 lg:w-16"
+                src={linkedin}
+              ></Image>
             </a>
             <a
               href="https://t.me/cowchain_team"
               rel="nofollow noreferrer"
               target="_blank"
             >
-              <img alt="telegram" className="w-12 lg:w-16" src={telegram}></img>
+              <Image
+                alt="telegram"
+                className="w-12 lg:w-16"
+                src={telegram}
+              ></Image>
             </a>
             <a
               href="https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw"
               rel="nofollow noreferrer"
               target="_blank"
             >
-              <img alt="twitter" className="w-12 lg:w-16" src={twitter}></img>
+              <Image
+                alt="twitter"
+                className="w-12 lg:w-16"
+                src={twitter}
+              ></Image>
             </a>
             <a
               href="https://cowchain.medium.com/"
               rel="nofollow noreferrer"
               target="_blank"
             >
-              <img alt="medium" className="w-12 lg:w-16" src={medium}></img>
+              <Image alt="medium" className="w-12 lg:w-16" src={medium}></Image>
             </a>
             <a
               href="mailto:sales@cowchain.io"
               rel="nofollow noreferrer"
               target="_blank"
             >
-              <img alt="mail" className="w-12 lg:w-16" src={mail}></img>
+              <Image alt="mail" className="w-12 lg:w-16" src={mail}></Image>
             </a>
           </div>
         </div>
         <div className="py-heading px-default border-b border-b-th-fade lg:hidden">
           <Faq data={faqRows} styles={faqStyles} config={faqConfig} />
         </div>
+
         <div className="py-heading px-default hidden border-b border-b-th-fade lg:block">
           <div className="grid grid-cols-3 gap-x-8">
             <div className="footer-links">
@@ -174,15 +190,15 @@ export const Footer = () => {
                 WHAT WE DO
               </p>
               <div className="my-8 flex flex-col gap-y-4">
-                <Link to="/services">
+                <Link href="/services">
                   <p className="text-[#bbb]">
                     Services &<br></br> Techonologies
                   </p>
                 </Link>
-                <Link to="/cases">
+                <Link href="/cases">
                   <p className="text-[#bbb]">Cases</p>
                 </Link>
-                <Link to="/clients">
+                <Link href="/clients">
                   {" "}
                   <p className="text-[#bbb]">Clients</p>
                 </Link>
@@ -193,7 +209,7 @@ export const Footer = () => {
                 AGENCY
               </p>
               <div className="my-8 flex flex-col gap-y-4">
-                <Link to="/team">
+                <Link href="/team">
                   <p className="text-[#bbb]">Team</p>
                 </Link>
               </div>
@@ -204,7 +220,7 @@ export const Footer = () => {
                 <AnchorLink href="#contact">
                   <p className="text-[#bbb]">Contact Us</p>
                 </AnchorLink>
-                <Link to={"/policy"}>
+                <Link href="/policy">
                   <p className="text-[#bbb]">Privacy Policy</p>
                 </Link>
                 <AnchorLink href="#faq">
@@ -214,12 +230,13 @@ export const Footer = () => {
             </div>
           </div>
         </div>
+
         <div className="px-2 py-3 md:col-span-2 md:py-8">
           <a href="/">
-            <img className="w-full" src={logofont} alt=""></img>
+            <Image className="w-full" src={logofont} alt=""></Image>
           </a>
         </div>
       </div>
     </section>
   );
-};
+}

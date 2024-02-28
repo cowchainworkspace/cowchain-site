@@ -1,28 +1,47 @@
-import { useState, lazy } from "react";
-import menu_open from "../assets/menu_open.svg";
-import menu_close from "../assets/homepage/modal_close.svg";
-import bg from "../assets/bg/navbar_top.png";
-import bg_lg from "../assets/bg/navbar_top_lg.png";
-import bg_clients from "../assets/bg/clients_navbar_bg_sm.png";
-import bg_clients_lg from "../assets/bg/clients_navbar_bg_lg.png";
+"use client";
+
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import menu_open from "@/assets/menu_open.svg";
+import menu_close from "@/assets/homepage/modal_close.svg";
+import bg from "@/assets/bg/navbar_top.png";
+import bg_lg from "@/assets/bg/navbar_top_lg.png";
+import bg_clients from "@/assets/bg/clients_navbar_bg_sm.png";
+import bg_clients_lg from "@/assets/bg/clients_navbar_bg_lg.png";
 import { motion, AnimatePresence } from "framer-motion";
-import arrow from "../assets/arrow_right.svg";
-import { Link } from "react-router-dom";
-import linkedin from "../assets/footer/linkedin.svg";
-import telegram from "../assets/footer/telegram.svg";
-import twitter from "../assets/footer/twitter.svg";
-import medium from "../assets/footer/medium.svg";
-import mail from "../assets/footer/mail.svg";
-import { useLocation } from "react-router-dom";
-import team_bg from "assets/bg/team-mobile.png";
-import team from "assets/bg/team.png";
-import { cn } from "lib/utils";
+import arrow from "@/assets/arrow_right.svg";
+import Link from "next/link";
+import linkedin from "@/assets/footer/linkedin.svg";
+import telegram from "@/assets/footer/telegram.svg";
+import twitter from "@/assets/footer/twitter.svg";
+import medium from "@/assets/footer/medium.svg";
+import mail from "@/assets/footer/mail.svg";
+import team_bg from "@/assets/bg/team-mobile.png";
+import team from "@/assets/bg/team.png";
+import { cn } from "@/lib/utils";
+import ContactForm from "@/components/utils/ContactForm";
+import Image from "next/image";
 
-const ContactForm = lazy(() => import("./utils/ContactForm"));
-
-const Navbar = ({ setBurgerOpen, isGradient = true, isTeamBg = false }) => {
+export default function Navbar({ setBurgerOpen }) {
   const [openForm, setOpenForm] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [windowHeight, setWindowheight] = useState("");
+  const [isTeamBg, setIsTeamBg] = useState(true);
+  const [isGradient, setIsGradient] = useState(true);
+  const [isHomePage, setIsHomePage] = useState(false);
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setWindowheight(window.innerHeight);
+    setIsHomePage(pathname === "/");
+    setIsTeamBg(pathname === "/team");
+    if (pathname === "/team") {
+      setIsGradient(false);
+    }
+    console.log(isTeamBg);
+  }, [pathname, isTeamBg, setIsGradient, setIsHomePage]);
+
   const sideVariants = {
     open: {
       transition: { staggerChildren: 0.07, delayChildren: 0.2 }
@@ -87,10 +106,6 @@ const Navbar = ({ setBurgerOpen, isGradient = true, isTeamBg = false }) => {
     setOpenForm(true);
   };
 
-  const location = useLocation();
-  const windowHeight = window.innerHeight;
-  const isHomePage = location.pathname === "/";
-
   return (
     <>
       <section
@@ -101,7 +116,7 @@ const Navbar = ({ setBurgerOpen, isGradient = true, isTeamBg = false }) => {
       >
         {isHomePage ? (
           <>
-            <img
+            <Image
               srcSet={`${bg} 360w, ${bg} 480w, ${bg} 720w, ${bg_lg} 1920w`}
               sizes="(max-width: 640px) 100vw, 100vw"
               alt=""
@@ -125,9 +140,8 @@ const Navbar = ({ setBurgerOpen, isGradient = true, isTeamBg = false }) => {
             />
           </>
         ) : (
-          <img
+          <Image
             srcSet={`${bg_clients} 360w, ${bg_clients} 480w, ${bg_clients} 720w, ${bg_clients_lg} 1920w`}
-            sizes="200vw"
             alt=""
             className={cn(
               "absolute bottom-0 right-0 min-h-[140%] min-w-[200vw] md:min-w-full",
@@ -141,12 +155,12 @@ const Navbar = ({ setBurgerOpen, isGradient = true, isTeamBg = false }) => {
 
         {isTeamBg && (
           <>
-            <img
+            <Image
               className="absolute right-0 top-0 h-full w-full lg:hidden"
               alt="gradient"
               src={team_bg}
             />
-            <img
+            <Image
               className="absolute top-0 hidden h-full w-full lg:block"
               alt="gradient"
               src={team}
@@ -163,13 +177,13 @@ const Navbar = ({ setBurgerOpen, isGradient = true, isTeamBg = false }) => {
         >
           <nav className="hidden w-full max-w-[360px] items-center justify-between pl-12 lg:flex xl:max-w-md">
             {anchorLinks.map((link, index) => (
-              <Link key={index} to={link.link}>
+              <Link key={index} href={link.link}>
                 <p className="navlink mt-1">{link.title}</p>
               </Link>
             ))}
           </nav>
           <Link
-            to={"/"}
+            href={"/"}
             className="flex items-center justify-center"
             rel="nofollow"
           >
@@ -181,23 +195,23 @@ const Navbar = ({ setBurgerOpen, isGradient = true, isTeamBg = false }) => {
             ></img>
           </Link>
           {toggleMenu ? (
-            <img
+            <Image
               className="ml-auto w-6 cursor-pointer lg:hidden"
               src={menu_close}
               onClick={closeBurger}
               alt=""
-            ></img>
+            ></Image>
           ) : (
-            <img
+            <Image
               className="ml-auto w-6 cursor-pointer lg:hidden"
               alt=""
               src={menu_open}
               onClick={openBurger}
-            ></img>
+            ></Image>
           )}
           <div className="hidden w-full max-w-[360px] items-center justify-end gap-16 lg:flex xl:max-w-md">
             {routerLinks.map((link, index) => (
-              <Link key={index * 4} to={link.link}>
+              <Link key={index * 4} href={link.link}>
                 <p className="navlink mt-1">{link.title}</p>
               </Link>
             ))}
@@ -235,12 +249,12 @@ const Navbar = ({ setBurgerOpen, isGradient = true, isTeamBg = false }) => {
                         src={"/homepage/logo_light.svg"}
                       ></img>
                     </a>
-                    <img
+                    <Image
                       className="ml-auto w-8 cursor-pointer lg:hidden"
                       src={menu_close}
                       onClick={closeBurger}
                       alt=""
-                    ></img>
+                    ></Image>
                   </motion.div>
                   <motion.nav className="mt-8 flex flex-col gap-y-6 px-4">
                     {anchorLinks.map((link, index) => (
@@ -255,11 +269,11 @@ const Navbar = ({ setBurgerOpen, isGradient = true, isTeamBg = false }) => {
                           <p className="font-roc text-base font-medium uppercase text-white">
                             {link.title}
                           </p>
-                          <img
+                          <Image
                             className="mb-1 ml-auto w-6"
                             src={arrow}
                             alt=""
-                          ></img>
+                          ></Image>
                         </div>
                       </Link>
                     ))}
@@ -276,11 +290,11 @@ const Navbar = ({ setBurgerOpen, isGradient = true, isTeamBg = false }) => {
                           <p className="font-roc text-base font-medium uppercase text-white">
                             {link.title}
                           </p>
-                          <img
+                          <Image
                             className="mb-1 ml-auto w-6"
                             src={arrow}
                             alt=""
-                          ></img>
+                          ></Image>
                         </div>
                       </Link>
                     ))}
@@ -297,35 +311,47 @@ const Navbar = ({ setBurgerOpen, isGradient = true, isTeamBg = false }) => {
                       rel="nofollow noreferrer"
                       target="_blank"
                     >
-                      <img className="w-14" alt="linkedIn" src={linkedin}></img>
+                      <Image
+                        className="w-14"
+                        alt="linkedIn"
+                        src={linkedin}
+                      ></Image>
                     </a>
                     <a
                       href="https://t.me/cowchain_team"
                       rel="nofollow noreferrer"
                       target="_blank"
                     >
-                      <img className="w-14" alt="telegram" src={telegram}></img>
+                      <Image
+                        className="w-14"
+                        alt="telegram"
+                        src={telegram}
+                      ></Image>
                     </a>
                     <a
                       href="https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw"
                       rel="nofollow noreferrer"
                       target="_blank"
                     >
-                      <img className="w-14" alt="twitter" src={twitter}></img>
+                      <Image
+                        className="w-14"
+                        alt="twitter"
+                        src={twitter}
+                      ></Image>
                     </a>
                     <a
                       href="https://medium.com/"
                       rel="nofollow noreferrer"
                       target="_blank"
                     >
-                      <img className="w-14" alt="medium" src={medium}></img>
+                      <Image className="w-14" alt="medium" src={medium}></Image>
                     </a>
                     <a
                       href="mailto:sales@cowchain.io"
                       rel="nofollow noreferrer"
                       target="_blank"
                     >
-                      <img className="w-14" alt="mail" src={mail}></img>
+                      <Image className="w-14" alt="mail" src={mail}></Image>
                     </a>
                   </motion.div>
                 </motion.div>
@@ -337,6 +363,4 @@ const Navbar = ({ setBurgerOpen, isGradient = true, isTeamBg = false }) => {
       <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />
     </>
   );
-};
-
-export default Navbar;
+}

@@ -3,11 +3,12 @@ import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/modal_close.svg";
 import error from "../../assets/footer/error.svg";
 import success from "../../assets/footer/success.svg";
+import Image from "next/image";
 
 const ModalPopup = ({ isOpen, toggleOpen, isError }) => {
   const successText = (
     <div className="flex flex-col">
-      <img alt="" className="mx-auto w-12" src={success}></img>
+      <Image alt="" className="mx-auto w-12" src={success}></Image>
       <p className="mt-4 text-center font-roc text-2xl font-medium uppercase text-white">
         Thanks! <br></br>
         Your request was sent successfully. <br></br> We will contact you in
@@ -18,7 +19,7 @@ const ModalPopup = ({ isOpen, toggleOpen, isError }) => {
 
   const errorText = (
     <div className="flex flex-col">
-      <img alt="" className="mx-auto w-12" src={error}></img>
+      <Image alt="" className="mx-auto w-12" src={error}></Image>
       <p className="mt-4 text-center font-roc text-xl font-normal text-[#bbb]">
         Sorry, an error occured...
       </p>
@@ -42,7 +43,7 @@ const ModalPopup = ({ isOpen, toggleOpen, isError }) => {
     >
       <div className="modal max-h-[90vh] min-w-full max-w-5xl border-2 border-white bg-black px-8 pb-12 pt-4">
         <div className="flex">
-          <img
+          <Image
             className="ml-auto w-8 cursor-pointer"
             alt=""
             onClick={toggleOpen}

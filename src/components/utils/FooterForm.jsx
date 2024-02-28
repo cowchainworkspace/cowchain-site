@@ -1,10 +1,12 @@
+"use client";
+
 import React from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import ModalPopup from "./ModalPopup";
 
-const FooterForm = () => {
+export default function FooterForm() {
   const {
     register,
     handleSubmit,
@@ -65,6 +67,4 @@ const FooterForm = () => {
       />
     </section>
   );
-};
-
-export default FooterForm;
+}

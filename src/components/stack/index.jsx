@@ -1,20 +1,21 @@
 import React from "react";
-import eth from "assets/homepage/expertises/ethereum.svg";
-import ava from "assets/homepage/expertises/avalanche.svg";
-import polygon from "assets/homepage/expertises/polygon.svg";
-import binance from "assets/homepage/expertises/binance.svg";
-import nodejs from "assets/homepage/expertises/nodejs.svg";
-import mongodb from "assets/homepage/expertises/mongodb.svg";
-import mssql from "assets/homepage/expertises/mssql.svg";
-import postgres from "assets/homepage/expertises/postgresql.svg";
-import react from "assets/homepage/expertises/react.svg";
-import nextjs from "assets/homepage/expertises/nextjs.svg";
-import ts from "assets/homepage/expertises/typescript.svg";
-import ios from "assets/homepage/expertises/ios.svg";
-import android from "assets/homepage/expertises/android.svg";
+import eth from "@/assets/homepage/expertises/ethereum.svg";
+import ava from "@/assets/homepage/expertises/avalanche.svg";
+import polygon from "@/assets/homepage/expertises/polygon.svg";
+import binance from "@/assets/homepage/expertises/binance.svg";
+import nodejs from "@/assets/homepage/expertises/nodejs.svg";
+import mongodb from "@/assets/homepage/expertises/mongodb.svg";
+import mssql from "@/assets/homepage/expertises/mssql.svg";
+import postgres from "@/assets/homepage/expertises/postgresql.svg";
+import react from "@/assets/homepage/expertises/react.svg";
+import nextjs from "@/assets/homepage/expertises/nextjs.svg";
+import ts from "@/assets/homepage/expertises/typescript.svg";
+import ios from "@/assets/homepage/expertises/ios.svg";
+import android from "@/assets/homepage/expertises/android.svg";
 import { ExpertiseBlock } from "./components/expertise";
-import clients from "assets/homepage/clients.png";
-import { cn } from "lib/utils";
+import clients from "@/assets/homepage/clients.png";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const expertiseData = [
   {
@@ -99,12 +100,12 @@ const expertiseData = [
   }
 ];
 
-const Stack = ({
+export default function Stack({
   title,
   isGradient = false,
   gradientStyles = "absolute -bottom-2/3 -right-20 block h-[526px] w-[526px] md:hidden",
   margin = "mt-[calc(35vh_+_1.5625vh)]"
-}) => {
+}) {
   return (
     <section id="expertise" className={cn("relative   md:mt-0", margin)}>
       <div className="relative z-20 grid lg:grid-cols-3">
@@ -113,7 +114,7 @@ const Stack = ({
             {title}
           </h2>
           {isGradient && (
-            <img src={clients} className={gradientStyles} alt="" />
+            <Image src={clients} className={gradientStyles} alt="" />
           )}
         </div>
         <div className="grid lg:col-span-2 lg:grid-cols-2">
@@ -124,6 +125,4 @@ const Stack = ({
       </div>
     </section>
   );
-};
-
-export default Stack;
+}

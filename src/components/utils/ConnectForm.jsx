@@ -38,7 +38,7 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
     >
       <div className="modal h-full max-h-[95vh] min-w-full max-w-7xl overflow-y-auto border-2 border-white bg-black p-4 md:p-8 lg:p-16">
         <div className="flex">
-          <img
+          <Image
             className="ml-auto w-8 cursor-pointer"
             alt=""
             onClick={() => setModalOpen(false)}

@@ -1,4 +1,4 @@
-import { cn } from "lib/utils";
+import { cn } from "@/lib/utils";
 
 export const Category = ({ title, setTags, tags }) => {
   const handleClick = (isInclude, title) => {
