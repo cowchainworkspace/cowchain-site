@@ -1,5 +1,6 @@
 import { Loading } from "@/components/loader/Loading";
 import dynamic from "next/dynamic";
+import LoaderWrapper from "./loaderWrapper";
 
 const Navbar = dynamic(() => import("@/components/Navbar"), {
   loading: () => <Loading />
@@ -15,7 +16,7 @@ export default async function DashboardLayout({ children }) {
       <>
         <div className="scrollbar-none relative bg-black">
           <Navbar />
-          {children}
+          <LoaderWrapper>{children}</LoaderWrapper>
           <Footer />
         </div>
       </>

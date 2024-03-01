@@ -22,8 +22,9 @@ import { cn } from "@/lib/utils";
 import ContactForm from "@/components/utils/ContactForm";
 import Image from "next/image";
 import { useLoader } from "@/hooks/useLoader";
+import emailjs from "emailjs-com";
 
-export default function Navbar() {
+export default function Navbar({ isPageNotFound = false }) {
   const [burgerOpen, setBurgerOpen] = useState(false);
 
   useEffect(() => {
@@ -38,7 +39,19 @@ export default function Navbar() {
   const [isHomePage, setIsHomePage] = useState(true);
 
   const pathname = usePathname();
-  const { isRendering } = useLoader();
+  const { isRendering, setIsLoading, setIsRendering } = useLoader();
+
+  useEffect(() => {
+    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+    emailjs.init(process.env.REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+    setTimeout(() => {
+      setIsRendering(false);
+    }, 700);
+  }, []);
 
   useEffect(() => {
     setWindowheight(window.innerHeight);
@@ -46,14 +59,16 @@ export default function Navbar() {
     setIsGradient(
       pathname === "/services" ||
         pathname === "/cases" ||
-        pathname === "/clients"
+        pathname === "/clients" ||
+        pathname === "/policy"
     );
-    setIsTeamBg(pathname === "/team");
+    setIsTeamBg(pathname === "/team" || pathname === "/sitemap");
 
     if (pathname === "/team") {
       setIsGradient(false);
       setIsHomePage(false);
     }
+    isPageNotFound && setIsTeamBg(true);
   }, [pathname, isTeamBg, setIsGradient, setIsHomePage]);
 
   const sideVariants = {

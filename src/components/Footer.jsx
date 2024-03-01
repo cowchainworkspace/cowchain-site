@@ -1,6 +1,8 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import FooterForm from "./utils/FooterForm";
+import { usePathname } from "next/navigation";
 import linkedin from "@/assets/footer/linkedin.svg";
 import telegram from "@/assets/footer/telegram.svg";
 import twitter from "@/assets/footer/twitter.svg";
@@ -111,14 +113,24 @@ const faqStyles = {
 };
 
 export default function Footer() {
+  const [isBorder, setIsBorder] = useState(false);
   const { isRendering } = useLoader();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    console.log(pathname);
+    setIsBorder(pathname === "/sitemap" || pathname === "/error");
+  }, [pathname]);
 
   return (
     <>
       {" "}
       <section
         id="footer"
-        className={cn("relative opacity-0", { "opacity-100": !isRendering })}
+        className={cn("relative opacity-0", {
+          "opacity-100": !isRendering,
+          "border-t border-t-th-fade": isBorder
+        })}
       >
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="md-border-r py-heading px-default flex flex-col gap-y-8 border-b border-b-th-fade text-center">
@@ -241,6 +253,9 @@ export default function Footer() {
                   <AnchorLink href="#faq">
                     <p className="text-[#bbb]">FAQs</p>
                   </AnchorLink>
+                  <Link href="/sitemap">
+                    <p className="text-[#bbb]">Sitemap</p>
+                  </Link>
                 </div>
               </div>
             </div>
