@@ -1,5 +1,3 @@
-"use client";
-
 import { lazy } from "react";
 
 const Header = lazy(() => import("./blocks/Header"));

@@ -1,5 +1,3 @@
-"use client";
-
 import upwork from "@/assets/homepage/upwork.svg";
 import clutch from "@/assets/homepage/clutch.svg";
 import bg_top from "@/assets/bg/header_top.png";
