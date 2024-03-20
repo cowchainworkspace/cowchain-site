@@ -26,9 +26,8 @@ const CaseStudiesFinance = lazy(() => import("pages/case-studies/finance"));
 
 function App() {
   useEffect(() => {
-    // y();
-    emailjs.init(import.meta.env.REACT_APP_EMAILJS_PUBLIC_KEY);
-    emailjs.init(import.meta.env.REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
+    emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY);
+    emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
   }, []);
 
   return (

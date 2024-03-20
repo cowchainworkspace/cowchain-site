@@ -15,10 +15,10 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
   const sendFormData = async (data) => {
     try {
       send(
-        import.meta.env.REACT_APP_DEV_SERVICE_ID,
-        import.meta.env.REACT_APP_DEV_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_REACT_APP_DEV_SERVICE_ID,
+        process.env.NEXT_PUBLIC_REACT_APP_DEV_TEMPLATE_ID,
         data,
-        import.meta.env.REACT_APP_DEV_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_REACT_APP_DEV_EMAILJS_PUBLIC_KEY
       );
     } catch (e) {
       /* empty */

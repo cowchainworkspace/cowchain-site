@@ -43,8 +43,8 @@ export default function Navbar({ isPageNotFound = false }) {
   const { isRendering, setIsLoading, setIsRendering } = useLoader();
 
   useEffect(() => {
-    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
-    emailjs.init(process.env.REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
+    emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY);
+    emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
 
     setTimeout(() => {
       setIsLoading(false);

@@ -28,10 +28,10 @@ export default function Header() {
   const sendFormData = async (data) => {
     try {
       emailjs.send(
-        import.meta.env.REACT_APP_SERVICE_ID,
-        import.meta.env.REACT_APP_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_REACT_APP_SERVICE_ID,
+        process.env.NEXT_PUBLIC_REACT_APP_TEMPLATE_ID,
         data,
-        import.meta.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY
       );
     } catch (e) {
       /* empty */
