@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+export default {
   content: [
-    "./index.html",
-    "./src/*.{js,jsx,ts,tsx}",
-    "./src/**/*.{js,jsx,ts,tsx}"
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/lib/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
     container: {
@@ -24,9 +26,9 @@ module.exports = {
         secondary: "#BBBBBB"
       },
       backgroundImage: {
-        credo: 'url("assets/clients/credo_bg.jpg")'
+        credo: 'url("/assets/credo_bg.jpg")'
       }
     }
   },
-  plugins: []
+  plugins: [require("tailwindcss/nesting")]
 };

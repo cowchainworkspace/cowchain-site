@@ -1,40 +1,32 @@
-import React, { useState, useEffect, useRef } from "react";
 import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/modal_close.svg";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { send } from "emailjs-com";
-import { Select, Space } from "antd";
-import ReactCountryFlag from "react-country-flag";
+import Image from "next/image";
 
 const ConnectForm = ({ modalOpen, setModalOpen }) => {
   const {
     register,
     handleSubmit,
     reset,
-    control,
     formState: { errors }
   } = useForm();
 
-  const [sendError, setSendError] = useState(false);
-  const [sendSuccess, setSendSuccess] = useState(false);
-
-  const sendFormData = async (data, error) => {
+  const sendFormData = async (data) => {
     try {
       send(
-        process.env.REACT_APP_DEV_SERVICE_ID,
-        process.env.REACT_APP_DEV_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_REACT_APP_DEV_SERVICE_ID,
+        process.env.NEXT_PUBLIC_REACT_APP_DEV_TEMPLATE_ID,
         data,
-        process.env.REACT_APP_DEV_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_REACT_APP_DEV_EMAILJS_PUBLIC_KEY
       );
     } catch (e) {
-      setSendError(true);
+      /* empty */
     }
     reset();
-    setSendSuccess(true);
+
     setModalOpen(false);
   };
-
-  const searchInput = useRef(null);
 
   return (
     <Popup
@@ -47,7 +39,7 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
     >
       <div className="modal h-full max-h-[95vh] min-w-full max-w-7xl overflow-y-auto border-2 border-white bg-black p-4 md:p-8 lg:p-16">
         <div className="flex">
-          <img
+          <Image
             className="ml-auto w-8 cursor-pointer"
             alt=""
             onClick={() => setModalOpen(false)}
@@ -70,7 +62,7 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
             onSubmit={handleSubmit(sendFormData)}
             className="userform  flex flex-col gap-y-6"
           >
-            <input type="text" autofocus="autofocus" className={"hidden"} />
+            <input type="text" autoFocus="autofocus" className={"hidden"} />
             <input
               className="text_input placeholder:text-yellow-200"
               type="text"
@@ -100,6 +92,7 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
               {...register("email", {
                 required: true,
                 pattern:
+                  // eslint-disable-next-line no-useless-escape
                   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
               })}
               aria-invalid={errors.email ? "true" : "false"}

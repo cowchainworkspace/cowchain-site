@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+"use client";
+
 import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/modal_close.svg";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import Image from "next/image";
 
-const ContactForm = ({ modalOpen, setModalOpen }) => {
+export default function ContactForm({ modalOpen, setModalOpen }) {
   const {
     register,
     handleSubmit,
@@ -12,22 +14,19 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
     formState: { errors }
   } = useForm();
 
-  const [sendError, setSendError] = useState(false);
-  const [sendSuccess, setSendSuccess] = useState(false);
-
-  const sendFormData = async (data, error) => {
+  const sendFormData = async (data) => {
     try {
       emailjs.send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_REACT_APP_SERVICE_ID,
+        process.env.NEXT_PUBLIC_REACT_APP_TEMPLATE_ID,
         data,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY
       );
     } catch (e) {
-      setSendError(true);
+      /* empty */
     }
     reset();
-    setSendSuccess(true);
+    // setSendSuccess(true);
     setModalOpen(false);
   };
 
@@ -53,7 +52,7 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
     >
       <div className="modal h-full max-h-[95vh] min-w-full max-w-7xl overflow-y-auto border-2 border-white bg-black p-4 md:p-8 lg:p-16">
         <div className="flex">
-          <img
+          <Image
             className="ml-auto w-8 cursor-pointer"
             alt=""
             onClick={() => setModalOpen(false)}
@@ -141,6 +140,4 @@ const ContactForm = ({ modalOpen, setModalOpen }) => {
       </div>
     </Popup>
   );
-};
-
-export default ContactForm;
+}

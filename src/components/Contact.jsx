@@ -1,14 +1,17 @@
+"use client";
+
 import React, { useState } from "react";
 import ContactForm from "./utils/ContactForm";
-import bg from "assets/bg/get-contact.png";
-import { cn } from "lib/utils";
+import bg from "@/assets/bg/get-contact.png";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
 
-const Contact = ({ className }) => {
+export default function Contact({ className }) {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <section id="contact" className={cn(" relative  ", className)}>
-      <img
+    <section id="contact" className={cn("relative", className)}>
+      <Image
         className="absolute left-1/2  top-1/2   hidden -translate-x-1/2 -translate-y-1/2  md:block"
         src={bg}
         alt=""
@@ -29,6 +32,4 @@ const Contact = ({ className }) => {
       </div>
     </section>
   );
-};
-
-export default Contact;
+}
