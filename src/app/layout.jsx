@@ -1,5 +1,6 @@
 import "./index.css";
 import "./home.css";
+import { ClientProvider } from "@/lib/api/client";
 
 export const metadata = {
   title: "Cowchain - Blockchain Development",
@@ -36,7 +37,9 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-        <div id="root">{children}</div>
+        <ClientProvider>
+          <div id="root">{children}</div>
+        </ClientProvider>
       </body>
     </html>
   );

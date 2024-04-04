@@ -75,17 +75,6 @@ const teamData = [
     }
   },
   {
-    name: "Alexander",
-    role: "Project Manager",
-    photo: photo9,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "https://www.linkedin.com/in/alexander-barabash-9a76aa217/"
-    }
-  },
-
-  {
     name: "Saminu",
     role: "Full-stack Web3 developer",
     photo: photo8,
@@ -95,6 +84,7 @@ const teamData = [
       url: "https://www.linkedin.com/in/smailafiiia/"
     }
   },
+
   {
     name: "Ruslan",
     role: "Lead Generation manager",
@@ -103,6 +93,16 @@ const teamData = [
       network: "LinkedIn",
       icon: linkedin,
       url: "https://www.linkedin.com/in/ruslan-siniaiev-600340240/"
+    }
+  },
+  {
+    name: "Alexander",
+    role: "Project Manager",
+    photo: photo9,
+    social: {
+      network: "LinkedIn",
+      icon: linkedin,
+      url: "https://www.linkedin.com/in/alexander-barabash-9a76aa217/"
     }
   }
 ];
@@ -115,7 +115,9 @@ const TeamCard = ({ name, role, photo, social }) => {
         style={{ backgroundImage: `url(${photo.src})` }}
       />
       <div>
-        <h2 className="text-sm">{name}</h2>
+        <span className="font-roc text-sm font-medium uppercase text-white">
+          {name}
+        </span>
         <p className="caption  uppercase">{role}</p>
       </div>
     </div>
