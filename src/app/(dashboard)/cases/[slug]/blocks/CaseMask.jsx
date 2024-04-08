@@ -1,7 +1,9 @@
+"use client";
+
 import React from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
 
-export const CaseMask = () => {
+export const CaseMask = ({ mainImg, bgImg }) => {
   return (
     <div className="h-[264px] lg:h-[504px]">
       <ParallaxBanner

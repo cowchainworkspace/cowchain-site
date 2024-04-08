@@ -4,8 +4,6 @@ import "./case-studies.css";
 import { HeroSection } from "./blocks/HeroSection";
 import Contact from "@/components/Contact";
 import Projects from "../components/Projects";
-import marsan_mobile from "@/assets/case-study/marsan-mobile.png";
-import marsan_mobile_black from "@/assets/case-study/marsan-black-mobile.png";
 import Link from "next/link";
 import Chevron from "@/components/icons/chevron";
 import { ProjectDetail } from "../components/project-detail";
@@ -14,53 +12,24 @@ import Canada from "@/assets/icons/canada";
 import { CaseGallery } from "./blocks/CaseGallery";
 import Image from "next/image";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { useSearchParams } from "next/navigation";
+import { useGetItem } from "@/hooks/use-strapi";
 
-const project_details = [
-  {
-    title: "Tech Stack",
-    content:
-      "React Native, Node.js, Solidity, ethers.js, web3.js, bitcoin.js, Persona KYC, Interac E-transfer, Chat support, email templating"
-  },
-  {
-    title: "project duration",
-    content: "5 months"
-  },
-  {
-    title: "geography",
-    content: (
-      <div className="flex flex-row items-center gap-2">
-        {" "}
-        <Canada className={"h-3 w-4 "} /> Canada
-      </div>
-    )
-  }
-];
+export const Page = ({ props }) => {
+  const searchParams = useSearchParams();
+  const search = searchParams.get("id");
 
-const team_details = [
-  {
-    title: "development",
-    content: "Saminu Mailafiiia, Daniil Stoian, Oleh Proidakov"
-  },
-  {
-    title: "project management",
-    content: "Aleksandr Bohdanov"
-  },
-  {
-    title: "marketing & Seo",
-    content: "Ruslan Siniaiev"
-  },
-  {
-    title: "ui/ux design",
-    content: "Valeriya Bobko"
-  }
-];
+  const { data: project } = useGetItem("cases", search);
 
-export const CaseStudiesMarsan = ({ setBurgerOpen }) => {
   return (
     <section id="clients-wrapper">
       <ParallaxProvider>
         <div className="relative bg-black">
-          <HeroSection />
+          <HeroSection
+            tags={project?.data?.attributes?.tags}
+            title={project?.data?.attributes?.title}
+            linkTitle={project?.data?.attributes?.linkTitle}
+          />
           <CaseMask />
           <div>
             <div className="container flex w-full flex-col items-center justify-center px-0 md:px-16 xl:max-w-[1300px]">
@@ -77,14 +46,18 @@ export const CaseStudiesMarsan = ({ setBurgerOpen }) => {
                   </Link>
                 </div>
                 <div className="border-b-[1px] border-white/50 lg:min-w-[490px]">
-                  {project_details.map((detail, index) => (
-                    <ProjectDetail key={detail.title + index} {...detail} />
-                  ))}
+                  {project?.data?.attributes?.project_details.map(
+                    (detail, index) => (
+                      <ProjectDetail key={detail.title + index} {...detail} />
+                    )
+                  )}
                 </div>
               </div>
             </div>
 
-            <CaseGallery />
+            <CaseGallery
+              photos={project?.data?.attributes?.case_carousel?.data}
+            />
 
             <div className="container flex w-full flex-col items-center justify-center px-0 md:px-16 xl:max-w-[1300px]">
               <div className="my-16 flex flex-col items-center justify-center gap-16 lg:my-36 lg:gap-16">
@@ -99,14 +72,21 @@ export const CaseStudiesMarsan = ({ setBurgerOpen }) => {
                       challenge
                     </h3>
                     <span className="mb-10 text-white lg:min-w-[570px]">
-                      Design & develop a fiat-to-crypto exchange mobile app with
-                      seamless user experience. We had to avoid Canadian
-                      regulatory complications to deploy this non-custodial app,
-                      while still creating a robust solution for exchanging $CAD
-                      for BTC and ETH
+                      {project?.data?.attributes?.challenge}
                     </span>
                     <Image
-                      src={marsan_mobile}
+                      width={
+                        project?.data?.attributes?.challenge_img?.data
+                          ?.attributes.width
+                      }
+                      height={
+                        project?.data?.attributes?.challenge_img?.data
+                          ?.attributes.height
+                      }
+                      src={
+                        project?.data?.attributes?.challenge_img?.data
+                          .attributes.url
+                      }
                       className="mt-8 min-h-[270px] w-full object-cover lg:mt-14 lg:min-h-[500px]"
                       alt=""
                     />
@@ -116,15 +96,21 @@ export const CaseStudiesMarsan = ({ setBurgerOpen }) => {
                       Result
                     </h3>
                     <span className="text-white">
-                      A full-fledged app for Android and iOS for exchanging $CAD
-                      to BTC & ETH with integrated Persona KYC for regulatory
-                      compliance and Canadian funds transfer service Interac
-                      E-transfer for seamless fiat transactions. We also created
-                      convenient chat support for real-time assistance and
-                      branded email templates for targeted marketing
+                      {project?.data?.attributes?.result}
                     </span>
                     <Image
-                      src={marsan_mobile_black}
+                      width={
+                        project?.data?.attributes?.result_img?.data?.attributes
+                          .width
+                      }
+                      height={
+                        project?.data?.attributes?.result_img?.data?.attributes
+                          .height
+                      }
+                      src={
+                        project?.data?.attributes?.result_img?.data.attributes
+                          .url
+                      }
                       className="mt-8 min-h-[270px] w-full object-cover lg:min-h-[500px]"
                       alt=""
                     />
@@ -138,9 +124,11 @@ export const CaseStudiesMarsan = ({ setBurgerOpen }) => {
                   </h1>
                 </div>
                 <div className="border-b-[1px] border-white/50 xl:min-w-[490px]">
-                  {team_details.map((detail, index) => (
-                    <ProjectDetail key={detail.title + index} {...detail} />
-                  ))}
+                  {project?.data?.attributes?.team_details?.map(
+                    (detail, index) => (
+                      <ProjectDetail key={detail.title + index} {...detail} />
+                    )
+                  )}
                 </div>
               </div>
 
@@ -166,4 +154,4 @@ export const CaseStudiesMarsan = ({ setBurgerOpen }) => {
   );
 };
 
-export default CaseStudiesMarsan;
+export default Page;

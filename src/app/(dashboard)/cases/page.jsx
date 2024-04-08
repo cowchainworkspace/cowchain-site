@@ -12,8 +12,9 @@ import step from "@/assets/cases/step.png";
 import finance from "@/assets/cases/finance.png";
 import finance_mobile from "@/assets/cases/finance-mobile.png";
 import { CaseSplash } from "./components/case-splash";
+import { useGetItems } from "@/hooks/use-strapi";
 
-const cases = [
+const old_cases = [
   {
     title: "Exchange wallet app",
     link: "/cases/payment",
@@ -59,27 +60,32 @@ const cases = [
 ];
 
 const Cases = ({ setBurgerOpen }) => {
+  const { data: cases } = useGetItems("cases");
   const [tags, setTags] = useState([]);
   const filteredCases = useMemo(() => {
-    if (tags.length === 0) return cases;
-    return cases.filter((product) => {
-      return tags.some((tag) => product.tags.includes(tag));
+    if (tags.length === 0) return cases?.data;
+    return cases?.data.filter((product) => {
+      return tags.some((tag) => product.attributes.tags.includes(tag));
     });
-  }, [tags]);
-  const [count, setCount] = useState(6);
+  }, [tags, cases?.data]);
+  const [count, setCount] = useState(cases?.data.length);
 
   useEffect(() => {
-    if (tags.length === 0) setCount(6);
+    if (tags.length === 0) setCount(cases?.data.length);
     else setCount(filteredCases.length);
-  }, [filteredCases.length, tags]);
+  }, [tags, cases]);
 
   return (
     <section id="clients-wrapper">
       <div className="relative  bg-black">
         <HeroSection tags={tags} setTags={setTags} />
         <div className="flex flex-col items-center">
-          {filteredCases.slice(0, count).map((product, index) => (
-            <CaseSplash key={`${product.title + index}`} {...product} />
+          {filteredCases?.slice(0, count).map((product, index) => (
+            <CaseSplash
+              key={`${product.attributes.title + index}`}
+              {...product.attributes}
+              id={product.id}
+            />
           ))}
         </div>
       </div>

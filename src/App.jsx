@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy } from "react";
+import { useEffect, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Loading } from "components/loader/Loading";
 import { ParallaxProvider } from "react-scroll-parallax";
