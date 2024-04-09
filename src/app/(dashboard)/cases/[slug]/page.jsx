@@ -8,7 +8,6 @@ import Link from "next/link";
 import Chevron from "@/components/icons/chevron";
 import { ProjectDetail } from "../components/project-detail";
 import { CaseMask } from "./blocks/CaseMask";
-import Canada from "@/assets/icons/canada";
 import { CaseGallery } from "./blocks/CaseGallery";
 import Image from "next/image";
 import { ParallaxProvider } from "react-scroll-parallax";
@@ -30,7 +29,12 @@ export const Page = ({ props }) => {
             title={project?.data?.attributes?.title}
             linkTitle={project?.data?.attributes?.linkTitle}
           />
-          <CaseMask />
+          <CaseMask
+            mainImg={
+              project?.data?.attributes?.main_case_img.data[0].attributes
+            }
+            bgImg={project?.data?.attributes?.main_case_img_bg.data.attributes}
+          />
           <div>
             <div className="container flex w-full flex-col items-center justify-center px-0 md:px-16 xl:max-w-[1300px]">
               <div className="my-16 flex flex-col justify-center  gap-20 lg:my-36 lg:min-w-[440px] lg:gap-36 xl:flex-row">
@@ -48,7 +52,14 @@ export const Page = ({ props }) => {
                 <div className="border-b-[1px] border-white/50 lg:min-w-[490px]">
                   {project?.data?.attributes?.project_details.map(
                     (detail, index) => (
-                      <ProjectDetail key={detail.title + index} {...detail} />
+                      <ProjectDetail
+                        countryImg={
+                          project?.data?.attributes?.country_img.data[0]
+                            .attributes
+                        }
+                        key={detail.title + index}
+                        {...detail}
+                      />
                     )
                   )}
                 </div>
