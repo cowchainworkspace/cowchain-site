@@ -26,20 +26,8 @@ const links = [
     link: "/team"
   },
   {
-    title: "Apply to connect",
-    link: "/team#apply"
-  },
-  {
-    title: "Get in touch",
-    link: "/#contact"
-  },
-  {
     title: "Privacy Policy",
     link: "/policy"
-  },
-  {
-    title: "FAQ",
-    link: "/#faq"
   }
 ];
 
@@ -69,6 +57,13 @@ const casesLinks = [
     link: "/cases/wallet"
   }
 ];
+
+export const metadata = {
+  metadataBase: new URL("https://cowchain.io/"),
+  alternates: {
+    canonical: "/sitemap"
+  }
+};
 
 export default function Page() {
   return (
