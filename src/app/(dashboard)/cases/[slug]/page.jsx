@@ -13,6 +13,7 @@ import Image from "next/image";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { useSearchParams } from "next/navigation";
 import { useGetItem } from "@/hooks/use-strapi";
+import dot from "@/assets/icons/dot.png";
 
 export const Page = ({ props }) => {
   const searchParams = useSearchParams();
@@ -33,7 +34,7 @@ export const Page = ({ props }) => {
             mainImg={
               project?.data?.attributes?.main_case_img.data[0].attributes
             }
-            bgImg={project?.data?.attributes?.main_case_img_bg.data.attributes}
+            bgImg={project?.data?.attributes?.main_case_img_bg.data?.attributes}
           />
           <div>
             <div className="container flex w-full flex-col items-center justify-center px-0 md:px-16 xl:max-w-[1300px]">
@@ -54,8 +55,8 @@ export const Page = ({ props }) => {
                     (detail, index) => (
                       <ProjectDetail
                         countryImg={
-                          project?.data?.attributes?.country_img.data[0]
-                            .attributes
+                          project?.data?.attributes?.country_img?.data[0]
+                            ?.attributes || { url: dot, width: 10, height: 10 }
                         }
                         key={detail.title + index}
                         {...detail}
