@@ -14,6 +14,13 @@ import Image from "next/image";
 
 const photos = [team1, team2, team3];
 
+export const metadata = {
+  metadataBase: new URL("https://cowchain.io/"),
+  alternates: {
+    canonical: "/team"
+  }
+};
+
 const Team = ({ setBurgerOpen }) => {
   return (
     <section className=" ">

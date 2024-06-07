@@ -4,7 +4,7 @@ import { ClientProvider } from "@/lib/api/client";
 
 export const metadata = {
   title: "Cowchain - Blockchain Development",
-  description: "Web site created using create-react-app"
+  description: "We Turn Your Startup Ideas Into Viable Web3 Businesses"
 };
 
 export default function RootLayout({ children }) {

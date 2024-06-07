@@ -64,6 +64,13 @@ const policy = [
   }
 ];
 
+export const metadata = {
+  metadataBase: new URL("https://cowchain.io/"),
+  alternates: {
+    canonical: "/policy"
+  }
+};
+
 const Policy = ({ setBurgerOpen }) => {
   return (
     <section id="clients-wrapper">

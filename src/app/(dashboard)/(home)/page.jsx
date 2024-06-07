@@ -70,7 +70,7 @@ const jsonLdVideo = {
   name: "Cownchain Logo Animation",
   description: "Cownchain Logo Animation",
   thumbnailUrl: ["@/assets/homepage/thumbnail.png"],
-  uploadDate: "2024-02-31T08:00:00+08:00",
+  uploadDate: "	20240228T190000-0500",
   duration: "PT1M6S",
   contentUrl: "/homepage/video.mp4",
   embedUrl: "/homepage/video.mp4",

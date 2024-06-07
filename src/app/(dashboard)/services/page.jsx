@@ -1,10 +1,15 @@
-"use client";
-
 import { HeroSection } from "./blocks/HeroSection";
 import Contact from "@/components/Contact";
 import { Products } from "./blocks/Products";
 import { ViewMoreSection } from "./blocks/ViewMore";
 import Stack from "@/components/stack";
+
+export const metadata = {
+  metadataBase: new URL("https://cowchain.io/"),
+  alternates: {
+    canonical: "/services"
+  }
+};
 
 const Services = ({ setBurgerOpen }) => {
   return (
