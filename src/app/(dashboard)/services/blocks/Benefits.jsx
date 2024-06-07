@@ -1,11 +1,13 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, createElement } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import { motion, useScroll } from "framer-motion";
 import { cn } from "@/lib/utils";
 import ContactForm from "@/components/utils/ContactForm";
 import Image from "next/image";
+import { useGetItems } from "@/hooks/use-strapi";
+import Markdown from "markdown-to-jsx";
 
 const benefitsData = [
   {
@@ -50,6 +52,8 @@ const benefitsData = [
 ];
 
 export default function Benefits() {
+  const { data } = useGetItems("services-expertises");
+
   const expandVariants = {
     visible: { height: "auto" },
     hidden: { height: 0 }
@@ -126,19 +130,21 @@ export default function Benefits() {
         </div>
         <div className="border-b border-b-th-fade md:flex md:h-screen md:w-1/2 md:flex-col">
           <Scrollama className="relative" offset={0.5}>
-            {benefitsData.map((benefit, index) => {
+            {data?.data.map((benefit, index) => {
               return (
                 <Step
                   className="relative flex  items-center justify-center"
                   data={index + 1}
-                  key={benefit.title + index}
+                  key={benefit.id}
                 >
                   <article
                     style={benefit.style}
                     className={cn(
                       "px-default relative flex h-[25vh] min-h-[25vh]  grow flex-col items-center justify-center  border-t border-t-th-fade bg-black  duration-1000 will-change-transform",
-                      benefit.initialStyle,
-                      scrollIndex >= index ? benefit.transformStyle : ""
+                      benefitsData[index].initialStyle,
+                      scrollIndex >= index
+                        ? benefitsData[index].transformStyle
+                        : ""
                     )}
                   >
                     <motion.div
@@ -150,17 +156,17 @@ export default function Benefits() {
                     >
                       <h2
                         className={cn(
-                          "3xl:pb-[85px] 3xl:pt-[60px] my-8 max-w-xl text-xl text-white xl:pb-[10px] xl:pt-[105px]",
+                          "my-8 max-w-xl text-xl text-white xl:pb-[10px] xl:pt-[105px] 3xl:pb-[85px] 3xl:pt-[60px]",
                           benefit.textStyle,
                           benefit.headerStyle
                         )}
                       >
-                        {benefit.title}
+                        {benefit.attributes.title}
                       </h2>
                       <motion.p
                         variants={textVariants}
                         className={cn(
-                          " max-h-[300px] min-h-[150px] max-w-2xl overflow-auto text-sm !leading-[180%] text-secondary transition-all  duration-[1000ms]  ease-in will-change-transform lg:text-base 2xl:max-w-full",
+                          "markdown max-h-[300px] min-h-[150px] max-w-2xl overflow-auto text-sm !leading-[180%] text-secondary transition-all  duration-[1000ms]  ease-in will-change-transform lg:text-base 2xl:max-w-full",
                           benefit.textStyle,
                           {
                             "block  transition-all duration-1000":
@@ -168,7 +174,18 @@ export default function Benefits() {
                           }
                         )}
                       >
-                        {benefit.text}
+                        <Markdown
+                          children={benefit.attributes.text}
+                          options={{
+                            createElement(type, props, children) {
+                              return (
+                                <div className="parent markdown">
+                                  {createElement(type, props, children)}
+                                </div>
+                              );
+                            }
+                          }}
+                        />
                       </motion.p>
                     </motion.div>
                   </article>

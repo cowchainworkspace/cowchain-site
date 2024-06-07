@@ -16,6 +16,10 @@ export default {
       }
     },
     extend: {
+      screens: {
+        "3xl": "1800px",
+        "4xl": "2000px"
+      },
       fontFamily: {
         roc: ["roc-grotesk", "sans-serif"]
       },

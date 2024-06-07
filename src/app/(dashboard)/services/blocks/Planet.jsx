@@ -1,7 +1,12 @@
-import React from "react";
+"use client";
+
+import React, { createElement } from "react";
 import Image from "next/image";
+import { useGetItems } from "@/hooks/use-strapi";
+import Markdown from "markdown-to-jsx";
 
 export default function Planet() {
+  const { data } = useGetItems("services-contents");
   return (
     <section id="view_more" className="relative z-10  mt-16  lg:my-[120px]">
       <div className="relative grid grid-cols-1 md:grid-cols-2">
@@ -18,10 +23,18 @@ export default function Planet() {
               Our blockchain advisory background
             </h3>
             <span className="text-left text-[#bbb]">
-              The experts at our smart contract development company are
-              experienced in working with various blockchain networks, which
-              allows us to offer optimal solutions depending on the project
-              requirements:
+              <Markdown
+                children={data?.data[0].attributes.advisory_text}
+                options={{
+                  createElement(type, props, children) {
+                    return (
+                      <div className="parent markdown">
+                        {createElement(type, props, children)}
+                      </div>
+                    );
+                  }
+                }}
+              />
             </span>
           </div>
           <div className=" flex max-w-[350px] justify-between">

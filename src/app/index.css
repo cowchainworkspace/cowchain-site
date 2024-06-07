@@ -25,6 +25,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.markdown > * {
+  all: revert;
+}
+
 /* Text styles */
 
 h1 {

@@ -1,9 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { createElement } from "react";
 import { ExpertiseBlock } from "./components/expertise";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { useGetItems } from "@/hooks/use-strapi";
+import Markdown from "markdown-to-jsx";
 
 const expertiseData = [
   {
@@ -25,6 +27,10 @@ const expertiseData = [
 ];
 
 export default function Networks({ margin = "mt-[calc(35vh_+_1.5625vh)]" }) {
+  const { data } = useGetItems("services-networks");
+  const { data: dataText } = useGetItems("services-contents");
+  console.log(data);
+
   return (
     <section
       id="expertise"
@@ -44,17 +50,25 @@ export default function Networks({ margin = "mt-[calc(35vh_+_1.5625vh)]" }) {
               Blockchain networks we work with
             </h3>
             <span className="text-[#bbb] md:text-left">
-              The experts at our smart contract development company are
-              experienced in working with various blockchain networks, which
-              allows us to offer optimal solutions depending on the project
-              requirements:
+              <Markdown
+                children={dataText?.data[0].attributes.networks_text}
+                options={{
+                  createElement(type, props, children) {
+                    return (
+                      <div className="parent markdown">
+                        {createElement(type, props, children)}
+                      </div>
+                    );
+                  }
+                }}
+              />
             </span>
           </div>
         </div>
         <div className="grid lg:grid-cols-1">
           <div className="grid grid-cols-2">
-            {expertiseData.map((expertise, index) => (
-              <ExpertiseBlock key={index * 2} {...expertise} />
+            {data?.data.map((expertise, index) => (
+              <ExpertiseBlock key={index * 2} {...expertise.attributes} />
             ))}
           </div>
         </div>

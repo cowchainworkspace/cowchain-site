@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { createElement } from "react";
 import eth from "@/assets/homepage/expertises/ethereum.svg";
 import ava from "@/assets/homepage/expertises/avalanche.svg";
 import polygon from "@/assets/homepage/expertises/polygon.svg";
@@ -16,6 +16,8 @@ import ios from "@/assets/homepage/expertises/ios.svg";
 import android from "@/assets/homepage/expertises/android.svg";
 import { ExpertiseBlock } from "./components/expertise";
 import { cn } from "@/lib/utils";
+import { useGetItems } from "@/hooks/use-strapi";
+import Markdown from "markdown-to-jsx";
 
 const expertiseData = [
   {
@@ -103,6 +105,8 @@ const expertiseData = [
 export default function ServiceStack({
   margin = "mt-[calc(35vh_+_1.5625vh)]"
 }) {
+  const { data } = useGetItems("services-contents");
+
   return (
     <section id="expertise" className={cn("relative   md:mt-0", margin)}>
       <div className="relative z-20 grid lg:grid-cols-2">
@@ -111,14 +115,19 @@ export default function ServiceStack({
             <h3 className="mx-auto cursor-default   font-roc text-2xl uppercase   leading-none md:text-[42px]">
               The tech stack we use
             </h3>
-            <span className="text-[#bbb]">
-              Our developers use advanced technologies and tools to provide
-              smart contract development service.
-            </span>
-            <span className="text-[#bbb]">
-              We constantly follow the development of blockchain technologies
-              and supplement our stack with new tools to improve development
-              efficiency.
+            <span className="text-left text-[#bbb]">
+              <Markdown
+                children={data?.data[0].attributes.stack_text}
+                options={{
+                  createElement(type, props, children) {
+                    return (
+                      <div className="parent markdown">
+                        {createElement(type, props, children)}
+                      </div>
+                    );
+                  }
+                }}
+              />
             </span>
           </div>
         </div>

@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, createElement } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import { motion, useScroll } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Markdown from "markdown-to-jsx";
+import { useGetItems } from "@/hooks/use-strapi";
 
 const benefitsData = [
   {
@@ -40,6 +42,8 @@ const benefitsData = [
 ];
 
 export default function BenefitsMobiles() {
+  const { data } = useGetItems("services-expertises");
+
   const expandVariants = {
     visible: { height: "auto" },
     hidden: { height: 0 }
@@ -73,7 +77,7 @@ export default function BenefitsMobiles() {
       <div className="sticky top-0 flex h-screen flex-col md:flex-row">
         <div className="relative flex flex-col justify-between md:flex md:h-screen md:w-1/2 md:flex-col">
           <Scrollama className="relative" offset={0.5}>
-            {benefitsData.map((benefit, index) => {
+            {data?.data.map((benefit, index) => {
               return (
                 <Step
                   className="relative"
@@ -84,8 +88,10 @@ export default function BenefitsMobiles() {
                     style={benefit.style}
                     className={cn(
                       "relative flex h-[430px] min-h-[250px] grow flex-col items-center justify-center overflow-hidden border-t border-t-th-fade bg-black px-5    duration-1000  will-change-transform ",
-                      benefit.initialStyle,
-                      scrollIndex >= index ? benefit.transformStyle : ""
+                      benefitsData[index].initialStyle,
+                      scrollIndex >= index
+                        ? benefitsData[index].transformStyle
+                        : ""
                     )}
                   >
                     <motion.div
@@ -113,7 +119,18 @@ export default function BenefitsMobiles() {
                           }
                         )}
                       >
-                        {benefit.text}
+                        <Markdown
+                          children={benefit.attributes.text}
+                          options={{
+                            createElement(type, props, children) {
+                              return (
+                                <div className="parent markdown">
+                                  {createElement(type, props, children)}
+                                </div>
+                              );
+                            }
+                          }}
+                        />
                       </motion.p>
                     </motion.div>
                   </article>

@@ -1,9 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, createElement } from "react";
 import Link from "next/link";
 import arrow from "@/assets/arrow_right.svg";
 import { cn } from "@/lib/utils";
+import Markdown from "markdown-to-jsx";
+import { useGetItems } from "@/hooks/use-strapi";
 
 const data = [
   {
@@ -33,6 +35,9 @@ const data = [
 ];
 
 export const Industries = () => {
+  const { data: textData } = useGetItems("services-contents");
+  const { data: inData } = useGetItems("services-industries");
+
   const [caseIndex, setCaseIndex] = useState(0);
   return (
     <section
@@ -45,9 +50,22 @@ export const Industries = () => {
             Key industries for the application of smart contracts
           </h3>
           <span className="max-w-[500px] text-secondary">
-            Our blockchain smart contract development agency has expertise in a
-            variety of industries, including:
+            {
+              <Markdown
+                children={textData?.data[0].attributes.key_industries_text}
+                options={{
+                  createElement(type, props, children) {
+                    return (
+                      <div className="parent markdown">
+                        {createElement(type, props, children)}
+                      </div>
+                    );
+                  }
+                }}
+              />
+            }
           </span>
+
           <div className="flex gap-4 uppercase">
             <button
               onClick={() => setCaseIndex(0)}
@@ -88,14 +106,14 @@ export const Industries = () => {
         <div className="flex flex-col items-start justify-center border-r border-r-th-fade p-8 text-white">
           <div className="mx-auto flex flex-col items-start justify-center">
             <span className="mb-5 font-roc text-xl  uppercase">
-              {data[caseIndex].title}
+              {inData?.data[caseIndex].attributes.title}
             </span>
             <span className="mb-5 max-w-[430px] text-secondary ">
-              {data[caseIndex].description}
+              {inData?.data[caseIndex].attributes.text}
             </span>
             <Link
               className="flex gap-2 text-base  uppercase underline"
-              href={data[caseIndex].link}
+              href={inData?.data[caseIndex].attributes?.link || "/"}
             >
               see case study
               <img className="h-6 w-6" src={arrow.src} alt="" />
@@ -105,7 +123,7 @@ export const Industries = () => {
 
         <img
           className="w-full grid-cols-1 object-cover object-center"
-          src="/assets/services/mobile_splash.png"
+          src={inData?.data[caseIndex].attributes.img.data.attributes.url}
           alt=""
         />
       </div>

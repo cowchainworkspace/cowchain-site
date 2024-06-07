@@ -1,11 +1,13 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, createElement } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import { motion, useScroll } from "framer-motion";
 import { cn } from "@/lib/utils";
 import ContactForm from "@/components/utils/ContactForm";
 import Image from "next/image";
+import { useGetItems } from "@/hooks/use-strapi";
+import Markdown from "markdown-to-jsx";
 
 const benefitsData = [
   {
@@ -43,6 +45,7 @@ const benefitsData = [
 
 export default function Development() {
   const [modalOpen, setModalOpen] = useState(false);
+  const { data } = useGetItems("services-processes");
 
   const expandVariants = {
     visible: { height: "auto" },
@@ -124,7 +127,7 @@ export default function Development() {
         </div>
         <div className="border-b border-b-th-fade md:flex md:h-screen md:w-1/2 md:flex-col">
           <Scrollama className="relative" offset={0.5}>
-            {benefitsData.map((benefit, index) => {
+            {data?.data.map((benefit, index) => {
               return (
                 <Step
                   className="relative"
@@ -136,8 +139,10 @@ export default function Development() {
                       style={benefit.style}
                       className={cn(
                         "relative flex h-[25hv] min-h-[25hv] grow  items-start justify-start overflow-hidden  bg-black px-5    duration-1000  will-change-transform ",
-                        benefit.initialStyle,
-                        scrollIndex >= index ? benefit.transformStyle : ""
+                        benefitsData[index].initialStyle,
+                        scrollIndex >= index
+                          ? benefitsData[index].transformStyle
+                          : ""
                       )}
                     >
                       <div className="mx-6 flex  flex-col items-center justify-center">
@@ -164,7 +169,7 @@ export default function Development() {
                             benefit.headerStyle
                           )}
                         >
-                          {benefit.title}
+                          {benefit.attributes.title}
                         </h2>
                         <motion.p
                           variants={textVariants}
@@ -177,7 +182,18 @@ export default function Development() {
                             }
                           )}
                         >
-                          {benefit.text}
+                          <Markdown
+                            children={benefit.attributes.text}
+                            options={{
+                              createElement(type, props, children) {
+                                return (
+                                  <div className="parent markdown">
+                                    {createElement(type, props, children)}
+                                  </div>
+                                );
+                              }
+                            }}
+                          />
                         </motion.p>
                       </motion.div>
                     </article>
