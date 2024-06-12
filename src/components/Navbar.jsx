@@ -58,7 +58,10 @@ export default function Navbar({ isPageNotFound = false }) {
     setWindowheight(window.innerHeight);
     setIsHomePage(pathname === "/");
     setIsGradient(
-      pathname === "/cases" || pathname === "/clients" || pathname === "/policy"
+      pathname === "/cases" ||
+        pathname === "/clients" ||
+        pathname === "/policy" ||
+        pathname === "/services"
     );
     setIsTeamBg(pathname === "/team" || pathname === "/sitemap");
 
