@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://use.typekit.net/cqp2qoa.css" />
 
         <meta name="theme-color" content="#000000" />
+        <meta property="og:image" content="https://cowchain.io/images/og-image.png" />
       </head>
 
       <body>
