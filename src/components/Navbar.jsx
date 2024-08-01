@@ -117,6 +117,10 @@ export default function Navbar({ isPageNotFound = false }) {
     {
       title: "Team",
       link: "/team"
+    },
+    {
+      title: "Blog",
+      link: "/blog"
     }
   ];
 

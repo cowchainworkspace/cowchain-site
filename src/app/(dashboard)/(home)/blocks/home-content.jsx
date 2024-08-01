@@ -8,7 +8,7 @@ import Contact from "@/components/Contact";
 import FAQ from "./FAQ";
 import Stack from "@/components/stack";
 import Team from "./Team";
- 
+
 export default function HomeContent() {
   return (
     <>

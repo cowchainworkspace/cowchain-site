@@ -2,6 +2,7 @@ import React from "react";
 import upwork from "@/assets/homepage/upwork.svg";
 import clutch from "@/assets/homepage/clutch.svg";
 import Image from "next/image";
+import playIcon from "@/assets/icons/playIcon.svg";
 
 export default function HeaderContent() {
   return (
@@ -11,7 +12,7 @@ export default function HeaderContent() {
       </h1>
       <div className="mt-auto grid grid-cols-1 md:grid-cols-2">
         <div className="relative flex items-center md:gap-x-1">
-          <a
+          {/* <a
             href="https://www.upwork.com/ag/cowchain/"
             rel="nofollow noreferrer"
             target="_blank"
@@ -24,16 +25,33 @@ export default function HeaderContent() {
             target="_blank"
           >
             <Image className="w-11 md:w-[70px]" src={clutch} alt=""></Image>
-          </a>
+          </a> */}
+          <h2 className="text-[32px] leading-[29px]">
+            Driving Crypto Evolution: <br /> From Vision to Reality, <br />{" "}
+            Every Step.
+          </h2>
         </div>
-        <div className="my-4 flex cursor-default flex-col gap-y-4 md:items-end">
+        <div className="flex cursor-default flex-col gap-y-4 md:items-end">
           <div>
-            <h2>developers of web3</h2>
-            <div className="md:mt-4 md:flex md:items-center md:justify-between">
+            <h2>Crypto Services and Technologies</h2>
+            <div className="md:mt-[30px] md:flex md:items-center md:justify-between">
               <div className="flex flex-col gap-y-1">
                 <p className="body1 text-base">Mykhailo Adzhoiev</p>
                 <p className="text-sm  text-secondary">Founder & CTO</p>
               </div>
+              <a
+                className="flex h-[34px] w-[184px] items-center  justify-center gap-[10px] rounded-[20px] border-none bg-white text-black"
+                href=""
+              >
+                <Image
+                  alt="linkedin"
+                  className="w-[12px]"
+                  src={playIcon}
+                ></Image>
+                <p className="text-[14px] font-semibold uppercase leading-[18px] text-black">
+                  watch interview
+                </p>
+              </a>
             </div>
           </div>
         </div>

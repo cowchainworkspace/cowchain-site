@@ -5,10 +5,7 @@ export const TeamCard = ({ name, role, photo, social, index }) => {
   return (
     <div
       className={cn(
-        "group relative flex h-full min-h-[200px] flex-col  justify-start  border-b border-b-th-fade  border-r-th-fade text-left     last:border-b-0 md:gap-y-2 md:border-r md:last:border-b  ",
-        {
-          "border-r": index % 2 === 0
-        }
+        "group relative flex h-full min-h-[200px] flex-col  justify-start",
       )}
     >
       <div

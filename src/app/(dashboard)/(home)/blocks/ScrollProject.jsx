@@ -17,9 +17,12 @@ export const ScrollProject = ({
     <motion.div
       id={"project-" + id}
       className={cn(
-        "project-card group relative flex max-h-[325px] min-h-[325px] min-w-[100vw] max-w-[380vw]  cursor-pointer border-b border-b-th-fade bg-cover  bg-center   bg-no-repeat px-4 py-8 will-change-transform md:max-h-[625px] md:min-h-[625px] md:min-w-[33.5vw] md:max-w-[33.5vw]    md:px-8  lg:px-16"
+        "project-card group relative flex max-h-[325px] min-h-[325px] min-w-[100vw] w-full  max-w-[380vw]  cursor-pointer border-b border-b-th-fade bg-cover  bg-center   bg-no-repeat will-change-transform md:max-h-[698px] md:min-h-[625px] md:min-w-[33.5vw]"
       )}
-      style={{ backgroundImage: `url(${photo.src})` }}
+      style={{ 
+        backgroundImage: `url(${photo.src})`,
+        backgroundSize: '403px auto',
+       }}
     >
       <motion.div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></motion.div>
       <Link

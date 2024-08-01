@@ -7,20 +7,24 @@ import React, {
   useCallback,
   useEffect
 } from "react";
-import marsan from "@/assets/cases/marsan.png";
-import eva from "@/assets/cases/eva.png";
-import triend from "@/assets/cases/triend-fit.png";
-import bridge from "@/assets/cases/bridge-fit.png";
-import step from "@/assets/cases/step.png";
-import finance from "@/assets/cases/finance-fit.png";
+import web3fy from "@/assets/cases/web3fyImg.png";
+import triend from "@/assets/cases/triendImg.png";
+import bridge from "@/assets/cases/retrobridgeImg.png";
 
 import { useScroll } from "framer-motion";
 
-import ResizeObserver from "resize-observer-polyfill";
 import { motion, useTransform, useMotionValue } from "framer-motion";
 import { ScrollProject } from "./ScrollProject";
 
 import useScrollPercentage from "react-scroll-percentage-hook";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import Image from "next/image";
+import 'swiper/css/bundle';
+import 'swiper'
+import sliderLeftArrow from '@/assets/icons/sliderLeftArrow copy.svg';
+import sliderRightArrow from '@/assets/icons/sliderRightArrow.svg';
 
 const projectsData = [
   {
@@ -28,7 +32,7 @@ const projectsData = [
     link: "/cases/payment",
     description:
       "Fiat-to-crypto non-custodial exchange mobile app with seamless user experience for exchanging $CAD for BTC and ETH",
-    photo: marsan,
+    photo: web3fy,
     tags: ["React.js", "Solidity", "Subgraph"]
   },
   {
@@ -48,31 +52,31 @@ const projectsData = [
     photo: bridge,
     tags: ["React Native", "Web3Auth", "Subgraph"]
   },
-  {
-    title: "m2e platform",
-    link: "/cases/move",
-    description:
-      "Robust ecosystem for fitness finance that contains multiple various applications: move to earn application, blockchain wallet, dex, launchpad, dashboard etc.",
-    photo: step,
-    tags: ["DEX", "Staking", "Move-to-earn"]
-  },
-  {
-    title: "DECENTRALIZED CRYPTO EXCHANGE",
-    link: "/cases/finance",
+  // {
+  //   title: "m2e platform",
+  //   link: "/cases/move",
+  //   description:
+  //     "Robust ecosystem for fitness finance that contains multiple various applications: move to earn application, blockchain wallet, dex, launchpad, dashboard etc.",
+  //   photo: step,
+  //   tags: ["DEX", "Staking", "Move-to-earn"]
+  // },
+  // {
+  //   title: "DECENTRALIZED CRYPTO EXCHANGE",
+  //   link: "/cases/finance",
 
-    description:
-      "Secure and convenient decentralized cryptocurrency exchange that allows to swap hundreds of crypto assets using liquidity pool mechanism.",
-    photo: finance,
-    tags: ["DEX", "DEFI"]
-  },
-  {
-    title: "CRYPTO WALLET APP",
-    link: "/cases/wallet",
-    description:
-      "Non-custodial multichain crypto wallet which allows users to create a blockchain wallet using web2 socials like Google, Facebook, Apple, email in one click.",
-    photo: eva,
-    tags: ["Mobile App", "Non-custodial wallet"]
-  }
+  //   description:
+  //     "Secure and convenient decentralized cryptocurrency exchange that allows to swap hundreds of crypto assets using liquidity pool mechanism.",
+  //   photo: finance,
+  //   tags: ["DEX", "DEFI"]
+  // },
+  // {
+  //   title: "CRYPTO WALLET APP",
+  //   link: "/cases/wallet",
+  //   description:
+  //     "Non-custodial multichain crypto wallet which allows users to create a blockchain wallet using web2 socials like Google, Facebook, Apple, email in one click.",
+  //   photo: eva,
+  //   tags: ["Mobile App", "Non-custodial wallet"]
+  // }
 ];
 const Cases = () => {
   const scrollRef = useRef(null);
@@ -82,21 +86,7 @@ const Cases = () => {
 
   const scrollPerc = useMotionValue(0);
 
-  useLayoutEffect(() => {
-    scrollRef && setScrollRange(scrollRef.current.scrollWidth);
-  }, [scrollRef]);
 
-  const onResize = useCallback((entries) => {
-    for (let entry of entries) {
-      setViewportW(entry.contentRect.width);
-    }
-  }, []);
-
-  useLayoutEffect(() => {
-    const resizeObserver = new ResizeObserver((entries) => onResize(entries));
-    resizeObserver.observe(ghostRef.current);
-    return () => resizeObserver.disconnect();
-  }, [onResize]);
 
   const { scrollYProgress } = useScroll({
     target: ghostRef
@@ -113,33 +103,64 @@ const Cases = () => {
     [0, 0.7],
     [0, -scrollRange + viewportW]
   );
-  // const physics = {
-  //   damping: 20,
-  //   mass: 0.2,
-  //   stiffness: 2000,
-  //   velocity: 100
-  // };
-  // const spring = useSpring(transform, physics);
+
+
+  const swiperRef = useRef;
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrevClick = () => {
+    if (swiperRef.current && currentIndex > 0) {
+      swiperRef.current.slideTo(currentIndex - 1);
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+  const handleNextClick = () => {
+    if (swiperRef.current && currentIndex < projectsData.length - 1) {
+      swiperRef.current.slideTo(currentIndex + 1);
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
 
   return (
     <section ref={containerRef} className="relative z-10">
-      <div className="scroll-container top-[30%] border-y border-y-th-fade md:overflow-hidden xl:top-[20%]">
-        <motion.div
-          ref={scrollRef}
-          style={{ x: transform }}
-          className="cases_wrapper relative flex overflow-x-scroll   md:overflow-x-visible  "
-        >
-          {projectsData &&
-            projectsData.map((project, index) => (
+     <Swiper
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+        onSlideChange={(swiper) => setCurrentIndex(swiper.activeIndex)}
+        slidesPerView={2.5}
+        spaceBetween={0}
+      >
+        {projectsData &&
+          projectsData.map((project, index) => (
+            <SwiperSlide
+              key={index}
+              className="flex w-full items-center justify-center"
+            >
               <ScrollProject key={index} index={index} {...project} />
-            ))}
-        </motion.div>
+            </SwiperSlide>
+          ))}
+      </Swiper>
+
+      {currentIndex > 0 && (
+         <div
+         onClick={handlePrevClick}
+         className="absolute z-50 left-0 top-0 flex h-full w-32 cursor-pointer items-center justify-center bg-transparent"
+       >
+         <Image src={sliderLeftArrow} alt="Next" className="h-8 w-8" />
+       </div>
+        
+      )}
+      {currentIndex < projectsData.length - 2 && (
+        <div
+        onClick={handleNextClick}
+        className="absolute z-50 right-0 top-0 flex h-full w-32 cursor-pointer items-center justify-center bg-transparent"
+      >
+        <Image src={sliderRightArrow} alt="Previous" className="h-8 w-8" />
       </div>
-      <div
-        ref={ghostRef}
-        style={{ height: scrollRange - scrollRange / 2 }}
-        className="ghost hidden md:block"
-      />
+       
+      )}
     </section>
   );
 };

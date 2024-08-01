@@ -16,87 +16,37 @@ import { ExpertiseBlock } from "./components/expertise";
 import clients from "@/assets/homepage/clients.png";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import fullStackImg from "@/assets/icons/expertice/fullStackImg.svg";
+import marketing from "@/assets/icons/expertice/marketing.svg";
+import startaps from "@/assets/icons/expertice/startaps.svg";
+import venture from "@/assets/icons/expertice/venture.svg";
+import whiteLabel from "@/assets/icons/expertice/whiteLabel.svg";
 
 const expertiseData = [
   {
     title: "BLOCKCHAIN",
     text: "From dApps to blockchains – you name it, we do it. Whether you only have a concept in mind or a running business, we can integrate it with Web3",
-    tools: [
-      {
-        logo: eth,
-        alt: "Ethereum"
-      },
-      {
-        logo: ava,
-        alt: "Avalanche"
-      },
-      {
-        logo: polygon,
-        alt: "Polygon"
-      },
-      {
-        logo: binance,
-        alt: "Binance"
-      }
-    ]
+    icon: fullStackImg
   },
   {
     title: "FRONT-END",
     text: "Combining your vision and best usability practices, we create products that live up to your business goals and are intuitive for users",
-    tools: [
-      {
-        logo: react,
-        alt: "ReactJS"
-      },
-      {
-        logo: nextjs,
-        alt: "NextJS"
-      },
-      {
-        logo: ts,
-        alt: "Typescript"
-      }
-    ]
+    icon: marketing
   },
   {
     title: "MOBILE",
     text: "Expertly crafting native and cross-platform mobile apps, we turn your vision into reality. Focused on performance, user experience, and seamless design, our mobile solutions ensure your app excels in today's dynamic market.",
-    tools: [
-      {
-        logo: ios,
-        alt: "IOS"
-      },
-      {
-        logo: android,
-        alt: "Android"
-      },
-      {
-        logo: react,
-        alt: "React Native"
-      }
-    ]
+    icon: whiteLabel
   },
   {
     title: "BACK-END",
     text: "Based on factors like project complexity and its scalability needs, we deploy the most suitable and easy-to-maintain product architecture",
-    tools: [
-      {
-        logo: nodejs,
-        alt: "NodeJS"
-      },
-      {
-        logo: mongodb,
-        alt: "MongoDB"
-      },
-      {
-        logo: mssql,
-        alt: "MicrosoftSQL"
-      },
-      {
-        logo: postgres,
-        alt: "PostgreSQL"
-      }
-    ]
+    icon: startaps
+  },
+  {
+    title: "BACK-END",
+    text: "Based on factors like project complexity and its scalability needs, we deploy the most suitable and easy-to-maintain product architecture",
+    icon: venture
   }
 ];
 
@@ -107,21 +57,24 @@ export default function Stack({
   margin = "mt-[calc(35vh_+_1.5625vh)]"
 }) {
   return (
-    <section id="expertise" className={cn("relative   md:mt-0", margin)}>
-      <div className="relative z-20 grid lg:grid-cols-3">
-        <div className="py-heading px-default md-border-r relative  flex justify-center  border-b border-b-th-fade text-center md:col-span-1">
-          <h2 className="z-10 max-w-[183px] cursor-default text-center text-4xl uppercase leading-[40px] md:max-w-none md:text-left md:text-[60px] md:leading-[53px]">
-            {title}
-          </h2>
-          {isGradient && (
-            <Image src={clients} className={gradientStyles} alt="" />
-          )}
+    <section id="expertise" className="relative mt-10">
+      <div className="grid grid-cols-3 grid-rows-2 gap-4">
+        <div className="col-span-1 row-span-1 flex items-center justify-center">
+          <h2 className="text-4xl uppercase text-center">{title}</h2>
         </div>
-        <div className="grid lg:col-span-2 lg:grid-cols-2">
-          {expertiseData.map((expertise, index) => (
-            <ExpertiseBlock key={index * 2} {...expertise} />
-          ))}
-        </div>
+        {expertiseData.map((expertise, index) => (
+          <div key={index} className="col-span-1 row-span-1 p-4 flex flex-col items-start">
+            <div className="mb-2 flex items-center">
+                <div className="min-h-[64px] min-w-[64px] flex items-center justify-center border border-white rounded-full bg-transparent">
+                  <Image src={expertise.icon} width={28} height={28} />
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-xl">{expertise.title}</h3>
+                  <p>{expertise.text}</p>
+                </div>
+              </div>
+          </div>
+        ))}
       </div>
     </section>
   );

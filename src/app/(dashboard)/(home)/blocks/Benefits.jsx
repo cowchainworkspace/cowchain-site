@@ -1,10 +1,19 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import { motion, useScroll } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { cn } from "@/lib/utils";
+import plusIcon from "@/assets//icons/plus.svg";
+import minusIcon from "@/assets//icons/minus.svg";
+import Image from "next/image";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel
+} from "@chakra-ui/react";
 
 const benefitsData = [
   {
@@ -64,26 +73,31 @@ export default function Benefits() {
   const { scrollYProgress } = useScroll({ target: sectionRef });
 
   const [scrollIndex, setScrollIndex] = useState(null);
+  const [screenWidth, setScreenWidth] = useState();
 
-  scrollYProgress.on("change", (yProgress) => {
-    if (yProgress <= 0.2 && yProgress >= 0) setScrollIndex(0);
-    if (yProgress <= 0.4 && yProgress >= 0.2) setScrollIndex(1);
-    if (yProgress <= 0.6 && yProgress >= 0.4) setScrollIndex(2);
-    if (yProgress <= 0.8 && yProgress >= 0.6) setScrollIndex(3);
-    if (yProgress <= 1 && yProgress >= 0.8) setScrollIndex(4);
-  });
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
+
+  // scrollYProgress.on("change", (yProgress) => {
+  //   if (yProgress <= 0.2 && yProgress >= 0) setScrollIndex(0);
+  //   if (yProgress <= 0.4 && yProgress >= 0.2) setScrollIndex(1);
+  //   if (yProgress <= 0.6 && yProgress >= 0.4) setScrollIndex(2);
+  //   if (yProgress <= 0.8 && yProgress >= 0.6) setScrollIndex(3);
+  //   if (yProgress <= 1 && yProgress >= 0.8) setScrollIndex(4);
+  // });
+
+  const handleToggle = (index) => {
+    console.log(index);
+    setScrollIndex(index);
+  };
 
   return (
-    <section
-      id="benefits"
-      ref={sectionRef}
-      className="relative hidden h-[1800px] md:block md:h-[4000px]"
-    >
-      <div className="sticky top-0 flex flex-col md:flex-row">
-        <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-10 md:w-1/2 md:py-0">
-          <div className="my-auto box-border md:sticky">
-            <div className="hidden max-w-xl cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:block md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
-              <Typewriter
+    <section id="faq" className="relative z-30">
+      <div className="relative grid grid-cols-1 md:grid-cols-6">
+        <div className="py-heading px-default md-border-r flex justify-center border-b border-b-th-fade text-center md:col-span-3">
+          <div className="hidden max-w-xl cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:block md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
+          <Typewriter
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(
@@ -96,69 +110,92 @@ export default function Benefits() {
                     .start();
                 }}
               />
-            </div>
-            <p className="block max-w-xl cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:hidden md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
-              Being fully immersed in Web3, we’re not just devs —{" "}
-              <span className="violet-gradient-text">
-                we’re product visionaries
-              </span>{" "}
-              working as an in-house team{" "}
-              <span className="text-[#ffffff71]">
-                with you to grow your business with Web3
-              </span>
-            </p>
           </div>
+          
         </div>
-        <div className="border-b border-b-th-fade md:flex md:h-screen md:w-1/2 md:flex-col">
-          <Scrollama className="relative" offset={0.5}>
-            {benefitsData.map((benefit, index) => {
-              return (
-                <Step
-                  className="relative"
-                  data={index + 1}
-                  key={benefit.title + index}
-                >
-                  <article
-                    style={benefit.style}
+        <div className="md:col-span-3">
+          <Accordion allowToggle>
+            {benefitsData.map((benefit, index) => (
+              <AccordionItem key={index} className="border-b border-th-fade">
+                {({ isExpanded }) => (
+                  <div
                     className={cn(
-                      "px-default relative flex h-[25vh] min-h-[25vh]  grow flex-col items-center justify-center  border-t border-t-th-fade bg-black px-8 py-6 duration-1000 will-change-transform lg:py-16",
-                      benefit.initialStyle,
-                      scrollIndex >= index ? benefit.transformStyle : ""
+                      "relative bg-cover px-5 py-8 xl:px-[60px] xl:py-16",
+                      {
+                        "bg-[url('/assets/faq-gradient.png')]": isExpanded
+                      }
                     )}
+                    key={index}
                   >
-                    <motion.div
-                      variants={expandVariants}
-                      id={"b-expandable-" + index}
-                      className={"flex w-full flex-col justify-center py-10"}
+                    <AccordionButton className={cn("relative")}>
+                      <div className="mr-auto w-full max-w-3xl text-left ">
+                        <span className="max-w-2xl text-left font-roc !text-base font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
+                          {benefit.title}
+                        </span>
+                      </div>
+                      {isExpanded ? (
+                        <svg
+                          width={screenWidth > 768 ? "50" : "32"}
+                          height={screenWidth > 768 ? "50" : "32"}
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="16" cy="16" r="16" fill="white" />
+                          <path
+                            d="M12.2656 16H19.7323"
+                            stroke="black"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      ) : (
+                        <svg
+                          width={screenWidth > 768 ? "50" : "32"}
+                          height={screenWidth > 768 ? "50" : "32"}
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="16"
+                            cy="16"
+                            r="15.75"
+                            stroke="white"
+                            strokeOpacity="0.5"
+                            strokeWidth="0.5"
+                          />
+                          <path
+                            d="M16 12.2666V19.7333"
+                            stroke="white"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M12.2656 16H19.7323"
+                            stroke="white"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      )}
+                    </AccordionButton>
+                    <AccordionPanel
+                      className={cn("opacity-0  will-change-transform", {
+                        "pt-6 opacity-100 ": isExpanded
+                      })}
                     >
-                      <h2
-                        className={cn(
-                          "mb-16 mt-16 max-w-xl text-xl  text-white 2xl:mb-20",
-                          benefit.textStyle,
-                          benefit.headerStyle
-                        )}
-                      >
-                        {benefit.title}
-                      </h2>
-                      <motion.p
-                        variants={textVariants}
-                        className={cn(
-                          " min-h-[100px]  max-w-2xl text-sm !leading-[180%] text-secondary  transition-all  duration-[1000ms] ease-in will-change-transform lg:text-lg",
-                          benefit.textStyle,
-                          {
-                            "block  transition-all duration-1000":
-                              scrollIndex === index
-                          }
-                        )}
-                      >
-                        {benefit.text}
-                      </motion.p>
-                    </motion.div>
-                  </article>
-                </Step>
-              );
-            })}
-          </Scrollama>
+                      <div className=" ">
+                        <p className="max-w-2xl !leading-[160%] !text-[#bbb] lg:!leading-[175%]">
+                          {benefit.text}
+                        </p>
+                      </div>
+                    </AccordionPanel>
+                  </div>
+                )}
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>
