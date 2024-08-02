@@ -5,15 +5,15 @@ export const TeamCard = ({ name, role, photo, social, index }) => {
   return (
     <div
       className={cn(
-        "group relative flex h-full min-h-[200px] flex-col  justify-start",
+        "group relative flex min-h-[540px]  max-h-[640] flex-col  justify-start",
       )}
     >
       <div
-        className="flex min-h-[187px] w-full  self-center bg-cover bg-top bg-no-repeat p-8 md:min-h-[398px]"
+        className="flex min-h-[498px] h-[498px] max-h-[640] w-full  self-center bg-cover bg-top bg-no-repeat h-full p-8 md:min-h-[498px]"
         style={{ backgroundImage: `url(${photo.src})` }}
       ></div>
       <div>
-        <div className="flex flex-col justify-between  gap-2 px-3 py-4   md:px-5">
+        <div className="flex flex-col justify-between  gap-2 px-3 pt-[38px]">
           <span className="z-10 font-roc text-lg uppercase text-white">
             {name}
           </span>

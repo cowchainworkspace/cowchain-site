@@ -18,37 +18,37 @@ import {
 const benefitsData = [
   {
     title: "Transforming raw concepts into results-driven code",
-    text: "If you have an idea or an existing product that you want to upgrade with Web3, we’ll suggest and develop a custom solution for your business that will bring you tangible results ",
+    text: "If you have a concept or product you'd like to integrate with web3 or enhance with Web3 technology, we will build a web3 integration strategy that delivers tangible outcomes. Thus, by including experienced developers, your idea becomes a marketable product smoothly and gainfully.",
     transformStyle: "",
     initialStyle: "border-0"
   },
   {
-    title: "Expanding business opportunities for fintech products",
-    text: "If you want to integrate crypto and blockchain into your fintech product, we’ll do it in a way that’ll bring your business to its full potential",
+    title: "Extensive Project Accelerator Services",
+    text: "In our cutting-edge accelerator, we have many services for every project. Whatever a company that needs help with funding, development, packaging, and go-to-market strategy believes in, we're ready to boost it. With an extensive list of partners, service provider support, and KOLs, your project will get the best resources and web3 recognition.",
     transformStyle:
       "max-h-max -translate-y-[40%] xl:-translate-y-[40%] 2xl:-translate-y-[45%] duration-1000",
     initialStyle:
       "max-h-max translate-y-[60%] xl:translate-y-[30%] 2xl:translate-y-[45%] duration-1000"
   },
   {
-    title: "Building impactful and functional Web3 products",
-    text: "If you need to develop a Web3 product of any complexity, as a team who lives and breathes Web3, we’ll streamline the entire process and provide clean, secure, and scalable code ",
+    title: "White-label solutions for business optimization",
+    text: "Custom white-label products will be less time-consuming and cost-efficient. These ready-made solutions, created by crypto industry professionals, can be configured according to your business's requirements. Obtain actual code for your application or startup venture, so you do not have to wait for costly development cycles.",
     transformStyle:
       "max-h-max -translate-y-[80%] xl:-translate-y-[80%] 2xl:-translate-y-[85%]   duration-1000",
     initialStyle:
       "max-h-max translate-y-[25%] 2xl:translate-y-[10%] duration-1000"
   },
   {
-    title: "Creating a custom-tailored strategy for every product",
-    text: "Our team moves in sync with the market, adapting and reacting to the changes on the go. We’re proactive to the bone and provide milestone updates regularly & promptly",
+    title: "Trend actions in web3 marketing and business development",
+    text: "Using all the secrets of web3 marketing and our deep understanding of business development strategy, your project will be able to grow and gain a huge community. Our vast network of partners, service providers, KOLs, and VCs allows us to tackle any challenge, ensuring your project achieves outstanding success and prominence in the web3 universe.",
     transformStyle:
       "max-h-max -translate-y-[120%] xl:-translate-y-[120%] 2xl:-translate-y-[130%] duration-1000",
     initialStyle:
       "max-h-max -translate-y-[15%] xl:-translate-y-[35%] 2xl:-translate-y-[30%] duration-1000"
   },
   {
-    title: "Taking full responsibility for the product development",
-    text: "You can save yourself a headache by delegating the development process to us. Focus on other things that matter for your business while we deliver the product shaped by your vision",
+    title: "Early-Stage Venture Capital (Low Cap)",
+    text: "We don't just offer early-stage venture capital services to web3 startups. We also identify and help you realize your potential by providing crucial funding, strategic guidance, and mentorship. Our approach ensures that we comprehend the distinct needs and priorities of each project, thus aiding you in achieving success in the competitive web3 landscape.",
     transformStyle:
       "max-h-max -translate-y-[160%] xl:-translate-y-[160%] 2xl:-translate-y-[170%] duration-1000",
     initialStyle:
@@ -95,23 +95,22 @@ export default function Benefits() {
   return (
     <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-6">
-        <div className="py-heading px-default md-border-r flex justify-center border-b border-b-th-fade text-center md:col-span-3">
+        <div className="px-default md-border-r items flex justify-center items-center border-b border-b-th-fade py-[] text-center md:col-span-3">
           <div className="hidden max-w-xl cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:block md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
-          <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(
-                      'Being fully immersed in Web3, we’re not just devs — <span style="background: linear-gradient(146deg, #e9bbff 32.8%, #8e66ff 61.09%);  background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;"> we’re product visionaries </span> working as an in-house team <span style="color: #ffffff71">with you to grow your business with Web3</span> '
-                    )
-                    .callFunction(({ elements }) => {
-                      elements.cursor.hidden = true;
-                    })
-                    .changeDelay(10)
-                    .start();
-                }}
-              />
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString(
+                    'Fully immersed in web3, we’re not just devs — <span style="background: linear-gradient(146deg, #e9bbff 32.8%, #8e66ff 61.09%);  background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;"> we’re the ones </span> who really can help tour company <span style="color: #ffffff71">solve every possible need in web3 universe</span> '
+                  )
+                  .callFunction(({ elements }) => {
+                    elements.cursor.hidden = true;
+                  })
+                  .changeDelay(10)
+                  .start();
+              }}
+            />
           </div>
-          
         </div>
         <div className="md:col-span-3">
           <Accordion allowToggle>
@@ -120,7 +119,7 @@ export default function Benefits() {
                 {({ isExpanded }) => (
                   <div
                     className={cn(
-                      "relative bg-cover px-5 py-8 xl:px-[60px] xl:py-16",
+                      "relative bg-cover px-5 py-8 xl:px-[60px] xl:py-[36px]",
                       {
                         "bg-[url('/assets/faq-gradient.png')]": isExpanded
                       }

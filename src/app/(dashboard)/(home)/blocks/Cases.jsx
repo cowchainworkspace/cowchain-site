@@ -28,29 +28,30 @@ import sliderRightArrow from '@/assets/icons/sliderRightArrow.svg';
 
 const projectsData = [
   {
-    title: "Exchange wallet app",
+    title: "Web3fy learning app",
     link: "/cases/payment",
     description:
-      "Fiat-to-crypto non-custodial exchange mobile app with seamless user experience for exchanging $CAD for BTC and ETH",
+      "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
     photo: web3fy,
-    tags: ["React.js", "Solidity", "Subgraph"]
+    tags: ["App Development", "SEO"]
+  },
+
+  {
+    title: "Retrobridge platform",
+    link: "/cases/bridge",
+    description:
+      "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
+    photo: bridge,
+    tags: ["Website Development", "24/7 Support", "Web3"]
   },
   {
-    title: "Blockchain integration into hotel business",
+    title: "Tridend decentralized review website and app",
     link: "/cases/hotel",
 
     description:
-      "Plugin for travel, hotel, and recreation apps with a blockchain-powered review system and unique incentives for honest reviews from their customers.",
+      "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
     photo: triend,
-    tags: ["React.js", "Solidity", "Node.js"]
-  },
-  {
-    title: "Cross-chain transfer bridge",
-    link: "/cases/bridge",
-    description:
-      "Cross-chain bridge that allows users to swap tokens across multiple blockchain networks with minimized commissions.",
-    photo: bridge,
-    tags: ["React Native", "Web3Auth", "Subgraph"]
+    tags: ["App Development", "Website Development"]
   },
   // {
   //   title: "m2e platform",
@@ -123,20 +124,20 @@ const Cases = () => {
   };
 
   return (
-    <section ref={containerRef} className="relative z-10">
+    <section ref={containerRef} className="relative z-10 h-[698px] border-b border-b-th-fade">
      <Swiper
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
         onSlideChange={(swiper) => setCurrentIndex(swiper.activeIndex)}
-        slidesPerView={2.5}
+        slidesPerView={2.62}
         spaceBetween={0}
+        className="flex h-[698px]"
       >
         {projectsData &&
           projectsData.map((project, index) => (
             <SwiperSlide
               key={index}
-              className="flex w-full items-center justify-center"
             >
               <ScrollProject key={index} index={index} {...project} />
             </SwiperSlide>
@@ -145,6 +146,9 @@ const Cases = () => {
 
       {currentIndex > 0 && (
          <div
+         style={{ 
+          background: 'linear-gradient(to left, transparent 1%, #AB40FF 160%)' 
+        }}
          onClick={handlePrevClick}
          className="absolute z-50 left-0 top-0 flex h-full w-32 cursor-pointer items-center justify-center bg-transparent"
        >
@@ -154,6 +158,9 @@ const Cases = () => {
       )}
       {currentIndex < projectsData.length - 2 && (
         <div
+        style={{ 
+          background: 'linear-gradient(to right, transparent 1%, #AB40FF 160%)' 
+        }}
         onClick={handleNextClick}
         className="absolute z-50 right-0 top-0 flex h-full w-32 cursor-pointer items-center justify-center bg-transparent"
       >

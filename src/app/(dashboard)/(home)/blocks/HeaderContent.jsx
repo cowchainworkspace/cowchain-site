@@ -8,7 +8,7 @@ export default function HeaderContent() {
   return (
     <>
       <h1 className="relative mt-8 cursor-default uppercase md:mt-16 lg:mt-24">
-        We turn your startup ideas into viable Web3 businesses
+        Accelerate your <br /> Web3 odyssey <br /> with cowchain
       </h1>
       <div className="mt-auto grid grid-cols-1 md:grid-cols-2">
         <div className="relative flex items-center md:gap-x-1">

@@ -14,7 +14,7 @@ export default function HomeContent() {
     <>
       <Benefits />
       <BenefitsMobiles />
-      <Stack title={"Our Expertise"} />
+      <Stack title={"Our\nExpertise"} />
       <Clients />
       <Cases />
       <Team />
