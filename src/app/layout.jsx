@@ -33,6 +33,17 @@ export default function RootLayout({ children }) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <link rel="stylesheet" href="https://use.typekit.net/cqp2qoa.css" />
 
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVL9LDFN3V"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EVL9LDFN3V');
+          `
+        }} />
+
         <meta name="theme-color" content="#000000" />
       </head>
 
