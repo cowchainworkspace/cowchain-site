@@ -26,21 +26,22 @@ export default function HeaderContent() {
           >
             <Image className="w-11 md:w-[70px]" src={clutch} alt=""></Image>
           </a> */}
-          <h2 className="text-[32px] leading-[29px]">
+          <h2 className="text-[32px] leading-[29px] hidden md:block">
             Driving Crypto Evolution: <br /> From Vision to Reality, <br />{" "}
             Every Step.
           </h2>
         </div>
         <div className="flex cursor-default flex-col gap-y-4 md:items-end">
+
           <div>
-            <h2>Crypto Services and Technologies</h2>
+            <h2 className="mb-[24px] md:mb-0">Crypto Services and Technologies</h2>
             <div className="md:mt-[30px] md:flex md:items-center md:justify-between">
               <div className="flex flex-col gap-y-1">
-                <p className="body1 text-base">Mykhailo Adzhoiev</p>
-                <p className="text-sm  text-secondary">Founder & CTO</p>
+                <p className="body1 text-base  mb-[6px] md:mb-0">Mykhailo Adzhoiev</p>
+                <p className="text-sm  text-secondary mb-[24px] md:mb-0">Founder & CTO</p>
               </div>
               <a
-                className="flex h-[34px] w-[184px] items-center  justify-center gap-[10px] rounded-[20px] border-none bg-white text-black"
+                className="flex h-[34px] w-[184px] items-center justify-center gap-[10px] rounded-[20px] border-none bg-white text-black"
                 href=""
               >
                 <Image

@@ -130,9 +130,14 @@ const Cases = () => {
           swiperRef.current = swiper;
         }}
         onSlideChange={(swiper) => setCurrentIndex(swiper.activeIndex)}
-        slidesPerView={2.62}
+        slidesPerView={1}
         spaceBetween={0}
         className="flex h-[698px]"
+        breakpoints={{
+          768: { // md breakpoint and above
+            slidesPerView: 2.62,
+          },
+        }}
       >
         {projectsData &&
           projectsData.map((project, index) => (

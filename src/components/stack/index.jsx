@@ -58,37 +58,42 @@ export default function Stack({
 }) {
   return (
     <section
-      id="expertise"
-      className="relative flex justify-center pl-[84px] pr-[64px] pt-[108px] pb-[132px] border-b border-b-th-fade"
-    >
-      <div className="grid grid-cols-3 grid-rows-2 gap-x-[100px] gap-y-[40px]">
-        <div className="col-span-1 row-span-1 flex items-center justify-start">
-          <h2 className="text-start whitespace-pre-line text-[60px] uppercase">{title}</h2>
-        </div>
-
-        {expertiseData.map((expertise, index) => (
+    id="expertise"
+    className="relative flex justify-center pl-[84px] pr-[64px] pt-[108px] pb-[132px] border-b border-b-th-fade"
+  >
+    <div className="grid grid-cols-1 gap-y-[40px] md:grid-cols-3 md:grid-rows-2 md:gap-x-[100px]">
+      <div className="col-span-1 row-span-1 flex items-center justify-start">
+        <h2 className="text-start whitespace-pre-line text-[60px] uppercase">{title}</h2>
+      </div>
+  
+      {expertiseData.map((expertise, index) => (
+        <div
+          key={index}
+          className="col-span-1 row-span-1 flex flex-col items-start"
+        >
           <div
-            key={index}
-            className="col-span-1 row-span-1 flex flex-col items-start"
-          >
-            <div
             style={{ border: '0.1px solid rgba(255, 255, 255, 0.5)' }}
-             className="flex min-h-[64px] min-w-[64px] items-center justify-center mb-[37px] rounded-full bg-transparent">
-              <Image src={expertise.icon} width={28} height={28} />
-            </div>
-            <div className="mb-2 flex items-center">
-              <div className="">
-                <h3 className="mb-[24px] max-w-[310px] text-xl">{expertise.title}</h3>
-                <p
+            className="flex min-h-[64px] min-w-[64px] items-center justify-center mb-[37px] rounded-full bg-transparent"
+          >
+            <Image src={expertise.icon} width={28} height={28} alt={expertise.title} />
+          </div>
+          <div className="mb-2 flex items-center">
+            <div className="">
+              <h3 className="mb-[24px] max-w-[310px] text-xl">{expertise.title}</h3>
+              <p
                 style={{
                   color: '#BBBBBB'
                 }}
-                 className="">{expertise.text}</p>
-              </div>
+                className=""
+              >
+                {expertise.text}
+              </p>
             </div>
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      ))}
+    </div>
+  </section>
+  
   );
 }

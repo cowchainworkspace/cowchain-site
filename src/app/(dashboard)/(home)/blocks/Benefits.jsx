@@ -96,7 +96,7 @@ export default function Benefits() {
     <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-6">
         <div className="px-default md-border-r items flex justify-center items-center border-b border-b-th-fade py-[] text-center md:col-span-3">
-          <div className="hidden max-w-xl cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:block md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
+          <div className=" max-w-xl cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:block md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
             <Typewriter
               onInit={(typewriter) => {
                 typewriter

@@ -113,11 +113,12 @@ export default function Team() {
           </div>
         </div>
 
-        <div className="team_wrapper px-default grid auto-cols-fr grid-cols-2 gap-6 bg-black md:grid-cols-3 lg:col-span-5 min-[2000px]:col-span-6">
-          {teamData.map((member, index) => (
-            <TeamCard key={index} index={index} {...member} />
-          ))}
-        </div>
+        <div className="team_wrapper px-default grid auto-cols-fr grid-cols-1 gap-6 bg-black sm:grid-cols-2 md:grid-cols-3 lg:col-span-5 min-[2000px]:col-span-6">
+  {teamData.map((member, index) => (
+    <TeamCard key={index} index={index} {...member} />
+  ))}
+</div>
+
       </div>
     </section>
   );

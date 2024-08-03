@@ -13,7 +13,7 @@ export default function HomeContent() {
   return (
     <>
       <Benefits />
-      <BenefitsMobiles />
+      {/* <BenefitsMobiles /> */}
       <Stack title={"Our\nExpertise"} />
       <Clients />
       <Cases />
