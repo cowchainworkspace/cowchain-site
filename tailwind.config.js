@@ -19,6 +19,7 @@ export default {
       screens: {
         '3xl': '1800px',
         '4xl': '2000px',
+        'custom-1400': '1400px',
       },
       fontFamily: {
         roc: ['roc-grotesk', 'sans-serif'],

@@ -124,17 +124,17 @@ const Cases = () => {
   };
 
   return (
-    <section ref={containerRef} className="relative z-10 h-[698px] border-b border-b-th-fade">
+    <section ref={containerRef} className="relative h-[546px] md:h-[698px] z-10 border-b border-b-th-fade">
      <Swiper
+     className="h-[546px] md:h-[698px]"
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
         onSlideChange={(swiper) => setCurrentIndex(swiper.activeIndex)}
         slidesPerView={1}
         spaceBetween={0}
-        className="flex h-[698px]"
         breakpoints={{
-          768: { // md breakpoint and above
+          768: {
             slidesPerView: 2.62,
           },
         }}
@@ -143,6 +143,7 @@ const Cases = () => {
           projectsData.map((project, index) => (
             <SwiperSlide
               key={index}
+              className="h-[546px] md:h-[698px]"
             >
               <ScrollProject key={index} index={index} {...project} />
             </SwiperSlide>
@@ -155,7 +156,7 @@ const Cases = () => {
           background: 'linear-gradient(to left, transparent 1%, #AB40FF 160%)' 
         }}
          onClick={handlePrevClick}
-         className="absolute z-50 left-0 top-0 flex h-full w-32 cursor-pointer items-center justify-center bg-transparent"
+         className="absolute hidden z-50 left-0 top-0 md:flex h-full w-32 cursor-pointer items-center justify-center bg-transparent"
        >
          <Image src={sliderLeftArrow} alt="Next" className="h-8 w-8" />
        </div>
@@ -167,7 +168,7 @@ const Cases = () => {
           background: 'linear-gradient(to right, transparent 1%, #AB40FF 160%)' 
         }}
         onClick={handleNextClick}
-        className="absolute z-50 right-0 top-0 flex h-full w-32 cursor-pointer items-center justify-center bg-transparent"
+        className="absolute z-50 right-0 top-0 hidden md:flex h-full w-32 cursor-pointer items-center justify-center bg-transparent"
       >
         <Image src={sliderRightArrow} alt="Previous" className="h-8 w-8" />
       </div>
