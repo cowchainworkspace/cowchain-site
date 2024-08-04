@@ -1,22 +1,22 @@
 "use client";
 
 import arrow from "@/assets/arrow_right.svg";
-import photo1 from "@/assets/homepage/team/mykhailo.jpg";
-import photo2 from "@/assets/homepage/team/vyacheslav.jpg";
-import photo3 from "@/assets/homepage/team/oleh.jpg";
-import photo4 from "@/assets/homepage/team/andrii.jpg";
-import photo5 from "@/assets/homepage/team/bohdan.jpg";
-import photo6 from "@/assets/homepage/team/veronika.jpg";
-import photo7 from "@/assets/homepage/team/ruslan.jpg";
-import photo8 from "@/assets/homepage/team/saminu.jpg";
-import photo9 from "@/assets/homepage/team/alexandr.jpg";
+// import photo1 from "@/assets/homepage/team/mykhailo.jpg";
+// import photo2 from "@/assets/homepage/team/vyacheslav.jpg";
+// import photo3 from "@/assets/homepage/team/oleh.jpg";
+// import photo4 from "@/assets/homepage/team/andrii.jpg";
+// import photo5 from "@/assets/homepage/team/bohdan.jpg";
+// import photo6 from "@/assets/homepage/team/veronika.jpg";
+// import photo7 from "@/assets/homepage/team/ruslan.jpg";
+// import photo8 from "@/assets/homepage/team/saminu.jpg";
+// import photo9 from "@/assets/homepage/team/alexandr.jpg";
 
 import MichaelImg from "@/assets/team/executives/MichaelImg.png";
 import OlehImg from "@/assets/team/executives/OlehImg.png";
 import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
 
 import linkedin from "@/assets/homepage/linkedin.svg";
-import bg from "@/assets/bg/team_bg.png";
+// import bg from "@/assets/bg/team_bg.png";
 import { TeamCard } from "../components/team-card";
 import Image from "next/image";
 
@@ -83,11 +83,11 @@ export default function Team() {
 
     <section
       id="team"
-      className="relative flex justify-center items-center border-b border-b-th-fade pb-[84px] pt-[126px] text-center lg:text-left"
+      className="relative flex justify-center items-center border-b border-b-th-fade pb-[84px] pt-[126px] text-center [1200px]:text-left"
     >
-      <div className="relative  grid grid-cols-1  w-full lg:grid-cols-5 min-[2000px]:grid-cols-6">
-        <div className="px-default z-10 flex flex-col gap-y-6 pb-[60px] lg:col-span-5 lg:flex-row min-[2000px]:col-span-6">
-          <h2 className="text-4xl uppercase text-white md:text-[60px] lg:flex-1 lg:text-left">
+      <div className="relative  grid grid-cols-1  w-full [1200px]:grid-cols-5 min-[2000px]:grid-cols-6">
+        <div className="px-default z-10 flex flex-col gap-y-6 pb-[60px] [1200px]:col-span-5 [1200px]:flex-row min-[2000px]:col-span-6">
+          <h2 className="text-4xl uppercase text-white md:text-[60px] [1200px]:flex-1 [1200px]:text-left">
             <span
               style={{
                 background:
@@ -101,9 +101,9 @@ export default function Team() {
             </span>
             PEOPLE TEAM
           </h2>
-          <div className="lg:flex-1 lg:text-right">
+          <div className="[1200px]:flex-1 [1200px]:text-right">
             <a href="/team" className="inline-block">
-              <div className="flex items-center justify-center gap-x-2 lg:justify-end">
+              <div className="flex items-center justify-center gap-x-2 [1200px]:justify-end">
                 <p className="header uppercase text-white underline">
                   MEET COWCHAIN
                 </p>

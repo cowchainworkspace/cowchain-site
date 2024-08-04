@@ -131,10 +131,13 @@ const Cases = () => {
           swiperRef.current = swiper;
         }}
         onSlideChange={(swiper) => setCurrentIndex(swiper.activeIndex)}
-        slidesPerView={1}
+        slidesPerView={1.2}
         spaceBetween={0}
         breakpoints={{
           768: {
+            slidesPerView: 1.62,
+          },
+          1024: {
             slidesPerView: 2.62,
           },
         }}
@@ -156,7 +159,7 @@ const Cases = () => {
           background: 'linear-gradient(to left, transparent 1%, #AB40FF 160%)' 
         }}
          onClick={handlePrevClick}
-         className="absolute hidden z-50 left-0 top-0 md:flex h-full w-32 cursor-pointer items-center justify-center bg-transparent"
+         className="absolute hidden z-50 left-0 top-0 lg:flex h-full w-32 cursor-pointer items-center justify-center bg-transparent"
        >
          <Image src={sliderLeftArrow} alt="Next" className="h-8 w-8" />
        </div>
@@ -168,7 +171,7 @@ const Cases = () => {
           background: 'linear-gradient(to right, transparent 1%, #AB40FF 160%)' 
         }}
         onClick={handleNextClick}
-        className="absolute z-50 right-0 top-0 hidden md:flex h-full w-32 cursor-pointer items-center justify-center bg-transparent"
+        className="absolute z-50 right-0 top-0 hidden lg:flex h-full w-32 cursor-pointer items-center justify-center bg-transparent"
       >
         <Image src={sliderRightArrow} alt="Previous" className="h-8 w-8" />
       </div>

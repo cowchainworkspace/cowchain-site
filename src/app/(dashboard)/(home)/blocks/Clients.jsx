@@ -53,7 +53,7 @@ export default function Clients() {
               <p className="body1 mt-2 uppercase">Clients</p>
             </div>
           </div>
-          <p className="body text-base leading-6 max-w-lg lg:order-2 lg:max-w-xl">
+          <p className="body text-base leading-6 max-w-lg my-[40px] md:my-[20px] lg:order-2 lg:max-w-xl">
             Over the course of just 3 years, our team has expertly developed 84+
             products in various niches, so we know exactly how to make your
             product successful. NFT marketplace? Play-to-Earn app? Crypto
