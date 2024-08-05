@@ -26,14 +26,14 @@ export default function HeaderContent() {
           >
             <Image className="w-11 md:w-[70px]" src={clutch} alt=""></Image>
           </a> */}
-          <h2 className="text-[32px] leading-[29px] hidden md:block">
+          <h2 className="text-[32px] leading-[29px] md:block">
             Driving Crypto Evolution: <br /> From Vision to Reality, <br />{" "}
             Every Step.
           </h2>
         </div>
         <div className="flex cursor-default flex-col gap-y-4 md:items-end">
 
-          <div>
+          {/* <div>
             <h2 className="mb-[24px] md:mb-0">Crypto Services and Technologies</h2>
             <div className="md:mt-[30px] md:flex md:items-center md:justify-between">
               <div className="flex flex-col gap-y-1">
@@ -54,7 +54,7 @@ export default function HeaderContent() {
                 </p>
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

@@ -39,26 +39,26 @@ export default function Clients() {
               <p className="body1 mt-2 uppercase">Techonologies</p>
             </div>
             <div>
-            <div className="flex items-center">
+              <div className="flex items-center">
                 <Counter duration={4} target={120} />
                 <span className="num_lg  text-white">+</span>
               </div>
               <p className="body1 mt-2 uppercase">Projects</p>
             </div>
             <div>
-            <div className="flex items-center">
+              <div className="flex items-center">
                 <Counter duration={4} target={60} />
                 <span className="num_lg  text-white">+</span>
               </div>
               <p className="body1 mt-2 uppercase">Clients</p>
             </div>
           </div>
-          <p className="body text-base leading-6 max-w-lg my-[40px] md:my-[20px] lg:order-2 lg:max-w-xl">
-            Over the course of just 3 years, our team has expertly developed 84+
-            products in various niches, so we know exactly how to make your
-            product successful. NFT marketplace? Play-to-Earn app? Crypto
-            wallet? DeFi bridge? Chances are, we’ve done it all. Take a look at
-            our portfolio and see for yourself
+          <p className="body my-[40px] max-w-lg text-base leading-6 md:my-[20px] lg:order-2 lg:max-w-xl">
+            Over the course of just 3 years, our team has expertly developed and
+            got the market for 120+ products in various niches, so we know
+            exactly how to make your product successful. NFT marketplace?
+            Play-to-Earn app? Crypto wallet? DeFi bridge? Chances are, we’ve
+            done it all. Take a look at our portfolio and see for yourself
           </p>
           <Link href="/cases" className="lg:hidden">
             <div className="flex items-center gap-x-2">

@@ -15,6 +15,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLoader } from "@/hooks/useLoader";
 import { cn } from "@/lib/utils";
+import upwork from "@/assets/homepage/upwork.svg";
+import clutch from "@/assets/homepage/clutch.svg";
 
 const faqRows = {
   title: "",
@@ -133,14 +135,14 @@ export default function Footer() {
         })}
       >
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="md-border-r py-heading px-default flex flex-col gap-y-8 border-b border-b-th-fade text-center">
-            <span className="text-center font-roc text-xl font-medium uppercase text-white md:text-left">
+          <div className="md-border-r py-[65px] px-default flex flex-col gap-y-8 border-b border-b-th-fade text-center">
+            {/* <span className="text-center font-roc text-xl font-medium uppercase text-white md:text-left">
               What’s on your mind?
-            </span>
-            <div className="max-w-xl">
+            </span> */}
+            <div className="max-w-[320px]">
               <p className="text-center text-[#bbb] md:text-left">
-                Submit your email address and our team will get in touch with
-                you within 48 hours. Or drop us a line at{" "}
+              © 2024 Сowchain сo. All rights reserved.
+              For business inquiries{" "}
                 <a
                   className="ml-1 inline text-white underline md:text-left"
                   href="mailto:sales@cowchain.io"
@@ -149,7 +151,7 @@ export default function Footer() {
                 </a>
               </p>
             </div>
-            <FooterForm />
+            {/* <FooterForm /> */}
             <div className="mx-auto flex items-center justify-center gap-x-2 md:mx-0 md:justify-start">
               <a
                 href="https://www.linkedin.com/company/cowchain/"
@@ -202,19 +204,30 @@ export default function Footer() {
               >
                 <Image alt="mail" className="w-12 lg:w-16" src={mail}></Image>
               </a>
+              <a
+                href="https://www.upwork.com/ag/cowchain/"
+                rel="nofollow noreferrer"
+                target="_blank"
+              >
+                <Image className="w-12 lg:w-16" src={upwork} alt=""></Image>
+              </a>
+              <a
+                href="https://clutch.co/profile/cowchain"
+                rel="nofollow noreferrer"
+                target="_blank"
+              >
+                <Image className="w-12 lg:w-16" src={clutch} alt=""></Image>
+              </a>
             </div>
           </div>
           <div className="py-heading px-default border-b border-b-th-fade lg:hidden">
             <Faq data={faqRows} styles={faqStyles} config={faqConfig} />
           </div>
 
-          <div className="py-heading px-default hidden border-b border-b-th-fade lg:block">
+          <div className="py-[65px] px-default hidden border-b border-b-th-fade lg:block">
             <div className="grid grid-cols-3 gap-x-8">
-              <div className="footer-links">
-                <p className="font-roc text-base font-medium !text-white">
-                  WHAT WE DO
-                </p>
-                <div className="my-8 flex flex-col gap-y-4">
+              <div className="footer-links h-full">
+                <div className=" flex flex-col gap-y-4 h-full">
                   <Link href="/services">
                     <p className="text-[#bbb]">
                       Services &<br></br> Techonologies
@@ -227,23 +240,28 @@ export default function Footer() {
                     {" "}
                     <p className="text-[#bbb]">Clients</p>
                   </Link>
+                  <div className="flex-grow"></div>
+                  <p className="font-roc text-base font-medium !text-white">
+                    WHAT WE DO
+                  </p>
                 </div>
               </div>
-              <div className="footer-links">
-                <p className="font-roc text-base font-medium !text-white">
-                  AGENCY
-                </p>
-                <div className="my-8 flex flex-col gap-y-4">
+              <div className="footer-links h-full">
+                <div className="flex flex-col gap-y-4 h-full">
                   <Link href="/team">
                     <p className="text-[#bbb]">Team</p>
                   </Link>
+                  <Link href="/blog">
+                    <p className="text-[#bbb]">Blog</p>
+                  </Link>
+                  <div className="flex-grow"></div>
+                  <p className="font-roc font-medium !text-white">
+                    AGENCY
+                  </p>
                 </div>
               </div>
-              <div className="footer-links">
-                <p className="font-roc text-base font-medium !text-white">
-                  HELP
-                </p>
-                <div className="my-8 flex flex-col gap-y-4">
+              <div className="footer-links h-full">
+                <div className="flex flex-col gap-y-4 h-full">
                   <AnchorLink href="#contact">
                     <p className="text-[#bbb]">Contact Us</p>
                   </AnchorLink>
@@ -253,9 +271,13 @@ export default function Footer() {
                   <AnchorLink href="#faq">
                     <p className="text-[#bbb]">FAQs</p>
                   </AnchorLink>
-                  <Link href="/sitemap">
+                  {/* <Link href="/sitemap">
                     <p className="text-[#bbb]">Sitemap</p>
-                  </Link>
+                  </Link> */}
+                  <div className="flex-grow"></div>
+                  <p className="font-roc text-base font-medium !text-white">
+                    HELP
+                  </p>
                 </div>
               </div>
             </div>

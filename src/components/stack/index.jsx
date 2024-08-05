@@ -1,26 +1,26 @@
 import React from "react";
-import eth from "@/assets/homepage/expertises/ethereum.svg";
-import ava from "@/assets/homepage/expertises/avalanche.svg";
-import polygon from "@/assets/homepage/expertises/polygon.svg";
-import binance from "@/assets/homepage/expertises/binance.svg";
-import nodejs from "@/assets/homepage/expertises/nodejs.svg";
-import mongodb from "@/assets/homepage/expertises/mongodb.svg";
-import mssql from "@/assets/homepage/expertises/mssql.svg";
-import postgres from "@/assets/homepage/expertises/postgresql.svg";
-import react from "@/assets/homepage/expertises/react.svg";
-import nextjs from "@/assets/homepage/expertises/nextjs.svg";
-import ts from "@/assets/homepage/expertises/typescript.svg";
-import ios from "@/assets/homepage/expertises/ios.svg";
-import android from "@/assets/homepage/expertises/android.svg";
-import { ExpertiseBlock } from "./components/expertise";
-import clients from "@/assets/homepage/clients.png";
-import { cn } from "@/lib/utils";
+// import eth from "@/assets/homepage/expertises/ethereum.svg";
+// import ava from "@/assets/homepage/expertises/avalanche.svg";
+// import polygon from "@/assets/homepage/expertises/polygon.svg";
+// import binance from "@/assets/homepage/expertises/binance.svg";
+// import nodejs from "@/assets/homepage/expertises/nodejs.svg";
+// import mongodb from "@/assets/homepage/expertises/mongodb.svg";
+// import mssql from "@/assets/homepage/expertises/mssql.svg";
+// import postgres from "@/assets/homepage/expertises/postgresql.svg";
+// import react from "@/assets/homepage/expertises/react.svg";
+// import nextjs from "@/assets/homepage/expertises/nextjs.svg";
+// import ts from "@/assets/homepage/expertises/typescript.svg";
+// import ios from "@/assets/homepage/expertises/ios.svg";
+// import android from "@/assets/homepage/expertises/android.svg";
+// import { ExpertiseBlock } from "./components/expertise";
+// import clients from "@/assets/homepage/clients.png";
+// import { cn } from "@/lib/utils";
 import Image from "next/image";
 import fullStackImg from "@/assets/icons/expertice/fullStackImg.svg";
-import marketing from "@/assets/icons/expertice/marketing.svg";
+import whiteLabel from "@/assets/icons/expertice/marketing.svg";
 import startaps from "@/assets/icons/expertice/startaps.svg";
 import venture from "@/assets/icons/expertice/venture.svg";
-import whiteLabel from "@/assets/icons/expertice/whiteLabel.svg";
+import marketing from "@/assets/icons/expertice/whiteLabel.svg";
 
 const expertiseData = [
   {
