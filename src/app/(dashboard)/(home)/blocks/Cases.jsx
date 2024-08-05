@@ -3,8 +3,8 @@
 import React, {
   useRef,
   useState,
-  useLayoutEffect,
-  useCallback,
+  // useLayoutEffect,
+  // useCallback,
   useEffect
 } from "react";
 import web3fy from "@/assets/cases/web3fyImg.png";
@@ -13,7 +13,7 @@ import bridge from "@/assets/cases/retrobridgeImg.png";
 
 import { useScroll } from "framer-motion";
 
-import { motion, useTransform, useMotionValue } from "framer-motion";
+import { useTransform, useMotionValue } from "framer-motion";
 import { ScrollProject } from "./ScrollProject";
 
 import useScrollPercentage from "react-scroll-percentage-hook";
@@ -80,7 +80,7 @@ const projectsData = [
   // }
 ];
 const Cases = () => {
-  const scrollRef = useRef(null);
+  // const scrollRef = useRef(null);
   const ghostRef = useRef(null);
   const [scrollRange, setScrollRange] = useState(0);
   const [viewportW, setViewportW] = useState(0);

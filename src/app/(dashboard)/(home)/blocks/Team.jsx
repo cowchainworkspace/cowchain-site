@@ -32,8 +32,8 @@ const teamData = [
     }
   },
   {
-    name: "Oleh",
-    role: "Development lead",
+    name: "Viacheslav",
+    role: "COO",
     photo: ViacheclavImgpng,
     social: {
       network: "LinkedIn",
@@ -42,8 +42,9 @@ const teamData = [
     }
   },
   {
-    name: "Viacheslav",
-    role: "COO",
+    
+    name: "Oleh",
+    role: "Development lead",
     photo: OlehImg,
     social: {
       network: "LinkedIn",
@@ -83,11 +84,11 @@ export default function Team() {
 
     <section
       id="team"
-      className="relative flex justify-center items-center border-b border-b-th-fade pb-[84px] pt-[126px] text-center [1200px]:text-left"
+      className="relative flex justify-center items-center border-b border-b-th-fade pb-[84px] pt-[126px] text-center lg:text-left"
     >
-      <div className="relative  grid grid-cols-1  w-full [1200px]:grid-cols-5 min-[2000px]:grid-cols-6">
-        <div className="px-default z-10 flex flex-col gap-y-6 pb-[60px] [1200px]:col-span-5 [1200px]:flex-row min-[2000px]:col-span-6">
-          <h2 className="text-4xl uppercase text-white md:text-[60px] [1200px]:flex-1 [1200px]:text-left">
+      <div className="relative  grid grid-cols-1 w-full lg:grid-cols-5 min-[2000px]:grid-cols-6">
+        <div className="px-default z-10 flex flex-col gap-y-6 pb-[60px] lg:col-span-5 lg:flex-row min-[2000px]:col-span-6">
+          <h2 className="text-4xl uppercase text-white md:text-[60px] lg:flex-1 lg:text-left">
             <span
               style={{
                 background:
@@ -101,9 +102,9 @@ export default function Team() {
             </span>
             PEOPLE TEAM
           </h2>
-          <div className="[1200px]:flex-1 [1200px]:text-right">
+          <div className="lg:flex-1 lg:text-right">
             <a href="/team" className="inline-block">
-              <div className="flex items-center justify-center gap-x-2 [1200px]:justify-end">
+              <div className="flex items-center justify-center gap-x-2 lg:justify-end">
                 <p className="header uppercase text-white underline">
                   MEET COWCHAIN
                 </p>

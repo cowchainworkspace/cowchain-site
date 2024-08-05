@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -12,7 +12,7 @@ export const ScrollProject = ({
   tags,
   id,
   link,
-  index
+  // index
 }) => {
   return (
     <div
@@ -58,7 +58,7 @@ export const ScrollProject = ({
           <span className="mt-2 text-center md:text-left font-roc text-lg font-medium uppercase text-white md:text-2xl">
             {title}
           </span>
-          <p className="text-center max-w-sm text-[14px] md:body !text-[#bbb]">{description}</p>
+          <p className="text-center max-w-sm text-[14px] md:body md:text-left !text-[#bbb]">{description}</p>
         </div>
       </Link>
     </div>

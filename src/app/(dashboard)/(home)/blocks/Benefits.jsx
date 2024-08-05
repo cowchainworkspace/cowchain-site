@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Scrollama, Step } from "react-scrollama";
-import { motion, useScroll } from "framer-motion";
+// import { Scrollama, Step } from "react-scrollama";
+// import { motion, useScroll } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { cn } from "@/lib/utils";
-import plusIcon from "@/assets//icons/plus.svg";
-import minusIcon from "@/assets//icons/minus.svg";
-import Image from "next/image";
+// import plusIcon from "@/assets//icons/plus.svg";
+// import minusIcon from "@/assets//icons/minus.svg";
+// import Image from "next/image";
 import {
   Accordion,
   AccordionItem,
@@ -58,21 +58,21 @@ const benefitsData = [
 ];
 
 export default function Benefits() {
-  const expandVariants = {
-    visible: { height: "auto" },
-    hidden: { height: 0 }
-  };
+  // const expandVariants = {
+  //   visible: { height: "auto" },
+  //   hidden: { height: 0 }
+  // };
 
-  const textVariants = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 }
-  };
+  // const textVariants = {
+  //   visible: { opacity: 1 },
+  //   hidden: { opacity: 0 }
+  // };
 
   const sectionRef = useRef(null);
 
-  const { scrollYProgress } = useScroll({ target: sectionRef });
+  // const { scrollYProgress } = useScroll({ target: sectionRef });
 
-  const [scrollIndex, setScrollIndex] = useState(null);
+  // const [scrollIndex, setScrollIndex] = useState(null);
   const [screenWidth, setScreenWidth] = useState();
 
   useEffect(() => {
@@ -87,10 +87,10 @@ export default function Benefits() {
   //   if (yProgress <= 1 && yProgress >= 0.8) setScrollIndex(4);
   // });
 
-  const handleToggle = (index) => {
-    console.log(index);
-    setScrollIndex(index);
-  };
+  // const handleToggle = (index) => {
+  //   console.log(index);
+  //   setScrollIndex(index);
+  // };
 
   return (
     <section id="faq" className="relative z-30">
