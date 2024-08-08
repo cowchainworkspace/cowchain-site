@@ -78,6 +78,9 @@ export default function FAQ() {
                         </span>
                       </div>
                       {isExpanded ? (
+                         <div className="flex items-center justify-center" style={{
+                          width: screenWidth > 768 ? 150 : 50,
+                        }}>
                         <svg
                           width={screenWidth > 768 ? "50" : "32"}
                           height={screenWidth > 768 ? "50" : "32"}
@@ -93,35 +96,40 @@ export default function FAQ() {
                             strokeLinejoin="round"
                           />
                         </svg>
+                        </div>
                       ) : (
-                        <svg
-                          width={screenWidth > 768 ? "50" : "32"}
-                          height={screenWidth > 768 ? "50" : "32"}
-                          viewBox="0 0 32 32"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="16"
-                            cy="16"
-                            r="15.75"
-                            stroke="white"
-                            strokeOpacity="0.5"
-                            strokeWidth="0.5"
-                          />
-                          <path
-                            d="M16 12.2666V19.7333"
-                            stroke="white"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M12.2656 16H19.7323"
-                            stroke="white"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                        <div className="flex items-center justify-center" style={{
+                          width: screenWidth > 768 ? 150 : 50,
+                        }}>
+                          <svg
+                            width={screenWidth > 768 ? "50" : "32"}
+                            height={screenWidth > 768 ? "50" : "32"}
+                            viewBox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="16"
+                              cy="16"
+                              r="15.75"
+                              stroke="white"
+                              strokeOpacity="0.5"
+                              strokeWidth="0.5"
+                            />
+                            <path
+                              d="M16 12.2666V19.7333"
+                              stroke="white"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M12.2656 16H19.7323"
+                              stroke="white"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
                       )}
                     </AccordionButton>
                     <AccordionPanel
