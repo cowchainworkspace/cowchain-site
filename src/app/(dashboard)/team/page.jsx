@@ -15,6 +15,11 @@ import Image from "next/image";
 const photos = [team1, team2, team3];
 
 export const metadata = {
+  title: "Our Team | Cowchain",
+  description: "Meet the blockchain trend-setters behind Cowchain. Find our group of master engineers and specialists committed to conveying cutting-edge arrangements for your trade challenges.",
+  openGraph: {
+    images: 'https://i.imgur.com/Bf9AG5w.png',
+  },
   metadataBase: new URL("https://cowchain.io/"),
   alternates: {
     canonical: "/team"

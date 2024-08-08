@@ -3,8 +3,11 @@ import "./home.css";
 import { ClientProvider } from "@/lib/api/client";
 
 export const metadata = {
-  title: "Cowchain - Blockchain Development",
-  description: "We Turn Your Startup Ideas Into Viable Web3 Businesses"
+  title: "Business Development Services by Cowchain Group",
+  description: "Cowchain blends blockchain smarts with business savvy. Think full-stack coding, white-label products, and marketing that actually works.",
+  openGraph: {
+    images: 'https://i.imgur.com/fXvG21W.png',
+  },
 };
 
 export default function RootLayout({ children }) {
