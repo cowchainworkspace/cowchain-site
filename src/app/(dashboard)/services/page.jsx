@@ -5,6 +5,11 @@ import { ViewMoreSection } from "./blocks/ViewMore";
 import Stack from "@/components/stack";
 
 export const metadata = {
+  title: "Our Services | Cowchain",
+  description: "Explore Cowchain's blockchain services, from custom advancement to execution, driving development over industries.",
+  openGraph: {
+    images: 'https://i.imgur.com/WPdqL01.png',
+  },
   metadataBase: new URL("https://cowchain.io/"),
   alternates: {
     canonical: "/services"
