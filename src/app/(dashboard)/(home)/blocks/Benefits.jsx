@@ -96,7 +96,7 @@ export default function Benefits() {
     <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-6">
         <div className="px-default md-border-r items flex items-center justify-center border-b border-b-th-fade py-[] text-center md:col-span-3">
-          <div className=" max-w-xl cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:block md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
+          <div className=" max-w-xl my-[60px] cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:block md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
@@ -119,16 +119,16 @@ export default function Benefits() {
                 {({ isExpanded }) => (
                   <div
                     className={cn(
-                      "relative bg-cover px-5 py-8 xl:px-[60px] xl:py-[36px]",
-                      {
-                        "bg-[url('/assets/faq-gradient.png')]": isExpanded
-                      }
+                      "relative bg-cover px-5 py-[24px] xl:px-[60px] xl:py-[36px]",
+                      // {
+                      //   "bg-[url('/assets/faq-gradient.png')]": isExpanded
+                      // }
                     )}
                     key={index}
                   >
                     <AccordionButton className={cn("relative")}>
                       <div className="mr-auto w-full max-w-3xl text-left ">
-                        <span className="max-w-2xl text-left font-roc !text-base font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
+                        <span className="max-w-2xl text-left font-roc !text-[14px] font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
                           {benefit.title}
                         </span>
                       </div>

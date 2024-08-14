@@ -42,7 +42,6 @@ const teamData = [
     }
   },
   {
-    
     name: "Oleh",
     role: "Development lead",
     photo: OlehImg,
@@ -52,7 +51,6 @@ const teamData = [
       url: "https://www.linkedin.com/in/%D0%B2%D1%8F%D1%87%D0%B5%D1%81%D0%BB%D0%B0%D0%B2-%D0%B8%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE-549988195"
     }
   }
-  
 ];
 
 export default function Team() {
@@ -84,10 +82,10 @@ export default function Team() {
 
     <section
       id="team"
-      className="relative flex justify-center items-center border-b border-b-th-fade pb-[84px] pt-[126px] text-center lg:text-left"
+      className="relative flex items-center justify-center border-b border-b-th-fade py-[60px] text-center md:pt-[126px] md:pb-[84px] lg:text-left"
     >
-      <div className="relative  grid grid-cols-1 w-full lg:grid-cols-5 min-[2000px]:grid-cols-6">
-        <div className="px-default z-10 flex flex-col gap-y-6 pb-[60px] lg:col-span-5 lg:flex-row min-[2000px]:col-span-6">
+      <div className="relative  grid w-full grid-cols-1 lg:grid-cols-5 min-[2000px]:grid-cols-6">
+        <div className="px-default z-10 flex flex-col gap-y-6 pb-[84px] md:pb-[60px] lg:col-span-5 lg:flex-row min-[2000px]:col-span-6">
           <h2 className="text-4xl uppercase text-white md:text-[60px] lg:flex-1 lg:text-left">
             <span
               style={{
@@ -114,12 +112,11 @@ export default function Team() {
           </div>
         </div>
 
-        <div className="team_wrapper px-default grid auto-cols-fr grid-cols-1 gap-6 bg-black sm:grid-cols-2 md:grid-cols-3 lg:col-span-5 min-[2000px]:col-span-6">
-  {teamData.map((member, index) => (
-    <TeamCard key={index} index={index} {...member} />
-  ))}
-</div>
-
+        <div className="team_wrapper grid auto-cols-fr grid-cols-1 gap-[20px] md:gap-6 bg-black px-[20px] sm:grid-cols-2 md:grid-cols-3 lg:col-span-5 min-[2000px]:col-span-6">
+          {teamData.map((member, index) => (
+            <TeamCard key={index} index={index} {...member} />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -7,8 +7,11 @@ import playIcon from "@/assets/icons/playIcon.svg";
 export default function HeaderContent() {
   return (
     <>
-      <h1 className="relative mt-8 cursor-default uppercase md:mt-16 lg:mt-24">
+      <h1 className="hidden relative mt-8 cursor-default uppercase md:mt-16 md:block lg:mt-24">
         Accelerate your <br /> Web3 odyssey <br /> with cowchain
+      </h1>
+      <h1 className="block text-[38px] leading-[44px] font-medium relative mt-8 cursor-default uppercase md:mt-16 lg:mt-24 md:hidden">
+        Accelerate <br /> your Web3 <br /> odyssey <br /> with cowchain
       </h1>
       <div className="mt-auto grid grid-cols-1 md:grid-cols-2">
         <div className="relative flex items-center md:gap-x-1">
@@ -26,18 +29,18 @@ export default function HeaderContent() {
           >
             <Image className="w-11 md:w-[70px]" src={clutch} alt=""></Image>
           </a> */}
-          <h2 className="text-[32px] leading-[29px] md:block">
+          <h2 className="hidden text-[32px] leading-[29px] md:block">
             Driving Crypto Evolution: <br /> From Vision to Reality, <br />{" "}
             Every Step.
           </h2>
         </div>
         <div className="flex cursor-default flex-col gap-y-4 md:items-end">
 
-          {/* <div>
+          <div className="block md:hidden">
             <h2 className="mb-[24px] md:mb-0">Crypto Services and Technologies</h2>
             <div className="md:mt-[30px] md:flex md:items-center md:justify-between">
               <div className="flex flex-col gap-y-1">
-                <p className="body1 text-base  mb-[6px] md:mb-0">Mykhailo Adzhoiev</p>
+                <p className="body1 text-base leading-[18px]  mb-[6px] md:mb-0">Mykhailo Adzhoiev</p>
                 <p className="text-sm  text-secondary mb-[24px] md:mb-0">Founder & CTO</p>
               </div>
               <a
@@ -54,7 +57,7 @@ export default function HeaderContent() {
                 </p>
               </a>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </>

@@ -13,7 +13,7 @@ const Header = () => {
       id="header"
     >
       <div className="video-wrapper min-h-full">
-        <Video />
+      <Video />
         <div className="px-default relative flex min-h-full w-full flex-col pb-[41px]">
           <Image
             srcSet={`${bg_top} 360w, ${bg_top} 480w, ${bg_top} 720w, ${bg_top_lg} 1920w`}

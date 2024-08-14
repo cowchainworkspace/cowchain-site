@@ -11,7 +11,7 @@ const Video = () => {
   return (
     <video
       ref={vidRef}
-      className="mt-[68px]"
+      className="mt-[-20px] md:mt-[68px]"
       id="bg_vid"
       playsInline
       muted

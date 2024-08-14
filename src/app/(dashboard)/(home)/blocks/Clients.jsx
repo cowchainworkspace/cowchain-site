@@ -11,12 +11,12 @@ export default function Clients() {
     <section className="relative">
       <Image
         alt=""
-        className="absolute -top-[45%] right-0 h-screen md:-top-[45%] md:h-min  lg:-top-[80%]"
+        className="absolute -top-[38%] right-0 h-screen md:-top-[45%] md:h-min  lg:-top-[80%]"
         src={bg_lg}
       />
 
       <div className="py-heading px-default relative">
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 lg:gap-16">
+        <div className=" grid grid-cols-1 md:mt-12 lg:grid-cols-2 lg:gap-16">
           <h2 className="lg:order-0 text-4xl uppercase text-white  md:text-[60px]">
             OUR CLIENTS
           </h2>
@@ -63,7 +63,7 @@ export default function Clients() {
           <Link href="/cases" className="lg:hidden">
             <div className="flex items-center gap-x-2">
               <p className="header uppercase text-white underline">
-                VIEW ALL PROJECTS
+                ALL PROJECTS
               </p>
 
               <Image className="w-6" src={arrow} alt=""></Image>

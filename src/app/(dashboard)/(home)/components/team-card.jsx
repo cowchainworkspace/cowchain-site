@@ -13,11 +13,11 @@ export const TeamCard = ({ name, role, photo, social, index }) => {
         style={{ backgroundImage: `url(${photo.src})` }}
       ></div>
       <div>
-        <div className="flex flex-col justify-between  gap-2 px-3 pt-[38px]">
+        <div className="flex flex-col justify-between items-start gap-[2px] md:gap-2 md:px-3 pt-[32px] md:pt-[38px]">
           <span className="z-10 font-roc text-lg uppercase text-white">
             {name}
           </span>
-          <p className="z-10 text-xs  uppercase text-[#BBB] md:text-sm">
+          <p className="z-10 text-xs uppercase text-[#BBB] md:text-sm">
             {role}
           </p>
         </div>

@@ -58,42 +58,51 @@ export default function Stack({
 }) {
   return (
     <section
-    id="expertise"
-    className="relative flex justify-center pl-[84px] pr-[64px] pt-[108px] pb-[132px] border-b border-b-th-fade"
-  >
-    <div className="grid grid-cols-1 gap-y-[40px] lg:grid-cols-3 md:grid-rows-2 md:gap-x-[100px]">
-      <div className="col-span-1 row-span-1 flex items-center justify-start">
-        <h2 className="text-start whitespace-pre-line text-[60px] uppercase">{title}</h2>
-      </div>
-  
-      {expertiseData.map((expertise, index) => (
-        <div
-          key={index}
-          className="col-span-1 row-span-1 flex flex-col items-start"
-        >
+      id="expertise"
+      className="relative flex justify-center border-b border-b-th-fade px-[20px] py-[60px] md:pb-[132px] md:pl-[84px] md:pr-[64px] md:pt-[108px]"
+    >
+      <div className="grid grid-cols-1 gap-y-[42px] md:grid-rows-2 md:gap-x-[100px] lg:grid-cols-3">
+        <div className="col-span-1 row-span-1 flex items-center justify-center md:justify-start">
+          <h2 className="whitespace-pre-line text-[36px] text-center uppercase md:text-start md:text-[60px]">
+            {title}
+          </h2>
+        </div>
+
+        {expertiseData.map((expertise, index) => (
           <div
-            style={{ border: '0.1px solid rgba(255, 255, 255, 0.5)' }}
-            className="flex min-h-[64px] min-w-[64px] items-center justify-center mb-[37px] rounded-full bg-transparent"
+            key={index}
+            className="col-span-1 row-span-1 flex flex-col items-start"
           >
-            <Image src={expertise.icon} width={28} height={28} alt={expertise.title} />
-          </div>
-          <div className="mb-2 flex items-center">
-            <div className="">
-              <h3 className="mb-[24px] max-w-[310px] text-xl">{expertise.title}</h3>
-              <p
-                style={{
-                  color: '#BBBBBB'
-                }}
-                className=""
-              >
-                {expertise.text}
-              </p>
+            <div
+              style={{ border: "0.1px solid rgba(255, 255, 255, 0.5)" }}
+              className="mb-[24px] md:mb-[37px] flex min-h-[42px] min-w-[42px] md:min-h-[64px] md:min-w-[64px] items-center justify-center rounded-full bg-transparent"
+            >
+              <Image
+                src={expertise.icon}
+                width={'auto'}
+                height={'auto'}
+                className="w-[20px] h-[20px] md:w-[28px] md:h-[28px]"
+                alt={expertise.title}
+              />
+            </div>
+            <div className="mb-2 flex items-center">
+              <div className="">
+                <h3 className="mb-[22px] max-w-[310px] text-xl">
+                  {expertise.title}
+                </h3>
+                <p
+                  style={{
+                    color: "#BBBBBB"
+                  }}
+                  className="text-[16px] leading-22px"
+                >
+                  {expertise.text}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
-  </section>
-  
+        ))}
+      </div>
+    </section>
   );
 }

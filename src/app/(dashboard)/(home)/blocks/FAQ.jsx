@@ -52,7 +52,7 @@ export default function FAQ() {
   return (
     <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-5">
-        <div className="py-heading px-default md-border-r flex justify-center border-b border-b-th-fade text-center md:col-span-2">
+        <div className="py-[60px] md:py-heading px-default md-border-r flex justify-center border-b border-b-th-fade text-center md:col-span-2">
           <h2 className="flex max-w-[321px] justify-center text-center text-4xl uppercase leading-[40px]  text-white md:max-w-[365px] md:text-left md:text-[60px] md:leading-[53px]">
             FREQUENTLY ASKED QUESTIONS
           </h2>
