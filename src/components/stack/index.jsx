@@ -45,7 +45,7 @@ const expertiseData = [
   },
   {
     title: "WHITE LABEL PRODUCTION",
-    text: "Use affordable products with white-label options developed by industry professionals for your business without the time and cost of custom development.",
+    text: `Use affordable ready made products developed by industry professionals saving time and cost needed for "from scratch" custom development.`,
     icon: whiteLabel
   }
 ];

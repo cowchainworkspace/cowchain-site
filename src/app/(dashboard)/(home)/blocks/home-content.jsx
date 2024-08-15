@@ -19,7 +19,7 @@ export default function HomeContent() {
       <Cases />
       <Team />
       <FAQ />
-      <Contact />
+      <Contact className="py-[159px] px-[64px] md:pt-[169px] md:pb-[127px]" />
     </>
   );
 }

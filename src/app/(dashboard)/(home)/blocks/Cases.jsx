@@ -21,10 +21,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
-import 'swiper/css/bundle';
-import 'swiper'
-import sliderLeftArrow from '@/assets/icons/sliderLeftArrow copy.svg';
-import sliderRightArrow from '@/assets/icons/sliderRightArrow.svg';
+import "swiper/css/bundle";
+import "swiper";
+import sliderLeftArrow from "@/assets/icons/sliderLeftArrow copy.svg";
+import sliderRightArrow from "@/assets/icons/sliderRightArrow.svg";
 
 const projectsData = [
   {
@@ -35,7 +35,6 @@ const projectsData = [
     photo: web3fy,
     tags: ["App Development", "SEO"]
   },
-
   {
     title: "Retrobridge platform",
     link: "/cases/bridge",
@@ -52,7 +51,7 @@ const projectsData = [
       "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
     photo: triend,
     tags: ["App Development", "Website Development"]
-  },
+  }
   // {
   //   title: "m2e platform",
   //   link: "/cases/move",
@@ -79,6 +78,42 @@ const projectsData = [
   //   tags: ["Mobile App", "Non-custodial wallet"]
   // }
 ];
+
+const casesData = [
+  {
+    title: `decentralized crypto exchange`,
+    link: "/cases/finance",
+    description:
+      "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
+    photo: "",
+    tags: ["App Development", "SEO"]
+  },
+  {
+    title: "Cross-chain transfer bridge",
+    link: "/cases/bridge",
+    description:
+      "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
+    photo: '',
+    tags: ["Website Development", "24/7 Support", "Web3"]
+  },
+  {
+    title: "Crypto wallet app",
+    link: "/cases/wallet",
+    description:
+      "Non-custodial multichain crypto wallet which allows users to create a blockchain wallet using web2 socials like Google, Facebook, Apple, email in one click.",
+    photo: '',
+    tags: ["Mobile App", "Non-custodial wallet"]
+  },
+    {
+    title: "m2e platform",
+    link: "/cases/move",
+    description:
+      "Robust ecosystem for fitness finance that contains multiple various applications: move to earn application, blockchain wallet, dex, launchpad, dashboard etc.",
+    photo: '',
+    tags: ["DEX", "Staking", "Move-to-earn"]
+  },
+];
+
 const Cases = () => {
   // const scrollRef = useRef(null);
   const ghostRef = useRef(null);
@@ -86,8 +121,6 @@ const Cases = () => {
   const [viewportW, setViewportW] = useState(0);
 
   const scrollPerc = useMotionValue(0);
-
-
 
   const { scrollYProgress } = useScroll({
     target: ghostRef
@@ -104,7 +137,6 @@ const Cases = () => {
     [0, 0.7],
     [0, -scrollRange + viewportW]
   );
-
 
   const swiperRef = useRef;
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -124,9 +156,12 @@ const Cases = () => {
   };
 
   return (
-    <section ref={containerRef} className="relative h-[546px] md:h-[698px] z-10 border-b border-b-th-fade">
-     <Swiper
-     className="h-[546px] md:h-[698px]"
+    <section
+      ref={containerRef}
+      className="relative z-10 h-[546px] border-b border-b-th-fade md:h-[698px]"
+    >
+      <Swiper
+        className="h-[546px] md:h-[698px]"
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -135,47 +170,43 @@ const Cases = () => {
         spaceBetween={0}
         breakpoints={{
           768: {
-            slidesPerView: 1.62,
+            slidesPerView: 1.62
           },
           1024: {
-            slidesPerView: 2.62,
-          },
+            slidesPerView: 2.62
+          }
         }}
       >
         {projectsData &&
           projectsData.map((project, index) => (
-            <SwiperSlide
-              key={index}
-              className="h-[546px] md:h-[698px]"
-            >
+            <SwiperSlide key={index} className="h-[546px] md:h-[698px]">
               <ScrollProject key={index} index={index} {...project} />
             </SwiperSlide>
           ))}
       </Swiper>
 
       {currentIndex > 0 && (
-         <div
-         style={{ 
-          background: 'linear-gradient(to left, transparent 1%, #AB40FF 160%)' 
-        }}
-         onClick={handlePrevClick}
-         className="absolute hidden z-50 left-0 top-0 lg:flex h-full w-32 cursor-pointer items-center justify-center bg-transparent"
-       >
-         <Image src={sliderLeftArrow} alt="Next" className="h-8 w-8" />
-       </div>
-        
+        <div
+          style={{
+            background: "linear-gradient(to left, transparent 1%, #AB40FF 160%)"
+          }}
+          onClick={handlePrevClick}
+          className="absolute left-0 top-0 z-50 hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex"
+        >
+          <Image src={sliderLeftArrow} alt="Next" className="h-8 w-8" />
+        </div>
       )}
       {currentIndex < projectsData.length - 2 && (
         <div
-        style={{ 
-          background: 'linear-gradient(to right, transparent 1%, #AB40FF 160%)' 
-        }}
-        onClick={handleNextClick}
-        className="absolute z-50 right-0 top-0 hidden lg:flex h-full w-32 cursor-pointer items-center justify-center bg-transparent"
-      >
-        <Image src={sliderRightArrow} alt="Previous" className="h-8 w-8" />
-      </div>
-       
+          style={{
+            background:
+              "linear-gradient(to right, transparent 1%, #AB40FF 160%)"
+          }}
+          onClick={handleNextClick}
+          className="absolute right-0 top-0 z-50 hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex"
+        >
+          <Image src={sliderRightArrow} alt="Previous" className="h-8 w-8" />
+        </div>
       )}
     </section>
   );

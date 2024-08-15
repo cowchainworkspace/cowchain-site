@@ -140,11 +140,11 @@ export default function Footer() {
               What’s on your mind?
             </span> */}
             <div className="max-w-[320px]">
-              <p className="text-center text-[#bbb] md:text-left">
-              © 2024 Сowchain сo. All rights reserved.
+              <p className="md:text-center text-[#bbb] text-left">
+              © 2024 Сowchain сo. All rights reserved. <br />
               For business inquiries{" "}
                 <a
-                  className="ml-1 inline text-white underline md:text-left"
+                  className="ml-1 inline md:text-white md:underline text-left"
                   href="mailto:sales@cowchain.io"
                 >
                   sales@cowchain.io
@@ -152,7 +152,7 @@ export default function Footer() {
               </p>
             </div>
             {/* <FooterForm /> */}
-            <div className="mx-auto flex items-center justify-center gap-x-2 md:mx-0 md:justify-start">
+            <div className="mx-auto flex flex-wrap items-center md:justify-center gap-x-2 md:mx-0 md:justify-start">
               <a
                 href="https://www.linkedin.com/company/cowchain/"
                 rel="nofollow noreferrer"
@@ -160,7 +160,7 @@ export default function Footer() {
               >
                 <Image
                   alt="linkedin"
-                  className="w-12 lg:w-16"
+                  className="w-12 lg:w-16 min-w-[52px]"
                   src={linkedin}
                 ></Image>
               </a>
@@ -171,7 +171,7 @@ export default function Footer() {
               >
                 <Image
                   alt="telegram"
-                  className="w-12 lg:w-16"
+                  className="w-12 lg:w-16 min-w-[52px]"
                   src={telegram}
                 ></Image>
               </a>
@@ -182,7 +182,7 @@ export default function Footer() {
               >
                 <Image
                   alt="twitter"
-                  className="w-12 lg:w-16"
+                  className="w-12 lg:w-16 min-w-[52px]"
                   src={twitter}
                 ></Image>
               </a>
@@ -193,7 +193,7 @@ export default function Footer() {
               >
                 <Image
                   alt="medium"
-                  className="w-12 lg:w-16"
+                  className="w-12 lg:w-16 min-w-[52px]"
                   src={medium}
                 ></Image>
               </a>
@@ -202,21 +202,21 @@ export default function Footer() {
                 rel="nofollow noreferrer"
                 target="_blank"
               >
-                <Image alt="mail" className="w-12 lg:w-16" src={mail}></Image>
+                <Image alt="mail" className="w-12 lg:w-16 min-w-[52px]" src={mail}></Image>
               </a>
               <a
                 href="https://www.upwork.com/ag/cowchain/"
                 rel="nofollow noreferrer"
                 target="_blank"
               >
-                <Image className="w-12 lg:w-16" src={upwork} alt=""></Image>
+                <Image className="w-12 lg:w-16 min-w-[52px]" src={upwork} alt=""></Image>
               </a>
               <a
                 href="https://clutch.co/profile/cowchain"
                 rel="nofollow noreferrer"
                 target="_blank"
               >
-                <Image className="w-12 lg:w-16" src={clutch} alt=""></Image>
+                <Image className="w-12 lg:w-16 min-w-[52px]" src={clutch} alt=""></Image>
               </a>
             </div>
           </div>
