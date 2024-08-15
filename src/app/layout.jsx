@@ -3,7 +3,7 @@ import "./home.css";
 import { ClientProvider } from "@/lib/api/client";
 
 export const metadata = {
-  title: "Business Development Services by Cowchain Group",
+  title: "Cowchain - Blockchain Development",
   description: 'Cowchain blends blockchain smarts with business savvy. Think full-stack coding, white-label products, and marketing that actually works.',
 };
 
