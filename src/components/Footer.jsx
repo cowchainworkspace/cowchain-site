@@ -135,12 +135,12 @@ export default function Footer() {
         })}
       >
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="md-border-r py-[65px] px-default flex flex-col gap-y-8 border-b border-b-th-fade text-center">
+          <div className="md-border-r py-[40px] md:py-[65px] px-[20px] md:pl-[88px] md:pr-[79px] flex flex-col gap-y-8 border-b border-b-th-fade text-center">
             {/* <span className="text-center font-roc text-xl font-medium uppercase text-white md:text-left">
               What’s on your mind?
             </span> */}
             <div className="max-w-[320px]">
-              <p className="md:text-center text-[#bbb] text-left">
+              <p className="text-[#bbb] text-left ">
               © 2024 Сowchain сo. All rights reserved. <br />
               For business inquiries{" "}
                 <a
@@ -152,7 +152,7 @@ export default function Footer() {
               </p>
             </div>
             {/* <FooterForm /> */}
-            <div className="mx-auto flex flex-wrap items-center md:justify-center gap-x-2 md:mx-0 md:justify-start">
+            <div className="flex flex-wrap items-center gap-x-2 md:mx-0 md:justify-start">
               <a
                 href="https://www.linkedin.com/company/cowchain/"
                 rel="nofollow noreferrer"

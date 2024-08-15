@@ -1,20 +1,20 @@
 import React from "react";
-import photo1 from "@/assets/homepage/team/mykhailo.jpg";
-import photo2 from "@/assets/homepage/team/vyacheslav.jpg";
-import photo3 from "@/assets/homepage/team/oleh.jpg";
-import photo4 from "@/assets/homepage/team/andrii.jpg";
-import photo5 from "@/assets/homepage/team/bohdan.jpg";
-import photo6 from "@/assets/homepage/team/veronika.jpg";
-import photo7 from "@/assets/homepage/team/ruslan.jpg";
-import photo8 from "@/assets/homepage/team/saminu.jpg";
-import photo9 from "@/assets/homepage/team/alexandr.jpg";
+import Michael from "@/assets/homepage/team/newTeam/michaelImg.png";
+import Viacheslav from "@/assets/homepage/team/newTeam/viacheslavImg.png";
+import Oleh from "@/assets/homepage/team/newTeam/olehImg.png";
+import Vlad from "@/assets/homepage/team/newTeam/vladImg.png";
+import Alexandra from "@/assets/homepage/team/newTeam/alexandraImg.png";
+import Alex from "@/assets/homepage/team/newTeam/alexImg.png";
+import Hanna from "@/assets/homepage/team/newTeam/hannaImg.png";
+import Ruslan from "@/assets/homepage/team/newTeam/ruslanImg.png";
+import Olexandr from "@/assets/homepage/team/newTeam/olexandrIng.png";
 import linkedin from "@/assets/homepage/linkedin.svg";
 
 const teamData = [
   {
     name: "Michael",
     role: "Founder & CEO",
-    photo: photo1,
+    photo: Michael,
     social: {
       network: "LinkedIn",
       icon: linkedin,
@@ -24,7 +24,7 @@ const teamData = [
   {
     name: "Viacheslav",
     role: "COO",
-    photo: photo2,
+    photo: Viacheslav,
     social: {
       network: "LinkedIn",
       icon: linkedin,
@@ -34,7 +34,7 @@ const teamData = [
   {
     name: "Oleh",
     role: "Development lead",
-    photo: photo3,
+    photo: Oleh,
     social: {
       network: "LinkedIn",
       icon: linkedin,
@@ -43,20 +43,20 @@ const teamData = [
   },
 
   {
-    name: "Veronika",
-    role: "Marketing manager",
-    photo: photo6,
+    name: "Vlad",
+    role: "Head of Sales",
+    photo: Vlad,
     social: {
       network: "LinkedIn",
       icon: linkedin,
-      url: "https://www.linkedin.com/in/veronika-volkonovska-12318b250/"
+      url: ""
     }
   },
 
   {
-    name: "Bohdan",
-    role: "Full-stack Web3 developer",
-    photo: photo5,
+    name: "Alexandra",
+    role: "Head of Marketing",
+    photo: Alexandra,
     social: {
       network: "LinkedIn",
       icon: linkedin,
@@ -65,30 +65,30 @@ const teamData = [
   },
 
   {
-    name: "Andrii",
-    role: "Full-stack Web3 developer",
-    photo: photo4,
+    name: "Alex",
+    role: "Head of Lead Generation",
+    photo: Alex,
     social: {
       network: "LinkedIn",
       icon: linkedin,
-      url: "https://www.linkedin.com/in/%D0%B0%D0%BD%D0%B4%D1%80%D0%B5%D0%B9-%D0%B3%D1%80%D0%BE%D0%BC%D0%B0%D0%B4%D0%B5%D1%86%D0%BA%D0%B8%D0%B9-1b26231b8"
+      url: "'"
     }
   },
   {
-    name: "Saminu",
-    role: "Full-stack Web3 developer",
-    photo: photo8,
+    name: "Hanna",
+    role: "Business Development Lead",
+    photo: Hanna,
     social: {
       network: "LinkedIn",
       icon: linkedin,
-      url: "https://www.linkedin.com/in/smailafiiia/"
+      url: ""
     }
   },
 
   {
     name: "Ruslan",
-    role: "Lead Generation manager",
-    photo: photo7,
+    role: "Business Development Representative",
+    photo: Ruslan,
     social: {
       network: "LinkedIn",
       icon: linkedin,
@@ -96,13 +96,13 @@ const teamData = [
     }
   },
   {
-    name: "Alexander",
-    role: "Project Manager",
-    photo: photo9,
+    name: "Olexandr",
+    role: "Business Development Representative / Web3 Analyst",
+    photo: Olexandr,
     social: {
       network: "LinkedIn",
       icon: linkedin,
-      url: "https://www.linkedin.com/in/alexander-barabash-9a76aa217/"
+      url: ""
     }
   }
 ];

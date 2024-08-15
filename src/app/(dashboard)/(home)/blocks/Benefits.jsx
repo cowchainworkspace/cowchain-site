@@ -112,6 +112,7 @@ export default function Benefits() {
             />
           </div>
         </div>
+        
         <div className="md:col-span-3">
           <Accordion allowToggle>
             {benefitsData.map((benefit, index) => (
