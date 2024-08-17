@@ -17,7 +17,7 @@ export default function TeamInfo() {
   return (
     <motion.div
       transition={{ from: 20, duration: 1 }}
-      className=" -mt-40 border-b border-b-th-fade pb-28 md:mt-24  xl:mt-28"
+      className="mt-10 border-b border-b-th-fade pb-28 md:mt-24  xl:mt-28"
     >
       <h3 className=" mx-5 mb-20 ml-5 max-w-[740px] text-2xl xl:mb-0 xl:ml-28  xl:text-4xl">
         SPLIT ACROSS{" "}
@@ -34,7 +34,7 @@ export default function TeamInfo() {
           team photo
         </h1>
         <motion.div ref={ref} style={{ marginTop }}>
-          <Image className="max-w-[375px] xl:max-w-[915px]" src={team} alt="" />
+          <Image className="w-full max-w-[915px]" src={team} alt="" />
         </motion.div>
       </div>
     </motion.div>

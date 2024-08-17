@@ -20,6 +20,7 @@ export default {
         '3xl': '1800px',
         '4xl': '2000px',
         'custom-1400': '1400px',
+        'custom-1700': '1660px',
       },
       fontFamily: {
         roc: ['roc-grotesk', 'sans-serif'],

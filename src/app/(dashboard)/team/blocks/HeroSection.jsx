@@ -9,7 +9,7 @@ export const HeroSection = () => {
         <Tag title={"team"} className={"mb-4 md:mb-8"} />
         <h1 className="mb-10 max-w-[1150px] text-[32px] uppercase text-white lg:mt-6 lg:text-[82px] xl:text-center   xl:text-7xl">
           We are a team of{" "}
-          <span className="violet-gradient-text">30+ web3 natives</span> making
+          <span className="violet-gradient-text">50+ web3 natives</span> making
           crypto simple since 2020
         </h1>
       </div>

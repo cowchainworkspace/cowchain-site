@@ -194,12 +194,12 @@ export default function Navbar({ isPageNotFound = false }) {
         {isTeamBg && (
           <>
             <Image
-              className="absolute right-0 top-0 h-full w-full lg:hidden"
+              className="absolute right-0 top-0 h-full w-full lg:hidden pointer-events-none"
               alt="gradient"
               src={team_bg}
             />
             <Image
-              className="absolute top-0 hidden h-full w-full lg:block"
+              className="absolute top-0 hidden z-[-2] h-full w-full lg:block pointer-events-none"
               alt="gradient"
               priority
               src={team}

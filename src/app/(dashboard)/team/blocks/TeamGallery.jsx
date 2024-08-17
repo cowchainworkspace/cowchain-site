@@ -9,6 +9,7 @@ import Hanna from "@/assets/homepage/team/newTeam/hannaImg.png";
 import Ruslan from "@/assets/homepage/team/newTeam/ruslanImg.png";
 import Olexandr from "@/assets/homepage/team/newTeam/olexandrIng.png";
 import linkedin from "@/assets/homepage/linkedin.svg";
+// import { TeamCard } from "../../(home)/components/team-card";
 
 const teamData = [
   {
@@ -97,7 +98,7 @@ const teamData = [
   },
   {
     name: "Olexandr",
-    role: "Business Development Representative / Web3 Analyst",
+    role: "Business Development Representative",
     photo: Olexandr,
     social: {
       network: "LinkedIn",
@@ -109,7 +110,7 @@ const teamData = [
 
 const TeamCard = ({ name, role, photo, social }) => {
   return (
-    <div className="relative flex flex-col justify-start gap-y-9  xl:max-w-[400px] xl:px-4">
+    <div className="relative flex flex-col justify-start max-w-[200px] gap-y-9 xl:max-w-[400px]">
       <div
         className="flex h-full min-h-[187px]  bg-cover bg-center bg-no-repeat xl:min-h-[459px] xl:w-[400px]"
         style={{ backgroundImage: `url(${photo.src})` }}
@@ -131,9 +132,10 @@ const TeamGallery = () => {
       className="relative flex flex-col items-center justify-center border-b border-t border-b-th-fade border-t-th-fade px-6 pb-28 pt-[115px]"
     >
       <h3 className="mb-20 uppercase">Meet the team</h3>
-      <div className="grid grid-cols-2 gap-x-2 gap-y-6 bg-black   md:grid-cols-3 lg:col-span-3 xl:gap-x-5 xl:gap-y-20">
+      <div className="grid grid-cols-2 gap-x-2 gap-y-6 bg-black md:grid-cols-3 lg:col-span-3 xl:gap-x-5 xl:gap-y-20">
         {teamData.map((member, index) => (
           <TeamCard key={index} {...member} />
+          // <TeamCard key={index} index={index} {...member} />
         ))}
       </div>
     </section>

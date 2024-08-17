@@ -7,9 +7,16 @@ import React, {
   // useCallback,
   useEffect
 } from "react";
-import web3fy from "@/assets/cases/web3fyImg.png";
-import triend from "@/assets/cases/triendImg.png";
-import bridge from "@/assets/cases/retrobridgeImg.png";
+// import web3fy from "@/assets/cases/web3fyImg.png";
+// import triend from "@/assets/cases/triendImg.png";
+// import bridge from "@/assets/cases/retrobridgeImg.png";
+
+import m2e from "@/assets/cases/newCases/crossChainTransferBridgeImg.png"
+import bridge from "@/assets/cases/newCases/CryptoExchangeImg.png"
+import wallet from "@/assets/cases/newCases/cryptoWalletApp2Img.png"
+import finance from "@/assets/cases/newCases/cryptoWalletAppImg.png"
+import payment from "@/assets/cases/newCases/HotelBusinessImg.png"
+import hotel from "@/assets/cases/newCases/m2ePlatformImg.png"
 
 import { useScroll } from "framer-motion";
 
@@ -27,31 +34,31 @@ import sliderLeftArrow from "@/assets/icons/sliderLeftArrow copy.svg";
 import sliderRightArrow from "@/assets/icons/sliderRightArrow.svg";
 
 const projectsData = [
-  {
-    title: "Web3fy learning app",
-    link: "/cases/payment",
-    description:
-      "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
-    photo: web3fy,
-    tags: ["App Development", "SEO"]
-  },
-  {
-    title: "Retrobridge platform",
-    link: "/cases/bridge",
-    description:
-      "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
-    photo: bridge,
-    tags: ["Website Development", "24/7 Support", "Web3"]
-  },
-  {
-    title: "Tridend decentralized review website and app",
-    link: "/cases/hotel",
+  // {
+  //   title: "Exchange wallet app",
+  //   link: "/cases/payment",
+  //   description:
+  //     "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
+  //   photo: web3fy,
+  //   tags: ["App Development", "SEO"]
+  // },
+  // {
+  //   title: "Retrobridge platform",
+  //   link: "/cases/bridge",
+  //   description:
+  //     "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
+  //   photo: bridge,
+  //   tags: ["Website Development", "24/7 Support", "Web3"]
+  // },
+  // {
+  //   title: "Tridend decentralized review website and app",
+  //   link: "/cases/hotel",
 
-    description:
-      "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
-    photo: triend,
-    tags: ["App Development", "Website Development"]
-  }
+  //   description:
+  //     "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
+  //   photo: triend,
+  //   tags: ["App Development", "Website Development"]
+  // }
   // {
   //   title: "m2e platform",
   //   link: "/cases/move",
@@ -81,37 +88,54 @@ const projectsData = [
 
 const casesData = [
   {
-    title: `decentralized crypto exchange`,
-    link: "/cases/finance",
+    title: `m2e platform`,
+    link: "/cases/move",
     description:
-      "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
-    photo: "",
-    tags: ["App Development", "SEO"]
+      "Large Move 2 earn game with complex ecosystem (DEX, crypto wallet, NFT Marketplace and native token)",
+    photo: m2e,
+    tags: ["App Development", "Website Development"]
   },
   {
     title: "Cross-chain transfer bridge",
     link: "/cases/bridge",
     description:
-      "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
-    photo: '',
+      "Multichain portal, which bridged more than 50M$ volume and 200 assets across 25 chains",
+    photo: bridge,
     tags: ["Website Development", "24/7 Support", "Web3"]
   },
   {
     title: "Crypto wallet app",
     link: "/cases/wallet",
     description:
-      "Non-custodial multichain crypto wallet which allows users to create a blockchain wallet using web2 socials like Google, Facebook, Apple, email in one click.",
-    photo: '',
-    tags: ["Mobile App", "Non-custodial wallet"]
+      "Crypto wallet app for iOS and Android",
+    photo: wallet,
+    tags: ["App Development", "Website Development"]
   },
     {
-    title: "m2e platform",
-    link: "/cases/move",
+    title: "decentralized crypto exchange",
+    link: "/cases/finance",
     description:
-      "Robust ecosystem for fitness finance that contains multiple various applications: move to earn application, blockchain wallet, dex, launchpad, dashboard etc.",
-    photo: '',
-    tags: ["DEX", "Staking", "Move-to-earn"]
+      "DEX platform featuring an innovative fee structure, with token, and admin panel",
+    photo: finance,
+    tags: ["App Development", "SEO"]
   },
+  {
+    title: "Exchange wallet app",
+    link: "/cases/payment",
+    description:
+      "First BTC/USDT crypto exchange in Canada",
+    photo: payment,
+    tags: ["App Development", "Website Development"]
+  },
+  {
+    title: "Integration blockchain into hotel business",
+    link: "/cases/hotel",
+
+    description:
+      "Web browser AI crypto plugin and Dapp for travel and hotels",
+    photo: hotel,
+    tags: ["App Development", "Website Development"]
+  }
 ];
 
 const Cases = () => {
@@ -177,8 +201,8 @@ const Cases = () => {
           }
         }}
       >
-        {projectsData &&
-          projectsData.map((project, index) => (
+        {casesData &&
+          casesData.map((project, index) => (
             <SwiperSlide key={index} className="h-[546px] md:h-[698px]">
               <ScrollProject key={index} index={index} {...project} />
             </SwiperSlide>

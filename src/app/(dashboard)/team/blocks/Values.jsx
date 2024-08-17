@@ -80,11 +80,11 @@ export const Values = () => {
   }, []);
 
   return (
-    <div className="hidden md:block">
+    <div className=" md:block">
       <section
         ref={sectionRef}
         id="benefits"
-        className="relative hidden md:block"
+        className="relative  md:block"
       >
         <div className="">
           <Image
@@ -99,13 +99,13 @@ export const Values = () => {
           <div className="flex flex-col xl:flex-row">
             <div className="flex items-start justify-start border-b border-b-th-fade   border-r-th-fade xl:w-1/2 xl:items-center xl:border-b xl:border-r ">
               <div className="sticky mb-12  ml-5 mt-16 flex max-w-[354px] flex-col items-start justify-start xl:mb-0 xl:ml-28">
-                <Tag className={"mb-4 justify-start"} title={"our values"} />
+                {/* <Tag className={"mb-4 justify-start"} title={"our values"} /> */}
                 <p className="font-roc text-4xl font-medium  uppercase  text-white  xl:text-7xl">
-                  What we value
+                  Our mission
                 </p>
-                <button className="btn-submit mt-6 cursor-pointer items-center justify-center bg-white font-roc   text-base font-medium uppercase text-black xl:hidden  xl:px-12">
+                {/* <button className="btn-submit mt-6 cursor-pointer items-center justify-center bg-white font-roc   text-base font-medium uppercase text-black xl:hidden  xl:px-12">
                   Get in touch
-                </button>
+                </button> */}
               </div>
             </div>
 

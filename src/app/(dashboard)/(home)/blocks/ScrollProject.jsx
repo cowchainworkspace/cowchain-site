@@ -25,14 +25,14 @@ export const ScrollProject = ({
     >
       <Link
         href={link}
-        className="relative flex h-[546px] md:h-[698px] w-full flex-col items-center gap-[32px] p-[22px] custom-1400:p-[72px]"
+        className="relative flex h-[546px] md:h-[698px] w-full flex-col items-center gap-[32px] p-[22px] md:p-[35px]"
       >
         {/* <div className="btn-contact ml-auto max-h-24 max-w-[96px] opacity-0 md:max-h-none md:max-w-none md:opacity-100">
           VIEW PROJECT
         </div> */}
 
         <div className="min-h-[348px] md:h-[337px] w-auto">
-          <Image src={photo.src} width={380} height={380} alt={title} />
+          <Image src={photo.src} width={503} height={380} alt={title} />
         </div>
 
         <div 

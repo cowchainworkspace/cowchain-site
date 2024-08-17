@@ -11,6 +11,7 @@ import team1 from "@/assets/team/team-carousel-2/team1.png";
 import team2 from "@/assets/team/team-carousel-2/team2.png";
 import team3 from "@/assets/team/team-carousel-2/team3.png";
 import Image from "next/image";
+import michaelVideoLinkImg from "@/assets/team/executives/michaelVideoLinkImg.png";
 
 const photos = [team1, team2, team3];
 
@@ -29,7 +30,7 @@ const Team = ({ setBurgerOpen }) => {
         <Values />
         <ValuesMobile />
 
-        <div className="mx-5 mt-14 flex flex-col gap-4  xl:mx-24 xl:mt-28 ">
+        <div className="mx-5 mt-14 flex flex-col gap-4  overflow-visible xl:mx-24 xl:mt-28">
           <Tag
             className={"max-w-[166px] xl:max-w-[200px]"}
             title={"founded and run by"}
@@ -89,7 +90,23 @@ const Team = ({ setBurgerOpen }) => {
               </div>
             </div>
           </div>
-          <div className="mb-16 mt-9 flex max-w-[110%] items-start  justify-start gap-2 overflow-x-scroll md:mt-0 md:items-center md:overflow-auto   lg:max-w-full  lg:justify-between">
+
+          <div className="relative mb-16 mt-9 md:mt-0  h-[286px] overflow-visible lg:h-[492px]">
+            <div className="absolute left-0 right-[-20px] overflow-hidden xl:right-[-96px]">
+              <div className="flex max-w-[110%] items-start  justify-start gap-2 overflow-x-scroll  md:items-center md:overflow-auto 3xl:pr-[96px]   lg:max-w-full custom-1700:justify-center">
+                {photos.map((imgSrc, index) => (
+                  <Image
+                    src={imgSrc}
+                    className="h-[286px] w-[300px] lg:h-[492px] lg:w-[516px]"
+                    alt=""
+                    key={index}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="mb-16 mt-9 flex max-w-[110%] items-start  justify-start gap-2 overflow-x-scroll md:mt-0 md:items-center md:overflow-auto   lg:max-w-full 3xl:justify-center">
             {photos.map((imgSrc, index) => (
               <Image
                 src={imgSrc}
@@ -98,9 +115,17 @@ const Team = ({ setBurgerOpen }) => {
                 key={index}
               />
             ))}
-          </div>
+          </div> */}
         </div>
+
         <div className=" flex flex-col items-center justify-center border-t border-t-th-fade px-8 py-16 text-center md:border-0  xl:my-24">
+
+        <Image
+          src={michaelVideoLinkImg}
+          className="block md:hidden h-[80px] w-[80px] mb-[40px]"
+          alt=""
+        />
+
           <h3 className="mb-10 max-w-[890px] text-2xl font-light uppercase xl:text-4xl">
             “I think Web3 is amazing because, in this industry, everything
             doesn’t revolve merely around the product and its idea. In Web3,

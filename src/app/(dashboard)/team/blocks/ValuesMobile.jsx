@@ -38,7 +38,7 @@ export const ValuesMobile = () => {
     <section
       ref={sectionRef}
       id="benefits"
-      className="relative h-[2000px] md:hidden  md:h-[3200px]"
+      className="relative h-[2000px] hidden  md:h-[3200px]"
     >
       <div className="sticky top-0">
         <Image
@@ -61,7 +61,7 @@ export const ValuesMobile = () => {
               </button>
             </div>
           </div>
-          <motion.div
+          {/* <motion.div
             className={cn(
               "z-10 h-screen items-center justify-center bg-black md:flex md:flex-col xl:w-1/2"
             )}
@@ -95,7 +95,7 @@ export const ValuesMobile = () => {
                 </div>
               );
             })}
-          </motion.div>
+          </motion.div> */}
         </div>
         <TeamInfo />
       </div>
