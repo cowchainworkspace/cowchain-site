@@ -8,7 +8,10 @@ import Alex from "@/assets/homepage/team/newTeam/alexImg.png";
 import Hanna from "@/assets/homepage/team/newTeam/hannaImg.png";
 import Ruslan from "@/assets/homepage/team/newTeam/ruslanImg.png";
 import Olexandr from "@/assets/homepage/team/newTeam/olexandrIng.png";
+import newEmploye from "@/assets/homepage/team/newTeam/addEmployesImg.png";
+import olehMobImg from "@/assets/homepage/team/newTeam/olehMobImg.png";
 import linkedin from "@/assets/homepage/linkedin.svg";
+import { cn } from "@/lib/utils";
 // import { TeamCard } from "../../(home)/components/team-card";
 
 const teamData = [
@@ -20,7 +23,8 @@ const teamData = [
       network: "LinkedIn",
       icon: linkedin,
       url: "https://www.linkedin.com/in/onchainmichael"
-    }
+    },
+    check: false
   },
   {
     name: "Viacheslav",
@@ -30,7 +34,8 @@ const teamData = [
       network: "LinkedIn",
       icon: linkedin,
       url: "https://www.linkedin.com/in/%D0%B2%D1%8F%D1%87%D0%B5%D1%81%D0%BB%D0%B0%D0%B2-%D0%B8%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE-549988195"
-    }
+    },
+    check: ""
   },
   {
     name: "Oleh",
@@ -40,7 +45,8 @@ const teamData = [
       network: "LinkedIn",
       icon: linkedin,
       url: "https://www.linkedin.com/in/oleh-shutiak-%F0%9F%87%BA%F0%9F%87%A6-92786b229"
-    }
+    },
+    check: "oleh"
   },
 
   {
@@ -51,7 +57,8 @@ const teamData = [
       network: "LinkedIn",
       icon: linkedin,
       url: ""
-    }
+    },
+    check: ""
   },
 
   {
@@ -62,7 +69,8 @@ const teamData = [
       network: "LinkedIn",
       icon: linkedin,
       url: "https://www.linkedin.com/in/bohdan-solomakha-750a14240/"
-    }
+    },
+    check: ""
   },
 
   {
@@ -73,7 +81,8 @@ const teamData = [
       network: "LinkedIn",
       icon: linkedin,
       url: "'"
-    }
+    },
+    check: ""
   },
   {
     name: "Hanna",
@@ -83,7 +92,8 @@ const teamData = [
       network: "LinkedIn",
       icon: linkedin,
       url: ""
-    }
+    },
+    check: ""
   },
 
   {
@@ -94,7 +104,8 @@ const teamData = [
       network: "LinkedIn",
       icon: linkedin,
       url: "https://www.linkedin.com/in/ruslan-siniaiev-600340240/"
-    }
+    },
+    check: ""
   },
   {
     name: "Olexandr",
@@ -104,22 +115,70 @@ const teamData = [
       network: "LinkedIn",
       icon: linkedin,
       url: ""
-    }
+    },
+    check: ""
+  },
+  {
+    name: "+Many more",
+    role: "Business Development Representative",
+    photo: newEmploye,
+    social: {
+      network: "LinkedIn",
+      icon: linkedin,
+      url: ""
+    },
+    check: "new"
   }
 ];
 
-const TeamCard = ({ name, role, photo, social }) => {
+const TeamCard = ({ name, role, photo, social, check }) => {
   return (
-    <div className="relative flex flex-col justify-start max-w-[200px] gap-y-9 xl:max-w-[400px]">
-      <div
-        className="flex h-full min-h-[187px]  bg-cover bg-center bg-no-repeat xl:min-h-[459px] xl:w-[400px]"
-        style={{ backgroundImage: `url(${photo.src})` }}
-      />
+    <div
+      className={cn(
+        "relative flex max-w-[200px] flex-col justify-start gap-y-9 xl:max-w-[400px]",
+        {
+          "md:hidden": check === "new"
+        }
+      )}
+    >
+      {check === "oleh" ? (
+        <>
+          <div
+            className="flex h-full hidden max-h-[187px] min-h-[187px]  bg-cover bg-center bg-no-repeat md:flex xl:max-h-[459px] xl:min-h-[459px] xl:w-[400px]"
+            style={{ backgroundImage: `url(${photo.src})` }}
+          />
+
+          <div
+            className="flex h-full max-h-[187px] min-h-[187px] md:hidden  bg-cover bg-center bg-no-repeat xl:max-h-[459px] xl:min-h-[459px] xl:w-[400px]"
+            style={{ backgroundImage: `url(${olehMobImg.src})` }}
+          />
+        </>
+      ) : (
+        <div
+          className="flex h-full max-h-[187px] min-h-[187px]  bg-cover bg-center bg-no-repeat xl:max-h-[459px] xl:min-h-[459px] xl:w-[400px]"
+          style={{ backgroundImage: `url(${photo.src})` }}
+        />
+      )}
       <div>
-        <span className="font-roc text-sm font-medium uppercase text-white">
+        <span
+          className="font-roc text-sm font-medium uppercase text-white"
+          style={{
+            opacity: check === "new" ? 0.1 : 1,
+            textAlign: check === "new" ? "center" : "left",
+            display: "block",
+            width: "100%"
+          }}
+        >
           {name}
         </span>
-        <p className="caption  uppercase">{role}</p>
+        <p
+          className="caption  uppercase"
+          style={{
+            opacity: check === "new" && 0
+          }}
+        >
+          {role}
+        </p>
       </div>
     </div>
   );
@@ -134,7 +193,7 @@ const TeamGallery = () => {
       <h3 className="mb-20 uppercase">Meet the team</h3>
       <div className="grid grid-cols-2 gap-x-2 gap-y-6 bg-black md:grid-cols-3 lg:col-span-3 xl:gap-x-5 xl:gap-y-20">
         {teamData.map((member, index) => (
-          <TeamCard key={index} {...member} />
+          <TeamCard key={index} {...member} check={member.check} />
           // <TeamCard key={index} index={index} {...member} />
         ))}
       </div>

@@ -11,14 +11,15 @@ import arrow from "@/assets/arrow_right.svg";
 // import photo8 from "@/assets/homepage/team/saminu.jpg";
 // import photo9 from "@/assets/homepage/team/alexandr.jpg";
 
-import MichaelImg from "@/assets/team/executives/MichaelImg.png";
+import MichaelImg from "@/assets/homepage/team/newTeam/michaelImg.png";
 import OlehImg from "@/assets/team/executives/OlehImg.png";
 import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
 
 import linkedin from "@/assets/homepage/linkedin.svg";
 // import bg from "@/assets/bg/team_bg.png";
-import { TeamCard } from "../components/team-card";
+// import { TeamCard } from "../components/team-card";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const teamData = [
   {
@@ -52,6 +53,59 @@ const teamData = [
     }
   }
 ];
+
+const TeamCard = ({ name, role, photo, social, check }) => {
+  return (
+    <div
+      className={cn(
+        "relative flex max-w-[200px] flex-col justify-start gap-y-9 xl:max-w-[400px]",
+        {
+          "md:hidden": check === "new"
+        }
+      )}
+    >
+      {check === "oleh" ? (
+        <>
+          <div
+            className="flex h-full hidden max-h-[187px] min-h-[187px]  bg-cover bg-center bg-no-repeat md:flex xl:max-h-[459px] xl:min-h-[459px] xl:w-[400px]"
+            style={{ backgroundImage: `url(${photo.src})` }}
+          />
+
+          <div
+            className="flex h-full max-h-[187px] min-h-[187px] md:hidden  bg-cover bg-center bg-no-repeat xl:max-h-[459px] xl:min-h-[459px] xl:w-[400px]"
+            style={{ backgroundImage: `url(${olehMobImg.src})` }}
+          />
+        </>
+      ) : (
+        <div
+          className="flex h-full max-h-[187px] min-h-[187px]  bg-cover bg-center bg-no-repeat xl:max-h-[459px] xl:min-h-[459px] xl:w-[400px]"
+          style={{ backgroundImage: `url(${photo.src})` }}
+        />
+      )}
+      <div>
+        <span
+          className="font-roc text-sm font-medium uppercase text-white"
+          style={{
+            opacity: check === "new" ? 0.1 : 1,
+            textAlign: check === "new" ? "center" : "left",
+            display: "block",
+            width: "100%"
+          }}
+        >
+          {name}
+        </span>
+        <p
+          className="caption  uppercase"
+          style={{
+            opacity: check === "new" && 0
+          }}
+        >
+          {role}
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export default function Team() {
   return (
@@ -112,7 +166,7 @@ export default function Team() {
           </div>
         </div>
 
-        <div className="team_wrapper grid auto-cols-fr grid-cols-1 gap-[20px] md:gap-6 bg-black px-[20px] sm:grid-cols-2 md:grid-cols-3 lg:col-span-5 min-[2000px]:col-span-6">
+        <div className="team_wrapper mx-auto grid auto-cols-fr grid-cols-1 gap-[24px] md:gap-6 bg-black px-[20px] sm:grid-cols-2 md:grid-cols-3 lg:col-span-5 min-[2000px]:col-span-6">
           {teamData.map((member, index) => (
             <TeamCard key={index} index={index} {...member} />
           ))}

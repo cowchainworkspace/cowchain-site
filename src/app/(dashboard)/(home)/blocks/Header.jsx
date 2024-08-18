@@ -9,12 +9,12 @@ const HeaderContent = dynamic(() => import("./HeaderContent"));
 const Header = () => {
   return (
     <section
-      className="fullheight -mt-40 overflow-hidden border-b border-b-th-fade md:-mt-0"
+      className=" -mt-40 overflow-hidden border-b border-b-th-fade md:-mt-0"
       id="header"
     >
-      <div className="video-wrapper min-h-full">
-      <Video />
-        <div className="px-default relative flex min-h-full w-full flex-col pb-[41px]">
+      <div className="video-wrapper h-[861px]">
+        <Video />
+        <div className="px-default relative flex min-h-[861px] w-full flex-col pb-[41px]">
           <Image
             srcSet={`${bg_top} 360w, ${bg_top} 480w, ${bg_top} 720w, ${bg_top_lg} 1920w`}
             sizes="(max-width: 640px) 100vw, 100vw"

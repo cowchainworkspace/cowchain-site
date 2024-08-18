@@ -10,7 +10,7 @@ export default function HeaderContent() {
       <h1 className="hidden relative mt-8 cursor-default uppercase md:mt-16 md:block lg:mt-24">
         Accelerate your <br /> Web3 odyssey <br /> with cowchain
       </h1>
-      <h1 className="block text-[38px] leading-[44px] font-medium relative mt-8 cursor-default uppercase md:mt-16 lg:mt-24 md:hidden">
+      <h1 className="block text-[38px] leading-[44px] font-medium relative  mt-8 cursor-default uppercase md:mt-16 lg:mt-24 md:hidden">
         Accelerate <br /> your Web3 <br /> odyssey <br /> with cowchain
       </h1>
       <div className="mt-auto grid grid-cols-1 md:grid-cols-2">

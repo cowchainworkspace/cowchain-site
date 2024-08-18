@@ -11,12 +11,12 @@ import React, {
 // import triend from "@/assets/cases/triendImg.png";
 // import bridge from "@/assets/cases/retrobridgeImg.png";
 
-import m2e from "@/assets/cases/newCases/crossChainTransferBridgeImg.png"
-import bridge from "@/assets/cases/newCases/CryptoExchangeImg.png"
-import wallet from "@/assets/cases/newCases/cryptoWalletApp2Img.png"
-import finance from "@/assets/cases/newCases/cryptoWalletAppImg.png"
-import payment from "@/assets/cases/newCases/HotelBusinessImg.png"
-import hotel from "@/assets/cases/newCases/m2ePlatformImg.png"
+import bridge from "@/assets/cases/newCases/crossChainTransferBridgeImg.png"
+import payment from "@/assets/cases/newCases/CryptoExchangeImg.png"
+import finance from "@/assets/cases/newCases/cryptoWalletApp2Img.png"
+import wallet from "@/assets/cases/newCases/cryptoWalletAppImg.png"
+import hotel from "@/assets/cases/newCases/HotelBusinessImg.png"
+import m2e from "@/assets/cases/newCases/m2ePlatformImg.png"
 
 import { useScroll } from "framer-motion";
 
@@ -116,7 +116,7 @@ const casesData = [
     link: "/cases/finance",
     description:
       "DEX platform featuring an innovative fee structure, with token, and admin panel",
-    photo: finance,
+    photo: payment,
     tags: ["App Development", "SEO"]
   },
   {
@@ -124,7 +124,7 @@ const casesData = [
     link: "/cases/payment",
     description:
       "First BTC/USDT crypto exchange in Canada",
-    photo: payment,
+    photo: finance,
     tags: ["App Development", "Website Development"]
   },
   {
@@ -166,6 +166,7 @@ const Cases = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevClick = () => {
+    console.log(12321341)
     if (swiperRef.current && currentIndex > 0) {
       swiperRef.current.slideTo(currentIndex - 1);
       setCurrentIndex(currentIndex - 1);
@@ -173,7 +174,8 @@ const Cases = () => {
   };
 
   const handleNextClick = () => {
-    if (swiperRef.current && currentIndex < projectsData.length - 1) {
+    console.log(12321341)
+    if (swiperRef.current && currentIndex < casesData.length - 1) {
       swiperRef.current.slideTo(currentIndex + 1);
       setCurrentIndex(currentIndex + 1);
     }
@@ -182,7 +184,7 @@ const Cases = () => {
   return (
     <section
       ref={containerRef}
-      className="relative z-10 h-[546px] border-b border-b-th-fade md:h-[698px]"
+      className="relative hidden z-10 h-[546px] border-b border-b-th-fade md:block md:h-[698px]"
     >
       <Swiper
         className="h-[546px] md:h-[698px]"
@@ -220,7 +222,8 @@ const Cases = () => {
           <Image src={sliderLeftArrow} alt="Next" className="h-8 w-8" />
         </div>
       )}
-      {currentIndex < projectsData.length - 2 && (
+      
+      {currentIndex < casesData.length - 2 && (
         <div
           style={{
             background:

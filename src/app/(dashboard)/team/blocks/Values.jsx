@@ -84,7 +84,7 @@ export const Values = () => {
       <section
         ref={sectionRef}
         id="benefits"
-        className="relative  md:block"
+        className="relative z-100000  md:block"
       >
         <div className="">
           <Image
