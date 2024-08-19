@@ -88,7 +88,7 @@ export const Values = () => {
       >
         <div className="">
           <Image
-            className="absolute -bottom-44 left-0 hidden h-[1625px] w-[700px] xl:block"
+            className="absolute -bottom-[400px] left-0 hidden h-[1625px] w-[700px] xl:block"
             src={bg}
             alt=""
           ></Image>

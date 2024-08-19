@@ -32,7 +32,7 @@ const Team = ({ setBurgerOpen }) => {
 
         <div className="mx-5 mt-14 flex flex-col gap-4  overflow-visible xl:mx-24 xl:mt-28">
           <Tag
-            className={"max-w-[166px] xl:max-w-[200px]"}
+            className={"max-w-[166px] mb-[16px] xl:max-w-[200px]"}
             title={"founded and run by"}
           />
           <div className="flex flex-col justify-between xl:flex-row">
@@ -57,7 +57,7 @@ const Team = ({ setBurgerOpen }) => {
                 Web3 devotees, Mykhailo’s 4th time was a charm. That’s how
                 Cowchain was created.
               </p>
-              <div className="  mt-6 flex items-center justify-start    gap-x-4 xl:mt-4 ">
+              <div className=" flex items-center justify-start  mt-[16px]  gap-x-4 xl:mt-4 ">
                 <a
                   href="https://www.linkedin.com/company/cowchain/"
                   rel="nofollow noreferrer"
@@ -91,7 +91,7 @@ const Team = ({ setBurgerOpen }) => {
             </div>
           </div>
 
-          <div className="relative mb-16 mt-9 md:mt-0  h-[286px] overflow-visible lg:h-[492px]">
+          <div className="relative mb-16 mt-[55px] md:mt-[94px] h-[286px] overflow-visible lg:h-[492px]">
             <div className="absolute left-0 right-[-20px] overflow-hidden xl:right-[-96px]">
               <div className="flex max-w-[110%] items-start  justify-start gap-2 overflow-x-scroll  md:items-center md:overflow-auto 3xl:pr-[96px]   lg:max-w-full custom-1700:justify-center">
                 {photos.map((imgSrc, index) => (
@@ -118,7 +118,7 @@ const Team = ({ setBurgerOpen }) => {
           </div> */}
         </div>
 
-        <div className=" flex flex-col items-center justify-center border-t border-t-th-fade px-8 py-16 text-center md:border-0  xl:my-24">
+        <div className=" flex flex-col items-center justify-center border-t border-t-th-fade px-8 py-16 text-center md:border-0  xl:mt-24">
 
         <Image
           src={michaelVideoLinkImg}

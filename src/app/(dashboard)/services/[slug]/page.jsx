@@ -58,7 +58,7 @@ const Services = ({ setBurgerOpen }) => {
       <Team />
       <div className="mx-5 mt-14 flex flex-col gap-4  xl:mx-24 xl:mt-28 ">
         <Tag
-          className={"max-w-[166px] xl:max-w-[200px]"}
+          className={"max-w-[166px] mb-[16px] xl:max-w-[200px]"}
           title={"founded and run by"}
         />
         <div className="flex flex-col justify-between xl:flex-row">
@@ -67,8 +67,8 @@ const Services = ({ setBurgerOpen }) => {
               Mykhailo Adzhoiev
             </h3>
           </div>
-          <div className="max-w-[497px] text-secondary">
-            <p className="mb-5 text-secondary">
+          <div className="max-w-[497px] mt-[16px] text-secondary">
+            <p className="mb-5  text-secondary">
               Mykhailo Adzhoiev is a blockchain entrepreneur and crypto
               enthusiast with 9+ years of IT industry experience as a senior
               developer, team leader, and CTO. After years of working in
