@@ -13,7 +13,7 @@ import CasesMobile from './CasesMobile.jsx'
 export default function HomeContent() {
   return (
     <>
-      <Benefits />
+      {/* <Benefits /> */}
       {/* <BenefitsMobiles /> */}
       <Stack title={"Our\nExpertise"} />
       <Clients />

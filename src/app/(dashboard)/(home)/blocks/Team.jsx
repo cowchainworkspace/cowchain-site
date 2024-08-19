@@ -17,7 +17,7 @@ import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
 
 import linkedin from "@/assets/homepage/linkedin.svg";
 // import bg from "@/assets/bg/team_bg.png";
-// import { TeamCard } from "../components/team-card";
+import { TeamCard } from "../components/team-card";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -54,58 +54,51 @@ const teamData = [
   }
 ];
 
-const TeamCard = ({ name, role, photo, social, check }) => {
-  return (
-    <div
-      className={cn(
-        "relative flex max-w-[200px] flex-col justify-start gap-y-9 xl:max-w-[400px]",
-        {
-          "md:hidden": check === "new"
-        }
-      )}
-    >
-      {check === "oleh" ? (
-        <>
-          <div
-            className="flex h-full hidden max-h-[187px] min-h-[187px]  bg-cover bg-center bg-no-repeat md:flex xl:max-h-[459px] xl:min-h-[459px] xl:w-[400px]"
-            style={{ backgroundImage: `url(${photo.src})` }}
-          />
+// const TeamCard = ({ name, role, photo, social, check }) => {
+//   return (
+//     <div
+//       className={cn(
+//         "relative flex flex-col justify-start gap-y-9 xl:max-w-[400px]",
+//         {
+//           "md:hidden": check === "new"
+//         }
+//       )}
+//     >
+      
+//       <div
+//         className="flex h-full max-h-[187px] min-h-[187px]  
+//         bg-cover bg-center bg-no-repeat 
+//         md:max-h-[200px] md:min-h-[200px] md:w-[200px]
+//         lg:max-h-[300px] md:min-h-[300px] lg:w-[300px] 
+//         xl:max-h-[459px] xl:min-h-[459px] xl:w-[400px] 
+//         sm: lg:"
+//         style={{ backgroundImage: `url(${photo.src})` }}
+//       />
 
-          <div
-            className="flex h-full max-h-[187px] min-h-[187px] md:hidden  bg-cover bg-center bg-no-repeat xl:max-h-[459px] xl:min-h-[459px] xl:w-[400px]"
-            style={{ backgroundImage: `url(${olehMobImg.src})` }}
-          />
-        </>
-      ) : (
-        <div
-          className="flex h-full max-h-[187px] min-h-[187px]  bg-cover bg-center bg-no-repeat xl:max-h-[459px] xl:min-h-[459px] xl:w-[400px]"
-          style={{ backgroundImage: `url(${photo.src})` }}
-        />
-      )}
-      <div>
-        <span
-          className="font-roc text-sm font-medium uppercase text-white"
-          style={{
-            opacity: check === "new" ? 0.1 : 1,
-            textAlign: check === "new" ? "center" : "left",
-            display: "block",
-            width: "100%"
-          }}
-        >
-          {name}
-        </span>
-        <p
-          className="caption  uppercase"
-          style={{
-            opacity: check === "new" && 0
-          }}
-        >
-          {role}
-        </p>
-      </div>
-    </div>
-  );
-};
+//       <div>
+//         <span
+//           className="font-roc text-sm font-medium uppercase text-white"
+//           style={{
+//             opacity: check === "new" ? 0.1 : 1,
+//             textAlign: check === "new" ? "center" : "left",
+//             display: "block",
+//             width: "100%"
+//           }}
+//         >
+//           {name}
+//         </span>
+//         <p
+//           className="caption  uppercase"
+//           style={{
+//             opacity: check === "new" && 0
+//           }}
+//         >
+//           {role}
+//         </p>
+//       </div>
+//     </div>
+//   );
+// };
 
 export default function Team() {
   return (
@@ -136,7 +129,7 @@ export default function Team() {
 
     <section
       id="team"
-      className="relative flex items-center justify-center border-b border-b-th-fade py-[60px] text-center md:pt-[126px] md:pb-[84px] lg:text-left"
+      className="relative flex items-center justify-center border-b border-b-th-fade py-[60px] text-center md:pb-[84px] md:pt-[126px] lg:text-left"
     >
       <div className="relative  grid w-full grid-cols-1 lg:grid-cols-5 min-[2000px]:grid-cols-6">
         <div className="px-default z-10 flex flex-col gap-y-6 pb-[84px] md:pb-[60px] lg:col-span-5 lg:flex-row min-[2000px]:col-span-6">
@@ -166,11 +159,13 @@ export default function Team() {
           </div>
         </div>
 
-        <div className="team_wrapper mx-auto grid auto-cols-fr grid-cols-1 gap-[24px] md:gap-6 bg-black px-[20px] sm:grid-cols-2 md:grid-cols-3 lg:col-span-5 min-[2000px]:col-span-6">
+        <div className="team_wrapper mx-auto grid auto-cols-fr grid-cols-1 gap-[24px] bg-black px-[20px] md:grid-cols-2 xl:grid-cols-3  md:gap-6 lg:col-span-5 min-[2000px]:col-span-6
+        ">
           {teamData.map((member, index) => (
             <TeamCard key={index} index={index} {...member} />
           ))}
         </div>
+        
       </div>
     </section>
   );

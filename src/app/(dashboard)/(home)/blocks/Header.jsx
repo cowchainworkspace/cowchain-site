@@ -14,7 +14,7 @@ const Header = () => {
     >
       <div className="video-wrapper h-[861px]">
         <Video />
-        <div className="px-default relative flex min-h-[861px] w-full flex-col pb-[41px]">
+        <div className="px-[44px] relative flex min-h-[861px] w-full flex-col pb-[51px]">
           <Image
             srcSet={`${bg_top} 360w, ${bg_top} 480w, ${bg_top} 720w, ${bg_top_lg} 1920w`}
             sizes="(max-width: 640px) 100vw, 100vw"

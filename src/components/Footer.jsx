@@ -152,7 +152,7 @@ export default function Footer() {
               </p>
             </div>
             {/* <FooterForm /> */}
-            <div className="flex flex-wrap items-center gap-x-2 md:mx-0 md:justify-start">
+            <div className="flex flex-wrap items-center gap-y-2 gap-x-2 md:mx-0 md:justify-start">
               <a
                 href="https://www.linkedin.com/company/cowchain/"
                 rel="nofollow noreferrer"

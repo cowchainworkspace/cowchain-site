@@ -11,7 +11,7 @@ export default function Clients() {
     <section className="relative">
       <Image
         alt=""
-        className="absolute -top-[38%] right-0 h-screen md:-top-[45%] md:h-min  lg:-top-[80%]"
+        className="absolute hidden -top-[38%] right-0 h-screen md:-top-[45%] md:h-min md:block  lg:-top-[80%]"
         src={bg_lg}
       />
 

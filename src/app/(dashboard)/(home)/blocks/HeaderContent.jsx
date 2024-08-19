@@ -7,7 +7,7 @@ import playIcon from "@/assets/icons/playIcon.svg";
 export default function HeaderContent() {
   return (
     <>
-      <h1 className="hidden relative mt-8 cursor-default uppercase md:mt-16 md:block lg:mt-24">
+      <h1 className="hidden relative mt-8 cursor-default md:ml-[55px]  uppercase md:mt-[103px] md:block lg:mt-24">
         Accelerate your <br /> Web3 odyssey <br /> with cowchain
       </h1>
       <h1 className="block text-[38px] leading-[44px] font-medium relative  mt-8 cursor-default uppercase md:mt-16 lg:mt-24 md:hidden">
@@ -15,6 +15,7 @@ export default function HeaderContent() {
       </h1>
       <div className="mt-auto grid grid-cols-1 md:grid-cols-2">
         <div className="relative flex items-center md:gap-x-1">
+
           {/* <a
             href="https://www.upwork.com/ag/cowchain/"
             rel="nofollow noreferrer"
@@ -29,6 +30,7 @@ export default function HeaderContent() {
           >
             <Image className="w-11 md:w-[70px]" src={clutch} alt=""></Image>
           </a> */}
+
           <h2 className="hidden text-[32px] leading-[29px] md:block">
             Driving Crypto Evolution: <br /> From Vision to Reality, <br />{" "}
             Every Step.

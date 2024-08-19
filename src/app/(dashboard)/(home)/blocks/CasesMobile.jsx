@@ -48,31 +48,6 @@ const casesData = [
       "Crypto wallet app for iOS and Android",
     photo: wallet,
     tags: ["App Development", "Website Development"]
-  },
-    {
-    title: "decentralized crypto exchange",
-    link: "/cases/finance",
-    description:
-      "DEX platform featuring an innovative fee structure, with token, and admin panel",
-    photo: payment,
-    tags: ["App Development", "SEO"]
-  },
-  {
-    title: "Exchange wallet app",
-    link: "/cases/payment",
-    description:
-      "First BTC/USDT crypto exchange in Canada",
-    photo: finance,
-    tags: ["App Development", "Website Development"]
-  },
-  {
-    title: "Integration blockchain into hotel business",
-    link: "/cases/hotel",
-
-    description:
-      "Web browser AI crypto plugin and Dapp for travel and hotels",
-    photo: hotel,
-    tags: ["App Development", "Website Development"]
   }
 ];
 
@@ -91,7 +66,7 @@ const CasesMobile = () => {
   return (
     <section ref={containerRef} className="block md:hidden">
       {casesData &&
-        casesData.splice(0, 3).map((project, index) => (
+        casesData.map((project, index) => (
           <div key={index} className="">
             <ScrollProject key={index} index={index} {...project} mobile={true} />
           </div>

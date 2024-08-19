@@ -19,9 +19,11 @@ export const ScrollProject = ({
     <div
       id={"project-" + id}
       className={cn(
-        "project-card group relative h-[546px]  md:h-[698px]", {
+        "project-card group relative", {
           'border  border-th-fade': !mobile,
           'border-t  border-t-th-fade border-b  border-b-th-fade': mobile,
+          "h-[546px]  md:h-[698px]": !mobile,
+          "h-[419px]  md:h-[419px]": mobile,
         }
       )}
       // style={{
@@ -31,7 +33,13 @@ export const ScrollProject = ({
     >
       <Link
         href={link}
-        className="relative flex h-[546px] w-full flex-col items-center gap-[32px] p-[22px] py-[40px] md:h-[698px] md:py-[72px]"
+        className={cn("relative flex w-full flex-col items-center  md:h-[698px] md:py-[72px]", {
+          ' h-[546px]': !mobile,
+          "h-[419px]  md:h-[419px]": mobile,
+          'gap-[32px] p-[22px] py-[40px]': !mobile,
+          'gap-[20px] p-[20px] py-[20px]': mobile
+
+        })}
       >
         {/* <div className="btn-contact ml-auto max-h-24 max-w-[96px] opacity-0 md:max-h-none md:max-w-none md:opacity-100">
           VIEW PROJECT
@@ -40,7 +48,12 @@ export const ScrollProject = ({
         <div className="flex flex-col items-center">
           <div className="h-[100%] w-auto max-h-[348px] w-auto md:max-h-[380px]">
             <Image
-              className="h-[100%] max-h-[348px] w-auto md:max-h-[380px]"
+              className={cn("h-[100%] ",
+                {
+                  'max-h-[348px] w-auto md:max-h-[380px]': !mobile,
+                  'max-h-[240px] w-auto md:max-h-[250px]': mobile,
+                }
+              )}
               src={photo.src}
               width={503}
               height={380}
