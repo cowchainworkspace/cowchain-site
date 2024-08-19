@@ -59,7 +59,7 @@ export default function Stack({
   return (
     <section
       id="expertise"
-      className="relative flex justify-center border-b border-b-th-fade px-[20px] py-[60px] md:pb-[132px] md:pl-[84px] md:pr-[64px] md:pt-[108px]"
+      className="relative flex justify-center border-b border-b-th-fade border-t border-t-th-fade px-[20px] py-[60px] md:pb-[132px] md:pl-[84px] md:pr-[64px] md:pt-[108px]"
     >
       <div className="grid grid-cols-1 gap-y-[42px] md:grid-rows-2 md:gap-x-[100px] lg:grid-cols-3">
         <div className="col-span-1 row-span-1 flex items-center justify-center md:justify-start">

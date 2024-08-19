@@ -159,7 +159,7 @@ export default function Team() {
           </div>
         </div>
 
-        <div className="team_wrapper mx-auto grid auto-cols-fr grid-cols-1 gap-[24px] bg-black px-[20px] md:grid-cols-2 xl:grid-cols-3  md:gap-6 lg:col-span-5 min-[2000px]:col-span-6
+        <div className="team_wrapper mx-auto grid auto-cols-fr grid-cols-1 md:gap-[24px] bg-black px-[20px] md:grid-cols-2 xl:grid-cols-3  md:gap-6 lg:col-span-5 min-[2000px]:col-span-6
         ">
           {teamData.map((member, index) => (
             <TeamCard key={index} index={index} {...member} />

@@ -9,7 +9,7 @@ const HeaderContent = dynamic(() => import("./HeaderContent"));
 const Header = () => {
   return (
     <section
-      className="fullheight -mt-40 overflow-hidden border-b border-b-th-fade md:-mt-0"
+      className="fullheight -mt-40 md:h-[861px] overflow-hidden border-b border-b-th-fade md:-mt-0"
       id="header"
     >
       <div className="video-wrapper min-h-full md:h-[861px]">

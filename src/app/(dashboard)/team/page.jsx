@@ -32,7 +32,7 @@ const Team = ({ setBurgerOpen }) => {
 
         <div className="mx-5 mt-14 flex flex-col gap-4  overflow-visible xl:mx-24 xl:mt-28">
           <Tag
-            className={"max-w-[166px] mb-[16px] xl:max-w-[200px]"}
+            className={"max-w-[166px] mb-[16px] text-center sm:max-w-[200px]"}
             title={"founded and run by"}
           />
           <div className="flex flex-col justify-between xl:flex-row">
