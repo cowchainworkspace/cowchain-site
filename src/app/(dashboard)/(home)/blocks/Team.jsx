@@ -24,7 +24,7 @@ import { cn } from "@/lib/utils";
 const teamData = [
   {
     name: "Michael",
-    role: "Founder & CEO",
+    role: "CEO & Founder",
     photo: MichaelImg,
     social: {
       network: "LinkedIn",
@@ -44,7 +44,7 @@ const teamData = [
   },
   {
     name: "Oleh",
-    role: "Development lead",
+    role: "Head of Development",
     photo: OlehImg,
     social: {
       network: "LinkedIn",
@@ -133,7 +133,7 @@ export default function Team() {
     >
       <div className="relative  grid w-full grid-cols-1 lg:grid-cols-5 min-[2000px]:grid-cols-6">
         <div className="px-default z-10 flex flex-col gap-y-6 pb-[84px] md:pb-[60px] lg:col-span-5 lg:flex-row min-[2000px]:col-span-6">
-          <h2 className="text-4xl uppercase text-white md:text-[60px] lg:flex-1 lg:text-left">
+          <h2 className="text-4xl uppercase text-white md:text-[60px] lg:flex-1 text-left">
             <span
               style={{
                 background:
@@ -147,7 +147,7 @@ export default function Team() {
             </span>
             PEOPLE TEAM
           </h2>
-          <div className="lg:flex-1 lg:text-right">
+          <div className="lg:flex-1 text-left lg:text-right">
             <a href="/team" className="inline-block">
               <div className="flex items-center justify-center gap-x-2 lg:justify-end">
                 <p className="header uppercase text-white underline">
