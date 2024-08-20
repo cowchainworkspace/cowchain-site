@@ -14,7 +14,7 @@ export default function HeaderContent() {
       <h1 className="relative mt-8 block cursor-default text-[38px]  font-medium uppercase leading-[44px] md:mt-16 md:hidden lg:mt-24">
         Accelerate <br /> your Web3 <br /> odyssey <br /> with cowchain
       </h1>
-      
+
       <div className="mt-auto grid grid-cols-1 md:grid-cols-2">
         <div className="relative flex items-center md:gap-x-1">
           {/* <a
@@ -39,7 +39,13 @@ export default function HeaderContent() {
         </div>
         <div className="flex cursor-default flex-col gap-y-4 md:items-end">
           <div className="">
+
+          <h2 className="block md:hidden mb-[24px] text-left md:text-right md:mb-0 md:text-[24px]">
+              Crypto Services and Technologies
+            </h2>
+
             <div className="flex gap-[24px] justify-left md:items-center md:justify-end">
+              
 
               <div className="flex gap-[12px]">
                 <a className="" href="">
@@ -69,7 +75,7 @@ export default function HeaderContent() {
               </div>
             </div>
 
-            <h2 className="mt-[24px] text-left md:text-right md:mb-0 md:text-[24px]">
+            <h2 className="hidden md:block mt-[24px] text-left md:text-right md:mb-0 md:text-[24px]">
               Crypto Services and Technologies
             </h2>
           </div>
