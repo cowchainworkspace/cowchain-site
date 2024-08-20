@@ -118,7 +118,7 @@ const Team = ({ setBurgerOpen }) => {
           </div> */}
         </div>
 
-        <div className=" flex flex-col items-center justify-center border-t border-t-th-fade px-8 py-16 text-center md:border-0  xl:mt-24">
+        <div className=" flex flex-col items-center justify-center px-8 md:py-16 text-center md:border-0  xl:mt-24">
 
         <Image
           src={michaelVideoLinkImg}
@@ -133,7 +133,7 @@ const Team = ({ setBurgerOpen }) => {
             and manage to find like-minded people who also believe in it, then
             you’re almost destined for success.”
           </h3>
-          <span className="  text-center text-white">
+          <span className="mb-[60px] md:mb-0 text-center text-white">
             Mykhailo Adzhoiev, CEO of Cowchain
           </span>
         </div>

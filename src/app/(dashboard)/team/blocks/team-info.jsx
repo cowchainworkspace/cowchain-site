@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import team from "@/assets/team/team.png";
+import teamMobile from "@/assets/team/teamMobileImg.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ua from "@/assets/ua.png";
 import Image from "next/image";
@@ -34,7 +35,8 @@ export default function TeamInfo() {
           team photo
         </h1>
         <motion.div ref={ref} style={{ marginTop }}>
-          <Image className="w-full max-w-[915px]" src={team} alt="" />
+          <Image className="hidden md:block w-full max-w-[915px]" src={team} alt="" />
+          <Image className="block md:hidden w-full max-w-[915px]" src={teamMobile} alt="" />
         </motion.div>
       </div>
     </motion.div>

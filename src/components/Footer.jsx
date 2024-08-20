@@ -220,7 +220,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <div className="py-heading px-default border-b border-b-th-fade lg:hidden">
+          <div className="py-[60px] px-default border-b border-b-th-fade lg:hidden">
             <Faq data={faqRows} styles={faqStyles} config={faqConfig} />
           </div>
 

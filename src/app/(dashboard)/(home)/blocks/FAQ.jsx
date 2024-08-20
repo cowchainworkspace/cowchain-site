@@ -49,6 +49,8 @@ export default function FAQ() {
     setScreenWidth(window.innerWidth);
   }, []);
 
+  console.log(screenWidth)
+
   return (
     <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-5">
@@ -64,7 +66,7 @@ export default function FAQ() {
                 {({ isExpanded }) => (
                   <div
                     className={cn(
-                      "relative bg-cover px-5 py-8 xl:px-[60px] xl:py-16",
+                      "relative bg-cover px-[20px] py-[24px] xl:px-[60px] xl:py-16",
                       {
                         "bg-[url('/assets/faq-gradient.png')]": isExpanded
                       }
@@ -73,7 +75,7 @@ export default function FAQ() {
                   >
                     <AccordionButton className={cn("relative")}>
                       <div className="mr-auto w-full max-w-3xl text-left ">
-                        <span className="max-w-2xl text-left font-roc !text-base font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
+                        <span className="max-w-2xl text-left font-roc !text-[14px] font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
                           {faq.title}
                         </span>
                       </div>

@@ -23,7 +23,7 @@ export const ScrollProject = ({
           'border  border-th-fade': !mobile,
           'border-t  border-t-th-fade border-b  border-b-th-fade': mobile,
           "h-[546px]  md:h-[698px]": !mobile,
-          "h-[419px]  md:h-[419px]": mobile,
+          "min-h-[419px]  md:h-[419px]": mobile,
         }
       )}
       // style={{
@@ -51,7 +51,7 @@ export const ScrollProject = ({
               className={cn("h-[100%] ",
                 {
                   'max-h-[348px] w-auto md:max-h-[380px]': !mobile,
-                  'max-h-[240px] w-auto md:max-h-[250px]': mobile,
+                  'max-h-[250px] w-auto md:max-h-[250px]': mobile,
                 }
               )}
               src={photo.src}
