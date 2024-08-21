@@ -28,7 +28,7 @@ const TeamContact = ({ className }) => {
           </h3>
           <span className="mb-10 max-w-[303px] text-sm text-secondary md:max-w-[570px]">
             We often look for new talents, so if you are interested in working
-            in Cowchain , send your CV and our HRs will get in touch if you are
+            in Cowchain , send your CV and we will get in touch if you are
             a great fit.
           </span>
           <button

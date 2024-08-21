@@ -40,7 +40,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
     "Other"
   ];
 
-  const radioBtns = ["$2-3K", "$5-10K", "$10K <", "Other"];
+  const radioBtns = ["$10-15K", "$25-35K", "$50K +", "Other"];
   return (
     <Popup
       open={modalOpen}
@@ -61,7 +61,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <p className="text-center font-roc text-4xl font-bold text-white md:text-5xl lg:mt-6 lg:text-left">
-            let`s work <br></br> together
+            Let`s work <br></br> together
           </p>
           <form
             onSubmit={handleSubmit(sendFormData)}

@@ -20,8 +20,7 @@ const faqData = [
   {
     title:
       "Which blockchain platforms and technologies are you experienced with?",
-    content: `Our team is skilled in all the things you need. This is the core principle of Cowchain. Any technology that appears on the market and is just gaining popularity will be analyzed in detail by us immediately. 
-You can find a detailed list on the page “.....”.`
+    content: `Our team is skilled in all the things you need. This is the core principle of Cowchain. Any technology that appears on the market and is just gaining popularity will be analyzed in detail by us immediately.`
   },
   {
     title:

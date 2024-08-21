@@ -2,12 +2,12 @@
 
 import React, { useRef, useState, useEffect } from "react";
 
-import bridge from "@/assets/cases/newCases/crossChainTransferBridgeImg.png"
+import bridge from "@/assets/cases/newCases/bridgeMobileImg.png"
 import payment from "@/assets/cases/newCases/CryptoExchangeImg.png"
 import finance from "@/assets/cases/newCases/cryptoWalletApp2Img.png"
 import wallet from "@/assets/cases/newCases/cryptoWalletAppImg.png"
 import hotel from "@/assets/cases/newCases/HotelBusinessImg.png"
-import m2e from "@/assets/cases/newCases/m2ePlatformImg.png"
+import m2e from "@/assets/cases/newCases/m2eMobileImg.png"
 
 import { useScroll } from "framer-motion";
 

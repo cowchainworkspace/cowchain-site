@@ -32,7 +32,7 @@ const Team = ({ setBurgerOpen }) => {
 
         <div className="mx-5 mt-14 flex flex-col gap-4  overflow-visible xl:mx-24 xl:mt-28">
           <Tag
-            className={"max-w-[166px] mb-[16px] text-center sm:max-w-[200px]"}
+            className={"mb-[16px] max-w-[166px] text-center sm:max-w-[200px]"}
             title={"founded and run by"}
           />
           <div className="flex flex-col justify-between xl:flex-row">
@@ -57,7 +57,7 @@ const Team = ({ setBurgerOpen }) => {
                 Web3 devotees, Mykhailo’s 4th time was a charm. That’s how
                 Cowchain was created.
               </p>
-              <div className=" flex items-center justify-start  mt-[16px]  gap-x-4 xl:mt-4 ">
+              <div className=" mt-[16px] flex items-center  justify-start  gap-x-4 xl:mt-4 ">
                 <a
                   href="https://www.linkedin.com/company/cowchain/"
                   rel="nofollow noreferrer"
@@ -91,13 +91,13 @@ const Team = ({ setBurgerOpen }) => {
             </div>
           </div>
 
-          <div className="relative mb-16 mt-[55px] md:mt-[94px] h-[286px] overflow-visible lg:h-[492px]">
-            <div className="absolute left-0 right-[-20px] overflow-hidden xl:right-[-96px]">
-              <div className="flex max-w-[110%] items-start  justify-start gap-2 overflow-x-scroll  md:items-center md:overflow-auto 3xl:pr-[96px]   lg:max-w-full custom-1700:justify-center">
+          <div className="relative mb-16 mt-[55px] h-[286px] overflow-visible md:mt-[94px] lg:h-[492px]">
+            <div className="absolute left-0 right-[-20px] overflow-hidden md:right-0">
+              <div className="flex max-w-[100%] items-start justify-start gap-2 overflow-x-scroll md:items-center md:justify-center md:overflow-auto md:overflow-hidden lg:max-w-full">
                 {photos.map((imgSrc, index) => (
                   <Image
                     src={imgSrc}
-                    className="h-[286px] w-[300px] lg:h-[492px] lg:w-[516px]"
+                    className="h-auto w-[90%] max-w-[590px] md:w-[100%] lg:w-[100%]"
                     alt=""
                     key={index}
                   />
@@ -118,13 +118,12 @@ const Team = ({ setBurgerOpen }) => {
           </div> */}
         </div>
 
-        <div className=" flex flex-col items-center justify-center px-8 md:py-16 text-center md:border-0  xl:mt-24">
-
-        <Image
-          src={michaelVideoLinkImg}
-          className="block md:hidden h-[80px] w-[80px] mb-[40px]"
-          alt=""
-        />
+        <div className=" flex flex-col items-center justify-center px-8 text-center md:border-0 md:py-16  xl:mt-24">
+          <Image
+            src={michaelVideoLinkImg}
+            className="mb-[40px] block h-[80px] w-[80px] md:hidden"
+            alt=""
+          />
 
           <h3 className="mb-10 max-w-[890px] text-2xl font-light uppercase xl:text-4xl">
             “I think Web3 is amazing because, in this industry, everything
@@ -133,7 +132,7 @@ const Team = ({ setBurgerOpen }) => {
             and manage to find like-minded people who also believe in it, then
             you’re almost destined for success.”
           </h3>
-          <span className="mb-[60px] md:mb-0 text-center text-white">
+          <span className="mb-[60px] text-center text-white md:mb-0">
             Mykhailo Adzhoiev, CEO of Cowchain
           </span>
         </div>

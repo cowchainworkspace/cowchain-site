@@ -53,7 +53,7 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
             </h1>
             <p className="max-w-[385px] text-sm text-secondary lg:text-base">
               We often look for new talents, so if you are interested in working
-              in Cowchain, send your CV and our HRs will get in touch if you are
+              in Cowchain, send your CV and we will get in touch if you are
               a great fit.
             </p>
           </div>
