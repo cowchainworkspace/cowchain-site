@@ -32,10 +32,10 @@ export const ScrollProject = ({
       <Link
         href={link}
         className={cn(
-          "relative flex max-w-[375px] md:w-[547px] py-[20px] flex-col items-start md:h-[698px] md:py-[72px]",
+          "relative flex md:w-[547px] py-[20px] flex-col items-start md:h-[698px] md:py-[72px]",
           {
             "h-[546px]": !mobile,
-            "h-[419px]  md:h-[419px]": mobile,
+            "h-[419px]  max-w-[375px] md:h-[419px]": mobile,
             "gap-[30px]": !mobile,
             "gap-[20px] p-[20px] py-[38px]": mobile
           }
