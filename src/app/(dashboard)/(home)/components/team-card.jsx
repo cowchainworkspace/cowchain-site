@@ -9,7 +9,7 @@ export const TeamCard = ({ name, role, photo, social, index }) => {
       )}
     >
       <div
-        className="flex max-h-[380px] h-[380px] w-[335px] md:min-w-[400px]  self-center bg-cover bg-top bg-no-repeat md:p-8 md:min-h-[498px]"
+        className="h-[85vw] w-[85vw] max-h-[380px] max-w-[335px] md:max-h-[478px] md:max-w-[410px] self-center bg-cover bg-top bg-no-repeat md:p-8"
         style={{ backgroundImage: `url(${photo.src})` }}
       ></div>
       <div>

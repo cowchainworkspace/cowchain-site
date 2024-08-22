@@ -31,7 +31,7 @@ export default function Clients() {
               <Image className="w-6" src={arrow} alt=""></Image>
             </div>
           </Link>
-          <div className="mt-8 flex w-full max-w-xl justify-between  lg:order-3 lg:ml-auto">
+          <div className="mt-8 flex w-full flex-col customSmall:flex-row max-w-xl justify-between  lg:order-3 lg:ml-auto">
             <div>
               <div className="flex items-center">
                 <Counter duration={4} target={35} />

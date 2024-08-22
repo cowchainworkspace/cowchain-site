@@ -12,7 +12,7 @@ import arrow from "@/assets/arrow_right.svg";
 // import photo9 from "@/assets/homepage/team/alexandr.jpg";
 
 import MichaelImg from "@/assets/homepage/team/newTeam/michaelImg.png";
-import OlehImg from "@/assets/team/executives/OlehImg.png";
+import OlehImg from "@/assets/team/executives/OlehImg2.png";
 import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
 
 import linkedin from "@/assets/homepage/linkedin.svg";
