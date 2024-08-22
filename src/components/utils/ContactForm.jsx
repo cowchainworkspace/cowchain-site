@@ -5,6 +5,7 @@ import modal_close from "../../assets/homepage/modal_close.svg";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
+import bg from "./../../assets/homepage/form/formBg.svg";
 
 export default function ContactForm({ modalOpen, setModalOpen }) {
   const {
@@ -23,7 +24,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
         process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY
       );
     } catch (e) {
-      /* empty */
+      console.log(process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY);
     }
     reset();
     // setSendSuccess(true);
@@ -46,11 +47,17 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
       open={modalOpen}
       closeOnDocumentClick
       onClose={() => setModalOpen(false)}
-      className="popup-modal"
+      className="modal-form relative"
       lockScroll
       nested
     >
-      <div className="modal h-full max-h-[95vh] min-w-full max-w-7xl overflow-y-auto border-2 border-white bg-black p-4 md:p-8 lg:p-16">
+      <Image
+        className="absolute left-[-900px] top-[-900px] z-[-1] min-h-[2000px] min-w-[2000px]"
+        alt=""
+        src={bg}
+      />
+
+      <div className="modal relative h-full min-w-full max-w-7xl overflow-y-auto">
         <div className="flex">
           <Image
             className="ml-auto w-8 cursor-pointer"
@@ -59,82 +66,102 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
             src={modal_close}
           />
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <p className="text-center font-roc text-4xl font-bold text-white md:text-5xl lg:mt-6 lg:text-left">
-            Let`s work <br></br> together
-          </p>
+
+        <div className="flex w-[633px] flex-col items-center gap-[32px]">
+          <div className="">
+            <p className="mb-[16px] text-center text-[60px] font-bold text-white md:text-5xl lg:text-left">
+              CONTACT US
+            </p>
+            <p
+              style={{
+                color: "rgba(187, 187, 187, 0.8)"
+              }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
           <form
             onSubmit={handleSubmit(sendFormData)}
-            className="userform mt-6 flex flex-col gap-y-6"
+            className="flex w-full flex-col gap-y-[32px] "
           >
-            <div>
-              <p className="text-white">Services</p>
-              <div className="services_group_wrapper mt-4 flex flex-wrap gap-2">
-                {checkboxes.map((checkbox, index) => (
-                  <label key={index} className="form_label_for_check">
-                    <input
-                      type="checkbox"
-                      name="services"
-                      className="form_check"
-                      value={checkbox}
-                      {...register("services", { required: true })}
-                    />
-                    <div className="form_label_div">{checkbox}</div>
-                  </label>
-                ))}
+            <div className="flex h-[170px] gap-x-[16px] ">
+              <div className="flex w-full flex-col justify-between gap-y-[16px]">
+                <input
+                  className="contact-input-overlay h-full"
+                  type="text"
+                  placeholder="Full Name"
+                  {...register("fullName", { required: true })}
+                />
+                {errors.fullName && (
+                  <span className="error-span">
+                    Please, enter your full name!
+                  </span>
+                )}
+                <input
+                  className="contact-input-overlay h-full"
+                  type="email"
+                  placeholder="Email"
+                  {...register("email", {
+                    required: true,
+                    pattern:
+                      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+                  })}
+                />
+                {errors.email?.type === "required" && (
+                  <span className="error-span">Please, enter your email!</span>
+                )}
+                {errors.email?.type === "pattern" && (
+                  <span className="error-span">
+                    Please, enter a correct email address!
+                  </span>
+                )}
+                <input
+                  className="contact-input-overlay h-full"
+                  type="text"
+                  placeholder="Your Company"
+                  {...register("company")}
+                />
+              </div>
+
+              <div className="w-full">
+                <textarea
+                  className="contact-input-overlay area-input h-[170px] h-full w-full"
+                  placeholder="Your Comment"
+                  {...register("details")}
+                />
+                {errors.comment && (
+                  <span className="error-span">
+                    Please, enter your comment!
+                  </span>
+                )}
               </div>
             </div>
-            {errors.services?.type === "required" && (
-              <span className="error-span">
-                Please, select how we can help you!
-              </span>
-            )}
-            <div>
-              <p className="text-white">Budget (optional)</p>
-              <div className="services_group_wrapper mt-4 flex flex-wrap gap-2">
-                {radioBtns.map((radioBtn, index) => (
-                  <label key={index * 10} className="form_label_for_check">
-                    <input
-                      type="radio"
-                      name="services"
-                      className="form_check"
-                      value={radioBtn}
-                      {...register("budget", {})}
-                    />
-                    <div className="form_label_div">{radioBtn}</div>
-                  </label>
-                ))}
+
+            <div className="flex h-[46px] gap-[16px]">
+              <div className="flex w-full items-center justify-center gap-[10px]">
+                <input
+                  type="checkbox"
+                  id="privacyPolicy"
+                  className="h-[19px] w-[19px]"
+                  {...register("privacyPolicy", { required: true })}
+                />
+                <label
+                  htmlFor="privacyPolicy"
+                  className="w-[235px] text-sm text-white"
+                  style={{
+                    color: "rgba(255, 255, 255, 0.25)"
+                  }}
+                >
+                  By checking this field I agree to the terms of Privacy Policy
+                </label>
               </div>
+
+              <button type="submit" className="h-full w-full  bg-white">
+                SUBMIT
+              </button>
             </div>
-            <input
-              className="text_input"
-              type="email"
-              placeholder="Email"
-              {...register("email", {
-                required: true,
-                pattern:
-                  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-              })}
-              aria-invalid={errors.email ? "true" : "false"}
-            />
-            {errors.email?.type === "required" && (
-              <span className="error-span">Please, enter your email!</span>
-            )}
-            {errors.email?.type === "pattern" && (
-              <span className="error-span">
-                Please, enter correct email address!
-              </span>
-            )}
-            <input
-              className="text_input"
-              placeholder="Project details (optional)"
-              type="text"
-              defaultValue=""
-              {...register("details")}
-            />
-            <button type="submit" className="btn-submit my-4">
-              Submit the form
-            </button>
           </form>
         </div>
       </div>

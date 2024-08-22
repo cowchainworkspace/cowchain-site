@@ -167,7 +167,28 @@ p,
 .popup-modal-overlay {
   /*background: rgba(209, 24, 13, 0.8);*/
   background: rgba(0, 0, 0, 0.8);
-  @apply px-4;
+
+}
+
+.contact-input-overlay {
+  background-color: transparent;
+  /* backdrop-filter: blur(8px); */
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.25);
+ 
+}
+
+.contact-input-overlay::placeholder {
+  padding-left: 24px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.area-input::placeholder {
+  padding-top: 15px;
+}
+
+.modal-form-overlay {
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .form_label_for_check {
