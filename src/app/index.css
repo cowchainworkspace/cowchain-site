@@ -166,7 +166,7 @@ p,
 
 .popup-modal-overlay {
   /*background: rgba(209, 24, 13, 0.8);*/
-  background: rgba(0, 0, 0, 0.8);
+  /* background: rgba(0, 0, 0, 0.1); */
 
 }
 
@@ -174,20 +174,32 @@ p,
   background-color: transparent;
   /* backdrop-filter: blur(8px); */
   background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.25);
- 
+  color: white;
+ padding-left: 10px;
 }
 
 .contact-input-overlay::placeholder {
   padding-left: 24px;
-  color: rgba(255, 255, 255, 0.25);
 }
 
-.area-input::placeholder {
-  padding-top: 15px;
+.contact-input-overlay:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
 }
+
+.area-input{
+  padding-top: 13px;
+}
+
+
 
 .modal-form-overlay {
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-thanks-overlay {
+  backdrop-filter: blur(6px);
   background: rgba(0, 0, 0, 0.9);
 }
 
