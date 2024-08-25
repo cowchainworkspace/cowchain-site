@@ -8,10 +8,10 @@ import michaelAvatar from "@/assets/icons/homepage/michaelAvatarImg.png";
 export default function HeaderContent() {
   return (
     <>
-      <h1 className="relative mt-8 hidden cursor-default uppercase  md:ml-[55px] md:mt-[103px] md:block lg:mt-24">
+      <h1 className="relative mt-8 z-[21] hidden cursor-default uppercase  md:ml-[55px] md:mt-[103px] md:block lg:mt-24">
         Accelerate your <br /> Web3 odyssey <br /> with cowchain
       </h1>
-      <h1 className="relative mt-8 block cursor-default text-[38px]  font-medium uppercase leading-[44px] md:mt-16 md:hidden lg:mt-24">
+      <h1 className="relative mt-8 z-[21] block cursor-default text-[38px]  font-medium uppercase leading-[44px] md:mt-16 md:hidden lg:mt-24">
         Accelerate <br /> your Web3 <br /> odyssey <br /> with cowchain
       </h1>
 

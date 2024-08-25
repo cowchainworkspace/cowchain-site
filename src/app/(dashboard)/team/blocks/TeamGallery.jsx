@@ -188,10 +188,10 @@ const TeamGallery = () => {
   return (
     <section
       id="team"
-      className="relative flex flex-col items-center justify-center px-6 pb-28 md:pt-[115px]"
+      className="relative flex flex-col items-center justify-center px-6 pt-[60px] pb-28 md:pt-[115px]"
     >
       <h3 className="mb-[36px] md:mb-20 uppercase">Meet the team</h3>
-      <div className="grid grid-cols-2 gap-x-2 gap-y-6 bg-black md:grid-cols-3 lg:col-span-3 xl:gap-x-5 xl:gap-y-20">
+      <div className="grid grid-cols-2 gap-x-2 gap-y-6 md:grid-cols-3 lg:col-span-3 xl:gap-x-5 xl:gap-y-20">
         {teamData.map((member, index) => (
           <TeamCard key={index} {...member} check={member.check} />
           // <TeamCard key={index} index={index} {...member} />

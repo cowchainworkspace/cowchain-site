@@ -11,7 +11,7 @@ const TeamContact = ({ className }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <section id="apply" className={cn("relative overflow-hidden", className)}>
+    <section id="apply" className={cn("relative", className)}>
 
 <Image
   sizes="100vw"

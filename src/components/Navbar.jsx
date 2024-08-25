@@ -143,7 +143,7 @@ export default function Navbar({ isPageNotFound = false }) {
   return (
     <>
       <section
-        className={cn("relative z-20 bg-transparent opacity-0", {
+        className={cn("relative z-[20] bg-transparent opacity-0", {
           "pb-36 md:pb-0": isHomePage,
           "pb-[440px] lg:pb-[670px]": isTeamBg,
           "opacity-100": !isRendering
@@ -169,7 +169,7 @@ export default function Navbar({ isPageNotFound = false }) {
               quality={100}
               priority
               className={cn(
-                "absolute bottom-0  left-0 block h-full w-full md:hidden",
+                "absolute bottom-0 left-0 block h-full w-full md:hidden",
                 {
                   hidden: isGradient
                 }
