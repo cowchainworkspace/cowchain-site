@@ -127,7 +127,6 @@ export default function Footer() {
   const pathname = usePathname();
 
   useEffect(() => {
-    console.log(pathname);
     setIsBorder(pathname === "/sitemap" || pathname === "/error");
   }, [pathname]);
 
@@ -301,7 +300,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex items-center px-2 py-3 md:col-span-2 md:py-8">
+          <div className=" px-2 py-3 md:col-span-2 md:py-8">
             <a href="/">
               <Image className="w-full" src={logofont} alt=""></Image>
             </a>

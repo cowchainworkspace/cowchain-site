@@ -12,7 +12,7 @@ const Header = () => {
       className="fullheight -mt-40 md:h-[861px] overflow-hidden border-b border-b-th-fade md:-mt-0"
       id="header"
     >
-      <div className="video-wrapper min-h-full md:h-[861px]">
+      <div className="video-wrapper min-h-full  md:h-[861px]">
         <Video />
         <div className="px-[20px] md:px-[44px] relative flex min-h-full md:h-[861px] w-full flex-col pb-[51px]">
           <Image

@@ -29,7 +29,6 @@ const expertiseData = [
 export default function Networks({ margin = "mt-[calc(35vh_+_1.5625vh)]" }) {
   const { data } = useGetItems("services-networks");
   const { data: dataText } = useGetItems("services-contents");
-  console.log(data);
 
   return (
     <section

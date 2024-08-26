@@ -48,8 +48,6 @@ export default function FAQ() {
     setScreenWidth(window.innerWidth);
   }, []);
 
-  console.log(screenWidth)
-
   return (
     <section id="faq" className="relative z-30">
       <div className="relative grid grid-cols-1 md:grid-cols-5">

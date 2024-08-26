@@ -31,7 +31,7 @@ const benefitsData = [
       "max-h-max translate-y-[80%] xl:translate-y-[115%]  duration-1000"
   },
   {
-    title: "03 / We are the devs of Web3.",
+    title: "03 / We are the devs of Web3",
     text: "In our worldview, there’s a huge difference between being Web3 developers and developers of Web3. Web3 devs know how to implement blockchain technologies. Devs of Web3 code meaningful products that add value to the community and push the industry forward. We are the devs of Web3.",
     transformStyle:
       "max-h-max -translate-y-[10%] xl:-translate-y-[10%]  duration-1000",

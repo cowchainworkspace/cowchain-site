@@ -41,7 +41,6 @@ import { useGetItems } from "@/hooks/use-strapi";
 // ];
 
 const ProductCard = ({ title, service_cover, link }) => {
-  console.log(service_cover.data.attributes.url);
   return (
     <div className="team_card_wrapper relative flex h-[112px]  select-none flex-col items-start justify-center border-b border-b-th-fade border-r-th-fade md:h-full md:border-r ">
       <span className="justify-center px-3 py-8 text-left text-base uppercase text-white lg:px-16 lg:pb-48 lg:pt-20 lg:font-roc lg:text-xl">
@@ -61,7 +60,6 @@ const ProductCard = ({ title, service_cover, link }) => {
 
 export const Products = () => {
   const { data: products } = useGetItems("services");
-  console.log(products);
 
   return (
     <section

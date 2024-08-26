@@ -17,7 +17,7 @@ const benefitsData = [
     text: "Cowchcain offers no “one-size-fits-alls.” We immerse ourselves in our clients' businesses, speaking their language and working as an in-house product team to develop effective solutions with users in mind. Your goals become our goals, and your challenges fuel our creativity."
   },
   {
-    title: "03 / We are the devs of Web3.",
+    title: "03 / We are the devs of Web3",
     text: "In our worldview, there’s a huge difference between being Web3 developers and developers of Web3. Web3 devs know how to implement blockchain technologies. Devs of Web3 code meaningful products that add value to the community and push the industry forward. We are the devs of Web3."
   }
 ];

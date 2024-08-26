@@ -70,7 +70,7 @@ export default function HeaderContent() {
                   Mykhailo Adzhoiev
                 </p>
                 <p className="text-sm text-secondary md:mb-0">
-                  Founder & CTO
+                  Founder & CEO
                 </p>
               </div>
             </div>

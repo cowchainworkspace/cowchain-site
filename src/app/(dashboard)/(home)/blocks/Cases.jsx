@@ -162,11 +162,21 @@ const Cases = () => {
     [0, -scrollRange + viewportW]
   );
 
-  const swiperRef = useRef;
+  const swiperRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const [isBeginning, setIsBeginning] = useState(true);
+const [isEnd, setIsEnd] = useState(false);
+
+  useEffect(() => {
+  if (swiperRef.current) {
+    setCurrentIndex(swiperRef.current.activeIndex); // Set the initial currentIndex on mount
+  }
+}, []);
+
+  console.log(currentIndex)
+
   const handlePrevClick = () => {
-    console.log(12321341)
     if (swiperRef.current && currentIndex > 0) {
       swiperRef.current.slideTo(currentIndex - 1);
       setCurrentIndex(currentIndex - 1);
@@ -174,7 +184,6 @@ const Cases = () => {
   };
 
   const handleNextClick = () => {
-    console.log(12321341)
     if (swiperRef.current && currentIndex < casesData.length - 1) {
       swiperRef.current.slideTo(currentIndex + 1);
       setCurrentIndex(currentIndex + 1);
@@ -192,17 +201,13 @@ const Cases = () => {
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
-        onSlideChange={(swiper) => setCurrentIndex(swiper.activeIndex)}
-        slidesPerView={1.2}
-        spaceBetween={0}
-        breakpoints={{
-          768: {
-            slidesPerView: 1.62
-          },
-          1024: {
-            slidesPerView: 'auto'
-          },
+        onSlideChange={(swiper) => {
+          setCurrentIndex(swiper.activeIndex);
+  setIsBeginning(swiper.isBeginning);
+  setIsEnd(swiper.isEnd);
         }}
+        slidesPerView={'auto'}
+        spaceBetween={0}
       >
         {casesData &&
           casesData.map((project, index) => (
@@ -221,7 +226,7 @@ const Cases = () => {
           ))}
       </div>
 
-      {currentIndex > 0 && (
+      {!isBeginning && (
         <div
           style={{
             background: "linear-gradient(to left, transparent 1%, #AB40FF 160%)"
@@ -233,7 +238,7 @@ const Cases = () => {
         </div>
       )}
       
-      {currentIndex < casesData.length - 2 && (
+      {!isEnd && (
         <div
           style={{
             background:
