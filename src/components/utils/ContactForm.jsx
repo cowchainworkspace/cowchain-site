@@ -9,7 +9,7 @@ import bg from "./../../assets/homepage/form/formBg.svg";
 import { useState } from "react";
 import ThankYouWindow from "./ThankYouWindow";
 import dagerous from "./../../assets/dangerous.svg";
-import chackBox from "./../../assets/checkBox.svg";
+import chackBox from './../../assets/checkBox.svg'
 
 export default function ContactForm({ modalOpen, setModalOpen }) {
   const {
@@ -139,30 +139,24 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                 </div>
 
                 <div className="flex h-[108px] flex-col gap-[16px] md:h-[46px] md:flex-row">
-                  <div className="flex h-[108px] flex-col gap-[16px] md:h-[46px] md:flex-row">
-                    <div className="relative flex h-full w-full items-center justify-center gap-[10px]">
-                      <input
-                        type="checkbox"
-                        id="privacyPolicy"
-                        className="h-[19px] w-[19px] appearance-none rounded border border-black bg-white checked:border-black checked:bg-white checked:after:flex checked:after:items-center checked:after:justify-center checked:after:text-sm checked:after:text-black checked:after:content-['✓']"
-                        {...register("privacyPolicy", { required: true })}
-                        onChange={() => handleInputChange("privacyPolicy")}
-                      />
-                      <label
-                        htmlFor="privacyPolicy"
-                        className="w-[260px] text-[12px] text-white md:w-[235px] md:text-sm"
-                        style={{
-                          color: "rgba(255, 255, 255, 0.25)"
-                        }}
-                      >
-                        By checking this field I agree to the terms of Privacy
-                        Policy
-                      </label>
-                    </div>
-
-                    <button type="submit" className="h-full w-full bg-white">
-                      SUBMIT
-                    </button>
+                  <div className="relative flex h-full w-full items-center justify-center gap-[10px]">
+                    <input
+                      type="checkbox"
+                      id="privacyPolicy"
+                      className="h-[19px] w-[19px] bg-transparent text-black checked:border-transparent checked:bg-transparent"
+                      {...register("privacyPolicy", { required: true })}
+                      onChange={() => handleInputChange("privacyPolicy")}
+                    />
+                    <label
+                      htmlFor="privacyPolicy"
+                      className="w-[260px] text-[12px] text-white md:w-[235px] md:text-sm"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.25)"
+                      }}
+                    >
+                      By checking this field I agree to the terms of Privacy
+                      Policy
+                    </label>
                   </div>
 
                   <button type="submit" className="h-full w-full   bg-white">
@@ -171,7 +165,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                 </div>
               </form>
 
-              <div className="ml-[16px] h-[72px] w-[335px] self-end md:w-[308px]">
+              <div className="ml-[16px] h-[72px] w-[335px] md:w-[308px] self-end">
                 {/* {(errors.fullName &&
               errors.details &&
               errors.privacyPolicy &&
