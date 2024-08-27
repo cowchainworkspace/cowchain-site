@@ -48,15 +48,13 @@ export default function HeaderContent() {
               
 
               <div className="flex gap-[12px]">
-                <a className="" href="">
                   <Image
                     alt="linkedin"
                     className="h-[42px] w-[42px]"
                     src={michaelAvatar}
                   ></Image>
-                </a>
 
-                <a className="" href="">
+                <a className="" href="https://www.linkedin.com/in/onchainmichael">
                   <Image
                     alt="linkedin"
                     className="h-[42px] w-[42px]"
