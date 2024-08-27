@@ -9,7 +9,7 @@ import bg from "./../../assets/homepage/form/formBg.svg";
 import { useState } from "react";
 import ThankYouWindow from "./ThankYouWindow";
 import dagerous from "./../../assets/dangerous.svg";
-import chackBox from './../../assets/checkBox.svg'
+import chackBox from "./../../assets/checkBox.svg";
 
 export default function ContactForm({ modalOpen, setModalOpen }) {
   const {
@@ -23,6 +23,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
   const [modalThanksOpen, setModalThanksOpen] = useState(false);
 
   const sendFormData = async (data) => {
+    console.log("Email Length:", data.email.length);
     try {
       emailjs.send(
         process.env.NEXT_PUBLIC_REACT_APP_SERVICE_ID,
@@ -50,8 +51,6 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
     "consultancy",
     "Other"
   ];
-
-  console.log(errors);
 
   const radioBtns = ["$10-15K", "$25-35K", "$50K +", "Other"];
   return (
@@ -110,10 +109,16 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                         type="email"
                         placeholder="Email*"
                         {...register("email", {
-                          required: true,
-                          pattern:
-                            /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
-                          maxLength: 255
+                          required: "Please enter your email",
+                          validate: {
+                            maxLength: (value) =>
+                              value.length <= 255 ||
+                              "Email cannot exceed 255 characters",
+                            pattern: (value) =>
+                              /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
+                                value
+                              ) || "Please enter a valid email address"
+                          }
                         })}
                         onChange={() => handleInputChange("email")}
                       />
@@ -167,7 +172,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                 </div>
               </form>
 
-              <div className="ml-[16px] h-[72px] w-[335px] md:w-[308px] self-end">
+              <div className="ml-[16px] h-[72px] w-[335px] self-end md:w-[308px]">
                 {/* {(errors.fullName &&
               errors.details &&
               errors.privacyPolicy &&
@@ -248,6 +253,19 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                       }}
                     >
                       Please, enter a correct email address!
+                    </div>
+                  </div>
+                )}
+                {errors.email?.type === "maxLength" && (
+                  <div className="flex items-center gap-[10px]">
+                    <Image src={dagerous} />
+                    <div
+                      className="text-bottom text-white-400 text-[12px] leading-[17px]"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.5)"
+                      }}
+                    >
+                      {errors.email.message}
                     </div>
                   </div>
                 )}
