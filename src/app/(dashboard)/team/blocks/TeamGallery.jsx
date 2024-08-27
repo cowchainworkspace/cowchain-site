@@ -33,7 +33,7 @@ const teamData = [
     social: {
       network: "LinkedIn",
       icon: linkedin,
-      url: "https://www.linkedin.com/in/%D0%B2%D1%8F%D1%87%D0%B5%D1%81%D0%BB%D0%B0%D0%B2-%D0%B8%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE-549988195"
+      url: "https://www.linkedin.com/in/slava-ivchenko/"
     },
     check: ""
   },

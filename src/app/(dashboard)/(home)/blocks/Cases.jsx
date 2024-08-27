@@ -11,12 +11,12 @@ import React, {
 // import triend from "@/assets/cases/triendImg.png";
 // import bridge from "@/assets/cases/retrobridgeImg.png";
 
-import bridge from "@/assets/cases/newCases/crossChainTransferBridgeImg.png"
-import payment from "@/assets/cases/newCases/CryptoExchangeImg.png"
-import finance from "@/assets/cases/newCases/cryptoWalletApp2Img.png"
-import wallet from "@/assets/cases/newCases/cryptoWalletAppImg.png"
-import hotel from "@/assets/cases/newCases/HotelBusinessImg.png"
-import m2e from "@/assets/cases/newCases/m2ePlatformImg.png"
+import bridge from "@/assets/cases/newCases/crossChainTransferBridgeImg.png";
+import payment from "@/assets/cases/newCases/CryptoExchangeImg.png";
+import finance from "@/assets/cases/newCases/cryptoWalletApp2Img.png";
+import wallet from "@/assets/cases/newCases/cryptoWalletAppImg.png";
+import hotel from "@/assets/cases/newCases/HotelBusinessImg.png";
+import m2e from "@/assets/cases/newCases/m2ePlatformImg.png";
 
 import { useScroll } from "framer-motion";
 
@@ -53,7 +53,6 @@ const projectsData = [
   // {
   //   title: "Tridend decentralized review website and app",
   //   link: "/cases/hotel",
-
   //   description:
   //     "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
   //   photo: triend,
@@ -70,7 +69,6 @@ const projectsData = [
   // {
   //   title: "DECENTRALIZED CRYPTO EXCHANGE",
   //   link: "/cases/finance",
-
   //   description:
   //     "Secure and convenient decentralized cryptocurrency exchange that allows to swap hundreds of crypto assets using liquidity pool mechanism.",
   //   photo: finance,
@@ -106,12 +104,11 @@ const casesData = [
   {
     title: "Crypto wallet app",
     link: "/cases/wallet",
-    description:
-      "Crypto wallet app for iOS and Android",
+    description: "Crypto wallet app for iOS and Android",
     photo: wallet,
     tags: ["App Development", "Website Development"]
   },
-    {
+  {
     title: "decentralized crypto exchange",
     link: "/cases/finance",
     description:
@@ -122,8 +119,7 @@ const casesData = [
   {
     title: "Exchange wallet app",
     link: "/cases/payment",
-    description:
-      "First BTC/USDT crypto exchange in Canada",
+    description: "First BTC/USDT crypto exchange in Canada",
     photo: finance,
     tags: ["App Development", "Website Development"]
   },
@@ -131,8 +127,7 @@ const casesData = [
     title: "Integration blockchain into hotel business",
     link: "/cases/hotel",
 
-    description:
-      "Web browser AI crypto plugin and Dapp for travel and hotels",
+    description: "Web browser AI crypto plugin and Dapp for travel and hotels",
     photo: hotel,
     tags: ["App Development", "Website Development"]
   }
@@ -166,15 +161,13 @@ const Cases = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const [isBeginning, setIsBeginning] = useState(true);
-const [isEnd, setIsEnd] = useState(false);
+  const [isEnd, setIsEnd] = useState(false);
 
   useEffect(() => {
-  if (swiperRef.current) {
-    setCurrentIndex(swiperRef.current.activeIndex); // Set the initial currentIndex on mount
-  }
-}, []);
-
-  console.log(currentIndex)
+    if (swiperRef.current) {
+      setCurrentIndex(swiperRef.current.activeIndex); // Set the initial currentIndex on mount
+    }
+  }, []);
 
   const handlePrevClick = () => {
     if (swiperRef.current && currentIndex > 0) {
@@ -190,12 +183,13 @@ const [isEnd, setIsEnd] = useState(false);
     }
   };
 
+  console.log("isBeginning", isBeginning, "isEnd", isEnd);
+
   return (
     <section
       ref={containerRef}
-      className="relative hidden z-10 h-[546px] border-b border-b-th-fade md:block md:h-[698px] xl:flex"
+      className="relative z-10 hidden h-[546px] border-b border-b-th-fade md:block md:h-[698px] xl:flex"
     >
-
       <Swiper
         className="flex h-[546px] md:h-[698px] fullSlider:!hidden"
         onSwiper={(swiper) => {
@@ -203,22 +197,25 @@ const [isEnd, setIsEnd] = useState(false);
         }}
         onSlideChange={(swiper) => {
           setCurrentIndex(swiper.activeIndex);
-  setIsBeginning(swiper.isBeginning);
-  setIsEnd(swiper.isEnd);
+          setIsBeginning(swiper.isBeginning);
+          setIsEnd(swiper);
         }}
-        slidesPerView={'auto'}
+        slidesPerView={"auto"}
         spaceBetween={0}
       >
         {casesData &&
           casesData.map((project, index) => (
-            <SwiperSlide key={index} className="h-[546px] max-w-[547px] md:h-[698px]">
+            <SwiperSlide
+              key={index}
+              className="h-[546px] max-w-[547px] md:h-[698px]"
+            >
               <ScrollProject key={index} index={index} {...project} />
             </SwiperSlide>
           ))}
       </Swiper>
 
       <div className="hidden w-full justify-center fullSlider:flex">
-      {casesData &&
+        {casesData &&
           casesData.map((project, index) => (
             <div key={index} className="h-[546px] max-w-[547px] md:h-[698px]">
               <ScrollProject key={index} index={index} {...project} />
@@ -232,12 +229,12 @@ const [isEnd, setIsEnd] = useState(false);
             background: "linear-gradient(to left, transparent 1%, #AB40FF 160%)"
           }}
           onClick={handlePrevClick}
-          className="hidden absolute left-0 top-0 z-50 hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
+          className="absolute left-0 top-0 z-50 hidden hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
         >
           <Image src={sliderLeftArrow} alt="Next" className="h-8 w-8" />
         </div>
       )}
-      
+
       {!isEnd && (
         <div
           style={{

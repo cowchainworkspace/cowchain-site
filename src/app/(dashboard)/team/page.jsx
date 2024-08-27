@@ -151,7 +151,7 @@ const Team = ({ setBurgerOpen }) => {
 
             <Image
               src={quoteBg}
-              className="xl:min-h-auto xl:min-w-auto absolute bottom-[-450px] right-[-300px] lg:bottom-[-550px] lg:right-[-600px] z-[0] min-h-[1500px] min-w-[1000px]"
+              className="xl:min-h-auto pointer-events-none xl:min-w-auto absolute bottom-[-450px] right-[-300px] lg:bottom-[-550px] lg:right-[-600px] z-[0] min-h-[1500px] min-w-[1000px]"
               alt=""
             />
           </div>

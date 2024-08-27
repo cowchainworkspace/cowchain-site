@@ -89,7 +89,8 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
 
               <form
                 onSubmit={handleSubmit(sendFormData)}
-                className="flex w-full flex-col gap-y-[32px] "
+                className="flex w-full flex-col gap-y-[32px]"
+                noValidate
               >
                 <div className="flex h-[318px] flex-col gap-y-[12px] md:h-[170px] md:flex-row md:gap-x-[16px] md:gap-y-0">
                   <div className="flex h-full w-full flex-col justify-between gap-y-[12px] md:gap-y-[16px]">
@@ -111,7 +112,8 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                         {...register("email", {
                           required: true,
                           pattern:
-                            /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+                            /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
+                          maxLength: 255
                         })}
                         onChange={() => handleInputChange("email")}
                       />
