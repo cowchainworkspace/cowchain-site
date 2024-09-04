@@ -2,6 +2,7 @@ import React from "react";
 import { useGetItems } from "@/hooks/use-strapi";
 import Link from "next/link";
 
+
 const ProductCard = ({ title, service_cover, link }) => {
   return (
     <Link

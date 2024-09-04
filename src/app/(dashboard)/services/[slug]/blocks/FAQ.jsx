@@ -9,36 +9,27 @@ import {
 } from "@chakra-ui/react";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
+import bg from "./../../../../../assets/services/FAQServiceBg.svg"
+import Image from "next/image";
 
 const faqData = [
   {
     title:
-      "Do you offer ongoing support and maintenance for blockchain projects?",
+      "How much does it cost to outsource the project to a Smart Contract development company?",
     content:
-      "Cowchain always stays in touch with its customers and offers its support on all the services provided. You don't have to worry about breakdowns in communication or unanswered emails from us."
+      "The cost of smart contract development depends on the project's complexity, the technologies used, and the developers' level of expertise. In general, we strive to offer each client the best value for money."
   },
   {
     title:
-      "Which blockchain platforms and technologies are you experienced with?",
-    content: `Our team is skilled in all the things you need. This is the core principle of Cowchain. Any technology that appears on the market and is just gaining popularity will be analyzed in detail by us immediately.`
+      "How long does a Smart Contract development project take to go live?",
+    content: `The typical timeframe for a smart contract development project is about four days, including requirements analysis, development, testing, and deployment. The duration of the job varies depending on the scope and complexity of the project.`
   },
   {
     title:
-      "Is it possible to tailor blockchain development to specific industry needs?",
-    content: `In the hands of a professional team, anything can be adapted. The travel business, the arts, the car world and even medicine.
-It's easy, you just need to be in contact with our sales team to let them tell you how your project can dive into the world of web3.`
+      "Does a professional Smart Contract development service provider offer maintenance and support services?",
+    content: `provider offer maintenance and support services?
+Yes, we offer maintenance and support services for smart contracts after deployment. This ensures the solution's smooth operation in the long term.`
   },
-  {
-    title: "What are the benefits of using Web3 applications for my business?",
-    content:
-      "As is usual in any web3 project, security should be at the top of the list. Depending on the specifics of your project, our team can not only set the highest level of security but also maintain it."
-  },
-  {
-    title:
-      "How can a Web3 development agency help my business implement blockchain technology effectively?",
-    content: `You can get full immersion assistance from Cowchain regardless of the stage of your project. 
-Our team will be your guide and you can easily immerse yourself in all the processes.`
-  }
 ];
 
 export default function FAQ() {
@@ -50,6 +41,18 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="relative z-30 border-t border-t-th-fade">
+
+<div style={{ pointerEvents: "none" }} className="absolute right-0 bottom-0 -top-[380px] left-0 z-[-3] overflow-hidden">
+    <Image
+        alt=""
+        width={1380}
+        height={1330}
+        style={{ pointerEvents: "none" }}
+        className="absolute -left-[650px] -z-10 min-h-[1330px] min-w-[900px]"
+        src={bg}
+      />
+      </div>
+
       <div className="relative grid grid-cols-1 md:grid-cols-5">
         <div className="py-[60px] md:py-heading px-default md-border-r flex justify-center border-b border-b-th-fade text-center md:col-span-2">
           <h2 className="flex max-w-[321px] justify-center text-center text-4xl uppercase leading-[40px]  text-white md:max-w-[365px] md:text-left md:text-[60px] md:leading-[53px]">

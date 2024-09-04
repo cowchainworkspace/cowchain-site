@@ -16,6 +16,10 @@ export default [
         sourceType: 'module',
       },
     },
+    env: {
+      browser: true,
+      node: true,
+    },
     rules: {
       'eqeqeq': ['error', 'always'],
       'curly': 'error',

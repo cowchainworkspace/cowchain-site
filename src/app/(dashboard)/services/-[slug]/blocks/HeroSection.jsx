@@ -7,6 +7,29 @@ import ContactForm from "@/components/utils/ContactForm";
 import Markdown from "markdown-to-jsx";
 import { useGetItems } from "@/hooks/use-strapi";
 
+const expertiseData = [
+  {
+    title: "BLOCKCHAIN",
+    text: "From dApps to blockchains – you name it, we do it. Whether you only have a concept in mind or a running business, we can integrate it with Web3",
+
+  },
+  {
+    title: "FRONT-END",
+    text: "Combining your vision and best usability practices, we create products that live up to your business goals and are intuitive for users",
+
+  },
+  {
+    title: "MOBILE",
+    text: "Expertly crafting native and cross-platform mobile apps, we turn your vision into reality. Focused on performance, user experience, and seamless design, our mobile solutions ensure your app excels in today's dynamic market.",
+
+  },
+  {
+    title: "BACK-END",
+    text: "Based on factors like project complexity and its scalability needs, we deploy the most suitable and easy-to-maintain product architecture",
+
+  }
+];
+
 export const HeroSection = () => {
   const { data } = useGetItems("services-contents");
 
@@ -19,11 +42,11 @@ export const HeroSection = () => {
   return (
     <section
       id="hero-services"
-      className="scrollbar-none container relative w-full pt-20 md:pt-40 md:max-w-full "
+      className="scrollbar-none container  relative mb-2 w-full  pt-10 md:mb-[100px]  md:max-w-full lg:pt-[120px]"
     >
       <video
         ref={vidRef}
-        className="absolute -top-24 left-0 z-[0] mx-auto h-[600px] w-full object-cover md:-top-16 md:right-0 md:h-[800px]"
+        className="absolute -top-24 left-0 z-10 mx-auto h-[500px] w-full object-cover md:-top-16 md:right-0 md:h-[700px]"
         id="bg_vid_planet"
         playsInline
         muted
@@ -32,14 +55,14 @@ export const HeroSection = () => {
         src={"/assets/services/planet.mp4"}
         preload="auto"
       ></video>
-      <div className="relative z-10  flex cursor-default flex-col items-center justify-center px-5 pb-8 md:px-8 md:pb-[76px] lg:px-16 xl:px-24">
+      <div className="relative z-10 mt-20 flex cursor-default flex-col items-center justify-center px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
         <Tag title={"services"} className={"mb-4 text-base md:mb-8"} />
-        <h1 className=" mb-[16px] max-w-[570px] text-center text-4xl uppercase text-white md:max-w-[1000px] md:leading-none lg:mt-6   lg:text-[54px]">
+        <h1 className=" mb-10 max-w-[570px] text-center text-4xl uppercase text-white md:max-w-[1000px] md:leading-none lg:mt-6   lg:text-[54px]">
           Blockchain Smart Contract Development Services
         </h1>
-        <span className="max-w-lg text-center  text-sm text-[#bbb] md:max-w-[725px] md:text-base">
-          {/* <Markdown
-            children={data?.data[0].attributes.main_text}
+        <span className="max-w-lg text-center   text-sm text-[#bbb] md:max-w-2xl md:text-base">
+          <Markdown
+            children={expertiseData[0].text}
             options={{
               createElement(type, props, children) {
                 return (
@@ -49,23 +72,16 @@ export const HeroSection = () => {
                 );
               }
             }}
-          /> */}
-
-          Cowchain is a leading smart contract development service provider. Our
-          team of experienced developers has in-depth knowledge of blockchain
-          technology and programming languages to <br /> develop DApps.  <br />  We offer a
-          full range of blockchain smart contract development services
-          customized to meet your business needs.
+          />
         </span>
         <button
           onClick={() => setModalOpen(true)}
-          className="btn-submit mx-auto mt-[32px] flex !min-w-[219px] md:!min-w-[287px]"
+          className="btn-submit mx-auto mt-12 flex w-[200px] md:min-w-[280px]"
         >
           Get a free quote
         </button>
       </div>
-
-      <div className=" block md:hidden container z-40 mt-[50px]  max-w-[360px] md:max-w-[1300px]">
+      {/* <div className="container z-40 mt-2  max-w-[360px] md:max-w-[1300px]">
         <div className="items-center justify-center gap-16 md:flex">
           <p className="my-8 flex flex-col items-center justify-center">
             <span className="font-roc text-3xl font-medium">$7,18B</span>
@@ -86,8 +102,7 @@ export const HeroSection = () => {
             </span>
           </p>
         </div>
-      </div>
-      
+      </div> */}
       <ContactForm modalOpen={modalOpen} setModalOpen={setModalOpen} />
     </section>
   );

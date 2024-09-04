@@ -27,13 +27,13 @@ const expertiseData = [
 ];
 
 export default function Networks({ margin = "mt-[calc(35vh_+_1.5625vh)]" }) {
-  const { data } = useGetItems("services-networks");
-  const { data: dataText } = useGetItems("services-contents");
+  // const { data } = useGetItems("services-networks");
+  // const { data: dataText } = useGetItems("services-contents");
 
   return (
     <section
       id="expertise"
-      className={cn("relative border-b border-b-th-fade border-t border-t-th-fade  md:mt-0", margin)}
+      className={cn("relative border-t border-t-th-fade  md:mt-0", margin)}
     >
       <div className="relative z-20 grid lg:grid-cols-2">
         <div className="relative grid grid-cols-1 pt-14 md:border-r md:border-r-th-fade">
@@ -50,7 +50,7 @@ export default function Networks({ margin = "mt-[calc(35vh_+_1.5625vh)]" }) {
             </h3>
             <span className="text-[#bbb] md:text-left">
               <Markdown
-                children={dataText?.data[0].attributes.networks_text}
+                children={expertiseData[0].text}
                 options={{
                   createElement(type, props, children) {
                     return (
@@ -65,9 +65,9 @@ export default function Networks({ margin = "mt-[calc(35vh_+_1.5625vh)]" }) {
           </div>
         </div>
         <div className="grid lg:grid-cols-1">
-          <div className="grid md:grid-cols-2">
-            {data?.data.map((expertise, index) => (
-              <ExpertiseBlock key={index * 2} index={index} {...expertise.attributes} />
+          <div className="grid grid-cols-2">
+            {expertiseData.map((expertise, index) => (
+              <ExpertiseBlock key={index * 2} {...expertise} />
             ))}
           </div>
         </div>

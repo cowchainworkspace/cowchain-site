@@ -21,6 +21,7 @@ import team2 from "@/assets/team/team-carousel-2/team2.png";
 import team3 from "@/assets/team/team-carousel-2/team3.png";
 import { Values } from "./blocks/Values";
 import { ValuesMobile } from "./blocks/ValuesMobile";
+import FAQ from "../../(home)/blocks/FAQ";
 import Others from "./blocks/Others";
 import ServiceContact from "./blocks/ServiceContact";
 import Works from "./blocks/Works";
@@ -28,7 +29,6 @@ import Contact from "@/components/Contact";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
 import Clients from "../../(home)/blocks/Clients";
-import FAQ from "./blocks/FAQ";
 
 const photos = [team1, team2, team3];
 
@@ -41,28 +41,30 @@ export const metadata = {
 
 const Services = ({ setBurgerOpen }) => {
   return (
-    <section>
+    <section >
+      <div className="overflow-x-hidden">
       <HeroSection />
       <Industries />
       <IndustriesMobile />
+      </div>
       <Development />
-      {/* <ContactDialog /> */}
+      <ContactDialog />
       <Benefits />
-      {/* <BenefitsMobiles /> */}
-      {/* <DevelopmentMobile /> */}
-      <Networks
+      <BenefitsMobiles />
+     
+     <DevelopmentMobile />
+  <Networks
         gradientStyles="absolute -bottom-1/2 -right-40 block  h-[426px] w-[526px] md:hidden"
         isGradient={false}
         title={"Blockchain networks we work with"}
         margin={""}
-      />
-
-      {/* <ServiceStack margin={""} />
-      <Planet />
-      <Works />
-      <Feedback />
-      <Team />
-      <div className="mx-5 mt-14 flex flex-col gap-4  xl:mx-24 xl:mt-28 ">
+      /> 
+      {/* <ServiceStack margin={""} /> */}
+      {/* <Planet /> */}
+      {/* <Works /> */}
+      {/* <Feedback /> */}
+      {/* <Team /> */}
+      {/* <div className="mx-5 mt-14 flex flex-col gap-4  xl:mx-24 xl:mt-28 ">
         <Tag
           className={"max-w-[166px] mb-[16px] xl:max-w-[200px]"}
           title={"founded and run by"}
@@ -133,10 +135,9 @@ const Services = ({ setBurgerOpen }) => {
           ))}
         </div>
       </div> */}
-      {/* <Values />
-      <ValuesMobile /> */}
-
-       <Clients />
+      {/* <Values /> */}
+      {/* <ValuesMobile /> */}
+      <Clients />
       <Cases />
       <CasesMobile />
       <Others />

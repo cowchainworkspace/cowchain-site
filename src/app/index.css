@@ -29,6 +29,17 @@ body {
   all: revert;
 }
 
+.markdown_benefits::-webkit-scrollbar {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+
+.markdown_benefits::-webkit-scrollbar-thumb {
+  background-color: white; 
+}
+
+
+
 /* Text styles */
 
 h1 {

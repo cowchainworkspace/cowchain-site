@@ -7,13 +7,14 @@ export const useGetItems = (section) => {
 
     queryFn: async () =>
       axios
-        .get(`${process.env.NEXT_PUBLIC_STRAPI_URL}${section}?populate=*`, {
+        .get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/${section}?populate=*`, {
           headers: {
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
           },
         })
         .then((res) => res.data)
         .catch((err) => {
+          console.log(err)
           if (err.response.status === 404) {
             throw new Error('User is not exist');
           }
