@@ -60,6 +60,8 @@ const benefitsData = [
 export default function Benefits() {
   const { data } = useGetItems("services-expertises");
 
+  console.log('benefits', data)
+
   const expandVariants = {
     visible: { height: "auto" },
     hidden: { height: 0 }
@@ -116,7 +118,7 @@ export default function Benefits() {
                     Expertise of Our Smart Contract Development Company
                   </h3>
 
-                  <div className="hidden md:block">
+                  {/* <div className="hidden md:block">
                   <button
                     onClick={() => setModalOpen(true)}
                     type="submit"
@@ -124,7 +126,7 @@ export default function Benefits() {
                   >
                     Have a project in mind?
                   </button>
-                  </div>
+                  </div> */}
                   <ContactForm
                     modalOpen={modalOpen}
                     setModalOpen={setModalOpen}
@@ -169,7 +171,7 @@ export default function Benefits() {
                       </div>
                       {isExpanded ? (
                         <div
-                          className="flex items-center justify-center"
+                          className="flex items-center "
                           style={{
                             width: screenWidth > 768 ? 150 : 50
                           }}
@@ -192,7 +194,7 @@ export default function Benefits() {
                         </div>
                       ) : (
                         <div
-                          className="flex items-center justify-center"
+                          className="flex items-center justify-end md:justify-center"
                           style={{
                             width: screenWidth > 768 ? 150 : 50
                           }}
@@ -233,7 +235,7 @@ export default function Benefits() {
                       //   "pt-6 opacity-100 ": isExpanded
                       // })}
                       className={cn(
-                        "markdown markdown_benefits max-h-[300px] mr-[55px] mt-[24px] min-h-[150px] max-w-2xl overflow-auto text-sm !leading-[180%] text-secondary transition-all  duration-[1000ms]  ease-in will-change-transform lg:text-base 2xl:max-w-full",
+                        "markdown markdown_benefits max-h-[300px] mr-[20px] md:mr-[55px] mt-[24px] min-h-[150px] max-w-2xl overflow-auto text-sm !leading-[180%] text-secondary transition-all  duration-[1000ms]  ease-in will-change-transform lg:text-base 2xl:max-w-full",
                         benefit.initialStyle,
                         {
                           "block  transition-all duration-1000":
@@ -252,7 +254,7 @@ export default function Benefits() {
                         options={{
                           createElement(type, props, children) {
                             return (
-                              <div className="parent pr-[80px] markdown">
+                              <div className="parent pr-[10px] md:pr-[80px] markdown">
                                 {createElement(type, props, children)}
                               </div>
                             );

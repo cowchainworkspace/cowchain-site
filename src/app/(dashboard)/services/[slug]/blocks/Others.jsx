@@ -12,20 +12,24 @@ import arrowUpRight from "./../../../../../assets/services/arrowUpRightIcon.svg"
 
 const expertiseData = [
   {
-    title: "BLOCKCHAIN",
-    text: "From dApps to blockchains – you name it, we do it. Whether you only have a concept in mind or a running business, we can integrate it with Web3"
+    title: "Blockchain consulting",
+    text: "Our experts will help you evaluate the feasibility of blockchain for your business, choose the most appropriate platform, and develop a strategy for implementing this technology."
   },
   {
-    title: "FRONT-END",
-    text: "Combining your vision and best usability practices, we create products that live up to your business goals and are intuitive for users"
+    title: "DApp development",
+    text: "We create reliable and scalable decentralized applications based on smart contracts and provide security and transparency of transactions."
   },
   {
-    title: "MOBILE",
-    text: "Expertly crafting native and cross-platform mobile apps, we turn your vision into reality. Focused on performance, user experience, and seamless design, our mobile solutions ensure your app excels in today's dynamic market."
+    title: "Token creation and NFT",
+    text: "Our experts can help you design and issue your own or non-fungible tokens (NFTs) for various purposes, such as crowdfunding, customer loyalty, or digital asset identification."
   },
   {
-    title: "BACK-END",
-    text: "Based on factors like project complexity and its scalability needs, we deploy the most suitable and easy-to-maintain product architecture"
+    title: "Audit and optimization of blockchain solutions",
+    text: "We conduct comprehensive audits of existing blockchain solutions for security, performance, and compliance with industry standards and offer optimization services."
+  },
+  {
+    title: "Implementation of blockchain solutions",
+    text: "We can help you integrate blockchain solutions into your IT infrastructure, ensuring they run smoothly and meet your corporate requirements."
   }
 ];
 
@@ -110,7 +114,7 @@ export default function Others() {
             ))}
         </Swiper> */}
 
-        <div className="grid lg:col-span-1 lg:grid-cols-4">
+        <div className="grid lg:col-span-1 lg:grid-cols-5">
 
         {expertiseData &&
             expertiseData.map((expertise, index) => (

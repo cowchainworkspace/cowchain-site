@@ -74,13 +74,13 @@ export default function FAQ() {
                     key={index}
                   >
                     <AccordionButton className={cn("relative")}>
-                      <div className="mr-auto w-full max-w-3xl text-left ">
+                      <div className="mr-auto w-full max-w-[287px] text-left ">
                         <span className="max-w-2xl text-left font-roc !text-[14px] font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
                           {faq.title}
                         </span>
                       </div>
                       {isExpanded ? (
-                         <div className="flex items-center justify-center" style={{
+                         <div className="flex items-center justify-end md:justify-center" style={{
                           width: screenWidth > 768 ? 150 : 50,
                         }}>
                         <svg
@@ -100,7 +100,7 @@ export default function FAQ() {
                         </svg>
                         </div>
                       ) : (
-                        <div className="flex items-center justify-center" style={{
+                        <div className="flex items-center justify-end md:justify-center" style={{
                           width: screenWidth > 768 ? 150 : 50,
                         }}>
                           <svg
