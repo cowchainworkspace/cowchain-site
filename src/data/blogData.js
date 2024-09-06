@@ -1,6 +1,6 @@
-import b1 from '../assets/blog/post1.jpg';
-import b2 from '../assets/blog/post2.jpg';
-import b3 from '../assets/blog/post3.jpg';
+import b1 from '../assets/blog/articles/article1.png';
+import b2 from '../assets/blog/articles/article2.png';
+import b3 from '../assets/blog/articles/article3.png';
 
 export const blogData = [
   {
@@ -30,14 +30,5 @@ export const blogData = [
     author: '',
     date: '',
     photo: b3,
-  },
-  {
-    id: 'post4',
-    title: 'Web3 Security: Safeguarding Your Decentralized Future',
-    description:
-      'Duis vel odio id sem mattis imperdiet vitae maximus augue. Morbi iaculis quam gravida, mattis massa id, accumsan tellus. Nulla id venenatis massa. Nam egestas sapien mauris, sit amet euismod magna aliquam sed. Vivamus justo dui, sagittis eu porta sit amet, tempus ut nisi. Praesent a lacus lacus. Aliquam blandit enim in leo ornare condimentum.',
-    author: '',
-    date: '',
-    photo: b1,
   },
 ];

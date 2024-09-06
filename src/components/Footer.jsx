@@ -121,7 +121,7 @@ const faqStyles = {
   timingFunc: "ease"
 };
 
-export default function Footer() {
+export default function Footer({footerForm}) {
   const [isBorder, setIsBorder] = useState(false);
   const { isRendering } = useLoader();
   const pathname = usePathname();
@@ -157,7 +157,7 @@ export default function Footer() {
                 </a>
               </p>
             </div>
-            {/* <FooterForm /> */}
+            {footerForm && <FooterForm />}
             <div className="flex flex-wrap items-center gap-x-2 gap-y-2 md:mx-0 md:justify-start">
               <a
                 href="https://www.linkedin.com/company/cowchain/"

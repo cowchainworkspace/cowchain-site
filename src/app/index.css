@@ -157,9 +157,7 @@ p,
 
 .btn-submit {
   @apply flex h-12 cursor-pointer items-center justify-center bg-white px-8 pt-1 text-center font-roc text-sm font-medium uppercase text-black lg:h-16;
-  transition:
-    color 0.3s,
-    background-color 0.3s ease-in-out;
+  transition: color 0.3s, background-color 0.3s ease-in-out;
 }
 
 .md-border-r {

@@ -5,6 +5,8 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import emailjs from "@emailjs/browser";
 import { PageNotFound } from "pages/404";
 import { Suspense } from "react";
+import { Blog } from "./app/(dashboard)/blog/page";
+import Article from "./app/(dashboard)/blog/article/page";
 
 const Home = lazy(() => import("pages/home"));
 const Clients = lazy(() => import("pages/clients"));
@@ -16,7 +18,7 @@ const CaseStudiesStep = lazy(() => import("pages/case-studies/step"));
 const CaseStudiesRetroBridge = lazy(
   () => import("pages/case-studies/retrobridge")
 );
-const Article = lazy(() => import("pages/article"));
+// const Article = lazy(() => import("pages/article"));
 const ScrollToTop = lazy(() => import("components/ScrollToTop"));
 
 const Service = lazy(() => import('./app/(dashboard)/services/components/service/page'))
@@ -82,9 +84,15 @@ function App() {
               />
 
               <Route
-                path="/blog/article"
+                path="/article"
                 element={<Article setBurgerOpen={setBurgerOpen} />}
               />
+
+<Route
+                path="/blog"
+                element={<Blog setBurgerOpen={setBurgerOpen} />}
+              />
+
               <Route
                 path="/services"
                 element={<Services setBurgerOpen={setBurgerOpen} />}
