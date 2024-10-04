@@ -48,3 +48,30 @@ export const useGetItem = (section, id) => {
   });
   return query;
 };
+
+export const useGetArticleBySlug = (slug) => {
+  return useQuery({
+    queryKey: ['article', slug],
+
+    queryFn: async () => {
+      const res = await axios.get(
+        `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?filters[slug][$eq]=${slug}&populate=*`,
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+          },
+        }
+      );
+      
+      if (!res.data.data.length) {
+        throw new Error('Article not found');
+      }
+      
+      return res.data.data[0]; // since it's filtered by slug, return the first item
+    },
+
+    onError: (err) => {
+      console.error(err);
+    },
+  });
+};

@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 import { PageNotFound } from "pages/404";
 import { Suspense } from "react";
 import { Blog } from "./app/(dashboard)/blog/page";
-import Article from "./app/(dashboard)/blog/article/page";
+import Article from "./app/(dashboard)/blog/articles/[slug]/page";
 
 const Home = lazy(() => import("pages/home"));
 const Clients = lazy(() => import("pages/clients"));

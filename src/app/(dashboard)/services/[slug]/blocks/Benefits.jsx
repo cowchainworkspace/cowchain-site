@@ -60,8 +60,6 @@ const benefitsData = [
 export default function Benefits() {
   const { data } = useGetItems("services-expertises");
 
-  console.log('benefits', data)
-
   const expandVariants = {
     visible: { height: "auto" },
     hidden: { height: 0 }
@@ -92,8 +90,6 @@ export default function Benefits() {
   useEffect(() => {
     setScreenWidth(window.innerWidth);
   }, []);
-
-  console.log(screenWidth)
   return (
     <section
       id="benefits"

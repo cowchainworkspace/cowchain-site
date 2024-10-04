@@ -183,8 +183,6 @@ const Cases = () => {
     }
   };
 
-  console.log("isBeginning", isBeginning, "isEnd", isEnd);
-
   return (
     <section
       ref={containerRef}

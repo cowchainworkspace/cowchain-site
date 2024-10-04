@@ -1,7 +1,6 @@
 import TextTruncate from "react-text-truncate";
 
 export const Post = ({ id, title, description, photo }) => {
-  console.log('photo', photo)
   const toText = (node) => {
     const tag = document.createElement("div");
     tag.innerHTML = node;

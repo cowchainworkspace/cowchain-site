@@ -3,18 +3,43 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Post = ({ tag, title, content, imgSrc, className }) => {
+export const Post = ({ atributes }) => {
+
+  const {
+    Banner,
+    Date,
+    Slug,
+    Text_block,
+    Title,
+    article_section,
+    author_avatar,
+    author_description,
+    author_title,
+    center_content,
+    center_title,
+    createdAt,
+    preview_img,
+    publishedAt,
+    tag,
+    updatedAt
+  } = atributes || {};
+
+  console.log('preview_img', atributes?.Text_block[0]?.children[0]?.text)
+
   return (
     <Link
-  href={"/blog/article"}
+  // href={"/blog/article"}
+  href={`blog/articles/${Slug}`}
   className={cn(
     "group relative flex w-full cursor-pointer flex-col justify-start p-6 border border-th-fade",
-    className
+    // className
   )}
 >
       <Image
-        className="mb-8 h-[360px] w-full self-center object-none transition-transform duration-200 group-hover:scale-95  md:h-auto md:object-fill"
-        src={imgSrc}
+      height={362}
+      width={672}
+        className="mb-8 max-h-[360px] w-full self-center object-none transition-transform duration-200 group-hover:scale-95  md:h-auto md:object-fill"
+        src={preview_img?.data?.attributes?.url}
         alt=""
       />
 
@@ -26,9 +51,9 @@ export const Post = ({ tag, title, content, imgSrc, className }) => {
 
       <Tag className="mb-6 mr-auto" title={tag} />
       <span className="mb-4 font-roc text-lg font-medium uppercase leading-6 text-white">
-        {title}
+        {Title}
       </span>
-      <span className="text-sm  text-secondary">{content}</span>
+      { Text_block?.map((text) => <span className="text-sm  text-secondary">{text.children[0]?.text}</span>)}
     </Link>
   );
 };

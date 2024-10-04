@@ -12,8 +12,6 @@ import CasesMobile from './CasesMobile.jsx'
 
 export default function HomeContent() {
 
-  console.log('wefwef', process.env.NEXT_PUBLIC_STRAPI_TOKEN)
-
   return (
     <>
       {/* <Benefits /> */}
