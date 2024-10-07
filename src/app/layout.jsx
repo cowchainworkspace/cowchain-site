@@ -3,8 +3,8 @@ import "./home.css";
 import { ClientProvider } from "@/lib/api/client";
 
 export const metadata = {
-  title: "Cowchain - Blockchain Development",
-  description: 'Cowchain blends blockchain smarts with business savvy. Think full-stack coding, white-label products, and marketing that actually works.',
+  title: "Web3 Development Services | Cowchain",
+  description: 'Unlock the future with our Web3 development company. ⭐️ Cowchain specialize in creating decentralized applications, DeFi platforms, and metaverse solutions to revolutionize your business.',
 };
 
 export default function RootLayout({ children }) {
