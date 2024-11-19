@@ -261,9 +261,9 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="px-2 py-3 md:col-span-2 md:py-8">
+          <div className="px-2 text-white py-3 md:col-span-2 md:py-8">
             <a href="/">
-              <Image className="w-full" src={logofont} alt=""></Image>
+              <Image className="w-full" src={logofont} alt="Cowchain Logo"></Image>
             </a>
           </div>
         </div>

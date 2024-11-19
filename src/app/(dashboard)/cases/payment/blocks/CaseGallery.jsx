@@ -16,7 +16,7 @@ export const CaseGallery = () => {
         <Image
           src={imgSrc}
           className="h-[420px] w-[180px] lg:h-[568px] lg:w-[248px]"
-          alt=""
+          alt="Case"
           key={index}
         />
       ))}

@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <section id="clients-header" className="relative">
       <Image
-        alt=""
+        alt="Header Background"
         className="absolute right-0 top-0 min-h-[150%] min-w-[200vw] md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
         src={bg_lg}
       />

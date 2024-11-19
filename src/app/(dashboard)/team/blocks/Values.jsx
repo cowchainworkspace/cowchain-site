@@ -78,7 +78,7 @@ export const Values = () => {
           <Image
             className="absolute -bottom-44 left-0 hidden h-[1625px] w-[700px] xl:block"
             src={bg}
-            alt=""
+            alt="Values Bg"
           ></Image>
           <button className=" absolute bottom-1/3 left-0 right-0 z-20 mx-auto hidden h-36 w-36 cursor-pointer items-center justify-center rounded-full bg-white font-roc text-base font-medium uppercase text-black lg:h-44 lg:w-44 xl:block">
             Get in touch

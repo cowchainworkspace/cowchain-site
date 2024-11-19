@@ -19,7 +19,7 @@ const Header = () => {
             srcSet={`${bg_top} 360w, ${bg_top} 480w, ${bg_top} 720w, ${bg_top_lg} 1920w`}
             sizes="(max-width: 640px) 100vw, 100vw"
             priority
-            alt=""
+            alt="Header Background"
             className="absolute left-0 top-0 hidden w-full md:block"
             src={bg_top_lg}
           />

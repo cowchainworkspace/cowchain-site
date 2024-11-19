@@ -14,7 +14,7 @@ export const CaseGallery = () => {
         <Image
           src={imgSrc}
           className="h-[420px] min-w-fit lg:h-[568px] "
-          alt=""
+          alt="Retrobridge Case"
           key={index}
         />
       ))}

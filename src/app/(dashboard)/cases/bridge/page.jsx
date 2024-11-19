@@ -111,7 +111,7 @@ const CaseStudiesRetroBridge = ({ setBurgerOpen }) => {
                     <Image
                       src={hotel}
                       className="mt-8 min-h-[270px] w-full object-cover lg:mt-14 lg:min-h-[500px]"
-                      alt=""
+                      alt="Retrobridge"
                     />
                   </div>
                   <div className="w-full border-t-2 border-white/50 px-5 pt-4 lg:max-w-[600px] lg:px-0">
@@ -130,7 +130,7 @@ const CaseStudiesRetroBridge = ({ setBurgerOpen }) => {
                     <Image
                       src={hotel_2}
                       className="mt-8 min-h-[270px] w-full object-cover md:mt-14 lg:min-h-[500px]"
-                      alt=""
+                      alt="Retrobridge"
                     />
                   </div>
                 </div>

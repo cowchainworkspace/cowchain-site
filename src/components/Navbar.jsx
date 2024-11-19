@@ -151,7 +151,7 @@ export default function Navbar({ isPageNotFound = false }) {
               priority
               srcSet={`${bg} 360w, ${bg} 480w, ${bg} 720w, ${bg_lg} 1920w`}
               sizes="(max-width: 640px) 100vw, 100vw"
-              alt=""
+              alt="Top Background"
               className={cn(
                 "absolute bottom-0 left-0 hidden h-full w-full md:block",
                 {
@@ -170,13 +170,13 @@ export default function Navbar({ isPageNotFound = false }) {
                 }
               )}
               src={bg_home}
-              alt=""
+              alt="Navbar Background"
             />
           </>
         ) : (
           <Image
             srcSet={`${bg_clients} 360w, ${bg_clients} 480w, ${bg_clients} 720w, ${bg_clients_lg} 1920w`}
-            alt=""
+            alt="Clients Background"
             className={cn(
               "absolute bottom-0 right-0 min-h-[140%] min-w-[200vw] md:min-w-full",
               {
@@ -222,24 +222,25 @@ export default function Navbar({ isPageNotFound = false }) {
             className="flex items-center justify-center"
             rel="nofollow"
           >
-            <img
-              className="w-32 md:w-36 lg:w-40"
-              title="Home"
-              alt="Home-1"
-              src={"/homepage/logo_light.svg"}
-            ></img>
+            <Image
+              src="/homepage/logo_light.svg"
+              alt="Logo"
+              width={160}
+              height={160}
+              priority
+            />
           </Link>
           {toggleMenu ? (
             <Image
               className="ml-auto w-6 cursor-pointer lg:hidden"
               src={menu_close}
               onClick={closeBurger}
-              alt=""
+              alt="Close Menu"
             ></Image>
           ) : (
             <Image
               className="ml-auto w-6 cursor-pointer lg:hidden"
-              alt=""
+              alt="Open Menu"
               src={menu_open}
               onClick={openBurger}
             ></Image>
@@ -277,12 +278,14 @@ export default function Navbar({ isPageNotFound = false }) {
                 >
                   <motion.div className="relative flex h-24 items-center border-b border-b-th-fade px-4 md:h-16">
                     <a href="/" rel="nofollow">
-                      <img
+                      <Image
                         className="w-32"
                         title="Home"
                         alt="Home-1"
-                        src={"/homepage/logo_light.svg"}
-                      ></img>
+                        src="/homepage/logo_light.svg"
+                        width={128}
+                        height={128}
+                      />
                     </a>
                     <Image
                       className="ml-auto w-8 cursor-pointer lg:hidden"
@@ -307,7 +310,7 @@ export default function Navbar({ isPageNotFound = false }) {
                           <Image
                             className="mb-1 ml-auto w-6"
                             src={arrow}
-                            alt=""
+                            alt="Arrow"
                           ></Image>
                         </div>
                       </Link>
@@ -328,7 +331,7 @@ export default function Navbar({ isPageNotFound = false }) {
                           <Image
                             className="mb-1 ml-auto w-6"
                             src={arrow}
-                            alt=""
+                            alt="Arrow"
                           ></Image>
                         </div>
                       </Link>

@@ -3,6 +3,7 @@ import { HeroSection } from "./blocks/HeroSections";
 import Link from "next/link";
 import dot from "@/assets/icons/dot.png";
 import Image from "next/image";
+import { Descriptions } from "antd";
 
 const links = [
   {
@@ -59,10 +60,9 @@ const casesLinks = [
 ];
 
 export const metadata = {
-  metadataBase: new URL("https://cowchain.io/"),
-  alternates: {
-    canonical: "/sitemap"
-  }
+  metadataBase: new URL("https://cowchain.io/sitemap"),
+  title: "Decentralized Web3 Development Services | Cowchain",
+  description: `Discover Cowchain's blockchain expertise and its revolutionary impact on decentralized applications and business solutions.`
 };
 
 export default function Page() {
@@ -95,7 +95,7 @@ export default function Page() {
                         key={index}
                         className="my-4 ml-4 flex items-center gap-2"
                       >
-                        <Image alt="" className="h-4 w-4" src={dot} />
+                        <Image alt="Dot" className="h-4 w-4" src={dot} />
                         <p className="opacity-80">{link.title}</p>
                       </Link>
                     ))}

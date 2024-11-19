@@ -114,7 +114,7 @@ export default function Stack({
             {title}
           </h2>
           {isGradient && (
-            <Image src={clients} className={gradientStyles} alt="" />
+            <Image src={clients} className={gradientStyles} alt="Clients" />
           )}
         </div>
         <div className="grid lg:col-span-2 lg:grid-cols-2">

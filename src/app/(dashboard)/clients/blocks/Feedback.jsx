@@ -52,7 +52,7 @@ const Quote = ({ text, author, index }) => {
         <div className="flex items-center gap-x-4">
           <div className="flex items-center gap-x-1">
             {[0, 1, 2, 3, 4].map((n, index) => (
-              <Image key={index} className="w-4" src={star} alt=""></Image>
+              <Image key={index} className="w-4" src={star} alt="Star Icon"></Image>
             ))}
           </div>
           <p className="markup mt-1 !font-normal text-white">5.0</p>
@@ -71,7 +71,7 @@ const Feedback = () => {
           <Image
             className="absolute -top-[40%] left-0 w-full md:-left-[20%] md:-top-[15vw] md:h-1/2"
             src={bg}
-            alt=""
+            alt="Feedback Background"
           ></Image>
           <div className="h-[1px]"></div>
           <div className="mx-default my-heading sticky bottom-[30vh] w-full self-end ">
@@ -85,7 +85,7 @@ const Feedback = () => {
                   rel="nofollow noreferrer"
                   target="_blank"
                 >
-                  <Image className="w-12 md:w-16" src={clutch} alt=""></Image>
+                  <Image className="w-12 md:w-16" src={clutch} alt="Clutch"></Image>
                 </a>
                 <div>
                   <div className="flex items-center gap-x-4">
@@ -96,7 +96,7 @@ const Feedback = () => {
                           key={index}
                           className="w-4"
                           src={star}
-                          alt=""
+                          alt="Star Icon"
                         ></Image>
                       ))}
                     </div>
@@ -112,7 +112,7 @@ const Feedback = () => {
                   rel="nofollow noreferrer"
                   target="_blank"
                 >
-                  <Image className="w-12 md:w-16" src={upwork} alt=""></Image>
+                  <Image className="w-12 md:w-16" src={upwork} alt="Upwork"></Image>
                 </a>
               </div>
             </div>

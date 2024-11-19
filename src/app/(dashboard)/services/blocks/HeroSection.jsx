@@ -12,7 +12,7 @@ export const HeroSection = () => {
       className="scrollbar-none container  relative mb-9 w-full border-b border-b-th-fade pt-20 md:mb-[100px]  md:max-w-full lg:pt-[120px]"
     >
       <Image
-        alt=""
+        alt="Header Background"
         className="absolute right-0 top-0 min-h-[100%]   min-w-[200vw] md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
         src={bg_lg}
       />
@@ -32,12 +32,12 @@ export const HeroSection = () => {
         <Image
           className="  mb-4 hidden w-full self-center antialiased md:block md:h-auto  md:object-fill lg:scale-[1.15] min-[2000px]:mb-6 min-[2000px]:scale-125"
           src={stack}
-          alt=""
+          alt="Stack"
         />{" "}
         <Image
           className="block w-full self-center  md:hidden"
           src={stack_mobile}
-          alt=""
+          alt="Stack"
         />
       </div>
     </section>
