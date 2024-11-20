@@ -20,8 +20,9 @@ export const HeroSection = ({ setTags, tags }) => {
       />
       <div className="relative flex flex-col px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
         <div className="mb-6 flex gap-4">
-          <Link href={"/"}>
+          <Link className="flex gap-2" href={"/"}>
             <Image className="h-[24px] w-[24px]" src={home} />
+            <span className="text-white">Home</span>
           </Link>
           <Image className="h-[24px] w-[24px]" src={arrow} />
           <span className="text-white">Cases</span>

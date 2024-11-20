@@ -4,6 +4,9 @@ import bg_lg from "@/assets/bg/clients_header_bg_lg.png";
 import stack from "@/assets/services/stack.svg";
 import stack_mobile from "@/assets/services/stack-mobile.svg";
 import Image from "next/image";
+import home from "@/assets/icons/home.png";
+import Link from "next/link";
+import arrow from "@/assets/icons/arrow.svg";
 
 export const HeroSection = () => {
   return (
@@ -17,6 +20,16 @@ export const HeroSection = () => {
         src={bg_lg}
       />
       <div className="relative flex cursor-default flex-col items-center justify-center px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
+        <div className="items-left flex w-full">
+          <div className="mb-6 flex gap-4">
+            <Link className="flex gap-2" href={"/"}>
+              <Image className="h-[24px] w-[24px]" src={home} />
+              <span className="text-white">Home</span>
+            </Link>
+            <Image className="h-[24px] w-[24px]" src={arrow} />
+            <span className="text-white">Services & Technologies</span>
+          </div>
+        </div>
         <Tag title={"services"} className={"mb-4 text-base md:mb-8"} />
         <h1 className="mb-10 max-w-[570px]  text-center   text-5xl uppercase text-white lg:mt-6   lg:text-[82px]">
           Services & Technologies
