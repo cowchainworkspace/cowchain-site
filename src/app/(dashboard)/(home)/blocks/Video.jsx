@@ -34,18 +34,16 @@ const Video = () => {
   return (
     <video
       ref={vidRef}
-      className="mt-[68px] w-full h-auto"
+      className="mt-[68px] h-auto w-full !max-w-[896px] px-[20px] sm:px-[70px] md:px-[150px] !object-contain"
       id="bg_vid"
       playsInline
+      src="/homepage/video.webm"
       muted
       loop
       controls=""
       preload="none"
       poster={poster}
-    >
-      <source src="/homepage/video.webm" type="video/webm" />
-      <source src="/homepage/video.mp4" type="video/mp4" />
-    </video>
+    ></video>
   );
 };
 
