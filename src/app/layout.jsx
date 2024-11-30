@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="preload" href="/homepage/video.webm" type="video" />
+        <link rel="preload" href="/homepage/video.mp4" type="video" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
