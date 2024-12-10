@@ -15,7 +15,7 @@ import { useSearchParams } from "next/navigation";
 import { useGetItem } from "@/hooks/use-strapi";
 import dot from "@/assets/icons/dot.png";
 
-export const Page = ({ props }) => {
+const Page = () => {
   const searchParams = useSearchParams();
   const search = searchParams.get("id");
 

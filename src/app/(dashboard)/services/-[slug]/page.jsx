@@ -39,7 +39,7 @@ export const metadata = {
   }
 };
 
-const Services = ({ setBurgerOpen }) => {
+const Services = () => {
   return (
     <section >
       <div className="overflow-x-hidden">

@@ -6,7 +6,7 @@ import Contact from "@/components/Contact";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { HeroSection } from "../../blocks/HeroSection";
 
-export const Service = ({ setBurgerOpen }) => {
+const Service = () => {
   return (
     <section id="clients-wrapper">
       <ParallaxProvider>

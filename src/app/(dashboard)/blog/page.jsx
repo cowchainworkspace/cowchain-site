@@ -61,7 +61,7 @@ const posts = {
   ]
 };
 
-export default function Blog({ setBurgerOpen }) {
+export default function Blog() {
   const [visiblePosts, setVisiblePosts] = useState(3);
 
   const { data: articles } = useGetItems("articles");

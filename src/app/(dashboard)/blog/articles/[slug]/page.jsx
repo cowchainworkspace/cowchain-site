@@ -17,7 +17,7 @@ import { useGetArticleBySlug } from "@/hooks/use-strapi";
 
 const titles = ["first", "second", "third"];
 
-export default function Article({ setBurgerOpen }) {
+function Article() {
   const [activeButton, setActiveButton] = useState(null);
 
   const params = useParams(); 
@@ -228,3 +228,5 @@ export default function Article({ setBurgerOpen }) {
     </section>
   );
 }
+
+export default Article;

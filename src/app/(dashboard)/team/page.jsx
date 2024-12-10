@@ -24,7 +24,7 @@ export const metadata = {
   }
 };
 
-const Team = ({ setBurgerOpen }) => {
+const Team = () => {
   return (
     <section className=" ">
       <div className="scrollbar-none bg-black">
@@ -94,32 +94,6 @@ const Team = ({ setBurgerOpen }) => {
               </div>
             </div>
           </div>
-
-          {/* <div className="relative mb-16 mt-[55px] h-[286px] overflow-visible md:mt-[94px] lg:h-[492px]">
-            <div className="absolute left-0 right-[-20px] overflow-hidden md:right-0">
-              <div className="flex max-w-[100%] items-start justify-start gap-2 overflow-x-scroll md:items-center md:justify-center md:overflow-auto md:overflow-hidden lg:max-w-full">
-                {photos.map((imgSrc, index) => (
-                  <Image
-                    src={imgSrc}
-                    className="h-auto w-[90%] max-w-[590px] md:w-[100%] lg:w-[100%]"
-                    alt=""
-                    key={index}
-                  />
-                ))}
-              </div>
-            </div>
-          </div> */}
-
-          {/* <div className="mb-16 mt-9 flex max-w-[110%] items-start  justify-start gap-2 overflow-x-scroll md:mt-0 md:items-center md:overflow-auto   lg:max-w-full 3xl:justify-center">
-            {photos.map((imgSrc, index) => (
-              <Image
-                src={imgSrc}
-                className="h-[286px] w-[300px] lg:h-[492px] lg:w-[516px]"
-                alt=""
-                key={index}
-              />
-            ))}
-          </div> */}
         </div>
 
        

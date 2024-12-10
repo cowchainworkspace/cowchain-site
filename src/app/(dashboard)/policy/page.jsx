@@ -71,7 +71,7 @@ export const metadata = {
   }
 };
 
-const Policy = ({ setBurgerOpen }) => {
+const Policy = () => {
   return (
     <section id="clients-wrapper">
       <div className="relative bg-black">
