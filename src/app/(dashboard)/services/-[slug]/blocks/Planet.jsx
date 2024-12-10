@@ -29,7 +29,6 @@ const expertiseData = [
 ];
 
 export default function Planet() {
-  // const { data } = useGetItems("services-contents");
   return (
     <section id="view_more" className="relative z-10  mt-16  lg:my-[120px]">
       <div className="relative grid grid-cols-1 md:grid-cols-2">

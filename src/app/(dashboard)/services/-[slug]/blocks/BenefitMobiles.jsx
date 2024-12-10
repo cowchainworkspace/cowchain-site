@@ -43,7 +43,6 @@ const benefitsData = [
 ];
 
 export default function BenefitsMobiles() {
-  // const { data } = useGetItems("services-expertises");
 
   const expandVariants = {
     visible: { height: "auto" },
@@ -86,7 +85,6 @@ export default function BenefitsMobiles() {
                   key={benefit.title + index}
                 >
                   <article
-                    // style={benefit.initialStyle}
                     className={cn(
                       "relative flex h-[430px] min-h-[250px] grow flex-col items-center justify-center overflow-hidden border-t border-t-th-fade bg-black px-5    duration-1000  will-change-transform ",
                       benefitsData[index].initialStyle,

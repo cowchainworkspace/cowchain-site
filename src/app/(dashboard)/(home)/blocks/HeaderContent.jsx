@@ -17,20 +17,6 @@ export default function HeaderContent() {
 
       <div className="mt-auto grid grid-cols-1 md:grid-cols-2">
         <div className="relative flex items-center md:gap-x-1">
-          {/* <a
-            href="https://www.upwork.com/ag/cowchain/"
-            rel="nofollow noreferrer"
-            target="_blank"
-          >
-            <Image className="w-11 md:w-[70px]" src={upwork} alt=""></Image>
-          </a>
-          <a
-            href="https://clutch.co/profile/cowchain"
-            rel="nofollow noreferrer"
-            target="_blank"
-          >
-            <Image className="w-11 md:w-[70px]" src={clutch} alt=""></Image>
-          </a> */}
 
           <h2 className="hidden text-[32px] leading-[29px] md:block">
             Driving Crypto Evolution: <br /> From Vision to Reality, <br />{" "}

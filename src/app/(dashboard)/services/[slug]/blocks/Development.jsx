@@ -124,16 +124,6 @@ export default function Development() {
                 </div>
               </div>
             </section>
-            {/* <p className="block max-w-xl cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:hidden md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
-              Being fully immersed in Web3, we’re not just devs —{" "}
-              <span className="violet-gradient-text">
-                we’re product visionaries
-              </span>{" "}
-              working as an in-house team{" "}
-              <span className="text-[#808080]">
-                with you to grow your business with Web3
-              </span>
-            </p> */}
           </div>
         </div>
 
@@ -148,35 +138,10 @@ export default function Development() {
                   <div
                     className={cn(
                       "relative bg-cover px-5 py-[24px] xl:px-[60px] xl:py-[36px]"
-                      // {
-                      //   "bg-[url('/assets/faq-gradient.png')]": isExpanded
-                      // }
-
-                      // benefitsData[index].initialStyle,
-                      //   scrollIndex >= index
-                      //     ? benefitsData[index].transformStyle
-                      //     : ""
                     )}
                     style={benefit.style}
                     key={index}
                   >
-                    {/* <div className="absolute left-[-6px] flex  flex-col items-center justify-center">
-                      <div
-                        className={cn(
-                          {
-                            "absolute top-[-35px] bottom-[-120px] w-[1px] bg-[#808080]": isExpanded
-                          }
-                          // {
-                          //   "h-[5vh]": index === 4
-                          // }
-                        )}
-                      ></div>
-                      {isExpanded ? (
-                        <div className="mt-[15px] h-[11px] min-w-[11px] rounded-full bg-[#CF91FF]"></div>
-                      ) :(
-                        <div className="mt-[15px] h-[6px] min-w-[6px] rounded-full bg-[#808080]"></div>
-                      )}
-                    </div> */}
 
                     <div
                       className={cn(
@@ -240,25 +205,6 @@ export default function Development() {
                           <Image src={arrowUp} />
                         </div>
                       ) : (
-                        //  <div className="flex items-center justify-center" style={{
-                        //   width: screenWidth > 768 ? 150 : 50,
-                        // }}>
-                        //   <svg
-                        //     width={screenWidth > 768 ? "50" : "32"}
-                        //     height={screenWidth > 768 ? "50" : "32"}
-                        //     viewBox="0 0 32 32"
-                        //     fill="none"
-                        //     xmlns="http://www.w3.org/2000/svg"
-                        //   >
-                        //     <circle cx="16" cy="16" r="16" fill="white" />
-                        //     <path
-                        //       d="M12.2656 16H19.7323"
-                        //       stroke="black"
-                        //       strokeLinecap="round"
-                        //       strokeLinejoin="round"
-                        //     />
-                        //   </svg>
-                        // </div>
 
                         <div
                           className="hidden md:flex items-center justify-center"
@@ -268,42 +214,6 @@ export default function Development() {
                         >
                           <Image src={arrowDown} />
                         </div>
-
-                        // <div
-                        //   className="flex items-center justify-center"
-                        //   style={{
-                        //     width: screenWidth > 768 ? 150 : 50
-                        //   }}
-                        // >
-                        //   <svg
-                        //     width={screenWidth > 768 ? "50" : "32"}
-                        //     height={screenWidth > 768 ? "50" : "32"}
-                        //     viewBox="0 0 32 32"
-                        //     fill="none"
-                        //     xmlns="http://www.w3.org/2000/svg"
-                        //   >
-                        //     <circle
-                        //       cx="16"
-                        //       cy="16"
-                        //       r="15.75"
-                        //       stroke="white"
-                        //       strokeOpacity="0.5"
-                        //       strokeWidth="0.5"
-                        //     />
-                        //     <path
-                        //       d="M16 12.2666V19.7333"
-                        //       stroke="white"
-                        //       strokeLinecap="round"
-                        //       strokeLinejoin="round"
-                        //     />
-                        //     <path
-                        //       d="M12.2656 16H19.7323"
-                        //       stroke="white"
-                        //       strokeLinecap="round"
-                        //       strokeLinejoin="round"
-                        //     />
-                        //   </svg>
-                        // </div>
                       )}
                     </AccordionButton>
                     <AccordionPanel
@@ -322,83 +232,6 @@ export default function Development() {
               </AccordionItem>
             ))}
           </Accordion>
-
-          {/* <Scrollama className="relative" offset={0.5}>
-            {data?.data.map((benefit, index) => {
-              return (
-                <Step
-                  className="relative"
-                  data={index + 1}
-                  key={benefit.title + index}
-                >
-                  <div className="relative flex items-start justify-start">
-                    <article
-                      style={benefit.style}
-                      className={cn(
-                        "relative flex h-[25hv] min-h-[25hv] grow  items-start justify-start overflow-hidden  bg-black px-5    duration-1000  will-change-transform ",
-                        benefitsData[index].initialStyle,
-                        scrollIndex >= index
-                          ? benefitsData[index].transformStyle
-                          : ""
-                      )}
-                    >
-                      <div className="mx-6 flex  flex-col items-center justify-center">
-                        <div
-                          className={cn(
-                            "absolute h-[125vh] w-[1px] bg-[#808080]",
-                            {
-                              "h-[5vh]": index === 4
-                            }
-                          )}
-                        ></div>
-                        <div className="mt-12 h-3 min-w-3 rounded-full bg-[#808080]"></div>
-                      </div>
-
-                      <motion.div
-                        variants={expandVariants}
-                        id={"b-expandable-" + index}
-                        className={"flex  flex-col justify-center py-10"}
-                      >
-                        <h2
-                          className={cn(
-                            "mb-16 flex max-w-[285px]  text-xl text-white",
-                            benefit.textStyle,
-                            benefit.headerStyle
-                          )}
-                        >
-                          {benefit.attributes.title}
-                        </h2>
-                        <motion.p
-                          variants={textVariants}
-                          className={cn(
-                            " max-h-[300px]  min-h-[300px] text-sm !leading-[180%] text-secondary  transition-all  duration-[1000ms] ease-in will-change-transform lg:text-lg",
-                            benefit.textStyle,
-                            {
-                              "block  transition-all duration-1000":
-                                scrollIndex === index
-                            }
-                          )}
-                        >
-                          <Markdown
-                            children={benefit.attributes.text}
-                            options={{
-                              createElement(type, props, children) {
-                                return (
-                                  <div className="parent markdown">
-                                    {createElement(type, props, children)}
-                                  </div>
-                                );
-                              }
-                            }}
-                          />
-                        </motion.p>
-                      </motion.div>
-                    </article>
-                  </div>
-                </Step>
-              );
-            })}
-          </Scrollama> */}
         </div>
       </div>
     </section>

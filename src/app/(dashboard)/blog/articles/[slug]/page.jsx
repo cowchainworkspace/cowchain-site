@@ -1,9 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-// import Navbar from "components/Navbar";
 import { HeroSection } from "../blocks/HeroSection";
-// import { Footer } from "@/components/Footer";
 import { useParams } from 'next/navigation';
 
 import splash from "@/assets/blog/articles/splash.png";
@@ -62,7 +60,6 @@ export default function Article({ setBurgerOpen }) {
   return (
     <section>
       <div className="relative min-h-screen  bg-black">
-        {/* <Navbar isGradient={false} setBurgerOpen={setBurgerOpen} /> */}
         <HeroSection />
         <Image
           src={splash}
@@ -100,8 +97,6 @@ export default function Article({ setBurgerOpen }) {
                 id="first-article"
                 className="mb-6 text-left text-2xl uppercase"
               >
-                {/* Building Trust in the Metaverse: Security and Privacy in Web3
-                Development */}
                 {data?.attributes.Title}
               </h3>
               <span className="text-sm  text-secondary">
@@ -229,7 +224,6 @@ export default function Article({ setBurgerOpen }) {
         </div>
 
         <Blog />
-        {/* <Footer /> */}
       </div>
     </section>
   );

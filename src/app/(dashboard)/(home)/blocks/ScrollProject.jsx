@@ -13,7 +13,6 @@ export const ScrollProject = ({
   id,
   link,
   mobile = false
-  // index
 }) => {
   return (
     <div
@@ -24,10 +23,6 @@ export const ScrollProject = ({
         "h-[546px]  md:h-[698px]": !mobile,
         "min-h-[419px]  md:h-[419px]": mobile
       })}
-      // style={{
-      //   backgroundImage: `url(${photo.src})`,
-      //   backgroundSize: "403px auto"
-      // }}
     >
       <Link
         href={link}
@@ -41,9 +36,6 @@ export const ScrollProject = ({
           }
         )}
       >
-        {/* <div className="btn-contact ml-auto max-h-24 max-w-[96px] opacity-0 md:max-h-none md:max-w-none md:opacity-100">
-          VIEW PROJECT
-        </div> */}
 
         <div className="w-full flex justify-center">
           <Image
@@ -76,10 +68,6 @@ export const ScrollProject = ({
             {description}
           </p>
         </div>
-
-        {/* <div className="flex flex-col items-center">
-          <div className="h-[100%] max-h-[348px] w-auto w-auto md:max-h-[380px]"></div>
-        </div> */}
       </Link>
 
       <div

@@ -113,16 +113,6 @@ export default function Benefits() {
                   <h3 className="mx-auto cursor-default text-left font-roc text-2xl uppercase leading-none md:text-[42px]">
                     Expertise of Our Smart Contract Development Company
                   </h3>
-
-                  {/* <div className="hidden md:block">
-                  <button
-                    onClick={() => setModalOpen(true)}
-                    type="submit"
-                    className="btn-submit uppercase xl:px-12"
-                  >
-                    Have a project in mind?
-                  </button>
-                  </div> */}
                   <ContactForm
                     modalOpen={modalOpen}
                     setModalOpen={setModalOpen}
@@ -130,16 +120,6 @@ export default function Benefits() {
                 </div>
               </div>
             </section>
-            {/* <p className="block max-w-xl cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:hidden md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
-              Being fully immersed in Web3, we’re not just devs —{" "}
-              <span className="violet-gradient-text">
-                we’re product visionaries
-              </span>{" "}
-              working as an in-house team{" "}
-              <span className="text-[#ffffff71]">
-                with you to grow your business with Web3
-              </span>
-            </p> */}
           </div>
         </div>
         <div className="border-b border-b-th-fade md:flex md:w-1/2 md:flex-col">
@@ -153,9 +133,6 @@ export default function Benefits() {
                   <div
                     className={cn(
                       "relative bg-cover px-5 py-[24px] xl:px-[60px] xl:py-[36px] "
-                      // {
-                      //   "bg-[url('/assets/faq-gradient.png')]": isExpanded
-                      // }
                     )}
                     key={index}
                   >
@@ -227,9 +204,6 @@ export default function Benefits() {
                       )}
                     </AccordionButton>
                     <AccordionPanel
-                      // className={cn("opacity-0  will-change-transform", {
-                      //   "pt-6 opacity-100 ": isExpanded
-                      // })}
                       className={cn(
                         "markdown markdown_benefits max-h-[300px] mr-[20px] md:mr-[55px] mt-[24px] min-h-[150px] max-w-2xl overflow-auto text-sm !leading-[180%] text-secondary transition-all  duration-[1000ms]  ease-in will-change-transform lg:text-base 2xl:max-w-full",
                         benefit.initialStyle,
@@ -239,11 +213,6 @@ export default function Benefits() {
                         }
                       )}
                     >
-                      {/* <div className=" ">
-                        <p className="max-w-2xl !leading-[160%] !text-[#bbb] lg:!leading-[175%]">
-                          {benefit.text}
-                        </p>
-                      </div> */}
 
                       <Markdown
                         children={benefit.attributes.text}
@@ -263,72 +232,6 @@ export default function Benefits() {
               </AccordionItem>
             ))}
           </Accordion>
-
-
-          {/* <Scrollama className="relative" offset={0.5}>
-            {data?.data.map((benefit, index) => {
-              return (
-                <Step
-                  className="relative flex  items-center justify-center"
-                  data={index + 1}
-                  key={benefit.id}
-                >
-                  <article
-                    style={benefit.style}
-                    className={cn(
-                      "px-default relative flex h-[25vh] min-h-[25vh]  grow flex-col items-center justify-center  border-t border-t-th-fade bg-black  duration-1000 will-change-transform",
-                      benefitsData[index].initialStyle,
-                      scrollIndex >= index
-                        ? benefitsData[index].transformStyle
-                        : ""
-                    )}
-                  >
-                    <motion.div
-                      variants={expandVariants}
-                      id={"b-expandable-" + index}
-                      className={
-                        "flex max-h-[294px] w-full flex-col justify-center xl:max-h-[100px]"
-                      }
-                    >
-                      <h2
-                        className={cn(
-                          "my-8 max-w-xl text-xl text-white xl:pb-[10px] xl:pt-[105px] 3xl:pb-[85px] 3xl:pt-[60px]",
-                          benefit.textStyle,
-                          benefit.headerStyle
-                        )}
-                      >
-                        {benefit.attributes.title}
-                      </h2>
-                      <motion.p
-                        variants={textVariants}
-                        className={cn(
-                          "markdown max-h-[300px] min-h-[150px] max-w-2xl overflow-auto text-sm !leading-[180%] text-secondary transition-all  duration-[1000ms]  ease-in will-change-transform lg:text-base 2xl:max-w-full",
-                          benefit.textStyle,
-                          {
-                            "block  transition-all duration-1000":
-                              scrollIndex === index
-                          }
-                        )}
-                      >
-                        <Markdown
-                          children={benefit.attributes.text}
-                          options={{
-                            createElement(type, props, children) {
-                              return (
-                                <div className="parent markdown">
-                                  {createElement(type, props, children)}
-                                </div>
-                              );
-                            }
-                          }}
-                        />
-                      </motion.p>
-                    </motion.div>
-                  </article>
-                </Step>
-              );
-            })}
-          </Scrollama> */}
         </div>
       </div>
     </section>

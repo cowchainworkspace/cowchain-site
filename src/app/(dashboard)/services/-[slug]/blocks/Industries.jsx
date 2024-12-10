@@ -35,8 +35,6 @@ const data = [
 ];
 
 export const Industries = () => {
-  // const { data: textData } = useGetItems("services-contents");
-  // const { data: inData } = useGetItems("services-industries");
 
   const [caseIndex, setCaseIndex] = useState(0);
   return (

@@ -14,8 +14,6 @@ export default function HomeContent() {
 
   return (
     <>
-      {/* <Benefits /> */}
-      {/* <BenefitsMobiles /> */}
       <Stack title={"Our\nExpertise"} />
       <Clients />
       <Cases />

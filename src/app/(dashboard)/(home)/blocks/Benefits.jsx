@@ -121,9 +121,6 @@ export default function Benefits() {
                   <div
                     className={cn(
                       "relative bg-cover px-5 py-[24px] xl:px-[60px] xl:py-[36px]",
-                      // {
-                      //   "bg-[url('/assets/faq-gradient.png')]": isExpanded
-                      // }
                     )}
                     key={index}
                   >

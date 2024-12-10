@@ -61,13 +61,6 @@ const posts = {
   ]
 };
 
-// export const metadata = {
-//   metadataBase: new URL("https://cowchain.io/"),
-//   alternates: {
-//     canonical: "/blog"
-//   }
-// };
-
 export default function Blog({ setBurgerOpen }) {
   const [visiblePosts, setVisiblePosts] = useState(3);
 
@@ -85,7 +78,6 @@ return {tag: post.tag}
   return (
     <section>
       <div className="relative overflow-x-hidden bg-black">
-        {/* <Navbar isGradient={false} setBurgerOpen={setBurgerOpen} /> */}
         <HeroSection tags={tags} />
         <section className="border-y border-th-fade">
           <div className="flex w-full flex-col xl:flex-row">

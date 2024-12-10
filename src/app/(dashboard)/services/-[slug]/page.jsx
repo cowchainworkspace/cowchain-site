@@ -59,91 +59,12 @@ const Services = ({ setBurgerOpen }) => {
         title={"Blockchain networks we work with"}
         margin={""}
       /> 
-      {/* <ServiceStack margin={""} /> */}
-      {/* <Planet /> */}
-      {/* <Works /> */}
-      {/* <Feedback /> */}
-      {/* <Team /> */}
-      {/* <div className="mx-5 mt-14 flex flex-col gap-4  xl:mx-24 xl:mt-28 ">
-        <Tag
-          className={"max-w-[166px] mb-[16px] xl:max-w-[200px]"}
-          title={"founded and run by"}
-        />
-        <div className="flex flex-col justify-between xl:flex-row">
-          <div className="flex max-w-[370px] flex-col items-start justify-start gap-4 pb-7 xl:pb-28 ">
-            <h3 className="text-4xl uppercase xl:text-7xl">
-              Mykhailo Adzhoiev
-            </h3>
-          </div>
-          <div className="max-w-[497px] mt-[16px] text-secondary">
-            <p className="mb-5  text-secondary">
-              Mykhailo Adzhoiev is a blockchain entrepreneur and crypto
-              enthusiast with 9+ years of IT industry experience as a senior
-              developer, team leader, and CTO. After years of working in
-              traditional Web2 development, Mykhailo realized that he’s “been
-              there, seen that, done that.” So once he got involved in a Web3
-              project, he saw the potential for innovation in this industry that
-              was missing in Web2 and suddenly knew he wanted to become a part
-              of it.
-            </p>
-            <p className="text-secondary">
-              After 3 unsuccessful attempts to create a team of passionate Web3
-              devotees, Mykhailo’s 4th time was a charm. That’s how Cowchain was
-              created.
-            </p>
-            <div className="  mt-6 flex items-center justify-start    gap-x-4 xl:mt-4 ">
-              <a
-                href="https://www.linkedin.com/company/cowchain/"
-                rel="nofollow noreferrer"
-                target="_blank"
-              >
-                <Image
-                  alt="linkedin"
-                  className="w-12 lg:w-16"
-                  src={linkedin}
-                ></Image>
-              </a>
-              <a
-                href="https://t.me/cowchain_team"
-                rel="nofollow noreferrer"
-                target="_blank"
-              >
-                <Image
-                  alt="telegram"
-                  className="w-12 lg:w-16"
-                  src={telegram}
-                ></Image>
-              </a>
-              <a
-                href="mailto:sales@cowchain.io"
-                rel="nofollow noreferrer"
-                target="_blank"
-              >
-                <Image alt="mail" className="w-12 lg:w-16" src={mail}></Image>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="mb-16 mt-9 flex max-w-[110%] items-start  justify-start gap-2 overflow-x-scroll md:mt-0 md:items-center md:overflow-auto   lg:max-w-full  lg:justify-between">
-          {photos.map((imgSrc, index) => (
-            <Image
-              src={imgSrc}
-              className="h-[286px] w-[300px] lg:h-[492px] lg:w-[516px]"
-              alt=""
-              key={index}
-            />
-          ))}
-        </div>
-      </div> */}
-      {/* <Values /> */}
-      {/* <ValuesMobile /> */}
       <Clients />
       <Cases />
       <CasesMobile />
       <Others />
       <FAQ />
       <Contact className="py-[159px] px-[64px] md:pt-[169px] md:pb-[127px]"/>
-      {/* <ServiceContact /> */}
     </section>
   );
 };

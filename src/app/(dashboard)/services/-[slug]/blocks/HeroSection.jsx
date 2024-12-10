@@ -81,28 +81,6 @@ export const HeroSection = () => {
           Get a free quote
         </button>
       </div>
-      {/* <div className="container z-40 mt-2  max-w-[360px] md:max-w-[1300px]">
-        <div className="items-center justify-center gap-16 md:flex">
-          <p className="my-8 flex flex-col items-center justify-center">
-            <span className="font-roc text-3xl font-medium">$7,18B</span>
-            <span className="max-w-[228px] text-center text-base text-[#bbb]">
-              Global blockchain market value in 2022
-            </span>
-          </p>
-          <p className="my-8 flex flex-col items-center justify-center">
-            <span className="font-roc text-3xl font-medium">$163.83B</span>
-            <span className="max-w-[228px] text-center text-base text-[#bbb]">
-              Expected global blockchain market value by 2029
-            </span>
-          </p>
-          <p className="my-8 flex flex-col items-center justify-center">
-            <span className="font-roc text-3xl font-medium">86.2%</span>
-            <span className="max-w-[228px] text-center text-base text-[#bbb]">
-              US Blockchain market CAGR, 2023-2029
-            </span>
-          </p>
-        </div>
-      </div> */}
       <ContactForm modalOpen={modalOpen} setModalOpen={setModalOpen} />
     </section>
   );

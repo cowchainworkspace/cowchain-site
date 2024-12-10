@@ -105,7 +105,6 @@ const expertiseData = [
 export default function ServiceStack({
   margin = "mt-[calc(35vh_+_1.5625vh)]"
 }) {
-  // const { data } = useGetItems("services-contents");
 
   return (
     <section id="expertise" className={cn("relative   md:mt-0", margin)}>

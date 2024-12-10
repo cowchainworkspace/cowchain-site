@@ -33,57 +33,6 @@ import "swiper";
 import sliderLeftArrow from "@/assets/icons/sliderLeftArrow copy.svg";
 import sliderRightArrow from "@/assets/icons/sliderRightArrow.svg";
 
-const projectsData = [
-  // {
-  //   title: "Exchange wallet app",
-  //   link: "/cases/payment",
-  //   description:
-  //     "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
-  //   photo: web3fy,
-  //   tags: ["App Development", "SEO"]
-  // },
-  // {
-  //   title: "Retrobridge platform",
-  //   link: "/cases/bridge",
-  //   description:
-  //     "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
-  //   photo: bridge,
-  //   tags: ["Website Development", "24/7 Support", "Web3"]
-  // },
-  // {
-  //   title: "Tridend decentralized review website and app",
-  //   link: "/cases/hotel",
-  //   description:
-  //     "Mobile app development for a non-custodial Canadian exchange. KYC integration. Chat support",
-  //   photo: triend,
-  //   tags: ["App Development", "Website Development"]
-  // }
-  // {
-  //   title: "m2e platform",
-  //   link: "/cases/move",
-  //   description:
-  //     "Robust ecosystem for fitness finance that contains multiple various applications: move to earn application, blockchain wallet, dex, launchpad, dashboard etc.",
-  //   photo: step,
-  //   tags: ["DEX", "Staking", "Move-to-earn"]
-  // },
-  // {
-  //   title: "DECENTRALIZED CRYPTO EXCHANGE",
-  //   link: "/cases/finance",
-  //   description:
-  //     "Secure and convenient decentralized cryptocurrency exchange that allows to swap hundreds of crypto assets using liquidity pool mechanism.",
-  //   photo: finance,
-  //   tags: ["DEX", "DEFI"]
-  // },
-  // {
-  //   title: "CRYPTO WALLET APP",
-  //   link: "/cases/wallet",
-  //   description:
-  //     "Non-custodial multichain crypto wallet which allows users to create a blockchain wallet using web2 socials like Google, Facebook, Apple, email in one click.",
-  //   photo: eva,
-  //   tags: ["Mobile App", "Non-custodial wallet"]
-  // }
-];
-
 const casesData = [
   {
     title: `m2e platform`,
@@ -134,7 +83,6 @@ const casesData = [
 ];
 
 const Cases = () => {
-  // const scrollRef = useRef(null);
   const ghostRef = useRef(null);
   const [scrollRange, setScrollRange] = useState(0);
   const [viewportW, setViewportW] = useState(0);
@@ -165,7 +113,7 @@ const Cases = () => {
 
   useEffect(() => {
     if (swiperRef.current) {
-      setCurrentIndex(swiperRef.current.activeIndex); // Set the initial currentIndex on mount
+      setCurrentIndex(swiperRef.current.activeIndex);
     }
   }, []);
 

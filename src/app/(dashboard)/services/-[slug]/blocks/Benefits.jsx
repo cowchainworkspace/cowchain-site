@@ -58,7 +58,6 @@ const benefitsData = [
 ];
 
 export default function Benefits() {
-  // const { data } = useGetItems("services-expertises");
 
   const expandVariants = {
     visible: { height: "auto" },
@@ -148,9 +147,6 @@ export default function Benefits() {
                   <div
                     className={cn(
                       "relative bg-cover px-5 py-[24px] xl:px-[60px] xl:py-[36px]"
-                      // {
-                      //   "bg-[url('/assets/faq-gradient.png')]": isExpanded
-                      // }
                     )}
                     key={index}
                   >
@@ -223,9 +219,6 @@ export default function Benefits() {
                     </AccordionButton>
                     
                     <AccordionPanel
-                      // className={cn("opacity-0  will-change-transform", {
-                      //   "pt-6 opacity-100 ": isExpanded
-                      // })}
                       className={cn(
                         "markdown max-h-[300px] min-h-[150px] max-w-2xl overflow-auto text-sm !leading-[180%] text-secondary transition-all  duration-[1000ms]  ease-in will-change-transform lg:text-base 2xl:max-w-full",
                         benefit.initialStyle,
@@ -235,11 +228,6 @@ export default function Benefits() {
                         }
                       )}
                     >
-                      {/* <div className=" ">
-                        <p className="max-w-2xl !leading-[160%] !text-[#bbb] lg:!leading-[175%]">
-                          {benefit.text}
-                        </p>
-                      </div> */}
 
                       <Markdown
                         children={benefit.text}
@@ -259,71 +247,6 @@ export default function Benefits() {
               </AccordionItem>
             ))}
           </Accordion>
-
-          {/* <Scrollama className="relative" offset={0.5}>
-            {benefitsData.map((benefit, index) => {
-              return (
-                <Step
-                  className="relative flex  items-center justify-center"
-                  data={index + 1}
-                  key={benefit.title}
-                >
-                  <article
-                    style={benefit.style}
-                    className={cn(
-                      "px-default relative flex h-[25vh] min-h-[25vh]  grow flex-col items-center justify-center  border-t border-t-th-fade bg-black  duration-1000 will-change-transform",
-                      benefit.initialStyle,
-                      scrollIndex >= index
-                        ? benefit.transformStyle
-                        : ""
-                    )}
-                  >
-                    <motion.div
-                      variants={expandVariants}
-                      id={"b-expandable-" + index}
-                      className={
-                        "flex max-h-[294px] w-full flex-col justify-center xl:max-h-[100px]"
-                      }
-                    >
-                      <h2
-                        className={cn(
-                          "my-8 max-w-xl text-xl text-white xl:pb-[10px] xl:pt-[105px] 3xl:pb-[85px] 3xl:pt-[60px]",
-                          benefit.textStyle,
-                          benefit.headerStyle
-                        )}
-                      >
-                        {benefit.title}
-                      </h2>
-                      <motion.p
-                        variants={textVariants}
-                        className={cn(
-                          "markdown max-h-[300px] min-h-[150px] max-w-2xl overflow-auto text-sm !leading-[180%] text-secondary transition-all  duration-[1000ms]  ease-in will-change-transform lg:text-base 2xl:max-w-full",
-                          benefit.initialStyle,
-                          {
-                            "block  transition-all duration-1000":
-                              scrollIndex === index
-                          }
-                        )}
-                      >
-                        <Markdown
-                          children={benefit.text}
-                          options={{
-                            createElement(type, props, children) {
-                              return (
-                                <div className="parent markdown">
-                                  {createElement(type, props, children)}
-                                </div>
-                              );
-                            }
-                          }}
-                        />
-                      </motion.p>
-                    </motion.div>
-                  </article>
-                </Step>
-              );
-            })}
-          </Scrollama> */}
         </div>
       </div>
     </section>
