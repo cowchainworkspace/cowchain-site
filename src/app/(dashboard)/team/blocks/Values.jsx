@@ -92,20 +92,13 @@ export const Values = () => {
             src={bg}
             alt=""
           ></Image>
-          {/* <button className=" absolute bottom-1/3 left-0 right-0 z-20 mx-auto hidden h-36 w-36 cursor-pointer items-center justify-center rounded-full bg-white font-roc text-base font-medium uppercase text-black lg:h-44 lg:w-44 xl:block">
-            Get in touch
-          </button> */}
 
           <div className="flex flex-col xl:flex-row">
             <div className="flex items-start justify-start border-b border-b-th-fade   border-r-th-fade xl:w-1/2 xl:items-center xl:border-b xl:border-r ">
               <div className="sticky mb-12  ml-5 mt-16 flex max-w-[354px] flex-col items-start justify-start xl:mb-0 xl:ml-28">
-                {/* <Tag className={"mb-4 justify-start"} title={"our values"} /> */}
                 <p className="font-roc text-4xl font-medium  uppercase  text-white  xl:text-7xl">
                   Our mission
                 </p>
-                {/* <button className="btn-submit mt-6 cursor-pointer items-center justify-center bg-white font-roc   text-base font-medium uppercase text-black xl:hidden  xl:px-12">
-                  Get in touch
-                </button> */}
               </div>
             </div>
 
@@ -206,48 +199,6 @@ export const Values = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
-
-              {/* <Scrollama
-                offset={0.5}
-                onStepEnter={onStepEnter}
-                onStepExit={onStepExit}
-              >
-                {benefitsData.map((benefit, index) => {
-                  return (
-                    <Step data={index + 1} key={benefit.title + index}>
-                      <article
-                        className={cn(
-                          "px-default relative flex h-[25vh] min-h-[25vh] w-full  grow flex-col items-center justify-center overflow-hidden border-t border-t-th-fade bg-black   py-6 duration-1000 will-change-transform",
-                          benefit.initialStyle,
-                          scrollIndex >= index ? benefit.transformStyle : ""
-                        )}
-                      >
-                        <motion.div
-                          className={"flex w-full flex-col justify-center "}
-                          variants={expandVariants}
-                          id={"b-expandable-" + index}
-                        >
-                          <span className="mb-12 max-w-xl text-2xl text-white  ">
-                            {benefit.title}
-                          </span>
-                          <motion.p
-                            variants={textVariants}
-                            className={cn(
-                              " min-h-[100px] max-w-2xl text-sm !leading-[180%] text-secondary  transition-all  duration-[1000ms] ease-in will-change-transform xl:text-base 2xl:text-lg",
-                              {
-                                "block  transition-all duration-1000":
-                                  scrollIndex === index
-                              }
-                            )}
-                          >
-                            {benefit.text}
-                          </motion.p>
-                        </motion.div>
-                      </article>
-                    </Step>
-                  );
-                })}
-              </Scrollama> */}
             </div>
           </div>
         </div>

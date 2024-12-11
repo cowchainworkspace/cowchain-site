@@ -3,10 +3,8 @@ import pluginJs from '@eslint/js';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 
-// Define the configuration directly in the array
 export default [
   {
-    // Specify the files and settings for TypeScript
     files: ['**/*.{js,mjs,cjs,ts,tsx}'],
     languageOptions: {
       globals: globals.browser,
@@ -47,9 +45,6 @@ export default [
     },
   },
   {
-    // Directly include the configurations you want to extend from
-    // This part includes recommended rules from eslint and typescript-eslint plugins
-    // Manually include the rules from "eslint:recommended" and "@typescript-eslint/recommended"
     rules: {
       ...pluginJs.configs.recommended.rules,
       ...tsPlugin.configs.recommended.rules,

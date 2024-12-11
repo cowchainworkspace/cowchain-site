@@ -18,7 +18,6 @@ const CaseStudiesStep = lazy(() => import("pages/case-studies/step"));
 const CaseStudiesRetroBridge = lazy(
   () => import("pages/case-studies/retrobridge")
 );
-// const Article = lazy(() => import("pages/article"));
 const ScrollToTop = lazy(() => import("components/ScrollToTop"));
 
 const Service = lazy(() => import('./app/(dashboard)/services/components/service/page'))

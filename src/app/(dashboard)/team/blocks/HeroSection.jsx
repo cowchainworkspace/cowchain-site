@@ -20,9 +20,6 @@ export const HeroSection = () => {
           crypto simple <br /> since 2020
         </h1>
       </div>
-      {/* <div className="mb-8 md:mb-16">
-        <TeamCarousel />
-      </div> */}
     </section>
   );
 };

@@ -3,13 +3,8 @@
 import React, {
   useRef,
   useState,
-  // useLayoutEffect,
-  // useCallback,
   useEffect
 } from "react";
-// import web3fy from "@/assets/cases/web3fyImg.png";
-// import triend from "@/assets/cases/triendImg.png";
-// import bridge from "@/assets/cases/retrobridgeImg.png";
 
 import bridge from "@/assets/cases/newCases/crossChainTransferBridgeImg.png";
 import payment from "@/assets/cases/newCases/CryptoExchangeImg.png";

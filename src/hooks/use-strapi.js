@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 
 export const useGetItems = (section) => {
   const query = useQuery({
-    queryKey: ['strapi', section], // query key
+    queryKey: ['strapi', section],
 
     queryFn: async () =>
       axios
@@ -26,7 +26,7 @@ export const useGetItems = (section) => {
 
 export const useGetItem = (section, id) => {
   const query = useQuery({
-    queryKey: ['item', id], // query key
+    queryKey: ['item', id],
 
     queryFn: async () =>
       axios
@@ -67,7 +67,7 @@ export const useGetArticleBySlug = (slug) => {
         throw new Error('Article not found');
       }
       
-      return res.data.data[0]; // since it's filtered by slug, return the first item
+      return res.data.data[0];
     },
 
     onError: (err) => {

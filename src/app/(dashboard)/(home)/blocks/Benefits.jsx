@@ -1,13 +1,8 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-// import { Scrollama, Step } from "react-scrollama";
-// import { motion, useScroll } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { cn } from "@/lib/utils";
-// import plusIcon from "@/assets//icons/plus.svg";
-// import minusIcon from "@/assets//icons/minus.svg";
-// import Image from "next/image";
 import {
   Accordion,
   AccordionItem,
@@ -58,39 +53,12 @@ const benefitsData = [
 ];
 
 export default function Benefits() {
-  // const expandVariants = {
-  //   visible: { height: "auto" },
-  //   hidden: { height: 0 }
-  // };
-
-  // const textVariants = {
-  //   visible: { opacity: 1 },
-  //   hidden: { opacity: 0 }
-  // };
-
   const sectionRef = useRef(null);
-
-  // const { scrollYProgress } = useScroll({ target: sectionRef });
-
-  // const [scrollIndex, setScrollIndex] = useState(null);
   const [screenWidth, setScreenWidth] = useState();
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
   }, []);
-
-  // scrollYProgress.on("change", (yProgress) => {
-  //   if (yProgress <= 0.2 && yProgress >= 0) setScrollIndex(0);
-  //   if (yProgress <= 0.4 && yProgress >= 0.2) setScrollIndex(1);
-  //   if (yProgress <= 0.6 && yProgress >= 0.4) setScrollIndex(2);
-  //   if (yProgress <= 0.8 && yProgress >= 0.6) setScrollIndex(3);
-  //   if (yProgress <= 1 && yProgress >= 0.8) setScrollIndex(4);
-  // });
-
-  // const handleToggle = (index) => {
-  //   console.log(index);
-  //   setScrollIndex(index);
-  // };
 
   return (
     <section id="faq" className="relative z-30">

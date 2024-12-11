@@ -23,7 +23,6 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
   const [modalThanksOpen, setModalThanksOpen] = useState(false);
 
   const sendFormData = async (data) => {
-    console.log("Email Length:", data.email.length);
     try {
       emailjs.send(
         process.env.NEXT_PUBLIC_REACT_APP_SERVICE_ID,
@@ -33,13 +32,12 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
       );
     } catch (e) {}
     reset();
-    // setSendSuccess(true);
     setModalOpen(false);
     setModalThanksOpen(true);
   };
 
   const handleInputChange = (fieldName) => {
-    clearErrors(fieldName); // Clears the error for the specified field
+    clearErrors(fieldName);
   };
 
   const checkboxes = [
@@ -76,14 +74,6 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                 <p className=" text-center text-[36px] font-medium text-white md:text-left md:text-5xl md:text-[60px]">
                   CONTACT US
                 </p>
-                {/* <p
-                style={{
-                  color: "rgba(187, 187, 187, 0.8)"
-                }}
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p> */}
               </div>
 
               <form
@@ -173,23 +163,6 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
               </form>
 
               <div className="ml-[16px] h-[72px] w-[335px] self-end md:w-[308px]">
-                {/* {(errors.fullName &&
-              errors.details &&
-              errors.privacyPolicy &&
-              errors.email) ? (
-                <div className="flex items-end h-[18px] gap-[10px]">
-                  <Image src={dagerous} />
-                  <div className="text-[12px] leading-[17px] text-bottom text-white-400" style={{
-                    color: 'rgba(255, 255, 255, 0.5)'
-                  }}>
-                    Please, fill the form!
-                  </div>
-                </div>
-              ) : (
-                <>
-                  
-                </>
-              )} */}
                 {errors.fullName && (
                   <div className="flex items-center  gap-[10px]">
                     <Image src={dagerous} />

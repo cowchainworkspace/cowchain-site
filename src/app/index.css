@@ -173,15 +173,8 @@ p,
 
 /* Interactive */
 
-.popup-modal-overlay {
-  /*background: rgba(209, 24, 13, 0.8);*/
-  /* background: rgba(0, 0, 0, 0.1); */
-
-}
-
 .contact-input-overlay {
   background-color: transparent;
-  /* backdrop-filter: blur(8px); */
   background: rgba(255, 255, 255, 0.1);
   color: white;
  padding-left: 10px;
