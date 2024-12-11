@@ -6,6 +6,7 @@ import Development from "./blocks/Development";
 import DevelopmentMobile from "./blocks/DevelopmentMobile";
 import { IndustriesMobile } from "./blocks/IndustriesMobile";
 import { Industries } from "./blocks/Industries";
+import Achievements from "./blocks/Achievements";
 import ServiceStack from "./blocks/stack/index";
 import Networks from "./blocks/networks/index";
 import Planet from "./blocks/Planet";
@@ -39,29 +40,15 @@ export const metadata = {
   }
 };
 
-const Services = () => {
+const DappDevelopment = () => {
   return (
     <section>
       <HeroSection />
-      <Industries />
-      <IndustriesMobile />
-      <Development />
-      <Benefits />
-      <Networks
-        gradientStyles="absolute -bottom-1/2 -right-40 block  h-[426px] w-[526px] md:hidden"
-        isGradient={false}
-        title={"Blockchain networks we work with"}
-        margin={""}
-      />
-
-       <Clients />
-      <Cases />
-      <CasesMobile />
-      <Others />
+      <Achievements />
       <FAQ />
-      <Contact className="py-[159px] px-[64px] md:pt-[169px] md:pb-[127px]"/>
+      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
 };
 
-export default Services;
+export default DappDevelopment;

@@ -58,6 +58,7 @@ const benefitsData = [
 ];
 
 export default function Benefits() {
+  const { data } = useGetItems("services-expertises");
 
   const expandVariants = {
     visible: { height: "auto" },
@@ -89,37 +90,29 @@ export default function Benefits() {
   useEffect(() => {
     setScreenWidth(window.innerWidth);
   }, []);
-
   return (
     <section
       id="benefits"
       ref={sectionRef}
-      className="relative hidden  md:block"
+      className="relative"
     >
       <div className="sticky top-0 flex flex-col border-t border-t-th-fade md:flex-row">
-        <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-10 md:w-1/2 md:py-0">
+        <div className="px-default md-border-r flex w-full md:border-b md:border-b-th-fade py-10 md:w-1/2 md:py-0">
           <div className="my-auto box-border md:sticky">
-            <section id="view_more" className="relative z-10 lg:my-[120px]">
+            <section id="view_more" className="relative z-10 lg:my-auto">
               <div className="relative grid grid-cols-1">
                 <Image
                   alt=""
                   width={1380}
                   height={1330}
-                  className="absolute -left-32 -top-[800px] -z-10  min-w-[900px]"
+                  style={{ pointerEvents: 'none' }}
+                  className="absolute hidden md:block -left-32 -top-[800px] -z-10 min-h-[1330px] min-w-[900px]"
                   src={"/assets/services/radial.png"}
                 />
-                <div className="mb-16 flex flex-col items-start justify-start gap-y-8 px-4 text-center   text-white ">
-                  <h3 className="mx-auto cursor-default text-left font-roc text-2xl uppercase   leading-none md:text-[42px]">
+                <div className="mb-16 flex flex-col items-start justify-start gap-y-8 px-4 text-center text-white ">
+                  <h3 className="mx-auto cursor-default text-left font-roc text-2xl uppercase leading-none md:text-[42px]">
                     Expertise of Our Smart Contract Development Company
                   </h3>
-
-                  <button
-                    onClick={() => setModalOpen(true)}
-                    type="submit"
-                    className="btn-submit uppercase xl:px-12"
-                  >
-                    Have a project in mind?
-                  </button>
                   <ContactForm
                     modalOpen={modalOpen}
                     setModalOpen={setModalOpen}
@@ -127,38 +120,31 @@ export default function Benefits() {
                 </div>
               </div>
             </section>
-            <p className="block max-w-xl cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:hidden md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
-              Being fully immersed in Web3, we’re not just devs —{" "}
-              <span className="violet-gradient-text">
-                we’re product visionaries
-              </span>{" "}
-              working as an in-house team{" "}
-              <span className="text-[#ffffff71]">
-                with you to grow your business with Web3
-              </span>
-            </p>
           </div>
         </div>
-        <div className="border-b border-b-th-fade md:flex  md:w-1/2 md:flex-col">
-          <Accordion allowToggle>
-            {benefitsData.map((benefit, index) => (
-              <AccordionItem key={index} className="border-b border-th-fade">
+        <div className="border-b border-b-th-fade md:flex md:w-1/2 md:flex-col">
+
+        <Accordion allowToggle>
+            {data?.data.map((benefit, index) => (
+              <AccordionItem key={index} className={cn("border-b border-th-fade", {
+                
+              })}>
                 {({ isExpanded }) => (
                   <div
                     className={cn(
-                      "relative bg-cover px-5 py-[24px] xl:px-[60px] xl:py-[36px]"
+                      "relative bg-cover px-5 py-[24px] xl:px-[60px] xl:py-[36px] "
                     )}
                     key={index}
                   >
                     <AccordionButton className={cn("relative")}>
                       <div className="mr-auto w-full max-w-3xl text-left ">
                         <span className="max-w-2xl text-left font-roc !text-[14px] font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
-                          {benefit.title}
+                        {benefit.attributes.title}
                         </span>
                       </div>
                       {isExpanded ? (
                         <div
-                          className="flex items-center justify-center"
+                          className="flex items-center "
                           style={{
                             width: screenWidth > 768 ? 150 : 50
                           }}
@@ -181,7 +167,7 @@ export default function Benefits() {
                         </div>
                       ) : (
                         <div
-                          className="flex items-center justify-center"
+                          className="flex items-center justify-end md:justify-center"
                           style={{
                             width: screenWidth > 768 ? 150 : 50
                           }}
@@ -217,10 +203,9 @@ export default function Benefits() {
                         </div>
                       )}
                     </AccordionButton>
-                    
                     <AccordionPanel
                       className={cn(
-                        "markdown max-h-[300px] min-h-[150px] max-w-2xl overflow-auto text-sm !leading-[180%] text-secondary transition-all  duration-[1000ms]  ease-in will-change-transform lg:text-base 2xl:max-w-full",
+                        "markdown markdown_benefits max-h-[300px] mr-[20px] md:mr-[55px] mt-[24px] min-h-[150px] max-w-2xl overflow-auto text-sm !leading-[180%] text-secondary transition-all  duration-[1000ms]  ease-in will-change-transform lg:text-base 2xl:max-w-full",
                         benefit.initialStyle,
                         {
                           "block  transition-all duration-1000":
@@ -230,11 +215,11 @@ export default function Benefits() {
                     >
 
                       <Markdown
-                        children={benefit.text}
+                        children={benefit.attributes.text}
                         options={{
                           createElement(type, props, children) {
                             return (
-                              <div className="parent markdown">
+                              <div className="parent pr-[10px] md:pr-[80px] markdown">
                                 {createElement(type, props, children)}
                               </div>
                             );

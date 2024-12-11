@@ -5,30 +5,8 @@ import Image from "next/image";
 import { useGetItems } from "@/hooks/use-strapi";
 import Markdown from "markdown-to-jsx";
 
-const expertiseData = [
-  {
-    title: "BLOCKCHAIN",
-    text: "From dApps to blockchains – you name it, we do it. Whether you only have a concept in mind or a running business, we can integrate it with Web3",
-
-  },
-  {
-    title: "FRONT-END",
-    text: "Combining your vision and best usability practices, we create products that live up to your business goals and are intuitive for users",
-
-  },
-  {
-    title: "MOBILE",
-    text: "Expertly crafting native and cross-platform mobile apps, we turn your vision into reality. Focused on performance, user experience, and seamless design, our mobile solutions ensure your app excels in today's dynamic market.",
-
-  },
-  {
-    title: "BACK-END",
-    text: "Based on factors like project complexity and its scalability needs, we deploy the most suitable and easy-to-maintain product architecture",
-
-  }
-];
-
 export default function Planet() {
+  const { data } = useGetItems("services-contents");
   return (
     <section id="view_more" className="relative z-10  mt-16  lg:my-[120px]">
       <div className="relative grid grid-cols-1 md:grid-cols-2">
@@ -46,7 +24,7 @@ export default function Planet() {
             </h3>
             <span className="text-left text-[#bbb]">
               <Markdown
-                children={expertiseData[0].title}
+                children={data?.data[0].attributes.advisory_text}
                 options={{
                   createElement(type, props, children) {
                     return (

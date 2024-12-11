@@ -105,6 +105,7 @@ const expertiseData = [
 export default function ServiceStack({
   margin = "mt-[calc(35vh_+_1.5625vh)]"
 }) {
+  const { data } = useGetItems("services-contents");
 
   return (
     <section id="expertise" className={cn("relative   md:mt-0", margin)}>
@@ -116,7 +117,7 @@ export default function ServiceStack({
             </h3>
             <span className="text-left text-[#bbb]">
               <Markdown
-                children={expertiseData[0].title}
+                children={data?.data[0].attributes.stack_text}
                 options={{
                   createElement(type, props, children) {
                     return (

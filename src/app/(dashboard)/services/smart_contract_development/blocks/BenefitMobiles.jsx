@@ -11,7 +11,6 @@ const benefitsData = [
   {
     title: "Overview",
     text: "Cowchain is a team of experts in blockchain smart contract development. We have deep knowledge and practical experience creating decentralized solutions on various blockchain platforms, including Ethereum, Solana, Avalanche, TON, Near, Polygon, and Binance Smart Chain. Our expertise is backed by successful projects for clients in various industries, such as finance, gaming, logistics, medical, and the public sector. Over the years, our smart contract development agency has accumulated expertise in all aspects:",
-    initialStyle: "",
     transformStyle: ""
   },
   {
@@ -43,6 +42,7 @@ const benefitsData = [
 ];
 
 export default function BenefitsMobiles() {
+  const { data } = useGetItems("services-expertises");
 
   const expandVariants = {
     visible: { height: "auto" },
@@ -77,7 +77,7 @@ export default function BenefitsMobiles() {
       <div className="sticky top-0 flex h-screen flex-col md:flex-row">
         <div className="relative flex flex-col justify-between md:flex md:h-screen md:w-1/2 md:flex-col">
           <Scrollama className="relative" offset={0.5}>
-            {benefitsData.map((benefit, index) => {
+            {data?.data.map((benefit, index) => {
               return (
                 <Step
                   className="relative"
@@ -85,6 +85,7 @@ export default function BenefitsMobiles() {
                   key={benefit.title + index}
                 >
                   <article
+                    style={benefit.style}
                     className={cn(
                       "relative flex h-[430px] min-h-[250px] grow flex-col items-center justify-center overflow-hidden border-t border-t-th-fade bg-black px-5    duration-1000  will-change-transform ",
                       benefitsData[index].initialStyle,
@@ -101,8 +102,8 @@ export default function BenefitsMobiles() {
                       <h2
                         className={cn(
                           "mb-12 mt-4 max-w-[320px]   text-base text-white",
-                          benefit.text,
-                          benefit.initialStyle
+                          benefit.textStyle,
+                          benefit.headerStyle
                         )}
                       >
                         {benefit.title}
@@ -111,7 +112,7 @@ export default function BenefitsMobiles() {
                         variants={textVariants}
                         className={cn(
                           " max-h-[300px] min-h-[300px] overflow-auto text-base !leading-[180%] text-secondary  transition-all  duration-[1000ms] ease-in will-change-transform lg:text-lg",
-                          benefit.initialStyle,
+                          benefit.textStyle,
                           {
                             "block  transition-all duration-1000":
                               scrollIndex === index
@@ -119,7 +120,7 @@ export default function BenefitsMobiles() {
                         )}
                       >
                         <Markdown
-                          children={benefit.text}
+                          children={benefit.attributes.text}
                           options={{
                             createElement(type, props, children) {
                               return (

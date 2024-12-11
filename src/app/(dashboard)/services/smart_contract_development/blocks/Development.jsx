@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 import ContactForm from "@/components/utils/ContactForm";
 import Image from "next/image";
 import { useGetItems } from "@/hooks/use-strapi";
+import arrowDown from "./../../../../../assets/services/arrowDownIcon.svg";
+import arrowUp from "./../../../../../assets/services/arrowUpIcon.svg";
 import Markdown from "markdown-to-jsx";
 import {
   Accordion,
@@ -19,7 +21,6 @@ const benefitsData = [
   {
     title: "/1 Requirements Analysis",
     text: "If you have an idea or an existing product that you want to upgrade with Web3, we’ll suggest and develop a custom solution for your business that will bring you tangible results ",
-    initialStyle: "",
     transformStyle: ""
   },
   {
@@ -52,6 +53,7 @@ const benefitsData = [
 
 export default function Development() {
   const [modalOpen, setModalOpen] = useState(false);
+  const { data } = useGetItems("services-processes");
 
   const expandVariants = {
     visible: { height: "auto" },
@@ -84,13 +86,9 @@ export default function Development() {
   }, []);
 
   return (
-    <section
-      id="benefits"
-      ref={sectionRef}
-      className="relative hidden md:block "
-    >
-      <div className="sticky top-0 flex flex-col border-t border-t-th-fade md:flex-row">
-        <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-10 md:w-1/2 md:py-0">
+    <section id="benefits" ref={sectionRef} className="relative py-[30px] md:py-[0]">
+      <div className=" sticky top-0 flex flex-col md:border-t md:border-t-th-fade md:flex-row">
+        <div className="px-default md-border-r flex w-full md:border-b md:border-b-th-fade py-10 md:w-1/2 md:py-0">
           <div className="my-auto box-border md:sticky">
             <section id="view_more" className="relative z-10 lg:my-auto">
               <div className="relative grid grid-cols-1">
@@ -98,11 +96,11 @@ export default function Development() {
                   alt=""
                   width={1380}
                   height={1330}
-                  style={{ pointerEvents: 'none' }}
-                  className="absolute -left-32 -top-[800px] -z-10 min-h-[1330px] min-w-[900px]"
+                  style={{ pointerEvents: "none" }}
+                  className="absolute -left-32 -top-[800px] -z-10 hidden min-w-[900px]  md:block"
                   src={"/assets/services/radial.png"}
                 />
-                <div className="mb-16 flex flex-col items-start justify-start gap-y-8 px-4 text-center text-white ">
+                <div className="flex flex-col items-start justify-start gap-y-8 px-4 text-center text-white ">
                   <h3 className="mx-auto cursor-default text-left font-roc text-2xl uppercase   leading-none md:text-[42px]">
                     Our Smart Contracts Development Process
                   </h3>
@@ -126,100 +124,95 @@ export default function Development() {
                 </div>
               </div>
             </section>
-            <p className="block max-w-xl cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:hidden md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
-              Being fully immersed in Web3, we’re not just devs —{" "}
-              <span className="violet-gradient-text">
-                we’re product visionaries
-              </span>{" "}
-              working as an in-house team{" "}
-              <span className="text-[#808080]">
-                with you to grow your business with Web3
-              </span>
-            </p>
           </div>
         </div>
-        <div className="border-b border-b-th-fade md:flex md:w-1/2 md:flex-col">
 
-        <Accordion allowToggle>
-            {benefitsData.map((benefit, index) => (
-              <AccordionItem key={index} className="border-b border-th-fade">
+        <div className="relative overflow-hidden md:overflow-visible md:border-b md:border-b-th-fade md:flex md:py-[30px]  md:w-1/2 md:flex-col">
+          
+
+          <Accordion allowToggle>
+
+            {data?.data.map((benefit, index) => (
+              <AccordionItem key={index} className="">
                 {({ isExpanded }) => (
                   <div
                     className={cn(
-                      "relative bg-cover px-5 py-[24px] xl:px-[60px] xl:py-[36px]",
+                      "relative bg-cover px-5 py-[24px] xl:px-[60px] xl:py-[36px]"
                     )}
-                    
                     style={benefit.style}
                     key={index}
                   >
 
-                    <div className="absolute flex left-[-5px]  flex-col items-center justify-center">
-                        <div
-                          className={cn(
-                            "absolute h-[15vh] w-[0px] bg-[#808080]",
-                          )}
-                        ></div>
-                        <div className="mt-[15px] h-3 min-w-3 rounded-full bg-[#808080]"></div>
+                    <div
+                      className={cn(
+                        "md:absolute left-[20px] flex flex-col md:items-center justify-center",
+                        {
+                          "md:left-[-6px]": isExpanded,
+                          "md:left-[-3px]": !isExpanded
+                        }
+                      )}
+                    >
+
+                      <div
+                        className={cn(
+                          "absolute bottom-0 top-0 w-[1px] opacity-[0.3] md:opacity-[0.2]",
+                          {
+                            "absolute bottom-0 md:h-[45vh] top-0 md:top-[10px] md:left-[5px]  block w-[1px]":
+                              isExpanded,
+                              "top-[35px] md:top-[10px]": index === 0,
+                              "bottom-[35px]": index === data?.data.length - 1,
+                          }
+                        )}
+                        style={{
+                          opacity: "0.3",
+                          background: isExpanded
+                            ? "linear-gradient(to bottom, #CF91FF 80%, #808080 100%)"
+                            : "#808080"
+                        }}
+                      ></div>
+
+                      <div className="relative top-[-5px]">
+                      {isExpanded ? (
+                        <div className=" absolute left-[-3px] mt-[15px] md:left-0 h-[8px] max-w-[8px] min-w-[8px] rounded-full bg-[#CF91FF] md:h-[11px] md:min-w-[11px]"></div>
+                      ) : (
+                        <div className=" absolute left-[-2px] md:left-0 mt-[15px] min-h-[5px] max-w-[5px] min-w-[5px] rounded-full bg-[#808080]"></div>
+                      )}
                       </div>
+                    </div>
 
                     <AccordionButton className={cn("relative")}>
-                      <div className="mr-auto w-full max-w-3xl text-left ">
-                        <span className="max-w-2xl text-left font-roc !text-[14px] font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
-                          {benefit.title}
+                      <div className="mr-auto pl-[20px] md:pl-0 w-full max-w-3xl text-left ">
+                        <span
+                          className={cn(
+                            "max-w-2xl text-left font-roc  text-[20px]  font-medium uppercase !leading-[24px] lg:!text-xl lg:!leading-none",
+                            {
+                              "text-[#BBBBBB]": !isExpanded,
+                              "text-[#FFFFFF]": isExpanded
+                            }
+                          )}
+                        >
+                          {benefit.attributes.title}
                         </span>
                       </div>
+
                       {isExpanded ? (
-                         <div className="flex items-center justify-center" style={{
-                          width: screenWidth > 768 ? 150 : 50,
-                        }}>
-                          <svg
-                            width={screenWidth > 768 ? "50" : "32"}
-                            height={screenWidth > 768 ? "50" : "32"}
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle cx="16" cy="16" r="16" fill="white" />
-                            <path
-                              d="M12.2656 16H19.7323"
-                              stroke="black"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
+                        <div
+                          className="hidden md:flex items-center justify-center"
+                          style={{
+                            width: screenWidth > 768 ? 150 : 50
+                          }}
+                        >
+                          <Image src={arrowUp} />
                         </div>
                       ) : (
-                        <div className="flex items-center justify-center" style={{
-                          width: screenWidth > 768 ? 150 : 50,
-                        }}>
-                          <svg
-                            width={screenWidth > 768 ? "50" : "32"}
-                            height={screenWidth > 768 ? "50" : "32"}
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="16"
-                              cy="16"
-                              r="15.75"
-                              stroke="white"
-                              strokeOpacity="0.5"
-                              strokeWidth="0.5"
-                            />
-                            <path
-                              d="M16 12.2666V19.7333"
-                              stroke="white"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            <path
-                              d="M12.2656 16H19.7323"
-                              stroke="white"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
+
+                        <div
+                          className="hidden md:flex items-center justify-center"
+                          style={{
+                            width: screenWidth > 768 ? 150 : 50
+                          }}
+                        >
+                          <Image src={arrowDown} />
                         </div>
                       )}
                     </AccordionButton>
@@ -228,9 +221,9 @@ export default function Development() {
                         "pt-6 opacity-100 ": isExpanded
                       })}
                     >
-                      <div className=" ">
+                      <div className="pl-[20px] md:pl-0">
                         <p className="max-w-2xl !leading-[160%] !text-[#bbb] lg:!leading-[175%]">
-                          {benefit.text}
+                          {benefit.attributes.text}
                         </p>
                       </div>
                     </AccordionPanel>

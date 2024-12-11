@@ -21,7 +21,6 @@ import team2 from "@/assets/team/team-carousel-2/team2.png";
 import team3 from "@/assets/team/team-carousel-2/team3.png";
 import { Values } from "./blocks/Values";
 import { ValuesMobile } from "./blocks/ValuesMobile";
-import FAQ from "../../(home)/blocks/FAQ";
 import Others from "./blocks/Others";
 import ServiceContact from "./blocks/ServiceContact";
 import Works from "./blocks/Works";
@@ -29,6 +28,7 @@ import Contact from "@/components/Contact";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
 import Clients from "../../(home)/blocks/Clients";
+import FAQ from "./blocks/FAQ";
 
 const photos = [team1, team2, team3];
 
@@ -39,27 +39,22 @@ export const metadata = {
   }
 };
 
-const Services = () => {
+const SmartContractDevelopment = () => {
   return (
-    <section >
-      <div className="overflow-x-hidden">
+    <section>
       <HeroSection />
       <Industries />
       <IndustriesMobile />
-      </div>
       <Development />
-      <ContactDialog />
       <Benefits />
-      <BenefitsMobiles />
-     
-     <DevelopmentMobile />
-  <Networks
+      <Networks
         gradientStyles="absolute -bottom-1/2 -right-40 block  h-[426px] w-[526px] md:hidden"
         isGradient={false}
         title={"Blockchain networks we work with"}
         margin={""}
-      /> 
-      <Clients />
+      />
+
+       <Clients />
       <Cases />
       <CasesMobile />
       <Others />
@@ -69,4 +64,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default SmartContractDevelopment;
