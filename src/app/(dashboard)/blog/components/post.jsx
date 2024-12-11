@@ -26,11 +26,9 @@ export const Post = ({ atributes }) => {
 
   return (
     <Link
-  // href={"/blog/article"}
   href={`blog/articles/${Slug}`}
   className={cn(
     "group relative flex w-full cursor-pointer flex-col justify-start p-6 border border-th-fade",
-    // className
   )}
 >
       <Image
