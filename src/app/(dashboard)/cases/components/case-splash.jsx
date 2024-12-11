@@ -10,13 +10,17 @@ export const CaseSplash = ({ title, tags, img_mobile, img_desktop, link }) => {
     >
       <Image
         src={img_desktop}
-        className=" hidden max-h-[560px] w-full object-cover lg:block"
-        alt=""
+        className="hidden max-h-[560px] w-full object-cover lg:block"
+        alt="Case"
+        width={1920}
+        height={560}
       />
       <Image
         src={img_mobile}
-        className=" block max-h-[560px] min-h-[500px] w-full object-cover lg:hidden"
-        alt=""
+        className="block max-h-[560px] min-h-[500px] w-full object-cover lg:hidden"
+        alt="Case"
+        width={1920}
+        height={500}
       />
       <div className="absolute  bottom-1/2 right-10 ">
         <Link

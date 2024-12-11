@@ -125,7 +125,7 @@ export const CaseStudiesEva = ({ setBurgerOpen }) => {
                     <Image
                       src={marsan_mobile}
                       className="mt-8 min-h-[270px] w-full object-cover lg:mt-14 lg:min-h-[500px]"
-                      alt=""
+                      alt="Exchange Wallet App"
                     />
                   </div>
                   <div className="w-full border-t-2 border-white/50 px-5 pt-4 lg:max-w-[600px] lg:px-0">
@@ -154,7 +154,7 @@ export const CaseStudiesEva = ({ setBurgerOpen }) => {
                     <Image
                       src={marsan_mobile_black}
                       className="mt-8 min-h-[270px] w-full object-cover lg:min-h-[500px]"
-                      alt=""
+                      alt="Exchange Wallet App"
                     />
                   </div>
                 </div>

@@ -10,7 +10,7 @@ export default function Clients() {
   return (
     <section className="relative">
       <Image
-        alt=""
+        alt="Clients Background"
         className="absolute -top-[45%] right-0 h-screen md:-top-[45%] md:h-min  lg:-top-[80%]"
         src={bg_lg}
       />
@@ -28,7 +28,7 @@ export default function Clients() {
               <p className="header uppercase text-white underline">
                 VIEW ALL PROJECTS
               </p>
-              <Image className="w-6" src={arrow} alt=""></Image>
+              <Image className="w-6" src={arrow} alt="Arrow"></Image>
             </div>
           </Link>
           <div className="mt-8 flex w-full max-w-xl justify-between  lg:order-3 lg:ml-auto">

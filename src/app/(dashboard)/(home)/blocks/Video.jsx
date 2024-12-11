@@ -1,12 +1,27 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, memo } from "react";
 import poster from "@/assets/homepage/thumbnail.png";
 
-const Video = () => {
-  const vidRef = useRef();
+const Video = memo(() => {
+  const vidRef = useRef(null);
+
   useEffect(() => {
-    vidRef.current.play();
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && vidRef.current) {
+          vidRef.current.load();
+          vidRef.current.play();
+        }
+      },
+      { root: null, threshold: 0.2 }
+    );
+
+    if (vidRef.current) {
+      observer.observe(vidRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
   return (
     <video
@@ -18,10 +33,10 @@ const Video = () => {
       loop
       controls=""
       src={"/homepage/video.mp4"}
-      preload="auto"
+      preload="none"
       poster={poster}
     ></video>
   );
-};
+});
 
 export default Video;

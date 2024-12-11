@@ -16,14 +16,14 @@ export default function HeaderContent() {
             rel="nofollow noreferrer"
             target="_blank"
           >
-            <Image className="w-11 md:w-[70px]" src={upwork} alt=""></Image>
+            <Image className="w-11 md:w-[70px]" src={upwork} alt="Upwork"></Image>
           </a>
           <a
             href="https://clutch.co/profile/cowchain"
             rel="nofollow noreferrer"
             target="_blank"
           >
-            <Image className="w-11 md:w-[70px]" src={clutch} alt=""></Image>
+            <Image className="w-11 md:w-[70px]" src={clutch} alt="Clutch"></Image>
           </a>
         </div>
         <div className="my-4 flex cursor-default flex-col gap-y-4 md:items-end">

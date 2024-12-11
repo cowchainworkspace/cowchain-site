@@ -115,7 +115,7 @@ export default function Team() {
         <Image
           className="absolute -bottom-[35%] z-[1] hidden    lg:block"
           src={bg}
-          alt=""
+          alt="Team Background"
         />
         <div className="md-border-r py-heading px-default z-10 flex flex-col gap-y-6 border-b border-b-th-fade text-center lg:col-span-2 lg:text-left min-[2000px]:col-span-3">
           <h2 className="text-center text-4xl uppercase text-white  md:text-[60px] lg:text-left">
@@ -126,7 +126,7 @@ export default function Team() {
               <p className="header uppercase text-white underline">
                 MEET COWCHAIN
               </p>
-              <Image className="w-6" src={arrow} alt=""></Image>
+              <Image className="w-6" src={arrow} alt="Arrow"></Image>
             </div>
           </a>
         </div>

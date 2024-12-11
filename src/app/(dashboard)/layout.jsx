@@ -1,6 +1,7 @@
 import { Loading } from "@/components/loader/Loading";
 import dynamic from "next/dynamic";
 import LoaderWrapper from "./loaderWrapper";
+import { CowchainBreadcrumb } from "@/components/CowchainBreadcrumb/CowchainBreadcrumb";
 
 const Navbar = dynamic(() => import("@/components/Navbar"), {
   loading: () => <Loading />

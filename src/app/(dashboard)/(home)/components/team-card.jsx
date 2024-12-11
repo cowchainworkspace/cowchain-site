@@ -29,7 +29,7 @@ export const TeamCard = ({ name, role, photo, social, index }) => {
       <div className="absolute bottom-2/3 right-5 z-10 hidden  w-full justify-end group-hover:flex">
         <div className="relative">
           <a href={social?.url} rel="nofollow noreferrer" target="_blank">
-            <Image alt={""} className="w-8 xl:w-14" src={social?.icon}></Image>
+            <Image alt="Social Media Icon" className="w-8 xl:w-14" src={social?.icon}></Image>
           </a>
         </div>
       </div>

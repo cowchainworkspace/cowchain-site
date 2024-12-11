@@ -34,7 +34,7 @@ export default function TeamInfo() {
           team photo
         </h1>
         <motion.div ref={ref} style={{ marginTop }}>
-          <Image className="max-w-[375px] xl:max-w-[915px]" src={team} alt="" />
+          <Image className="max-w-[375px] xl:max-w-[915px]" src={team} alt="Team" />
         </motion.div>
       </div>
     </motion.div>

@@ -14,14 +14,15 @@ export const HeroSection = ({ setTags, tags }) => {
         <link rel="canonical" href={"https://cowchain.io/cases"} />
       </Helmet>
       <Image
-        alt=""
+        alt="Header Background"
         className="absolute right-0 top-0 min-h-[150%] min-w-[200vw] md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
         src={bg_lg}
       />
       <div className="relative flex flex-col px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
         <div className="mb-6 flex gap-4">
-          <Link href={"/"}>
+          <Link className="flex gap-2" href={"/"}>
             <Image className="h-[24px] w-[24px]" src={home} />
+            <span className="text-white">Home</span>
           </Link>
           <Image className="h-[24px] w-[24px]" src={arrow} />
           <span className="text-white">Cases</span>

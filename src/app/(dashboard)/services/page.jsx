@@ -5,7 +5,7 @@ import { ViewMoreSection } from "./blocks/ViewMore";
 import Stack from "@/components/stack";
 
 export const metadata = {
-  title: "Our Services | Cowchain",
+  title: "Explore Our Comprehensive Services | Cowchain",
   description: "Explore Cowchain's blockchain services, from custom advancement to execution, driving development over industries.",
   metadataBase: new URL("https://cowchain.io/"),
   alternates: {

@@ -15,8 +15,8 @@ import Image from "next/image";
 const photos = [team1, team2, team3];
 
 export const metadata = {
-  title: "Our Team | Cowchain",
-  description: "Meet the blockchain trend-setters behind Cowchain. Find our group of master engineers and specialists committed to conveying cutting-edge arrangements for your trade challenges.",
+  title: "Meet Our Seasoned Web3 Team | Cowchain",
+  description: "Meet the blockchain innovators at Cowchain—expert engineers delivering cutting-edge solutions to tackle your business challenges effectively.",
   metadataBase: new URL("https://cowchain.io/"),
   alternates: {
     canonical: "/team"
@@ -96,7 +96,7 @@ const Team = ({ setBurgerOpen }) => {
               <Image
                 src={imgSrc}
                 className="h-[286px] w-[300px] lg:h-[492px] lg:w-[516px]"
-                alt=""
+                alt="Team"
                 key={index}
               />
             ))}
