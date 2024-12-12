@@ -38,18 +38,6 @@ export const HeroSection = () => {
           Blockchain Smart Contract Development Services
         </h1>
         <span className="max-w-lg text-center  text-sm text-[#bbb] md:max-w-[725px] md:text-base">
-          {/* <Markdown
-            children={data?.data[0].attributes.main_text}
-            options={{
-              createElement(type, props, children) {
-                return (
-                  <div className="parent markdown">
-                    {createElement(type, props, children)}
-                  </div>
-                );
-              }
-            }}
-          /> */}
 
           Cowchain is a leading smart contract development service provider. Our
           team of experienced developers has in-depth knowledge of blockchain

@@ -12,7 +12,6 @@ import newEmploye from "@/assets/homepage/team/newTeam/addEmployesImg.png";
 import olehMobImg from "@/assets/homepage/team/newTeam/olehMobImg.png";
 import linkedin from "@/assets/homepage/linkedin.svg";
 import { cn } from "@/lib/utils";
-// import { TeamCard } from "../../(home)/components/team-card";
 
 const teamData = [
   {

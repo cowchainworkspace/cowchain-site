@@ -1,6 +1,4 @@
 import React from "react";
-// import upwork from "@/assets/homepage/upwork.svg";
-// import clutch from "@/assets/homepage/clutch.svg";
 import Image from "next/image";
 import playIcon from "@/assets/icons/homepage/linkedInIcon.svg";
 import michaelAvatar from "@/assets/icons/homepage/michaelAvatarImg.png";
