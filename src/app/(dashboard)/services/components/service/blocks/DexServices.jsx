@@ -3,16 +3,18 @@
 import bg_lg from "@/assets/bg/dexServiceBg.svg";
 import Image from "next/image";
 
-export function DexServices({ title, desc, data }) {
+export function DexServices({ title, desc, data, noBg }) {
   return (
-    <section className="relative">
-      <Image
-        alt=""
-        className="absolute -bottom-[38%] left-0  h-screen md:block md:h-min "
-        src={bg_lg}
-      />
+    <section className="relative border-t border-t-th-fade ">
+      {!noBg && (
+        <Image
+          alt=""
+          className="absolute -bottom-[38%] left-0  h-screen md:block md:h-min "
+          src={bg_lg}
+        />
+      )}
 
-      <div className="py-heading px-default relative flex justify-between">
+      <div className="py-heading px-default relative flex justify-between max-w-[1440px] mx-auto">
         <div className="  lg:gap-16">
           <h2 className="lg:order-0 text-[60px] uppercase text-white  md:text-[60px]">
             {title}
@@ -26,10 +28,10 @@ export function DexServices({ title, desc, data }) {
         </div>
 
         <div className="max-w-[519px]">
-          {data.map(({ title, desc }) => (
+          {data.map(({ title, desc }, index) => (
             <div className="relative bg-cover ">
               {title && (
-                <div className="mr-auto mt-[60px] w-full text-left">
+                <div className={index === 0 ? "mr-auto  w-full text-left" : "mr-auto mt-[60px] w-full text-left"}>
                   <span className="text-left font-roc !text-[20px] font-medium uppercase !leading-none text-white">
                     {title}
                   </span>

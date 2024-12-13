@@ -7,21 +7,32 @@ import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { Industries } from "../components/service/blocks/Industries/index";
 import { Feedback } from "../components/service/blocks/Feedback";
 import { OtherServices } from "../components/service/blocks/OtherServices";
-import { ServiceStack } from "./blocks/stack";
-
-export const metadata = {
-  metadataBase: new URL("https://cowchain.io/services"),
-  alternates: {
-    canonical: "/dex_development"
-  }
-};
+import { ServiceStack } from "../components/service/blocks/stack";
+import { DexExpertiseDesc } from "./utils/data";
+import { DexExpertiseData } from "./utils/data";
+import { IndustriesDexData } from "./utils/data";
+import { DexAppDevData } from "./utils/data";
+import { EngagementDevData } from "./utils/data";
 
 const DexDevelopment = () => {
   return (
     <section className="overflow-visible">
       <HeroSection />
       <Achievements />
-      <DexServices />
+      <DexServices
+        title={
+          <>
+            our
+            <br />
+            Decentralized <br />
+            Exchange <br />
+            Development <br />
+            Services
+          </>
+        }
+        desc={DexExpertiseDesc}
+        data={DexExpertiseData}
+      />
       <KeyFeatures
         title={"Key Features of Our DEX Development"}
         desc={
@@ -33,6 +44,7 @@ const DexDevelopment = () => {
         desc={
           "Our decentralized exchange development company serves a variety of industries, ensuring that each DEX platform is built to meet sector-specific needs"
         }
+        data={IndustriesDexData}
       />
       <KeyFeatures
         isOneBlock={true}
@@ -46,14 +58,17 @@ const DexDevelopment = () => {
         desc={
           "Our decentralized cryptocurrency exchange app development follows a structured approach, ensuring seamless development and deployment. By leveraging cutting-edge technologies in decentralized cryptocurrency exchange development, we ensure the creation of secure and scalable platforms, optimized for rapid transactions"
         }
+        data={DexAppDevData}
       />
       <ServiceStack />
       <Feedback />
       <Industries
-        title={"Industries We Serve"}
+        title={"Our Engagement Models"}
         desc={
-          "Our decentralized exchange development company serves a variety of industries, ensuring that each DEX platform is built to meet sector-specific needs"
+          "As a leading decentralized exchange development company, we provide adaptable engagement models to fit the unique needs of every business"
         }
+        isTwoSides={true}
+        data={EngagementDevData}
       />
       <KeyFeatures
         isOneBlock={true}
@@ -62,7 +77,22 @@ const DexDevelopment = () => {
           "With extensive experience in blockchain advisory services, Cowchain provides strategic guidance on decentralized exchange software development, helping clients navigate the complexities of building secure and feature-rich platforms. Our expertise ensures that every aspect of your decentralized exchange development is handled with precision, from initial planning to deployment, making sure the platform remains adaptable to future blockchain advancements"
         }
       />
-      <OtherServices />
+      <OtherServices
+        title={
+          <>
+            In addition <br /> to{" "}
+            <span className="violet-gradient-text">
+              dex platform
+              <br />
+              development
+            </span>
+            ,<br />
+            we offer <br />
+            the following <br />
+            <span className="violet-gradient-text">blockchain</span> services
+          </>
+        }
+      />
       <FAQ />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>

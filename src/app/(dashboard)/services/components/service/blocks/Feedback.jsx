@@ -1,6 +1,7 @@
 import React from "react";
 import clutch from "@/assets/homepage/clutch.svg";
 import upwork from "@/assets/homepage/upwork.svg";
+import topRated from "@/assets/homepage/topRatedIcon.svg";
 import star from "@/assets/clients/reate-star.svg";
 import bg from "@/assets/bg/clients_feedback.png";
 import Image from "next/image";
@@ -75,9 +76,16 @@ export const Feedback = () => {
           ></Image>
           <div className="h-[1px]"></div>
           <div className="mx-default my-heading sticky bottom-[30vh] w-full self-end ">
-            <h3 className="!leading-none text-white">
-              YOU CAN<br></br>TRUST US
+            <h3 className="uppercase !leading-none text-white">
+              What our
+              <br />
+              Clients say
             </h3>
+            <p className=" mt-[30px] max-w-[592px] text-base leading-6 text-[#BBBBBB]">
+              Clients who have partnered with Cowchain for full stack
+              development services consistently highlight the quality and
+              scalability of our solutions
+            </p>
             <div className="mt-10 flex flex-col gap-y-4 md:mt-16 lg:mt-24 xl:mt-36">
               <div className="flex items-center gap-x-[28px]">
                 <a
@@ -101,9 +109,6 @@ export const Feedback = () => {
                       ))}
                     </div>
                   </div>
-                  <p className="mt-[2px] text-white">
-                    Based on 9 Clutch reviews
-                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-x-6">
@@ -114,6 +119,10 @@ export const Feedback = () => {
                 >
                   <Image className="w-12 md:w-16" src={upwork} alt=""></Image>
                 </a>
+                <div className="flex items-center gap-[8px]">
+                  <Image className="w-[35px]" src={topRated} alt=""></Image>
+                  <p className="markup mt-1 text-[16px] text-white">Top Rated Plus</p>
+                </div>
               </div>
             </div>
           </div>

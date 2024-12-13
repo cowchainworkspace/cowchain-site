@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
-import bg from "@/assets/services/FAQServiceBg.svg"
+import bg from "@/assets/services/FAQServiceBg.svg";
 import Image from "next/image";
 
 const faqData = [
@@ -29,10 +29,14 @@ const faqData = [
       "Does a professional Smart Contract development service provider offer maintenance and support services?",
     content: `provider offer maintenance and support services?
 Yes, we offer maintenance and support services for smart contracts after deployment. This ensures the solution's smooth operation in the long term.`
-  },
+  }
 ];
 
-export default function FAQ() {
+export default function FAQ({
+  title = "FREQUENTLY ASKED QUESTIONS",
+  data = faqData,
+  noBg
+}) {
   const [screenWidth, setScreenWidth] = useState();
 
   useEffect(() => {
@@ -41,27 +45,31 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="relative z-30 border-t border-t-th-fade">
-
-<div style={{ pointerEvents: "none" }} className="absolute right-0 bottom-0 -top-[380px] left-0 z-[-3] overflow-hidden">
-    <Image
-        alt=""
-        width={1380}
-        height={1330}
-        style={{ pointerEvents: "none" }}
-        className="absolute -left-[650px] -z-10 min-h-[1330px] min-w-[900px]"
-        src={bg}
-      />
-      </div>
+      {!noBg && (
+        <div
+          style={{ pointerEvents: "none" }}
+          className="absolute -top-[380px] bottom-0 left-0 right-0 z-[-3] overflow-hidden"
+        >
+          <Image
+            alt=""
+            width={1380}
+            height={1330}
+            style={{ pointerEvents: "none" }}
+            className="absolute -left-[650px] -z-10 min-h-[1330px] min-w-[900px]"
+            src={bg}
+          />
+        </div>
+      )}
 
       <div className="relative grid grid-cols-1 md:grid-cols-5">
-        <div className="py-[60px] md:py-heading px-default md-border-r flex justify-center border-b border-b-th-fade text-center md:col-span-2">
-          <h2 className="flex max-w-[321px] justify-center text-center text-4xl uppercase leading-[40px]  text-white md:max-w-[365px] md:text-left md:text-[60px] md:leading-[53px]">
-            FREQUENTLY ASKED QUESTIONS
+        <div className="md:py-heading px-default md-border-r flex justify-center border-b border-b-th-fade py-[60px] text-center md:col-span-2">
+          <h2 className="flex max-w-[321px] justify-center text-center text-4xl uppercase uppercase leading-[40px]  text-white md:max-w-[365px] md:text-left md:text-[60px] md:leading-[53px]">
+            {title}
           </h2>
         </div>
         <div className="md:col-span-3">
           <Accordion allowToggle>
-            {faqData.map((faq, index) => (
+            {data.map((faq, index) => (
               <AccordionItem key={index} className="border-b border-th-fade">
                 {({ isExpanded }) => (
                   <div
@@ -74,35 +82,41 @@ export default function FAQ() {
                     key={index}
                   >
                     <AccordionButton className={cn("relative")}>
-                      <div className="mr-auto w-full max-w-[287px] text-left ">
+                      <div className="mr-auto w-full  text-left ">
                         <span className="max-w-2xl text-left font-roc !text-[14px] font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
                           {faq.title}
                         </span>
                       </div>
                       {isExpanded ? (
-                         <div className="flex items-center justify-end md:justify-center" style={{
-                          width: screenWidth > 768 ? 150 : 50,
-                        }}>
-                        <svg
-                          width={screenWidth > 768 ? "50" : "32"}
-                          height={screenWidth > 768 ? "50" : "32"}
-                          viewBox="0 0 32 32"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          className="flex items-center justify-end md:justify-center"
+                          style={{
+                            width: screenWidth > 768 ? 150 : 50
+                          }}
                         >
-                          <circle cx="16" cy="16" r="16" fill="white" />
-                          <path
-                            d="M12.2656 16H19.7323"
-                            stroke="black"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                          <svg
+                            width={screenWidth > 768 ? "50" : "32"}
+                            height={screenWidth > 768 ? "50" : "32"}
+                            viewBox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle cx="16" cy="16" r="16" fill="white" />
+                            <path
+                              d="M12.2656 16H19.7323"
+                              stroke="black"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
                         </div>
                       ) : (
-                        <div className="flex items-center justify-end md:justify-center" style={{
-                          width: screenWidth > 768 ? 150 : 50,
-                        }}>
+                        <div
+                          className="flex items-center justify-end md:justify-center"
+                          style={{
+                            width: screenWidth > 768 ? 150 : 50
+                          }}
+                        >
                           <svg
                             width={screenWidth > 768 ? "50" : "32"}
                             height={screenWidth > 768 ? "50" : "32"}

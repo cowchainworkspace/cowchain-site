@@ -1,6 +1,6 @@
 "use client";
 
-import bg_lg from "@/assets/bg/home-clients.png";
+import FSTrustBuyNumbBg from "@/assets/bg/FSTrustBuyNumbBg.svg";
 import arrow from "@/assets/arrow_right.svg";
 import { Counter } from "../../../(home)/components/counter";
 import Link from "next/link";
@@ -34,13 +34,13 @@ export function TustByNumbers() {
     <section className="relative ">
       <Image
         alt=""
-        className="absolute -top-[38%] right-0 hidden h-screen md:-top-[45%] md:block md:h-min  lg:-top-[80%]"
-        src={bg_lg}
+        className="absolute -bottom-[38%] left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min  lg:-bottom-[80%]"
+        src={FSTrustBuyNumbBg}
       />
 
       <div className="relative h-full">
         <div className="grid h-full grid-cols-1 lg:grid-cols-3 ">
-          <div className="flex h-full pt-[170px] pl-[88px] pb-[110px] pr-[168px] flex-col gap-[37px] justify-center border-r border-r-th-fade">
+          <div className="flex h-full pt-[170px] pl-[88px] pb-[110px] pr-[168px] flex-col gap-[37px] border-b border-b-th-fade justify-center border-r border-r-th-fade">
             <h2 className=" text-[60px] heading-[54px] uppercase text-white  md:text-[60px]">
               Trust by Numbers
             </h2>

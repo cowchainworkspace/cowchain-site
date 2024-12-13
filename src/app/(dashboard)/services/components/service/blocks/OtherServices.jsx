@@ -40,7 +40,7 @@ const Quote = ({ text, author, index }) => {
   );
 };
 
-export const OtherServices = () => {
+export const OtherServices = ({title, data = feedbackData}) => {
   return (
     <section id="">
       <div className="relative grid grid-cols-1 border-t border-t-th-fade md:grid-cols-6">
@@ -52,22 +52,13 @@ export const OtherServices = () => {
             />
 
             <h3 className="text-left text-[42px] uppercase text-white ">
-              In addition <br /> to {" "}
-              <span className="violet-gradient-text">
-                dex platform
-                <br />
-                development
-              </span>
-              ,<br />
-              we offer <br />
-              the following <br />
-              <span className="violet-gradient-text">blockchain</span>{" "} services
+             {title}
             </h3>
           </div>
         </div>
         <div className="quote_wrapper flex items-stretch overflow-x-scroll border-b border-b-th-fade md:col-span-3 md:flex-col md:overflow-x-hidden md:overflow-y-visible">
-          {feedbackData &&
-            feedbackData.map((feedback, index) => (
+          {data &&
+            data.map((feedback, index) => (
               <Quote key={index} {...feedback} index={index} />
             ))}
         </div>
