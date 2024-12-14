@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function KeyFeatures({ isOneBlock, title, desc }) {
   return (
-    <section className="relative">
+    <section className="relative  border-b border-b-th-fade">
       {isOneBlock && (
         <Image
           alt=""

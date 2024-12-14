@@ -3,9 +3,9 @@
 import bg_lg from "@/assets/bg/dexServiceBg.svg";
 import Image from "next/image";
 
-export function DexServices({ title, desc, data, noBg }) {
+export function ExpertiseServices({ title, desc, data, noBg, topBorder = true, bottomBorder = true }) {
   return (
-    <section className="relative border-t border-t-th-fade ">
+    <section className={`relative ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}>
       {!noBg && (
         <Image
           alt=""
@@ -15,7 +15,7 @@ export function DexServices({ title, desc, data, noBg }) {
       )}
 
       <div className="py-heading px-default relative flex justify-between max-w-[1440px] mx-auto">
-        <div className="  lg:gap-16">
+        <div className="lg:gap-16">
           <h2 className="lg:order-0 text-[60px] uppercase text-white  md:text-[60px]">
             {title}
           </h2>

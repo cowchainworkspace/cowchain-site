@@ -3,7 +3,7 @@ import Achievements from "./blocks/Achievements";
 import Contact from "@/components/Contact";
 import FAQ from "../components/service/blocks/FAQ";
 import { TustByNumbers } from "./blocks/TustByNumbers";
-import { DexServices } from "../components/service/blocks/DexServices";
+import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import { Industries } from "../components/service/blocks/Industries/index";
 import { Feedback } from "../components/service/blocks/Feedback";
 import { OtherServices } from "../components/service/blocks/OtherServices";
@@ -33,7 +33,7 @@ const FullStackDevelopment = () => {
       <HeroSection />
       <Achievements />
       <TustByNumbers />
-      <DexServices
+      <ExpertiseServices
         title={
           <>
             Expertise of <br />
@@ -52,8 +52,10 @@ const FullStackDevelopment = () => {
           "At Cowchain, our full stack development company has delivered solutions across multiple industries. Our full stack services offer customized software solutions crafted to address requirements of every specific sector. Here are some industries we serve"
         }
         data={servedIndustriesData}
+        topBorder={false}
+        bottomBorder={false}
       />
-      <DexServices
+      <ExpertiseServices
         title={
           <>
             Advantages <br />
@@ -66,7 +68,7 @@ const FullStackDevelopment = () => {
         data={AdvantageseData}
         noBg={true}
       />
-      <DexServices
+      <ExpertiseServices
         title={
           <>
             Our Development <br />
@@ -77,6 +79,8 @@ const FullStackDevelopment = () => {
           "Our full stack development company follows a structured process to ensure that every project is delivered on time, meets client expectations, and is optimized for performance"
         }
         data={DevProcessData}
+        topBorder={false}
+        bottomBorder={false}
       />
       <FAQ
         noBg={true}

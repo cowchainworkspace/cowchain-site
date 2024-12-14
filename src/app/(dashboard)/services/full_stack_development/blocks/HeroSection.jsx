@@ -17,7 +17,7 @@ export const HeroSection = () => {
       <Helmet>
         <link
           rel="canonical"
-          href={"https://cowchain.io/services/dex_development"}
+          href={"https://cowchain.io/services/full_stack_development"}
         />
       </Helmet>
       <Image
@@ -35,7 +35,7 @@ export const HeroSection = () => {
             <span className="text-white">Services</span>
           </Link>
           <Image className="h-[24px] w-[24px]" src={arrow} />
-          <span className="text-white">Dex development</span>
+          <span className="text-white">Full Stack Development</span>
         </div>
         <Tag className={"mr-auto cursor-default"} title={"cowchain"} />
         <h1 className="mt-4 cursor-default text-[80px] uppercase text-white lg:mt-6 lg:max-w-[1200px]">

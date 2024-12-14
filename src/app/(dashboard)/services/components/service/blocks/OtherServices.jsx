@@ -21,12 +21,12 @@ const feedbackData = [
   }
 ];
 
-const Quote = ({ text, author, index }) => {
+const Quote = ({ text, author, lastIndex }) => {
   return (
     <article
       className={
-        index === feedbackData.length - 1
-          ? "px-default relative flex w-full min-w-[320px] flex-col border-r border-r-th-fade pb-[40px] pt-[71px] md:border-r-0"
+        lastIndex
+          ? "px-default relative flex w-full min-w-[320px] flex-col  pb-[40px] pt-[71px] md:border-r-0"
           : "px-default relative flex w-full min-w-[320px] flex-col border-r border-r-th-fade  pb-[40px] pt-[71px] md:border-b md:border-r-0 md:border-b-th-fade"
       }
     >
@@ -40,11 +40,11 @@ const Quote = ({ text, author, index }) => {
   );
 };
 
-export const OtherServices = ({title, data = feedbackData}) => {
+export const OtherServices = ({ title, data = feedbackData }) => {
   return (
     <section id="">
-      <div className="relative grid grid-cols-1 border-t border-t-th-fade md:grid-cols-6">
-        <div className="md-border-r h-full pl-[80px] flex justify-start items-center relative box-border border-b border-b-th-fade md:col-span-3">
+      <div className="relative grid grid-cols-1 md:grid-cols-6">
+        <div className="md-border-r relative box-border flex h-full items-center justify-start pl-[80px] md:col-span-3">
           <div className="">
             <Tag
               title={"Other Our Services"}
@@ -52,14 +52,18 @@ export const OtherServices = ({title, data = feedbackData}) => {
             />
 
             <h3 className="text-left text-[42px] uppercase text-white ">
-             {title}
+              {title}
             </h3>
           </div>
         </div>
-        <div className="quote_wrapper flex items-stretch overflow-x-scroll border-b border-b-th-fade md:col-span-3 md:flex-col md:overflow-x-hidden md:overflow-y-visible">
+        <div className="quote_wrapper flex items-stretch overflow-x-scroll md:col-span-3 md:flex-col md:overflow-x-hidden md:overflow-y-visible">
           {data &&
             data.map((feedback, index) => (
-              <Quote key={index} {...feedback} index={index} />
+              <Quote
+                key={index}
+                {...feedback}
+                lastIndex={index === data.length - 1}
+              />
             ))}
         </div>
       </div>

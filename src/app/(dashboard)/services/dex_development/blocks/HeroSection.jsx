@@ -13,7 +13,7 @@ import { useGetItems } from "@/hooks/use-strapi";
 
 export const HeroSection = () => {
   return (
-    <section className="relative overflow-visible pt-20 lg:pt-[120px]">
+    <section className="relative overflow-visible pt-20 lg:pt-[120px] px-[32px] lg:px-16 xl:px-[88px]">
       <Helmet>
         <link
           rel="canonical"
@@ -25,7 +25,7 @@ export const HeroSection = () => {
         className="absolute right-0 -top-24  min-h-[150%] min-w-[200vw] md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
         src={bg_lg}
       />
-      <div className="relative flex flex-col px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
+      <div className="relative flex flex-col pt-5 pb-[91px] md:pt-8 ">
         <div className="mb-6 flex gap-4">
           <Link href={"/"}>
             <Image className="h-[24px] w-[24px]" src={home} />
@@ -35,13 +35,13 @@ export const HeroSection = () => {
             <span className="text-white">Services</span>
           </Link>
           <Image className="h-[24px] w-[24px]" src={arrow} />
-          <span className="text-white">Dex development</span>
+          <span className="text-white">Dex Development</span>
         </div>
         <Tag className={"mr-auto cursor-default"} title={"cowchain"} />
         <h1 className="mt-4 cursor-default text-[80px] uppercase text-white lg:mt-6 lg:max-w-[1200px]">
           Decentralized Exchange Development Company
         </h1>
-        <div className="my-14 text-white flex items-center justify-end gap-2 lg:justify-between">
+        <div className="mt-[60px] text-white text-[16px] flex items-center justify-end gap-2 lg:justify-between">
           Get the best decentralized exchange development services from Cowchain <br />
           and stand out in the competitive cryptocurrency market
         </div>

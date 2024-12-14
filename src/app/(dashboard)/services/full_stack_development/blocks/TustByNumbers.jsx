@@ -40,8 +40,8 @@ export function TustByNumbers() {
 
       <div className="relative h-full">
         <div className="grid h-full grid-cols-1 lg:grid-cols-3 ">
-          <div className="flex h-full pt-[170px] pl-[88px] pb-[110px] pr-[168px] flex-col gap-[37px] border-b border-b-th-fade justify-center border-r border-r-th-fade">
-            <h2 className=" text-[60px] heading-[54px] uppercase text-white  md:text-[60px]">
+          <div className="flex h-full flex-col justify-center gap-[37px] border-r border-r-th-fade pb-[110px] pl-[88px] pr-[168px] pt-[170px]">
+            <h2 className=" heading-[54px] text-[60px] uppercase text-white  md:text-[60px]">
               Trust by Numbers
             </h2>
             <p className="body my-[40px] max-w-lg text-base leading-6 md:my-[20px] lg:order-2 lg:max-w-[306]">
@@ -52,11 +52,13 @@ export function TustByNumbers() {
             </p>
           </div>
           <div className="col-span-2 flex grid w-full grid-cols-2  flex-col justify-center customSmall:flex-row  lg:order-3 lg:ml-auto">
-            {TustByNumbersData.map(({number, desc, sighn}) => (
-              <div className="h-full w-full grid-cols-1 px-[70px]  grid-rows-1 flex flex-col justify-center border-b border-r  border-b-th-fade border-r-th-fade">
+            {TustByNumbersData.map(({ number, desc, sighn }, index) => (
+              <div
+                className={`flex h-full w-full grid-cols-1 grid-rows-1 flex-col justify-center border-r border-r-th-fade px-[70px] ${index < 2 && "border-b border-b-th-fade"}`}
+              >
                 <div className="flex items-center">
                   <Counter duration={4} target={number} />
-                  {sighn &&  <span className="num_lg  text-white">{sighn}</span>}
+                  {sighn && <span className="num_lg  text-white">{sighn}</span>}
                 </div>
                 <p className="body1 mt-[30px] max-w-[250px]">{desc}</p>
               </div>

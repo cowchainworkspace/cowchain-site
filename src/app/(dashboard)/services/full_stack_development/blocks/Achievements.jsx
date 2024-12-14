@@ -4,13 +4,13 @@ import React from "react";
 export default function Achievements() {
   return (
     <section className="relative  w-full overflow-hidden border-b border-t border-b-th-fade border-t-th-fade pt-20 md:max-w-full ">
-      <div className="justify-left relative flex cursor-default flex-col items-start px-5 pb-8 md:px-8 md:pb-12  lg:px-16 xl:px-24">
+      <div className="justify-left relative flex cursor-default flex-col items-start px-5 pb-8 md:px-8 md:pb-[127px]  lg:px-16 xl:px-24">
         <Tag
           title={"dApp Development Services"}
           className={"z-[20] mb-4 md:mb-8"}
         />
 
-        <h3 className="mb-[196px] text-left text-[42px] uppercase text-white md:mb-[150px] md:block  lg:mt-6">
+        <h3 className="text-left text-[42px] uppercase text-white md:block  lg:mt-6">
           At Cowchain, we specialize in delivering{" "}
           <span className="violet-gradient-text">
             complete

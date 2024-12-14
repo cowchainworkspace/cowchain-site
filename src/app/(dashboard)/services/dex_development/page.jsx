@@ -2,7 +2,7 @@ import { HeroSection } from "./blocks/HeroSection";
 import Achievements from "./blocks/Achievements";
 import Contact from "@/components/Contact";
 import FAQ from "../components/service/blocks/FAQ";
-import { DexServices } from "../components/service/blocks/DexServices";
+import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { Industries } from "../components/service/blocks/Industries/index";
 import { Feedback } from "../components/service/blocks/Feedback";
@@ -19,7 +19,7 @@ const DexDevelopment = () => {
     <section className="overflow-visible">
       <HeroSection />
       <Achievements />
-      <DexServices
+      <ExpertiseServices
         title={
           <>
             our
@@ -32,6 +32,7 @@ const DexDevelopment = () => {
         }
         desc={DexExpertiseDesc}
         data={DexExpertiseData}
+        topBorder={false}
       />
       <KeyFeatures
         title={"Key Features of Our DEX Development"}
@@ -45,6 +46,7 @@ const DexDevelopment = () => {
           "Our decentralized exchange development company serves a variety of industries, ensuring that each DEX platform is built to meet sector-specific needs"
         }
         data={IndustriesDexData}
+        topBorder={false}
       />
       <KeyFeatures
         isOneBlock={true}
@@ -59,6 +61,7 @@ const DexDevelopment = () => {
           "Our decentralized cryptocurrency exchange app development follows a structured approach, ensuring seamless development and deployment. By leveraging cutting-edge technologies in decentralized cryptocurrency exchange development, we ensure the creation of secure and scalable platforms, optimized for rapid transactions"
         }
         data={DexAppDevData}
+        topBorder={false}
       />
       <ServiceStack />
       <Feedback />
@@ -69,6 +72,7 @@ const DexDevelopment = () => {
         }
         isTwoSides={true}
         data={EngagementDevData}
+        topBorder={false}
       />
       <KeyFeatures
         isOneBlock={true}
