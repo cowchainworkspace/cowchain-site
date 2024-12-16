@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/assets/svgComponents/industries/SmartContractIcon.jsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -40,20 +40,36 @@ const Quote = ({ text, author, lastIndex }) => {
   );
 };
 
-export const OtherServices = ({ title, data = feedbackData }) => {
+export const OtherServices = ({
+  title,
+  data = feedbackData,
+  noTag = false,
+  desc,
+  topBorder = true,
+  bottomBorder = true
+}) => {
   return (
-    <section id="">
+    <section
+      className={`${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
+    >
       <div className="relative grid grid-cols-1 md:grid-cols-6">
         <div className="md-border-r relative box-border flex h-full items-center justify-start pl-[80px] md:col-span-3">
           <div className="">
-            <Tag
-              title={"Other Our Services"}
-              className="mb-4 max-w-[194px] md:mb-8"
-            />
+            {!noTag && (
+              <Tag
+                title={"Other Our Services"}
+                className="mb-4 max-w-[194px] md:mb-8"
+              />
+            )}
 
             <h3 className="text-left text-[42px] uppercase text-white ">
               {title}
             </h3>
+            {desc && (
+              <p className="body my-[40px] max-w-[592px] text-base leading-6 md:my-[20px]">
+                {desc}
+              </p>
+            )}
           </div>
         </div>
         <div className="quote_wrapper flex items-stretch overflow-x-scroll md:col-span-3 md:flex-col md:overflow-x-hidden md:overflow-y-visible">

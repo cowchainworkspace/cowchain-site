@@ -3,13 +3,19 @@
 import dexAdvisoryBg from "@/assets/bg/dexAdvisoryBg.svg";
 import Image from "next/image";
 
-export function KeyFeatures({ isOneBlock, title, desc }) {
+export function KeyFeatures({
+  isOneBlock,
+  title,
+  desc,
+  topBorder = true,
+  bottomBorder = true
+}) {
   return (
-    <section className="relative  border-b border-b-th-fade">
+    <section className={`relative ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}>
       {isOneBlock && (
         <Image
           alt=""
-          className="absolute -bottom-[38%] right-0  md:block  "
+          className="absolute -bottom-[38%] right-0  md:block "
           src={dexAdvisoryBg}
         />
       )}

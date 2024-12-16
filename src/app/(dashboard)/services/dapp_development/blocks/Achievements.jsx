@@ -3,13 +3,12 @@ import React from "react";
 
 export default function Achievements() {
   return (
-    <section className="relative  w-full overflow-hidden border-b border-b-th-fade pt-20 md:max-w-full ">
-      <div className="relative flex cursor-default flex-col items-start justify-left px-5 pb-8 md:px-8 md:pb-[127px] lg:items-center lg:px-16 xl:px-24">
+    <section className="relative  w-full overflow-hidden  border-t border-t-th-fade  border-b border-b-th-fade pt-20 md:max-w-full ">
+      <div className="relative flex cursor-default flex-col items-start justify-left px-5 pb-8 md:px-8 md:pb-[127px] lg:px-16 xl:px-24">
         <Tag
           title={"dApp Development Services"}
           className={"z-[20] mb-4 md:mb-8"}
         />
-
         <h3 className=" text-left text-[42px] uppercase text-white md:block  lg:mt-6">
           As a trusted dapp development company, Cowchain <br />
           offers full-cycle dApp development services against <br />
