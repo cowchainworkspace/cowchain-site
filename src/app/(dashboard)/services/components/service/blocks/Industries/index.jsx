@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import education from "@/assets/industries/educationIcon.svg";
 import finance from "@/assets/industries/financeIcon.svg";
 import government from "@/assets/industries/govermentIcon.svg";
@@ -68,18 +67,14 @@ export function Industries({
               key={index}
               className={`col-span-1 row-span-1 flex items-start  ${isTwoSides ? "max-w-[307px] flex-col gap-0" : "gap-[49px]"}`}
             >
-              <div
-                style={{ border: "0.1px solid rgba(255, 255, 255, 0.5)" }}
-                className="mb-[24px] flex min-h-[42px] min-w-[42px] items-center justify-center rounded-full bg-transparent md:mb-[37px] md:max-h-[64px] md:min-h-[64px] md:min-w-[64px] md:max-w-[64px]"
-              >
-                <Image
-                  src={expertise.icon}
-                  width={"auto"}
-                  height={"auto"}
-                  className="h-[20px] w-[20px] md:h-[28px] md:w-[28px]"
-                  alt={expertise.title}
-                />
-              </div>
+              {expertise.icon && (
+                <div
+                  style={{ border: "0.1px solid rgba(255, 255, 255, 0.5)" }}
+                  className="mb-[24px] flex min-h-[42px] min-w-[42px] items-center justify-center rounded-full bg-transparent md:mb-[37px] md:max-h-[64px] md:min-h-[64px] md:min-w-[64px] md:max-w-[64px]"
+                >
+                  <expertise.icon className="flex h-[20px] w-[20px] items-center justify-center md:h-[28px] md:w-[28px]" />
+                </div>
+              )}
               <div className="mb-2 flex items-center">
                 <div className="">
                   <h3 className="mb-[22px] max-w-[310px] text-xl uppercase">

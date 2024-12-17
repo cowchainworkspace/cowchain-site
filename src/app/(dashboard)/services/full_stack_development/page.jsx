@@ -1,5 +1,5 @@
-import { HeroSection } from "./blocks/HeroSection";
-import Achievements from "./blocks/Achievements";
+import { HeroSection } from "../components/service/blocks/HeroSection";
+import Achievements from "../components/service/blocks/Achievements";
 import Contact from "@/components/Contact";
 import FAQ from "../components/service/blocks/FAQ";
 import { TustByNumbers } from "./blocks/TustByNumbers";
@@ -30,8 +30,50 @@ export const metadata = {
 const FullStackDevelopment = () => {
   return (
     <section className="overflow-visible">
-      <HeroSection />
-      <Achievements />
+      <HeroSection
+        tag={"Full Stack Development"}
+        title={"Full Stack Development"}
+        desc={
+          <>
+            Looking for a full stack development company? Cowchain offers
+            comprehensive full stack development <br /> services, handling both
+            the visuals users love and the logic they rely on
+          </>
+        }
+      />
+      <Achievements
+        tag={"full-stack development company"}
+        desc={
+          <>
+            At Cowchain, we specialize in delivering{" "}
+            <span className="violet-gradient-text">
+              complete
+              <br />
+              full stack development services
+            </span>{" "}
+            , covering all <br />
+            aspects of digital product creation. As a{" "}
+            <span className="violet-gradient-text">
+              full stack <br />
+              software development company
+            </span>
+            , we create scalable <br />
+            solutions, ensuring seamless operation across all <br />
+            system components. By leveraging
+            <span className="violet-gradient-text">
+              {" "}
+              cutting-edge <br /> technologies
+            </span>
+            , our engineers deliver systems that <br />
+            work{" "}
+            <span className="violet-gradient-text">
+              flawlessly across platforms
+            </span>
+            , adapting to the <br />
+            unique needs of your business
+          </>
+        }
+      />
       <TustByNumbers />
       <ExpertiseServices
         title={

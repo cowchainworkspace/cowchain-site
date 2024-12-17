@@ -1,15 +1,15 @@
-import consultingAdvisory from "@/assets/industries/consultingAdvisoryIcon.svg";
-import dedicateTeam from "@/assets/industries/dedicateTeamIcon.svg";
-import designDev from "@/assets/industries/designDevIcon.svg";
-import education from "@/assets/industries/educationIcon.svg";
-import finance from "@/assets/industries/financeIcon.svg";
-import government from "@/assets/industries/govermentIcon.svg";
-import healthcare from "@/assets/industries/HelthcareIcon.svg";
-import hybrid from "@/assets/industries/hybridIcon.svg";
-import launchMaintenance from "@/assets/industries/launchMaitenanceIcon.svg";
-import planningConsulting from "@/assets/industries/planningConsaltingIcon.svg";
-import projectBased from "@/assets/industries/projectBasedIcon.svg";
-import testing from "@/assets/industries/testingIcon.svg";
+import ConsultingAdvisoryIcon from "@/assets/svgComponents/industries/ConsultingAdvisoryIcon";
+import DedicateTeamIcon from "@/assets/svgComponents/industries/DedicateTeamIcon";
+import DesignDevIcon from "@/assets/svgComponents/industries/DesignDevIcon";
+import EducationIcon from "@/assets/svgComponents/industries/EducationIcon";
+import FinanceIcon from "@/assets/svgComponents/industries/FinanceIcon";
+import GovernmentIcon from "@/assets/svgComponents/industries/GovermentIcon";
+import HealthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
+import HybridIcon from "@/assets/svgComponents/industries/HybridIcon";
+import LaunchMaintenanceIcon from "@/assets/svgComponents/industries/LaunchMaitenanceIcon";
+import PlanningConsultingIcon from "@/assets/svgComponents/industries/PlanningConsaltingIcon";
+import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon";
+import TestingIcon from "@/assets/svgComponents/industries/TestingIcon";
 
 export const DexExpertiseDesc =
   "We believe that a solid foundation in decentralized exchange development is key to creating platforms that not only meet today’s demands but also evolve with the growing needs of the cryptocurrency market";
@@ -33,22 +33,22 @@ export const IndustriesDexData = [
   {
     title: "Healthcare",
     text: "In the healthcare sector, our DEX solutions offer secure data exchange between healthcare providers, ensuring compliance with privacy regulations",
-    icon: healthcare
+    icon: HealthcareIcon
   },
   {
     title: "Government",
     text: "Government agencies benefit from decentralized platforms for public services such as secure voting systems and identity verification",
-    icon: government
+    icon: GovernmentIcon
   },
   {
     title: "Finance",
     text: "The finance industry benefits from decentralized exchanges by enabling direct asset transfers, minimizing the need for middlemen",
-    icon: finance
+    icon: FinanceIcon
   },
   {
     title: "Education",
     text: "Decentralized platforms in the education sector streamline the verification of academic records, allowing for immutable storage of credentials",
-    icon: education
+    icon: EducationIcon
   }
 ];
 
@@ -56,22 +56,22 @@ export const DexAppDevData = [
   {
     title: "Planning and Consultation",
     text: "Understanding your project’s requirements",
-    icon: planningConsulting
+    icon: PlanningConsultingIcon
   },
   {
     title: "Design & Development",
     text: "Government agencies benefit from decentralized platforms for public services such as secure voting systems and identity verification",
-    icon: designDev
+    icon: DesignDevIcon
   },
   {
     title: "Testing",
     text: "Rigorous testing to ensure system reliability",
-    icon: testing
+    icon: TestingIcon
   },
   {
     title: "Launch & Maintenance",
     text: "Continuous maintenance post-launch",
-    icon: launchMaintenance
+    icon: LaunchMaintenanceIcon
   }
 ];
 
@@ -79,22 +79,22 @@ export const EngagementDevData = [
   {
     title: "Dedicated Team",
     text: "Ideal for long-term projects, this model offers a team fully committed to your initiative, with our blockchain consultants working closely with you for consistent development and progress",
-    icon: dedicateTeam
+    icon: DedicateTeamIcon
   },
   {
     title: "Project-Based",
     text: "For projects with defined objectives, we manage the entire process, from planning to completion, ensuring timely delivery and clear outcomes through our blockchain consulting",
-    icon: projectBased
+    icon: ProjectBasedIcon
   },
   {
     title: "Consulting & Advisory",
     text: "This option focuses on providing expert guidance, helping businesses make informed decisions on integrating decentralized technologies into their operations",
-    icon: consultingAdvisory
+    icon: ConsultingAdvisoryIcon
   },
   {
     title: "Hybrid",
     text: "A blend of ongoing team support and strategic consulting, this model offers adaptability for businesses requiring both hands-on work and high-level advice",
-    icon: hybrid
+    icon: HybridIcon
   }
 ];
 

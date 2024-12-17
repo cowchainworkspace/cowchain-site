@@ -1,8 +1,5 @@
 import { HeroSection } from "../components/service/blocks/HeroSection";
-import Achievements from "./blocks/Achievements";
-import team1 from "@/assets/team/team-carousel-2/team1.png";
-import team2 from "@/assets/team/team-carousel-2/team2.png";
-import team3 from "@/assets/team/team-carousel-2/team3.png";
+import Achievements from "../components/service/blocks/Achievements";
 import Contact from "@/components/Contact";
 import FAQ from "../components/service/blocks/FAQ";
 import { Industries } from "../components/service/blocks/Industries";
@@ -22,8 +19,6 @@ import {
 } from "./utils/data";
 import { DappExpertiseData } from "./utils/data";
 
-const photos = [team1, team2, team3];
-
 export const metadata = {
   metadataBase: new URL("https://cowchain.io/"),
   alternates: {
@@ -32,10 +27,11 @@ export const metadata = {
 };
 
 const DappDevelopment = () => {
-  console.log('dappBenefitsData', dappBenefitsData)
+  console.log("dappBenefitsData", dappBenefitsData);
   return (
     <section>
       <HeroSection
+        tag={"Dapp Development"}
         title={"dApp Development Services"}
         desc={
           <>
@@ -45,7 +41,28 @@ const DappDevelopment = () => {
           </>
         }
       />
-      <Achievements />
+      <Achievements
+        tag={"dApp Development Services"}
+        desc={
+          <>
+            {" "}
+            As a trusted dapp development company, Cowchain <br />
+            offers full-cycle dApp development services against <br />
+            the growing demands of modern industries. <br />
+            Be it a startup or a big player, with our{" "}
+            <span className="violet-gradient-text">
+              dapp Be it a startup or a big player, with our dapp development
+              services
+            </span>{" "}
+            by implementing the full <br />
+            potential of blockchain technology, a business can <br />
+            build{" "}
+            <span className="violet-gradient-text">
+              highly secure and decentralized applications
+            </span>
+          </>
+        }
+      />
       <ExpertiseServices
         topBorder={false}
         title={

@@ -1,34 +1,34 @@
-import ecommerce from "@/assets/industries/ecomerceIcon.svg";
-import education from "@/assets/industries/educationIcon.svg";
-import finance from "@/assets/industries/financeIcon.svg";
-import healthcare from "@/assets/industries/HelthcareIcon.svg";
-import retailLogistic from "@/assets/industries/retailLogisticIcon.svg";
+import EcommerceIcon from "@/assets/svgComponents/industries/EcomerceIcon";
+import EducationIcon from "@/assets/svgComponents/industries/EducationIcon";
+import FinanceIcon from "@/assets/svgComponents/industries/FinanceIcon";
+import HealthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
+import RetailLogisticIcon from "@/assets/svgComponents/industries/RetailLogisticIcon";
 
 export const servedIndustriesData = [
   {
     title: "E-commerce",
     text: "Decentralized finance revolutionizes financial services, enabling secure and transparent transaction flows across industries",
-    icon: ecommerce
+    icon: EcommerceIcon
   },
   {
     title: "Healthcare",
     text: "Our solutions in healthcare prioritize data security, compliance, and easy-to-use interfaces for managing patient information",
-    icon: healthcare
+    icon: HealthcareIcon
   },
   {
     title: "Fintech",
     text: "We build secure stack solutions for managing financial transactions, automating workflows, and providing data analytics for informed decision-making",
-    icon: finance
+    icon: FinanceIcon
   },
   {
     title: "Education",
     text: "Our team creates e-learning platforms that offer easy-to-use interfaces and simple content management for educational institutions",
-    icon: education
+    icon: EducationIcon
   },
   {
     title: "Retail & Logistics",
     text: "Custom services for optimizing inventory management, logistics, and customer engagement through integrated software solutions",
-    icon: retailLogistic
+    icon: RetailLogisticIcon
   }
 ];
 

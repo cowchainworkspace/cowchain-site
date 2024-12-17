@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Clients() {
   return (
-    <section className="relative">
+    <section className="relative border-t border-t-th-fade">
       <Image
         alt=""
         className="absolute hidden -top-[38%] right-0 h-screen md:-top-[45%] md:h-min md:block  lg:-top-[80%]"

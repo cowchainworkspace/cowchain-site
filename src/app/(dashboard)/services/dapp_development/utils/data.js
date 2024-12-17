@@ -1,11 +1,11 @@
-import consultingAdvisory from "@/assets/industries/consultingAdvisoryIcon.svg";
-import dedicateTeam from "@/assets/industries/dedicateTeamIcon.svg";
-import education from "@/assets/industries/educationIcon.svg";
-import finance from "@/assets/industries/financeIcon.svg";
-import government from "@/assets/industries/govermentIcon.svg";
-import healthcare from "@/assets/industries/HelthcareIcon.svg";
-import hybrid from "@/assets/industries/hybridIcon.svg";
-import projectBased from "@/assets/industries/projectBasedIcon.svg";
+import ConsultingAdvisoryIcon from "@/assets/svgComponents/industries/ConsultingAdvisoryIcon";
+import DedicateTeamIcon from "@/assets/svgComponents/industries/DedicateTeamIcon";
+import EducationIcon from "@/assets/svgComponents/industries/EducationIcon";
+import FinanceIcon from "@/assets/svgComponents/industries/FinanceIcon";
+import GovernmentIcon from "@/assets/svgComponents/industries/GovermentIcon";
+import HealthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
+import HybridIcon from "@/assets/svgComponents/industries/HybridIcon";
+import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon";
 
 export const DappExpertiseDesc =
   "Our dapp development company offers a comprehensive range of services that enable businesses to harness the potential of decentralized applications. Here are some of the key services we provide";
@@ -29,27 +29,27 @@ export const dappBenefitsData = [
   {
     title: "Smart Contract Implementation",
     text: "Smart contract implementation allows businesses to automate transactions and processes, lowering reliance on manual processes and decreasing potential risks of errors",
-    icon: healthcare
+    icon: HealthcareIcon
   },
   {
     title: "User Onboarding",
     text: "We streamline user onboarding for decentralized applications, ensuring that your platform is accessible for both technical and non-technical users",
-    icon: government
+    icon: GovernmentIcon
   },
   {
     title: "Scalability",
     text: "Our dapp development solutions are designed to scale your business. We develop applications designed to accommodate growing numbers of users and transaction volumes as your business grows",
-    icon: finance
+    icon: FinanceIcon
   },
   {
     title: "User-Friendliness",
     text: "A user-friendly interface is critical for any application. Our dapp development services prioritize usability, ensuring a seamless experience for end-users while maintaining the robustness of the underlying blockchain technology",
-    icon: education
+    icon: EducationIcon
   },
   {
     title: "Know Your Customer (KYC) Authorization",
     text: "The KYC processes we implement ensure that decentralized applications meet regulatory standards. Cowchain, a well-established dapp development company, builds solutions that simplify user onboarding and maintain legal compliance",
-    icon: education
+    icon: EducationIcon
   }
 ];
 
@@ -57,22 +57,22 @@ export const IndustriesData = [
   {
     title: "Healthcare",
     text: "In the healthcare sector, our DEX solutions offer secure data exchange between healthcare providers, ensuring compliance with privacy regulations",
-    icon: healthcare
+    icon: HealthcareIcon
   },
   {
     title: "Government",
     text: "Government agencies benefit from decentralized platforms for public services such as secure voting systems and identity verification",
-    icon: government
+    icon: GovernmentIcon
   },
   {
     title: "Finance",
     text: "The finance industry benefits from decentralized exchanges by enabling direct asset transfers, minimizing the need for middlemen",
-    icon: finance
+    icon: FinanceIcon
   },
   {
     title: "Education",
     text: "Decentralized platforms in the education sector streamline the verification of academic records, allowing for immutable storage of credentials",
-    icon: education
+    icon: EducationIcon
   }
 ];
 
@@ -80,22 +80,22 @@ export const EngagementDevData = [
   {
     title: "Dedicated Team",
     text: "A full team dedicated to your long-term project",
-    icon: dedicateTeam
+    icon: DedicateTeamIcon
   },
   {
     title: "Project-Based",
     text: "Best suited for clearly defined projects where we oversee each step",
-    icon: projectBased
+    icon: ProjectBasedIcon
   },
   {
     title: "Consulting & Advisory",
     text: "Offering high-level guidance and strategic advice",
-    icon: consultingAdvisory
+    icon: ConsultingAdvisoryIcon
   },
   {
     title: "Hybrid",
     text: "A mix of development and advisory services for businesses that require flexibility",
-    icon: hybrid
+    icon: HybridIcon
   }
 ];
 

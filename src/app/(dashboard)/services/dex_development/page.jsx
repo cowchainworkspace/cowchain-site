@@ -1,5 +1,5 @@
-import { HeroSection } from "./blocks/HeroSection";
-import Achievements from "./blocks/Achievements";
+import { HeroSection } from "../components/service/blocks/HeroSection";
+import Achievements from "../components/service/blocks/Achievements";
 import Contact from "@/components/Contact";
 import FAQ from "../components/service/blocks/FAQ";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
@@ -17,8 +17,46 @@ import { EngagementDevData } from "./utils/data";
 const DexDevelopment = () => {
   return (
     <section className="overflow-visible">
-      <HeroSection />
-      <Achievements />
+      <HeroSection
+        tag={"Dex Development"}
+        title={" Decentralized Exchange Development Company"}
+        desc={
+          <>
+            Get the best decentralized exchange development services from
+            Cowchain <br />
+            and stand out in the competitive cryptocurrency market
+          </>
+        }
+      />
+      <Achievements
+        tag={"decentralized exchange development company"}
+        desc={
+          <>
+            Cowchain is among the{" "}
+            <span className="violet-gradient-text">
+              leading decentralized
+              <br />
+              exchange development companies
+            </span>{" "}
+            providing <br />
+            end-to-end services to empower one to build <br />
+            <span className="violet-gradient-text">scalable DEX platforms</span>
+            . As the trusted <br />
+            <span className="violet-gradient-text">
+              decentralized exchange software <br />
+              development company
+            </span>
+            , we believe <br />
+            in{" "}
+            <span className="violet-gradient-text">
+              secure and customized solutions
+            </span>{" "}
+            that help <br />
+            organizations address the demands of the market <br />
+            and security in trading alongside the users
+          </>
+        }
+      />
       <ExpertiseServices
         title={
           <>

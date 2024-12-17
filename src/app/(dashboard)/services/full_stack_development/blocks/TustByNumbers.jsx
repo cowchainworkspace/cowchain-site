@@ -29,7 +29,7 @@ const TustByNumbersData = [
   }
 ];
 
-export function TustByNumbers() {
+export function TustByNumbers({ data = TustByNumbersData }) {
   return (
     <section className="relative ">
       <Image
@@ -52,13 +52,22 @@ export function TustByNumbers() {
             </p>
           </div>
           <div className="col-span-2 flex grid w-full grid-cols-2  flex-col justify-center customSmall:flex-row  lg:order-3 lg:ml-auto">
-            {TustByNumbersData.map(({ number, desc, sighn }, index) => (
+            {data.map(({ number, desc, sighn, title }, index) => (
               <div
                 className={`flex h-full w-full grid-cols-1 grid-rows-1 flex-col justify-center border-r border-r-th-fade px-[70px] ${index < 2 && "border-b border-b-th-fade"}`}
               >
-                <div className="flex items-center">
-                  <Counter duration={4} target={number} />
-                  {sighn && <span className="num_lg  text-white">{sighn}</span>}
+                <div>
+                  <div className="flex items-center">
+                    <Counter duration={4} target={number} />
+                    {sighn && (
+                      <span className="num_lg  text-white">{sighn}</span>
+                    )}
+                  </div>
+                  {title && (
+                    <span className="num_lg self-start text-white uppercase">
+                      {title}
+                    </span>
+                  )}
                 </div>
                 <p className="body1 mt-[30px] max-w-[250px]">{desc}</p>
               </div>

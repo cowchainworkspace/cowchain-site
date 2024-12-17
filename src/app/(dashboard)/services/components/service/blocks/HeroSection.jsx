@@ -9,7 +9,7 @@ import home from "@/assets/icons/home.png";
 import Link from "next/link";
 import arrow from "@/assets/icons/arrow.svg";
 
-export const HeroSection = ({ title, desc }) => {
+export const HeroSection = ({ title, desc, tag }) => {
   return (
     <section className="relative overflow-visible px-[32px] pt-20 lg:px-16 lg:pt-[120px] xl:px-[88px]">
       <Helmet>
@@ -33,7 +33,7 @@ export const HeroSection = ({ title, desc }) => {
             <span className="text-white">Services</span>
           </Link>
           <Image className="h-[24px] w-[24px]" src={arrow} />
-          <span className="text-white">Dapp Development</span>
+          <span className="text-white">{tag}</span>
         </div>
         <Tag className={"mr-auto cursor-default"} title={"cowchain"} />
         {title && (

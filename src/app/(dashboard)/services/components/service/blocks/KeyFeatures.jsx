@@ -8,11 +8,12 @@ export function KeyFeatures({
   title,
   desc,
   topBorder = true,
-  bottomBorder = true
+  bottomBorder = true,
+  noBg = false,
 }) {
   return (
     <section className={`relative ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}>
-      {isOneBlock && (
+      {!noBg && (
         <Image
           alt=""
           className="absolute -bottom-[38%] right-0  md:block "
