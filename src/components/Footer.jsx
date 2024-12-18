@@ -15,12 +15,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLoader } from "@/hooks/useLoader";
 import { cn } from "@/lib/utils";
+import upwork from "@/assets/homepage/upwork.svg";
+import clutch from "@/assets/homepage/clutch.svg";
+import { alignPropType } from "react-bootstrap/esm/types";
 
 const faqRows = {
   title: "",
   rows: [
     {
-      title: <h2>WHAT WE DO</h2>,
+      title: <h2 className="text-[16px] leading-[16px]">WHAT WE DO</h2>,
       content: (
         <div className="footer-links mb-8 mt-4 flex flex-col gap-y-4">
           <AnchorLink href="#expertise">
@@ -36,7 +39,7 @@ const faqRows = {
       )
     },
     {
-      title: <h2>AGENCY</h2>,
+      title: <h2 className="text-[16px] leading-[16px]">AGENCY</h2>,
       content: (
         <div className="footer-links mb-8 mt-4 flex flex-col gap-y-4">
           <Link href={"/"}>
@@ -46,7 +49,7 @@ const faqRows = {
       )
     },
     {
-      title: <h2>HELP</h2>,
+      title: <h2 className="text-[16px] leading-[16px]">HELP</h2>,
       content: (
         <div className="footer-links mb-8 mt-4 flex flex-col gap-y-4">
           <AnchorLink href="#contact">
@@ -68,37 +71,43 @@ const faqConfig = {
   animate: true,
   openOnload: false,
   expandIcon: (
-    <svg
-      width="12"
-      height="6"
-      viewBox="0 0 12 6"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M6 6L0.803848 -4.86779e-08L11.1962 -1.3313e-06L6 6Z"
-        fill="white"
-      />
-    </svg>
+    <div className="mt-[7px]">
+      <svg
+        width="12"
+        height="6"
+        viewBox="0 0 12 6"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6 6L0.803848 -4.86779e-08L11.1962 -1.3313e-06L6 6Z"
+          fill="white"
+        />
+      </svg>
+    </div>
   ),
   collapseIcon: (
-    <svg
-      width="12"
-      height="6"
-      viewBox="0 0 12 6"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M6 6L0.803848 -4.86779e-08L11.1962 -1.3313e-06L6 6Z"
-        fill="white"
-      />
-    </svg>
+    <div className="-mt-[12px]">
+      <svg
+        width="12"
+        height="6"
+        viewBox="0 0 12 6"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6 6L0.803848 -4.86779e-08L11.1962 -1.3313e-06L6 6Z"
+          fill="white"
+        />
+      </svg>
+    </div>
   )
 };
 
 const faqStyles = {
   bgColor: "#000000",
+  display: "flex",
+  alignItems: "center",
   titleTextColor: "white",
   titleTextSize: "16px",
   rowTitleColor: "white",
@@ -112,13 +121,12 @@ const faqStyles = {
   timingFunc: "ease"
 };
 
-export default function Footer() {
+export default function Footer({footerForm}) {
   const [isBorder, setIsBorder] = useState(false);
   const { isRendering } = useLoader();
   const pathname = usePathname();
 
   useEffect(() => {
-    console.log(pathname);
     setIsBorder(pathname === "/sitemap" || pathname === "/error");
   }, [pathname]);
 
@@ -133,24 +141,21 @@ export default function Footer() {
         })}
       >
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="md-border-r py-heading px-default flex flex-col gap-y-8 border-b border-b-th-fade text-center">
-            <span className="text-center font-roc text-xl font-medium uppercase text-white md:text-left">
-              What’s on your mind?
-            </span>
-            <div className="max-w-xl">
-              <p className="text-center text-[#bbb] md:text-left">
-                Submit your email address and our team will get in touch with
-                you within 48 hours. Or drop us a line at{" "}
+          <div className="md-border-r flex flex-col gap-y-8 border-b border-b-th-fade px-[20px] py-[40px] text-center md:py-[65px] md:pl-[88px] md:pr-[79px]">
+            <div className="max-w-[320px]">
+              <p className="text-left text-[#bbb] ">
+                © 2024 Сowchain сo. All rights reserved. <br />
+                For business inquiries{" "}
                 <a
-                  className="ml-1 inline text-white underline md:text-left"
+                  className="ml-1 inline text-left md:text-white md:underline"
                   href="mailto:sales@cowchain.io"
                 >
                   sales@cowchain.io
                 </a>
               </p>
             </div>
-            <FooterForm />
-            <div className="mx-auto flex items-center justify-center gap-x-2 md:mx-0 md:justify-start">
+            {footerForm && <FooterForm />}
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-2 md:mx-0 md:justify-start">
               <a
                 href="https://www.linkedin.com/company/cowchain/"
                 rel="nofollow noreferrer"
@@ -158,7 +163,7 @@ export default function Footer() {
               >
                 <Image
                   alt="linkedin"
-                  className="w-12 lg:w-16"
+                  className="w-12 min-w-[52px] lg:w-16"
                   src={linkedin}
                 ></Image>
               </a>
@@ -169,7 +174,7 @@ export default function Footer() {
               >
                 <Image
                   alt="telegram"
-                  className="w-12 lg:w-16"
+                  className="w-12 min-w-[52px] lg:w-16"
                   src={telegram}
                 ></Image>
               </a>
@@ -180,7 +185,7 @@ export default function Footer() {
               >
                 <Image
                   alt="twitter"
-                  className="w-12 lg:w-16"
+                  className="w-12 min-w-[52px] lg:w-16"
                   src={twitter}
                 ></Image>
               </a>
@@ -191,7 +196,7 @@ export default function Footer() {
               >
                 <Image
                   alt="medium"
-                  className="w-12 lg:w-16"
+                  className="w-12 min-w-[52px] lg:w-16"
                   src={medium}
                 ></Image>
               </a>
@@ -200,21 +205,45 @@ export default function Footer() {
                 rel="nofollow noreferrer"
                 target="_blank"
               >
-                <Image alt="mail" className="w-12 lg:w-16" src={mail}></Image>
+                <Image
+                  alt="mail"
+                  className="w-12 min-w-[52px] lg:w-16"
+                  src={mail}
+                ></Image>
+              </a>
+              <a
+                href="https://www.upwork.com/ag/cowchain/"
+                rel="nofollow noreferrer"
+                target="_blank"
+              >
+                <Image
+                  className="w-12 min-w-[52px] lg:w-16"
+                  src={upwork}
+                  alt=""
+                ></Image>
+              </a>
+              <a
+                href="https://clutch.co/profile/cowchain"
+                rel="nofollow noreferrer"
+                target="_blank"
+              >
+                <Image
+                  className="w-12 min-w-[52px] lg:w-16"
+                  src={clutch}
+                  alt=""
+                ></Image>
               </a>
             </div>
           </div>
-          <div className="py-heading px-default border-b border-b-th-fade lg:hidden">
+
+          <div className="px-default border-b border-b-th-fade py-[60px] lg:hidden">
             <Faq data={faqRows} styles={faqStyles} config={faqConfig} />
           </div>
 
-          <div className="py-heading px-default hidden border-b border-b-th-fade lg:block">
+          <div className="px-default hidden border-b border-b-th-fade py-[65px] lg:block">
             <div className="grid grid-cols-3 gap-x-8">
-              <div className="footer-links">
-                <p className="font-roc text-base font-medium !text-white">
-                  WHAT WE DO
-                </p>
-                <div className="my-8 flex flex-col gap-y-4">
+              <div className="footer-links h-full">
+                <div className=" flex h-full flex-col gap-y-4">
                   <Link href="/services">
                     <p className="text-[#bbb]">
                       Services &<br></br> Techonologies
@@ -227,23 +256,26 @@ export default function Footer() {
                     {" "}
                     <p className="text-[#bbb]">Clients</p>
                   </Link>
+                  <div className="flex-grow"></div>
+                  <p className="font-roc text-base font-medium !text-white">
+                    WHAT WE DO
+                  </p>
                 </div>
               </div>
-              <div className="footer-links">
-                <p className="font-roc text-base font-medium !text-white">
-                  AGENCY
-                </p>
-                <div className="my-8 flex flex-col gap-y-4">
+              <div className="footer-links h-full">
+                <div className="flex h-full flex-col gap-y-4">
                   <Link href="/team">
                     <p className="text-[#bbb]">Team</p>
                   </Link>
+                  <Link href="/blog">
+                    <p className="text-[#bbb]">Blog</p>
+                  </Link>
+                  <div className="flex-grow"></div>
+                  <p className="font-roc font-medium !text-white">AGENCY</p>
                 </div>
               </div>
-              <div className="footer-links">
-                <p className="font-roc text-base font-medium !text-white">
-                  HELP
-                </p>
-                <div className="my-8 flex flex-col gap-y-4">
+              <div className="footer-links h-full">
+                <div className="flex h-full flex-col gap-y-4">
                   <AnchorLink href="#contact">
                     <p className="text-[#bbb]">Contact Us</p>
                   </AnchorLink>
@@ -253,15 +285,16 @@ export default function Footer() {
                   <AnchorLink href="#faq">
                     <p className="text-[#bbb]">FAQs</p>
                   </AnchorLink>
-                  <Link href="/sitemap">
-                    <p className="text-[#bbb]">Sitemap</p>
-                  </Link>
+                  <div className="flex-grow"></div>
+                  <p className="font-roc text-base font-medium !text-white">
+                    HELP
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="px-2 py-3 md:col-span-2 md:py-8">
+          <div className=" px-2 py-3 md:col-span-2 md:py-8">
             <a href="/">
               <Image className="w-full" src={logofont} alt=""></Image>
             </a>

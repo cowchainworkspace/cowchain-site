@@ -6,6 +6,8 @@ import arrow from "@/assets/arrow_right.svg";
 import { cn } from "@/lib/utils";
 import Markdown from "markdown-to-jsx";
 import { useGetItems } from "@/hooks/use-strapi";
+import Image from "next/image";
+import bg from "./../../../../../assets/services/IndustriesBgIcon.svg";
 
 const data = [
   {
@@ -42,11 +44,21 @@ export const Industries = () => {
   return (
     <section
       id="view_more"
-      className="relative z-10 hidden border-b  border-b-th-fade md:block"
+      className="relative z-10 hidden border-b  border-t border-b-th-fade border-t-th-fade md:block"
     >
+      <div style={{ pointerEvents: "none" }} className="absolute right-0 bottom-0 -top-[480px] left-0 z-[-3] overflow-hidden">
+    <Image
+        alt=""
+        width={1380}
+        height={1330}
+        style={{ pointerEvents: "none" }}
+        className="absolute -right-[650px] -z-10 min-h-[1330px] min-w-[900px]"
+        src={bg}
+      />
+      </div>
       <div className="relative grid grid-cols-1">
-        <div className="mx-auto mb-16 flex max-w-[870px] flex-col items-center justify-center gap-y-8 px-4 text-center    text-white ">
-          <h3 className="mx-auto mt-20 cursor-default text-center font-roc text-2xl  uppercase leading-none md:text-[42px]">
+        <div className="mx-auto my-[101px] flex max-w-[870px] flex-col items-center justify-center gap-y-8 px-4 text-center    text-white ">
+          <h3 className="mx-auto cursor-default text-center font-roc text-2xl  uppercase leading-none md:text-[42px]">
             Key industries for the application of smart contracts
           </h3>
           <span className="max-w-[500px] text-secondary">
@@ -66,7 +78,7 @@ export const Industries = () => {
             }
           </span>
 
-          <div className="flex gap-4 uppercase">
+          <div className="flex gap-[68px] text-[20px] uppercase">
             <button
               onClick={() => setCaseIndex(0)}
               className={cn("uppercase", {
@@ -105,19 +117,19 @@ export const Industries = () => {
       <div className="grid w-full grid-cols-2 border-t border-t-th-fade">
         <div className="flex flex-col items-start justify-center border-r border-r-th-fade p-8 text-white">
           <div className="mx-auto flex flex-col items-start justify-center">
-            <span className="mb-5 font-roc text-xl  uppercase">
+            <span className="mb-5 font-roc text-[42px]  uppercase">
               {inData?.data[caseIndex].attributes.title}
             </span>
             <span className="mb-5 max-w-[430px] text-secondary ">
               {inData?.data[caseIndex].attributes.text}
             </span>
-            <Link
+            {/* <Link
               className="flex gap-2 text-base  uppercase underline"
               href={inData?.data[caseIndex].attributes?.link || "/"}
             >
               see case study
               <img className="h-6 w-6" src={arrow.src} alt="" />
-            </Link>
+            </Link> */}
           </div>
         </div>
 

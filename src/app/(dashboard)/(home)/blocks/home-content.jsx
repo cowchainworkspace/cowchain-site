@@ -8,18 +8,19 @@ import Contact from "@/components/Contact";
 import FAQ from "./FAQ";
 import Stack from "@/components/stack";
 import Team from "./Team";
- 
+import CasesMobile from './CasesMobile.jsx'
+
 export default function HomeContent() {
+
   return (
     <>
-      <Benefits />
-      <BenefitsMobiles />
-      <Stack title={"Our Expertise"} />
+      <Stack title={"Our\nExpertise"} />
       <Clients />
       <Cases />
+      <CasesMobile />
       <Team />
       <FAQ />
-      <Contact />
+      <Contact className="py-[159px] px-[64px] md:pt-[169px] md:pb-[127px]" />
     </>
   );
 }

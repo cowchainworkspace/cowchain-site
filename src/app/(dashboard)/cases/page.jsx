@@ -59,7 +59,7 @@ const old_cases = [
   }
 ];
 
-const Cases = ({ setBurgerOpen }) => {
+const Cases = () => {
   const { data: cases } = useGetItems("cases");
   const [tags, setTags] = useState([]);
   const filteredCases = useMemo(() => {

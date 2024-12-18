@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import { motion, useScroll } from "framer-motion";
 import Tag from "@/components/ui/tag";
@@ -8,6 +8,12 @@ import bg from "@/assets/bg/values.png";
 import { cn } from "@/lib/utils";
 import TeamInfo from "../blocks/team-info";
 import Image from "next/image";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel
+} from "@chakra-ui/react";
 
 const benefitsData = [
   {
@@ -25,7 +31,7 @@ const benefitsData = [
       "max-h-max translate-y-[80%] xl:translate-y-[115%]  duration-1000"
   },
   {
-    title: "03 / We are the devs of Web3.",
+    title: "03 / We are the devs of Web3",
     text: "In our worldview, there’s a huge difference between being Web3 developers and developers of Web3. Web3 devs know how to implement blockchain technologies. Devs of Web3 code meaningful products that add value to the community and push the industry forward. We are the devs of Web3.",
     transformStyle:
       "max-h-max -translate-y-[10%] xl:-translate-y-[10%]  duration-1000",
@@ -67,76 +73,132 @@ export const Values = () => {
     if (yProgress <= 0.9 && yProgress >= 0.6) setScrollIndex(2);
   });
 
+  const [screenWidth, setScreenWidth] = useState();
+
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
+
   return (
-    <div className="hidden md:block">
+    <div className=" md:block">
       <section
         ref={sectionRef}
         id="benefits"
-        className="relative hidden h-[2800px] md:block  md:h-[3200px]"
+        className="relative z-100000  md:block"
       >
-        <div className="sticky top-0">
+        <div className="">
           <Image
-            className="absolute -bottom-44 left-0 hidden h-[1625px] w-[700px] xl:block"
+            className="absolute -bottom-[400px] left-0 hidden h-[1625px] w-[700px] xl:block"
             src={bg}
             alt=""
           ></Image>
-          <button className=" absolute bottom-1/3 left-0 right-0 z-20 mx-auto hidden h-36 w-36 cursor-pointer items-center justify-center rounded-full bg-white font-roc text-base font-medium uppercase text-black lg:h-44 lg:w-44 xl:block">
-            Get in touch
-          </button>
-          <div className="  flex h-screen flex-col xl:flex-row">
-            <div className="flex items-start justify-start border-b border-b-th-fade   border-r-th-fade md:h-screen xl:w-1/2 xl:items-center xl:border-b xl:border-r ">
+
+          <div className="flex flex-col xl:flex-row">
+            <div className="flex items-start justify-start border-b border-b-th-fade   border-r-th-fade xl:w-1/2 xl:items-center xl:border-b xl:border-r ">
               <div className="sticky mb-12  ml-5 mt-16 flex max-w-[354px] flex-col items-start justify-start xl:mb-0 xl:ml-28">
-                <Tag className={"mb-4 justify-start"} title={"our values"} />
                 <p className="font-roc text-4xl font-medium  uppercase  text-white  xl:text-7xl">
-                  What we value
+                  Our mission
                 </p>
-                <button className="btn-submit mt-6 cursor-pointer items-center justify-center bg-white font-roc   text-base font-medium uppercase text-black xl:hidden  xl:px-12">
-                  Get in touch
-                </button>
               </div>
             </div>
-            <div className="h-screen items-center justify-center border-b border-b-th-fade md:flex md:flex-col xl:w-1/2">
-              <Scrollama
-                offset={0.5}
-                onStepEnter={onStepEnter}
-                onStepExit={onStepExit}
-              >
-                {benefitsData.map((benefit, index) => {
-                  return (
-                    <Step data={index + 1} key={benefit.title + index}>
-                      <article
+
+            <div className="flex-1">
+              <Accordion allowToggle>
+                {benefitsData.map((benefit, index) => (
+                  <AccordionItem
+                    key={index}
+                    className="border-b border-th-fade"
+                  >
+                    {({ isExpanded }) => (
+                      <div
                         className={cn(
-                          "px-default relative flex h-[25vh] min-h-[25vh] w-full  grow flex-col items-center justify-center overflow-hidden border-t border-t-th-fade bg-black   py-6 duration-1000 will-change-transform",
-                          benefit.initialStyle,
-                          scrollIndex >= index ? benefit.transformStyle : ""
+                          "relative bg-cover px-5 py-[24px] xl:px-[60px] xl:py-[60px]"
                         )}
+                        key={index}
                       >
-                        <motion.div
-                          className={"flex w-full flex-col justify-center "}
-                          variants={expandVariants}
-                          id={"b-expandable-" + index}
+                        <AccordionButton className={cn("relative")}>
+                          <div className="mr-auto w-full max-w-3xl text-left ">
+                            <span className="max-w-2xl text-left font-roc !text-[14px] font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
+                              {benefit.title}
+                            </span>
+                          </div>
+                          {isExpanded ? (
+                            <div
+                              className="flex items-center justify-center"
+                              style={{
+                                width: screenWidth > 768 ? 150 : 50
+                              }}
+                            >
+                              <svg
+                                width={screenWidth > 768 ? "50" : "32"}
+                                height={screenWidth > 768 ? "50" : "32"}
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <circle cx="16" cy="16" r="16" fill="white" />
+                                <path
+                                  d="M12.2656 16H19.7323"
+                                  stroke="black"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            </div>
+                          ) : (
+                            <div
+                              className="flex items-center justify-center"
+                              style={{
+                                width: screenWidth > 768 ? 150 : 50
+                              }}
+                            >
+                              <svg
+                                width={screenWidth > 768 ? "50" : "32"}
+                                height={screenWidth > 768 ? "50" : "32"}
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <circle
+                                  cx="16"
+                                  cy="16"
+                                  r="15.75"
+                                  stroke="white"
+                                  strokeOpacity="0.5"
+                                  strokeWidth="0.5"
+                                />
+                                <path
+                                  d="M16 12.2666V19.7333"
+                                  stroke="white"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                                <path
+                                  d="M12.2656 16H19.7323"
+                                  stroke="white"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            </div>
+                          )}
+                        </AccordionButton>
+                        <AccordionPanel
+                          className={cn("opacity-0  will-change-transform", {
+                            "pt-6 opacity-100 ": isExpanded
+                          })}
                         >
-                          <span className="mb-12 max-w-xl text-2xl text-white  ">
-                            {benefit.title}
-                          </span>
-                          <motion.p
-                            variants={textVariants}
-                            className={cn(
-                              " min-h-[100px] max-w-2xl text-sm !leading-[180%] text-secondary  transition-all  duration-[1000ms] ease-in will-change-transform xl:text-base 2xl:text-lg",
-                              {
-                                "block  transition-all duration-1000":
-                                  scrollIndex === index
-                              }
-                            )}
-                          >
-                            {benefit.text}
-                          </motion.p>
-                        </motion.div>
-                      </article>
-                    </Step>
-                  );
-                })}
-              </Scrollama>
+                          <div className=" ">
+                            <p className="max-w-2xl !leading-[160%] !text-[#bbb] lg:!leading-[175%]">
+                              {benefit.text}
+                            </p>
+                          </div>
+                        </AccordionPanel>
+                      </div>
+                    )}
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </div>

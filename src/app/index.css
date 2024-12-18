@@ -29,6 +29,17 @@ body {
   all: revert;
 }
 
+.markdown_benefits::-webkit-scrollbar {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+
+.markdown_benefits::-webkit-scrollbar-thumb {
+  background-color: white; 
+}
+
+
+
 /* Text styles */
 
 h1 {
@@ -146,9 +157,7 @@ p,
 
 .btn-submit {
   @apply flex h-12 cursor-pointer items-center justify-center bg-white px-8 pt-1 text-center font-roc text-sm font-medium uppercase text-black lg:h-16;
-  transition:
-    color 0.3s,
-    background-color 0.3s ease-in-out;
+  transition: color 0.3s, background-color 0.3s ease-in-out;
 }
 
 .md-border-r {
@@ -164,10 +173,36 @@ p,
 
 /* Interactive */
 
-.popup-modal-overlay {
-  /*background: rgba(209, 24, 13, 0.8);*/
-  background: rgba(0, 0, 0, 0.8);
-  @apply px-4;
+.contact-input-overlay {
+  background-color: transparent;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+ padding-left: 10px;
+}
+
+.contact-input-overlay::placeholder {
+  padding-left: 24px;
+}
+
+.contact-input-overlay:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.area-input{
+  padding-top: 13px;
+}
+
+
+
+.modal-form-overlay {
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-thanks-overlay {
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .form_label_for_check {

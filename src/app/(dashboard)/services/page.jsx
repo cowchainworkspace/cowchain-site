@@ -6,7 +6,7 @@ import { Products } from "./blocks/Products";
 import { ViewMoreSection } from "./blocks/ViewMore";
 import Stack from "@/components/stack";
 
-const Services = ({ setBurgerOpen }) => {
+const Services = () => {
   return (
     <section>
       <HeroSection />

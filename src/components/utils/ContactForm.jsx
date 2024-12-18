@@ -1,18 +1,26 @@
 "use client";
 
 import Popup from "reactjs-popup";
-import modal_close from "../../assets/homepage/modal_close.svg";
+import modal_close from "../../assets/homepage/closeButtonIcon.svg";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
+import bg from "./../../assets/homepage/form/formBg.svg";
+import { useState } from "react";
+import ThankYouWindow from "./ThankYouWindow";
+import dagerous from "./../../assets/dangerous.svg";
+import chackBox from "./../../assets/checkBox.svg";
 
 export default function ContactForm({ modalOpen, setModalOpen }) {
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors }
+    formState: { errors },
+    clearErrors
   } = useForm();
+
+  const [modalThanksOpen, setModalThanksOpen] = useState(false);
 
   const sendFormData = async (data) => {
     try {
@@ -22,12 +30,14 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
         data,
         process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY
       );
-    } catch (e) {
-      /* empty */
-    }
+    } catch (e) {}
     reset();
-    // setSendSuccess(true);
     setModalOpen(false);
+    setModalThanksOpen(true);
+  };
+
+  const handleInputChange = (fieldName) => {
+    clearErrors(fieldName);
   };
 
   const checkboxes = [
@@ -40,104 +50,269 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
     "Other"
   ];
 
-  const radioBtns = ["$2-3K", "$5-10K", "$10K <", "Other"];
+  const radioBtns = ["$10-15K", "$25-35K", "$50K +", "Other"];
   return (
-    <Popup
-      open={modalOpen}
-      closeOnDocumentClick
-      onClose={() => setModalOpen(false)}
-      className="popup-modal"
-      lockScroll
-      nested
-    >
-      <div className="modal h-full max-h-[95vh] min-w-full max-w-7xl overflow-y-auto border-2 border-white bg-black p-4 md:p-8 lg:p-16">
-        <div className="flex">
+    <>
+      <Popup
+        open={modalOpen}
+        closeOnDocumentClick
+        onClose={() => setModalOpen(false)}
+        className="modal-form relative"
+        lockScroll
+        nested
+      >
+        <div className="md:px-[20px] md:py-[50px] lg:p-[100px]">
           <Image
-            className="ml-auto w-8 cursor-pointer"
+            className="pointer-events-none absolute left-[-350px] top-[-300px] z-[-1] min-h-[1100px] min-w-[900px] md:left-[-500px] md:top-[-900px] md:min-h-[2000px] md:min-w-[1500px]"
             alt=""
-            onClick={() => setModalOpen(false)}
-            src={modal_close}
+            src={bg}
           />
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <p className="text-center font-roc text-4xl font-bold text-white md:text-5xl lg:mt-6 lg:text-left">
-            let`s work <br></br> together
-          </p>
-          <form
-            onSubmit={handleSubmit(sendFormData)}
-            className="userform mt-6 flex flex-col gap-y-6"
-          >
-            <div>
-              <p className="text-white">Services</p>
-              <div className="services_group_wrapper mt-4 flex flex-wrap gap-2">
-                {checkboxes.map((checkbox, index) => (
-                  <label key={index} className="form_label_for_check">
+
+          <div className="modal p-x-[20px] relative flex h-full  min-w-full gap-[20px] font-roc">
+            <div className="flex w-[335px]  flex-col items-center gap-[32px] md:w-[633px]">
+              <div className="relative w-full text-center md:text-left">
+                <p className=" text-center text-[36px] font-medium text-white md:text-left md:text-5xl md:text-[60px]">
+                  CONTACT US
+                </p>
+              </div>
+
+              <form
+                onSubmit={handleSubmit(sendFormData)}
+                className="flex w-full flex-col gap-y-[32px]"
+                noValidate
+              >
+                <div className="flex h-[318px] flex-col gap-y-[12px] md:h-[170px] md:flex-row md:gap-x-[16px] md:gap-y-0">
+                  <div className="flex h-full w-full flex-col justify-between gap-y-[12px] md:gap-y-[16px]">
+                    <div className="relative h-full w-full">
+                      <input
+                        className={`contact-input-overlay h-full w-full`}
+                        type="text"
+                        placeholder="Full Name*"
+                        {...register("fullName", { required: true })}
+                        onChange={() => handleInputChange("fullName")}
+                      />
+                    </div>
+
+                    <div className="relative h-full w-full">
+                      <input
+                        className={`contact-input-overlay h-full w-full`}
+                        type="email"
+                        placeholder="Email*"
+                        {...register("email", {
+                          required: "Please enter your email",
+                          validate: {
+                            maxLength: (value) =>
+                              value.length <= 255 ||
+                              "Email cannot exceed 255 characters",
+                            pattern: (value) =>
+                              /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
+                                value
+                              ) || "Please enter a valid email address"
+                          }
+                        })}
+                        onChange={() => handleInputChange("email")}
+                      />
+                    </div>
+
+                    <div className="relative h-full w-full">
+                      <input
+                        className={`contact-input-overlay h-full w-full`}
+                        type="text"
+                        placeholder="Your Company (optional)"
+                        {...register("company")}
+                        onChange={() => handleInputChange("company")}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="relative min-h-[144px] w-full md:h-full">
+                    <textarea
+                      className={`contact-input-overlay area-input h-[170px] h-full w-full`}
+                      placeholder="Your Comment*"
+                      {...register("details", { required: true })}
+                      onChange={() => handleInputChange("details")}
+                    />
+                  </div>
+                </div>
+
+                <div className="flex h-[108px] flex-col gap-[16px] md:h-[46px] md:flex-row">
+                  <div className="relative flex h-full w-full items-center justify-center gap-[10px]">
                     <input
                       type="checkbox"
-                      name="services"
-                      className="form_check"
-                      value={checkbox}
-                      {...register("services", { required: true })}
+                      id="privacyPolicy"
+                      className="h-[19px] w-[19px] bg-transparent text-black checked:border-transparent checked:bg-transparent"
+                      {...register("privacyPolicy", { required: true })}
+                      onChange={() => handleInputChange("privacyPolicy")}
                     />
-                    <div className="form_label_div">{checkbox}</div>
-                  </label>
-                ))}
+                    <label
+                      htmlFor="privacyPolicy"
+                      className="w-[260px] text-[12px] text-white md:w-[235px] md:text-sm"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.25)"
+                      }}
+                    >
+                      By checking this field I agree to the terms of Privacy
+                      Policy
+                    </label>
+                  </div>
+
+                  <button type="submit" className="h-full w-full   bg-white">
+                    SUBMIT
+                  </button>
+                </div>
+              </form>
+
+              <div className="ml-[16px] h-[72px] w-[335px] self-end md:w-[308px]">
+                {errors.fullName && (
+                  <div className="flex items-center  gap-[10px]">
+                    <Image src={dagerous} />
+                    <div
+                      className="text-bottom text-white-400 text-[12px] leading-[17px]"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.5)"
+                      }}
+                    >
+                      Please, enter your full name!
+                    </div>
+                  </div>
+                )}
+
+                {errors.details && (
+                  <div className="flex items-center  gap-[10px]">
+                    <Image src={dagerous} />
+                    <div
+                      className="text-bottom text-white-400 text-[12px] leading-[17px]"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.5)"
+                      }}
+                    >
+                      Please, enter your comment!
+                    </div>
+                  </div>
+                )}
+                {errors.company && (
+                  <div className="flex items-center  gap-[10px]">
+                    <Image src={dagerous} />
+                    <div
+                      className="text-bottom text-white-400 text-[12px] leading-[17px]"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.5)"
+                      }}
+                    >
+                      Please, enter your company name!
+                    </div>
+                  </div>
+                )}
+                {errors.email?.type === "required" && (
+                  <div className="flex items-center  gap-[10px]">
+                    <Image src={dagerous} />
+                    <div
+                      className="text-bottom text-white-400 text-[12px] leading-[17px]"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.5)"
+                      }}
+                    >
+                      Please, enter your email!
+                    </div>
+                  </div>
+                )}
+                {errors.email?.type === "pattern" && (
+                  <div className="flex items-center  gap-[10px]">
+                    <Image src={dagerous} />
+                    <div
+                      className="text-bottom text-white-400 text-[12px] leading-[17px]"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.5)"
+                      }}
+                    >
+                      Please, enter a correct email address!
+                    </div>
+                  </div>
+                )}
+                {errors.email?.type === "maxLength" && (
+                  <div className="flex items-center gap-[10px]">
+                    <Image src={dagerous} />
+                    <div
+                      className="text-bottom text-white-400 text-[12px] leading-[17px]"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.5)"
+                      }}
+                    >
+                      {errors.email.message}
+                    </div>
+                  </div>
+                )}
+                {errors.privacyPolicy && (
+                  <div className="flex items-center  gap-[10px]">
+                    <Image src={dagerous} />
+                    <div
+                      className="text-bottom text-white-400 text-[12px] leading-[17px]"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.5)"
+                      }}
+                    >
+                      Please agree to the privacy policy!
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
-            {errors.services?.type === "required" && (
-              <span className="error-span">
-                Please, select how we can help you!
-              </span>
-            )}
-            <div>
-              <p className="text-white">Budget (optional)</p>
-              <div className="services_group_wrapper mt-4 flex flex-wrap gap-2">
-                {radioBtns.map((radioBtn, index) => (
-                  <label key={index * 10} className="form_label_for_check">
-                    <input
-                      type="radio"
-                      name="services"
-                      className="form_check"
-                      value={radioBtn}
-                      {...register("budget", {})}
-                    />
-                    <div className="form_label_div">{radioBtn}</div>
-                  </label>
-                ))}
-              </div>
+
+            <div
+              className="hidden h-[50px] w-[50px] items-center justify-center md:flex"
+              style={{
+                border: "1px rgba(255, 255, 255, 0.5) solid",
+                borderRadius: "50%"
+              }}
+            >
+              <Image
+                className="cursor-pointer"
+                alt=""
+                onClick={() => setModalOpen(false)}
+                src={modal_close}
+              />
             </div>
-            <input
-              className="text_input"
-              type="email"
-              placeholder="Email"
-              {...register("email", {
-                required: true,
-                pattern:
-                  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-              })}
-              aria-invalid={errors.email ? "true" : "false"}
-            />
-            {errors.email?.type === "required" && (
-              <span className="error-span">Please, enter your email!</span>
-            )}
-            {errors.email?.type === "pattern" && (
-              <span className="error-span">
-                Please, enter correct email address!
-              </span>
-            )}
-            <input
-              className="text_input"
-              placeholder="Project details (optional)"
-              type="text"
-              defaultValue=""
-              {...register("details")}
-            />
-            <button type="submit" className="btn-submit my-4">
-              Submit the form
-            </button>
-          </form>
+          </div>
         </div>
-      </div>
-    </Popup>
+      </Popup>
+
+      <Popup
+        open={modalThanksOpen}
+        closeOnDocumentClick
+        onClose={() => setModalThanksOpen(false)}
+        className="modal-thanks relative"
+        lockScroll
+        nested
+      >
+        <Image
+          className="pointer-events-none absolute left-[-350px] top-[-1400px] z-[-1] min-h-[3100px] min-w-[900px] md:left-[-500px] md:top-[-900px] md:min-h-[2000px] md:min-w-[1500px]"
+          alt=""
+          src={bg}
+        />
+
+        <div className="modal p-x-[20px] relative flex h-full min-w-full max-w-7xl flex-col items-center gap-[44px] font-roc ">
+          <div className="gap-[16px] text-center">
+            <p className="mb-[16px] text-center text-[36px] font-medium uppercase leading-[38px] text-white  md:text-[60px] md:leading-[54px]">
+              Thank you for <br /> contacting us!
+            </p>
+            <p
+              style={{
+                color: "white"
+              }}
+            >
+              Our manager will get in contact with you shortly
+            </p>
+          </div>
+
+          <button
+            type="submit"
+            onClick={() => setModalThanksOpen(false)}
+            className="h-[46px] w-[335px] border-[1px] border-white bg-transparent text-[16px] font-medium uppercase text-white md:w-[308px]"
+          >
+            Back to website
+          </button>
+        </div>
+      </Popup>
+    </>
   );
 }

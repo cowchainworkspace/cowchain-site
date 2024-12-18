@@ -1,13 +1,21 @@
 "use client";
 
-import { useState, useRef, createElement } from "react";
+import { useState, useRef, createElement, useEffect } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import { motion, useScroll } from "framer-motion";
 import { cn } from "@/lib/utils";
 import ContactForm from "@/components/utils/ContactForm";
 import Image from "next/image";
 import { useGetItems } from "@/hooks/use-strapi";
+import arrowDown from "./../../../../../assets/services/arrowDownIcon.svg";
+import arrowUp from "./../../../../../assets/services/arrowUpIcon.svg";
 import Markdown from "markdown-to-jsx";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel
+} from "@chakra-ui/react";
 
 const benefitsData = [
   {
@@ -71,25 +79,28 @@ export default function Development() {
     if (yProgress <= 1 && yProgress >= 0.8) setScrollIndex(4);
   });
 
+  const [screenWidth, setScreenWidth] = useState();
+
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
+
   return (
-    <section
-      id="benefits"
-      ref={sectionRef}
-      className="relative hidden h-[2800px]  md:block md:h-[4000px]"
-    >
-      <div className="sticky top-0 flex flex-col border-t border-t-th-fade md:flex-row">
-        <div className="px-default md-border-r flex w-full border-b border-b-th-fade py-10 md:w-1/2 md:py-0">
+    <section id="benefits" ref={sectionRef} className="relative py-[30px] md:py-[0]">
+      <div className=" sticky top-0 flex flex-col md:border-t md:border-t-th-fade md:flex-row">
+        <div className="px-default md-border-r flex w-full md:border-b md:border-b-th-fade py-10 md:w-1/2 md:py-0">
           <div className="my-auto box-border md:sticky">
-            <section id="view_more" className="relative z-10 lg:my-[120px]">
+            <section id="view_more" className="relative z-10 lg:my-auto">
               <div className="relative grid grid-cols-1">
                 <Image
                   alt=""
                   width={1380}
                   height={1330}
-                  className="absolute -left-32 -top-[800px] -z-10 min-h-[1330px] min-w-[900px]"
+                  style={{ pointerEvents: "none" }}
+                  className="absolute -left-32 -top-[800px] -z-10 hidden min-w-[900px]  md:block"
                   src={"/assets/services/radial.png"}
                 />
-                <div className="mb-16 flex flex-col items-start justify-start gap-y-8 px-4 text-center text-white ">
+                <div className="flex flex-col items-start justify-start gap-y-8 px-4 text-center text-white ">
                   <h3 className="mx-auto cursor-default text-left font-roc text-2xl uppercase   leading-none md:text-[42px]">
                     Our Smart Contracts Development Process
                   </h3>
@@ -113,95 +124,114 @@ export default function Development() {
                 </div>
               </div>
             </section>
-            <p className="block max-w-xl cursor-default text-center font-roc text-2xl font-medium uppercase leading-tight text-white md:my-12 md:hidden md:text-left md:text-3xl lg:my-16 lg:text-4xl xl:my-20 xl:text-[42px]">
-              Being fully immersed in Web3, we’re not just devs —{" "}
-              <span className="violet-gradient-text">
-                we’re product visionaries
-              </span>{" "}
-              working as an in-house team{" "}
-              <span className="text-[#808080]">
-                with you to grow your business with Web3
-              </span>
-            </p>
           </div>
         </div>
-        <div className="border-b border-b-th-fade md:flex md:h-screen md:w-1/2 md:flex-col">
-          <Scrollama className="relative" offset={0.5}>
-            {data?.data.map((benefit, index) => {
-              return (
-                <Step
-                  className="relative"
-                  data={index + 1}
-                  key={benefit.title + index}
-                >
-                  <div className="relative flex items-start justify-start">
-                    <article
-                      style={benefit.style}
+
+        <div className="relative overflow-hidden md:overflow-visible md:border-b md:border-b-th-fade md:flex md:py-[30px]  md:w-1/2 md:flex-col">
+          
+
+          <Accordion allowToggle>
+
+            {data?.data.map((benefit, index) => (
+              <AccordionItem key={index} className="">
+                {({ isExpanded }) => (
+                  <div
+                    className={cn(
+                      "relative bg-cover px-5 py-[24px] xl:px-[60px] xl:py-[36px]"
+                    )}
+                    style={benefit.style}
+                    key={index}
+                  >
+
+                    <div
                       className={cn(
-                        "relative flex h-[25hv] min-h-[25hv] grow  items-start justify-start overflow-hidden  bg-black px-5    duration-1000  will-change-transform ",
-                        benefitsData[index].initialStyle,
-                        scrollIndex >= index
-                          ? benefitsData[index].transformStyle
-                          : ""
+                        "md:absolute left-[20px] flex flex-col md:items-center justify-center",
+                        {
+                          "md:left-[-6px]": isExpanded,
+                          "md:left-[-3px]": !isExpanded
+                        }
                       )}
                     >
-                      <div className="mx-6 flex  flex-col items-center justify-center">
-                        <div
-                          className={cn(
-                            "absolute h-[125vh] w-[1px] bg-[#808080]",
-                            {
-                              "h-[5vh]": index === 4
-                            }
-                          )}
-                        ></div>
-                        <div className="mt-12 h-3 min-w-3 rounded-full bg-[#808080]"></div>
-                      </div>
 
-                      <motion.div
-                        variants={expandVariants}
-                        id={"b-expandable-" + index}
-                        className={"flex  flex-col justify-center py-10"}
-                      >
-                        <h2
+                      <div
+                        className={cn(
+                          "absolute bottom-0 top-0 w-[1px] opacity-[0.3] md:opacity-[0.2]",
+                          {
+                            "absolute bottom-0 md:h-[45vh] top-0 md:top-[10px] md:left-[5px]  block w-[1px]":
+                              isExpanded,
+                              "top-[35px] md:top-[10px]": index === 0,
+                              "bottom-[35px]": index === data?.data.length - 1,
+                          }
+                        )}
+                        style={{
+                          opacity: "0.3",
+                          background: isExpanded
+                            ? "linear-gradient(to bottom, #CF91FF 80%, #808080 100%)"
+                            : "#808080"
+                        }}
+                      ></div>
+
+                      <div className="relative top-[-5px]">
+                      {isExpanded ? (
+                        <div className=" absolute left-[-3px] mt-[15px] md:left-0 h-[8px] max-w-[8px] min-w-[8px] rounded-full bg-[#CF91FF] md:h-[11px] md:min-w-[11px]"></div>
+                      ) : (
+                        <div className=" absolute left-[-2px] md:left-0 mt-[15px] min-h-[5px] max-w-[5px] min-w-[5px] rounded-full bg-[#808080]"></div>
+                      )}
+                      </div>
+                    </div>
+
+                    <AccordionButton className={cn("relative")}>
+                      <div className="mr-auto pl-[20px] md:pl-0 w-full max-w-3xl text-left ">
+                        <span
                           className={cn(
-                            "mb-16 flex max-w-[285px]  text-xl text-white",
-                            benefit.textStyle,
-                            benefit.headerStyle
+                            "max-w-2xl text-left font-roc  text-[20px]  font-medium uppercase !leading-[24px] lg:!text-xl lg:!leading-none",
+                            {
+                              "text-[#BBBBBB]": !isExpanded,
+                              "text-[#FFFFFF]": isExpanded
+                            }
                           )}
                         >
                           {benefit.attributes.title}
-                        </h2>
-                        <motion.p
-                          variants={textVariants}
-                          className={cn(
-                            " max-h-[300px]  min-h-[300px] text-sm !leading-[180%] text-secondary  transition-all  duration-[1000ms] ease-in will-change-transform lg:text-lg",
-                            benefit.textStyle,
-                            {
-                              "block  transition-all duration-1000":
-                                scrollIndex === index
-                            }
-                          )}
+                        </span>
+                      </div>
+
+                      {isExpanded ? (
+                        <div
+                          className="hidden md:flex items-center justify-center"
+                          style={{
+                            width: screenWidth > 768 ? 150 : 50
+                          }}
                         >
-                          <Markdown
-                            children={benefit.attributes.text}
-                            options={{
-                              createElement(type, props, children) {
-                                return (
-                                  <div className="parent markdown">
-                                    {createElement(type, props, children)}
-                                  </div>
-                                );
-                              }
-                            }}
-                          />
-                        </motion.p>
-                      </motion.div>
-                    </article>
+                          <Image src={arrowUp} />
+                        </div>
+                      ) : (
+
+                        <div
+                          className="hidden md:flex items-center justify-center"
+                          style={{
+                            width: screenWidth > 768 ? 150 : 50
+                          }}
+                        >
+                          <Image src={arrowDown} />
+                        </div>
+                      )}
+                    </AccordionButton>
+                    <AccordionPanel
+                      className={cn("opacity-0  will-change-transform", {
+                        "pt-6 opacity-100 ": isExpanded
+                      })}
+                    >
+                      <div className="pl-[20px] md:pl-0">
+                        <p className="max-w-2xl !leading-[160%] !text-[#bbb] lg:!leading-[175%]">
+                          {benefit.attributes.text}
+                        </p>
+                      </div>
+                    </AccordionPanel>
                   </div>
-                </Step>
-              );
-            })}
-          </Scrollama>
+                )}
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>

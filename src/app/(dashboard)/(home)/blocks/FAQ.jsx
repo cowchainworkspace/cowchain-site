@@ -13,31 +13,31 @@ import { useEffect } from "react";
 const faqData = [
   {
     title:
-      "What is Web3 development, and how is it different from traditional web development?",
+      "Do you offer ongoing support and maintenance for blockchain projects?",
     content:
-      "Web3 development represents the evolution of web technologies towards decentralized, blockchain-based systems. Unlike traditional web development, Web3 focuses on creating applications that leverage blockchain, smart contracts, and decentralized protocols to enable trustless, transparent, and secure interactions. In Web3, smart contracts, self-executing pieces of code, automate processes without intermediaries, fostering trust and reducing reliance on central authorities"
+      "Cowchain always stays in touch with its customers and offers its support on all the services provided. You don't have to worry about breakdowns in communication or unanswered emails from us."
   },
   {
     title:
-      "What measures are taken to ensure the security of Web3 applications?",
-    content:
-      "Web3 applications prioritize security through smart contract audits, secure coding practices, and encryption protocols. Regular penetration testing identifies vulnerabilities, and decentralized identity systems enhance user privacy. Immutable ledgers in blockchain technology ensure data integrity, and community involvement through open-source development contributes to overall security. Continuous monitoring detects and responds to real-time threats, and adaptation to evolving standards is essential for maintaining robust security in the dynamic Web3 landscape."
+      "Which blockchain platforms and technologies are you experienced with?",
+    content: `Our team is skilled in all the things you need. This is the core principle of Cowchain. Any technology that appears on the market and is just gaining popularity will be analyzed in detail by us immediately.`
   },
   {
-    title: "How can I monetize my Web3 application?",
-    content:
-      "Tokenization: Implement utility tokens within your Web3 app, allowing users to engage in transactions and exchanges with the platform's native token. NFT Sales: Monetize by selling unique digital assets as NFTs, enabling users to buy, sell, and trade these assets within the application. Subscription Plans: Introduce subscription models for premium features, offering users enhanced functionalities in exchange for a recurring fee. DeFi Integration: Explore decentralized finance (DeFi) opportunities, such as lending or yield farming, and generate revenue through associated transaction fees or interest."
+    title:
+      "Is it possible to tailor blockchain development to specific industry needs?",
+    content: `In the hands of a professional team, anything can be adapted. The travel business, the arts, the car world and even medicine.
+It's easy, you just need to be in contact with our sales team to let them tell you how your project can dive into the world of web3.`
   },
   {
     title: "What are the benefits of using Web3 applications for my business?",
     content:
-      "Web3 applications bring transparency and trust to the forefront by leveraging decentralized technologies. This not only reduces dependence on intermediaries but also introduces innovative monetization through utility tokens, creating a dynamic user-centric economy within the application. The result is a more secure and forward-thinking digital environment for your business"
+      "As is usual in any web3 project, security should be at the top of the list. Depending on the specifics of your project, our team can not only set the highest level of security but also maintain it."
   },
   {
     title:
       "How can a Web3 development agency help my business implement blockchain technology effectively?",
-    content:
-      "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards."
+    content: `You can get full immersion assistance from Cowchain regardless of the stage of your project. 
+Our team will be your guide and you can easily immerse yourself in all the processes.`
   }
 ];
 
@@ -49,9 +49,9 @@ export default function FAQ() {
   }, []);
 
   return (
-    <section id="faq" className="relative z-30">
+    <section id="faq" className="relative z-30 border-t border-t-th-fade">
       <div className="relative grid grid-cols-1 md:grid-cols-5">
-        <div className="py-heading px-default md-border-r flex justify-center border-b border-b-th-fade text-center md:col-span-2">
+        <div className="py-[60px] md:py-heading px-default md-border-r flex justify-center border-b border-b-th-fade text-center md:col-span-2">
           <h2 className="flex max-w-[321px] justify-center text-center text-4xl uppercase leading-[40px]  text-white md:max-w-[365px] md:text-left md:text-[60px] md:leading-[53px]">
             FREQUENTLY ASKED QUESTIONS
           </h2>
@@ -63,7 +63,7 @@ export default function FAQ() {
                 {({ isExpanded }) => (
                   <div
                     className={cn(
-                      "relative bg-cover px-5 py-8 xl:px-[60px] xl:py-16",
+                      "relative bg-cover px-[20px] py-[24px] xl:px-[60px] xl:py-16",
                       {
                         "bg-[url('/assets/faq-gradient.png')]": isExpanded
                       }
@@ -72,11 +72,14 @@ export default function FAQ() {
                   >
                     <AccordionButton className={cn("relative")}>
                       <div className="mr-auto w-full max-w-3xl text-left ">
-                        <span className="max-w-2xl text-left font-roc !text-base font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
+                        <span className="max-w-2xl text-left font-roc !text-[14px] font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
                           {faq.title}
                         </span>
                       </div>
                       {isExpanded ? (
+                         <div className="flex items-center justify-center" style={{
+                          width: screenWidth > 768 ? 150 : 50,
+                        }}>
                         <svg
                           width={screenWidth > 768 ? "50" : "32"}
                           height={screenWidth > 768 ? "50" : "32"}
@@ -92,35 +95,40 @@ export default function FAQ() {
                             strokeLinejoin="round"
                           />
                         </svg>
+                        </div>
                       ) : (
-                        <svg
-                          width={screenWidth > 768 ? "50" : "32"}
-                          height={screenWidth > 768 ? "50" : "32"}
-                          viewBox="0 0 32 32"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="16"
-                            cy="16"
-                            r="15.75"
-                            stroke="white"
-                            strokeOpacity="0.5"
-                            strokeWidth="0.5"
-                          />
-                          <path
-                            d="M16 12.2666V19.7333"
-                            stroke="white"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M12.2656 16H19.7323"
-                            stroke="white"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                        <div className="flex items-center justify-center" style={{
+                          width: screenWidth > 768 ? 150 : 50,
+                        }}>
+                          <svg
+                            width={screenWidth > 768 ? "50" : "32"}
+                            height={screenWidth > 768 ? "50" : "32"}
+                            viewBox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="16"
+                              cy="16"
+                              r="15.75"
+                              stroke="white"
+                              strokeOpacity="0.5"
+                              strokeWidth="0.5"
+                            />
+                            <path
+                              d="M16 12.2666V19.7333"
+                              stroke="white"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M12.2656 16H19.7323"
+                              stroke="white"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
                       )}
                     </AccordionButton>
                     <AccordionPanel

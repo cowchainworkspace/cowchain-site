@@ -117,6 +117,10 @@ export default function Navbar({ isPageNotFound = false }) {
     {
       title: "Team",
       link: "/team"
+    },
+    {
+      title: "Blog",
+      link: "/blog"
     }
   ];
 
@@ -139,12 +143,13 @@ export default function Navbar({ isPageNotFound = false }) {
   return (
     <>
       <section
-        className={cn("relative z-20 bg-transparent opacity-0", {
+        className={cn("relative z-[21] bg-transparent opacity-0", {
           "pb-36 md:pb-0": isHomePage,
           "pb-[440px] lg:pb-[670px]": isTeamBg,
           "opacity-100": !isRendering
         })}
       >
+        
         {isHomePage ? (
           <>
             <Image
@@ -190,12 +195,12 @@ export default function Navbar({ isPageNotFound = false }) {
         {isTeamBg && (
           <>
             <Image
-              className="absolute right-0 top-0 h-full w-full lg:hidden"
+              className="absolute right-0 top-0 h-full w-full lg:hidden pointer-events-none"
               alt="gradient"
               src={team_bg}
             />
             <Image
-              className="absolute top-0 hidden h-full w-full lg:block"
+              className="absolute top-0 hidden z-[-2] h-full w-full lg:block pointer-events-none"
               alt="gradient"
               priority
               src={team}

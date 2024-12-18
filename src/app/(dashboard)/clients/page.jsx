@@ -15,7 +15,7 @@ export const metadata = {
   }
 };
 
-const Clients = ({ setBurgerOpen }) => {
+const Clients = () => {
   return (
     <section id="clients-wrapper">
       <div className="relative bg-black">
