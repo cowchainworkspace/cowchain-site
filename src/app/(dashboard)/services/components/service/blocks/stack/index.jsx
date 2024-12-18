@@ -9,7 +9,7 @@ import Image from "next/image";
 
 import { expertiseData } from "./data";
 
-export function ServiceStack({ margin = "mt-[calc(35vh_+_1.5625vh)]" }) {
+export function ServiceStack({ margin = "mt-[calc(35vh_+_1.5625vh)]", home }) {
   const { data } = useGetItems("services-contents");
 
   return (
@@ -17,7 +17,9 @@ export function ServiceStack({ margin = "mt-[calc(35vh_+_1.5625vh)]" }) {
       id="expertise"
       className={cn("relative px-[88px] py-[127px] md:mt-0", margin)}
     >
-      <Image alt="" className="absolute -top-24 left-0 " src={dexStackBg} />
+      {!home && (
+        <Image alt="" className="absolute -top-24 left-0 " src={dexStackBg} />
+      )}
       <div className="relative z-20 mx-auto grid  max-w-[1440px] grid-cols-3 gap-y-[50px]">
         <div className="relative col-span-1 row-span-3 max-w-[284px]">
           <div className="mx-auto mb-16   flex max-w-[284px] flex-col items-center justify-center text-left    text-white ">

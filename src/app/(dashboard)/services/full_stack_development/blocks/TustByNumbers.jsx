@@ -29,27 +29,33 @@ const TustByNumbersData = [
   }
 ];
 
-export function TustByNumbers({ data = TustByNumbersData }) {
+export function TustByNumbers({ data = TustByNumbersData, home }) {
   return (
-    <section className="relative ">
-      <Image
-        alt=""
-        className="absolute -bottom-[38%] left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min  lg:-bottom-[80%]"
-        src={FSTrustBuyNumbBg}
-      />
+    <section className={`relative ${home && "h-[700px]"}`}>
+      {!home && (
+        <Image
+          alt=""
+          className="absolute -bottom-[38%] left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min  lg:-bottom-[80%]"
+          src={FSTrustBuyNumbBg}
+        />
+      )}
 
-      <div className="relative h-full">
+      <div className={`relative h-full`}>
         <div className="grid h-full grid-cols-1 lg:grid-cols-3 ">
-          <div className="flex h-full flex-col justify-center gap-[37px] border-r border-r-th-fade pb-[110px] pl-[88px] pr-[168px] pt-[170px]">
+          <div
+            className={`flex h-full flex-col  ${home ? "h-[700px]" : "justify-center"} gap-[37px] border-r border-r-th-fade pb-[110px] pl-[88px] pr-[168px] pt-[170px]`}
+          >
             <h2 className=" heading-[54px] text-[60px] uppercase text-white  md:text-[60px]">
               Trust by Numbers
             </h2>
-            <p className="body my-[40px] max-w-lg text-base leading-6 md:my-[20px] lg:order-2 lg:max-w-[306]">
-              We simplify the development process by offering business tools
-              that optimize workflows. Our dedicated developers utilize the
-              latest technology stack to ensure consistent execution, making
-              Cowchain a trusted partner for full stack software development
-            </p>
+            {!home && (
+              <p className="body my-[40px] max-w-lg text-base leading-6 md:my-[20px] lg:order-2 lg:max-w-[306]">
+                We simplify the development process by offering business tools
+                that optimize workflows. Our dedicated developers utilize the
+                latest technology stack to ensure consistent execution, making
+                Cowchain a trusted partner for full stack software development
+              </p>
+            )}
           </div>
           <div className="col-span-2 flex grid w-full grid-cols-2  flex-col justify-center customSmall:flex-row  lg:order-3 lg:ml-auto">
             {data.map(({ number, desc, sighn, title }, index) => (
@@ -64,7 +70,7 @@ export function TustByNumbers({ data = TustByNumbersData }) {
                     )}
                   </div>
                   {title && (
-                    <span className="num_lg self-start text-white uppercase">
+                    <span className="num_lg self-start uppercase text-white">
                       {title}
                     </span>
                   )}

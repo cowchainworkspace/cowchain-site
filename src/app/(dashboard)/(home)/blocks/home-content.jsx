@@ -1,26 +1,29 @@
 "use client";
 
-import Benefits from "./Benefits";
-import BenefitsMobiles from "./BenefitMobiles";
 import Cases from "./Cases";
 import Clients from "./Clients";
 import Contact from "@/components/Contact";
-import FAQ from "./FAQ";
-import Stack from "@/components/stack";
+import FAQ from "../../services/components/service/blocks/FAQ";
 import Team from "./Team";
 import CasesMobile from "./CasesMobile.jsx";
 import { KeyFeatures } from "../../services/components/service/blocks/KeyFeatures";
-import { TustByNumbers } from "../../services/full_stack_development/blocks/TustByNumbers";
 import { ServiceStack } from "../../services/components/service/blocks/stack";
 import { ExpertiseServices } from "../../services/components/service/blocks/ExpertiseServices";
 import { Industries } from "../../services/components/service/blocks/Industries";
 import { Feedback } from "../../services/components/service/blocks/Feedback";
 import { OtherServices } from "../../services/components/service/blocks/OtherServices";
+import { TustByNumbers } from "../../services/full_stack_development/blocks/TustByNumbers";
+import Advantages from "./Advantages";
 
 import EcommerceIcon from "@/assets/svgComponents/industries/EcomerceIcon";
-import EducationIcon from "@/assets/svgComponents/industries/EducationIcon";
 import FinanceIcon from "@/assets/svgComponents/industries/FinanceIcon";
 import HealthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
+import SupplyIcon from "@/assets/svgComponents/industries/SupplyChainIcon";
+import GamingIcon from "@/assets/svgComponents/industries/GamingIcon";
+import BlockchainIcon from "@/assets/svgComponents/industries/LaunchMaitenanceIcon";
+import Design from "@/assets/svgComponents/industries/DesignDevIcon";
+import FullStack from "@/assets/svgComponents/industries/FullStackIcon";
+import WhiteLabel from "@/assets/svgComponents/industries/WhiteLabel";
 
 export const servedIndustriesData = [
   {
@@ -36,17 +39,40 @@ export const servedIndustriesData = [
   {
     title: "Supply Chain Management",
     text: "Blockchain technology provides traceability and transparency, ensuring every transaction and product movement is verifiable along the supply chain",
-    icon: FinanceIcon
+    icon: SupplyIcon
   },
   {
     title: "Gaming and Entertainment",
     text: "Web3 development solutions in gaming and entertainment create new opportunities for engagement, combining blockchain  with immersive experiences",
-    icon: EducationIcon
+    icon: GamingIcon
   },
   {
     title: "E-commerce and Retail",
     text: "Decentralized systems enhance the retail experience by offering transparency, improving customer satisfaction, and streamlining operations",
     icon: EcommerceIcon
+  }
+];
+
+export const ourServices = [
+  {
+    title: "WEB3 FULL STACK DEVELOPMENT",
+    text: "Bring your vision to life, using our experience from delivering 120+  Web3 projects",
+    icon: FullStack
+  },
+  {
+    title: "Blockchain Consulting",
+    text: "Start your project right with a clear plan, architecture, and roadmap",
+    icon: BlockchainIcon
+  },
+  {
+    title: "WHITE-LABEL SOLUTIONS",
+    text: "Our ready-made solution reduces setup time by up to 40%, providing a fixed price, clear deadlines, and a design tailored to your needs",
+    icon: WhiteLabel
+  },
+  {
+    title: "Web3 UI/UX DESIGN",
+    text: "Delivering visuals that blend aesthetic appeal with intuitive user experience in Web3 products",
+    icon: Design
   }
 ];
 
@@ -133,6 +159,24 @@ export const otherServiceData = [
   }
 ];
 
+export const useCases = [
+  {
+    text: "Decentralized applications drive transparency and automation"
+  },
+  {
+    text: "Smart contracts remove the need for intermediaries, streamlining business operations"
+  },
+  {
+    text: "Decentralized Autonomous Organizations (DAOS) empower communities to govern projects without centralized control"
+  },
+  {
+    text: "Decentralized exchanges facilitate secure trading of digital assets"
+  },
+  {
+    text: "Social media platforms give users reater control over their data and interactions"
+  }
+];
+
 const TustByNumbersData = [
   {
     number: 120,
@@ -160,6 +204,34 @@ const TustByNumbersData = [
   }
 ];
 
+const web3DevData = [
+  {
+    title: "Custom Decentralized App (dApp) Development",
+    content:
+      "Our Web3 development firm emphasizes security, scalability, and integration when building decentralized applications (dApps). Using advanced blockchain technology, these applications are designed to ensure data ownership and operational transparency"
+  },
+  {
+    title: "Smart Contract Development",
+    content: `Automating critical processes with smart contracts can redefine business operations. Our experts handle the full lifecycle of smart contract development, ensuring robust, audit-proof code that reduces reliance on third-party service providers`
+  },
+  {
+    title: "DeFi Development",
+    content: `The growth of decentralized finance (DeFi) presents new opportunities for businesses to expand their revenue streams. As a Web3 development company, Cowchain specializes in building solutions for staking, liquidity pools, yield farming, and automated market makers, each customized to fit the evolving needs of the industry`
+  },
+  {
+    title: "NFT Development",
+    content: `As the demand for digital assets continues to rise, platforms for minting, trading, and managing NFTs are becoming essential. Cowchain builds platforms that support seamless and secure NFT transactions, allowing businesses to engage with this fast-growing market`
+  },
+  {
+    title: "metaverse Development",
+    content: `Our Web3 development company also specializes in metaverse development, creating immersive virtual worlds and interactive environments. From gaming to virtual reality, we help businesses explore new levels of user engagement`
+  },
+  {
+    title: "Blockchain Security and Audits",
+    content: `Maintaining the integrity of blockchain platforms is critical. Cowchain delivers thorough blockchain security audits, identifying and mitigating potential risks. Regular security updates ensure that your platform remains a step ahead of emerging threats`
+  }
+];
+
 export default function HomeContent() {
   return (
     <>
@@ -167,6 +239,7 @@ export default function HomeContent() {
         isOneBlock={true}
         topBorder={false}
         noBg={true}
+        tag={"about Cowchain"}
         title={
           <>
             Web3 Development <br /> Company
@@ -176,12 +249,27 @@ export default function HomeContent() {
           "At Cowchain, we are a Web3 development company with a proven track record in creating decentralized applications, smart contracts, and blockchain solutions. Our focus is on unlocking new revenue streams for businesses through secure and transparent blockchain integration. Leveraging a wealth of expertise in emerging technologies, the team delivers custom solutions that ensure transparency, security, and a streamlined flow of operations"
         }
       />
-      <TustByNumbers data={TustByNumbersData} />
+      <TustByNumbers home data={TustByNumbersData} />
       <Clients />
-      <Stack title={"Our\nExpertise"} />
-      {/* {scrolling component} */}
-      <ServiceStack />
-      {/* {component with vertical titels and upper side} */}
+      <Industries
+        isTwoSides={true}
+        title={"Our Services"}
+        desc={
+          "We offer a full range of services to take your project from an idea to a working solution"
+        }
+        data={ourServices}
+      />
+      <FAQ
+        noBg={true}
+        title={
+          <>
+            Our Web3 <br /> development <br /> services
+          </>
+        }
+        data={web3DevData}
+      />
+      <ServiceStack home />
+      <Advantages />
       <ExpertiseServices
         data={FSExpertiseData}
         title={
@@ -203,15 +291,34 @@ export default function HomeContent() {
         }
       />
       <Industries
-        title={"Industries We Serve"}
+        title={"Industries Benefiting from Web3 Solutions"}
         desc={
-          "At Cowchain, our full stack development company has delivered solutions across multiple industries. Our full stack services offer customized software solutions crafted to address requirements of every specific sector. Here are some industries we serve"
+          "The adaptability of Web3 development allows us to cater to a variety of industries,  each gaining significant value from blockchain technologies"
         }
         data={servedIndustriesData}
         topBorder={false}
         bottomBorder={false}
       />
-      {/* {scrolling component} */}
+      <OtherServices
+        title={
+          <>
+            The applications of <br />
+            <span className="violet-gradient-text">Web3 development</span>
+            From{" "}
+            <span className="violet-gradient-text">
+              decentralized <br /> exchanges
+            </span>{" "}
+            to{" "}
+            <span className="violet-gradient-text">
+              NFT <br /> platforms
+            </span>
+            , <br />
+            the potential for <br />
+            innovation is limitless
+          </>
+        }
+        data={useCases}
+      />
       <Cases />
       <CasesMobile />
       <Feedback />

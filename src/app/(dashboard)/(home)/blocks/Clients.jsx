@@ -6,16 +6,36 @@ import { Counter } from "../components/counter";
 import Link from "next/link";
 import Image from "next/image";
 
+import brc20 from "@/assets/svgComponents/clientsLogo/Brc20";
+import hebrid from "@/assets/svgComponents/clientsLogo/Hebrid";
+import pixel from "@/assets/svgComponents/clientsLogo/Pixel";
+import raiser from "@/assets/svgComponents/clientsLogo/Raiser";
+import retroBridge from "@/assets/svgComponents/clientsLogo/RetroBridge";
+import step from "@/assets/svgComponents/clientsLogo/Step";
+import tenet from "@/assets/svgComponents/clientsLogo/Tenet";
+import gmx from "@/assets/svgComponents/clientsLogo/GMX";
+
+export const logos = [
+  { name: "Brc20", logo: brc20 },
+  { name: "Hebrid", logo: hebrid },
+  { name: "Pixel", logo: pixel },
+  { name: "Raiser", logo: raiser },
+  { name: "RetroBridge", logo: retroBridge },
+  { name: "Step", logo: step },
+  { name: "Tenet", logo: tenet },
+  { name: "GMX", logo: gmx }
+];
+
 export default function Clients() {
   return (
     <section className="relative border-t border-t-th-fade">
       <Image
         alt=""
-        className="absolute hidden -top-[38%] right-0 h-screen md:-top-[45%] md:h-min md:block  lg:-top-[80%]"
+        className="absolute -top-[38%] right-0 hidden h-screen md:-top-[45%] md:block md:h-min  lg:-top-[80%]"
         src={bg_lg}
       />
 
-      <div className="py-heading px-default relative">
+      <div className="py-heading px-default relative flex flex-col">
         <div className=" grid grid-cols-1 md:mt-12 lg:grid-cols-2 lg:gap-16">
           <h2 className="lg:order-0 text-4xl uppercase text-white  md:text-[60px]">
             OUR CLIENTS
@@ -31,7 +51,7 @@ export default function Clients() {
               <Image className="w-6" src={arrow} alt=""></Image>
             </div>
           </Link>
-          <div className="mt-8 flex w-full flex-col customSmall:flex-row max-w-xl justify-between  lg:order-3 lg:ml-auto">
+          <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto">
             <div>
               <div className="flex items-center">
                 <Counter duration={4} target={35} />
@@ -69,6 +89,14 @@ export default function Clients() {
               <Image className="w-6" src={arrow} alt=""></Image>
             </div>
           </Link>
+        </div>
+
+        <div className="grid mt-[37px] gap-[35px] w-full grid-cols-4">
+          {logos.map((brand) => (
+            <div className="h-[116px] flex items-center justify-center w-[300px]">
+              <brand.logo />
+            </div>
+          ))}
         </div>
       </div>
     </section>

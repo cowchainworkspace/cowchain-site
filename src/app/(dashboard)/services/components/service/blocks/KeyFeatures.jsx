@@ -1,6 +1,7 @@
 "use client";
 
 import dexAdvisoryBg from "@/assets/bg/dexAdvisoryBg.svg";
+import Tag from "@/components/ui/tag";
 import Image from "next/image";
 
 export function KeyFeatures({
@@ -10,9 +11,12 @@ export function KeyFeatures({
   topBorder = true,
   bottomBorder = true,
   noBg = false,
+  tag,
 }) {
   return (
-    <section className={`relative ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}>
+    <section
+      className={`relative ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
+    >
       {!noBg && (
         <Image
           alt=""
@@ -21,8 +25,14 @@ export function KeyFeatures({
         />
       )}
 
-      <div className="py-heading px-default relative flex flex-col justify-between gap-[107px]">
+      <div className="pt-[126px] pb-[84px] px-default relative flex flex-col justify-between gap-[107px]">
         <div className="  lg:gap-16">
+          {tag && (
+            <Tag
+              title={tag}
+              className="mb-4 max-w-[194px] md:mb-8"
+            />
+          )}
           <h2 className="lg:order-0 text-[60px] uppercase text-white  md:text-[60px]">
             {title}
           </h2>
