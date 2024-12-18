@@ -142,9 +142,6 @@ export default function Footer({footerForm}) {
       >
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="md-border-r flex flex-col gap-y-8 border-b border-b-th-fade px-[20px] py-[40px] text-center md:py-[65px] md:pl-[88px] md:pr-[79px]">
-            {/* <span className="text-center font-roc text-xl font-medium uppercase text-white md:text-left">
-              What’s on your mind?
-            </span> */}
             <div className="max-w-[320px]">
               <p className="text-left text-[#bbb] ">
                 © 2024 Сowchain сo. All rights reserved. <br />
@@ -288,9 +285,6 @@ export default function Footer({footerForm}) {
                   <AnchorLink href="#faq">
                     <p className="text-[#bbb]">FAQs</p>
                   </AnchorLink>
-                  {/* <Link href="/sitemap">
-                    <p className="text-[#bbb]">Sitemap</p>
-                  </Link> */}
                   <div className="flex-grow"></div>
                   <p className="font-roc text-base font-medium !text-white">
                     HELP

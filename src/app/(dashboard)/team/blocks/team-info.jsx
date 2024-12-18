@@ -42,15 +42,6 @@ export default function TeamInfo() {
         UKRAINE AND EUROPE, <br /> WE WORK HARD AT <br />  FOSTERING AN <br /> ENVIRONMENT OF <br />
         TOGETHERNESS, <br /> CREATIVITY, AND CLOSE <br /> COLLABORATION.
       </h3>
-      {/* <div className="flex flex-col items-center">
-        <h1 className="mt-16 hidden text-center text-9xl xl:block">
-          team photo
-        </h1>
-        <motion.div ref={ref} style={{ marginTop }}>
-          <Image className="hidden md:block w-full max-w-[915px]" src={team} alt="" />
-          <Image className="block md:hidden w-full max-w-[915px]" src={teamMobile} alt="" />
-        </motion.div>
-      </div> */}
     </motion.div>
   );
 }

@@ -193,7 +193,6 @@ const TeamGallery = () => {
       <div className="grid grid-cols-2 gap-x-2 gap-y-6 md:grid-cols-3 lg:col-span-3 xl:gap-x-5 xl:gap-y-20">
         {teamData.map((member, index) => (
           <TeamCard key={index} {...member} check={member.check} />
-          // <TeamCard key={index} index={index} {...member} />
         ))}
       </div>
     </section>

@@ -22,10 +22,8 @@ export default function ServiceContact() {
         process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY
       );
     } catch (e) {
-      /* empty */
     }
     reset();
-    // setSendSuccess(true);
     setModalOpen(false);
   };
 
