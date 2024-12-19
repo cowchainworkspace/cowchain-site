@@ -58,26 +58,54 @@ export function TustByNumbers({ data = TustByNumbersData, home }) {
             )}
           </div>
           <div className="col-span-2 flex grid w-full grid-cols-2  flex-col justify-center customSmall:flex-row  lg:order-3 lg:ml-auto">
-            {data.map(({ number, desc, sighn, title }, index) => (
-              <div
-                className={`flex h-full w-full grid-cols-1 grid-rows-1 flex-col justify-center border-r border-r-th-fade px-[70px] ${index < 2 && "border-b border-b-th-fade"}`}
-              >
-                <div>
-                  <div className="flex items-center">
-                    <Counter duration={4} target={number} />
-                    {sighn && (
-                      <span className="num_lg  text-white">{sighn}</span>
+            {data.map(
+              ({ number, desc, sighn, title, sufix, decimal }, index) => (
+                <div
+                  className={`flex h-full w-full grid-cols-1 grid-rows-1 flex-col justify-center border-r border-r-th-fade px-[70px] ${index < 2 && "border-b border-b-th-fade"}`}
+                >
+                  <div>
+                    {number && (
+                      <div className="flex items-center">
+                        {sufix ? (
+                          <>
+                            {sighn && (
+                              <span className="num_lg  text-white">
+                                {sighn}
+                              </span>
+                            )}
+                            <Counter
+                              duration={4}
+                              decimals={decimal}
+                              target={number}
+                            />
+                            <span className="num_lg  text-white">{sufix}</span>
+                          </>
+                        ) : (
+                          <>
+                            <Counter
+                              duration={4}
+                              decimals={decimal}
+                              target={number}
+                            />
+                            {sighn && (
+                              <span className="num_lg  text-white">
+                                {sighn}
+                              </span>
+                            )}
+                          </>
+                        )}
+                      </div>
+                    )}
+                    {title && (
+                      <span className="num_lg self-start uppercase text-white">
+                        {title}
+                      </span>
                     )}
                   </div>
-                  {title && (
-                    <span className="num_lg self-start uppercase text-white">
-                      {title}
-                    </span>
-                  )}
+                  <p className="body1 mt-[30px] max-w-[250px]">{desc}</p>
                 </div>
-                <p className="body1 mt-[30px] max-w-[250px]">{desc}</p>
-              </div>
-            ))}
+              )
+            )}
           </div>
 
           <Link href="/cases" className="lg:hidden">

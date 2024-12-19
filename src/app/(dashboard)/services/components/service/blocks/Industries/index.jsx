@@ -42,13 +42,13 @@ export function Industries({
         ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
     >
       <div
-        className={`grid  ${isTwoSides ? "grid-cols-2 gap-x-[134px] gap-y-[77px]" : "grid-cols-2 gap-y-[42px] md:gap-x-[100px]"}`}
+        className={`grid  ${isTwoSides ? "grid-cols-2 gap-x-[134px] gap-y-[77px]" : data.length < 4 ? "grid-cols-3 gap-y-[42px] md:gap-x-[100px]" : "grid-cols-2 gap-y-[42px] md:gap-x-[100px]"}`}
         style={{
-          gridTemplateColumns: "405px 1fr"
+          gridTemplateColumns: `${data.length < 4 && !isTwoSides ? "405px 1fr 1fr" : "405px 1fr"} `
         }}
       >
         <div
-          className={`flex flex-col items-start gap-[26px] md:justify-start ${isTwoSides ? "col-span-1  row-span-2 max-w-[400px]" : "col-span-2  row-span-1 "}`}
+          className={`flex flex-col items-start gap-[26px] md:justify-start ${isTwoSides ? "col-span-1  row-span-2 max-w-[400px]" : "col-span-2 row-span-1 "}`}
         >
           <h2 className="whitespace-pre-line text-center text-[36px] uppercase md:text-start md:text-[60px]">
             {title}
@@ -60,7 +60,7 @@ export function Industries({
         </div>
 
         <div
-          className={`grid grid-cols-2  ${isTwoSides ? "col-span-1 gap-x-[77px] gap-y-[77px]" : "col-span-2 mt-[120px] gap-x-[109px] gap-y-[42px]"}`}
+          className={`grid  ${isTwoSides ? "col-span-1 gap-x-[77px] gap-y-[77px] grid-cols-2" : data.length < 4 ? "col-span-3 mt-[120px] gap-x-[109px] gap-y-[42px] grid-cols-3" : "grid-cols-2 col-span-2 mt-[120px] gap-x-[109px] gap-y-[42px]"}`}
         >
           {data.map((expertise, index) => (
             <div

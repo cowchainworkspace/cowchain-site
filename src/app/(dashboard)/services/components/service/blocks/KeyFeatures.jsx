@@ -12,6 +12,7 @@ export function KeyFeatures({
   bottomBorder = true,
   noBg = false,
   tag,
+  reverse,
 }) {
   return (
     <section
@@ -25,8 +26,8 @@ export function KeyFeatures({
         />
       )}
 
-      <div className="pt-[126px] pb-[84px] px-default relative flex flex-col justify-between gap-[107px]">
-        <div className="  lg:gap-16">
+      <div className={`pt-[126px] pb-[84px] px-default relative flex justify-between gap-[107px]`}>
+        <div className={` ${ reverse ? "flex gap-[102px] flex-row" :"block"}"`}>
           {tag && (
             <Tag
               title={tag}
@@ -36,7 +37,7 @@ export function KeyFeatures({
           <h2 className="lg:order-0 text-[60px] uppercase text-white  md:text-[60px]">
             {title}
           </h2>
-          <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto"></div>
+          {/* <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row lg:order-3 lg:ml-auto"></div> */}
           <p className="body my-[40px] max-w-[592px] text-base leading-6 md:my-[20px]">
             {desc}
           </p>

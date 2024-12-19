@@ -177,7 +177,7 @@ export const useCases = [
   }
 ];
 
-const TustByNumbersData = [
+export const TustByNumbersData = [
   {
     number: 120,
     title: "PROJECTS",
