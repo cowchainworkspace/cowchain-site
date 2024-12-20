@@ -3,9 +3,19 @@
 import bg_lg from "@/assets/bg/dexServiceBg.svg";
 import Image from "next/image";
 
-export function ExpertiseServices({ title, desc, data, noBg, topBorder = true, bottomBorder = true }) {
+export function ExpertiseServices({
+  title,
+  desc,
+  data,
+  noBg,
+  topBorder = true,
+  bottomBorder = true,
+  threeColumns
+}) {
   return (
-    <section className={`relative ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}>
+    <section
+      className={`relative ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
+    >
       {!noBg && (
         <Image
           alt=""
@@ -14,9 +24,12 @@ export function ExpertiseServices({ title, desc, data, noBg, topBorder = true, b
         />
       )}
 
-      <div className="py-heading px-default relative flex justify-between max-w-[1440px] mx-auto">
-        <div className="lg:gap-16">
-          <h2 className="lg:order-0 text-[60px] uppercase text-white  md:text-[60px]">
+      <div
+        className={`py-heading px-default relative mx-auto max-w-[1440px] ${threeColumns ? "grid grid-cols-3 gap-[85px]" : " flex justify-between"} `}
+      >
+        <div className="col-span-1 lg:gap-16">
+          <h2 className={`lg:order-0  uppercase text-white
+            ${threeColumns ? "text-[50px]" : "text-[60px]"} `}>
             {title}
           </h2>
           <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto"></div>
@@ -27,11 +40,19 @@ export function ExpertiseServices({ title, desc, data, noBg, topBorder = true, b
           )}
         </div>
 
-        <div className="max-w-[519px]">
+        <div
+          className={`${threeColumns ? "col-span-2 gap-x-[85px] grid grid-cols-2" : "max-w-[519px]"}`}
+        >
           {data.map(({ title, desc }, index) => (
-            <div className="relative bg-cover ">
+            <div className="relative col-span-1 bg-cover">
               {title && (
-                <div className={index === 0 ? "mr-auto  w-full text-left" : "mr-auto mt-[60px] w-full text-left"}>
+                <div
+                  className={
+                    index === 0 || (threeColumns && index === 1)
+                      ? "mr-auto  w-full text-left"
+                      : "mr-auto mt-[60px] w-full text-left"
+                  }
+                >
                   <span className="text-left font-roc !text-[20px] font-medium uppercase !leading-none text-white">
                     {title}
                   </span>

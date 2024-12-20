@@ -1,0 +1,188 @@
+import { HeroSection } from "../components/service/blocks/HeroSection";
+import Achievements from "../components/service/blocks/Achievements";
+import Contact from "@/components/Contact";
+import FAQ from "../components/service/blocks/FAQ";
+import { Industries } from "../components/service/blocks/Industries";
+import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
+import { OtherServices } from "../components/service/blocks/OtherServices";
+import { ServiceStack } from "../components/service/blocks/stack";
+import { Feedback } from "../components/service/blocks/Feedback";
+import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
+import {
+  OtherDefiData,
+  ClientsTrustData,
+  IndustriesData,
+  defiProcessData,
+  DeFiExpertiseData,
+  DeFiBenefitsData,
+  faqDappData
+} from "./utils/data";
+
+export const metadata = {
+  metadataBase: new URL("https://cowchain.io/"),
+  alternates: {
+    canonical: "/services/dapp_development"
+  }
+};
+
+const DefiDevelopment = () => {
+  return (
+    <section>
+      <HeroSection
+        tag={"DeFi Development"}
+        title={"DeFi Development Company"}
+        desc={
+          <>
+            Find out how DeFi Development Company can help you build a better
+            blockchain ecosystem. <br />
+            Cowchain is leading the way in blockchain development!
+          </>
+        }
+      />
+      <Achievements
+        tag={"dApp Development Services"}
+        desc={
+          <>
+            {" "}
+            At Cowchain, we are a leading{" "}
+            <span className="violet-gradient-text">
+              defi development <br /> company
+            </span>{" "}
+            specializing in providing top-notch
+            <span className="violet-gradient-text">
+              defi <br /> development services
+            </span>
+            . Our team is dedicated to <br />
+            helping you navigate the world of decentralized <br />
+            finance with
+            <span className="violet-gradient-text">
+              innovative platforms
+            </span>{" "}
+            offered by our <br /> decentralized{" "}
+            <span className="violet-gradient-text">
+              finance development company
+            </span>
+          </>
+        }
+      />
+      <KeyFeatures
+        isOneBlock={true}
+        title={"DeFi Development"}
+        desc={
+          <>
+            As a leading decentralized finance development company, we
+            specialize in creating innovative DeFi solutions that redefine how
+            businesses and individuals interact with financial systems.
+            <p>
+              <br />
+            </p>
+            Our solutions encompass smart contracts, liquidity protocols, and
+            more to streamline decentralized transactions
+          </>
+        }
+      />
+
+      <ExpertiseServices
+        data={DeFiExpertiseData}
+        title={
+          <>
+            DeFi <br />
+            Development <br />
+            Services <br />
+            We Provide
+          </>
+        }
+      />
+
+      <ExpertiseServices
+        threeColumns
+        data={DeFiBenefitsData}
+        title={
+          <>
+            Benefits <br />
+            of DeFi <br />
+            Development
+          </>
+        }
+      />
+
+      <Industries
+        title={"Industries We Serve"}
+        data={IndustriesData}
+        topBorder={false}
+      />
+
+      <KeyFeatures
+        isOneBlock={true}
+        title={"DeFi Token Development Classification"}
+        desc={
+          "Our defi token development company classifies tokens based on their utility, governance, and other functionalities. We ensure that each token meets the specific needs of your project"
+        }
+      />
+
+      <FAQ
+        title={
+          <>
+            Our DeFi <br />
+            Development <br />
+            Process
+          </>
+        }
+        data={defiProcessData}
+      />
+
+      <KeyFeatures
+        isOneBlock={true}
+        title={"DeFi Token Development Classification"}
+        desc={
+          "Our defi token development company classifies tokens based on their utility, governance, and other functionalities. We ensure that each token meets the specific needs of your project"
+        }
+      />
+
+      <ServiceStack />
+
+      <KeyFeatures
+        isOneBlock={true}
+        title={"Our Blockchain Advisory Background"}
+        desc={
+          "With years of experience in the blockchain industry, our defi development company specializes in development services and expert advisory to optimize defi development. We guide clients through the complexities of blockchain and development, ensuring reliable implementation of their projects"
+        }
+      />
+
+      <Feedback />
+
+      <ExpertiseServices
+        threeColumns
+        data={ClientsTrustData}
+        title={
+          <>
+            Why <br />
+            Our Clients <br />
+            Trust Us
+          </>
+        }
+      />
+
+      <OtherServices
+        tag={"Other Blockchain Services"}
+        title={
+          <>
+            In addition to <br />
+            <span className="violet-gradient-text">DEFI development</span>
+            <br />
+            Cowchain offers <br /> a variety <br /> of
+            <span className="violet-gradient-text">
+              complementary <br /> services
+            </span>
+          </>
+        }
+        data={OtherDefiData}
+        bottomBorder={false}
+      />
+      <FAQ data={faqDappData} />
+      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+    </section>
+  );
+};
+
+export default DefiDevelopment;
