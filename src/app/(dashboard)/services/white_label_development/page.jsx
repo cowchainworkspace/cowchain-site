@@ -9,7 +9,7 @@ import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
 import { faqDappData, otherServices } from "./utils/data";
 import { IndustriesDexData } from "./utils/data";
-import { TustByNumbersData } from "../../(home)/blocks/home-content";
+import { TustByNumbersData, whiteLabelSolutions } from "./utils/data";
 import { TustByNumbers } from "../full_stack_development/blocks/TustByNumbers";
 import { CasesHead } from "../full_stack_development/blocks/CasesHead";
 import Cases from "../../(home)/blocks/Cases";
@@ -87,13 +87,18 @@ const WhiteLabelDev = () => {
           </>
         }
       />
+
+      <Industries
+        data={whiteLabelSolutions}
+        fullGrid
+      />
+
       <TustByNumbers home data={TustByNumbersData} />
 
       <Industries
         title={"Industries We Serve"}
         desc={"Our Web3 white label division works with various industries"}
         data={IndustriesDexData}
-        topBorder={false}
       />
 
       <KeyFeatures

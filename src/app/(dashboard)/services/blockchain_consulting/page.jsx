@@ -35,7 +35,7 @@ const BlockChainConsulting = () => {
         }
       />
       <Achievements
-        tag={"white label web design & development services"}
+        tag={"blockchain consulting services"}
         desc={
           <>
             As a{" "}
@@ -111,7 +111,13 @@ const BlockChainConsulting = () => {
         bottomBorder={false}
       />
 
-      <FAQ title={"Our Consulting Process"} data={consultingProcessData} />
+      <FAQ
+        desc={
+          "Our blockchain consultation is structured to ensure that businesses can seamlessly integrate technology into their operations. This process includes several key stages"
+        }
+        title={"Our Consulting Process"}
+        data={consultingProcessData}
+      />
 
       <KeyFeatures
         isOneBlock={true}
@@ -177,14 +183,15 @@ const BlockChainConsulting = () => {
       />
 
       <OtherServices
+        tag={"Other Blockchain Services"}
         title={
           <>
-            In addition to
+            In addition to{" "}
             <span className="violet-gradient-text">
               blockchain <br /> consulting
             </span>
-            , Cowchain <br /> offers a range of <br /> offers a range of
-            complementary solutions
+            , Cowchain <br /> offers a range of <br />
+            complementary solutions <br />
             <span className="violet-gradient-text">
               to help businesses fully <br /> integrate technology <br /> into
               their operations.
