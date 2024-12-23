@@ -72,7 +72,7 @@ export function Industries({
             <div
               key={index}
               className={`col-span-1 row-span-1 flex  ${expertise.text ? "items-start" : "items-center"}
-                  ${(isTwoSides || fullGrid) ? "max-w-[307px] flex-col gap-0" : "gap-[49px]"}`}
+                  ${(isTwoSides || fullGrid || data.length < 4) ? "max-w-[307px] flex-col gap-0" : "gap-[49px]"}`}
             >
               {expertise.icon && (
                 <div

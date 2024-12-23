@@ -25,12 +25,9 @@ import tailwind from "@/assets/svgComponents/stack/TailwindStackIcon";
 import thirdWeb from "@/assets/svgComponents/stack/ThirdWebStackIcon";
 import ton from "@/assets/svgComponents/stack/TONStackIcon";
 
-
-
 export const expertiseData = [
   {
     title: "Blockchain Platforms",
-    text: "From dApps to blockchains – you name it, we do it. Whether you only have a concept in mind or a running business, we can integrate it with Web3",
     tools: [
       { logo: eth, alt: "Ethereum" },
       { logo: solana, alt: "Solana" },
@@ -44,7 +41,6 @@ export const expertiseData = [
   },
   {
     title: "Front-End Technologies",
-    text: "Expertly crafting native and cross-platform mobile apps, we turn your vision into reality. Focused on performance, user experience, and seamless design, our mobile solutions ensure your app excels in today's dynamic market.",
     tools: [
       { logo: react, alt: "React.js" },
       { logo: nextjs, alt: "Next.js" },
@@ -54,7 +50,6 @@ export const expertiseData = [
   },
   {
     title: "Back-End Technologies",
-    text: "Based on factors like project complexity and its scalability needs, we deploy the most suitable and easy-to-maintain product architecture",
     tools: [
       { logo: nodejs, alt: "Node.js" },
       { logo: express, alt: "Express" },
@@ -64,7 +59,6 @@ export const expertiseData = [
   },
   {
     title: "Databases",
-    text: "Combining your vision and best usability practices, we create products that live up to your business goals and are intuitive for users",
     tools: [
       { logo: mongodb, alt: "MongoDB" },
       { logo: mysql, alt: "MySQL" },
@@ -73,7 +67,6 @@ export const expertiseData = [
   },
   {
     title: "Cloud Services",
-    text: "Based on factors like project complexity and its scalability needs, we deploy the most suitable and easy-to-maintain product architecture",
     tools: [
       { logo: aws, alt: "AWS" },
       { logo: azure, alt: "Azure" },
@@ -82,12 +75,27 @@ export const expertiseData = [
   },
   {
     title: "Integrators of",
-    text: "Leveraging the most advanced integration services, we seamlessly connect your applications with top-tier blockchain tools.",
     tools: [
       { logo: okx, alt: "OKX" },
       { logo: privy, alt: "Privy" },
       { logo: thirdWeb, alt: "third web" },
       { logo: subgraph, alt: "Subgraph" }
+    ]
+  }
+];
+
+export const nftStackData = [
+  {
+    title: "Blockchain Platforms",
+    text: "With faster transaction times and lower fees, Polygon is ideal for NFT developers looking to optimize cost efficiency while maintaining Ethereum’s security standards",
+    tools: [
+      { logo: eth, alt: "Ethereum" },
+      { logo: ava, alt: "Avalanche" },
+      { logo: polygon, alt: "Polygon" },
+      { logo: solana, alt: "Solana" },
+      { logo: bitcoin, alt: "Bitcoin" },
+      { logo: ton, alt: "TON" },
+      { logo: binance, alt: "Binance Smart Chain" },
     ]
   }
 ];

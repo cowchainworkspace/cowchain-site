@@ -7,10 +7,14 @@ import HealthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
 import HybridIcon from "@/assets/svgComponents/industries/HybridIcon";
 import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon";
 
-import health from "@/assets/svgComponents/defiServise/HealthDefiIcon";
-import InsurenseDefiIcon from "@/assets/svgComponents/defiServise/InsurenseDefiIcon";
-import RealEstateDefiIcon from "@/assets/svgComponents/defiServise/RealEstateDefiIcon";
-import SupplyChainDefiIcon from "@/assets/svgComponents/defiServise/SupplyChainDefiIcon";
+import Defilcon from '@/assets/svgComponents/nftService/DefiIcon';
+import DigitalArts from '@/assets/svgComponents/nftService/DifitalArts';
+import FashionNftIcon from '@/assets/svgComponents/nftService/FashionNftIcon';
+import GamingNftIcon from '@/assets/svgComponents/nftService/GamingNftIcon';
+import MediaEntartaimentIcon from '@/assets/svgComponents/nftService/MediaEntartaimentIcon';
+import MetavarselCon from '@/assets/svgComponents/nftService/MetavarseICon';
+import SharedEconomyIcon from '@/assets/svgComponents/nftService/SharedEconomyIcon';
+import SportsNftIcon from '@/assets/svgComponents/nftService/SportsNftIcon';
 
 export const DappExpertiseDesc =
   "Our dapp development company offers a comprehensive range of services that enable businesses to harness the potential of decentralized applications. Here are some of the key services we provide";
@@ -116,7 +120,7 @@ export const dappBenefitsData = [
   {
     title: "Smart Contract Implementation",
     text: "Smart contract implementation allows businesses to automate transactions and processes, lowering reliance on manual processes and decreasing potential risks of errors",
-    icon: health
+    icon: HealthcareIcon
   },
   {
     title: "User Onboarding",
@@ -140,43 +144,49 @@ export const dappBenefitsData = [
   }
 ];
 
-export const IndustriesData = [
+export const NftIndustriesData = [
   {
-    title: "Healthcare",
-    text: "We bring defi development to the healthcare industry, enhancing data security and enabling efficient transactions. Our defi development company ensures innovative solutions tailored for healthcare needs",
-    icon: health
+    title: "Digital Arts",
+    text: "NFTs have opened new avenues for artists to tokenize their work, creating unique digital assets that can be traded on blockchain platforms. Our NFT developers work closely with creators to build secure marketplaces, allowing artists to showcase their work globally.",
+    icon: DigitalArts
   },
   {
-    title: "Government",
-    text: "Our defi development services assist governments in implementing visible and resilient systems for better governance",
-    icon: GovernmentIcon
+    title: "Gaming",
+    text: "In the gaming industry, NFT development services are transforming how players own in-game assets and trade them. NFTs allow players to truly own their loot items, and with the support of our NFT development, these assets can be securely transferred or sold across different platforms.",
+    icon: GamingNftIcon
   },
   {
-    title: "Finance",
-    text: "We help financial institutions adopt defi development to improve services, reduce costs, and enhance customer experiences",
-    icon: FinanceIcon
+    title: "Sports",
+    text: "For sports fans, NFTs are a new way to engage with teams and players. From collectible tokens to exclusive access passes, our NFT developers assist sports organizations in creating memorable fan experiences. With seamless token development, sports organizations can offer unique digital memorabilia to fans.",
+    icon: SportsNftIcon
   },
   {
-    title: "Supply Chain",
-    text: "Our work in defi development streamlines supply chain operations by enhancing traceability and reducing fraud",
-    icon: SupplyChainDefiIcon
+    title: "Metaverse",
+    text: "As the metaverse grows, NFTs play a crucial role in delivering digital property and ownership. Our NFT development company designs innovative solutions for creating and managing digital assets in metaverses, ensuring secure transactions and verifiable ownership.",
+    icon: MetavarselCon
   },
   {
-    title: "Education",
-    text: "Our defi development company revolutionizes the education sector by creating secure platforms for credential verification and funding. Through defi development, we enhance educational systems with advanced technology",
-    icon: EducationIcon
+    title: "Media & Entertainment",
+    text: "NFTs in media and entertainment enable artists and producers to tokenize their creations, granting exclusive access to concerts, art, and other digital media. Our NFT development services empower media industries with token development to enhance audience engagement.",
+    icon: MediaEntartaimentIcon
   },
   {
-    title: "Insurance",
-    text: "We apply defi development to the insurance industry, enabling automated claims processing and transparent policies. Our defi development company helps insurers leverage blockchain for better efficiency",
-    icon: InsurenseDefiIcon
+    title: "Fashion",
+    text: "Luxury brands are increasingly using NFTs to authenticate their products and collections. Our NFT developers work with fashion companies to tokenize garments and accessories, thus guaranteeing the authenticity of goods across the supply chain.",
+    icon: FashionNftIcon
   },
   {
-    title: "Estate",
-    text: "Our team handles defi development services for the real estate sector, facilitating safeguarded and clear property transactions",
-    icon: RealEstateDefiIcon
+    title: "DeFi",
+    text: "DeFi platforms are integrating NFTs as collateral for loans and other financial products. Our NFT development company designs solutions to tokenize assets and create unique financial services, ensuring flexibility and security.",
+    icon: Defilcon
+  },
+  {
+    title: "Shared Economy",
+    text: "NFTs in the shared economy allow for fractional ownership of assets, from property to digital goods. Our NFT developers assist organizations in adopting the secure exchange and management of these assets through NFT development.",
+    icon: SharedEconomyIcon
   }
 ];
+
 
 export const EngagementDevData = [
   {
@@ -226,7 +236,7 @@ export const dappDevProcessData = [
   }
 ];
 
-export const OtherDefiData = [
+export const OtherNftData = [
   {
     text: "dApp Development",
     author:
@@ -243,60 +253,65 @@ export const OtherDefiData = [
       "We create and audit smart contracts to power NFTs, ensuring secure ownership and transfer of digital assets across blockchain networks"
   },
   {
+    text: "Audit and Optimization",
+    author:
+      "Our audit services focus on optimizing smart contracts and blockchain infrastructure, ensuring the safety and efficiency of your NFT platforms"
+  },
+  {
     text: "Token Creation",
     author:
       "Our team provides token creation services for businesses looking to launch new digital assets, including NFTs, utility tokens, and governance tokens"
   }
 ];
 
-export const faqDefiData = [
+export const faqNftData = [
   {
-    title: "Why should I hire a DeFi development company?",
+    title: "How do NFTs work?",
     content:
-      "Hiring a DeFi development company like Cowchain brings expertise and specialized skills in DeFi development. Our comprehensive DeFi development services equip your platform with robust security measures, scalability for growth, and adherence to industry standards, ensuring long-term reliability."
+      "NFTs are digital assets that represent ownership of unique items on the blockchain. Unlike cryptocurrencies, they are not interchangeable, making each one distinct. Thoughtful nft development involves creating platforms that simplify token ownership while maintaining security and transparency"
   },
   {
-    title: "Why is decentralized finance (DeFi) important?",
-    content:
-      "Decentralized finance is important because it democratizes access to financial services. Through DeFi development, we can create platforms that are open, protected, and accessible to everyone, fostering financial inclusion."
+    title: "What is NFT development?",
+    content: `NFT development involves creation of non-fungible tokens and the platforms on which they are traded. It includes building smart contracts, developing secure platforms, and integrating with existing marketplaces. Through well-planned nft development these systems are user-friendly and aligned with blockchain best practices`
   },
   {
-    title: "How long does DeFi development take?",
-    content:
-      "The timeframe for DeFi development varies based on the project's complexity. Our DeFi development company adheres to a structured process for timely completion."
-  },
-  {
-    title: "What technologies do you use for DeFi development?",
-    content:
-      "We utilize a wide range of technologies in our DeFi development, including various blockchain platforms and programming languages, to meet the specific needs of your project."
-  },
-  {
-    title: "Can you help with DeFi platform development?",
-    content:
-      "Yes, our DeFi development company specializes in DeFi platform development. We provide comprehensive DeFi development services to build robust and scalable platforms."
+    title: "Why are the NFTs so popular and why are people buying them?",
+    content: `NFTs have gained popularity due to their ability to provide proof of ownership and authenticity for digital and physical items. By leveraging nft development, companies can create platforms that foster innovation, attract collectors, and build strong connections with their audience`
   }
 ];
 
-export const defiProcessData = [
+
+export const nftProcessData = [
   {
-    title: "Consultation and Requirement Gathering",
+    title: "Project Discovery",
     content:
-      "Our defi development company begins by thoroughly understanding your unique demands. Expert consulting helps define the best approach for your project’s needs"
+      "We begin with an in-depth discovery phase, where we understand your business needs and objectives. This foundation allows us to tailor our NFT development services to meet your goals precisely"
   },
   {
-    title: "Planning and Strategy",
-    content: `We strategize the implementation plan, selecting the right technologies for your defi development. Our team aligns the roadmap with your business goals`
+    title: "NFT Prototyping",
+    content: `Prototyping is a critical step in our NFT software development. Through detailed NFT development, we enable businesses to identify potential improvements early, reducing costs and enhancing final platform performance`
   },
   {
-    title: "Design and Development",
-    content: `Using our expertise, we focus on the design and implementation within defi development to create seamless user experiences`
+    title: "MVP & NFT Platform Development",
+    content: `We build a minimum viable product (MVP) to quickly bring your project to market. Leveraging nft development, we ensure the MVP highlights key functionalities and incorporates user feedback for continuous improvement`
   },
   {
-    title: "Testing and Quality Assurance",
-    content: `Comprehensive testing verifies that all outcomes from defi development are durable and protected`
+    title: "QA & Stabilization",
+    content: `Our rigorous quality assurance process ensures that your platform operates reliably across all supported chains, mitigating risks associated with security and performance`
   },
   {
-    title: "Deployment and Maintenance",
-    content: `After testing, our defi development company deploy the solution and manages ongoing maintenance`
+    title: "Launch & Maintenance",
+    content: `We assist in launching your project and provide ongoing maintenance to ensure your platform remains competitive. Our approach to NFT development focuses on long-term reliability, offering solutions that adapt to technological advancements and user expectations`
+  }
+];
+
+export const nftServicesData = [
+  {
+    title: "Token Creation & Smart Contracts",
+    desc: "We offer NFT development by creating smart contracts that govern the ownership and transfer of NFT assets across different blockchain platforms. These smart contracts form the backbone of NFT development, ensuring seamless integration with decentralized marketplaces and user-friendly operations"
+  },
+  {
+    title: "Custom NFT Development",
+    desc: "Our NFT development allows for complete flexibility in how you want to design your tokens and implement them across platforms. This ensures unique, tailor-made solutions for each business, whether for art, collectibles, or virtual assets"
   }
 ];

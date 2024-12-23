@@ -75,7 +75,11 @@ const BlockChainConsulting = () => {
           </>
         }
       />
-      <TustByNumbers home data={TustByNumbersData} />
+      <TustByNumbers
+        title={"Exploring Blockchain’s Potential in the Modern Market"}
+        home
+        data={TustByNumbersData}
+      />
 
       <ExpertiseServices
         title={

@@ -64,11 +64,11 @@ export default function FAQ({
 
       <div className="relative grid grid-cols-1 md:grid-cols-5">
         <div className="md:py-heading px-default md-border-r flex flex-col justify-start border-b border-b-th-fade py-[60px] text-left md:col-span-2">
-          <h2 className="flex max-w-[321px] justify-center text-center text-4xl uppercase uppercase leading-[40px]  text-white md:max-w-[365px] md:text-left md:text-[60px] md:leading-[53px]">
+          <h2 className="flex justify-center text-center text-[42px] uppercase uppercase leading-[40px] text-white  md:text-left ">
             {title}
           </h2>
           {desc && (
-            <p className="body my-[40px] max-w-[592px] text-base leading-6 md:my-[20px]">
+            <p className="body my-[40px] text-left leading-6 md:my-[20px]">
               {desc}
             </p>
           )}

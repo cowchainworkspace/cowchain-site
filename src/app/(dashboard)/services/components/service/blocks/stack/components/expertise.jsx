@@ -3,7 +3,7 @@ import { CollapsedIcon } from "./collapsed-icon";
 export const ExpertiseBlock = ({ title, text, tools }) => {
   return (
     <article className="relative col-span-1 row-span-1 cursor-default">
-      <div className="relative flex flex-col justify-between !min-h-[112px] !max-h-[112px]">
+      <div className="relative flex !max-h-[112px] !min-h-[112px] flex-col justify-between">
         <p className="body3 text-white">{title}</p>
         <div className="tools_wrapper flex items-center">
           {tools.map((tool, index) => (
@@ -11,6 +11,18 @@ export const ExpertiseBlock = ({ title, text, tools }) => {
           ))}
         </div>
       </div>
+      {text && (
+        <div className="mt-[60px] flex max-w-[370px] items-center">
+          <p
+            style={{
+              color: "#BBBBBB"
+            }}
+            className="leading-22px text-[16px]"
+          >
+            {text}
+          </p>
+        </div>
+      )}
     </article>
   );
 };

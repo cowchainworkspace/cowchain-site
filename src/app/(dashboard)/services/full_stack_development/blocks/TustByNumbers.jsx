@@ -29,7 +29,7 @@ const TustByNumbersData = [
   }
 ];
 
-export function TustByNumbers({ data = TustByNumbersData, home }) {
+export function TustByNumbers({ data = TustByNumbersData, home, title = "Trust by Numbers" }) {
   return (
     <section className={`relative ${home && "h-[700px]"}`}>
       {!home && (
@@ -45,8 +45,8 @@ export function TustByNumbers({ data = TustByNumbersData, home }) {
           <div
             className={`flex h-full flex-col  ${home ? "h-[700px]" : "justify-center"} gap-[37px] border-r border-r-th-fade pb-[110px] pl-[88px] pr-[168px] pt-[170px]`}
           >
-            <h2 className=" heading-[54px] text-[60px] uppercase text-white  md:text-[60px]">
-              Trust by Numbers
+            <h2 className=" heading-[42px] text-[60px] uppercase text-white ">
+              {title}
             </h2>
             {!home && (
               <p className="body my-[40px] max-w-lg text-base leading-6 md:my-[20px] lg:order-2 lg:max-w-[306]">
