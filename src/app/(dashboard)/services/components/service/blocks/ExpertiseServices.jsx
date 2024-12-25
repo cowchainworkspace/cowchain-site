@@ -1,13 +1,11 @@
 "use client";
 
-import bg_lg from "@/assets/bg/dexServiceBg.svg";
-import Image from "next/image";
-
 export function ExpertiseServices({
   title,
   desc,
   data,
   noBg,
+  bg,
   topBorder = true,
   bottomBorder = true,
   threeColumns
@@ -17,11 +15,7 @@ export function ExpertiseServices({
       className={`relative ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
     >
       {!noBg && (
-        <Image
-          alt=""
-          className="absolute -bottom-[38%] left-0  h-screen md:block md:h-min "
-          src={bg_lg}
-        />
+        bg
       )}
 
       <div

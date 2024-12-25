@@ -39,11 +39,11 @@ export function Industries({
   return (
     <section
       id="expertise"
-      className={`relative flex justify-center px-[20px] py-[60px] md:pb-[132px] md:pl-[84px] md:pr-[64px] md:pt-[108px] 
+      className={`relative flex justify-center 
         ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
     >
       <div
-        className={`grid  ${isTwoSides ? "grid-cols-2 gap-x-[134px] gap-y-[77px]" : data.length < 4 ? "grid-cols-3 gap-y-[42px] md:gap-x-[100px]" : fullGrid ? "grid-cols-4 gap-y-[42px] md:gap-x-[100px]" : "grid-cols-2 gap-y-[42px] md:gap-x-[100px]"}`}
+        className={`grid px-[20px]  md:pl-[84px] md:pr-[64px] py-[126px]  max-w-[1440px] mx-auto ${isTwoSides ? "grid-cols-2 gap-x-[134px] gap-y-[77px]" : data.length < 4 ? "grid-cols-3 gap-y-[42px] md:gap-x-[100px]" : fullGrid ? "grid-cols-4 gap-y-[42px] md:gap-x-[100px]" : "grid-cols-2 gap-y-[42px] md:gap-x-[100px]"}`}
         style={{
           gridTemplateColumns: `${data.length < 4 && !isTwoSides ? "405px 1fr 1fr" : fullGrid ? "" : "405px 1fr"} `
         }}

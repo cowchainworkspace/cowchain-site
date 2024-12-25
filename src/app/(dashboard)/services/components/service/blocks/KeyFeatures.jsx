@@ -39,7 +39,7 @@ export function KeyFeatures({
       )}
 
       <div
-        className={`px-default relative mx-auto flex max-w-[1440px] flex-col justify-between gap-[107px] pb-[84px] pt-[126px]`}
+        className={`px-default relative flex mx-auto  max-w-[1440px] flex-col justify-between ${isOneBlock ? "py-[126px]" : "pb-[84px] pt-[126px]"} gap-[107px] `}
       >
         <div className={` ${reverse ? "flex flex-row gap-[102px]" : "block"}"`}>
           {tag && <Tag title={tag} className="mb-4 max-w-[194px] md:mb-8" />}
@@ -47,7 +47,7 @@ export function KeyFeatures({
             {title}
           </h2>
           {/* <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row lg:order-3 lg:ml-auto"></div> */}
-          <p className="body my-[40px] max-w-[592px] text-base leading-6 md:my-[20px]">
+          <p className="body my-[40px] max-w-[824px] text-base leading-6 md:my-[20px]">
             {desc}
           </p>
         </div>

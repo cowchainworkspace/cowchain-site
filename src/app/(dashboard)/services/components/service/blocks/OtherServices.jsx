@@ -26,8 +26,8 @@ const Quote = ({ text, author, lastIndex }) => {
     <article
       className={
         lastIndex
-          ? "px-default relative flex w-full min-w-[320px] flex-col  pb-[40px] pt-[71px] md:border-r-0"
-          : "px-default relative flex w-full min-w-[320px] flex-col border-r border-r-th-fade  pb-[40px] pt-[71px] md:border-b md:border-r-0 md:border-b-th-fade"
+          ? "px-[88px] relative flex w-full min-w-[320px] flex-col py-[43px] md:border-r-0"
+          : "px-[88px]  relative flex w-full min-w-[320px] flex-col border-r border-r-th-fade  py-[43px] md:border-b md:border-r-0 md:border-b-th-fade"
       }
     >
       <p className="header max-w-2xl !font-normal !leading-none !no-underline">

@@ -64,7 +64,7 @@ export default function FAQ({
 
       <div className="relative grid grid-cols-1 md:grid-cols-5">
         <div className="md:py-heading px-default md-border-r flex flex-col justify-start border-b border-b-th-fade py-[60px] text-left md:col-span-2">
-          <h2 className="flex justify-center text-center text-[42px] uppercase uppercase leading-[40px] text-white  md:text-left ">
+          <h2 className="flex justify-start text-left text-[42px] uppercase uppercase leading-[40px] text-white  md:text-left ">
             {title}
           </h2>
           {desc && (
@@ -80,7 +80,7 @@ export default function FAQ({
                 {({ isExpanded }) => (
                   <div
                     className={cn(
-                      "relative bg-cover px-[20px] py-[24px] xl:px-[60px] xl:py-16",
+                      "relative bg-cover px-[20px] py-[43px] xl:px-[88px]",
                       {
                         "bg-[url('/assets/faq-gradient.png')]": isExpanded
                       }

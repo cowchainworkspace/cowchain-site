@@ -8,20 +8,17 @@ import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
 import { Feedback } from "../components/service/blocks/Feedback";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
+import servideBG from "@/assets/bg/dexServiceBg.svg";
 import {
-  DeFiBenefitsData,
-  nftServicesData,
   nftProcessData,
   SmartContractOtherData,
-  OtherNftData,
   faqNftData,
   SmartContractIndustriesData,
   OtherSmartContractData,
   SnartContractBenefitsData,
   SnartContractExpertiseData
 } from "./utils/data";
-import { nftStackData } from "../components/service/blocks/stack/data";
-import { TustByNumbers } from "../full_stack_development/blocks/TustByNumbers";
+import Image from "next/image";
 
 export const metadata = {
   metadataBase: new URL("https://cowchain.io/"),
@@ -62,6 +59,13 @@ const SmartContractDevelopment = () => {
       />
 
       <ExpertiseServices
+        bg={
+          <Image
+            alt=""
+            className="absolute -bottom-[900px] left-0  h-screen md:block md:h-min "
+            src={servideBG}
+          />
+        }
         data={SnartContractExpertiseData}
         title={"Expertise of Our Smart Contract Development Company"}
         desc={
@@ -111,29 +115,8 @@ const SmartContractDevelopment = () => {
         title={"Key industries for the application of smart contracts"}
         desc={
           <>
-            <p>
-              The experts at our smart contract development company are
-              experienced in working with various blockchain networks, which
-              allows us to offer optimal solutions depending on the project
-              requirements
-            </p>
-            <p>
-              <br />
-              <br />
-            </p>
-            <p>
-              We constantly follow the development of blockchain technologies
-              and supplement our stack with new tools to improve development
-              efficiency
-            </p>
-            <p>
-              <br />
-              <br />
-            </p>
-            <p>
-              Our developers use advanced technologies and tools to provide
-              smart contract development service
-            </p>
+            Our blockchain smart contract development company <br />
+            has expertise in a variety of industries
           </>
         }
         data={SmartContractIndustriesData}
@@ -141,6 +124,7 @@ const SmartContractDevelopment = () => {
       />
 
       <ServiceStack
+        lopngDesc={true}
         desc={
           <>
             <p>
@@ -185,8 +169,8 @@ const SmartContractDevelopment = () => {
       <FAQ
         title={
           <>
-            Our Non-Fungible <br />
-            Token Development <br />
+            Our DeFi <br />
+            Development <br />
             Process
           </>
         }
@@ -241,9 +225,11 @@ const SmartContractDevelopment = () => {
         title={
           <>
             In addition to <br />
-            <span className="violet-gradient-text">Smart contract <br /> development</span>
+            <span className="violet-gradient-text">
+              Smart contract <br /> development
+            </span>
             <br />
-            Cowchain offers <br /> a variety of <br /> 
+            Cowchain offers <br /> a variety of <br />
             <span className="violet-gradient-text">
               complementary <br /> services
             </span>
@@ -252,7 +238,6 @@ const SmartContractDevelopment = () => {
         data={SmartContractOtherData}
         bottomBorder={false}
       />
-
 
       <FAQ data={faqNftData} />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
