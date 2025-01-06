@@ -81,7 +81,6 @@ const Projects = () => {
     if (direction === "down" && currentStepIndex === 3) setCurrentStepIndex(0);
     if (direction === "up" && currentStepIndex !== 0)
       setCurrentStepIndex(currentStepIndex - 1);
-    /*if (direction === "up" && currentStepIndex === 1) setCurrentStepIndex(0); */
   };
 
   return (

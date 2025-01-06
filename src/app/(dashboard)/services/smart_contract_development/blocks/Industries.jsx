@@ -123,13 +123,6 @@ export const Industries = () => {
             <span className="mb-5 max-w-[430px] text-secondary ">
               {inData?.data[caseIndex].attributes.text}
             </span>
-            {/* <Link
-              className="flex gap-2 text-base  uppercase underline"
-              href={inData?.data[caseIndex].attributes?.link || "/"}
-            >
-              see case study
-              <img className="h-6 w-6" src={arrow.src} alt="" />
-            </Link> */}
           </div>
         </div>
 
