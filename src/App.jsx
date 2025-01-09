@@ -20,7 +20,9 @@ const CaseStudiesRetroBridge = lazy(
 );
 const ScrollToTop = lazy(() => import("components/ScrollToTop"));
 
-const Service = lazy(() => import('./app/(dashboard)/services/components/service/page'))
+const Service = lazy(
+  () => import("./app/(dashboard)/services/components/service/page")
+);
 
 const CaseStudiesMarsan = lazy(() => import("pages/case-studies/marsan"));
 const CaseStudiesEva = lazy(() => import("pages/case-studies/eva"));
@@ -32,8 +34,6 @@ function App() {
     emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY);
     emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
   }, []);
-
-  
 
   return (
     <div className="App">
@@ -87,7 +87,7 @@ function App() {
                 element={<Article setBurgerOpen={setBurgerOpen} />}
               />
 
-<Route
+              <Route
                 path="/blog"
                 element={<Blog setBurgerOpen={setBurgerOpen} />}
               />

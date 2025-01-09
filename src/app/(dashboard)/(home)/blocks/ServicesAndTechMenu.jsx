@@ -1,55 +1,74 @@
 import { SocialLinks } from "@/components/SocialLinks";
 import React from "react";
 import { ArrowForward } from "../../../../assets/svgComponents/ArrowForward";
+import Link from "next/link";
 
 const blocks = [
   {
     title: "WHITE LABEL SOLUTIONS",
     items: [
-      "Explore White Label Solutions",
-      "RWA platform",
-      "Social-fi mini-app",
-      "Mobile crypto wallet",
-      "ICO constructor",
-      "ICO platform",
-      "NFT Marketplace",
-      "Staking",
-      "Crypto Lottery",
-      "Exchange",
-      "ITC (Social Trading Platform)"
+      {
+        title: "Explore White Label Solutions",
+        link: "/services/white_label_solutions"
+      },
+      { title: "RWA platform", link: "/services/rwa_platform" },
+      { title: "Social-fi mini-app", link: "/services/social_fi_mini_app" },
+      { title: "Mobile crypto wallet", link: "/services/mobile_crypto_wallet" },
+      { title: "ICO constructor", link: "/services/ico_constructor" },
+      { title: "ICO platform", link: "/services/ico_platform" },
+      { title: "NFT Marketplace", link: "/services/nft_marketplace" },
+      { title: "Staking", link: "/services/staking" },
+      { title: "Crypto Lottery", link: "/services/crypto_lottery" },
+      { title: "Exchange", link: "/services/exchange" },
+      {
+        title: "ITC (Social Trading Platform)",
+        link: "/services/itc_social_trading_platform"
+      }
     ]
   },
   {
     title: "TECHNOLOGIES",
     items: [
-      "Web3 Full-stack Development",
-      "NFT Development",
-      "dApp Development",
-      "DeFi Development",
-      "Smart Contract Development",
-      "AI Development"
+      {
+        title: "Web3 Full-stack Development",
+        link: "/services/web3_fullstack_development"
+      },
+      { title: "NFT Development", link: "/services/nft_development" },
+      { title: "dApp Development", link: "/services/dapp_development" },
+      { title: "DeFi Development", link: "/services/defi_development" },
+      {
+        title: "Smart Contract Development",
+        link: "/services/smart_contract_development"
+      },
+      { title: "AI Development", link: "/services/ai_development" }
     ]
   },
   {
     title: "SERVICES",
     items: [
-      "DEX Development",
-      "Crypto Wallet",
-      "Cryptocurrency Exchange",
-      "P2P crypto exchange",
-      "ICO Platform",
-      "RWA Tokenization",
-      "NFT Game",
-      "Metaverse"
+      { title: "DEX Development", link: "/services/dex_development" },
+      { title: "Crypto Wallet", link: "/services/crypto_wallet" },
+      {
+        title: "Cryptocurrency Exchange",
+        link: "/services/cryptocurrency_exchange"
+      },
+      { title: "P2P crypto exchange", link: "/services/p2p_crypto_exchange" },
+      { title: "ICO Platform", link: "/services/ico_platform" },
+      { title: "RWA Tokenization", link: "/services/rwa_tokenization" },
+      { title: "NFT Game", link: "/services/nft_game" },
+      { title: "Metaverse", link: "/services/metaverse" }
     ]
   }
 ];
 
-const other = ["Web3 UI/UX design", "Blockchain consulting"];
+const other = [
+  { title: "Web3 UI/UX design", link: "/services/web3_ui_ux_design" },
+  { title: "Blockchain consulting", link: "/services/blockchain_consulting" }
+];
 
 export const ServicesAndTechnologies = () => {
   return (
-    <div className="flex h-[423px] w-full border-b border-b-th-fade bg-black text-white">
+    <div className="absolute top-[64px] z-[300] flex h-[423px] w-full border-b border-b-th-fade bg-black text-white">
       <div className="pointer-events-none flex h-[423px] w-[112px] items-center justify-center">
         <span
           className="violet-gradient-text -rotate-90 transform whitespace-nowrap text-left
@@ -71,10 +90,10 @@ export const ServicesAndTechnologies = () => {
             {block.items.map((item, itemIndex) => (
               <li
                 key={itemIndex}
-                className="flex cursor-pointer items-center text-[12px] opacity-70"
+                className="flex cursor-pointer items-center text-[12px] opacity-70 hover:text-purple-400"
               >
                 <ArrowForward className="mr-[6px]" />
-                {item}
+                <Link href={item.link}>{item.title}</Link>
               </li>
             ))}
           </ul>
@@ -92,7 +111,7 @@ export const ServicesAndTechnologies = () => {
               className="flex cursor-pointer items-center text-[12px] opacity-70 hover:text-purple-400"
             >
               <ArrowForward className="mr-[6px]" />
-              {item}
+              <Link href={item.link}>{item.title}</Link>
             </li>
           ))}
         </ul>

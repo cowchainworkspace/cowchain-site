@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { useState, useEffect, useRef } from "react";
 import menu_open from "@/assets/menu_open.svg";
 import menu_close from "@/assets/homepage/modal_close.svg";
 import bg from "@/assets/bg/navbar_top.png";
@@ -24,12 +23,36 @@ import ContactForm from "@/components/utils/ContactForm";
 import Image from "next/image";
 import { useLoader } from "@/hooks/useLoader";
 import emailjs from "emailjs-com";
+import { usePathname } from 'next/navigation';
+import { ServicesAndTechnologies } from "../app/(dashboard)/(home)/blocks/ServicesAndTechMenu";
 
 export default function Navbar({ isPageNotFound = false }) {
   const [burgerOpen, setBurgerOpen] = useState(false);
+  const [serviceMenuOpen, setServiceMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const menuRef = useRef(null);
 
   useEffect(() => {
-    document.body.style.overflow = burgerOpen ? "hidden" : "visible";
+    setServiceMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        !event.target.closest(".menu-toggle-button")
+      ) {
+        setServiceMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   const [openForm, setOpenForm] = useState(false);
@@ -39,7 +62,7 @@ export default function Navbar({ isPageNotFound = false }) {
   const [isGradient, setIsGradient] = useState(true);
   const [isHomePage, setIsHomePage] = useState(true);
 
-  const pathname = usePathname();
+
   const { isRendering, setIsLoading, setIsRendering } = useLoader();
 
   useEffect(() => {
@@ -100,10 +123,6 @@ export default function Navbar({ isPageNotFound = false }) {
 
   const anchorLinks = [
     {
-      title: "Services & Technologies",
-      link: "/services"
-    },
-    {
       title: "Cases",
       link: "/cases"
     },
@@ -140,6 +159,11 @@ export default function Navbar({ isPageNotFound = false }) {
     setOpenForm(true);
   };
 
+  const toggleServices = (e) => {
+    e.stopPropagation();
+    setServiceMenuOpen((prevState) => !prevState);
+  };
+
   return (
     <>
       <section
@@ -149,7 +173,6 @@ export default function Navbar({ isPageNotFound = false }) {
           "opacity-100": !isRendering
         })}
       >
-        
         {isHomePage ? (
           <>
             <Image
@@ -195,12 +218,12 @@ export default function Navbar({ isPageNotFound = false }) {
         {isTeamBg && (
           <>
             <Image
-              className="absolute right-0 top-0 h-full w-full lg:hidden pointer-events-none"
+              className="pointer-events-none absolute right-0 top-0 h-full w-full lg:hidden"
               alt="gradient"
               src={team_bg}
             />
             <Image
-              className="absolute top-0 hidden z-[-2] h-full w-full lg:block pointer-events-none"
+              className="pointer-events-none absolute top-0 z-[-2] hidden h-full w-full lg:block"
               alt="gradient"
               priority
               src={team}
@@ -216,6 +239,12 @@ export default function Navbar({ isPageNotFound = false }) {
           }
         >
           <nav className="hidden w-full max-w-[360px] items-center justify-between pl-12 lg:flex xl:max-w-md">
+            <p
+              className="menu-toggle-button navlink mt-1 cursor-pointer"
+              onClick={toggleServices}
+            >
+              Services & Technologies
+            </p>
             {anchorLinks.map((link, index) => (
               <Link key={index} href={link.link}>
                 <p className="navlink mt-1">{link.title}</p>
@@ -401,6 +430,11 @@ export default function Navbar({ isPageNotFound = false }) {
         </div>
       </section>
       <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />
+      {serviceMenuOpen && (
+        <div ref={menuRef}>
+          <ServicesAndTechnologies setServiceMenuOpen={setServiceMenuOpen} />
+        </div>
+      )}
     </>
   );
 }
