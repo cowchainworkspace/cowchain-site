@@ -11,9 +11,9 @@ import Image from "next/image";
 import michaelMicImg from "@/assets/team/executives/michaelMicImg.png";
 import quote from "@/assets/team/executives/quote.svg";
 import quoteBg from "@/assets/team/executives/quoteBg.svg";
-import { metaData } from './serviceTeamData/teamMetaData';
+import { metadata } from './serviceTeamData/teamMetaData';
 
-export { metaData };
+export { metadata };
 
 const Team = () => {
   return (

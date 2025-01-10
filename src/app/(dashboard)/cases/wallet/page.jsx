@@ -11,7 +11,6 @@ import Link from "next/link";
 import Chevron from "@/components/icons/chevron";
 import { ProjectDetail } from "../components/project-detail";
 import { CaseMask } from "./blocks/CaseMask";
-import Dubai from "@/assets/icons/dubai";
 import { CaseGallery } from "./blocks/CaseGallery";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Image from "next/image";

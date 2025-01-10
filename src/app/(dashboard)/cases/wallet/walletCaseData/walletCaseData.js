@@ -1,3 +1,5 @@
+import Dubai from "@/assets/icons/dubai";
+
 export const projectDetails = [
     {
       title: "Tech Stack",
