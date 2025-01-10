@@ -18,7 +18,7 @@ import Exchange from "@/assets/svgComponents/whiteLabel/Exchange";
 import FintechSolution from "@/assets/svgComponents/whiteLabel/FintechSolution";
 import IcoConstructor from "@/assets/svgComponents/whiteLabel/IcoConstructor";
 import IcoPlatform from "@/assets/svgComponents/whiteLabel/IcoPlatform";
-import itc from "@/assets/svgComponents/whiteLabel/itc";
+import itc from "@/assets/svgComponents/whiteLabel/Itc";
 import MobileCryptoWallet from "@/assets/svgComponents/whiteLabel/MobileCryptoWallet";
 import NftMarketplace from "@/assets/svgComponents/whiteLabel/NftMarketplace";
 import Rwa from "@/assets/svgComponents/whiteLabel/Rwa";
@@ -89,7 +89,7 @@ export const whiteLabelSolutions = [
   {
     title: (
       <h2 className="whitespace-pre-line text-center text-[36px] uppercase md:text-start md:text-[40px]">
-        Our White <br /> Label  <br />  Solutions  <br />  Include
+        Our White <br /> Label <br /> Solutions <br /> Include
       </h2>
     )
   },
