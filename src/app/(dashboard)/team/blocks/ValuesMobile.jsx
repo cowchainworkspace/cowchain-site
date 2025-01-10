@@ -1,27 +1,11 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import { motion, useScroll } from "framer-motion";
+import { useScroll } from "framer-motion";
 import Tag from "@/components/ui/tag";
 import bg from "@/assets/bg/values.png";
-import { cn } from "@/lib/utils";
 import TeamInfo from "./team-info";
 import Image from "next/image";
-
-const benefitsData = [
-  {
-    title: "01 / Passion",
-    text: "The Cowchain team is united by our burning desire to lead the transformation of how people interact with the world. And we have the experience & skills to fulfill it. How? Through successfully deployed products shaped by the vision of startups, enterprises, and Web3 pioneers who choose to work with us. "
-  },
-  {
-    title: "02 / Individual Approach",
-    text: "Cowchcain offers no “one-size-fits-alls.” We immerse ourselves in our clients' businesses, speaking their language and working as an in-house product team to develop effective solutions with users in mind. Your goals become our goals, and your challenges fuel our creativity."
-  },
-  {
-    title: "03 / We are the devs of Web3",
-    text: "In our worldview, there’s a huge difference between being Web3 developers and developers of Web3. Web3 devs know how to implement blockchain technologies. Devs of Web3 code meaningful products that add value to the community and push the industry forward. We are the devs of Web3."
-  }
-];
 
 export const ValuesMobile = () => {
   const sectionRef = useRef(null);

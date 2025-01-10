@@ -13,6 +13,9 @@ import { DexExpertiseData } from "./utils/data";
 import { IndustriesDexData } from "./utils/data";
 import { DexAppDevData } from "./utils/data";
 import { EngagementDevData } from "./utils/data";
+import { metadata } from "./utils/dexDevMetadata";
+
+export { metadata };
 
 const DexDevelopment = () => {
   return (

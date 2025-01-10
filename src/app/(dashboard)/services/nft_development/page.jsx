@@ -10,7 +10,6 @@ import { Feedback } from "../components/service/blocks/Feedback";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import {
   DeFiBenefitsData,
-  faqDappData,
   nftServicesData,
   nftProcessData,
   NftIndustriesData,
@@ -18,13 +17,10 @@ import {
   faqNftData
 } from "./utils/data";
 import { nftStackData } from "../components/service/blocks/stack/data";
+import { metadata } from "./utils/NftDevMetadata";
 
-export const metadata = {
-  metadataBase: new URL("https://cowchain.io/"),
-  alternates: {
-    canonical: "/services/dapp_development"
-  }
-};
+export { metadata };
+
 
 const NftDevelopment = () => {
   return (

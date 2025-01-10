@@ -14,6 +14,9 @@ import { TustByNumbers } from "../full_stack_development/blocks/TustByNumbers";
 import { CasesHead } from "../full_stack_development/blocks/CasesHead";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
+import { metadata } from "./utils//WhiteLabelDevMetadata";
+
+export { metadata };
 
 const WhiteLabelDev = () => {
   return (

@@ -1,48 +1,9 @@
 "use client";
 
 import arrow from "@/assets/arrow_right.svg";
-
-import MichaelImg from "@/assets/homepage/team/newTeam/michaelImg.png";
-import OlehImg from "@/assets/team/executives/OlehImg2.png";
-import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
-
-import linkedin from "@/assets/homepage/linkedin.svg";
 import { TeamCard } from "../components/team-card";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
-
-const teamData = [
-  {
-    name: "Michael",
-    role: "CEO & Founder",
-    photo: MichaelImg,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "https://www.linkedin.com/in/onchainmichael"
-    }
-  },
-  {
-    name: "Viacheslav",
-    role: "COO",
-    photo: ViacheclavImgpng,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "https://www.linkedin.com/in/slava-ivchenko/"
-    }
-  },
-  {
-    name: "Oleh",
-    role: "Head of Development",
-    photo: OlehImg,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "https://www.linkedin.com/in/oleh-shutiak-%F0%9F%87%BA%F0%9F%87%A6-92786b229"
-    }
-  }
-];
+import { teamData } from "../homeData/data";
 
 export default function Team() {
   return (

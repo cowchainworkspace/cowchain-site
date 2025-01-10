@@ -97,10 +97,3 @@ export const EngagementDevData = [
     icon: HybridIcon
   }
 ];
-
-export const metadata = {
-  metadataBase: new URL("https://cowchain.io/services"),
-  alternates: {
-    canonical: "/dex_development"
-  }
-};

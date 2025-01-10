@@ -10,50 +10,11 @@ import Link from "next/link";
 import Chevron from "@/components/icons/chevron";
 import { ProjectDetail } from "../components/project-detail";
 import { CaseMask } from "./blocks/CaseMask";
-import Dubai from "@/assets/icons/dubai";
 import { CaseGallery } from "./blocks/CaseGallery";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Image from "next/image";
-
-const project_details = [
-  {
-    title: "Tech Stack",
-    content:
-      "React Native, Node.js, Solidity, ethers.js, web3.js, bitcoin.js, Persona KYC, Interac E-transfer, Chat support, email templating"
-  },
-  {
-    title: "project duration",
-    content: "6 months"
-  },
-  {
-    title: "geography",
-    content: (
-      <div className="flex flex-row items-center gap-2">
-        {" "}
-        <Dubai className={"h-3 w-4 "} /> Dubai
-      </div>
-    )
-  }
-];
-
-const team_details = [
-  {
-    title: "development",
-    content: "Vakhtang Chikhladze, Daniil Stoian, Nikita Chernega"
-  },
-  {
-    title: "project management",
-    content: "Viacheslav Ivchenko"
-  },
-  {
-    title: "marketing & Seo",
-    content: "Alexandr Yaremenko"
-  },
-  {
-    title: "ui/ux design",
-    content: "Nadiia Nikiforova"
-  }
-];
+import { projectDetails } from "./moveCaseData/stepCaseData";
+import { teamDetails } from "./moveCaseData/stepCaseData";
 
 // eslint-disable-next-line react/prop-types
 const CaseStudiesStep = () => {
@@ -78,7 +39,7 @@ const CaseStudiesStep = () => {
                   </Link>
                 </div>
                 <div className="border-b-[1px] border-white/50 lg:min-w-[490px]">
-                  {project_details.map((detail, index) => (
+                  {projectDetails.map((detail, index) => (
                     <ProjectDetail key={detail.title + index} {...detail} />
                   ))}
                 </div>
@@ -177,7 +138,7 @@ const CaseStudiesStep = () => {
                   </h1>
                 </div>
                 <div className="border-b-[1px] border-white/50 xl:min-w-[490px]">
-                  {team_details.map((detail, index) => (
+                  {teamDetails.map((detail, index) => (
                     <ProjectDetail key={detail.title + index} {...detail} />
                   ))}
                 </div>

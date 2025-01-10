@@ -17,13 +17,9 @@ import {
   DeFiBenefitsData,
   faqDappData
 } from "./utils/data";
+import { metadata } from "./utils/defiDevMetadata";
 
-export const metadata = {
-  metadataBase: new URL("https://cowchain.io/"),
-  alternates: {
-    canonical: "/services/dapp_development"
-  }
-};
+export { metadata };
 
 const DefiDevelopment = () => {
   return (

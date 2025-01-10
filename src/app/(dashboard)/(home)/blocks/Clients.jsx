@@ -7,23 +7,23 @@ import Link from "next/link";
 import Image from "next/image";
 
 import brc20 from "@/assets/svgComponents/clientsLogo/Brc20";
-import hebrid from "@/assets/svgComponents/clientsLogo/Hebrid";
+import hybrid from "@/assets/svgComponents/clientsLogo/Hybrid";
 import pixel from "@/assets/svgComponents/clientsLogo/Pixel";
 import raiser from "@/assets/svgComponents/clientsLogo/Raiser";
 import retroBridge from "@/assets/svgComponents/clientsLogo/RetroBridge";
 import step from "@/assets/svgComponents/clientsLogo/Step";
 import tenet from "@/assets/svgComponents/clientsLogo/Tenet";
-import gmx from "@/assets/svgComponents/clientsLogo/GMX";
+import gbc from "@/assets/svgComponents/clientsLogo/GBC";
 
 export const logos = [
   { name: "Brc20", logo: brc20 },
-  { name: "Hebrid", logo: hebrid },
+  { name: "Hybrid", logo: hybrid },
   { name: "Pixel", logo: pixel },
   { name: "Raiser", logo: raiser },
   { name: "RetroBridge", logo: retroBridge },
   { name: "Step", logo: step },
   { name: "Tenet", logo: tenet },
-  { name: "GMX", logo: gmx }
+  { name: "GBC", logo: gbc }
 ];
 
 export default function Clients() {

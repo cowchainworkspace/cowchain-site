@@ -9,37 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
-
-const faqData = [
-  {
-    title:
-      "Do you offer ongoing support and maintenance for blockchain projects?",
-    content:
-      "Cowchain always stays in touch with its customers and offers its support on all the services provided. You don't have to worry about breakdowns in communication or unanswered emails from us."
-  },
-  {
-    title:
-      "Which blockchain platforms and technologies are you experienced with?",
-    content: `Our team is skilled in all the things you need. This is the core principle of Cowchain. Any technology that appears on the market and is just gaining popularity will be analyzed in detail by us immediately.`
-  },
-  {
-    title:
-      "Is it possible to tailor blockchain development to specific industry needs?",
-    content: `In the hands of a professional team, anything can be adapted. The travel business, the arts, the car world and even medicine.
-It's easy, you just need to be in contact with our sales team to let them tell you how your project can dive into the world of web3.`
-  },
-  {
-    title: "What are the benefits of using Web3 applications for my business?",
-    content:
-      "As is usual in any web3 project, security should be at the top of the list. Depending on the specifics of your project, our team can not only set the highest level of security but also maintain it."
-  },
-  {
-    title:
-      "How can a Web3 development agency help my business implement blockchain technology effectively?",
-    content: `You can get full immersion assistance from Cowchain regardless of the stage of your project. 
-Our team will be your guide and you can easily immerse yourself in all the processes.`
-  }
-];
+import { faqHomeData } from '../homeData/data'
 
 export default function FAQ() {
   const [screenWidth, setScreenWidth] = useState();
@@ -58,7 +28,7 @@ export default function FAQ() {
         </div>
         <div className="md:col-span-3">
           <Accordion allowToggle>
-            {faqData.map((faq, index) => (
+            {faqHomeData.map((faq, index) => (
               <AccordionItem key={index} className="border-b border-th-fade">
                 {({ isExpanded }) => (
                   <div

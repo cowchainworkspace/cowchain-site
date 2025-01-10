@@ -1,44 +1,6 @@
 "use client";
 import { useState } from "react";
-
-const blocksData = [
-  {
-    id: 1,
-    title: "Enhanced Security and Transparency",
-    description:
-      "Cowchain develops solutions that address the unique challenges of each business. Our approach ensures the core features of your enterprise are optimized, allowing you to realize the benefits of Web3 development"
-  },
-  {
-    id: 2,
-    title: "Tailored Solutions for Every Need",
-    description:
-      "Cowchain develops solutions that address the unique challenges  of each business. Our approach ensures the core features  of your enterprise are optimized, allowing you to realize  the benefits of Web3 development"
-  },
-  {
-    id: 3,
-    title: "Full Data Ownership",
-    description:
-      "Decentralized technologies place control firmly in your hands. Ownership of data is no longer relegated to central authorities,  allowing businesses to take full command of their sensitive  information without compromise"
-  },
-  {
-    id: 4,
-    title: "Streamlining Operations",
-    description:
-      "Smart contracts automate routine tasks, minimizing operational friction and speeding up processes. Cowchain’s solutions keep businesses agile by integrating automation and eliminating the inefficiencies of manual processes"
-  },
-  {
-    id: 5,
-    title: "Expanding Revenue Models",
-    description:
-      "Utilizing decentralized finance (DeFi) and digital assets opens up new business models. With tools like smart contracts and NFT platforms, companies are unlocking innovative ways to generate revenue"
-  },
-  {
-    id: 6,
-    title: "Thoughtful Pricing",
-    description:
-      "Our pricing structure aligns with your objectives, offering flexibility without sacrificing quality. It ensures that your investment in blockchain technology is both reasonable and results-driven"
-  }
-];
+import { blocksData } from '../homeData/data'
 
 export default function ExpandingBlocks() {
   const [activeBlock, setActiveBlock] = useState(blocksData[0].id);

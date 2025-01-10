@@ -19,13 +19,9 @@ import { DevProcessData } from "./utils/data";
 import { chooseUsData } from "./utils/data";
 import { otherServiceData } from "./utils/data";
 import { faqData } from "./utils/data";
+import { metadata } from "./utils/FSDevMetadata";
 
-export const metadata = {
-  metadataBase: new URL("https://cowchain.io/services"),
-  alternates: {
-    canonical: "/dex_development"
-  }
-};
+export { metadata };
 
 const FullStackDevelopment = () => {
   return (

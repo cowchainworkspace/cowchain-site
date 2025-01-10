@@ -25,22 +25,6 @@ const Header = () => {
           />
           <HeaderContent />
         </div>
-        {/* <ModalVideo
-          channel="youtube"
-          youtube={{
-            mute: 0,
-            autoplay: 1,
-            controls: 0,
-            showinfo: 0,
-            disablekb: 1
-          }}
-          autoplay
-          start
-          isOpen={isOpen}
-          videoId="0L38Z9hIi5s"
-          ratio={screenWidth > 768 ? "16:9" : "1:1"}
-          onClose={() => setOpen(false)}
-        /> */}
       </div>
     </section>
   );

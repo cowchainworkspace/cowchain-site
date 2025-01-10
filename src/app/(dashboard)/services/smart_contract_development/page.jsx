@@ -19,13 +19,9 @@ import {
   SnartContractExpertiseData
 } from "./utils/data";
 import Image from "next/image";
+import { metadata } from './utils/smartContractDevMetadata';
 
-export const metadata = {
-  metadataBase: new URL("https://cowchain.io/"),
-  alternates: {
-    canonical: "/services/dapp_development"
-  }
-};
+export { metadata };
 
 const SmartContractDevelopment = () => {
   return (

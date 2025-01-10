@@ -37,13 +37,6 @@ export const IndustriesMobile = () => {
             transparency in public procurement and maintain immutable registers
             of property, companies, and licenses.
           </span>
-          {/* <Link
-            className="flex gap-2 text-base  uppercase underline"
-            href={"/"}
-          >
-            see case study
-            <img className="h-6 w-6" src={arrow.src} alt="" />
-          </Link> */}
         </div>
       </div>
     </section>

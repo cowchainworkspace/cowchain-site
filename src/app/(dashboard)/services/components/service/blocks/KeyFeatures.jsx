@@ -46,7 +46,6 @@ export function KeyFeatures({
           <h2 className="lg:order-0 text-[60px] uppercase text-white  md:text-[60px]">
             {title}
           </h2>
-          {/* <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row lg:order-3 lg:ml-auto"></div> */}
           <p className="body my-[40px] max-w-[824px] text-base leading-6 md:my-[20px]">
             {desc}
           </p>

@@ -9,48 +9,7 @@ import {
   AccordionButton,
   AccordionPanel
 } from "@chakra-ui/react";
-
-const benefitsData = [
-  {
-    title: "Transforming raw concepts into results-driven code",
-    text: "If you have a concept or product you'd like to integrate with web3 or enhance with Web3 technology, we will build a web3 integration strategy that delivers tangible outcomes. Thus, by including experienced developers, your idea becomes a marketable product smoothly and gainfully.",
-    transformStyle: "",
-    initialStyle: "border-0"
-  },
-  {
-    title: "Extensive Project Accelerator Services",
-    text: "In our cutting-edge accelerator, we have many services for every project. Whatever a company that needs help with funding, development, packaging, and go-to-market strategy believes in, we're ready to boost it. With an extensive list of partners, service provider support, and KOLs, your project will get the best resources and web3 recognition.",
-    transformStyle:
-      "max-h-max -translate-y-[40%] xl:-translate-y-[40%] 2xl:-translate-y-[45%] duration-1000",
-    initialStyle:
-      "max-h-max translate-y-[60%] xl:translate-y-[30%] 2xl:translate-y-[45%] duration-1000"
-  },
-  {
-    title: "White-label solutions for business optimization",
-    text: "Custom white-label products will be less time-consuming and cost-efficient. These ready-made solutions, created by crypto industry professionals, can be configured according to your business's requirements. Obtain actual code for your application or startup venture, so you do not have to wait for costly development cycles.",
-    transformStyle:
-      "max-h-max -translate-y-[80%] xl:-translate-y-[80%] 2xl:-translate-y-[85%]   duration-1000",
-    initialStyle:
-      "max-h-max translate-y-[25%] 2xl:translate-y-[10%] duration-1000"
-  },
-  {
-    title: "Trend actions in web3 marketing and business development",
-    text: "Using all the secrets of web3 marketing and our deep understanding of business development strategy, your project will be able to grow and gain a huge community. Our vast network of partners, service providers, KOLs, and VCs allows us to tackle any challenge, ensuring your project achieves outstanding success and prominence in the web3 universe.",
-    transformStyle:
-      "max-h-max -translate-y-[120%] xl:-translate-y-[120%] 2xl:-translate-y-[130%] duration-1000",
-    initialStyle:
-      "max-h-max -translate-y-[15%] xl:-translate-y-[35%] 2xl:-translate-y-[30%] duration-1000"
-  },
-  {
-    title: "Early-Stage Venture Capital (Low Cap)",
-    text: "We don't just offer early-stage venture capital services to web3 startups. We also identify and help you realize your potential by providing crucial funding, strategic guidance, and mentorship. Our approach ensures that we comprehend the distinct needs and priorities of each project, thus aiding you in achieving success in the competitive web3 landscape.",
-    transformStyle:
-      "max-h-max -translate-y-[160%] xl:-translate-y-[160%] 2xl:-translate-y-[170%] duration-1000",
-    initialStyle:
-      "max-h-max -translate-y-[55%] xl:-translate-y-[65%] 2xl:-translate-y-[65%]  duration-1000",
-    isLast: true
-  }
-];
+import { benefitsData } from "../homeData/data";
 
 export default function Benefits() {
   const sectionRef = useRef(null);

@@ -7,24 +7,13 @@ import Tag from "@/components/ui/tag";
 import linkedin from "@/assets/footer/linkedin.svg";
 import telegram from "@/assets/footer/telegram.svg";
 import mail from "@/assets/footer/mail.svg";
-import team1 from "@/assets/team/team-carousel-2/team1.png";
-import team2 from "@/assets/team/team-carousel-2/team2.png";
-import team3 from "@/assets/team/team-carousel-2/team3.png";
 import Image from "next/image";
 import michaelMicImg from "@/assets/team/executives/michaelMicImg.png";
 import quote from "@/assets/team/executives/quote.svg";
 import quoteBg from "@/assets/team/executives/quoteBg.svg";
+import { metaData } from './serviceTeamData/teamMetaData';
 
-const photos = [team1, team2, team3];
-
-export const metadata = {
-  title: "Our Team | Cowchain",
-  description: "Meet the blockchain trend-setters behind Cowchain. Find our group of master engineers and specialists committed to conveying cutting-edge arrangements for your trade challenges.",
-  metadataBase: new URL("https://cowchain.io/"),
-  alternates: {
-    canonical: "/team"
-  }
-};
+export { metaData };
 
 const Team = () => {
   return (

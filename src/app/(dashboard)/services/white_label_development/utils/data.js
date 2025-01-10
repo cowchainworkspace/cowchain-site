@@ -234,10 +234,3 @@ export const TustByNumbersData = [
     sighn: "+ TEAM"
   }
 ];
-
-export const metadata = {
-  metadataBase: new URL("https://cowchain.io/services"),
-  alternates: {
-    canonical: "/dex_development"
-  }
-};

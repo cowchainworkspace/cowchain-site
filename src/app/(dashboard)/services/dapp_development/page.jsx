@@ -18,13 +18,9 @@ import {
   otherDappServiceData
 } from "./utils/data";
 import { DappExpertiseData } from "./utils/data";
+import { metadata } from "./utils/dappDeveMetadata";
 
-export const metadata = {
-  metadataBase: new URL("https://cowchain.io/"),
-  alternates: {
-    canonical: "/services/dapp_development"
-  }
-};
+export { metadata };
 
 const DappDevelopment = () => {
   console.log("dappBenefitsData", dappBenefitsData);
