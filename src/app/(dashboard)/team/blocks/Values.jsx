@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { Scrollama, Step } from "react-scrollama";
-import { motion, useScroll } from "framer-motion";
-import Tag from "@/components/ui/tag";
+import { useScroll } from "framer-motion";
 import bg from "@/assets/bg/values.png";
 import { cn } from "@/lib/utils";
 import TeamInfo from "../blocks/team-info";
@@ -14,31 +12,7 @@ import {
   AccordionButton,
   AccordionPanel
 } from "@chakra-ui/react";
-
-const benefitsData = [
-  {
-    title: "01 / Passion",
-    text: "The Cowchain team is united by our burning desire to lead the transformation of how people interact with the world. And we have the experience & skills to fulfill it. How? Through successfully deployed products shaped by the vision of startups, enterprises, and Web3 pioneers who choose to work with us. ",
-    transformStyle: "",
-    initialStyle: "border-0 "
-  },
-  {
-    title: "02 / Individual Approach",
-    text: "Cowchcain offers no “one-size-fits-alls.” We immerse ourselves in our clients' businesses, speaking their language and working as an in-house product team to develop effective solutions with users in mind. Your goals become our goals, and your challenges fuel our creativity.",
-    transformStyle:
-      "max-h-max -translate-y-[5%] xl:-translate-y-[5%] duration-1000",
-    initialStyle:
-      "max-h-max translate-y-[80%] xl:translate-y-[115%]  duration-1000"
-  },
-  {
-    title: "03 / We are the devs of Web3",
-    text: "In our worldview, there’s a huge difference between being Web3 developers and developers of Web3. Web3 devs know how to implement blockchain technologies. Devs of Web3 code meaningful products that add value to the community and push the industry forward. We are the devs of Web3.",
-    transformStyle:
-      "max-h-max -translate-y-[10%] xl:-translate-y-[10%]  duration-1000",
-    initialStyle:
-      "max-h-max translate-y-[25%] xl:translate-y-[60%] duration-1000"
-  }
-];
+import { benefitsData } from "../serviceTeamData/data";
 
 export const Values = () => {
   const [currentStepIndex, setCurrentStepIndex] = useState(null);

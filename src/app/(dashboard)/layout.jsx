@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { Loading } from "@/components/loader/Loading";
 import dynamic from "next/dynamic";
@@ -13,7 +13,7 @@ const Footer = dynamic(() => import("@/components/Footer"), {
   loading: () => <Loading />
 });
 
-export default async function DashboardLayout({ children }) {
+export default function DashboardLayout({ children }) {
   const pathname = usePathname();
   return (
     <section>
@@ -22,7 +22,6 @@ export default async function DashboardLayout({ children }) {
           <Navbar />
           <LoaderWrapper>{children}</LoaderWrapper>
           <Footer footerForm={pathname !== "/blog" ? false : true} />
-          
         </div>
       </>
     </section>

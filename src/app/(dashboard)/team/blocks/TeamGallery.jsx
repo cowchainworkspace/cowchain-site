@@ -1,134 +1,7 @@
 import React from "react";
-import Michael from "@/assets/homepage/team/newTeam/michaelImg.png";
-import Viacheslav from "@/assets/homepage/team/newTeam/viacheslavImg.png";
-import Oleh from "@/assets/homepage/team/newTeam/olehImg.png";
-import Vlad from "@/assets/homepage/team/newTeam/vladImg.png";
-import Alexandra from "@/assets/homepage/team/newTeam/alexandraImg.png";
-import Alex from "@/assets/homepage/team/newTeam/alexImg.png";
-import Hanna from "@/assets/homepage/team/newTeam/hannaImg.png";
-import Ruslan from "@/assets/homepage/team/newTeam/ruslanImg.png";
-import Olexandr from "@/assets/homepage/team/newTeam/olexandrIng.png";
-import newEmploye from "@/assets/homepage/team/newTeam/addEmployesImg.png";
 import olehMobImg from "@/assets/homepage/team/newTeam/olehMobImg.png";
-import linkedin from "@/assets/homepage/linkedin.svg";
 import { cn } from "@/lib/utils";
-
-const teamData = [
-  {
-    name: "Michael",
-    role: "Founder & CEO",
-    photo: Michael,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "https://www.linkedin.com/in/onchainmichael"
-    },
-    check: false
-  },
-  {
-    name: "Viacheslav",
-    role: "COO",
-    photo: Viacheslav,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "https://www.linkedin.com/in/slava-ivchenko/"
-    },
-    check: ""
-  },
-  {
-    name: "Oleh",
-    role: "Head of Development",
-    photo: Oleh,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "https://www.linkedin.com/in/oleh-shutiak-%F0%9F%87%BA%F0%9F%87%A6-92786b229"
-    },
-    check: "oleh"
-  },
-
-  {
-    name: "Vlad",
-    role: "Head of Sales",
-    photo: Vlad,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: ""
-    },
-    check: ""
-  },
-
-  {
-    name: "Alexandra",
-    role: "Head of Marketing",
-    photo: Alexandra,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "https://www.linkedin.com/in/bohdan-solomakha-750a14240/"
-    },
-    check: ""
-  },
-
-  {
-    name: "Alex",
-    role: "Head of Lead Generation",
-    photo: Alex,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "'"
-    },
-    check: ""
-  },
-  {
-    name: "Hanna",
-    role: "Business Development Lead",
-    photo: Hanna,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: ""
-    },
-    check: ""
-  },
-
-  {
-    name: "Ruslan",
-    role: "Business Development Representative",
-    photo: Ruslan,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: "https://www.linkedin.com/in/ruslan-siniaiev-600340240/"
-    },
-    check: ""
-  },
-  {
-    name: "Olexandr",
-    role: "Business Development Representative",
-    photo: Olexandr,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: ""
-    },
-    check: ""
-  },
-  {
-    name: "+Many more",
-    role: "Business Development Representative",
-    photo: newEmploye,
-    social: {
-      network: "LinkedIn",
-      icon: linkedin,
-      url: ""
-    },
-    check: "new"
-  }
-];
+import { teamGalleryData } from "../serviceTeamData/data";
 
 const TeamCard = ({ name, role, photo, social, check }) => {
   return (
@@ -191,7 +64,7 @@ const TeamGallery = () => {
     >
       <h3 className="mb-[36px] md:mb-20 uppercase">Meet the team</h3>
       <div className="grid grid-cols-2 gap-x-2 gap-y-6 md:grid-cols-3 lg:col-span-3 xl:gap-x-5 xl:gap-y-20">
-        {teamData.map((member, index) => (
+        {teamGalleryData.map((member, index) => (
           <TeamCard key={index} {...member} check={member.check} />
         ))}
       </div>

@@ -6,39 +6,39 @@ import michaelAvatar from "@/assets/icons/homepage/michaelAvatarImg.png";
 export default function HeaderContent() {
   return (
     <>
-      <h1 className="relative mt-8 z-[21] hidden cursor-default uppercase  md:ml-[55px] md:mt-[103px] md:block lg:mt-24">
-        Accelerate your <br /> Web3 odyssey <br /> with cowchain
+      <h1 className="relative z-[21] mt-8 hidden cursor-default uppercase  md:ml-[55px] md:mt-[103px] md:block lg:mt-24">
+        LET’s make Web3 tech <br />
+        work for you
       </h1>
-      <h1 className="relative mt-8 z-[21] block cursor-default text-[38px]  font-medium uppercase leading-[44px] md:mt-16 md:hidden lg:mt-24">
-        Accelerate <br /> your Web3 <br /> odyssey <br /> with cowchain
+      <h1 className="relative z-[21] mt-8 block cursor-default text-[38px]  font-medium uppercase leading-[44px] md:mt-16 md:hidden lg:mt-24">
+        LET’s make Web3 tech <br />
+        work for you
       </h1>
 
       <div className="mt-auto grid grid-cols-1 md:grid-cols-2">
         <div className="relative flex items-center md:gap-x-1">
-
           <h2 className="hidden text-[32px] leading-[29px] md:block">
-            Driving Crypto Evolution: <br /> From Vision to Reality, <br />{" "}
-            Every Step.
+            BEING FULLY IMMERSED IN WEB3, <br />
+            WE'RE NOT JUST DEVS — WE'RE <br />
+            PRODUCT VISIONARIES WORKING <br />
+            AS AN IN-HOUSE TEAM WITH <br />
+            YOU TO GROW YOUR <br />
           </h2>
         </div>
         <div className="flex cursor-default flex-col gap-y-4 md:items-end">
           <div className="">
-
-          <h2 className="block md:hidden mb-[24px] text-left md:text-right md:mb-0 md:text-[24px]">
-              Crypto Services and Technologies
-            </h2>
-
-            <div className="flex gap-[24px] justify-left md:items-center md:justify-end">
-              
-
+            <div className="justify-left flex gap-[24px] md:items-center md:justify-end">
               <div className="flex gap-[12px]">
-                  <Image
-                    alt="linkedin"
-                    className="h-[42px] w-[42px]"
-                    src={michaelAvatar}
-                  ></Image>
+                <Image
+                  alt="linkedin"
+                  className="h-[42px] w-[42px]"
+                  src={michaelAvatar}
+                ></Image>
 
-                <a className="" href="https://www.linkedin.com/in/onchainmichael">
+                <a
+                  className=""
+                  href="https://www.linkedin.com/in/onchainmichael"
+                >
                   <Image
                     alt="linkedin"
                     className="h-[42px] w-[42px]"
@@ -51,15 +51,9 @@ export default function HeaderContent() {
                 <p className="body1 mb-[6px] text-base  leading-[18px] md:mb-0">
                   Mykhailo Adzhoiev
                 </p>
-                <p className="text-sm text-secondary md:mb-0">
-                  Founder & CEO
-                </p>
+                <p className="text-sm text-secondary md:mb-0">Founder & CEO</p>
               </div>
             </div>
-
-            <h2 className="hidden md:block mt-[24px] text-left md:text-right md:mb-0 md:text-[24px]">
-              Crypto Services and Technologies
-            </h2>
           </div>
         </div>
       </div>

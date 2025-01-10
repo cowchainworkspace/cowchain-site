@@ -18,6 +18,7 @@ import { cn } from "@/lib/utils";
 import upwork from "@/assets/homepage/upwork.svg";
 import clutch from "@/assets/homepage/clutch.svg";
 import { alignPropType } from "react-bootstrap/esm/types";
+import { SocialLinks } from "./SocialLinks";
 
 const faqRows = {
   title: "",
@@ -141,100 +142,7 @@ export default function Footer({footerForm}) {
         })}
       >
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="md-border-r flex flex-col gap-y-8 border-b border-b-th-fade px-[20px] py-[40px] text-center md:py-[65px] md:pl-[88px] md:pr-[79px]">
-            <div className="max-w-[320px]">
-              <p className="text-left text-[#bbb] ">
-                © 2024 Сowchain сo. All rights reserved. <br />
-                For business inquiries{" "}
-                <a
-                  className="ml-1 inline text-left md:text-white md:underline"
-                  href="mailto:sales@cowchain.io"
-                >
-                  sales@cowchain.io
-                </a>
-              </p>
-            </div>
-            {footerForm && <FooterForm />}
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-2 md:mx-0 md:justify-start">
-              <a
-                href="https://www.linkedin.com/company/cowchain/"
-                rel="nofollow noreferrer"
-                target="_blank"
-              >
-                <Image
-                  alt="linkedin"
-                  className="w-12 min-w-[52px] lg:w-16"
-                  src={linkedin}
-                ></Image>
-              </a>
-              <a
-                href="https://t.me/cowchain_team"
-                rel="nofollow noreferrer"
-                target="_blank"
-              >
-                <Image
-                  alt="telegram"
-                  className="w-12 min-w-[52px] lg:w-16"
-                  src={telegram}
-                ></Image>
-              </a>
-              <a
-                href="https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw"
-                rel="nofollow noreferrer"
-                target="_blank"
-              >
-                <Image
-                  alt="twitter"
-                  className="w-12 min-w-[52px] lg:w-16"
-                  src={twitter}
-                ></Image>
-              </a>
-              <a
-                href="https://cowchain.medium.com/"
-                rel="nofollow noreferrer"
-                target="_blank"
-              >
-                <Image
-                  alt="medium"
-                  className="w-12 min-w-[52px] lg:w-16"
-                  src={medium}
-                ></Image>
-              </a>
-              <a
-                href="mailto:sales@cowchain.io"
-                rel="nofollow noreferrer"
-                target="_blank"
-              >
-                <Image
-                  alt="mail"
-                  className="w-12 min-w-[52px] lg:w-16"
-                  src={mail}
-                ></Image>
-              </a>
-              <a
-                href="https://www.upwork.com/ag/cowchain/"
-                rel="nofollow noreferrer"
-                target="_blank"
-              >
-                <Image
-                  className="w-12 min-w-[52px] lg:w-16"
-                  src={upwork}
-                  alt=""
-                ></Image>
-              </a>
-              <a
-                href="https://clutch.co/profile/cowchain"
-                rel="nofollow noreferrer"
-                target="_blank"
-              >
-                <Image
-                  className="w-12 min-w-[52px] lg:w-16"
-                  src={clutch}
-                  alt=""
-                ></Image>
-              </a>
-            </div>
-          </div>
+          <SocialLinks footerForm={footerForm} />
 
           <div className="px-default border-b border-b-th-fade py-[60px] lg:hidden">
             <Faq data={faqRows} styles={faqStyles} config={faqConfig} />
