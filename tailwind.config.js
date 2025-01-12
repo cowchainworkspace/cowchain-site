@@ -20,6 +20,7 @@ export default {
         'customSmall': '340px',
         '3xl': '1800px',
         '4xl': '2000px',
+        'custom1200': '1200px',
         '1custom': '1400px',
         '2custom': '950px',
         'custom-1700': '1660px',
