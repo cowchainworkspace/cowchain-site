@@ -16,7 +16,7 @@ export default function ExpandingBlocks() {
       >
         <div className="px-default relative flex flex-col justify-between gap-[107px] pt-[90px] pb-[61px]">
           <div className="  lg:gap-16">
-            <h2 className="lg:order-0 text-[60px] uppercase text-white  md:text-[60px]">
+            <h2 className="lg:order-0 text-[36px] sm:text-[60px] uppercase text-white  ">
               Advantages of Web3 Development
             </h2>
             <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto"></div>

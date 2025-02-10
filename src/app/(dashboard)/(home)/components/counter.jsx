@@ -17,7 +17,7 @@ export const Counter = ({ target, duration, decimals }) => {
         decimals={decimals}
       >
         {({ countUpRef }) => (
-          <span className="num_lg  text-white" ref={countUpRef} />
+          <span className="font-roc text-[18px] md:text-4xl font-medium leading-[18px] md:leading-tight text-white" ref={countUpRef} />
         )}
       </CountUp>
     </div>

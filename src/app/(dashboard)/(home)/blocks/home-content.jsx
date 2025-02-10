@@ -43,7 +43,13 @@ export default function HomeContent() {
           "At Cowchain, we are a Web3 development company with a proven track record in creating decentralized applications, smart contracts, and blockchain solutions. Our focus is on unlocking new revenue streams for businesses through secure and transparent blockchain integration. Leveraging a wealth of expertise in emerging technologies, the team delivers custom solutions that ensure transparency, security, and a streamlined flow of operations"
         }
       />
-      <TustByNumbers home data={TustByNumbersData} />
+      <TustByNumbers
+        home
+        data={TustByNumbersData}
+        desc={
+          "At Cowchain, we are a Web3 development company with a proven track record in creating decentralized applications, smart contracts, and blockchain solutions. Our focus is on unlocking new revenue streams for businesses through secure and transparent blockchain integration. Leveraging a wealth of expertise in emerging technologies, the team delivers custom solutions that ensure transparency, security, and a streamlined flow of operations"
+        }
+      />
       <Clients />
       <Industries
         isTwoSides={true}

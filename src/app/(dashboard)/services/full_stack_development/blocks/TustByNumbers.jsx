@@ -29,39 +29,57 @@ const TustByNumbersData = [
   }
 ];
 
-export function TustByNumbers({ data = TustByNumbersData, home, title = "Trust by Numbers" }) {
+export function TustByNumbers({
+  data = TustByNumbersData,
+  home,
+  title = "Trust by Numbers",
+  desc
+}) {
   return (
-    <section className={`relative ${home && "h-[700px]"}`}>
+    <section className={`relative ${home && "h-fit md:h-[700px]"}`}>
       {!home && (
         <Image
           alt=""
-          className="absolute -bottom-[38%] left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min  lg:-bottom-[80%]"
+          className="absolute -bottom-[38%] left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min lg:-bottom-[80%]"
           src={FSTrustBuyNumbBg}
         />
       )}
 
-      <div className={`relative h-full`}>
-        <div className="grid h-full grid-cols-1 lg:grid-cols-3 ">
+      <div className={`relative h-fit md:h-full`}>
+        <div className="grid h-full grid-cols-1 lg:grid-cols-3">
           <div
-            className={`flex h-full flex-col  ${home ? "h-[700px]" : "justify-center"} gap-[37px] border-r border-r-th-fade pb-[110px] pl-[88px] pr-[168px] pt-[170px]`}
+            className={`flex h-full flex-col  ${home ? "h-fit md:h-[700px]" : "justify-center"}
+             gap-[37px] border-r border-r-th-fade
+            px-[20px] pb-[40px] pt-[60px] md:pb-[110px] md:pl-[88px] md:pr-[168px] md:pt-[170px]`}
           >
-            <h2 className=" heading-[42px] text-[60px] uppercase text-white ">
+            <h2 className="heading-[42px] text-[36px] uppercase text-white md:text-[60px] ">
               {title}
             </h2>
             {!home && (
-              <p className="body my-[40px] max-w-lg text-base leading-6 md:my-[20px] lg:order-2 lg:max-w-[306]">
+              <p className="body my-0 max-w-lg text-base leading-6 md:my-[20px] lg:order-2 lg:max-w-[306]">
                 We simplify the development process by offering business tools
                 that optimize workflows. Our dedicated developers utilize the
                 latest technology stack to ensure consistent execution, making
                 Cowchain a trusted partner for full stack software development
               </p>
             )}
+
+            {desc && (
+              <p className="body my-0 max-w-lg text-base leading-6 md:my-[20px] lg:order-2 lg:max-w-[306]">
+                {desc}
+              </p>
+            )}
           </div>
-          <div className="col-span-2 flex grid w-full grid-cols-2  flex-col justify-center customSmall:flex-row  lg:order-3 lg:ml-auto">
+          <div
+            className="col-span-2 flex grid w-full grid-cols-2 
+          flex-col justify-center
+          border-b border-t
+           border-b-th-fade border-t-th-fade customSmall:flex-row  lg:order-3 lg:ml-auto"
+          >
             {data.map(
               ({ number, desc, sighn, title, sufix, decimal }, index) => (
                 <div
-                  className={`flex h-full w-full grid-cols-1 grid-rows-1 flex-col justify-center border-r border-r-th-fade px-[70px] ${index < 2 && "border-b border-b-th-fade"}`}
+                  className={`flex h-full w-full grid-cols-1 grid-rows-1 flex-col justify-center border-r border-r-th-fade px-[26px] py-[22px] md:px-[70px] ${index < 2 && "border-b border-b-th-fade"}`}
                 >
                   <div>
                     {number && (
@@ -69,7 +87,7 @@ export function TustByNumbers({ data = TustByNumbersData, home, title = "Trust b
                         {sufix ? (
                           <>
                             {sighn && (
-                              <span className="num_lg  text-white">
+                              <span className="font-roc text-[18px] font-medium leading-[18px] text-white text-white md:text-4xl md:text-[42px] md:leading-tight  lg:text-5xl">
                                 {sighn}
                               </span>
                             )}
@@ -78,7 +96,9 @@ export function TustByNumbers({ data = TustByNumbersData, home, title = "Trust b
                               decimals={decimal}
                               target={number}
                             />
-                            <span className="num_lg  text-white">{sufix}</span>
+                            <span className="font-roc text-4xl font-medium text-white text-white md:text-[42px] md:leading-tight  lg:text-5xl">
+                              {sufix}
+                            </span>
                           </>
                         ) : (
                           <>
@@ -88,7 +108,7 @@ export function TustByNumbers({ data = TustByNumbersData, home, title = "Trust b
                               target={number}
                             />
                             {sighn && (
-                              <span className="num_lg  text-white">
+                              <span className="font-roc text-[18px] font-medium uppercase leading-tight text-white text-white  md:text-[36px] lg:text-5xl">
                                 {sighn}
                               </span>
                             )}
@@ -97,18 +117,20 @@ export function TustByNumbers({ data = TustByNumbersData, home, title = "Trust b
                       </div>
                     )}
                     {title && (
-                      <span className="num_lg self-start uppercase text-white">
+                      <span className="self-start font-roc text-[18px] font-medium uppercase leading-tight text-white text-white md:text-[42px] lg:text-5xl">
                         {title}
                       </span>
                     )}
                   </div>
-                  <p className="body1 mt-[30px] max-w-[250px]">{desc}</p>
+                  <p className="mt-[12px] max-w-[250px] text-[10px] font-medium text-white md:mt-[30px] md:text-base">
+                    {desc}
+                  </p>
                 </div>
               )
             )}
           </div>
 
-          <Link href="/cases" className="lg:hidden">
+          <Link href="/cases" className="hidden">
             <div className="flex items-center gap-x-2">
               <p className="header uppercase text-white underline">
                 ALL PROJECTS
