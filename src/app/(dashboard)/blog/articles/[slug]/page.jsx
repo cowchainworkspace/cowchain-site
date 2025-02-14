@@ -10,6 +10,7 @@ import { ShareLinks } from "../blocks/ShareLinks";
 import rightArrow from "@/assets/article/rightArrow.svg";
 import { useGetArticleBySlug } from "@/hooks/use-strapi";
 import { Loading } from "@/components/loader/Loading";
+
 const titles = ["first", "second", "third"];
 
 function Article() {
@@ -95,7 +96,7 @@ function Article() {
 
         <div className="mb-28 mt-20 flex  items-start justify-center gap-[71px]">
           <div className="sticky top-0 hidden w-[203px] flex-col items-start transition-all duration-500 xl:flex">
-            {titles.slice(0, textArrayLength).map((title, index) => (
+            {titles.map((title, index) => (
               <button
                 key={index}
                 title={title}
@@ -174,7 +175,7 @@ function Article() {
               <Image
                 width={16}
                 height={16}
-                className="mb-[16px] h-[56px] w-[56px]"
+                className="mb-[16px] h-[56px] w-[56px]  rounded-full"
                 src={data?.attributes.author_avatar.data?.attributes?.url}
                 alt=""
               />
