@@ -1,5 +1,5 @@
-import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
 export const useGetItems = (section) => {
   const query = useQuery({
@@ -55,7 +55,7 @@ export const useGetArticleBySlug = (slug) => {
 
     queryFn: async () => {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?filters[slug][$eq]=${slug}&populate=*`,
+        `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?filters[Slug][$eq]=${slug}&populate=*`,
         {
           headers: {
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
