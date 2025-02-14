@@ -26,7 +26,9 @@ function Article() {
       const firstSection = document.getElementById("first-article");
       const secondSection = document.getElementById("second-article");
       const thirdSection = document.getElementById("third-article");
-
+      if (!firstSection && !secondSection && !thirdSection) {
+        return;
+      }
       const sections = [
         {
           id: "first-article",
