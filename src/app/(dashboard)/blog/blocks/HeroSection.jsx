@@ -1,6 +1,6 @@
-import React from "react";
-import Tag from "@/components/ui/tag";
 import { Category } from "@/components/ui/category";
+import Tag from "@/components/ui/tag";
+import React from "react";
 
 const categories = [
   "development",
@@ -27,7 +27,6 @@ export const HeroSection = ({ tags }) => {
             <Category key={index} title={title} tags={tags} />
           ))}
         </div>
-
       </div>
     </section>
   );

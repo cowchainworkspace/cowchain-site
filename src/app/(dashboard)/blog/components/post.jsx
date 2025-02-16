@@ -22,7 +22,7 @@ export const Post = ({ atributes }) => {
     tag,
     updatedAt
   } = atributes || {};
-  console.log(atributes);
+
   return (
     <Link
       href={`blog/articles/${Slug}`}

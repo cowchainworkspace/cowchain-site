@@ -1,4 +1,13 @@
-export const ViewMoreSection = ({ current, count, showMorePosts }) => {
+import { DotsLoader } from "@/components/loader/DotsLoader";
+import { Loading } from "@/components/loader/Loading";
+import { cn } from "@/lib/utils";
+
+export const ViewMoreSection = ({
+  current,
+  count,
+  showMorePosts,
+  isFetchingNextPage
+}) => {
   return (
     <section
       id="view_more"
@@ -9,13 +18,18 @@ export const ViewMoreSection = ({ current, count, showMorePosts }) => {
           <h3 className="mx-auto text-center text-2xl">
             You are viewing {current} of {count} articles
           </h3>
+
           <button
             type="button"
-            className={`btn-submit uppercase xl:px-12 ${current >= count ? "bg-transparent" : "bg-white"}`}
-            onClick={showMorePosts}
+            className={cn("btn-submit  bg-white uppercase xl:px-12", {
+              "pointer-events-none opacity-50": current >= count
+            })}
+            onClick={() => {
+              showMorePosts();
+            }}
             disabled={current >= count}
           >
-            View More
+            {isFetchingNextPage ? <DotsLoader /> : "View More"}
           </button>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+import { useInfiniteQuery, useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
 export const useGetItems = (section) => {
@@ -48,6 +48,54 @@ export const useGetItem = (section, id) => {
   });
   return query;
 };
+
+export const useGetArticles = (sortParams) => {
+  const { tag } = sortParams;
+
+  return useInfiniteQuery({
+    queryKey: ['articles', tag],
+  
+    queryFn: async ({pageParam = 1}) => {
+      const params = {
+        populate: "*",
+        "pagination[page]": pageParam,
+        "pagination[pageSize]": 8,
+        ...(tag ? { "filters[tag][$eqi]": tag } : {}), 
+      };
+      const res = await axios.get(
+        `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles`,
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+          },
+      params,
+        }
+      );
+      
+      if (!res.data) {
+        throw new Error('Articles not found');
+      }
+      
+      return res.data;
+    },
+
+    onError: (err) => {
+      console.error(err);
+    },
+    getNextPageParam: (data) => {
+
+      const {meta: {
+        pagination
+      }} = data;
+
+       return pagination.page < pagination.pageCount 
+       ? pagination.page + 1 
+       : undefined
+      },
+
+    initialPageParam: 1,
+  });
+}
 
 export const useGetArticleBySlug = (slug) => {
   return useQuery({
