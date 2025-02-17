@@ -43,7 +43,7 @@ export function Industries({
         ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
     >
       <div
-        className={`grid px-[20px]  md:pl-[84px] md:pr-[64px] py-[126px]  max-w-[1440px] mx-auto ${isTwoSides ? "grid-cols-2 gap-x-[134px] gap-y-[77px]" : data.length < 4 ? "grid-cols-3 gap-y-[42px] md:gap-x-[100px]" : fullGrid ? "grid-cols-4 gap-y-[42px] md:gap-x-[100px]" : "grid-cols-2 gap-y-[42px] md:gap-x-[100px]"}`}
+        className={`flex flex-col sm:grid px-[20px]  md:pl-[84px] md:pr-[64px] py-[60px]  sm:py-[126px]  max-w-[1440px] mx-auto ${isTwoSides ? "grid-cols-2 gap-x-[134px] gap-y-[42px] sm:gap-y-[77px]" : data.length < 4 ? "grid-cols-3 gap-y-[42px] md:gap-x-[100px]" : fullGrid ? "grid-cols-4 gap-y-[42px] md:gap-x-[100px]" : "grid-cols-2 gap-y-[42px] md:gap-x-[100px]"}`}
         style={{
           gridTemplateColumns: `${data.length < 4 && !isTwoSides ? "405px 1fr 1fr" : fullGrid ? "" : "405px 1fr"} `
         }}
@@ -63,8 +63,8 @@ export function Industries({
         )}
 
         <div
-          className={`grid  ${isTwoSides ? "col-span-1 grid-cols-2 gap-x-[77px] gap-y-[77px]" 
-            : data.length < 4 ? "col-span-3 mt-[120px] grid-cols-3 gap-x-[109px] gap-y-[42px]" 
+          className={`flex flex-col sm:grid  ${isTwoSides ? "col-span-1 grid-cols-2 gap-y-[42px] gap-x-[77px] sm:gap-y-[77px]" 
+            : data.length < 4 ? "col-span-3 mt-[120px] grid-cols-3 gap-x-[109px] sm:gap-y-[42px]" 
             : fullGrid ? "col-span-4 grid-cols-4 gap-x-[109px] gap-y-[42px]" 
             : "col-span-2 mt-[120px] grid-cols-2 gap-x-[109px] gap-y-[42px]"}`}
         >
@@ -72,7 +72,7 @@ export function Industries({
             <div
               key={index}
               className={`col-span-1 row-span-1 flex  ${expertise.text ? "items-start" : "items-center"}
-                  ${(isTwoSides || fullGrid || data.length < 4) ? "max-w-[307px] flex-col gap-0" : "gap-[49px]"}`}
+                  ${(isTwoSides || fullGrid || data.length < 4) ? "max-w-full sm:max-w-[307px] flex-col gap-0" : "gap-[49px]"}`}
             >
               {expertise.icon && (
                 <div

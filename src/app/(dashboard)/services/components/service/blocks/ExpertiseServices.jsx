@@ -19,11 +19,11 @@ export function ExpertiseServices({
       )}
 
       <div
-        className={`py-heading px-default relative mx-auto max-w-[1440px] ${threeColumns ? "grid grid-cols-3 gap-[85px]" : " flex justify-between"} `}
+        className={`py-heading px-[20px] relative flex flex-col mx-auto max-w-[1440px] ${threeColumns ? "flex flex-col sm:grid grid-cols-3 gap-[85px]" : " flex justify-between"} `}
       >
         <div className="col-span-1 lg:gap-16">
-          <h2 className={`lg:order-0  uppercase text-white
-            ${threeColumns ? "text-[50px]" : "text-[60px]"} `}>
+          <h2 className={`lg:order-0 uppercase text-white
+            ${threeColumns ? "text-[24px] sm:text-[50px]" : "text-[24px] sm:text-[60px]"} `}>
             {title}
           </h2>
           <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto"></div>

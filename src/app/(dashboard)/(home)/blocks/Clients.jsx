@@ -92,9 +92,10 @@ export default function Clients() {
         </div>
 
         <div className="grid mt-[37px] overflow-hidden gap-[35px] w-full grid-cols-4">
+        <div className="grid mt-[37px] gap-[33px] sm:gap-[35px] w-full grid-cols-4">
           {logos.map((brand) => (
-            <div className="h-[116px] flex items-center justify-center w-[300px]">
-              <brand.logo />
+            <div className="h-[40px] w-[60px] sm:h-[116px] flex items-center justify-center sm:w-[300px]">
+              <brand.logo className="w-[60px] sm:w-[140px]" />
             </div>
           ))}
         </div>
