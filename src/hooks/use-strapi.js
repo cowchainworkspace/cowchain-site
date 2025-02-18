@@ -1,5 +1,6 @@
 import { useInfiniteQuery, useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import qs from 'qs';
 
 export const useGetItems = (section) => {
   const query = useQuery({
@@ -24,51 +25,37 @@ export const useGetItems = (section) => {
   return query;
 };
 
-export const useGetItem = (section, id) => {
-  const query = useQuery({
-    queryKey: ['item', id],
-
-    queryFn: async () =>
-      axios
-        .get(
-          `${process.env.NEXT_PUBLIC_STRAPI_URL}${section}/${id}?populate=*`,
-          {
-            headers: {
-              Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
-            },
-          },
-        )
-        .then((res) => res.data)
-        .catch((err) => {
-          if (err.response.status === 404) {
-            throw new Error('User is not exist');
-          }
-          throw err;
-        }),
-  });
-  return query;
-};
-
 export const useGetArticles = (sortParams) => {
-  const { tag } = sortParams;
-
+  const { tag:currentTag } = sortParams;
+ 
   return useInfiniteQuery({
-    queryKey: ['articles', tag],
+    queryKey: ['articles', currentTag],
   
     queryFn: async ({pageParam = 1}) => {
-      const params = {
-        populate: "*",
-        "pagination[page]": pageParam,
-        "pagination[pageSize]": 8,
-        ...(tag ? { "filters[tag][$eqi]": tag } : {}), 
-      };
-      const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles`,
+      const queryParams = qs.stringify({
+        ...(currentTag && {filters: {
+          tag: {
+            $eqi: currentTag
+          }
+        }}),
+        populate: {
+          preview_img: { fields: ["url"] }
+        },
+        fields: ['title', "Slug", "id", "Text_block", "tag"],
+        pagination: { page: pageParam, pageSize: 8 },
+     
+      }, {
+        encodeValuesOnly: true,
+      })
+      const url = new URL('/api/articles', process.env.NEXT_PUBLIC_STRAPI_URL);
+      url.search = queryParams;
+
+      const res = await axios.get(url.href,
+        
         {
           headers: {
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
-          },
-      params,
+          }
         }
       );
       
@@ -102,6 +89,7 @@ export const useGetArticleBySlug = (slug) => {
     queryKey: ['article', slug],
 
     queryFn: async () => {
+      
       const res = await axios.get(
         `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?filters[Slug][$eq]=${slug}&populate=*`,
         {
@@ -123,3 +111,61 @@ export const useGetArticleBySlug = (slug) => {
     },
   });
 };
+
+export const useGetMorePosts = (currentSlug) => {
+
+  return useInfiniteQuery({
+    queryKey: ['posts', currentSlug],
+  
+    queryFn: async ({pageParam = 1}) => {
+      const queryParams = qs.stringify({
+        filters: {
+          Slug: {
+            $ne: currentSlug
+          }
+        },
+        populate: {
+          preview_img: { fields: ["url"] }
+        },
+        fields: ['title', "Slug", "id", "Text_block",],
+        pagination: { page: pageParam, pageSize: 8 },
+     
+      }, {
+        encodeValuesOnly: true,
+      })
+      const url = new URL('/api/articles', process.env.NEXT_PUBLIC_STRAPI_URL);
+      url.search = queryParams;
+
+      const res = await axios.get(url.href,
+        
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+          }
+        }
+      );
+      
+      if (!res.data) {
+        throw new Error('Articles not found');
+      }
+      
+      return res.data;
+    },
+
+    onError: (err) => {
+      console.error(err);
+    },
+    getNextPageParam: (data) => {
+
+      const {meta: {
+        pagination
+      }} = data;
+
+       return pagination.page < pagination.pageCount 
+       ? pagination.page + 1 
+       : undefined
+      },
+
+    initialPageParam: 1,
+  });
+}

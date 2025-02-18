@@ -4,24 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const Post = ({ atributes }) => {
-  const {
-    Banner,
-    Date,
-    Slug,
-    Text_block,
-    title,
-    article_section,
-    author_avatar,
-    author_description,
-    author_title,
-    center_content,
-    center_title,
-    createdAt,
-    preview_img,
-    publishedAt,
-    tag,
-    updatedAt
-  } = atributes || {};
+  const { Slug, Text_block, title, preview_img, tag } = atributes || {};
 
   return (
     <Link

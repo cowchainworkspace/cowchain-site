@@ -38,7 +38,7 @@ export default function Blog() {
   }));
 
   const totalArticles = articles.pages.at(-1).meta.pagination.total;
-
+  console.log(articles);
   return (
     <section>
       <div className="relative overflow-x-hidden bg-black">

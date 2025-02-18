@@ -1,12 +1,24 @@
-import { useRef } from "react";
 import arrow from "@/assets/arrow_right.svg";
-import { blogData } from "@/data/blogData";
-import arrow_btn from "@/assets/homepage/arrow-btn.png";
-import { Post } from "../components/Post";
+import { Loading } from "@/components/loader/Loading";
+import { useGetMorePosts } from "@/hooks/use-strapi";
 import Image from "next/image";
+import { Fragment, useRef } from "react";
+import { Post } from "../components/Post";
+import ArticlesSlider from "./../../components/Slides/ArticlesSlider";
 
-export const Blog = () => {
+export const Blog = ({ slug }) => {
   const wrapper = useRef(null);
+
+  const {
+    data: articles,
+    isLoading,
+    fetchNextPage,
+    isFetchingNextPage
+  } = useGetMorePosts(slug);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   const scroll = (scrollOffset, element) => {
     element.scrollLeft += scrollOffset;
@@ -14,10 +26,8 @@ export const Blog = () => {
 
   return (
     <section id="blog" className="relative">
-
-
-      <div className="grid grid-cols-1 md:grid-cols-5">
-        <div className="py-heading px-default md-border-r flex flex-col gap-y-6 border-t border-t-th-fade border-b border-b-th-fade md:col-span-2">
+      <div className="grid w-full md:grid-cols-2">
+        <div className="py-heading px-default md-border-r flex flex-col gap-y-6 border-b border-t border-b-th-fade border-t-th-fade ">
           <h3 className="text-center md:text-left lg:max-w-[320px]">
             STAY UP TO DATE
           </h3>
@@ -26,21 +36,16 @@ export const Blog = () => {
               <p className="header uppercase text-white underline">
                 ALL ARTICLES
               </p>
-              <Image className="w-6" src={arrow} alt=""></Image>
+              <Image className="w-6" src={arrow} alt="" />
             </div>
           </a>
         </div>
-        <div
-          ref={wrapper}
-          className="blog_wrapper flex items-stretch overflow-x-scroll border-t border-t-th-fade border-b border-b-th-fade md:col-span-3"
-        >
-          {blogData &&
-            blogData.map((postData, index) => (
-              <Post key={index} {...postData} />
-            ))}
-        </div>
+        <ArticlesSlider
+          articles={articles}
+          fetchNextPage={fetchNextPage}
+          isFetchingNextPage={isFetchingNextPage}
+        />
       </div>
-      
     </section>
   );
 };

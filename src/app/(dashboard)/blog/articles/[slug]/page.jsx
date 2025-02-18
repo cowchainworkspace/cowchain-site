@@ -1,15 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { HeroSection } from "../blocks/HeroSection";
-import { useParams } from "next/navigation";
-import FooterForm from "@/components/utils/FooterForm";
-import { Blog } from "../blocks/Blog";
-import Image from "next/image";
-import { ShareLinks } from "../blocks/ShareLinks";
 import rightArrow from "@/assets/article/rightArrow.svg";
-import { useGetArticleBySlug } from "@/hooks/use-strapi";
 import { Loading } from "@/components/loader/Loading";
+import FooterForm from "@/components/utils/FooterForm";
+import { useGetArticleBySlug } from "@/hooks/use-strapi";
+import Image from "next/image";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import { Blog } from "../blocks/Blog";
+import { HeroSection } from "../blocks/HeroSection";
+import { ShareLinks } from "../blocks/ShareLinks";
 
 const titles = ["first", "second", "third"];
 
@@ -222,7 +222,7 @@ function Article() {
           </div>
         </div>
 
-        <Blog />
+        <Blog slug={slug} />
       </div>
     </section>
   );
