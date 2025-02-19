@@ -53,24 +53,45 @@ export default function HomeContent() {
       <Clients />
       <Industries
         isTwoSides={true}
-        title={"Our Services"}
+        title={
+          <>
+            Our <br className="block sm:hidden" /> Services
+          </>
+        }
         desc={
           "We offer a full range of services to take your project from an idea to a working solution"
         }
         data={ourServices}
       />
-      <FAQ
-        noBg={true}
-        title={
-          <>
-            Our Web3 <br /> development <br /> services
-          </>
-        }
-        data={web3DevData}
-      />
+      <div className="block md:hidden">
+        <FAQ
+          noBg={true}
+          title={
+            <>
+              Our Web3 <br /> development <br /> services
+            </>
+          }
+          data={web3DevData}
+          desc="As a leading Web3 development company, Cowchain delivers Web3 development services that empower businesses to fully utilize decentralized technologies. 
+Each solution is crafted with precision, 
+and aimed at solving real-world challenges"
+        />
+      </div>
+      <div className="hidden md:block">
+        <FAQ
+          noBg={true}
+          title={
+            <>
+              Our Web3 <br /> development <br /> services
+            </>
+          }
+          data={web3DevData}
+        />
+      </div>
       <ServiceStack home />
       <Advantages />
       <ExpertiseServices
+        tag="web3 development process"
         data={FSExpertiseData}
         title={
           <>
@@ -118,6 +139,7 @@ export default function HomeContent() {
           </>
         }
         data={useCases}
+        tag="web3 development use cases"
       />
       <Cases />
       <CasesMobile />
@@ -135,11 +157,12 @@ export default function HomeContent() {
           </>
         }
         data={engagementModels}
+        tag="engagement models"
       />
       <Industries
         title={
           <>
-            Why <br />
+            Why <br className="hidden md:block" />
             Clients
             <br />
             Choose <br />
@@ -152,6 +175,7 @@ export default function HomeContent() {
         data={WhyClientChooseData}
       />
       <OtherServices
+        noItemsBorders={true}
         title={
           <>
             Cowchain{" "}
@@ -166,9 +190,10 @@ export default function HomeContent() {
           </>
         }
         data={otherServiceData}
+        tag="additional services"
       />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
-      <FAQ />
+      <FAQ faq={true} />
     </>
   );
 }

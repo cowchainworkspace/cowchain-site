@@ -1,7 +1,7 @@
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
-export const Counter = ({ target, duration, decimals }) => {
+export const Counter = ({ target, duration, decimals, className }) => {
   const [ref, inView] = useInView({
     threshold: 0.3,
     triggerOnce: true
@@ -17,7 +17,11 @@ export const Counter = ({ target, duration, decimals }) => {
         decimals={decimals}
       >
         {({ countUpRef }) => (
-          <span className="font-roc text-[18px] md:text-4xl font-medium leading-[18px] md:leading-tight text-white" ref={countUpRef} />
+          <span
+            className={`block max-h-[18px] md:max-h-none overflow-hidden font-roc text-[18px] font-medium 
+            leading-[18px] text-white md:text-4xl md:leading-tight ${className}`}
+            ref={countUpRef}
+          />
         )}
       </CountUp>
     </div>

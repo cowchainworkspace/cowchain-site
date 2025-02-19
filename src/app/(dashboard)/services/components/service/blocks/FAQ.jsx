@@ -36,7 +36,9 @@ export default function FAQ({
   title = "FREQUENTLY ASKED QUESTIONS",
   data = faqData,
   noBg,
-  desc
+  desc,
+  tag,
+  faq = false
 }) {
   const [screenWidth, setScreenWidth] = useState();
 
@@ -63,12 +65,12 @@ export default function FAQ({
       )}
 
       <div className="relative grid grid-cols-1 md:grid-cols-5">
-        <div className="md:py-heading px-default md-border-r flex flex-col justify-start border-b border-b-th-fade py-[60px] text-left md:col-span-2">
-          <h2 className="flex justify-start text-left text-[42px] uppercase uppercase leading-[40px] text-white  md:text-left ">
+        <div className={`md:py-heading px-default md-border-r flex flex-col ${faq ? 'justify-center' : 'justify-start'} gap-[10px] border-b border-b-th-fade py-[60px] text-left md:col-span-2 md:gap-0`}>
+          <h2 className={`flex ${faq ? 'justify-center text-center' : 'justify-start text-left'} text-[36px]  custom1000:text-[42px] uppercase uppercase leading-[40px] text-white  md:text-left`}>
             {title}
           </h2>
           {desc && (
-            <p className="body my-[40px] text-left leading-6 md:my-[20px]">
+            <p className="text-left text-[16px] leading-6 md:my-[20px] md:my-[40px]">
               {desc}
             </p>
           )}
@@ -88,71 +90,74 @@ export default function FAQ({
                     key={index}
                   >
                     <AccordionButton className={cn("relative")}>
-                      <div className="mr-auto w-full  text-left ">
-                        <span className="max-w-2xl text-left font-roc !text-[14px] font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
+                      <div className="mr-0 md:mr-auto w-full text-left">
+                        <span className="max-w-full block !w-full text-left font-roc text-[20px]
+                         font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
                           {faq.title}
                         </span>
                       </div>
-                      {isExpanded ? (
-                        <div
-                          className="flex items-center justify-end md:justify-center"
-                          style={{
-                            width: screenWidth > 768 ? 150 : 50
-                          }}
-                        >
-                          <svg
-                            width={screenWidth > 768 ? "50" : "32"}
-                            height={screenWidth > 768 ? "50" : "32"}
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
+                      <div className={` ${!faq ? 'hidden' : 'block'}`}>
+                        {isExpanded ? (
+                          <div
+                            className="flex items-center justify-end md:justify-center"
+                            style={{
+                              width: screenWidth > 768 ? 150 : 50
+                            }}
                           >
-                            <circle cx="16" cy="16" r="16" fill="white" />
-                            <path
-                              d="M12.2656 16H19.7323"
-                              stroke="black"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </div>
-                      ) : (
-                        <div
-                          className="flex items-center justify-end md:justify-center"
-                          style={{
-                            width: screenWidth > 768 ? 150 : 50
-                          }}
-                        >
-                          <svg
-                            width={screenWidth > 768 ? "50" : "32"}
-                            height={screenWidth > 768 ? "50" : "32"}
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
+                            <svg
+                              width={screenWidth > 768 ? "50" : "32"}
+                              height={screenWidth > 768 ? "50" : "32"}
+                              viewBox="0 0 32 32"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle cx="16" cy="16" r="16" fill="white" />
+                              <path
+                                d="M12.2656 16H19.7323"
+                                stroke="black"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        ) : (
+                          <div
+                            className="flex items-center justify-end md:justify-center"
+                            style={{
+                              width: screenWidth > 768 ? 150 : 50
+                            }}
                           >
-                            <circle
-                              cx="16"
-                              cy="16"
-                              r="15.75"
-                              stroke="white"
-                              strokeOpacity="0.5"
-                              strokeWidth="0.5"
-                            />
-                            <path
-                              d="M16 12.2666V19.7333"
-                              stroke="white"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            <path
-                              d="M12.2656 16H19.7323"
-                              stroke="white"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </div>
-                      )}
+                            <svg
+                              width={screenWidth > 768 ? "50" : "32"}
+                              height={screenWidth > 768 ? "50" : "32"}
+                              viewBox="0 0 32 32"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="15.75"
+                                stroke="white"
+                                strokeOpacity="0.5"
+                                strokeWidth="0.5"
+                              />
+                              <path
+                                d="M16 12.2666V19.7333"
+                                stroke="white"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                              <path
+                                d="M12.2656 16H19.7323"
+                                stroke="white"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        )}
+                      </div>
                     </AccordionButton>
                     <AccordionPanel
                       className={cn("opacity-0  will-change-transform", {

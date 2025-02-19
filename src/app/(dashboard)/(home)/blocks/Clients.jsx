@@ -35,7 +35,7 @@ export default function Clients() {
         src={bg_lg}
       />
 
-      <div className="py-heading px-default relative flex flex-col">
+      <div className="py-[60px] pb-[20px] md:pb-[60px] px-default relative flex flex-col">
         <div className=" grid grid-cols-1 md:mt-12 lg:grid-cols-2 lg:gap-16">
           <h2 className="lg:order-0 text-4xl uppercase text-white  md:text-[60px]">
             OUR CLIENTS
@@ -51,29 +51,50 @@ export default function Clients() {
               <Image className="w-6" src={arrow} alt=""></Image>
             </div>
           </Link>
-          <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto">
+          <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row lg:order-3 lg:ml-auto">
             <div>
               <div className="flex items-center">
-                <Counter duration={4} target={35} />
+                <Counter duration={4} target={35}  className="max-h-[36px] text-[36px]
+                 leading-[36px] md:max-h-[48px] md:text-[48px] md:leading-[48px]" />
               </div>
               <p className="body1 mt-2 uppercase">Techonologies</p>
             </div>
             <div>
               <div className="flex items-center">
-                <Counter duration={4} target={120} />
-                <span className="num_lg  text-white">+</span>
+                <Counter
+                  duration={4}
+                  target={120}
+                  className="max-h-[36px] text-[36px]
+                 leading-[36px] md:max-h-[48px] md:text-[48px] md:leading-[48px]"
+                />
+                <span
+                  className="block max-h-[36px] overflow-hidden font-roc text-[36px] font-medium leading-[36px] 
+            text-white md:max-h-none md:text-4xl md:leading-tight"
+                >
+                  +
+                </span>
               </div>
               <p className="body1 mt-2 uppercase">Projects</p>
             </div>
             <div>
               <div className="flex items-center">
-                <Counter duration={4} target={60} />
-                <span className="num_lg  text-white">+</span>
+                <Counter
+                  duration={4}
+                  target={60}
+                  className="max-h-[36px] text-[36px]
+                 leading-[36px] md:max-h-[48px] md:text-[48px] md:leading-[48px]"
+                />
+                <span
+                  className="block max-h-[36px] overflow-hidden font-roc text-[36px] font-medium leading-[36px] 
+            text-white md:max-h-none md:text-4xl md:leading-tight"
+                >
+                  +
+                </span>
               </div>
               <p className="body1 mt-2 uppercase">Clients</p>
             </div>
           </div>
-          <p className="body my-[40px] max-w-lg text-base leading-6 md:my-[20px] lg:order-2 lg:max-w-xl">
+          <p className="text-[14px] my-[40px] max-w-lg md:text-base leading-6 md:my-[20px] lg:order-2 lg:max-w-xl">
             Over the course of just 3 years, our team has expertly developed and
             got the market for 120+ products in various niches, so we know
             exactly how to make your product successful. NFT marketplace?
@@ -91,11 +112,10 @@ export default function Clients() {
           </Link>
         </div>
 
-        <div className="grid mt-[37px] overflow-hidden gap-[35px] w-full grid-cols-4">
-        <div className="grid mt-[37px] gap-[33px] sm:gap-[35px] w-full grid-cols-4">
+        <div className="mt-[37px] grid w-full grid-cols-4 gap-[35px]">
           {logos.map((brand) => (
-            <div className="h-[40px] w-[60px] sm:h-[116px] flex items-center justify-center sm:w-[300px]">
-              <brand.logo className="w-[60px] sm:w-[140px]" />
+            <div className="flex h-[40px] w-[60px] sm:h-[50px] sm:w-[130px]  md:h-[60px] md:w-[150px] items-center justify-center custom1200:h-[116px] custom1200:w-[300px]">
+              <brand.logo className="w-[60px] sm:w-[100px] custom1200:w-[140px]" />
             </div>
           ))}
         </div>
