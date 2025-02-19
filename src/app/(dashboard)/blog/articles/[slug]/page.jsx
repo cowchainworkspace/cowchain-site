@@ -77,24 +77,34 @@ function Article() {
     );
   }
 
-  const returnSplitValue = (text, value) => {
+  const getSplitText = (text, value) => {
     if (!text) {
       return;
     }
+
     return text.split("\n")[value].replaceAll("#", "");
   };
+
   const paragraphs = data.attributes.article_paragraphs.map((paragraph) => {
-    let num = 0;
     if (!paragraph.__component.includes("image")) {
-      num++;
+      const title = getSplitText(paragraph.text, 0);
+      const description = getSplitText(paragraph.text, 1);
+
       return {
-        ...paragraph,
-        titleIndex: num - 1
+        id: paragraph.id,
+        title,
+        description,
+        component: paragraph.__component
       };
     }
-    return paragraph;
+
+    return {
+      id: paragraph.id,
+      component: paragraph.__component,
+      imageUrl: paragraph.paragraph_image.data.attributes.url
+    };
   });
-  console.log(paragraphs);
+
   return (
     <section>
       <div className="relative  min-h-screen bg-black">
@@ -139,11 +149,11 @@ function Article() {
 
           <div>
             {paragraphs.map((paragraph, index) => {
-              if (paragraph.__component.includes("image")) {
+              if (paragraph.component.includes("image")) {
                 return (
                   <div className="container relative max-w-[340px] text-left md:max-w-[670px]">
                     <Image
-                      src={paragraph.paragraph_image.data.attributes.url}
+                      src={paragraph.imageUrl}
                       height={560}
                       width={600}
                       className=" my-12 block max-h-[260px] w-full object-cover"
@@ -160,10 +170,10 @@ function Article() {
                         id={`article-${titles[paragraph.titleIndex]}`}
                         className="mb-6 text-left text-2xl uppercase"
                       >
-                        {returnSplitValue(paragraph.text, 0)}
+                        {paragraph.title}
                       </h3>
                       <p className="text-sm  text-secondary">
-                        {returnSplitValue(paragraph.text, 1)}
+                        {paragraph.description}
                       </p>
                     </div>
                     <div className="container relative my-28 flex w-full flex-col items-center  overflow-hidden">
@@ -187,10 +197,10 @@ function Article() {
                     id={`article-${titles[paragraph.titleIndex]}`}
                     className="mb-6 text-left text-2xl uppercase"
                   >
-                    {returnSplitValue(paragraph.text, 0)}
+                    {paragraph.title}
                   </h3>
                   <p className="text-sm  text-secondary">
-                    {returnSplitValue(paragraph.text, 1)}
+                    {paragraph.description}
                   </p>
                 </div>
               );

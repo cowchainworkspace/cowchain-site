@@ -33,16 +33,12 @@ export default function Blog() {
     []
   );
 
-  const tags = allArticles.map((article) => ({
-    tag: article.attributes.tag
-  }));
-
   const totalArticles = articles.pages.at(-1).meta.pagination.total;
 
   return (
     <section>
       <div className="relative overflow-x-hidden bg-black">
-        <HeroSection tags={tags} />
+        <HeroSection />
         <section className="container border-y border-th-fade">
           <div className="grid w-full md:grid-cols-2">
             {articles?.pages.map((post, index) => (
