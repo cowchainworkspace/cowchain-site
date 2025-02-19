@@ -33,7 +33,7 @@ export default function Blog() {
     []
   );
 
-  const totalArticles = articles.pages.at(-1).meta.pagination.total;
+  const totalArticlesInDB = articles.pages.at(-1).meta.pagination.total;
 
   return (
     <section>
@@ -53,7 +53,7 @@ export default function Blog() {
 
         <ViewMoreSection
           current={allArticles?.length}
-          count={totalArticles}
+          count={totalArticlesInDB}
           showMorePosts={fetchNextPage}
           isFetchingNextPage={isFetchingNextPage}
         />
