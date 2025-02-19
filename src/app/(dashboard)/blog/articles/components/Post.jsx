@@ -14,19 +14,19 @@ export const Post = ({ attributes }) => {
         height={360}
         width={672}
         className="mb-5 max-h-[170px] w-full self-center object-cover group-hover:scale-95 md:aspect-video md:h-auto  md:max-h-[360px] md:object-fill"
-        src={attributes?.preview_img?.data?.attributes?.url}
+        src={attributes?.preview_article_img?.data?.attributes?.url}
         alt=""
       />
       <h2 className="mb-1 min-h-14 pr-2 lg:!text-lg">{attributes?.title}</h2>
       <div className="p mb-2 line-clamp-6 !text-[#bbb] md:line-clamp-[10]">
-        {attributes?.Text_block?.map((text) => (
+        {attributes?.article_description?.map((text) => (
           <p className="text-pretty text-sm text-secondary">
             {text.children[0]?.text}
           </p>
         ))}
       </div>
       <div className="mt-auto">
-        <a href={`/blog/articles/${attributes?.Slug}`}>
+        <a href={`/blog/articles/${attributes?.slug}`}>
           <p className="font-roc text-base font-medium uppercase text-white underline">
             READ MORE
           </p>

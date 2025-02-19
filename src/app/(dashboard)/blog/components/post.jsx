@@ -4,11 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const Post = ({ atributes }) => {
-  const { Slug, Text_block, title, preview_img, tag } = atributes || {};
+  const { slug, article_description, title, preview_article_img, tag } =
+    atributes || {};
 
   return (
     <Link
-      href={`blog/articles/${Slug}`}
+      href={`blog/articles/${slug}`}
       className={cn(
         "group relative  flex w-full cursor-pointer flex-col  border border-th-fade p-2 md:p-6"
       )}
@@ -17,7 +18,7 @@ export const Post = ({ atributes }) => {
         height={362}
         width={672}
         className="mb-8 max-h-[360px] w-full self-center object-contain transition-transform duration-200 group-hover:scale-95 md:aspect-video  md:h-auto md:object-fill"
-        src={preview_img?.data?.attributes?.url}
+        src={preview_article_img?.data?.attributes?.url}
         alt=""
       />
 
@@ -32,7 +33,7 @@ export const Post = ({ atributes }) => {
         {title}
       </h3>
       <div className="line-clamp-[10]">
-        {Text_block?.map((text) => (
+        {article_description?.map((text) => (
           <p className="text-pretty text-sm text-secondary">
             {text.children[0]?.text}
           </p>

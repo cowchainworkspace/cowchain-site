@@ -39,9 +39,9 @@ export const useGetArticles = (sortParams) => {
           }
         }}),
         populate: {
-          preview_img: { fields: ["url"] }
+          preview_article_img: { fields: ["url"] }
         },
-        fields: ['title', "Slug", "id", "Text_block", "tag"],
+        fields: ['article_title', "slug", "id", "article_description", "tag"],
         pagination: { page: pageParam, pageSize: 8 },
      
       }, {
@@ -89,9 +89,32 @@ export const useGetArticleBySlug = (slug) => {
     queryKey: ['article', slug],
 
     queryFn: async () => {
-      
+      const queryParams = qs.stringify({
+          slug: {
+            $$eq: slug
+          },
+
+            populate: {
+              banner_img:{
+                populate: ["url"]
+              },
+              author_avatar: {
+                populate: ["url"]
+              },
+              article_paragraphs: {
+                populate: "*"
+              }
+          },
+          
+          
+     
+      }, {
+        encodeValuesOnly: true,
+      })
+      const url = new URL('/api/articles', process.env.NEXT_PUBLIC_STRAPI_URL);
+      url.search = queryParams;
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?filters[Slug][$eq]=${slug}&populate=*`,
+        url.href,
         {
           headers: {
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
@@ -120,14 +143,14 @@ export const useGetMorePosts = (currentSlug) => {
     queryFn: async ({pageParam = 1}) => {
       const queryParams = qs.stringify({
         filters: {
-          Slug: {
+          slug: {
             $ne: currentSlug
           }
         },
         populate: {
-          preview_img: { fields: ["url"] }
+         preview_article_img: { fields: ["url"] }
         },
-        fields: ['title', "Slug", "id", "Text_block",],
+        fields: ['article_title', "slug", "id", "article_description", "tag"],
         pagination: { page: pageParam, pageSize: 8 },
      
       }, {

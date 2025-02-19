@@ -6,12 +6,12 @@ import FooterForm from "@/components/utils/FooterForm";
 import { useGetArticleBySlug } from "@/hooks/use-strapi";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Blog } from "../blocks/Blog";
 import { HeroSection } from "../blocks/HeroSection";
 import { ShareLinks } from "../blocks/ShareLinks";
 
-const titles = ["first", "second", "third"];
+const titles = ["first", "second", "third", "fourth", "five"];
 
 function Article() {
   const [activeButton, setActiveButton] = useState(null);
@@ -19,7 +19,11 @@ function Article() {
   const params = useParams();
   const { slug } = params;
   const { data, isLoading, isError } = useGetArticleBySlug(slug);
-  const textArrayLength = data ? data?.attributes.Text_block.length : 0;
+  const textArrayLength = data
+    ? data?.attributes.article_paragraphs.filter(
+        (paragraph) => !paragraph.__component.includes("image")
+      ).length
+    : 0;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,26 +83,37 @@ function Article() {
     }
     return text.split("\n")[value].replaceAll("#", "");
   };
-
+  const paragraphs = data.attributes.article_paragraphs.map((paragraph) => {
+    let num = 0;
+    if (!paragraph.__component.includes("image")) {
+      num++;
+      return {
+        ...paragraph,
+        titleIndex: num - 1
+      };
+    }
+    return paragraph;
+  });
+  console.log(paragraphs);
   return (
     <section>
       <div className="relative  min-h-screen bg-black">
         <HeroSection
           tag={data?.attributes.tag}
-          title={data?.attributes.title}
-          author={data?.attributes.author_title.split(",")[0]}
+          title={data?.attributes.article_title}
+          author={data?.attributes.author_name.split(",")[0]}
         />
         <Image
           height={560}
           width={600}
-          src={data?.attributes.Banner.data?.attributes?.url}
+          src={data?.attributes.banner_img.data?.attributes?.url}
           className="block max-h-[560px] w-full object-cover"
           alt=""
         />
 
         <div className="mb-28 mt-20 flex  items-start justify-center gap-[71px]">
           <div className="sticky top-0 hidden w-[203px] flex-col items-start transition-all duration-500 xl:flex">
-            {titles.map((title, index) => (
+            {titles.slice(0, textArrayLength).map((title, index) => (
               <button
                 key={index}
                 title={title}
@@ -123,55 +138,63 @@ function Article() {
           </div>
 
           <div>
-            <div className="container relative max-w-[340px] text-left md:max-w-[670px]">
-              <h3
-                id={`first-article`}
-                className="mb-6 text-left text-2xl uppercase"
-              >
-                {returnSplitValue(data?.attributes.Paragraph[0].text, 0)}
-              </h3>
-              <p className="text-sm  text-secondary">
-                {returnSplitValue(data?.attributes.Paragraph[0].text, 1)}
-              </p>
-              <Image
-                src={data?.attributes.center_content.data?.attributes?.url}
-                height={560}
-                width={600}
-                className=" my-12 block max-h-[260px] w-full object-cover"
-                alt=""
-              />
-            </div>
-            <div className="container mb-12 mt-10 max-w-[340px] text-left md:mb-28 md:mt-20 md:max-w-[670px] ">
-              <h3
-                id={"second-article"}
-                className="mb-6 text-left text-2xl uppercase"
-              >
-                {returnSplitValue(data?.attributes.Paragraph[0].text, 0)}
-              </h3>
-              <p className="text-sm  text-secondary">
-                {returnSplitValue(data?.attributes.Paragraph[0].text, 1)}
-              </p>
-            </div>
-            <div className="container relative my-28 flex w-full flex-col items-center  overflow-hidden">
-              <h3 className="mb-2 text-center text-2xl uppercase">
-                Subscribe to our newsletter
-              </h3>
-              <p className="mb-10 text-center text-secondary">
-                Receive weekly updates on new posts and features
-              </p>
-              <FooterForm />
-            </div>
-            <div className="container mb-12 mt-10 max-w-[340px] text-left md:mb-28 md:mt-20 md:max-w-[670px] ">
-              <h3
-                id={"third-article"}
-                className="mb-6 text-left text-2xl uppercase"
-              >
-                {returnSplitValue(data?.attributes.Paragraph[0].text, 0)}
-              </h3>
-              <p className="text-sm  text-secondary">
-                {returnSplitValue(data?.attributes.Paragraph[0].text, 1)}
-              </p>
-            </div>
+            {paragraphs.map((paragraph, index) => {
+              if (paragraph.__component.includes("image")) {
+                return (
+                  <div className="container relative max-w-[340px] text-left md:max-w-[670px]">
+                    <Image
+                      src={paragraph.paragraph_image.data.attributes.url}
+                      height={560}
+                      width={600}
+                      className=" my-12 block max-h-[260px] w-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                );
+              }
+              if (index === 2) {
+                return (
+                  <Fragment key={paragraph.id}>
+                    <div className="container relative max-w-[340px] text-left md:max-w-[670px]">
+                      <h3
+                        id={`article-${titles[paragraph.titleIndex]}`}
+                        className="mb-6 text-left text-2xl uppercase"
+                      >
+                        {returnSplitValue(paragraph.text, 0)}
+                      </h3>
+                      <p className="text-sm  text-secondary">
+                        {returnSplitValue(paragraph.text, 1)}
+                      </p>
+                    </div>
+                    <div className="container relative my-28 flex w-full flex-col items-center  overflow-hidden">
+                      <h3 className="mb-2 text-center text-2xl uppercase">
+                        Subscribe to our newsletter
+                      </h3>
+                      <p className="mb-10 text-center text-secondary">
+                        Receive weekly updates on new posts and features
+                      </p>
+                      <FooterForm />
+                    </div>
+                  </Fragment>
+                );
+              }
+              return (
+                <div
+                  key={paragraph.id}
+                  className="container relative max-w-[340px] text-left md:max-w-[670px]"
+                >
+                  <h3
+                    id={`article-${titles[paragraph.titleIndex]}`}
+                    className="mb-6 text-left text-2xl uppercase"
+                  >
+                    {returnSplitValue(paragraph.text, 0)}
+                  </h3>
+                  <p className="text-sm  text-secondary">
+                    {returnSplitValue(paragraph.text, 1)}
+                  </p>
+                </div>
+              );
+            })}
 
             <div className="container flex w-[340px] flex-col items-center md:w-[560px]">
               <Image
@@ -187,12 +210,12 @@ function Article() {
                   written by
                 </span>
                 <span className="text-center text-[16px] leading-[22px] text-[white]">
-                  {data?.attributes.author_title}
+                  {data?.attributes.author_name}
                 </span>
               </div>
 
               <p className="mb-[24px] text-center text-[14px] text-[#BBBBBB] md:w-[410px]">
-                {data?.attributes.author_description}
+                {data?.attributes.author_info}
               </p>
 
               <a href="/" className="flex items-center gap-[16px]">
