@@ -4,38 +4,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const Post = ({ atributes }) => {
-
-  const {
-    Banner,
-    Date,
-    Slug,
-    Text_block,
-    Title,
-    article_section,
-    author_avatar,
-    author_description,
-    author_title,
-    center_content,
-    center_title,
-    createdAt,
-    preview_img,
-    publishedAt,
-    tag,
-    updatedAt
-  } = atributes || {};
+  const { slug, article_description, title, preview_article_img, tag } =
+    atributes || {};
 
   return (
     <Link
-  href={`blog/articles/${Slug}`}
-  className={cn(
-    "group relative flex w-full cursor-pointer flex-col justify-start p-6 border border-th-fade",
-  )}
->
+      href={`blog/articles/${slug}`}
+      className={cn(
+        "group relative  flex w-full cursor-pointer flex-col  border border-th-fade p-2 md:p-6"
+      )}
+    >
       <Image
-      height={362}
-      width={672}
-        className="mb-8 max-h-[360px] w-full self-center object-none transition-transform duration-200 group-hover:scale-95  md:h-auto md:object-fill"
-        src={preview_img?.data?.attributes?.url}
+        height={362}
+        width={672}
+        className="mb-8 max-h-[360px] w-full self-center object-contain transition-transform duration-200 group-hover:scale-95 md:aspect-video  md:h-auto md:object-fill"
+        src={preview_article_img?.data?.attributes?.url}
         alt=""
       />
 
@@ -46,10 +29,16 @@ export const Post = ({ atributes }) => {
       </div>
 
       <Tag className="mb-6 mr-auto" title={tag} />
-      <span className="mb-4 font-roc text-lg font-medium uppercase leading-6 text-white">
-        {Title}
-      </span>
-      { Text_block?.map((text) => <span className="text-sm  text-secondary">{text.children[0]?.text}</span>)}
+      <h3 className="mb-4 font-roc text-lg font-medium uppercase leading-6 text-white">
+        {title}
+      </h3>
+      <div className="line-clamp-[10]">
+        {article_description?.map((text) => (
+          <p className="text-pretty text-sm text-secondary">
+            {text.children[0]?.text}
+          </p>
+        ))}
+      </div>
     </Link>
   );
 };

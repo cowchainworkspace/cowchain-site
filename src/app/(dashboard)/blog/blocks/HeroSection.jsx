@@ -1,6 +1,6 @@
-import React from "react";
-import Tag from "@/components/ui/tag";
 import { Category } from "@/components/ui/category";
+import Tag from "@/components/ui/tag";
+import React from "react";
 
 const categories = [
   "development",
@@ -13,7 +13,7 @@ const categories = [
   "digital ownership"
 ];
 
-export const HeroSection = ({ tags }) => {
+export const HeroSection = () => {
   return (
     <section className="scrollbar-none container relative mb-9  w-full pt-20 md:mb-[100px]  md:max-w-full lg:pt-[120px]">
       <div className="relative flex flex-col items-center justify-center px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
@@ -24,10 +24,9 @@ export const HeroSection = ({ tags }) => {
 
         <div className="mt-9 flex max-w-[110%] items-start justify-start gap-2 overflow-x-scroll md:items-center md:overflow-auto lg:max-w-full lg:justify-between xl:max-w-none ">
           {categories.map((title, index) => (
-            <Category key={index} title={title} tags={tags} />
+            <Category key={index} title={title} />
           ))}
         </div>
-
       </div>
     </section>
   );

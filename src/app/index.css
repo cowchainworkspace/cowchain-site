@@ -33,12 +33,9 @@ body {
   background-color: rgba(255, 255, 255, 0.2) !important;
 }
 
-
 .markdown_benefits::-webkit-scrollbar-thumb {
-  background-color: white; 
+  background-color: white;
 }
-
-
 
 /* Text styles */
 
@@ -157,7 +154,9 @@ p,
 
 .btn-submit {
   @apply flex h-12 cursor-pointer items-center justify-center bg-white px-8 pt-1 text-center font-roc text-sm font-medium uppercase text-black lg:h-16;
-  transition: color 0.3s, background-color 0.3s ease-in-out;
+  transition:
+    color 0.3s,
+    background-color 0.3s ease-in-out;
 }
 
 .md-border-r {
@@ -177,7 +176,7 @@ p,
   background-color: transparent;
   background: rgba(255, 255, 255, 0.1);
   color: white;
- padding-left: 10px;
+  padding-left: 10px;
 }
 
 .contact-input-overlay::placeholder {
@@ -189,11 +188,9 @@ p,
   background: rgba(255, 255, 255, 0.3);
 }
 
-.area-input{
+.area-input {
   padding-top: 13px;
 }
-
-
 
 .modal-form-overlay {
   backdrop-filter: blur(6px);
@@ -433,4 +430,24 @@ input:-webkit-autofill:active {
 
 .scroll-container .ghost {
   width: 100vw;
+}
+
+.embla {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: auto;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  align-items: center;
+}
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 100%;
+  min-width: fit-content;
 }
