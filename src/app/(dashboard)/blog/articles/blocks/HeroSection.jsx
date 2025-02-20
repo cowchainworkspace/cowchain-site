@@ -1,10 +1,10 @@
-import React from "react";
-import Tag from "@/components/ui/tag";
+import instagram from "@/assets/article/InstagramIcon.svg";
 import facebook from "@/assets/article/facebookIcon.svg";
 import copyLink from "@/assets/article/link.svg";
 import twitter from "@/assets/article/twitterIcon.svg";
-import instagram from "@/assets/article/InstagramIcon.svg";
+import Tag from "@/components/ui/tag";
 import Image from "next/image";
+import React from "react";
 import { ShareLinks } from "./ShareLinks";
 
 export const HeroSection = ({ tag, title, author }) => {

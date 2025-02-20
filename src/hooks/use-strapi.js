@@ -41,7 +41,7 @@ export const useGetArticles = (sortParams) => {
         populate: {
           preview_article_img: { fields: ["url"] }
         },
-        fields: ['article_title', "slug", "id", "article_description", "tag"],
+        fields: ['article_title', "slug", "id", "article_description", "tag", "author_name", "reading_minutes"],
         pagination: { page: pageParam, pageSize: 5 },
      
       }, {
@@ -84,15 +84,17 @@ export const useGetArticles = (sortParams) => {
   });
 }
 
-export const useGetArticleBySlug = (slug) => {
+export const useGetArticleBySlug = (currentSlug) => {
   return useQuery({
-    queryKey: ['article', slug],
+    queryKey: ['article', currentSlug],
 
     queryFn: async () => {
       const queryParams = qs.stringify({
+        filters: {
           slug: {
-            $$eq: slug
-          },
+            $eq: currentSlug
+          }
+        },
 
             populate: {
               banner_img:{

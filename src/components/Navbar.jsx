@@ -1,29 +1,29 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import menu_open from "@/assets/menu_open.svg";
-import menu_close from "@/assets/homepage/modal_close.svg";
+import arrow from "@/assets/arrow_right.svg";
+import bg_clients_lg from "@/assets/bg/clients_navbar_bg_lg.png";
+import bg_clients from "@/assets/bg/clients_navbar_bg_sm.png";
 import bg from "@/assets/bg/navbar_top.png";
 import bg_lg from "@/assets/bg/navbar_top_lg.png";
-import bg_home from "@/assets/homepage/home-mobile.png";
-import bg_clients from "@/assets/bg/clients_navbar_bg_sm.png";
-import bg_clients_lg from "@/assets/bg/clients_navbar_bg_lg.png";
-import { motion, AnimatePresence } from "framer-motion";
-import arrow from "@/assets/arrow_right.svg";
-import Link from "next/link";
-import linkedin from "@/assets/footer/linkedin.svg";
-import telegram from "@/assets/footer/telegram.svg";
-import twitter from "@/assets/footer/twitter.svg";
-import medium from "@/assets/footer/medium.svg";
-import mail from "@/assets/footer/mail.svg";
 import team_bg from "@/assets/bg/team-mobile.png";
 import team from "@/assets/bg/team.png";
-import { cn } from "@/lib/utils";
+import linkedin from "@/assets/footer/linkedin.svg";
+import mail from "@/assets/footer/mail.svg";
+import medium from "@/assets/footer/medium.svg";
+import telegram from "@/assets/footer/telegram.svg";
+import twitter from "@/assets/footer/twitter.svg";
+import bg_home from "@/assets/homepage/home-mobile.png";
+import menu_close from "@/assets/homepage/modal_close.svg";
+import menu_open from "@/assets/menu_open.svg";
 import ContactForm from "@/components/utils/ContactForm";
-import Image from "next/image";
 import { useLoader } from "@/hooks/useLoader";
+import { cn } from "@/lib/utils";
 import emailjs from "emailjs-com";
-import { usePathname } from 'next/navigation';
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import { ServicesAndTechnologies } from "../app/(dashboard)/(home)/blocks/ServicesAndTechMenu";
 
 export default function Navbar({ isPageNotFound = false }) {
@@ -62,7 +62,6 @@ export default function Navbar({ isPageNotFound = false }) {
   const [isGradient, setIsGradient] = useState(true);
   const [isHomePage, setIsHomePage] = useState(true);
 
-
   const { isRendering, setIsLoading, setIsRendering } = useLoader();
 
   useEffect(() => {
@@ -86,7 +85,9 @@ export default function Navbar({ isPageNotFound = false }) {
         pathname === "/policy" ||
         pathname === "/services"
     );
-    setIsTeamBg(pathname === "/team" || pathname === "/sitemap");
+    setIsTeamBg(
+      pathname === "/team" || pathname === "/sitemap" || pathname === "/blog"
+    );
 
     if (pathname === "/team") {
       setIsGradient(false);

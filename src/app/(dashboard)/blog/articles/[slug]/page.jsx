@@ -1,5 +1,5 @@
 "use client";
-
+import ellipseBg from "@/assets/article/ellipse-article-bg.webp";
 import rightArrow from "@/assets/article/rightArrow.svg";
 import { Loading } from "@/components/loader/Loading";
 import FooterForm from "@/components/utils/FooterForm";
@@ -7,10 +7,10 @@ import { useGetArticleBySlug } from "@/hooks/use-strapi";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { Fragment, useEffect, useState } from "react";
+import { BlogBreadCrumb } from "../../components/BreadCrumb/BlogBreadCrumb";
 import { Blog } from "../blocks/Blog";
 import { HeroSection } from "../blocks/HeroSection";
 import { ShareLinks } from "../blocks/ShareLinks";
-
 const titles = ["first", "second", "third", "fourth", "five"];
 
 function Article() {
@@ -24,6 +24,7 @@ function Article() {
         (paragraph) => !paragraph.__component.includes("image")
       ).length
     : 0;
+  const articleTitles = [];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,10 +88,16 @@ function Article() {
 
   const paragraphs = data.attributes.article_paragraphs.map((paragraph) => {
     if (!paragraph.__component.includes("image")) {
+      const titleId = crypto.randomUUID();
       const title = getSplitText(paragraph.text, 0);
       const description = getSplitText(paragraph.text, 1);
+      articleTitles.push({
+        id: titleId,
+        title
+      });
 
       return {
+        titleId,
         id: paragraph.id,
         title,
         description,
@@ -108,6 +115,7 @@ function Article() {
   return (
     <section>
       <div className="relative  min-h-screen bg-black">
+        <BlogBreadCrumb />
         <HeroSection
           tag={data?.attributes.tag}
           title={data?.attributes.article_title}
@@ -120,24 +128,22 @@ function Article() {
           className="block max-h-[560px] w-full object-cover"
           alt=""
         />
-
         <div className="mb-28 mt-20 flex  items-start justify-center gap-[71px]">
           <div className="sticky top-0 hidden w-[203px] flex-col items-start transition-all duration-500 xl:flex">
-            {titles.slice(0, textArrayLength).map((title, index) => (
+            {articleTitles.map(({ title, id }) => (
               <button
-                key={index}
+                type="button"
+                key={id}
                 title={title}
                 onClick={() => {
-                  scrollToSection(`${title}-article`);
+                  scrollToSection(`${id}`);
                 }}
                 className={`h-[48px] pl-[20px] text-[12px] leading-[14px] ${
-                  activeButton === `${title}-article`
-                    ? "text-[#925EFF]"
-                    : "text-[#BBBBBB]"
+                  activeButton === `${id}` ? "text-[#925EFF]" : "text-[#BBBBBB]"
                 }`}
                 style={{
                   borderLeft:
-                    activeButton === `${title}-article`
+                    activeButton === `${id}`
                       ? "2px solid #925EFF"
                       : "2px solid rgba(255, 255, 255, 0.1)"
                 }}
@@ -151,7 +157,7 @@ function Article() {
             {paragraphs.map((paragraph, index) => {
               if (paragraph.component.includes("image")) {
                 return (
-                  <div className="container relative max-w-[340px] text-left md:max-w-[670px]">
+                  <div className="container relative max-w-[340px] text-left md:max-w-[560px]">
                     <Image
                       src={paragraph.imageUrl}
                       height={560}
@@ -165,9 +171,9 @@ function Article() {
               if (index === 2) {
                 return (
                   <Fragment key={paragraph.id}>
-                    <div className="container relative max-w-[340px] text-left md:max-w-[670px]">
+                    <div className="container relative max-w-[340px] text-left md:max-w-[560px]">
                       <h3
-                        id={`article-${titles[paragraph.titleIndex]}`}
+                        id={`${paragraph.titleId}`}
                         className="mb-6 text-left text-2xl uppercase"
                       >
                         {paragraph.title}
@@ -176,14 +182,21 @@ function Article() {
                         {paragraph.description}
                       </p>
                     </div>
-                    <div className="container relative my-28 flex w-full flex-col items-center  overflow-hidden">
+                    <div className="container relative my-[50px] flex w-full flex-col items-center ">
+                      <Image
+                        src={ellipseBg}
+                        width={546}
+                        height={335}
+                        alt="background decoration"
+                        className="lef absolute -top-20 scale-150"
+                      />
                       <h3 className="mb-2 text-center text-2xl uppercase">
                         Subscribe to our newsletter
                       </h3>
                       <p className="mb-10 text-center text-secondary">
                         Receive weekly updates on new posts and features
                       </p>
-                      <FooterForm />
+                      <FooterForm isMiddle={true} />
                     </div>
                   </Fragment>
                 );
@@ -191,10 +204,10 @@ function Article() {
               return (
                 <div
                   key={paragraph.id}
-                  className="container relative max-w-[340px] text-left md:max-w-[670px]"
+                  className="container relative max-w-[340px] text-left md:max-w-[560px]"
                 >
                   <h3
-                    id={`article-${titles[paragraph.titleIndex]}`}
+                    id={`${paragraph.titleId}`}
                     className="mb-6 text-left text-2xl uppercase"
                   >
                     {paragraph.title}
@@ -254,7 +267,6 @@ function Article() {
             </div>
           </div>
         </div>
-
         <Blog slug={slug} />
       </div>
     </section>
