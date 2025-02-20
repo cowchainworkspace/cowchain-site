@@ -42,7 +42,7 @@ export const useGetArticles = (sortParams) => {
           preview_article_img: { fields: ["url"] }
         },
         fields: ['article_title', "slug", "id", "article_description", "tag"],
-        pagination: { page: pageParam, pageSize: 8 },
+        pagination: { page: pageParam, pageSize: 5 },
      
       }, {
         encodeValuesOnly: true,

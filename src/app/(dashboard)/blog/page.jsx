@@ -40,12 +40,19 @@ export default function Blog() {
       <div className="relative overflow-x-hidden bg-black">
         <HeroSection />
         <section className="container border-y border-th-fade">
-          <div className="grid w-full md:grid-cols-2">
+          <div>
             {articles?.pages.map((post, index) => (
               <Fragment key={index}>
-                {post.data.map((article) => (
-                  <Post key={article.id} atributes={article.attributes} />
-                ))}
+                <div className="grid w-full md:grid-cols-2">
+                  {post.data.slice(0, 2).map((article) => (
+                    <Post key={article.id} atributes={article.attributes} />
+                  ))}
+                </div>
+                <div className="grid md:grid-cols-3">
+                  {post.data.slice(2).map((article) => (
+                    <Post key={article.id} atributes={article.attributes} />
+                  ))}
+                </div>
               </Fragment>
             ))}
           </div>
