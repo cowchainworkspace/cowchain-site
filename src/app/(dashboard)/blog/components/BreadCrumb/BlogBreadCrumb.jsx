@@ -3,12 +3,30 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-export const BlogBreadCrumb = () => {
-  const pathname = usePathname();
-  const values = pathname.split("/").filter((item) => item.length);
+export const BlogBreadCrumb = ({ slug }) => {
   return (
     <>
-      {values.length === 1 ? (
+      {slug ? (
+        <Breadcrumb
+          className="absolute left-5 top-0 z-50 line-clamp-1 flex max-w-[300px] gap-1 overflow-hidden md:left-10 md:top-[23px]"
+          separator={"/"}
+          size={"sm"}
+        >
+          <BreadcrumbItem className=" text-xs leading-5 text-white">
+            <BreadcrumbLink className={"breadcrumb-item"} href={"/blog"}>
+              blog
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbItem className=" text-xs leading-5 text-white">
+            <BreadcrumbLink
+              className={"breadcrumb-item pointer-events-none !text-secondary"}
+              href={"#"}
+            >
+              {slug}
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      ) : (
         <Breadcrumb
           className="absolute left-5 top-0 z-50 line-clamp-1 flex max-w-[300px] gap-1 overflow-hidden md:left-10 md:top-[23px]"
           separator={"/"}
@@ -26,33 +44,6 @@ export const BlogBreadCrumb = () => {
               home
             </BreadcrumbLink>
           </BreadcrumbItem>
-        </Breadcrumb>
-      ) : (
-        <Breadcrumb
-          className="absolute left-5 top-0 z-50 line-clamp-1 flex max-w-[300px] gap-1 overflow-hidden md:left-10 md:top-[23px]"
-          separator={"/"}
-          size={"sm"}
-        >
-          {values.map((path, index) => {
-            const lastIndex = values.length - 1;
-
-            return (
-              <BreadcrumbItem
-                className=" text-xs leading-5 text-white"
-                key={path}
-                isCurrentPage={index === lastIndex}
-              >
-                <BreadcrumbLink
-                  className={cn("breadcrumb-item", {
-                    "!text-secondary": index === lastIndex
-                  })}
-                  href={path === "blog" ? `/${path}` : "#"}
-                >
-                  {path}
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-            );
-          })}
         </Breadcrumb>
       )}
     </>

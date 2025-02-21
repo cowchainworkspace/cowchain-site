@@ -15,7 +15,7 @@ const categories = [
 
 export const HeroSection = () => {
   return (
-    <section className="scrollbar-none container relative mb-9  w-full pt-20 md:mb-[100px]  md:max-w-full lg:pt-[120px]">
+    <section className="scrollbar-none container relative  mb-9 w-full  pt-20 md:mb-[100px] md:max-w-full  lg:pt-[120px]">
       <div className="relative flex flex-col items-center justify-center px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
         <h1 className="z-50 text-center text-5xl uppercase text-white lg:mt-6 lg:max-w-[1200px] lg:text-[82px]">
           Insights & more

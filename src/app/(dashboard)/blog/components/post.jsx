@@ -3,6 +3,7 @@ import Tag from "@/components/ui/tag";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { Reading } from "./Reading/Reading";
 
 export const Post = ({ atributes, isThreeLines = false }) => {
   const {
@@ -37,10 +38,7 @@ export const Post = ({ atributes, isThreeLines = false }) => {
       </div>
       <div className="mb-6 flex items-center justify-between">
         <Tag title={tag} />
-        <div className="flex items-center gap-2">
-          <BookSvg />
-          <p className="text-sm leading-[22px] text-secondary">{`${reading_minutes} min read`}</p>
-        </div>
+        <Reading reading_minutes={reading_minutes} />
       </div>
       <h3 className="mb-4 font-roc text-lg font-medium uppercase leading-6 text-white">
         {article_title}
