@@ -11,7 +11,7 @@ export const ArticleParagraphs = ({
   authorInfo
 }) => {
   return (
-    <div>
+    <div className="mb-20 md:mb-[100px] md:overflow-hidden">
       {paragraphs.map((paragraph, index) => {
         if (paragraph.component.includes("image")) {
           return (

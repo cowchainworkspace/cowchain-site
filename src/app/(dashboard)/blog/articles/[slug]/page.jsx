@@ -11,6 +11,7 @@ import { Blog } from "../blocks/Blog";
 import { HeroSection } from "../blocks/HeroSection";
 import { ShareLinks } from "../blocks/ShareLinks";
 import { ArticleParagraphs } from "../components/ArticleParagraphs/ArticleParagraphs";
+import { ReviewsSection } from "../components/ReviewsSection/ReviewsSection";
 import { SideMenu } from "../components/SideMenu/SideMenu";
 
 function Article() {
@@ -30,7 +31,7 @@ function Article() {
 
   if (isLoading) {
     return (
-      <div className="flex min-h-[100dvh] items-start">
+      <div className="flex min-h-[100dvh]">
         <Loading />
       </div>
     );
@@ -81,12 +82,15 @@ function Article() {
         />
         <div className="mt-[60px] flex items-start justify-center  gap-[71px] md:mb-[103px] md:mt-20">
           <SideMenu articleTitles={articleTitles} />
-          <ArticleParagraphs
-            paragraphs={paragraphs}
-            authorIcon={data?.attributes.author_avatar.data?.attributes?.url}
-            authorName={data?.attributes.author_name}
-            authorInfo={data?.attributes.author_info}
-          />
+          <div>
+            <ArticleParagraphs
+              paragraphs={paragraphs}
+              authorIcon={data?.attributes.author_avatar.data?.attributes?.url}
+              authorName={data?.attributes.author_name}
+              authorInfo={data?.attributes.author_info}
+            />
+            <ReviewsSection />
+          </div>
 
           <div className="sticky top-0 ml-[10px] hidden  flex-col items-center overflow-hidden  2xl:flex">
             <h3 id="first-article" className="mb-2 text-2xl uppercase">

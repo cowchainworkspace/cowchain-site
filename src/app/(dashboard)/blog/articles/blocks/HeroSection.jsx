@@ -1,8 +1,8 @@
+import ViewSvg from "@/assets/svg/blog/EyeSvg";
 import Tag from "@/components/ui/tag";
 import React from "react";
 import { Reading } from "../../components/Reading/Reading";
 import { ShareLinks } from "./ShareLinks";
-
 export const HeroSection = ({ tag, title, author, readingMinutes }) => {
   return (
     <section className="scrollbar-none container relative mb-10  w-full pt-[65px] md:mb-[65px]  md:max-w-full lg:pt-[120px]">
@@ -11,11 +11,19 @@ export const HeroSection = ({ tag, title, author, readingMinutes }) => {
         <h1 className="text-center text-3xl uppercase text-white lg:mt-6 lg:max-w-[1200px] lg:text-5xl">
           {title}
         </h1>
-        <div className="mb-6 mt-4  flex gap-10">
-          <p className="text-secondary">
+        <div className="mb-6 mt-4  flex flex-col items-center md:flex-row md:gap-10">
+          <p className="text-sm font-light leading-[22px] text-secondary">
             written by <span className="text-white">{author}</span>
           </p>
-          <Reading reading_minutes={readingMinutes} />
+          <div className="flex gap-10">
+            <Reading reading_minutes={readingMinutes} />
+            <div className="flex items-center gap-2">
+              <ViewSvg />
+              <span className="text-sm leading-[22px] tracking-[0] text-secondary">
+                1234 views
+              </span>
+            </div>
+          </div>
         </div>
         <ShareLinks />
       </div>
