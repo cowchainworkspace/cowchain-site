@@ -1,5 +1,6 @@
-import React from "react";
 import Tag from "@/components/ui/tag";
+import { cn } from "@/lib/utils";
+import React from "react";
 
 const feedbackData = [
   {
@@ -26,8 +27,8 @@ const Quote = ({ text, author, lastIndex }) => {
     <article
       className={
         lastIndex
-          ? "px-[88px] relative flex w-full min-w-[320px] flex-col py-[43px] md:border-r-0"
-          : "px-[88px]  relative flex w-full min-w-[320px] flex-col border-r border-r-th-fade  py-[43px] md:border-b md:border-r-0 md:border-b-th-fade"
+          ? "relative flex w-full min-w-[320px] flex-col px-[88px] py-[43px] md:border-r-0"
+          : "relative  flex w-full min-w-[320px] flex-col border-r border-r-th-fade px-[88px]  py-[43px] md:border-b md:border-r-0 md:border-b-th-fade"
       }
     >
       <p className="header max-w-2xl !font-normal !leading-none !no-underline">
@@ -46,17 +47,18 @@ export const OtherServices = ({
   tag,
   desc,
   topBorder = true,
-  bottomBorder = true
+  bottomBorder = true,
+  isScroll = false
 }) => {
   return (
     <section
       className={`${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
     >
       <div className="relative grid grid-cols-1 md:grid-cols-6">
-        <div className="md-border-r pt-[126px] relative box-border flex h-full flex-col items-start justify-start pl-[80px] md:col-span-3">
+        <div className="md-border-r relative box-border flex h-full flex-col items-start justify-start pl-[80px] pt-[126px] md:col-span-3">
           {tag && <Tag title={tag} className="mb-4 md:mb-8" />}
 
-          <h3 className="text-left text-[42px] uppercase text-white ">
+          <h3 className="text-left text-[42px] uppercase leading-[37.59px] text-white ">
             {title}
           </h3>
           {desc && (
@@ -65,7 +67,14 @@ export const OtherServices = ({
             </p>
           )}
         </div>
-        <div className="quote_wrapper flex items-stretch overflow-x-scroll md:col-span-3 md:flex-col md:overflow-x-hidden md:overflow-y-visible">
+        <div
+          className={cn(
+            "quote_wrapper flex items-stretch overflow-x-scroll md:col-span-3 md:flex-col md:overflow-x-hidden md:overflow-y-visible",
+            {
+              "max-h-[630px] overflow-y-scroll": isScroll
+            }
+          )}
+        >
           {data &&
             data.map((feedback, index) => (
               <Quote
