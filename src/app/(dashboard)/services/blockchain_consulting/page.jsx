@@ -1,11 +1,13 @@
-import { HeroSection } from "../components/service/blocks/HeroSection";
-import Achievements from "../components/service/blocks/Achievements";
 import Contact from "@/components/Contact";
+import Achievements from "../components/service/blocks/Achievements";
+import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
-import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
-import { Industries } from "../components/service/blocks/Industries/index";
 import { Feedback } from "../components/service/blocks/Feedback";
+import { HeroSection } from "../components/service/blocks/HeroSection";
+import { Industries } from "../components/service/blocks/Industries/index";
+import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
+import { TustByNumbers } from "../web3_fullstack_development/blocks/TustByNumbers";
 import {
   EngagementDevData,
   OurWorksData,
@@ -15,9 +17,7 @@ import {
 } from "./utils/data";
 import { IndustriesDexData } from "./utils/data";
 import { TustByNumbersData } from "./utils/data";
-import { TustByNumbers } from "../full_stack_development/blocks/TustByNumbers";
 import { BlockchainServiceData } from "./utils/data";
-import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 
 const BlockChainConsulting = () => {
   return (

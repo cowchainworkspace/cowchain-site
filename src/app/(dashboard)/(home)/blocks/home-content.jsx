@@ -1,30 +1,30 @@
 "use client";
 
-import Cases from "./Cases";
-import Clients from "./Clients";
 import Contact from "@/components/Contact";
-import FAQ from "../../services/components/service/blocks/FAQ";
-import Team from "./Team";
-import CasesMobile from "./CasesMobile.jsx";
-import { KeyFeatures } from "../../services/components/service/blocks/KeyFeatures";
-import { ServiceStack } from "../../services/components/service/blocks/stack";
 import { ExpertiseServices } from "../../services/components/service/blocks/ExpertiseServices";
-import { Industries } from "../../services/components/service/blocks/Industries";
+import FAQ from "../../services/components/service/blocks/FAQ";
 import { Feedback } from "../../services/components/service/blocks/Feedback";
+import { Industries } from "../../services/components/service/blocks/Industries";
+import { KeyFeatures } from "../../services/components/service/blocks/KeyFeatures";
 import { OtherServices } from "../../services/components/service/blocks/OtherServices";
-import { TustByNumbers } from "../../services/full_stack_development/blocks/TustByNumbers";
-import Advantages from "./Advantages";
+import { ServiceStack } from "../../services/components/service/blocks/stack";
+import { TustByNumbers } from "../../services/web3_fullstack_development/blocks/TustByNumbers";
 import {
   FSExpertiseData,
   TustByNumbersData,
+  WhyClientChooseData,
+  engagementModels,
+  otherServiceData,
   ourServices,
-  web3DevData,
   servedIndustriesData,
   useCases,
-  engagementModels,
-  WhyClientChooseData,
-  otherServiceData
+  web3DevData
 } from "../utils/homeData";
+import Advantages from "./Advantages";
+import Cases from "./Cases";
+import CasesMobile from "./CasesMobile.jsx";
+import Clients from "./Clients";
+import Team from "./Team";
 
 export default function HomeContent() {
   return (
