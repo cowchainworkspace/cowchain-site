@@ -41,9 +41,9 @@ export const useGetArticles = (sortParams) => {
         populate: {
           preview_article_img: { fields: ["url"] }
         },
+        sort: ["date:desc"],
         fields: ['article_title', "slug", "id", "article_description", "tag", "author_name", "reading_minutes"],
         pagination: { page: pageParam, pageSize: 5 },
-     
       }, {
         encodeValuesOnly: true,
       })
@@ -152,6 +152,7 @@ export const useGetMorePosts = (currentSlug) => {
         populate: {
          preview_article_img: { fields: ["url"] }
         },
+        sort: ["date:desc"],
         fields: ['article_title', "slug", "id", "article_description", "tag"],
         pagination: { page: pageParam, pageSize: 8 },
      

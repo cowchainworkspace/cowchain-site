@@ -16,17 +16,9 @@ import { ReviewsSection } from "../components/ReviewsSection/ReviewsSection";
 import { SideMenu } from "../components/SideMenu/SideMenu";
 
 function Article() {
-  const [activeButton, setActiveButton] = useState(null);
-
   const params = useParams();
   const { slug } = params;
   const { data, isLoading, isError } = useGetArticleBySlug(slug);
-
-  const textArrayLength = data
-    ? data?.attributes.article_paragraphs.filter(
-        (paragraph) => !paragraph.__component.includes("image")
-      ).length
-    : 0;
 
   const articleTitles = [];
 
