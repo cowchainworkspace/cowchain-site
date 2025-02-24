@@ -30,12 +30,14 @@ export const ArticleParagraphs = ({
           return (
             <div id={`${paragraph.titleId}`}>
               <div className="container relative max-w-[340px] px-0 text-left md:max-w-[560px]">
-                <h3 className="mb-6 text-left text-2xl uppercase">
+                <h2 className="mb-6 text-left text-2xl uppercase">
                   {paragraph.title}
-                </h3>
-                <p className="text-sm  text-secondary">
-                  {paragraph.description}
-                </p>
+                </h2>
+                {paragraph.description.map((item, index) => (
+                  <p key={index} className="text-sm  text-secondary">
+                    {item}
+                  </p>
+                ))}
               </div>
               <div className="container relative my-[50px] flex w-full flex-col items-center px-0">
                 <Image
@@ -67,12 +69,16 @@ export const ArticleParagraphs = ({
           <div
             id={`${paragraph.titleId}`}
             key={paragraph.id}
-            className="container relative max-w-[340px] px-0 text-left md:max-w-[560px]"
+            className="container relative mb-[50px] max-w-[340px] px-0 text-left md:max-w-[560px]"
           >
-            <h3 className="mb-6 text-left text-2xl uppercase">
+            <h2 className="mb-6 text-left text-2xl uppercase">
               {paragraph.title}
-            </h3>
-            <p className="text-sm  text-secondary">{paragraph.description}</p>
+            </h2>
+            {paragraph.description.map((item, index) => (
+              <p key={index} className="text-sm  text-secondary">
+                {item}
+              </p>
+            ))}
           </div>
         );
       })}

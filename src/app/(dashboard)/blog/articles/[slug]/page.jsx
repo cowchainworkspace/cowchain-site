@@ -1,4 +1,5 @@
 "use client";
+import bannerIg from "@/assets/blog/articles/splash.png";
 import { Loading } from "@/components/loader/Loading";
 import FooterForm from "@/components/utils/FooterForm";
 import { useGetArticleBySlug } from "@/hooks/use-strapi";
@@ -40,8 +41,7 @@ function Article() {
   const paragraphs = data.attributes.article_paragraphs.map((paragraph) => {
     if (!paragraph.__component.includes("image")) {
       const titleId = crypto.randomUUID();
-      const title = getSplitText(paragraph.text, 0);
-      const description = getSplitText(paragraph.text, 1);
+      const { title, description } = getSplitText(paragraph.text);
       articleTitles.push({
         id: titleId,
         title
@@ -76,7 +76,7 @@ function Article() {
         <Image
           height={560}
           width={600}
-          src={data?.attributes.banner_img.data?.attributes?.url}
+          src={data?.attributes.banner_img.data?.attributes?.url || bannerIg}
           className="block h-[234px] w-full object-cover md:max-h-[560px] md:min-h-[430px]"
           alt=""
         />
