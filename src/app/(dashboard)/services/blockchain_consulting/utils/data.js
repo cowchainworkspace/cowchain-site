@@ -122,11 +122,11 @@ export const consultingProcessData = [
   {
     title: "Discovery & Analysis",
     content:
-      "Blockchain consulting begins by gathering detailed information about your business needs and challenges. This allows our specialists  to develop a comprehensive understanding of how technology can benefit your organization"
+      "Blockchain consulting begins by gathering detailed information about your business needs and challenges. This allows our specialists to develop a comprehensive understanding of how technology can benefit your organization"
   },
   {
     title: "Strategic Roadmap Creation",
-    content: `Based on the analysis, we create a tailored strategy that aligns  with your business objectives. This strategy includes detailed steps  for implementation, platform selection, and system integration`
+    content: `Based on the analysis, we create a tailored strategy that aligns with your business objectives. This strategy includes detailed steps for implementation, platform selection, and system integration`
   },
   {
     title: "Implementation Support",
@@ -234,9 +234,9 @@ export const OurWorksData = [
 
 export const TustByNumbersData = [
   {
-    number: 42.26,
-    desc: "delivered across Ethereum, Polygon, Binance Smart Chain, and more",
-    sighn: "+",
+    number: 10.02,
+    desc: "Estimated global blockchain market value in 2024",
+    sighn: "",
     sufix: "B",
     decimal: 2
   },

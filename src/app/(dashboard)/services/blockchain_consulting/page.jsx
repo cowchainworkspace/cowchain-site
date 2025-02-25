@@ -1,11 +1,15 @@
-import { HeroSection } from "../components/service/blocks/HeroSection";
-import Achievements from "../components/service/blocks/Achievements";
+import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
+import Image from "next/image";
+import Achievements from "../components/service/blocks/Achievements";
+import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
-import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
-import { Industries } from "../components/service/blocks/Industries/index";
 import { Feedback } from "../components/service/blocks/Feedback";
+import { HeroSection } from "../components/service/blocks/HeroSection";
+import { Industries } from "../components/service/blocks/Industries/index";
+import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
+import { TustByNumbers } from "../full_stack_development/blocks/TustByNumbers";
 import {
   EngagementDevData,
   OurWorksData,
@@ -15,15 +19,12 @@ import {
 } from "./utils/data";
 import { IndustriesDexData } from "./utils/data";
 import { TustByNumbersData } from "./utils/data";
-import { TustByNumbers } from "../full_stack_development/blocks/TustByNumbers";
 import { BlockchainServiceData } from "./utils/data";
-import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 
 const BlockChainConsulting = () => {
   return (
     <section className="overflow-visible">
       <HeroSection
-        tag={"Blockchain Consulting"}
         title={"Blockchain Consulting Services & Solutions"}
         desc={
           <>
@@ -38,45 +39,42 @@ const BlockChainConsulting = () => {
         tag={"blockchain consulting services"}
         desc={
           <>
-            As a{" "}
+            At Cowchain,{" "}
             <span className="violet-gradient-text">
-              blockchain consulting company
+              one of the leading blockchain consulting companies
             </span>
-            , we deliver
+            , we deliver professional
             <br />
-            professional <br />
             <span className="violet-gradient-text">
               blockchain consulting services
             </span>{" "}
-            <br />
-            tailored to the unique needs of
+            tailored to meet the very unique needs of{" "}
             <span className="violet-gradient-text">
-              businesses looking <br />
-              to leverage blockchain technology
+              every business desirous <br />
+              the potentials of blockchain technology
             </span>
-            . Whether you
+            . Be it in the early stages of considering which blockchain best
+            suits your needs or working to optimize your current blockchain
+            infrastructure,
             <br />
-            are determining which blockchain best suits your
-            <br />
-            requirements or optimizing your current
-            <br />
-            infrastructure, our experts are prepared to deliver <br />
-            deep insights and
+            our experts are here to give deep insights and practical{" "}
             <span className="violet-gradient-text">
-              practical blockchain consulting <br /> solutions
+              blockchain consulting solutions.
             </span>
-            . From blockchain advisory services <br />
+            <br />
+            From blockchain advisory services <br />
             to ongoing development, our approach empowers
             <br />
             companies to{" "}
             <span className="violet-gradient-text">
-              maximize blockchain opportunities
+              leverage a blockchain opportunity.
             </span>
           </>
         }
       />
+
       <TustByNumbers
-        title={"Exploring Blockchain’s Potential in the Modern Market"}
+        title={"Exploring Blockchain’s Potential in the Modern Market"}
         home
         data={TustByNumbersData}
       />
@@ -94,6 +92,13 @@ const BlockChainConsulting = () => {
           "We at Cowchain provide a wide range of blockchain consulting services, including crypto consulting services, structured to meet the peculiar challenges that are presented to businesses through industries. As a trusted blockchain consulting firm, we offer end-to-end blockchain consultancy from strategy development to platform implementation, ensuring your business is ready to reap the full benefits of this transformational technology"
         }
         data={BlockchainServiceData}
+        bg={
+          <Image
+            src={dexBg}
+            alt="decoration ellipse"
+            className="absolute -bottom-[45%] left-0"
+          />
+        }
       />
 
       <Industries
@@ -113,6 +118,13 @@ const BlockChainConsulting = () => {
         data={OurWorksData}
         topBorder={false}
         bottomBorder={false}
+        bg={
+          <Image
+            src={dexBg}
+            alt="decoration ellipse"
+            className="absolute -bottom-[65%] left-0"
+          />
+        }
       />
 
       <FAQ
@@ -121,6 +133,7 @@ const BlockChainConsulting = () => {
         }
         title={"Our Consulting Process"}
         data={consultingProcessData}
+        noBg={true}
       />
 
       <KeyFeatures
@@ -140,6 +153,7 @@ const BlockChainConsulting = () => {
             standards of functionality, protection, and dependability
           </>
         }
+        noBg={true}
       />
 
       <KeyFeatures
