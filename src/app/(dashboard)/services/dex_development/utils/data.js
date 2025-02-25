@@ -97,3 +97,21 @@ export const EngagementDevData = [
     icon: HybridIcon
   }
 ];
+
+export const faqDexData = [
+  {
+    id: 1,
+    title: 'What is Decentralized Exchange (DEX)?',
+    desc: 'A decentralized exchange enables users to trade digital assets directly, bypassing the need for a central authority. DEX platforms use smart contracts to automate transactions, providing a secure and transparent environment.'
+  },
+  {
+    id: 2,
+    title: 'How Much Does It Cost to Create a Decentralized Exchange?',
+    desc: 'The cost of decentralized exchange development depends on the platform’s complexity, the features needed, and the blockchain integrations involved. Contact us for a custom estimate tailored to your specific needs.'
+  },
+  {
+    id: 3,
+    title: 'What Is the Timeline for Developing a Decentralized Finance Exchange?',
+    desc: 'Decentralized cryptocurrency exchange development depends on its complexity. On average, a full-scale platform can take several months from design to deployment.'
+  },
+]

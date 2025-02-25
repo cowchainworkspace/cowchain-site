@@ -14,16 +14,16 @@ export function ExpertiseServices({
     <section
       className={`relative ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
     >
-      {!noBg && (
-        bg
-      )}
+      {!noBg && bg}
 
       <div
         className={`py-heading px-default relative mx-auto max-w-[1440px] ${threeColumns ? "grid grid-cols-3 gap-[85px]" : " flex justify-between"} `}
       >
         <div className="col-span-1 lg:gap-16">
-          <h2 className={`lg:order-0  uppercase text-white
-            ${threeColumns ? "text-[50px]" : "text-[60px]"} `}>
+          <h2
+            className={`lg:order-0  uppercase text-white
+            ${threeColumns ? "text-[50px]" : "text-[60px]"} `}
+          >
             {title}
           </h2>
           <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto"></div>
@@ -35,7 +35,7 @@ export function ExpertiseServices({
         </div>
 
         <div
-          className={`${threeColumns ? "col-span-2 gap-x-[85px] grid grid-cols-2" : "max-w-[519px]"}`}
+          className={`${threeColumns ? "col-span-2 grid grid-cols-2 gap-x-[85px]" : "max-w-[519px]"}`}
         >
           {data.map(({ title, desc }, index) => (
             <div className="relative col-span-1 bg-cover">
