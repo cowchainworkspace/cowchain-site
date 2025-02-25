@@ -1,30 +1,34 @@
 "use client";
 
-import Cases from "./Cases";
-import Clients from "./Clients";
+import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
+import bgEllipse from "@/assets/bg/home-ellipse-bg.webp";
 import Contact from "@/components/Contact";
-import FAQ from "../../services/components/service/blocks/FAQ";
-import Team from "./Team";
-import CasesMobile from "./CasesMobile.jsx";
-import { KeyFeatures } from "../../services/components/service/blocks/KeyFeatures";
-import { ServiceStack } from "../../services/components/service/blocks/stack";
+import Image from "next/image";
 import { ExpertiseServices } from "../../services/components/service/blocks/ExpertiseServices";
-import { Industries } from "../../services/components/service/blocks/Industries";
+import FAQ from "../../services/components/service/blocks/FAQ";
 import { Feedback } from "../../services/components/service/blocks/Feedback";
+import { Industries } from "../../services/components/service/blocks/Industries";
+import { KeyFeatures } from "../../services/components/service/blocks/KeyFeatures";
 import { OtherServices } from "../../services/components/service/blocks/OtherServices";
+import { ServiceStack } from "../../services/components/service/blocks/stack";
 import { TustByNumbers } from "../../services/full_stack_development/blocks/TustByNumbers";
-import Advantages from "./Advantages";
 import {
   FSExpertiseData,
   TustByNumbersData,
+  WhyClientChooseData,
+  engagementModels,
+  faqHomeData,
+  otherServiceData,
   ourServices,
-  web3DevData,
   servedIndustriesData,
   useCases,
-  engagementModels,
-  WhyClientChooseData,
-  otherServiceData
+  web3DevData
 } from "../utils/homeData";
+import Advantages from "./Advantages";
+import Cases from "./Cases";
+import CasesMobile from "./CasesMobile.jsx";
+import Clients from "./Clients";
+import Team from "./Team";
 
 export default function HomeContent() {
   return (
@@ -60,17 +64,22 @@ export default function HomeContent() {
             Our Web3 <br /> development <br /> services
           </>
         }
+        desc={
+          "As a leading Web3 development company, Cowchain delivers Web3 development services that empower businesses to fully utilize decentralized technologies. Each solution is crafted with precision, and aimed at solving real-world challenges"
+        }
         data={web3DevData}
+        isSecondary={true}
       />
       <ServiceStack home />
-      <Advantages />
+      <Advantages isSecondary={true} />
       <ExpertiseServices
+        tag={"web3 development process"}
         data={FSExpertiseData}
         title={
           <>
             Each project follows <br />
             a structured path, <br />
-            designed to
+            designed to{" "}
             <span className="violet-gradient-text">
               minimize
               <br />
@@ -83,11 +92,19 @@ export default function HomeContent() {
             that aligned <br /> with your requirements
           </>
         }
+        bg={
+          <Image
+            src={bgEllipse}
+            alt="decoration ellipse"
+            className="absolute -top-[10%] left-0"
+          />
+        }
+        isDevelop={true}
       />
       <Industries
         title={"Industries Benefiting from Web3 Solutions"}
         desc={
-          "The adaptability of Web3 development allows us to cater to a variety of industries,  each gaining significant value from blockchain technologies"
+          "The adaptability of Web3 development allows us to cater to a variety of industries, each gaining significant value from blockchain technologies"
         }
         data={servedIndustriesData}
         topBorder={false}
@@ -112,6 +129,7 @@ export default function HomeContent() {
           </>
         }
         data={useCases}
+        tag={"web3 development use cases"}
       />
       <Cases />
       <CasesMobile />
@@ -129,6 +147,14 @@ export default function HomeContent() {
           </>
         }
         data={engagementModels}
+        bg={
+          <Image
+            src={dexBg}
+            alt="decoration ellipse"
+            className="absolute -top-[20%] left-0"
+          />
+        }
+        tag={"engagement models"}
       />
       <Industries
         title={
@@ -160,9 +186,10 @@ export default function HomeContent() {
           </>
         }
         data={otherServiceData}
+        tag={"additional services"}
       />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
-      <FAQ />
+      <FAQ noBg={true} data={faqHomeData} />
     </>
   );
 }

@@ -1,16 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import bg from "@/assets/services/FAQServiceBg.svg";
+import { cn } from "@/lib/utils";
 import {
   Accordion,
-  AccordionItem,
   AccordionButton,
+  AccordionItem,
   AccordionPanel
 } from "@chakra-ui/react";
-import { cn } from "@/lib/utils";
-import { useEffect } from "react";
-import bg from "@/assets/services/FAQServiceBg.svg";
 import Image from "next/image";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const faqData = [
   {
@@ -36,7 +36,8 @@ export default function FAQ({
   title = "FREQUENTLY ASKED QUESTIONS",
   data = faqData,
   noBg,
-  desc
+  desc,
+  isSecondary
 }) {
   const [screenWidth, setScreenWidth] = useState();
 
@@ -68,7 +69,11 @@ export default function FAQ({
             {title}
           </h2>
           {desc && (
-            <p className="body my-[40px] text-left leading-6 md:my-[20px]">
+            <p
+              className={cn("body my-[40px] text-left leading-6 md:my-[20px]", {
+                "max-w-[434px] text-balance !text-secondary": isSecondary
+              })}
+            >
               {desc}
             </p>
           )}
