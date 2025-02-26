@@ -1,24 +1,24 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import FooterForm from "./utils/FooterForm";
-import { usePathname } from "next/navigation";
 import linkedin from "@/assets/footer/linkedin.svg";
+import logofont from "@/assets/footer/logofont.svg";
+import mail from "@/assets/footer/mail.svg";
+import medium from "@/assets/footer/medium.svg";
 import telegram from "@/assets/footer/telegram.svg";
 import twitter from "@/assets/footer/twitter.svg";
-import medium from "@/assets/footer/medium.svg";
-import mail from "@/assets/footer/mail.svg";
-import Faq from "react-faq-component";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import logofont from "@/assets/footer/logofont.svg";
-import Link from "next/link";
-import Image from "next/image";
+import clutch from "@/assets/homepage/clutch.svg";
+import upwork from "@/assets/homepage/upwork.svg";
 import { useLoader } from "@/hooks/useLoader";
 import { cn } from "@/lib/utils";
-import upwork from "@/assets/homepage/upwork.svg";
-import clutch from "@/assets/homepage/clutch.svg";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import { alignPropType } from "react-bootstrap/esm/types";
+import Faq from "react-faq-component";
 import { SocialLinks } from "./SocialLinks";
+import FooterForm from "./utils/FooterForm";
 
 const faqRows = {
   title: "",
@@ -122,7 +122,7 @@ const faqStyles = {
   timingFunc: "ease"
 };
 
-export default function Footer({footerForm}) {
+export default function Footer({ footerForm }) {
   const [isBorder, setIsBorder] = useState(false);
   const { isRendering } = useLoader();
   const pathname = usePathname();
@@ -152,6 +152,9 @@ export default function Footer({footerForm}) {
             <div className="grid grid-cols-3 gap-x-8">
               <div className="footer-links h-full">
                 <div className=" flex h-full flex-col gap-y-4">
+                  <p className="font-roc text-base font-medium !text-white">
+                    WHAT WE DO
+                  </p>
                   <Link href="/services">
                     <p className="text-[#bbb]">
                       Services &<br></br> Techonologies
@@ -165,13 +168,11 @@ export default function Footer({footerForm}) {
                     <p className="text-[#bbb]">Clients</p>
                   </Link>
                   <div className="flex-grow"></div>
-                  <p className="font-roc text-base font-medium !text-white">
-                    WHAT WE DO
-                  </p>
                 </div>
               </div>
               <div className="footer-links h-full">
                 <div className="flex h-full flex-col gap-y-4">
+                  <p className="font-roc font-medium !text-white">AGENCY</p>
                   <Link href="/team">
                     <p className="text-[#bbb]">Team</p>
                   </Link>
@@ -179,11 +180,13 @@ export default function Footer({footerForm}) {
                     <p className="text-[#bbb]">Blog</p>
                   </Link>
                   <div className="flex-grow"></div>
-                  <p className="font-roc font-medium !text-white">AGENCY</p>
                 </div>
               </div>
               <div className="footer-links h-full">
                 <div className="flex h-full flex-col gap-y-4">
+                  <p className="font-roc text-base font-medium !text-white">
+                    HELP
+                  </p>
                   <AnchorLink href="#contact">
                     <p className="text-[#bbb]">Contact Us</p>
                   </AnchorLink>
@@ -194,9 +197,6 @@ export default function Footer({footerForm}) {
                     <p className="text-[#bbb]">FAQs</p>
                   </AnchorLink>
                   <div className="flex-grow"></div>
-                  <p className="font-roc text-base font-medium !text-white">
-                    HELP
-                  </p>
                 </div>
               </div>
             </div>

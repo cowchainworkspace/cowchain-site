@@ -29,7 +29,7 @@ export const ScrollProject = ({
           "relative flex md:w-[547px] py-[20px] flex-col items-start md:h-[698px] md:py-[72px]",
           {
             "h-[546px]": !mobile,
-            "h-[419px]  max-w-[375px] md:h-[419px]": mobile,
+            " max-w-[375px] md:h-[419px]": mobile,
             "gap-[30px]": !mobile,
             "gap-[20px] p-[20px] py-[38px]": mobile
           }
@@ -40,7 +40,7 @@ export const ScrollProject = ({
           <Image
             className={cn("h-[100%] ", {
               "max-h-[348px] w-auto md:max-h-[370px]": !mobile,
-              "max-h-auto w-full ": mobile
+              "max-h-[231px] w-full ": mobile
             })}
             src={photo.src}
             width={503}

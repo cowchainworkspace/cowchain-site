@@ -15,9 +15,9 @@ export default function HeaderContent() {
         work for you
       </h1>
 
-      <div className="mt-auto grid grid-cols-1 md:grid-cols-2">
-        <div className="relative flex items-center md:gap-x-1">
-          <h2 className="hidden text-[32px] leading-[29px] md:block">
+      <div className="mt-auto grid grid-cols-1 lg:grid-cols-2">
+        <div className="relative flex mb-[24px] md:mb-0 items-center md:gap-x-1">
+          <h2 className="text-[16px] font-[500] md:text-[24px] custom1200:text-[32px] custom1200:leading-[29px]">
             BEING FULLY IMMERSED IN WEB3, <br />
             WE'RE NOT JUST DEVS — WE'RE <br />
             PRODUCT VISIONARIES WORKING <br />

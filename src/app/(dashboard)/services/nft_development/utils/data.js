@@ -1,3 +1,4 @@
+import { benefitsData } from "@/app/(dashboard)/(home)/homeData/data";
 import ConsultingAdvisoryIcon from "@/assets/svgComponents/industries/ConsultingAdvisoryIcon";
 import DedicateTeamIcon from "@/assets/svgComponents/industries/DedicateTeamIcon";
 import EducationIcon from "@/assets/svgComponents/industries/EducationIcon";
@@ -315,3 +316,33 @@ export const nftServicesData = [
     desc: "Our NFT development allows for complete flexibility in how you want to design your tokens and implement them across platforms. This ensures unique, tailor-made solutions for each business, whether for art, collectibles, or virtual assets"
   }
 ];
+
+export const nftBenefitsData = [
+  {
+    id: 1,
+    title: "Blockchain Expertise",
+    desc: "Our experience in NFT development ensures a strong and scalable infrastructure across various platforms like Ethereum, Solana, and Near.",
+  },
+  {
+    id: 2,
+    title: "Long-term Project Support",
+    desc: "We continue to offer maintenance services to help you keep your platform relevant and secure in an ever-changing digital economy.",
+  },
+  {
+    id: 3,
+    title: "Flexibility",
+    desc: "Tailored NFT development ensures that your platform aligns perfectly with your business objectives.",
+  },
+  {
+    id: 4,
+    title: "Comprehensive Solutions",
+    desc: "As an nft token development company, Cowchain provides businesses with a full range of services, from initial planning to the launch of advanced NFT platforms.",
+  },
+  {
+    id: 5,
+    title: "Specialized Approach",
+    desc: "Our expertise in NFT development helps businesses leverage blockchain technologies to enhance user engagement and build sustainable ecosystems.",
+  },
+
+
+]
