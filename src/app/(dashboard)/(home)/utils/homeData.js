@@ -1,11 +1,11 @@
+import Design from "@/assets/svgComponents/industries/DesignDevIcon";
 import EcommerceIcon from "@/assets/svgComponents/industries/EcomerceIcon";
 import FinanceIcon from "@/assets/svgComponents/industries/FinanceIcon";
-import HealthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
-import SupplyIcon from "@/assets/svgComponents/industries/SupplyChainIcon";
-import GamingIcon from "@/assets/svgComponents/industries/GamingIcon";
-import BlockchainIcon from "@/assets/svgComponents/industries/LaunchMaitenanceIcon";
-import Design from "@/assets/svgComponents/industries/DesignDevIcon";
 import FullStack from "@/assets/svgComponents/industries/FullStackIcon";
+import GamingIcon from "@/assets/svgComponents/industries/GamingIcon";
+import HealthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
+import BlockchainIcon from "@/assets/svgComponents/industries/LaunchMaitenanceIcon";
+import SupplyIcon from "@/assets/svgComponents/industries/SupplyChainIcon";
 import WhiteLabel from "@/assets/svgComponents/industries/WhiteLabel";
 
 export const servedIndustriesData = [
@@ -26,7 +26,7 @@ export const servedIndustriesData = [
   },
   {
     title: "Gaming and Entertainment",
-    text: "Web3 development solutions in gaming and entertainment create new opportunities for engagement, combining blockchain  with immersive experiences",
+    text: "Web3 development solutions in gaming and entertainment create new opportunities for engagement, combining blockchain with immersive experiences",
     icon: GamingIcon
   },
   {
@@ -39,7 +39,7 @@ export const servedIndustriesData = [
 export const ourServices = [
   {
     title: "WEB3 FULL STACK DEVELOPMENT",
-    text: "Bring your vision to life, using our experience from delivering 120+  Web3 projects",
+    text: "Bring your vision to life, using our experience from delivering 120+ Web3 projects",
     icon: FullStack
   },
   {
@@ -126,7 +126,7 @@ export const FSExpertiseData = [
 
 export const otherServiceData = [
   {
-    text: "UI / UX Design",
+    text: "WEB3 UI / UX Design",
     author:
       "We create user-friendly, highly intuitive UI/UX designs that balance aesthetics with functionality for Web3 applications"
   },
@@ -164,7 +164,7 @@ export const TustByNumbersData = [
   {
     number: 120,
     title: "PROJECTS",
-    desc: "delivered across Ethereum, Polygon,  Binance Smart Chain, and more",
+    desc: "delivered across Ethereum, Polygon, Binance Smart Chain, and more",
     sighn: "+"
   },
   {
@@ -216,3 +216,31 @@ export const web3DevData = [
     content: `Maintaining the integrity of blockchain platforms is critical. Cowchain delivers thorough blockchain security audits, identifying and mitigating potential risks. Regular security updates ensure that your platform remains a step ahead of emerging threats`
   }
 ];
+
+export const faqHomeData = [
+  {
+    id: 1,
+    title: 'What Does Web3 Development Involve?',
+    content: 'Web3 development involves creating decentralized applications, integrating blockchain technology, and leveraging smart contracts to create secure and efficient systems.',
+  },
+  {
+    id: 2,
+    title: 'How Is Web3 Different from Web2?',
+    content: 'Web3 operates on decentralized networks, allowing users to have greater control over their data and transactions. Unlike Web2, Web3 removes intermediaries and relies on blockchain technology for enhanced security and transparency.',
+  },
+  {
+    id: 3,
+    title: 'What Are Some Common Web3 Use Cases?',
+    content: 'Common Web3 use cases include DeFi platforms, decentralized exchanges, NFTs, decentralized applications (dApps), and DAOs.',
+  },
+  {
+    id: 4,
+    title: 'How Long Does It Usually Take to Develop a Web3 Project?',
+    content: 'The timeline for developing a Web3 project depends on its complexity. Generally, the process spans a few months, covering stages from initial planning to final deployment.',
+  },
+  {
+    id: 5,
+    title: 'Can Web3 Solutions Be Integrated with Existing Systems?',
+    content: 'Yes, our Web3 development company ensures seamless integration of blockchain solutions with your existing systems.',
+  },
+]

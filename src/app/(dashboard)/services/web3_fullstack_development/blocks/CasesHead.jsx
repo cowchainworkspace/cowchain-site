@@ -1,17 +1,16 @@
 "use client";
 
-import bg_lg from "@/assets/bg/home-clients.png";
 import arrow from "@/assets/arrow_right.svg";
-import Link from "next/link";
+import bg_lg from "@/assets/bg/home-clients.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export function CasesHead() {
   return (
     <section className="relative">
-
-      <div className="pt-[126px] pb-[84px] px-[88px] relative">
-        <div className="flex justify-between items-start ">
-          <div className="flex flex-col gap-[60px]">
+      <div className="relative px-8 py-10 md:px-[88px] md:pb-[84px] md:pt-[126px]">
+        <div className="flex flex-col items-start justify-between md:flex-row ">
+          <div className="flex flex-col gap-5 md:gap-[60px]">
             <h2 className="lg:order-0 heading-[38px] text-[42px]  uppercase text-white">
               Our Full-Stack Development Cases
             </h2>
@@ -22,10 +21,7 @@ export function CasesHead() {
               played a crucial role
             </p>
           </div>
-          <Link
-            href="/cases"
-            className=" lg:order-1 lg:ml-auto lg:block"
-          >
+          <Link href="/cases" className=" lg:order-1 lg:ml-auto lg:block">
             <div className="flex items-center gap-x-2">
               <p className="header uppercase text-white underline">
                 OTHER Cases

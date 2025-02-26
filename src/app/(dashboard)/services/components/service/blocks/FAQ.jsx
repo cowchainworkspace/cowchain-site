@@ -37,7 +37,7 @@ export default function FAQ({
   data = faqData,
   noBg,
   desc,
-  tag,
+  isSecondary,
   faq = false
 }) {
   const [screenWidth, setScreenWidth] = useState();
@@ -65,12 +65,20 @@ export default function FAQ({
       )}
 
       <div className="relative grid grid-cols-1 md:grid-cols-5">
-        <div className={`md:py-heading px-default md-border-r flex flex-col ${faq ? 'justify-center' : 'justify-start'} gap-[10px] border-b border-b-th-fade py-[60px] text-left md:col-span-2 md:gap-0`}>
-          <h2 className={`flex ${faq ? 'justify-center text-center' : 'justify-start text-left'} text-[36px]  custom1000:text-[42px] uppercase uppercase leading-[40px] text-white  md:text-left`}>
+        <div
+          className={`md:py-heading px-default md-border-r flex flex-col ${faq ? "justify-center" : "justify-start"} gap-[10px] border-b border-b-th-fade py-[60px] text-left md:col-span-2 md:gap-0`}
+        >
+          <h2
+            className={`flex ${faq ? "justify-center text-center" : "justify-start text-left"} text-[36px]  uppercase uppercase leading-[40px] text-white md:text-left  custom1000:text-[42px]`}
+          >
             {title}
           </h2>
           {desc && (
-            <p className="text-left text-[16px] leading-6 md:my-[20px] md:my-[40px]">
+            <p
+              className={cn("body my-[40px] text-left leading-6 md:my-[20px]", {
+                "max-w-[434px] text-balance !text-secondary": isSecondary
+              })}
+            >
               {desc}
             </p>
           )}
@@ -90,13 +98,15 @@ export default function FAQ({
                     key={index}
                   >
                     <AccordionButton className={cn("relative")}>
-                      <div className="mr-0 md:mr-auto w-full text-left">
-                        <span className="max-w-full block !w-full text-left font-roc text-[20px]
-                         font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none">
+                      <div className="mr-0 w-full text-left md:mr-auto">
+                        <span
+                          className="block !w-full max-w-full text-left font-roc text-[20px]
+                         font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none"
+                        >
                           {faq.title}
                         </span>
                       </div>
-                      <div className={` ${!faq ? 'hidden' : 'block'}`}>
+                      <div className={` ${!faq ? "hidden" : "block"}`}>
                         {isExpanded ? (
                           <div
                             className="flex items-center justify-end md:justify-center"

@@ -1,14 +1,14 @@
-import React from "react";
 import arrow from "@/assets/arrow_right.svg";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 export const WhiteLabelCases = () => {
   return (
     <section className="relative">
-      <div className="relative px-[88px] pb-[84px] pt-[126px]">
-        <div className="flex items-start justify-between ">
-          <div className="flex flex-col gap-[60px]">
+      <div className="relative px-4 py-10 md:px-[88px] md:pb-[84px] md:pt-[126px]">
+        <div className="flex flex-col items-start justify-between md:flex-row ">
+          <div className="flex flex-col gap-5 md:gap-[60px]">
             <h2 className="lg:order-0 heading-[38px] text-[42px]  uppercase text-white">
               Our White Label Web Development Cases
             </h2>

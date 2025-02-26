@@ -1,6 +1,9 @@
 "use client";
 
+import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
+import bgEllipse from "@/assets/bg/home-ellipse-bg.webp";
 import Contact from "@/components/Contact";
+import Image from "next/image";
 import { ExpertiseServices } from "../../services/components/service/blocks/ExpertiseServices";
 import FAQ from "../../services/components/service/blocks/FAQ";
 import { Feedback } from "../../services/components/service/blocks/Feedback";
@@ -14,6 +17,7 @@ import {
   TustByNumbersData,
   WhyClientChooseData,
   engagementModels,
+  faqHomeData,
   otherServiceData,
   ourServices,
   servedIndustriesData,
@@ -89,15 +93,15 @@ and aimed at solving real-world challenges"
         />
       </div>
       <ServiceStack home />
-      <Advantages />
+      <Advantages isSecondary={true} />
       <ExpertiseServices
-        tag="web3 development process"
+        tag={"web3 development process"}
         data={FSExpertiseData}
         title={
           <>
             Each project follows <br />
             a structured path, <br />
-            designed to
+            designed to{" "}
             <span className="violet-gradient-text">
               minimize
               <br />
@@ -110,11 +114,19 @@ and aimed at solving real-world challenges"
             that aligned <br /> with your requirements
           </>
         }
+        bg={
+          <Image
+            src={bgEllipse}
+            alt="decoration ellipse"
+            className="absolute -top-[10%] left-0"
+          />
+        }
+        isDevelop={true}
       />
       <Industries
         title={"Industries Benefiting from Web3 Solutions"}
         desc={
-          "The adaptability of Web3 development allows us to cater to a variety of industries,  each gaining significant value from blockchain technologies"
+          "The adaptability of Web3 development allows us to cater to a variety of industries, each gaining significant value from blockchain technologies"
         }
         data={servedIndustriesData}
         topBorder={false}
@@ -139,7 +151,7 @@ and aimed at solving real-world challenges"
           </>
         }
         data={useCases}
-        tag="web3 development use cases"
+        tag={"web3 development use cases"}
       />
       <Cases />
       <CasesMobile />
@@ -157,7 +169,14 @@ and aimed at solving real-world challenges"
           </>
         }
         data={engagementModels}
-        tag="engagement models"
+        bg={
+          <Image
+            src={dexBg}
+            alt="decoration ellipse"
+            className="absolute -top-[20%] left-0"
+          />
+        }
+        tag={"engagement models"}
       />
       <Industries
         title={
@@ -190,10 +209,10 @@ and aimed at solving real-world challenges"
           </>
         }
         data={otherServiceData}
-        tag="additional services"
+        tag={"additional services"}
       />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
-      <FAQ faq={true} />
+      <FAQ noBg={true} data={faqHomeData} />
     </>
   );
 }

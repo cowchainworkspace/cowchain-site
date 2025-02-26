@@ -1,8 +1,9 @@
 "use client";
+import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { blocksData } from "../homeData/data";
 
-export default function ExpandingBlocks() {
+export default function ExpandingBlocks({ isSecondary = false }) {
   const [activeBlock, setActiveBlock] = useState(blocksData[0]);
 
   const handleClick = (id) => {
@@ -19,8 +20,15 @@ export default function ExpandingBlocks() {
             <h2 className="lg:order-0 text-[36px] uppercase text-white sm:text-[60px] ">
               Advantages of Web3 Development
             </h2>
-            <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto"></div>
-            <p className="body my-[40px] max-w-[592px] text-base leading-6 md:my-[20px]">
+            <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto" />
+            <p
+              className={cn(
+                "body my-[40px] max-w-[592px] text-base leading-6 md:my-[20px]",
+                {
+                  "!text-secondary": isSecondary
+                }
+              )}
+            >
               Blockchain technology is reshaping industries, offering a range of
               benefits for businesses ready to embrace decentralized solutions.
               As a web3 development services company, Cowchain ensures that our
@@ -37,7 +45,7 @@ export default function ExpandingBlocks() {
           </h2>
           <p className="body text-[16px]">{activeBlock.description}</p>
         </div>
-        <div className="px-default mx-auto  border-t border-t-th-fade md:border-0 flex h-[411px] max-w-[1440px]">
+        <div className="px-default mx-auto  flex h-[411px] max-w-[1440px] border-t border-t-th-fade md:border-0">
           {blocksData.map((block, index) => (
             <>
               <div

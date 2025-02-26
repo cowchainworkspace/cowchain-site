@@ -1,10 +1,10 @@
-import React from "react";
-import clutch from "@/assets/homepage/clutch.svg";
-import upwork from "@/assets/homepage/upwork.svg";
-import topRated from "@/assets/homepage/topRatedIcon.svg";
-import star from "@/assets/clients/reate-star.svg";
 import bg from "@/assets/bg/clients_feedback.png";
+import star from "@/assets/clients/reate-star.svg";
+import clutch from "@/assets/homepage/clutch.svg";
+import topRated from "@/assets/homepage/topRatedIcon.svg";
+import upwork from "@/assets/homepage/upwork.svg";
 import Image from "next/image";
+import React from "react";
 
 const feedbackData = [
   {
@@ -73,8 +73,8 @@ export const Feedback = () => {
             className="absolute -top-[40%] left-0 w-full md:-left-[20%] md:-top-[15vw] md:h-1/2"
             src={bg}
             alt=""
-          ></Image>
-          <div className="h-[1px]"></div>
+          />
+          <div className="h-[1px]" />
           <div className="mx-default my-heading sticky bottom-[30vh] w-full self-end ">
             <h3 className="uppercase !leading-none text-white">
               What our
@@ -121,7 +121,9 @@ export const Feedback = () => {
                 </a>
                 <div className="flex items-center gap-[8px]">
                   <Image className="w-[35px]" src={topRated} alt=""></Image>
-                  <p className="markup mt-1 text-[16px] text-white">Top Rated Plus</p>
+                  <p className="markup mt-1 text-[16px] text-white">
+                    Top Rated Plus
+                  </p>
                 </div>
               </div>
             </div>
