@@ -9,7 +9,7 @@ import home from "@/assets/icons/home.png";
 import Link from "next/link";
 import arrow from "@/assets/icons/arrow.svg";
 
-export const HeroSection = ({ title, desc, tag }) => {
+export const HeroSection = ({ title, desc }) => {
   return (
     <section className="relative overflow-visible  pt-20  lg:pt-[120px] ">
       <Helmet>
