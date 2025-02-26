@@ -34,7 +34,7 @@ export function KeyFeatures({
       {!noBg && (
         <Image
           alt=""
-          className="absolute -bottom-[38%] right-0  md:block "
+          className="absolute -bottom-[38%] right-0 md:block"
           src={dexAdvisoryBg}
         />
       )}
@@ -46,14 +46,16 @@ export function KeyFeatures({
         />
       )}
       <div
-        className={`px-default relative mx-auto flex  max-w-[1440px] flex-col justify-between ${isOneBlock ? "py-[126px]" : "pb-[84px] pt-[126px]"} gap-[107px] `}
+        className={`px-default relative mx-auto flex  max-w-[1440px] flex-col justify-between ${isOneBlock ? "py-[60px] md:py-[126px]" : "pb-[84px] pt-[60px] md:pt-[126px]"} gap-[107px] `}
       >
         <div className={` ${reverse ? "flex flex-row gap-[102px]" : "block"}"`}>
-          {tag && <Tag title={tag} className="mb-4 max-w-[194px] md:mb-8" />}
-          <h2 className="lg:order-0 text-[60px] uppercase text-white  md:text-[60px]">
+          {tag && (
+            <Tag title={tag} className="mb-[40px] max-w-[194px] md:mb-8" />
+          )}
+          <h2 className="lg:order-0 text-[36px] uppercase text-white  md:text-[60px]">
             {title}
           </h2>
-          <p className="body my-[40px] max-w-[824px] text-base leading-6 md:my-[20px]">
+          <p className="mt-[40px] max-w-[824px] text-[14px] leading-6 md:my-[20px] md:text-base">
             {desc}
           </p>
         </div>
@@ -63,7 +65,7 @@ export function KeyFeatures({
             {data.map(({ title, desc }) => (
               <div className="relative  max-w-[519px] bg-cover">
                 <div className="mr-auto w-full text-left ">
-                  <span className="text-left font-roc !text-[20px] font-medium uppercase !leading-none text-white">
+                  <span className="text-left font-roc text-[20px] font-medium uppercase !leading-none text-white">
                     {title}
                   </span>
                 </div>

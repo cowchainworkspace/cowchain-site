@@ -11,11 +11,11 @@ export const ViewMoreSection = ({
   return (
     <section
       id="view_more"
-      className="relative z-10 mt-10 overflow-hidden border-b  border-b-th-fade"
+      className="relative z-10 overflow-hidden border-y border-y-th-fade"
     >
       <div className="relative grid grid-cols-1">
-        <div className="flex flex-col items-center justify-center gap-y-8 px-4 py-16 text-center ">
-          <h3 className="mx-auto text-center text-2xl">
+        <div className="flex flex-col items-center justify-center gap-y-5 px-4 py-16 text-center ">
+          <h3 className="mx-auto text-center text-2xl leading-7">
             You are viewing {current} of {count} articles
           </h3>
 
@@ -29,7 +29,7 @@ export const ViewMoreSection = ({
             }}
             disabled={current >= count}
           >
-            {isFetchingNextPage ? <DotsLoader /> : "View More"}
+            {isFetchingNextPage ? <DotsLoader /> : "Load More"}
           </button>
         </div>
       </div>

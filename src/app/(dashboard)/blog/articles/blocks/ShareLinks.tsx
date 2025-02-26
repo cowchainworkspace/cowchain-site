@@ -1,9 +1,9 @@
-import React from "react";
 import facebook from "@/assets/article/facebookIcon.svg";
 import copyLink from "@/assets/article/link.svg";
+import medium from "@/assets/article/medium-article.svg";
 import twitter from "@/assets/article/twitterIcon.svg";
-import instagram from "@/assets/article/InstagramIcon.svg";
 import Image from "next/image";
+import React from "react";
 
 export const ShareLinks = () => {
   return (
@@ -56,8 +56,8 @@ export const ShareLinks = () => {
       >
         <Image
           alt="medium"
-          className="w-[14px] lg:w-[14px]"
-          src={instagram}
+          className="w-[14px] lg:w-[18px]"
+          src={medium}
         ></Image>
       </a>
     </div>
