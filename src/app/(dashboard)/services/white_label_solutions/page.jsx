@@ -9,20 +9,22 @@ import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
-import { CasesHead } from "../web3_fullstack_development/blocks/CasesHead";
 import { TustByNumbers } from "../web3_fullstack_development/blocks/TustByNumbers";
-import { metadata } from "./utils//WhiteLabelDevMetadata";
+import { WhiteLabelCases } from "./blocks/WhiteLabelCases";
+import { metadata } from "./utils/WhiteLabelDevMetadata";
 import { faqDappData, otherServices } from "./utils/data";
 import { IndustriesDexData } from "./utils/data";
-import { TustByNumbersData, whiteLabelSolutions } from "./utils/data";
-
+import {
+  TustByNumbersData,
+  faqQuestions,
+  whiteLabelSolutions
+} from "./utils/data";
 export { metadata };
 
 const WhiteLabelDev = () => {
   return (
     <section className="overflow-visible">
       <HeroSection
-        tag={"White Label Development"}
         title={"White Label Web Development Services"}
         desc={
           <>
@@ -70,6 +72,8 @@ const WhiteLabelDev = () => {
       <KeyFeatures
         isOneBlock={true}
         title={"What is White Label?"}
+        noBg={true}
+        isWhiteLabelBg={true}
         desc={
           <>
             White label development services allow businesses to expand their
@@ -87,6 +91,12 @@ const WhiteLabelDev = () => {
             behind the scenes. No additional overhead. No stress. Curious how
             white label development can help your business? Book a call with us
             today and discover the possibilities!
+            <br />
+            <br />
+            <p>
+              Curious how white label development can help your business? Book a
+              call with us today and discover the possibilities!
+            </p>
           </>
         }
       />
@@ -106,7 +116,7 @@ const WhiteLabelDev = () => {
         title={"Advantages of White-Label Web Development"}
         desc={
           <>
-            ur white label development company guarantees that clients receive
+            Our white label development company guarantees that clients receive
             high-quality, scalable solutions, helping them expand their online
             presence. By leveraging white label website development, combined
             with app development, you gain access to a skilled team that ensures
@@ -159,10 +169,10 @@ const WhiteLabelDev = () => {
         data={otherServices}
       />
       <Feedback />
-      <CasesHead />
+      <WhiteLabelCases />
       <Cases />
       <CasesMobile />
-      <FAQ />
+      <FAQ data={faqQuestions} noBg={true} />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
