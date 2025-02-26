@@ -1,96 +1,46 @@
 "use client";
-
-import rightArrow from "@/assets/article/rightArrow.svg";
+import bannerIg from "@/assets/blog/articles/splash.png";
 import { Loading } from "@/components/loader/Loading";
 import FooterForm from "@/components/utils/FooterForm";
 import { useGetArticleBySlug } from "@/hooks/use-strapi";
+import { getSplitText } from "@/lib/utils";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { Fragment, useEffect, useState } from "react";
+import { useState } from "react";
+import { BlogBreadCrumb } from "../../components/BreadCrumb/BlogBreadCrumb";
 import { Blog } from "../blocks/Blog";
 import { HeroSection } from "../blocks/HeroSection";
 import { ShareLinks } from "../blocks/ShareLinks";
-
-const titles = ["first", "second", "third", "fourth", "five"];
+import { ArticleParagraphs } from "../components/ArticleParagraphs/ArticleParagraphs";
+import { ReviewsSection } from "../components/ReviewsSection/ReviewsSection";
+import { SideMenu } from "../components/SideMenu/SideMenu";
 
 function Article() {
-  const [activeButton, setActiveButton] = useState(null);
-
   const params = useParams();
   const { slug } = params;
   const { data, isLoading, isError } = useGetArticleBySlug(slug);
-  const textArrayLength = data
-    ? data?.attributes.article_paragraphs.filter(
-        (paragraph) => !paragraph.__component.includes("image")
-      ).length
-    : 0;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const firstSection = document.getElementById("first-article");
-      const secondSection = document.getElementById("second-article");
-      const thirdSection = document.getElementById("third-article");
-      if (!firstSection && !secondSection && !thirdSection) {
-        return;
-      }
-      const sections = [
-        {
-          id: "first-article",
-          offset: firstSection.getBoundingClientRect().top
-        },
-        {
-          id: "second-article",
-          offset: secondSection.getBoundingClientRect().top
-        },
-        {
-          id: "third-article",
-          offset: thirdSection.getBoundingClientRect().top
-        }
-      ];
-
-      const closestSection = sections.reduce((prev, curr) =>
-        Math.abs(curr.offset) < Math.abs(prev.offset) ? curr : prev
-      );
-
-      setActiveButton(closestSection.id);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const articleTitles = [];
 
   if (isLoading) {
     return (
-      <div className="flex min-h-[100dvh] items-start">
+      <div className="flex min-h-[100dvh]">
         <Loading />
       </div>
     );
   }
 
-  const getSplitText = (text, value) => {
-    if (!text) {
-      return;
-    }
-
-    return text.split("\n")[value].replaceAll("#", "");
-  };
-
   const paragraphs = data.attributes.article_paragraphs.map((paragraph) => {
     if (!paragraph.__component.includes("image")) {
-      const title = getSplitText(paragraph.text, 0);
-      const description = getSplitText(paragraph.text, 1);
+      const titleId = crypto.randomUUID();
+      const { title, description } = getSplitText(paragraph.text);
+      articleTitles.push({
+        id: titleId,
+        title
+      });
 
       return {
+        titleId,
         id: paragraph.id,
         title,
         description,
@@ -108,133 +58,30 @@ function Article() {
   return (
     <section>
       <div className="relative  min-h-screen bg-black">
+        <BlogBreadCrumb slug={slug} />
         <HeroSection
           tag={data?.attributes.tag}
           title={data?.attributes.article_title}
           author={data?.attributes.author_name.split(",")[0]}
+          readingMinutes={data?.attributes.reading_minutes}
         />
         <Image
           height={560}
           width={600}
-          src={data?.attributes.banner_img.data?.attributes?.url}
-          className="block max-h-[560px] w-full object-cover"
+          src={data?.attributes.banner_img.data?.attributes?.url || bannerIg}
+          className="block h-[234px] w-full object-cover md:max-h-[560px] md:min-h-[430px]"
           alt=""
         />
-
-        <div className="mb-28 mt-20 flex  items-start justify-center gap-[71px]">
-          <div className="sticky top-0 hidden w-[203px] flex-col items-start transition-all duration-500 xl:flex">
-            {titles.slice(0, textArrayLength).map((title, index) => (
-              <button
-                key={index}
-                title={title}
-                onClick={() => {
-                  scrollToSection(`${title}-article`);
-                }}
-                className={`h-[48px] pl-[20px] text-[12px] leading-[14px] ${
-                  activeButton === `${title}-article`
-                    ? "text-[#925EFF]"
-                    : "text-[#BBBBBB]"
-                }`}
-                style={{
-                  borderLeft:
-                    activeButton === `${title}-article`
-                      ? "2px solid #925EFF"
-                      : "2px solid rgba(255, 255, 255, 0.1)"
-                }}
-              >
-                {title}
-              </button>
-            ))}
-          </div>
-
+        <div className="mt-[60px] flex items-start justify-center  gap-[71px] md:mb-[103px] md:mt-20">
+          <SideMenu articleTitles={articleTitles} />
           <div>
-            {paragraphs.map((paragraph, index) => {
-              if (paragraph.component.includes("image")) {
-                return (
-                  <div className="container relative max-w-[340px] text-left md:max-w-[670px]">
-                    <Image
-                      src={paragraph.imageUrl}
-                      height={560}
-                      width={600}
-                      className=" my-12 block max-h-[260px] w-full object-cover"
-                      alt=""
-                    />
-                  </div>
-                );
-              }
-              if (index === 2) {
-                return (
-                  <Fragment key={paragraph.id}>
-                    <div className="container relative max-w-[340px] text-left md:max-w-[670px]">
-                      <h3
-                        id={`article-${titles[paragraph.titleIndex]}`}
-                        className="mb-6 text-left text-2xl uppercase"
-                      >
-                        {paragraph.title}
-                      </h3>
-                      <p className="text-sm  text-secondary">
-                        {paragraph.description}
-                      </p>
-                    </div>
-                    <div className="container relative my-28 flex w-full flex-col items-center  overflow-hidden">
-                      <h3 className="mb-2 text-center text-2xl uppercase">
-                        Subscribe to our newsletter
-                      </h3>
-                      <p className="mb-10 text-center text-secondary">
-                        Receive weekly updates on new posts and features
-                      </p>
-                      <FooterForm />
-                    </div>
-                  </Fragment>
-                );
-              }
-              return (
-                <div
-                  key={paragraph.id}
-                  className="container relative max-w-[340px] text-left md:max-w-[670px]"
-                >
-                  <h3
-                    id={`article-${titles[paragraph.titleIndex]}`}
-                    className="mb-6 text-left text-2xl uppercase"
-                  >
-                    {paragraph.title}
-                  </h3>
-                  <p className="text-sm  text-secondary">
-                    {paragraph.description}
-                  </p>
-                </div>
-              );
-            })}
-
-            <div className="container flex w-[340px] flex-col items-center md:w-[560px]">
-              <Image
-                width={16}
-                height={16}
-                className="mb-[16px] h-[56px] w-[56px]  rounded-full"
-                src={data?.attributes.author_avatar.data?.attributes?.url}
-                alt=""
-              />
-
-              <div className="mb-[24px] flex flex-col items-center gap-[2px]">
-                <span className="text-[12px] leading-[22px] text-[#BBBBBB]">
-                  written by
-                </span>
-                <span className="text-center text-[16px] leading-[22px] text-[white]">
-                  {data?.attributes.author_name}
-                </span>
-              </div>
-
-              <p className="mb-[24px] text-center text-[14px] text-[#BBBBBB] md:w-[410px]">
-                {data?.attributes.author_info}
-              </p>
-
-              <a href="/" className="flex items-center gap-[16px]">
-                <span className="text-[16px] uppercase text-[white] underline">
-                  all articles of this author
-                </span>
-                <Image src={rightArrow} className="h-[16px] w-[16px]" alt="" />
-              </a>
-            </div>
+            <ArticleParagraphs
+              paragraphs={paragraphs}
+              authorIcon={data?.attributes.author_avatar.data?.attributes?.url}
+              authorName={data?.attributes.author_name}
+              authorInfo={data?.attributes.author_info}
+            />
+            <ReviewsSection />
           </div>
 
           <div className="sticky top-0 ml-[10px] hidden  flex-col items-center overflow-hidden  2xl:flex">
@@ -254,7 +101,6 @@ function Article() {
             </div>
           </div>
         </div>
-
         <Blog slug={slug} />
       </div>
     </section>

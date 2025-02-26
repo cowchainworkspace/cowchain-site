@@ -1,31 +1,31 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import menu_open from "@/assets/menu_open.svg";
-import menu_close from "@/assets/homepage/modal_close.svg";
+import arrow from "@/assets/arrow_right.svg";
+import bg_clients_lg from "@/assets/bg/clients_navbar_bg_lg.png";
+import bg_clients from "@/assets/bg/clients_navbar_bg_sm.png";
 import bg from "@/assets/bg/navbar_top.png";
 import bg_lg from "@/assets/bg/navbar_top_lg.png";
-import bg_home from "@/assets/homepage/home-mobile.png";
-import bg_clients from "@/assets/bg/clients_navbar_bg_sm.png";
-import bg_clients_lg from "@/assets/bg/clients_navbar_bg_lg.png";
-import { motion, AnimatePresence } from "framer-motion";
-import arrow from "@/assets/arrow_right.svg";
-import Link from "next/link";
-import linkedin from "@/assets/footer/linkedin.svg";
-import telegram from "@/assets/footer/telegram.svg";
-import twitter from "@/assets/footer/twitter.svg";
-import medium from "@/assets/footer/medium.svg";
-import mail from "@/assets/footer/mail.svg";
 import team_bg from "@/assets/bg/team-mobile.png";
 import team from "@/assets/bg/team.png";
-import { cn } from "@/lib/utils";
+import linkedin from "@/assets/footer/linkedin.svg";
+import mail from "@/assets/footer/mail.svg";
+import medium from "@/assets/footer/medium.svg";
+import telegram from "@/assets/footer/telegram.svg";
+import twitter from "@/assets/footer/twitter.svg";
+import bg_home from "@/assets/homepage/home-mobile.png";
+import menu_close from "@/assets/homepage/modal_close.svg";
+import menu_open from "@/assets/menu_open.svg";
 import ContactForm from "@/components/utils/ContactForm";
-import Image from "next/image";
 import { useLoader } from "@/hooks/useLoader";
+import { cn } from "@/lib/utils";
 import emailjs from "emailjs-com";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ServicesAndTechnologiesMob } from "../app/(dashboard)/(home)/blocks/ServicesAndTechnologiesMob";
+import { useEffect, useRef, useState } from "react";
 import { ServicesAndTechnologies } from "../app/(dashboard)/(home)/blocks/ServicesAndTechMenu";
+import { ServicesAndTechnologiesMob } from "../app/(dashboard)/(home)/blocks/ServicesAndTechnologiesMob";
 
 export default function Navbar({ isPageNotFound = false }) {
   const [burgerOpen, setBurgerOpen] = useState(false);
@@ -87,7 +87,9 @@ export default function Navbar({ isPageNotFound = false }) {
         pathname === "/policy" ||
         pathname === "/services"
     );
-    setIsTeamBg(pathname === "/team" || pathname === "/sitemap");
+    setIsTeamBg(
+      pathname === "/team" || pathname === "/sitemap" || pathname === "/blog"
+    );
 
     if (pathname === "/team") {
       setIsGradient(false);
@@ -172,13 +174,13 @@ export default function Navbar({ isPageNotFound = false }) {
 
   useEffect(() => {
     if (toggleMenu) {
-      document.body.classList.add('scroll-lock');
+      document.body.classList.add("scroll-lock");
     } else {
-      document.body.classList.remove('scroll-lock');
+      document.body.classList.remove("scroll-lock");
     }
 
     return () => {
-      document.body.classList.remove('scroll-lock');
+      document.body.classList.remove("scroll-lock");
     };
   }, [toggleMenu]);
 
@@ -189,7 +191,7 @@ export default function Navbar({ isPageNotFound = false }) {
           "pb-36 md:pb-0": isHomePage,
           "pb-[440px] lg:pb-[670px]": isTeamBg,
           "opacity-100": !isRendering,
-          "overflow-auto h-screen": toggleMenu,
+          "h-screen overflow-auto": toggleMenu
         })}
       >
         {isHomePage ? (
@@ -364,7 +366,7 @@ export default function Navbar({ isPageNotFound = false }) {
                           }}
                           className="flex items-center "
                         >
-                          <p className="font-roc text-base font-medium uppercase cursor-pointer text-white">
+                          <p className="cursor-pointer font-roc text-base font-medium uppercase text-white">
                             Services & Technologies
                           </p>
                           <Image
