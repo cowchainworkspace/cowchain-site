@@ -14,13 +14,13 @@ import {
   nftProcessData,
   NftIndustriesData,
   OtherNftData,
-  faqNftData
+  faqNftData,
+  nftBenefitsData
 } from "./utils/data";
 import { nftStackData } from "../components/service/blocks/stack/data";
 import { metadata } from "./utils/NftDevMetadata";
 
 export { metadata };
-
 
 const NftDevelopment = () => {
   return (
@@ -64,18 +64,15 @@ const NftDevelopment = () => {
         }
       />
       <KeyFeatures
-        title={"DeFi Development"}
+        title={"NFT Development Services We Provide"}
         data={nftServicesData}
         desc={
           <>
-            As a leading decentralized finance development company, we
-            specialize in creating innovative DeFi solutions that redefine how
-            businesses and individuals interact with financial systems.
-            <p>
-              <br />
-            </p>
-            Our solutions encompass smart contracts, liquidity protocols, and
-            more to streamline decentralized transactions
+            Our range of NFT development services includes every aspect of NFT
+            creation and management, from token generation to long-term platform
+            support. Cowchain ensures that each stage of NFT development is
+            streamlined and optimized, enabling businesses to achieve their
+            goals.
           </>
         }
       />
@@ -105,11 +102,11 @@ const NftDevelopment = () => {
 
       <ExpertiseServices
         threeColumns
-        data={DeFiBenefitsData}
+        data={nftBenefitsData}
         title={
           <>
             Benefits <br />
-            of DeFi <br />
+            of Our NFT <br />
             Development
           </>
         }

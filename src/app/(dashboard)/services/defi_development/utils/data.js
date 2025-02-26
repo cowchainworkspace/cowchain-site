@@ -3,7 +3,6 @@ import DedicateTeamIcon from "@/assets/svgComponents/industries/DedicateTeamIcon
 import EducationIcon from "@/assets/svgComponents/industries/EducationIcon";
 import FinanceIcon from "@/assets/svgComponents/industries/FinanceIcon";
 import GovernmentIcon from "@/assets/svgComponents/industries/GovermentIcon";
-import HealthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
 import HybridIcon from "@/assets/svgComponents/industries/HybridIcon";
 import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon";
 
@@ -172,7 +171,7 @@ export const IndustriesData = [
     icon: InsurenseDefiIcon
   },
   {
-    title: "Estate",
+    title: "Real Estate",
     text: "Our team handles defi development services for the real estate sector, facilitating safeguarded and clear property transactions",
     icon: RealEstateDefiIcon
   }
