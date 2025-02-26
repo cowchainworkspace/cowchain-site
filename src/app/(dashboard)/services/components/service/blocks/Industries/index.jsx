@@ -67,9 +67,11 @@ export function Industries({
               {title}
             </h2>
 
-            <p className="leading-22px max-w-[650px] text-[16px] text-[#BBBBBB]">
-              {desc}
-            </p>
+            {desc && (
+              <p className="leading-22px max-w-[650px] text-[16px] text-[#BBBBBB]">
+                {desc}
+              </p>
+            )}
           </div>
         )}
 
@@ -81,7 +83,7 @@ export function Industries({
                 ? "col-span-3 mt-[120px] grid-cols-3 gap-x-[109px] sm:gap-y-[42px]"
                 : fullGrid
                   ? "col-span-4 grid-cols-4 gap-x-[109px] gap-y-[42px]"
-                  : "col-span-2 mt-[120px] grid-cols-2 gap-x-[109px] gap-y-[42px]"
+                  : "col-span-2 grid-cols-2 gap-x-[109px] gap-y-[42px] md:mt-[120px]"
           }`}
         >
           {data.map((expertise, index) => (

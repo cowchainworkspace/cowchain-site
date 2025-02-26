@@ -22,15 +22,18 @@ export function ExpertiseServices({
       {!noBg && bg}
 
       <div
-        className={`relative mx-auto flex max-w-[1440px] flex-col px-[20px] py-[60px] md:flex-row ${threeColumns ? "flex grid-cols-3 flex-col gap-[85px] sm:grid" : " flex justify-between"} `}
+        className={`relative mx-auto flex max-w-[1440px] flex-col px-[20px] py-[60px] md:flex-row ${threeColumns ? "flex grid-cols-3 flex-col gap-5 sm:grid md:gap-[85px]" : " flex justify-between"} `}
       >
         <div className="col-span-1 lg:gap-16">
           {tag && <Tag title={tag} className="mb-4 w-fit md:mb-8" />}
           <h2
-            className={cn("lg:order-0  text-[50px] uppercase text-white", {
-              "!text-[60px]": threeColumns,
-              "!text-[42px] leading-[37.59px]": isDevelop
-            })}
+            className={cn(
+              "lg:order-0 text-[42px] uppercase text-white md:text-[50px]",
+              {
+                "md:!text-[60px]": threeColumns,
+                "!text-[42px] leading-[37.59px]": isDevelop
+              }
+            )}
           >
             {title}
           </h2>
@@ -43,7 +46,7 @@ export function ExpertiseServices({
         </div>
 
         <div
-          className={`${threeColumns ? "col-span-2 grid grid-cols-2 gap-x-[85px]" : "md:max-w-[350px] custom1000:max-w-[400px] custom1200:max-w-[519px]"}`}
+          className={`${threeColumns ? "col-span-2 grid grid-cols-2 gap-x-[20px] md:gap-x-[85px]" : "md:max-w-[350px] custom1000:max-w-[400px] custom1200:max-w-[519px]"}`}
         >
           {data.map(({ title, desc }, index) => (
             <div className="relative col-span-1 bg-cover">
@@ -55,7 +58,7 @@ export function ExpertiseServices({
                       : "mr-auto mt-[42px] w-full text-left md:mt-[60px]"
                   }
                 >
-                  <span className="text-left font-roc !text-[24px] font-medium uppercase !leading-none text-white">
+                  <span className="text-left font-roc text-lg font-medium uppercase !leading-none text-white md:!text-[24px]">
                     {title}
                   </span>
                 </div>
