@@ -30,7 +30,7 @@ export function ExpertiseServices({
           >
             {title}
           </h2>
-          <div className="mt-[60px] flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto"></div>
+          <div className="mt-[60px] flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto" />
           {desc && (
             <p className="body my-[40px] max-w-[582px] text-base leading-6 md:my-[20px]">
               {desc}
