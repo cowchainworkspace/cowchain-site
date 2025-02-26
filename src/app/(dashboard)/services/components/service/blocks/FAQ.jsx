@@ -1,16 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import bg from "@/assets/services/FAQServiceBg.svg";
+import { cn } from "@/lib/utils";
 import {
   Accordion,
-  AccordionItem,
   AccordionButton,
+  AccordionItem,
   AccordionPanel
 } from "@chakra-ui/react";
-import { cn } from "@/lib/utils";
-import { useEffect } from "react";
-import bg from "@/assets/services/FAQServiceBg.svg";
 import Image from "next/image";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const faqData = [
   {
@@ -165,9 +165,21 @@ export default function FAQ({
                       })}
                     >
                       <div className=" ">
-                        <p className="max-w-2xl !leading-[160%] !text-[#bbb] lg:!leading-[175%]">
-                          {faq.content}
-                        </p>
+                        {Array.isArray(faq.content) ? (
+                          <ul>
+                            {faq.content.map((item, index) => (
+                              <li key={index}>
+                                <p className="max-w-2xl !leading-[160%] !text-[#bbb] lg:!leading-[175%]">
+                                  {`- ${item};`}
+                                </p>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p className="max-w-2xl !leading-[160%] !text-[#bbb] lg:!leading-[175%]">
+                            {faq.content}
+                          </p>
+                        )}
                       </div>
                     </AccordionPanel>
                   </div>

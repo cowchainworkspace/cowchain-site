@@ -1,25 +1,28 @@
-import { HeroSection } from "../components/service/blocks/HeroSection";
-import Achievements from "../components/service/blocks/Achievements";
+import servideBG from "@/assets/bg/dexServiceBg.svg";
 import Contact from "@/components/Contact";
+import Image from "next/image";
+import Achievements from "../components/service/blocks/Achievements";
+import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
+import { Feedback } from "../components/service/blocks/Feedback";
+import { HeroSection } from "../components/service/blocks/HeroSection";
 import { Industries } from "../components/service/blocks/Industries";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
-import { Feedback } from "../components/service/blocks/Feedback";
-import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
-import servideBG from "@/assets/bg/dexServiceBg.svg";
 import {
-  nftProcessData,
-  SmartContractOtherData,
-  faqNftData,
-  SmartContractIndustriesData,
   OtherSmartContractData,
+  SmartContractIndustriesData,
+  SmartContractOtherData,
   SnartContractBenefitsData,
-  SnartContractExpertiseData
+  SnartContractExpertiseData,
+  aspectsOfSmartContract,
+  blockchainNetworks,
+  consultingServices,
+  faqNftData,
+  nftProcessData
 } from "./utils/data";
-import Image from "next/image";
-import { metadata } from './utils/smartContractDevMetadata';
+import { metadata } from "./utils/smartContractDevMetadata";
 
 export { metadata };
 
@@ -69,12 +72,31 @@ const SmartContractDevelopment = () => {
             <p>
               Cowchain is a team of experts in blockchain smart contract
               development. We have deep knowledge and practical experience
-              creating decentralized solutions on various blockchain platforms
+              creating decentralized solutions on various blockchain platforms,
+              including Ethereum, Solana, Avalanche, TON, Near, Polygon, and
+              Binance Smart Chain.
             </p>
+            <br />
             <p>
-              <br />
-              <br />
+              Our expertise is backed by successful projects for clients in
+              various industries, such as finance, gaming, logistics, medical,
+              and the public sector.
             </p>
+            <br />
+            <div>
+              <p>
+                Over the years, our smart contract development agency has
+                accumulated expertise in all aspects:
+              </p>
+
+              <ul className="pl-4">
+                {aspectsOfSmartContract.map(({ id, desc }) => (
+                  <li className="-indent-2" key={id}>{`- ${desc}`}</li>
+                ))}
+              </ul>
+            </div>
+            <br />
+
             <p>
               When you choose Cowchain, you get a team of experts who can create
               you a robust, high-performance blockchain solution fully
@@ -88,23 +110,26 @@ const SmartContractDevelopment = () => {
         tag={"web3 development use cases"}
         title={
           <>
-            The applications of <br />
-            <span className="violet-gradient-text">Web3 development</span>
-            <br />
-            are vast and growing. <br /> From
+            How smart contracts are <br />
             <span className="violet-gradient-text">
-              decentralized <br /> exchanges
+              transforming business processes?
+            </span>
+            <br />
+            Implementing smart contracts <br /> can bring{" "}
+            <span className="violet-gradient-text">
+              many <br /> benefits
             </span>{" "}
             to{" "}
             <span className="violet-gradient-text">
-              NFT <br /> platforms
+              your <br /> business,
             </span>
-            , <br />
-            the potential for <br /> innovation is limitless
+            <br />
+            including:
           </>
         }
         data={OtherSmartContractData}
-        bottomBorder={false}
+        bottomBorder={true}
+        isScroll={true}
       />
 
       <Industries
@@ -152,12 +177,21 @@ const SmartContractDevelopment = () => {
 
       <KeyFeatures
         isOneBlock={true}
-        title={"DeFi Token Development Classification"}
+        title={"Blockchain networks we work with"}
         desc={
           <>
-            Our defi token development company classifies tokens based on their
-            utility, <br /> governance, and other functionalities. We ensure
-            that each token meets the <br /> specific needs of your project
+            <p>
+              The experts at our smart contract development company are
+              experienced in working with
+              <br /> various blockchain networks, which allows us to offer
+              optimal solutions depending on the
+              <br /> project requirements:
+            </p>
+            <ul className="pl-2">
+              {blockchainNetworks.map(({ id, desc }) => (
+                <li className="-indent-2" key={id}>{`- ${desc}`}</li>
+              ))}
+            </ul>
           </>
         }
       />
@@ -165,29 +199,15 @@ const SmartContractDevelopment = () => {
       <FAQ
         title={
           <>
-            Our DeFi <br />
+            Our Smart Contracts <br />
             Development <br />
             Process
           </>
         }
         desc={
-          "Our NFT development team follows a systematic approach to ensure that each project is handled with care from start to finish, delivering high-quality outcomes. By focusing on every detail of nft development, we create platforms that are robust and adaptable to evolving business needs, enabling clients to achieve lasting impact"
+          "We follow a rigorous and consistent smart contract development process to ensure high quality, security, and customer compliance:"
         }
         data={nftProcessData}
-      />
-
-      <KeyFeatures
-        isOneBlock={true}
-        title={"DeFi Token Development Perks"}
-        desc={
-          <>
-            Developing tokens with our defi development company offers several
-            perks, including increased liquidity, global reach, and enhanced
-            security. Our defi development services are tailored to maximize the
-            potential of your tokens. Additionally, defi development creates new
-            opportunities for token utility and broader adoption
-          </>
-        }
       />
 
       <KeyFeatures
@@ -195,11 +215,35 @@ const SmartContractDevelopment = () => {
         title={"Our Blockchain Advisory Background"}
         desc={
           <>
-            With years of experience in the blockchain industry, our defi
-            development company specializes in development services and expert
-            advisory to optimize defi development. We guide clients through the
-            complexities of blockchain and development, ensuring reliable
-            implementation of their projects
+            <p>
+              In addition to developing smart contracts, we provide blockchain
+              consulting services. Our experts can help you:
+            </p>
+            <ul className="pl-2">
+              {consultingServices.map(({ id, desc }) => (
+                <li key={id}>{`- ${desc};`}</li>
+              ))}
+            </ul>
+          </>
+        }
+      />
+
+      <KeyFeatures
+        isOneBlock={true}
+        title={"Our Engagement Models"}
+        desc={
+          <>
+            <p>
+              At Cowchain, we are flexible in our collaboration approach,
+              offering various engagement models tailored to your unique needs
+              and requirements.
+            </p>
+            <br />
+            <p>
+              Regardless of project size or industry specifics, we will find the
+              best way to organize work to ensure the successful implementation
+              of your idea.
+            </p>
           </>
         }
       />
