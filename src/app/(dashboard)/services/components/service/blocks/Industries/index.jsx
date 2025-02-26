@@ -1,8 +1,8 @@
-import React from "react";
+import healthcare from "@/assets/industries/HelthcareIcon.svg";
 import education from "@/assets/industries/educationIcon.svg";
 import finance from "@/assets/industries/financeIcon.svg";
 import government from "@/assets/industries/govermentIcon.svg";
-import healthcare from "@/assets/industries/HelthcareIcon.svg";
+import React from "react";
 
 const expertiseData = [
   {
@@ -34,7 +34,8 @@ export function Industries({
   isTwoSides,
   topBorder = true,
   bottomBorder = true,
-  fullGrid = false
+  fullGrid = false,
+  bg = false
 }) {
   return (
     <section
@@ -42,11 +43,12 @@ export function Industries({
       className={`relative flex justify-center 
         ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
     >
+      {bg && bg}
       <div
         className={`mx-auto flex max-w-[1440px] flex-col px-[20px] py-[60px] sm:grid sm:py-[126px] md:pl-[84px] md:pr-[64px] 
           ${
             isTwoSides
-              ? "custom1000:gap-x-[100px] grid-cols-2 gap-x-[50px] gap-y-[42px] sm:gap-y-[77px] custom1200:gap-x-[134px]"
+              ? "grid-cols-2 gap-x-[50px] gap-y-[42px] sm:gap-y-[77px] custom1000:gap-x-[100px] custom1200:gap-x-[134px]"
               : data.length < 4
                 ? "grid-cols-3 gap-y-[42px] md:gap-x-[100px]"
                 : fullGrid
@@ -74,7 +76,7 @@ export function Industries({
         <div
           className={`flex flex-col sm:grid  ${
             isTwoSides
-              ? "custom1000:gap-x-[77px] custom1000:gap-y-[77px] col-span-1 grid-cols-2 gap-x-[30px] gap-y-[42px] sm:gap-y-[30px]"
+              ? "col-span-1 grid-cols-2 gap-x-[30px] gap-y-[42px] sm:gap-y-[30px] custom1000:gap-x-[77px] custom1000:gap-y-[77px]"
               : data.length < 4
                 ? "col-span-3 mt-[120px] grid-cols-3 gap-x-[109px] sm:gap-y-[42px]"
                 : fullGrid
