@@ -26,7 +26,7 @@ export const Category = ({ title }) => {
         router.push(`${pathname}?${createCategoryParams(title)}`);
       }}
       className={cn(
-        "pointer cursor-pointer  whitespace-nowrap  rounded-[40px] bg-white/10 px-6 py-[11px] text-[14px] font-medium uppercase leading-[14px] text-white md:text-base",
+        "pointer z-50 cursor-pointer  whitespace-nowrap  rounded-[40px] bg-white/10 px-6 py-[11px] text-[14px] font-medium uppercase leading-[14px] text-white md:text-base",
         {
           "bg-white text-black":
             currentTag.toLowerCase() === title.toLowerCase()

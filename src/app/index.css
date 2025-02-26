@@ -25,6 +25,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.scroll-lock {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .markdown > * {
   all: revert;
 }
@@ -450,4 +459,13 @@ input:-webkit-autofill:active {
   transform: translate3d(0, 0, 0);
   flex: 0 0 100%;
   min-width: fit-content;
+}
+
+.breadcrumb-item {
+  display: block;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
 }

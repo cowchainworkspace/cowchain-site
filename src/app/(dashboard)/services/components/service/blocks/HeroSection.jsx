@@ -9,7 +9,7 @@ import Link from "next/link";
 import React from "react";
 import { Helmet } from "react-helmet";
 
-export const HeroSection = ({ title, desc, tag }) => {
+export const HeroSection = ({ title, desc }) => {
   return (
     <section className="relative overflow-visible  pt-20  lg:pt-[120px] ">
       <Helmet>
@@ -26,7 +26,7 @@ export const HeroSection = ({ title, desc, tag }) => {
       <div className="relative mx-auto flex max-w-[1440px] flex-col px-[32px] pb-[91px] pt-5 md:pt-8 lg:px-16 xl:px-[88px]">
         <Tag className={"mr-auto cursor-default"} title={"cowchain"} />
         {title && (
-          <h1 className="mt-4 cursor-default text-[80px] uppercase text-white lg:mt-6 lg:max-w-[1200px]">
+          <h1 className="mt-4 cursor-default text-[42px]  uppercase text-white md:text-[80px] lg:mt-6 lg:max-w-[1200px]">
             {title}
           </h1>
         )}
