@@ -12,16 +12,16 @@ import { DexExpertiseDesc } from "./utils/data";
 import { DexExpertiseData } from "./utils/data";
 import { IndustriesDexData } from "./utils/data";
 import { DexAppDevData } from "./utils/data";
-import { EngagementDevData } from "./utils/data";
+import { EngagementDevData, faqDexData } from "./utils/data";
 import { metadata } from "./utils/dexDevMetadata";
-
+import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
+import Image from "next/image";
 export { metadata };
 
 const DexDevelopment = () => {
   return (
     <section className="overflow-visible">
       <HeroSection
-        tag={"Dex Development"}
         title={" Decentralized Exchange Development Company"}
         desc={
           <>
@@ -74,12 +74,20 @@ const DexDevelopment = () => {
         desc={DexExpertiseDesc}
         data={DexExpertiseData}
         topBorder={false}
+        bg={
+          <Image
+            src={dexBg}
+            alt="decoration ellipse"
+            className="absolute -top-24 left-0"
+          />
+        }
       />
       <KeyFeatures
         title={"Key Features of Our DEX Development"}
         desc={
           "Cowchain’s dex development delivers crucial features to keep your platform competitive. Our decentralized exchange development ensures that every platform is optimized for handling complex operations. Our experience in dex development allows us to offer solutions that are easily adaptable to market changes and technological advancements"
         }
+        noBg={true}
       />
       <Industries
         title={"Industries We Serve"}
@@ -117,9 +125,9 @@ const DexDevelopment = () => {
       />
       <KeyFeatures
         isOneBlock={true}
-        title={"Our Blockchain Advisory Background"}
+        title={" Why Our Clients Trust Us"}
         desc={
-          "With extensive experience in blockchain advisory services, Cowchain provides strategic guidance on decentralized exchange software development, helping clients navigate the complexities of building secure and feature-rich platforms. Our expertise ensures that every aspect of your decentralized exchange development is handled with precision, from initial planning to deployment, making sure the platform remains adaptable to future blockchain advancements"
+          "Clients trust Cowchain for our in-depth expertise, tailored solutions, and proven results in decentralized exchange development. We consistently deliver secure, scalable platforms while maintaining transparency and trust throughout the project lifecycle. Our track record in decentralized exchange development is evident through our projects across diverse industries."
         }
       />
       <OtherServices
@@ -138,7 +146,7 @@ const DexDevelopment = () => {
           </>
         }
       />
-      <FAQ />
+      <FAQ noBg={true} data={faqDexData} />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

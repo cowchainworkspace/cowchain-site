@@ -8,6 +8,8 @@ import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
 import { Feedback } from "../components/service/blocks/Feedback";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
+import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
+import Image from "next/image";
 import {
   DappExpertiseDesc,
   EngagementDevData,
@@ -23,11 +25,9 @@ import { metadata } from "./utils/dappDeveMetadata";
 export { metadata };
 
 const DappDevelopment = () => {
-  console.log("dappBenefitsData", dappBenefitsData);
   return (
     <section>
       <HeroSection
-        tag={"Dapp Development"}
         title={"dApp Development Services"}
         desc={
           <>
@@ -72,6 +72,13 @@ const DappDevelopment = () => {
         }
         desc={DappExpertiseDesc}
         data={DappExpertiseData}
+        bg={
+          <Image
+            src={dexBg}
+            alt="decoration ellipse"
+            className="absolute left-0 top-[18%]"
+          />
+        }
       />
       <Industries
         title={"Benefits of dApp Development"}
@@ -119,6 +126,7 @@ const DappDevelopment = () => {
         desc={
           "At Cowchain, we understand that innovation is key to staying ahead in the decentralized space. As a pioneering dapp development company, we actively integrate the latest blockchain advancements into our projects, ensuring that each application not only meets industry standards but also exceeds client expectations in functionality and security"
         }
+        noBg={true}
       />
       <KeyFeatures
         topBorder={false}
@@ -128,6 +136,7 @@ const DappDevelopment = () => {
         desc={
           "With years of experience in blockchain advisory, Cowchain provides strategic guidance to businesses seeking to leverage decentralized technologies. Our advisory services ensure that your project is aligned with current trends and future developments in the blockchain space"
         }
+        noBg={true}
       />
       <Feedback />
       <Industries
@@ -138,6 +147,13 @@ const DappDevelopment = () => {
         isTwoSides={true}
         data={EngagementDevData}
         topBorder={false}
+        bg={
+          <Image
+            src={dexBg}
+            alt="decoration ellipse"
+            className="absolute left-0"
+          />
+        }
       />
       <KeyFeatures
         topBorder={false}
@@ -147,6 +163,7 @@ const DappDevelopment = () => {
         desc={
           "Clients trust Cowchain because we deliver reliable custom dApp development. Our company dapp development expertise ensures that every application is built to high standards of performance and security, empowering businesses to achieve their goals in the competitive blockchain market"
         }
+        noBg={true}
       />
       <OtherServices
         title={
@@ -172,7 +189,7 @@ const DappDevelopment = () => {
         data={otherDappServiceData}
         bottomBorder={false}
       />
-      <FAQ data={faqDappData} />
+      <FAQ data={faqDappData} noBg={true} />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

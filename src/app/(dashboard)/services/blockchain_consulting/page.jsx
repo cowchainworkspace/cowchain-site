@@ -9,7 +9,7 @@ import { HeroSection } from "../components/service/blocks/HeroSection";
 import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
-import { TustByNumbers } from "../full_stack_development/blocks/TustByNumbers";
+import { TustByNumbers } from "../web3_fullstack_development/blocks/TustByNumbers";
 import {
   EngagementDevData,
   OurWorksData,

@@ -1,17 +1,26 @@
+import BookSvg from "@/assets/svg/blog/BookSvg";
 import Tag from "@/components/ui/tag";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { Reading } from "./Reading/Reading";
 
-export const Post = ({ atributes }) => {
-  const { slug, article_description, title, preview_article_img, tag } =
-    atributes || {};
+export const Post = ({ atributes, isThreeLines = false }) => {
+  const {
+    slug,
+    article_description,
+    article_title,
+    preview_article_img,
+    tag,
+    author_name,
+    reading_minutes
+  } = atributes || {};
 
   return (
     <Link
       href={`blog/articles/${slug}`}
       className={cn(
-        "group relative  flex w-full cursor-pointer flex-col  border border-th-fade p-2 md:p-6"
+        "group relative  flex w-full cursor-pointer flex-col border-r-[0.5px] border-th-fade p-6 last-of-type:border-r-0 md:p-6"
       )}
     >
       <Image
@@ -27,18 +36,27 @@ export const Post = ({ atributes }) => {
           Read
         </button>
       </div>
-
-      <Tag className="mb-6 mr-auto" title={tag} />
+      <div className="mb-6 flex items-center justify-between">
+        <Tag title={tag} />
+        <Reading reading_minutes={reading_minutes} />
+      </div>
       <h3 className="mb-4 font-roc text-lg font-medium uppercase leading-6 text-white">
-        {title}
+        {article_title}
       </h3>
-      <div className="line-clamp-[10]">
+      <div
+        className={cn("mb-6 line-clamp-4 md:line-clamp-[2]", {
+          "md:line-clamp-3": isThreeLines
+        })}
+      >
         {article_description?.map((text) => (
-          <p className="text-pretty text-sm text-secondary">
+          <p key={text.id} className="text-pretty text-sm text-secondary">
             {text.children[0]?.text}
           </p>
         ))}
       </div>
+      <p className="text-sm text-secondary">
+        Written by <span className="text-white">{author_name}</span>
+      </p>
     </Link>
   );
 };
