@@ -1,12 +1,13 @@
 "use client";
 
-import React from "react";
-import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import Image from "next/image";
+import React from "react";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import ModalPopup from "./ModalPopup";
 
-export default function FooterForm() {
+export default function FooterForm({ isMiddle = false }) {
   const {
     register,
     handleSubmit,
@@ -34,10 +35,10 @@ export default function FooterForm() {
     }
   };
   return (
-    <section>
+    <section className="relative ">
       <form
         onSubmit={handleSubmit(sendFormData)}
-        className="footerform mb-2 flex max-w-xl items-stretch"
+        className="footerform relative z-50 mb-2 flex max-w-xl items-stretch"
       >
         <input
           type="email"

@@ -7,6 +7,7 @@ import { Fragment } from "react";
 import Contact from "../../../components/Contact";
 import { HeroSection } from "./blocks/HeroSection";
 import { ViewMoreSection } from "./blocks/ViewMore";
+import { BlogBreadCrumb } from "./components/BreadCrumb/BlogBreadCrumb";
 import { Post } from "./components/post";
 
 export default function Blog() {
@@ -37,15 +38,27 @@ export default function Blog() {
 
   return (
     <section>
-      <div className="relative overflow-x-hidden bg-black">
+      <div className="relative -mt-[440px] overflow-x-hidden overflow-y-hidden bg-black lg:-mt-[670px]">
+        <BlogBreadCrumb />
         <HeroSection />
-        <section className="container border-y border-th-fade">
-          <div className="grid w-full md:grid-cols-2">
+        <section className="container max-w-[1440px]">
+          <div>
             {articles?.pages.map((post, index) => (
               <Fragment key={index}>
-                {post.data.map((article) => (
-                  <Post key={article.id} atributes={article.attributes} />
-                ))}
+                <div className="grid w-full border-t-[0.5px] border-th-fade md:grid-cols-2">
+                  {post.data.slice(0, 2).map((article) => (
+                    <Post key={article.id} atributes={article.attributes} />
+                  ))}
+                </div>
+                <div className="grid border-t-[0.5px] border-th-fade md:grid-cols-3">
+                  {post.data.slice(2).map((article) => (
+                    <Post
+                      key={article.id}
+                      atributes={article.attributes}
+                      isThreeLines={true}
+                    />
+                  ))}
+                </div>
               </Fragment>
             ))}
           </div>
@@ -57,7 +70,7 @@ export default function Blog() {
           showMorePosts={fetchNextPage}
           isFetchingNextPage={isFetchingNextPage}
         />
-        <Contact className={"py-[140px]"} />
+        <Contact className={"py-[72px] md:py-[140px]"} />
       </div>
     </section>
   );

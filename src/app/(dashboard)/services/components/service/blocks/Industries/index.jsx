@@ -1,8 +1,8 @@
-import React from "react";
+import healthcare from "@/assets/industries/HelthcareIcon.svg";
 import education from "@/assets/industries/educationIcon.svg";
 import finance from "@/assets/industries/financeIcon.svg";
 import government from "@/assets/industries/govermentIcon.svg";
-import healthcare from "@/assets/industries/HelthcareIcon.svg";
+import React from "react";
 
 const expertiseData = [
   {
@@ -45,16 +45,25 @@ export function Industries({
     >
       {bg && bg}
       <div
-        className={`mx-auto grid  max-w-[1440px] px-[20px] py-[126px]  md:pl-[84px] md:pr-[64px] ${isTwoSides ? "grid-cols-2 gap-x-[134px] gap-y-[77px]" : data.length < 4 ? "grid-cols-3 gap-y-[42px] md:gap-x-[100px]" : fullGrid ? "grid-cols-4 gap-y-[42px] md:gap-x-[100px]" : "grid-cols-2 gap-y-[42px] md:gap-x-[100px]"}`}
-        style={{
-          gridTemplateColumns: `${data.length < 4 && !isTwoSides ? "405px 1fr 1fr" : fullGrid ? "" : "405px 1fr"} `
-        }}
+        className={`mx-auto flex max-w-[1440px] flex-col px-[20px] py-[60px] sm:grid sm:py-[126px] md:pl-[84px] md:pr-[64px] 
+          ${
+            isTwoSides
+              ? "grid-cols-2 gap-x-[50px] gap-y-[42px] sm:gap-y-[77px] custom1000:gap-x-[100px] custom1200:gap-x-[134px]"
+              : data.length < 4
+                ? "grid-cols-3 gap-y-[42px] md:gap-x-[100px]"
+                : fullGrid
+                  ? "grid-cols-4 gap-y-[42px] md:gap-x-[100px]"
+                  : "grid-cols-2 gap-y-[42px] md:gap-x-[100px]"
+          } 
+             ${data.length < 4 && !isTwoSides ? "grid-cols-[405px_1fr_1fr]" : ""}
+  ${fullGrid ? "" : "grid-cols-[250px_1fr] custom1000:grid-cols-[323px_1fr]"}
+            `}
       >
         {!fullGrid && (
           <div
-            className={`flex flex-col items-start gap-[26px] md:justify-start ${isTwoSides ? "col-span-1  row-span-2 max-w-[400px]" : "col-span-2 row-span-1 "}`}
+            className={`flex flex-col items-start gap-[18px] md:justify-start md:gap-[26px] ${isTwoSides ? "col-span-1  row-span-2 max-w-[400px]" : "col-span-2 row-span-1 "}`}
           >
-            <h2 className="whitespace-pre-line text-center text-[36px] uppercase md:text-start md:text-[60px]">
+            <h2 className="whitespace-pre-line text-left text-[36px] uppercase md:text-center md:text-start md:text-[48px] custom1000:text-[60px]">
               {title}
             </h2>
 
@@ -65,11 +74,11 @@ export function Industries({
         )}
 
         <div
-          className={`grid  ${
+          className={`flex flex-col sm:grid  ${
             isTwoSides
-              ? "col-span-1 grid-cols-2 gap-x-[77px] gap-y-[77px]"
+              ? "col-span-1 grid-cols-2 gap-x-[30px] gap-y-[42px] sm:gap-y-[30px] custom1000:gap-x-[77px] custom1000:gap-y-[77px]"
               : data.length < 4
-                ? "col-span-3 mt-[120px] grid-cols-3 gap-x-[109px] gap-y-[42px]"
+                ? "col-span-3 mt-[120px] grid-cols-3 gap-x-[109px] sm:gap-y-[42px]"
                 : fullGrid
                   ? "col-span-4 grid-cols-4 gap-x-[109px] gap-y-[42px]"
                   : "col-span-2 mt-[120px] grid-cols-2 gap-x-[109px] gap-y-[42px]"
@@ -79,7 +88,7 @@ export function Industries({
             <div
               key={index}
               className={`col-span-1 row-span-1 flex  ${expertise.text ? "items-start" : "items-center"}
-                  ${isTwoSides || fullGrid || data.length < 4 ? "max-w-[307px] flex-col gap-0" : "gap-[49px]"}`}
+                  ${isTwoSides || fullGrid || data.length < 4 ? "max-w-full flex-col gap-0 sm:max-w-[307px]" : "gap-[49px]"}`}
             >
               {expertise.icon && (
                 <div

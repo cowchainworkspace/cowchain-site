@@ -1,22 +1,30 @@
-import React from "react";
+import ViewSvg from "@/assets/svg/blog/EyeSvg";
 import Tag from "@/components/ui/tag";
-import facebook from "@/assets/article/facebookIcon.svg";
-import copyLink from "@/assets/article/link.svg";
-import twitter from "@/assets/article/twitterIcon.svg";
-import instagram from "@/assets/article/InstagramIcon.svg";
-import Image from "next/image";
+import React from "react";
+import { Reading } from "../../components/Reading/Reading";
 import { ShareLinks } from "./ShareLinks";
-
-export const HeroSection = ({ tag, title, author }) => {
+export const HeroSection = ({ tag, title, author, readingMinutes }) => {
   return (
-    <section className="scrollbar-none container relative mb-9  w-full pt-20 md:mb-[60px]  md:max-w-full lg:pt-[120px]">
-      <div className="relative flex flex-col items-center justify-center px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
+    <section className="scrollbar-none container relative mb-10  w-full pt-[65px] md:mb-[65px]  md:max-w-full lg:pt-[120px]">
+      <div className="relative flex flex-col items-center justify-center md:px-8 md:pb-12 lg:px-16 xl:px-24">
         <Tag title={tag} className={"mb-4 md:mb-8"} />
         <h1 className="text-center text-3xl uppercase text-white lg:mt-6 lg:max-w-[1200px] lg:text-5xl">
           {title}
         </h1>
-
-        <span className="mb-6  mt-4 text-secondary">written by {author}</span>
+        <div className="mb-6 mt-4  flex flex-col items-center md:flex-row md:gap-10">
+          <p className="text-sm font-light leading-[22px] text-secondary">
+            written by <span className="text-white">{author}</span>
+          </p>
+          <div className="flex gap-10">
+            <Reading reading_minutes={readingMinutes} />
+            <div className="flex items-center gap-2">
+              <ViewSvg />
+              <span className="text-sm leading-[22px] tracking-[0] text-secondary">
+                1234 views
+              </span>
+            </div>
+          </div>
+        </div>
         <ShareLinks />
       </div>
     </section>

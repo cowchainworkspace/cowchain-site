@@ -26,10 +26,10 @@ export const Blog = ({ slug }) => {
 
   return (
     <section id="blog" className="relative">
-      <div className="grid w-full md:grid-cols-2">
-        <div className="py-heading px-default md-border-r flex flex-col gap-y-6 border-b border-t border-b-th-fade border-t-th-fade ">
+      <div className="grid w-full md:grid-cols-2 lg:grid-cols-[500px_1fr]">
+        <div className="py-heading  px-default md-border-r flex flex-1 flex-col gap-y-6 border-b-th-fade border-t-th-fade md:border-b md:border-t ">
           <h3 className="text-center md:text-left lg:max-w-[320px]">
-            STAY UP TO DATE
+            Stay up to date
           </h3>
           <a href="/blog" className="mx-auto md:mx-0">
             <div className="flex items-center gap-x-2">
