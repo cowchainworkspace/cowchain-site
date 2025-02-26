@@ -11,7 +11,7 @@ import { Industries } from "../../services/components/service/blocks/Industries"
 import { KeyFeatures } from "../../services/components/service/blocks/KeyFeatures";
 import { OtherServices } from "../../services/components/service/blocks/OtherServices";
 import { ServiceStack } from "../../services/components/service/blocks/stack";
-import { TustByNumbers } from "../../services/full_stack_development/blocks/TustByNumbers";
+import { TustByNumbers } from "../../services/web3_fullstack_development/blocks/TustByNumbers";
 import {
   FSExpertiseData,
   TustByNumbersData,
@@ -47,29 +47,51 @@ export default function HomeContent() {
           "At Cowchain, we are a Web3 development company with a proven track record in creating decentralized applications, smart contracts, and blockchain solutions. Our focus is on unlocking new revenue streams for businesses through secure and transparent blockchain integration. Leveraging a wealth of expertise in emerging technologies, the team delivers custom solutions that ensure transparency, security, and a streamlined flow of operations"
         }
       />
-      <TustByNumbers home data={TustByNumbersData} />
+      <TustByNumbers
+        home
+        data={TustByNumbersData}
+        desc={
+          "At Cowchain, we are a Web3 development company with a proven track record in creating decentralized applications, smart contracts, and blockchain solutions. Our focus is on unlocking new revenue streams for businesses through secure and transparent blockchain integration. Leveraging a wealth of expertise in emerging technologies, the team delivers custom solutions that ensure transparency, security, and a streamlined flow of operations"
+        }
+      />
       <Clients />
       <Industries
         isTwoSides={true}
-        title={"Our Services"}
+        title={
+          <>
+            Our <br className="block sm:hidden" /> Services
+          </>
+        }
         desc={
           "We offer a full range of services to take your project from an idea to a working solution"
         }
         data={ourServices}
       />
-      <FAQ
-        noBg={true}
-        title={
-          <>
-            Our Web3 <br /> development <br /> services
-          </>
-        }
-        desc={
-          "As a leading Web3 development company, Cowchain delivers Web3 development services that empower businesses to fully utilize decentralized technologies. Each solution is crafted with precision, and aimed at solving real-world challenges"
-        }
-        data={web3DevData}
-        isSecondary={true}
-      />
+      <div className="block md:hidden">
+        <FAQ
+          noBg={true}
+          title={
+            <>
+              Our Web3 <br /> development <br /> services
+            </>
+          }
+          data={web3DevData}
+          desc="As a leading Web3 development company, Cowchain delivers Web3 development services that empower businesses to fully utilize decentralized technologies. 
+Each solution is crafted with precision, 
+and aimed at solving real-world challenges"
+        />
+      </div>
+      <div className="hidden md:block">
+        <FAQ
+          noBg={true}
+          title={
+            <>
+              Our Web3 <br /> development <br /> services
+            </>
+          }
+          data={web3DevData}
+        />
+      </div>
       <ServiceStack home />
       <Advantages isSecondary={true} />
       <ExpertiseServices
@@ -159,7 +181,7 @@ export default function HomeContent() {
       <Industries
         title={
           <>
-            Why <br />
+            Why <br className="hidden md:block" />
             Clients
             <br />
             Choose <br />
@@ -172,6 +194,7 @@ export default function HomeContent() {
         data={WhyClientChooseData}
       />
       <OtherServices
+        noItemsBorders={true}
         title={
           <>
             Cowchain{" "}

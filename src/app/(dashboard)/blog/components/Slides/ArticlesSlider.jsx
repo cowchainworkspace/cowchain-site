@@ -1,9 +1,9 @@
+import { cn } from "@/lib/utils";
 import useEmblaCarousel from "embla-carousel-react";
 import React, { useEffect } from "react";
 import { Fragment } from "react";
-import { Post } from "../../articles/components/Post";
 import { useInView } from "react-intersection-observer";
-import { cn } from "@/lib/utils";
+import { Post } from "../../articles/components/Post";
 
 const ArticlesSlider = ({ articles, fetchNextPage, isFetchingNextPage }) => {
   const [emblaRef] = useEmblaCarousel();
@@ -16,7 +16,7 @@ const ArticlesSlider = ({ articles, fetchNextPage, isFetchingNextPage }) => {
   return (
     <div
       className={
-        "embla border-y-th w-screen border-y border-y-th-fade  pl-[10px] md:w-full md:pl-0"
+        "embla border-y-th w-screen  border-y border-y-th-fade  lg:w-[calc(100vw-510px)]"
       }
     >
       <div className={"embla__viewport"} ref={emblaRef}>

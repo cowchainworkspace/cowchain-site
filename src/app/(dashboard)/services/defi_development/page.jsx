@@ -15,7 +15,7 @@ import {
   defiProcessData,
   DeFiExpertiseData,
   DeFiBenefitsData,
-  faqDappData
+  faqDefiData
 } from "./utils/data";
 import { metadata } from "./utils/defiDevMetadata";
 
@@ -25,7 +25,6 @@ const DefiDevelopment = () => {
   return (
     <section>
       <HeroSection
-        tag={"DeFi Development"}
         title={"DeFi Development Company"}
         desc={
           <>
@@ -36,7 +35,7 @@ const DefiDevelopment = () => {
         }
       />
       <Achievements
-        tag={"dApp Development Services"}
+        tag={"Our DeFi Development Services and Solutions"}
         desc={
           <>
             {" "}
@@ -175,7 +174,7 @@ const DefiDevelopment = () => {
         data={OtherDefiData}
         bottomBorder={false}
       />
-      <FAQ data={faqDappData} />
+      <FAQ data={faqDefiData} noBg={true} />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

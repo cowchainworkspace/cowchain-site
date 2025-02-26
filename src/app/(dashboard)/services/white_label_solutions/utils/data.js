@@ -234,3 +234,21 @@ export const TustByNumbersData = [
     sighn: "+ TEAM"
   }
 ];
+
+export const faqQuestions = [
+  {
+    id: 1,
+     title: 'What does white-label web design and development involve?',
+     content: "Such services allow organizations to offer complete web solutions for their clients without maintaining an internal development team. The work is done by a white label development company, and you maintain control of the client relationship and branding."
+  },
+  {
+    id: 2,
+     title: 'How does the white-label development process work?',
+     content: "We begin by gathering detailed project requirements, followed by creating mockups or prototypes for initial feedback. Once finalized, our development team handles the technical implementation. Our process is fully transparent, keeping you informed at every stage."
+  },
+  {
+    id: 3,
+     title: 'What key elements should be included in a white-label web design contract?',
+     content: "It’s important to include clear terms regarding delivery timelines, project scope, and ownership of the final product. As a trusted white label partner, we ensure all legal and technical details are covered."
+  },
+]
