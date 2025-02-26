@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet";
 
 export const HeroSection = ({ title, desc }) => {
   return (
-    <section className="relative overflow-visible  pt-20  lg:pt-[120px] ">
+    <section className="relative overflow-visible  pt-20  lg:pt-[120px]">
       <Helmet>
         <link
           rel="canonical"
