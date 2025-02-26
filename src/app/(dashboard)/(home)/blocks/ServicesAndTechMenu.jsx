@@ -2,11 +2,11 @@ import { SocialLinks } from "@/components/SocialLinks";
 import React from "react";
 import { ArrowForward } from "../../../../assets/svgComponents/ArrowForward";
 import Link from "next/link";
-import { servicesBlocksData, servicesBlocksOtherData } from '../homeData/data'
+import { servicesBlocksData, servicesBlocksOtherData } from "../homeData/data";
 
 export const ServicesAndTechnologies = () => {
   return (
-    <div className="absolute top-[64px] z-[300] flex h-[423px] w-full border-b border-b-th-fade bg-black text-white">
+    <div className="absolute top-[64px] z-[300] hidden h-[423px] w-full border-b border-b-th-fade bg-black text-white lg:flex">
       <div className="pointer-events-none flex h-[423px] w-[112px] items-center justify-center">
         <span
           className="violet-gradient-text -rotate-90 transform whitespace-nowrap text-left

@@ -23,12 +23,14 @@ import ContactForm from "@/components/utils/ContactForm";
 import Image from "next/image";
 import { useLoader } from "@/hooks/useLoader";
 import emailjs from "emailjs-com";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
+import { ServicesAndTechnologiesMob } from "../app/(dashboard)/(home)/blocks/ServicesAndTechnologiesMob";
 import { ServicesAndTechnologies } from "../app/(dashboard)/(home)/blocks/ServicesAndTechMenu";
 
 export default function Navbar({ isPageNotFound = false }) {
   const [burgerOpen, setBurgerOpen] = useState(false);
   const [serviceMenuOpen, setServiceMenuOpen] = useState(false);
+  const [serviceMobMenuOpen, setServiceMobMenuOpen] = useState(false);
   const pathname = usePathname();
 
   const menuRef = useRef(null);
@@ -61,7 +63,6 @@ export default function Navbar({ isPageNotFound = false }) {
   const [isTeamBg, setIsTeamBg] = useState(false);
   const [isGradient, setIsGradient] = useState(true);
   const [isHomePage, setIsHomePage] = useState(true);
-
 
   const { isRendering, setIsLoading, setIsRendering } = useLoader();
 
@@ -164,13 +165,31 @@ export default function Navbar({ isPageNotFound = false }) {
     setServiceMenuOpen((prevState) => !prevState);
   };
 
+  const toggleMobServices = (e) => {
+    e.stopPropagation();
+    setServiceMobMenuOpen((prevState) => !prevState);
+  };
+
+  useEffect(() => {
+    if (toggleMenu) {
+      document.body.classList.add('scroll-lock');
+    } else {
+      document.body.classList.remove('scroll-lock');
+    }
+
+    return () => {
+      document.body.classList.remove('scroll-lock');
+    };
+  }, [toggleMenu]);
+
   return (
     <>
       <section
         className={cn("relative z-[21] bg-transparent opacity-0", {
           "pb-36 md:pb-0": isHomePage,
           "pb-[440px] lg:pb-[670px]": isTeamBg,
-          "opacity-100": !isRendering
+          "opacity-100": !isRendering,
+          "overflow-auto h-screen": toggleMenu,
         })}
       >
         {isHomePage ? (
@@ -235,7 +254,7 @@ export default function Navbar({ isPageNotFound = false }) {
           className={
             isHomePage
               ? "navbar-wrapper relative flex h-24 items-center justify-between gap-x-8   px-4 md:h-16 md:border-b  md:border-th-fade md:border-b-th-fade md:px-8 lg:px-0"
-              : "navbar-wrapper relative flex h-24 items-center justify-between gap-x-8 px-4 md:h-16 md:border-b md:border-th-fade md:px-8 lg:px-0"
+              : "navbar-wrapper  relative flex h-24 items-center justify-between gap-x-8 px-4 md:h-16 md:border-b md:border-th-fade md:px-8 lg:px-0"
           }
         >
           <nav className="hidden w-full max-w-[360px] items-center justify-between pl-12 lg:flex xl:max-w-md">
@@ -298,11 +317,12 @@ export default function Navbar({ isPageNotFound = false }) {
                 initial={{ width: 0 }}
                 exit={{ width: 0 }}
                 animate={{ width: "100%", maxWidth: "100%" }}
-                className="absolute right-0 top-0 z-50 min-h-full w-full"
+                className="absolute right-0 top-0 z-50  min-h-full w-full"
               >
                 <motion.div
                   style={{
-                    height: `${windowHeight}px`
+                    minHeight: `${windowHeight}px`,
+                    height: `${!serviceMobMenuOpen ? `${windowHeight}px` : "auto"}`
                   }}
                   className="relative flex flex-col overflow-y-scroll bg-black pb-8"
                   initial="closed"
@@ -321,22 +341,31 @@ export default function Navbar({ isPageNotFound = false }) {
                     <Image
                       className="ml-auto w-8 cursor-pointer lg:hidden"
                       src={menu_close}
-                      onClick={closeBurger}
+                      onClick={(e) => {
+                        closeBurger();
+                        toggleMobServices(e);
+                      }}
                       alt=""
                     ></Image>
                   </motion.div>
-                  <motion.nav className="mt-8 flex flex-col gap-y-6 px-4">
-                    {anchorLinks.map((link, index) => (
-                      <Link
-                        key={index}
-                        href={link.link}
-                        onClick={closeBurger}
-                        variants={linkVariants}
-                        whiletap={{ scale: 0.95 }}
-                      >
-                        <div className="flex items-center">
-                          <p className="font-roc text-base font-medium uppercase text-white">
-                            {link.title}
+                  <motion.nav
+                    className={`${!serviceMobMenuOpen ? "mt-8 px-4" : "h-full"}  flex  flex-col gap-y-6 `}
+                  >
+                    {serviceMobMenuOpen ? (
+                      <ServicesAndTechnologiesMob
+                        toggleMobServices={toggleMobServices}
+                        closeBurger={closeBurger}
+                      />
+                    ) : (
+                      <>
+                        <div
+                          onClick={(e) => {
+                            toggleMobServices(e);
+                          }}
+                          className="flex items-center "
+                        >
+                          <p className="font-roc text-base font-medium uppercase cursor-pointer text-white">
+                            Services & Technologies
                           </p>
                           <Image
                             className="mb-1 ml-auto w-6"
@@ -344,29 +373,49 @@ export default function Navbar({ isPageNotFound = false }) {
                             alt=""
                           ></Image>
                         </div>
-                      </Link>
-                    ))}
-                    {routerLinks.map((link, index) => (
-                      <Link
-                        key={index * 4}
-                        href={link.link}
-                        onClick={closeBurger}
-                        variants={linkVariants}
-                        whilehover={{ scale: 1.1 }}
-                        whiletap={{ scale: 0.95 }}
-                      >
-                        <div className="flex items-center">
-                          <p className="font-roc text-base font-medium uppercase text-white">
-                            {link.title}
-                          </p>
-                          <Image
-                            className="mb-1 ml-auto w-6"
-                            src={arrow}
-                            alt=""
-                          ></Image>
-                        </div>
-                      </Link>
-                    ))}
+                        {anchorLinks.map((link, index) => (
+                          <Link
+                            key={index}
+                            href={link.link}
+                            onClick={closeBurger}
+                            variants={linkVariants}
+                            whiletap={{ scale: 0.95 }}
+                          >
+                            <div className="flex items-center">
+                              <p className="font-roc text-base font-medium uppercase text-white">
+                                {link.title}
+                              </p>
+                              <Image
+                                className="mb-1 ml-auto w-6"
+                                src={arrow}
+                                alt=""
+                              ></Image>
+                            </div>
+                          </Link>
+                        ))}
+                        {routerLinks.map((link, index) => (
+                          <Link
+                            key={index * 4}
+                            href={link.link}
+                            onClick={closeBurger}
+                            variants={linkVariants}
+                            whilehover={{ scale: 1.1 }}
+                            whiletap={{ scale: 0.95 }}
+                          >
+                            <div className="flex items-center">
+                              <p className="font-roc text-base font-medium uppercase text-white">
+                                {link.title}
+                              </p>
+                              <Image
+                                className="mb-1 ml-auto w-6"
+                                src={arrow}
+                                alt=""
+                              ></Image>
+                            </div>
+                          </Link>
+                        ))}
+                      </>
+                    )}
                   </motion.nav>
                   <button
                     className="btn-submit mx-4 mt-auto text-center"
