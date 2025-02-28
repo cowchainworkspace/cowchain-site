@@ -67,7 +67,7 @@ export const OtherServices = ({
     >
       <div className="relative grid grid-cols-1 md:grid-cols-6">
         <div
-          className={`md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} mt-[60px] box-border flex flex-col items-start justify-start px-[20px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[80px] custom1000:pt-[126px]`}
+          className={`md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} mt-[60px] box-border flex flex-col items-start justify-start px-[20px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[88px] custom1000:pt-[126px]`}
         >
           {tag && <Tag title={tag} className="mb-[42px] md:mb-8" />}
 

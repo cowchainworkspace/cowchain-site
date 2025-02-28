@@ -22,15 +22,15 @@ export function ExpertiseServices({
       {!noBg && bg}
 
       <div
-        className={`relative mx-auto flex max-w-[1440px] flex-col px-[20px] py-[60px] md:flex-row ${threeColumns ? "flex grid-cols-3 flex-col gap-5 sm:grid md:gap-[85px]" : " flex justify-between"} `}
+        className={`relative mx-auto flex max-w-[1440px] flex-col px-[88px] py-[60px] md:flex-row lg:py-[126px] ${threeColumns ? "flex grid-cols-3 flex-col gap-5 sm:grid md:gap-[85px]" : " flex justify-between"} `}
       >
         <div className="col-span-1 lg:gap-16">
           {tag && <Tag title={tag} className="mb-4 w-fit md:mb-8" />}
           <h2
             className={cn(
-              "lg:order-0 text-[42px] uppercase text-white md:text-[50px]",
+              "lg:order-0 text-[42px] uppercase text-white md:text-[60px]",
               {
-                "md:!text-[60px]": threeColumns,
+                "md:!text-[50px]": threeColumns,
                 "!text-[42px] leading-[37.59px]": isDevelop
               }
             )}

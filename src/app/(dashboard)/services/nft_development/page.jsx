@@ -1,24 +1,23 @@
-import { HeroSection } from "../components/service/blocks/HeroSection";
-import Achievements from "../components/service/blocks/Achievements";
 import Contact from "@/components/Contact";
+import Achievements from "../components/service/blocks/Achievements";
+import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
+import { Feedback } from "../components/service/blocks/Feedback";
+import { HeroSection } from "../components/service/blocks/HeroSection";
 import { Industries } from "../components/service/blocks/Industries";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
-import { Feedback } from "../components/service/blocks/Feedback";
-import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
+import { nftStackData } from "../components/service/blocks/stack/data";
+import { metadata } from "./utils/NftDevMetadata";
 import {
-  DeFiBenefitsData,
-  nftServicesData,
-  nftProcessData,
   NftIndustriesData,
   OtherNftData,
   faqNftData,
-  nftBenefitsData
+  nftBenefitsData,
+  nftProcessData,
+  nftServicesData
 } from "./utils/data";
-import { nftStackData } from "../components/service/blocks/stack/data";
-import { metadata } from "./utils/NftDevMetadata";
 
 export { metadata };
 
@@ -75,20 +74,18 @@ const NftDevelopment = () => {
             goals.
           </>
         }
+        noBg={true}
       />
 
       <FAQ
-        title={
-          <>
-            Our Non-Fungible <br />
-            Token Development <br />
-            Process
-          </>
-        }
+        title={<>Our Non-Fungible Token Development Process</>}
         desc={
           "Our NFT development team follows a systematic approach to ensure that each project is handled with care from start to finish, delivering high-quality outcomes. By focusing on every detail of nft development, we create platforms that are robust and adaptable to evolving business needs, enabling clients to achieve lasting impact"
         }
         data={nftProcessData}
+        isTwoHalf={true}
+        isDoublePadding={true}
+        noBg={true}
       />
 
       <Industries
@@ -118,6 +115,7 @@ const NftDevelopment = () => {
         desc={
           "Cowchain is recognized as a leading NFT development company, with a reputation for delivering high-qualityNon-Fungible Token development solutions. Our team of NFT developers offers in-depth knowledge in creating cutting-edge solutions for both businesses and creators"
         }
+        noBg={true}
       />
 
       <ServiceStack
@@ -147,7 +145,7 @@ const NftDevelopment = () => {
         data={OtherNftData}
         bottomBorder={false}
       />
-      <FAQ data={faqNftData} />
+      <FAQ data={faqNftData} noBg={true} />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

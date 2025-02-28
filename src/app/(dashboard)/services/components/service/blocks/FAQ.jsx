@@ -38,7 +38,10 @@ export default function FAQ({
   noBg,
   desc,
   isSecondary,
-  faq = false
+  faq = false,
+  isTwoHalf = false,
+  isDoublePadding = false,
+  titleClasses = ""
 }) {
   const [screenWidth, setScreenWidth] = useState();
 
@@ -64,26 +67,46 @@ export default function FAQ({
         </div>
       )}
 
-      <div className="relative grid grid-cols-1 md:grid-cols-5">
+      <div
+        className={cn("relative grid grid-cols-1 md:grid-cols-5", {
+          "md:grid-cols-2": isTwoHalf
+        })}
+      >
         <div
-          className={`md:py-heading px-default md-border-r flex flex-col ${faq ? "justify-center" : "justify-start"} gap-[10px] border-b border-b-th-fade py-[60px] text-left md:col-span-2 md:gap-0`}
+          className={cn(
+            `md:py-heading px-default md-border-r flex flex-col lg:pl-[88px] ${faq ? "justify-center" : "justify-start"} gap-[10px] border-b border-b-th-fade py-[60px] pt-[70px] text-left md:col-span-2 md:gap-[40px]`,
+            {
+              "md:col-span-1": isTwoHalf,
+              "!pt-[126px]": isDoublePadding
+            }
+          )}
         >
           <h2
-            className={`flex ${faq ? "justify-center text-center" : "justify-start text-left"} text-[36px]  uppercase uppercase leading-[40px] text-white md:text-left  custom1000:text-[42px]`}
+            className={cn(
+              `flex max-w-[462px] ${faq ? "justify-center text-center" : "text-pretty"} text-[36px]  uppercase  leading-[37.59px] text-white   custom1000:text-[42px]`,
+              titleClasses
+            )}
           >
             {title}
           </h2>
           {desc && (
             <p
-              className={cn("body my-[40px] text-left leading-6 md:my-[20px]", {
-                "max-w-[434px] text-balance !text-secondary": isSecondary
-              })}
+              className={cn(
+                "body my-[40px] max-w-[462px] text-left leading-6 md:my-[20px]",
+                {
+                  "max-w-[434px] text-balance !text-secondary": isSecondary
+                }
+              )}
             >
               {desc}
             </p>
           )}
         </div>
-        <div className="md:col-span-3">
+        <div
+          className={cn("md:col-span-3", {
+            "md:col-span-1": isTwoHalf
+          })}
+        >
           <Accordion allowToggle>
             {data.map((faq, index) => (
               <AccordionItem key={index} className="border-b border-th-fade">

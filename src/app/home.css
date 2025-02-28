@@ -62,7 +62,7 @@ video {
 }
 
 .tools_wrapper {
-  @apply max-w-[296px];
+  @apply max-w-[360px];
 }
 
 .tools_wrapper div:not(:first-child) {

@@ -75,16 +75,16 @@ export const Feedback = () => {
             alt=""
           />
           <div className="h-[1px]" />
-          <div className="mx-default my-heading sticky bottom-[30vh] w-full self-end ">
+          <div className="mx-default my-heading sticky bottom-[30vh] w-full self-end lg:ml-[88px] lg:mt-[121px]">
             <h3 className="uppercase !leading-none text-white">
               What our
               <br />
               Clients say
             </h3>
             <p className=" mt-[30px] max-w-[592px] text-base leading-6 text-[#BBBBBB]">
-              Clients who have partnered with Cowchain for full stack
-              development services consistently highlight the quality and
-              scalability of our solutions
+              Clients have praised our work, citing our deep expertise in NFT
+              development and blockchain technology. We focus on delivering
+              innovative solutions that meet the unique needs of each project
             </p>
             <div className="mt-10 flex flex-col gap-y-4 md:mt-16 lg:mt-24 xl:mt-36">
               <div className="flex items-center gap-x-[28px]">
@@ -93,19 +93,14 @@ export const Feedback = () => {
                   rel="nofollow noreferrer"
                   target="_blank"
                 >
-                  <Image className="w-12 md:w-16" src={clutch} alt=""></Image>
+                  <Image className="w-12 md:w-16" src={clutch} alt="" />
                 </a>
                 <div>
                   <div className="flex items-center gap-x-4">
                     <p className="markup mt-1 text-white">5.0</p>
                     <div className="flex items-center gap-x-1">
                       {[0, 1, 2, 3, 4].map((n, index) => (
-                        <Image
-                          key={index}
-                          className="w-4"
-                          src={star}
-                          alt=""
-                        ></Image>
+                        <Image key={index} className="w-4" src={star} alt="" />
                       ))}
                     </div>
                   </div>
@@ -117,10 +112,10 @@ export const Feedback = () => {
                   rel="nofollow noreferrer"
                   target="_blank"
                 >
-                  <Image className="w-12 md:w-16" src={upwork} alt=""></Image>
+                  <Image className="w-12 md:w-16" src={upwork} alt="" />
                 </a>
                 <div className="flex items-center gap-[8px]">
-                  <Image className="w-[35px]" src={topRated} alt=""></Image>
+                  <Image className="w-[35px]" src={topRated} alt="" />
                   <p className="markup mt-1 text-[16px] text-white">
                     Top Rated Plus
                   </p>
