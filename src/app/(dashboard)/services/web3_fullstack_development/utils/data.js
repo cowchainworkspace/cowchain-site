@@ -139,8 +139,7 @@ export const faqData = [
   },
   {
     title: "What distinguishes your development services from others?",
-    content: `Our full stack development services follow an integrated method, leveraging the latest technologies to provide solutions customized to your business goals.
-`
+    content: `Our full stack development services follow an integrated method, leveraging the latest technologies to provide solutions customized to your business goals.`
   },
   {
     title: "What should a full-stack project proposal include?",

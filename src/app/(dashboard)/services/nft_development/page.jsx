@@ -75,6 +75,7 @@ const NftDevelopment = () => {
           </>
         }
         noBg={true}
+        descClasses={"max-w-[592px]"}
       />
 
       <FAQ
@@ -86,6 +87,7 @@ const NftDevelopment = () => {
         isTwoHalf={true}
         isDoublePadding={true}
         noBg={true}
+        hasIcon={false}
       />
 
       <Industries
@@ -116,15 +118,27 @@ const NftDevelopment = () => {
           "Cowchain is recognized as a leading NFT development company, with a reputation for delivering high-qualityNon-Fungible Token development solutions. Our team of NFT developers offers in-depth knowledge in creating cutting-edge solutions for both businesses and creators"
         }
         noBg={true}
+        descClasses={"max-w-[700px]"}
       />
 
       <ServiceStack
-        title={"nft development stack"}
+        title={
+          <>
+            nft
+            <br /> development
+            <br /> stack
+          </>
+        }
         desc={
-          "We support NFT development on a wide array of blockchain platforms to ensure the best fit for your needs"
+          <>
+            We support NFT development on
+            <br /> a wide array of blockchain platforms <br /> to ensure the
+            best fit for your needs
+          </>
         }
         data={nftStackData}
         twoColumns={true}
+        noMarginBottom={true}
       />
 
       <Feedback />
@@ -145,7 +159,12 @@ const NftDevelopment = () => {
         data={OtherNftData}
         bottomBorder={false}
       />
-      <FAQ data={faqNftData} noBg={true} />
+      <FAQ
+        data={faqNftData}
+        noBg={true}
+        titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+        faqHorizontalPadding={true}
+      />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

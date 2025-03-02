@@ -8,9 +8,7 @@ import HybridIcon from "@/assets/svgComponents/industries/HybridIcon";
 import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon";
 
 import health from "@/assets/svgComponents/defiServise/HealthDefiIcon";
-import InsurenseDefiIcon from "@/assets/svgComponents/defiServise/InsurenseDefiIcon";
 import RealEstateDefiIcon from "@/assets/svgComponents/defiServise/RealEstateDefiIcon";
-import SupplyChainDefiIcon from "@/assets/svgComponents/defiServise/SupplyChainDefiIcon";
 
 export const DappExpertiseDesc =
   "Our dapp development company offers a comprehensive range of services that enable businesses to harness the potential of decentralized applications. Here are some of the key services we provide";

@@ -158,6 +158,7 @@ const DexDevelopment = () => {
         noBg={true}
         data={faqDexData}
         titleClasses={"custom1000:text-[60px] leading-[53.7px]"}
+        faqHorizontalPadding={true}
       />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>

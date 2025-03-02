@@ -14,7 +14,8 @@ export function ServiceStack({
   data = expertiseData,
   title,
   desc = "To achieve high performance in decentralized exchange softwaredevelopment, we rely on the following tech stack",
-  isMarginRight = false
+  isMarginRight = false,
+  noMarginBottom = false
 }) {
   return (
     <section
@@ -31,7 +32,14 @@ export function ServiceStack({
         <div
           className={`relative col-span-1 ${twoColumns ? "row-span-1" : lopngDesc ? "row-span-4" : "row-span-6 lg:row-span-3"}`}
         >
-          <div className="mx-auto flex flex-col items-center justify-center text-left text-white md:mb-16">
+          <div
+            className={cn(
+              "mx-auto flex flex-col items-center justify-center text-left text-white md:mb-16",
+              {
+                "!mb-0": noMarginBottom
+              }
+            )}
+          >
             <div
               className={cn(
                 "col-span-2 flex flex-col items-start gap-[26px]  md:justify-start",

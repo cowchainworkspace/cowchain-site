@@ -1,9 +1,9 @@
 import ConsultingAdvisoryIcon from "@/assets/svgComponents/industries/ConsultingAdvisoryIcon";
 import DedicateTeamIcon from "@/assets/svgComponents/industries/DedicateTeamIcon";
 import DesignDevIcon from "@/assets/svgComponents/industries/DesignDevIcon";
+import EcomerceIcon from "@/assets/svgComponents/industries/EcomerceIcon";
 import EducationIcon from "@/assets/svgComponents/industries/EducationIcon";
 import FinanceIcon from "@/assets/svgComponents/industries/FinanceIcon";
-import EcomerceIcon from "@/assets/svgComponents/industries/EcomerceIcon";
 import HealthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
 import HybridIcon from "@/assets/svgComponents/industries/HybridIcon";
 import LaunchMaintenanceIcon from "@/assets/svgComponents/industries/LaunchMaitenanceIcon";
@@ -12,7 +12,6 @@ import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon
 import TestingIcon from "@/assets/svgComponents/industries/TestingIcon";
 
 import AndMore from "@/assets/svgComponents/whiteLabel/AndMore";
-import cryptoLottery from "@/assets/svgComponents/whiteLabel/cryptoLotery";
 import CustomerApp from "@/assets/svgComponents/whiteLabel/CustomerApp";
 import Exchange from "@/assets/svgComponents/whiteLabel/Exchange";
 import FintechSolution from "@/assets/svgComponents/whiteLabel/FintechSolution";
@@ -24,6 +23,7 @@ import NftMarketplace from "@/assets/svgComponents/whiteLabel/NftMarketplace";
 import Rwa from "@/assets/svgComponents/whiteLabel/Rwa";
 import Staking from "@/assets/svgComponents/whiteLabel/Staking";
 import TelegramApp from "@/assets/svgComponents/whiteLabel/TelegramApp";
+import cryptoLottery from "@/assets/svgComponents/whiteLabel/cryptoLotery";
 
 export const DexExpertiseDesc =
   "We believe that a solid foundation in decentralized exchange development is key to creating platforms that not only meet today’s demands but also evolve with the growing needs of the cryptocurrency market";
@@ -251,4 +251,25 @@ export const faqQuestions = [
      title: 'What key elements should be included in a white-label web design contract?',
      content: "It’s important to include clear terms regarding delivery timelines, project scope, and ownership of the final product. As a trusted white label partner, we ensure all legal and technical details are covered."
   },
+]
+
+export const whiteProcessData = [
+  {
+    id: 1,
+    title: 'Gathering and Analyzing Requirements',
+    content: 'Before starting any project, we work closely with your project managers to gather all necessary information. This ensures the custom web development fits the exact needs of your clients.',
+
+  },
+  {
+    id: 2,
+    title: 'Blueprint Creation and Planning',
+    content: 'Once the requirements are clear, our development team creates a blueprint detailing the structure and core functionality of the website or app, ensuring clarity and precision.',
+
+  },
+  {
+    id: 3,
+    title: 'Mockup Design and Feedback',
+    content: 'At every stage of white label development, we create detailed mockups, enabling clients to review, refine, and align the final product with their vision before implementation.',
+
+  }
 ]

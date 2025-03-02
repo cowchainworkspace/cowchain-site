@@ -13,7 +13,8 @@ export function ExpertiseServices({
   bottomBorder = true,
   threeColumns,
   tag,
-  isDevelop = false
+  isDevelop = false,
+  titleClasses = ""
 }) {
   return (
     <section
@@ -22,7 +23,7 @@ export function ExpertiseServices({
       {!noBg && bg}
 
       <div
-        className={`relative mx-auto flex max-w-[1440px] flex-col px-[88px] py-[60px] md:flex-row lg:py-[126px] ${threeColumns ? "flex grid-cols-3 flex-col gap-5 sm:grid md:gap-[85px]" : " flex justify-between"} `}
+        className={`relative mx-auto flex max-w-[1440px] flex-col px-8 py-[60px] md:flex-row md:px-[88px] lg:py-[126px] ${threeColumns ? "flex grid-cols-3 flex-col gap-5 sm:grid md:gap-[85px]" : " flex justify-between"} `}
       >
         <div className="col-span-1 lg:gap-16">
           {tag && <Tag title={tag} className="mb-4 w-fit md:mb-8" />}
@@ -32,7 +33,8 @@ export function ExpertiseServices({
               {
                 "md:!text-[50px]": threeColumns,
                 "!text-[42px] leading-[37.59px]": isDevelop
-              }
+              },
+              titleClasses
             )}
           >
             {title}
@@ -64,7 +66,14 @@ export function ExpertiseServices({
                 </div>
               )}
               <div>
-                <p className="mt-[24px] text-[16px] !leading-[22px] !text-[#BBBBBB] ">
+                <p
+                  className={cn(
+                    "mb-6 text-[16px] !leading-[22px] !text-[#BBBBBB]",
+                    {
+                      "mt-6": title
+                    }
+                  )}
+                >
                   {desc}
                 </p>
               </div>

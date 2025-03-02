@@ -79,6 +79,8 @@ export default function HomeContent() {
           desc="As a leading Web3 development company, Cowchain delivers Web3 development services that empower businesses to fully utilize decentralized technologies. 
 Each solution is crafted with precision, 
 and aimed at solving real-world challenges"
+          hasIcon={false}
+          isSecondary={true}
         />
       </div>
       <div className="hidden md:block">
@@ -90,8 +92,15 @@ and aimed at solving real-world challenges"
             </>
           }
           data={web3DevData}
+          desc="As a leading Web3 development company, Cowchain delivers Web3 development services that empower businesses to fully utilize decentralized technologies. 
+Each solution is crafted with precision, 
+and aimed at solving real-world challenges"
+          hasIcon={false}
+          isSecondary={true}
+          isTwoHalf={true}
         />
       </div>
+
       <ServiceStack home />
       <Advantages isSecondary={true} />
       <ExpertiseServices
@@ -212,7 +221,12 @@ and aimed at solving real-world challenges"
         tag={"additional services"}
       />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
-      <FAQ noBg={true} data={faqHomeData} />
+      <FAQ
+        noBg={true}
+        data={faqHomeData}
+        faqHorizontalPadding={true}
+        titleClasses="xl:text-[60px] xl:leading-[53.7px]"
+      />
     </>
   );
 }

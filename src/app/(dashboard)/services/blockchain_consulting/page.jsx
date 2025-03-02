@@ -134,6 +134,10 @@ const BlockChainConsulting = () => {
         title={"Our Consulting Process"}
         data={consultingProcessData}
         noBg={true}
+        isTwoHalf={true}
+        hasIcon={false}
+        faqGradient={true}
+        itemsClasses={"py-[74.5px]"}
       />
 
       <KeyFeatures
@@ -154,6 +158,7 @@ const BlockChainConsulting = () => {
           </>
         }
         noBg={true}
+        descClasses={"max-w-[592px]"}
       />
 
       <KeyFeatures
@@ -190,6 +195,13 @@ const BlockChainConsulting = () => {
         data={EngagementDevData}
         topBorder={false}
         isTwoSides={true}
+        bg={
+          <Image
+            src={dexBg}
+            alt="decoration ellipse"
+            className="absolute -bottom-[45%] left-0"
+          />
+        }
       />
 
       <KeyFeatures
@@ -198,6 +210,7 @@ const BlockChainConsulting = () => {
         desc={
           "Clients choose Cowchain because we offer a unique combination of deep expertise and a client-focused approach. Our blockchain consulting delivers solutions that align with the individual requirements of each business, ensuring that they receive not only a robust system but also a clear strategy for sustained growth. Our blockchain consulting company is known for delivering projects on time, and within budget, providing lasting support to foster growth and adaptability"
         }
+        noBg={true}
       />
 
       <OtherServices
@@ -221,7 +234,12 @@ const BlockChainConsulting = () => {
         data={otherServices}
       />
 
-      <FAQ data={consultingFAQData} />
+      <FAQ
+        data={consultingFAQData}
+        noBg={true}
+        titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+        faqHorizontalPadding={true}
+      />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

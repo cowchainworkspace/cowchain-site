@@ -77,6 +77,7 @@ const DefiDevelopment = () => {
           </>
         }
         noBg={true}
+        descClasses={"max-w-[592px]"}
       />
 
       <ExpertiseServices
@@ -122,6 +123,7 @@ const DefiDevelopment = () => {
         desc={
           "Our defi token development company classifies tokens based on their utility, governance, and other functionalities. We ensure that each token meets the specific needs of your project"
         }
+        descClasses={"max-w-[592px]"}
       />
 
       <FAQ
@@ -139,6 +141,7 @@ const DefiDevelopment = () => {
         noBg={true}
         isTwoHalf={true}
         isDoublePadding={true}
+        hasIcon={false}
       />
 
       <KeyFeatures
@@ -148,6 +151,8 @@ const DefiDevelopment = () => {
           "Developing tokens with our defi development company offers several perks, including increased liquidity, global reach, and enhanced security. Our defi development services are tailored to maximize the potential of your tokens. Additionally, defi development creates new opportunities for token utility and broader adoption"
         }
         noBg={true}
+        titleClasses="lg:mb-10"
+        descClasses={"max-w-[592px]"}
       />
 
       <ServiceStack home={true} />
@@ -158,6 +163,7 @@ const DefiDevelopment = () => {
         desc={
           "With years of experience in the blockchain industry, our defi development company specializes in development services and expert advisory to optimize defi development. We guide clients through the complexities of blockchain and development, ensuring reliable implementation of their projects"
         }
+        titleClasses="max-w-[737px] lg:mb-10"
         noBg={true}
       />
 
@@ -191,7 +197,12 @@ const DefiDevelopment = () => {
         data={OtherDefiData}
         bottomBorder={false}
       />
-      <FAQ data={faqDefiData} noBg={true} />
+      <FAQ
+        data={faqDefiData}
+        noBg={true}
+        titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+        faqHorizontalPadding={true}
+      />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

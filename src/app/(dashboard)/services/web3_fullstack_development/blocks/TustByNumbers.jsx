@@ -1,10 +1,10 @@
 "use client";
 
-import FSTrustBuyNumbBg from "@/assets/bg/FSTrustBuyNumbBg.svg";
 import arrow from "@/assets/arrow_right.svg";
-import { Counter } from "../../../(home)/components/counter";
-import Link from "next/link";
+import FSTrustBuyNumbBg from "@/assets/bg/FSTrustBuyNumbBg.svg";
 import Image from "next/image";
+import Link from "next/link";
+import { Counter } from "../../../(home)/components/counter";
 
 const TustByNumbersData = [
   {
@@ -40,7 +40,7 @@ export function TustByNumbers({
       {!home && (
         <Image
           alt=""
-          className="absolute -bottom-[38%] left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min lg:-bottom-[80%]"
+          className="absolute -bottom-[38%] left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min lg:-bottom-[120%]"
           src={FSTrustBuyNumbBg}
         />
       )}
@@ -50,9 +50,9 @@ export function TustByNumbers({
           <div
             className={`flex h-full flex-col  ${home ? "h-fit md:h-[700px]" : "justify-center"}
              gap-[37px] border-r border-r-th-fade
-            px-[20px] pb-[40px] pt-[60px] md:pb-[110px] custom1430:pl-[88px] custom1430:pr-[168px] md:pt-[170px]`}
+            px-[20px] pb-[40px] pt-[60px] md:pb-[110px] md:pt-[170px] custom1430:pl-[88px] custom1430:pr-[168px]`}
           >
-            <h2 className="heading-[42px] text-[36px] custom815:text-[48px] uppercase text-white custom1200:text-[60px] ">
+            <h2 className="heading-[42px] text-[36px] uppercase text-white custom815:text-[48px] custom1200:text-[60px] ">
               {title}
             </h2>
             {!home && (
@@ -65,7 +65,7 @@ export function TustByNumbers({
             )}
 
             {desc && (
-              <p className="my-0 block sm:hidden max-w-lg text-[14px] leading-6 md:my-[20px] md:text-base lg:order-2 lg:max-w-[306]">
+              <p className="my-0 block max-w-lg text-[14px] leading-6 sm:hidden md:my-[20px] md:text-base lg:order-2 lg:max-w-[306]">
                 {desc}
               </p>
             )}
@@ -73,7 +73,7 @@ export function TustByNumbers({
           <div
             className="col-span-2 flex grid w-full grid-cols-2 
           flex-col justify-center border-b border-t
-           border-b-th-fade border-t-th-fade md:border-0 customSmall:flex-row  lg:order-3 lg:ml-auto"
+           border-b-th-fade border-t-th-fade customSmall:flex-row md:border-0  lg:order-3 lg:ml-auto"
           >
             {data.map(
               ({ number, desc, sighn, title, sufix, decimal }, index) => (
@@ -96,7 +96,7 @@ export function TustByNumbers({
                               decimals={decimal}
                               target={number}
                             />
-                            <span className="font-roc text-[18px] font-medium leading-[18px]text-white text-white md:text-[42px] md:leading-tight  lg:text-5xl">
+                            <span className="leading-[18px]text-white font-roc text-[18px] font-medium text-white md:text-[42px] md:leading-tight  lg:text-5xl">
                               {sufix}
                             </span>
                           </>

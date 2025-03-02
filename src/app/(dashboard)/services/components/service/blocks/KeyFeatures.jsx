@@ -29,7 +29,8 @@ export function KeyFeatures({
   isWhiteLabelBg = false,
   isMaxWidthTab = false,
   titleClasses = "",
-  isTextSecondary
+  isTextSecondary,
+  descClasses
 }) {
   return (
     <section
@@ -70,7 +71,8 @@ export function KeyFeatures({
               {
                 "max-w-[592px]": isMaxWidthTab,
                 "text-secondary": isTextSecondary
-              }
+              },
+              descClasses
             )}
           >
             {desc}

@@ -170,11 +170,12 @@ const DappDevelopment = () => {
           "Clients trust Cowchain because we deliver reliable custom dApp development. Our company dapp development expertise ensures that every application is built to high standards of performance and security, empowering businesses to achieve their goals in the competitive blockchain market"
         }
         noBg={true}
+        descClasses={"max-w-[792px]"}
       />
       <OtherServices
         title={
           <>
-            In addition <br /> to{" "}
+            In addition to{" "}
             <span className="violet-gradient-text">
               dApp
               <br />
@@ -196,7 +197,12 @@ const DappDevelopment = () => {
         bottomBorder={false}
         tag={"Other Our Services"}
       />
-      <FAQ data={faqDappData} noBg={true} />
+      <FAQ
+        data={faqDappData}
+        noBg={true}
+        titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+        faqHorizontalPadding={true}
+      />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

@@ -1,16 +1,19 @@
-import { HeroSection } from "../components/service/blocks/HeroSection";
-import Achievements from "../components/service/blocks/Achievements";
+import servideBG from "@/assets/bg/dexServiceBg.svg";
 import Contact from "@/components/Contact";
-import FAQ from "../components/service/blocks/FAQ";
-import { TustByNumbers } from "./blocks/TustByNumbers";
-import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
-import { Industries } from "../components/service/blocks/Industries/index";
-import { Feedback } from "../components/service/blocks/Feedback";
-import { OtherServices } from "../components/service/blocks/OtherServices";
-import { ServiceStack } from "../components/service/blocks/stack";
+import Image from "next/image";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
+import Achievements from "../components/service/blocks/Achievements";
+import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
+import FAQ from "../components/service/blocks/FAQ";
+import { Feedback } from "../components/service/blocks/Feedback";
+import { HeroSection } from "../components/service/blocks/HeroSection";
+import { Industries } from "../components/service/blocks/Industries/index";
+import { OtherServices } from "../components/service/blocks/OtherServices";
+import { ServiceStack } from "../components/service/blocks/stack";
 import { CasesHead } from "./blocks/CasesHead";
+import { TustByNumbers } from "./blocks/TustByNumbers";
+import { metadata } from "./utils/FSDevMetadata";
 import { FSExpertiseDesc } from "./utils/data";
 import { FSExpertiseData } from "./utils/data";
 import { servedIndustriesData } from "./utils/data";
@@ -19,7 +22,6 @@ import { DevProcessData } from "./utils/data";
 import { chooseUsData } from "./utils/data";
 import { otherServiceData } from "./utils/data";
 import { faqData } from "./utils/data";
-import { metadata } from "./utils/FSDevMetadata";
 
 export { metadata };
 
@@ -119,6 +121,13 @@ const FullStackDevelopment = () => {
         data={DevProcessData}
         topBorder={false}
         bottomBorder={false}
+        bg={
+          <Image
+            alt=""
+            className="absolute -bottom-[45%] left-0  h-screen md:block md:h-min "
+            src={servideBG}
+          />
+        }
       />
       <FAQ
         noBg={true}
@@ -128,6 +137,8 @@ const FullStackDevelopment = () => {
           </>
         }
         data={chooseUsData}
+        isTwoHalf={true}
+        hasIcon={false}
       />
       <ServiceStack />
       <Feedback />
@@ -137,21 +148,31 @@ const FullStackDevelopment = () => {
       <OtherServices
         title={
           <>
-            In addition <br /> to{" "}
+            Along side
             <span className="violet-gradient-text">
-              dex platform
+              {" "}
+              full
               <br />
-              development
-            </span>
-            ,<br />
-            we offer <br />
-            the following <br />
-            <span className="violet-gradient-text">blockchain</span> services
+              stack development <br /> services,
+            </span>{" "}
+            cowchain <br />
+            offers{" "}
+            <span className="violet-gradient-text">
+              additional <br /> support services
+            </span>{" "}
+            <br />
+            to fully back your <br />
+            project
           </>
         }
         data={otherServiceData}
       />
-      <FAQ data={faqData} />
+      <FAQ
+        data={faqData}
+        noBg={true}
+        titleClasses="lg:text-[60px] leading-[53.7px]"
+        faqHorizontalPadding={true}
+      />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
