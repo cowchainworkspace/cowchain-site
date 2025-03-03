@@ -87,9 +87,7 @@ export default function Navbar({ isPageNotFound = false }) {
         pathname === "/policy" ||
         pathname === "/services"
     );
-    setIsTeamBg(
-      pathname === "/team" || pathname === "/sitemap" || pathname === "/blog"
-    );
+    setIsTeamBg(pathname === "/team" || pathname === "/sitemap");
 
     if (pathname === "/team") {
       setIsGradient(false);
