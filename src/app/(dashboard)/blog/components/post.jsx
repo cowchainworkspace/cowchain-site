@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Reading } from "./Reading/Reading";
 
-export const Post = ({ atributes, isThreeLines = false }) => {
+export const Post = ({ atributes, isMobile = false, isThreeLines = false }) => {
   const {
     slug,
     article_description,
@@ -20,7 +20,10 @@ export const Post = ({ atributes, isThreeLines = false }) => {
     <Link
       href={`blog/articles/${slug}`}
       className={cn(
-        "group relative  flex w-full cursor-pointer flex-col border-r-[0.5px] border-th-fade p-6 last-of-type:border-r-0 md:p-6"
+        "group relative  flex w-full cursor-pointer flex-col border-th-fade p-6 last-of-type:border-r-0 md:border-r-[0.5px] md:p-6"
+        // {
+        //   "border-b border-b-th-fade last:border-b-0": isMobile
+        // }
       )}
     >
       <Image

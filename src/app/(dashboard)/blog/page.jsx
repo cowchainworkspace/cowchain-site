@@ -2,6 +2,7 @@
 
 import { Loading } from "@/components/loader/Loading";
 import { useGetArticles } from "@/hooks/use-strapi";
+import { useMediaQuery } from "@chakra-ui/react";
 import { useSearchParams } from "next/navigation";
 import { Fragment } from "react";
 import Contact from "../../../components/Contact";
@@ -13,13 +14,14 @@ import { Post } from "./components/post";
 export default function Blog() {
   const searchParams = useSearchParams();
   const tag = searchParams.get("tag") || "";
-
+  const isTablet = useMediaQuery("(max-width: 1023px)");
+  const itemsPerPage = isTablet ? 6 : 5;
   const {
     data: articles,
     isLoading,
     fetchNextPage,
     isFetchingNextPage
-  } = useGetArticles({ tag });
+  } = useGetArticles({ tag, itemsPerPage });
 
   if (isLoading) {
     return (
@@ -38,24 +40,25 @@ export default function Blog() {
 
   return (
     <section>
-      <div className="relative -mt-[440px] overflow-x-hidden overflow-y-hidden bg-black lg:-mt-[670px]">
+      <div className="relative overflow-visible  bg-black">
         <BlogBreadCrumb />
         <HeroSection />
         <section className="container max-w-[1440px]">
-          <div>
+          <div className="border-t-[0.5px] border-th-fade md:border-0">
             {articles?.pages.map((post, index) => (
               <Fragment key={index}>
-                <div className="grid w-full border-t-[0.5px] border-th-fade md:grid-cols-2">
+                <div className="grid w-full border-t-[0.5px] border-th-fade lg:grid-cols-2">
                   {post.data.slice(0, 2).map((article) => (
                     <Post key={article.id} atributes={article.attributes} />
                   ))}
                 </div>
-                <div className="grid border-t-[0.5px] border-th-fade md:grid-cols-3">
+                <div className=" grid border-t-[0.5px] border-th-fade  lg:grid-cols-3 ">
                   {post.data.slice(2).map((article) => (
                     <Post
                       key={article.id}
                       atributes={article.attributes}
                       isThreeLines={true}
+                      isMobile
                     />
                   ))}
                 </div>
@@ -70,7 +73,7 @@ export default function Blog() {
           showMorePosts={fetchNextPage}
           isFetchingNextPage={isFetchingNextPage}
         />
-        <Contact className={"py-[72px] md:py-[140px]"} />
+        <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
       </div>
     </section>
   );

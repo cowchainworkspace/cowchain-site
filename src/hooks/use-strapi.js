@@ -43,7 +43,7 @@ export const useGetArticles = (sortParams) => {
         },
         sort: ["date:desc"],
         fields: ['article_title', "slug", "id", "article_description", "tag", "author_name", "reading_minutes"],
-        pagination: { page: pageParam, pageSize: 5 },
+        pagination: { page: pageParam, pageSize: 5},
       }, {
         encodeValuesOnly: true,
       })
