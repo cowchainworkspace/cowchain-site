@@ -2,6 +2,7 @@ import healthcare from "@/assets/industries/HelthcareIcon.svg";
 import education from "@/assets/industries/educationIcon.svg";
 import finance from "@/assets/industries/financeIcon.svg";
 import government from "@/assets/industries/govermentIcon.svg";
+import { cn } from "@/lib/utils";
 import React from "react";
 
 const expertiseData = [
@@ -45,7 +46,7 @@ export function Industries({
     >
       {bg && bg}
       <div
-        className={`mx-auto flex max-w-[1440px] flex-col px-[20px] py-[60px] sm:grid sm:py-[126px] md:pl-[84px] md:pr-[64px] 
+        className={`mx-auto flex w-full max-w-[1440px] flex-col px-[20px] py-[60px] sm:grid sm:py-[126px] md:px-[88px] 
           ${
             isTwoSides
               ? "grid-cols-2 gap-x-[50px] gap-y-[42px] sm:gap-y-[77px] custom1000:gap-x-[100px] custom1200:gap-x-[134px]"
@@ -63,7 +64,14 @@ export function Industries({
           <div
             className={`flex flex-col items-start gap-[18px] md:justify-start md:gap-[26px] ${isTwoSides ? "col-span-1  row-span-2 max-w-[400px]" : "col-span-2 row-span-1 "}`}
           >
-            <h2 className="whitespace-pre-line text-left text-[36px] uppercase md:text-center md:text-start md:text-[48px] custom1000:text-[60px]">
+            <h2
+              className={cn(
+                "whitespace-pre-line text-left text-[36px] uppercase md:text-center md:text-start md:text-[48px] custom1000:text-[60px]",
+                {
+                  "!text-[42px]": isTwoSides
+                }
+              )}
+            >
               {title}
             </h2>
 

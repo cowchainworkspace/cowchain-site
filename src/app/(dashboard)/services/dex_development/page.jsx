@@ -1,11 +1,13 @@
-import { HeroSection } from "../components/service/blocks/HeroSection";
-import Achievements from "../components/service/blocks/Achievements";
+import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
-import FAQ from "../components/service/blocks/FAQ";
+import Image from "next/image";
+import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
-import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
-import { Industries } from "../components/service/blocks/Industries/index";
+import FAQ from "../components/service/blocks/FAQ";
 import { Feedback } from "../components/service/blocks/Feedback";
+import { HeroSection } from "../components/service/blocks/HeroSection";
+import { Industries } from "../components/service/blocks/Industries/index";
+import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
 import { DexExpertiseDesc } from "./utils/data";
@@ -14,8 +16,6 @@ import { IndustriesDexData } from "./utils/data";
 import { DexAppDevData } from "./utils/data";
 import { EngagementDevData, faqDexData } from "./utils/data";
 import { metadata } from "./utils/dexDevMetadata";
-import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
-import Image from "next/image";
 export { metadata };
 
 const DexDevelopment = () => {
@@ -88,6 +88,7 @@ const DexDevelopment = () => {
           "Cowchain’s dex development delivers crucial features to keep your platform competitive. Our decentralized exchange development ensures that every platform is optimized for handling complex operations. Our experience in dex development allows us to offer solutions that are easily adaptable to market changes and technological advancements"
         }
         noBg={true}
+        isMaxWidthTab={true}
       />
       <Industries
         title={"Industries We Serve"}
@@ -103,6 +104,9 @@ const DexDevelopment = () => {
         desc={
           "With extensive experience in blockchain advisory services, Cowchain provides strategic guidance on decentralized exchange software development, helping clients navigate the complexities of building secure and feature-rich platforms. Our expertise ensures that every aspect of your decentralized exchange development is handled with precision, from initial planning to deployment, making sure the platform remains adaptable to future blockchain advancements"
         }
+        titleClasses={"!max-w-[737px] mb-10"}
+        isMaxWidthTab={true}
+        isTextSecondary={true}
       />
       <Industries
         title={"Our Decentralized Exchange Application Development"}
@@ -129,6 +133,9 @@ const DexDevelopment = () => {
         desc={
           "Clients trust Cowchain for our in-depth expertise, tailored solutions, and proven results in decentralized exchange development. We consistently deliver secure, scalable platforms while maintaining transparency and trust throughout the project lifecycle. Our track record in decentralized exchange development is evident through our projects across diverse industries."
         }
+        isTextSecondary={true}
+        isMaxWidthTab={true}
+        titleClasses="max-w-[553px] mb-10"
       />
       <OtherServices
         title={
@@ -145,8 +152,14 @@ const DexDevelopment = () => {
             <span className="violet-gradient-text">blockchain</span> services
           </>
         }
+        tag={"Other Our Services"}
       />
-      <FAQ noBg={true} data={faqDexData} />
+      <FAQ
+        noBg={true}
+        data={faqDexData}
+        titleClasses={"custom1000:text-[60px] leading-[53.7px]"}
+        faqHorizontalPadding={true}
+      />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

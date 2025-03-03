@@ -1,24 +1,25 @@
-import { HeroSection } from "../components/service/blocks/HeroSection";
-import Achievements from "../components/service/blocks/Achievements";
+import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
+import Image from "next/image";
+import Achievements from "../components/service/blocks/Achievements";
+import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
+import { Feedback } from "../components/service/blocks/Feedback";
+import { HeroSection } from "../components/service/blocks/HeroSection";
 import { Industries } from "../components/service/blocks/Industries";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
-import { Feedback } from "../components/service/blocks/Feedback";
-import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import {
-  OtherDefiData,
   ClientsTrustData,
-  IndustriesData,
-  defiProcessData,
-  DeFiExpertiseData,
   DeFiBenefitsData,
+  DeFiExpertiseData,
+  IndustriesData,
+  OtherDefiData,
+  defiProcessData,
   faqDefiData
 } from "./utils/data";
 import { metadata } from "./utils/defiDevMetadata";
-
 export { metadata };
 
 const DefiDevelopment = () => {
@@ -75,6 +76,8 @@ const DefiDevelopment = () => {
             more to streamline decentralized transactions
           </>
         }
+        noBg={true}
+        descClasses={"max-w-[592px]"}
       />
 
       <ExpertiseServices
@@ -86,6 +89,13 @@ const DefiDevelopment = () => {
             Services <br />
             We Provide
           </>
+        }
+        bg={
+          <Image
+            src={dexBg}
+            alt="decoration ellipse"
+            className="absolute -bottom-[35%] left-0"
+          />
         }
       />
 
@@ -113,6 +123,7 @@ const DefiDevelopment = () => {
         desc={
           "Our defi token development company classifies tokens based on their utility, governance, and other functionalities. We ensure that each token meets the specific needs of your project"
         }
+        descClasses={"max-w-[592px]"}
       />
 
       <FAQ
@@ -124,6 +135,13 @@ const DefiDevelopment = () => {
           </>
         }
         data={defiProcessData}
+        desc={
+          "Our NFT development team follows a systematic approach to ensure that each project is handled with care from start to finish, delivering high-quality outcomes. By focusing on every detail of nft development, we create platforms that are robust and adaptable to evolving business needs, enabling clients to achieve lasting impact"
+        }
+        noBg={true}
+        isTwoHalf={true}
+        isDoublePadding={true}
+        hasIcon={false}
       />
 
       <KeyFeatures
@@ -132,9 +150,12 @@ const DefiDevelopment = () => {
         desc={
           "Developing tokens with our defi development company offers several perks, including increased liquidity, global reach, and enhanced security. Our defi development services are tailored to maximize the potential of your tokens. Additionally, defi development creates new opportunities for token utility and broader adoption"
         }
+        noBg={true}
+        titleClasses="lg:mb-10"
+        descClasses={"max-w-[592px]"}
       />
 
-      <ServiceStack />
+      <ServiceStack home={true} />
 
       <KeyFeatures
         isOneBlock={true}
@@ -142,6 +163,8 @@ const DefiDevelopment = () => {
         desc={
           "With years of experience in the blockchain industry, our defi development company specializes in development services and expert advisory to optimize defi development. We guide clients through the complexities of blockchain and development, ensuring reliable implementation of their projects"
         }
+        titleClasses="max-w-[737px] lg:mb-10"
+        noBg={true}
       />
 
       <Feedback />
@@ -174,7 +197,12 @@ const DefiDevelopment = () => {
         data={OtherDefiData}
         bottomBorder={false}
       />
-      <FAQ data={faqDefiData} noBg={true} />
+      <FAQ
+        data={faqDefiData}
+        noBg={true}
+        titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+        faqHorizontalPadding={true}
+      />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

@@ -12,7 +12,7 @@ import { ServiceStack } from "../components/service/blocks/stack";
 import { TustByNumbers } from "../web3_fullstack_development/blocks/TustByNumbers";
 import { WhiteLabelCases } from "./blocks/WhiteLabelCases";
 import { metadata } from "./utils/WhiteLabelDevMetadata";
-import { faqDappData, otherServices } from "./utils/data";
+import { faqDappData, otherServices, whiteProcessData } from "./utils/data";
 import { IndustriesDexData } from "./utils/data";
 import {
   TustByNumbersData,
@@ -113,7 +113,12 @@ const WhiteLabelDev = () => {
 
       <KeyFeatures
         isOneBlock={true}
-        title={"Advantages of White-Label Web Development"}
+        title={
+          <>
+            Advantages <br /> of White-Label
+            <br /> Web Development
+          </>
+        }
         desc={
           <>
             Our white label development company guarantees that clients receive
@@ -131,9 +136,36 @@ const WhiteLabelDev = () => {
             match their requirements
           </>
         }
+        titleClasses="max-w-[573px]"
+        descClasses={"max-w-[798px]"}
       />
-      <FAQ data={faqDappData} />
-      <ServiceStack />
+      <FAQ
+        title={"Our Proven Process"}
+        desc={
+          <>
+            <p className="text-secondary">
+              At Cowchain, we believe in a well-structured approach to
+              delivering high-quality white label development services. From
+              analyzing your clients’ needs to creating custom web and mobile
+              solutions, our process is transparent and focused on results.
+            </p>
+            <br />
+            <p className="text-secondary">
+              We understand that businesses need reliable partners, and our web
+              development ensures consistent performance across all project
+              stages.
+            </p>
+          </>
+        }
+        data={whiteProcessData}
+        noBg={true}
+        isSecondary={true}
+        isTwoHalf={true}
+        itemsClasses={"py-[74.5px]"}
+        hasIcon={false}
+        faqGradient={true}
+      />
+      <ServiceStack home={true} />
       <KeyFeatures
         isOneBlock={true}
         title={"Why choose us?"}
@@ -149,30 +181,30 @@ const WhiteLabelDev = () => {
             client communication
           </>
         }
+        noBg={true}
       />
       <OtherServices
         title={
           <>
-            Alongside
+            In addition to <br />
             <span className="violet-gradient-text">
-              full <br /> stack development <br /> services,
+              white label <br /> development, <br />
             </span>
-            , Cowchain <br /> offers
+            Cowchain offers <br />
+            a variety <br /> of{" "}
             <span className="violet-gradient-text">
-              additional <br /> support services
-            </span>{" "}
-            <br />
-            to fully back your
-            <br /> project
+              complementary <br /> services
+            </span>
           </>
         }
         data={otherServices}
+        tag={"other our services"}
       />
       <Feedback />
       <WhiteLabelCases />
       <Cases />
       <CasesMobile />
-      <FAQ data={faqQuestions} noBg={true} />
+      <FAQ data={faqQuestions} noBg={true} faqHorizontalPadding={true} />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

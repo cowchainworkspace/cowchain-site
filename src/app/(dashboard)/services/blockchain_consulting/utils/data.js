@@ -10,8 +10,8 @@ import HybridIcon from "@/assets/svgComponents/industries/HybridIcon";
 import LaunchMaintenanceIcon from "@/assets/svgComponents/industries/LaunchMaitenanceIcon";
 import PlanningConsultingIcon from "@/assets/svgComponents/industries/PlanningConsaltingIcon";
 import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon";
-import TestingIcon from "@/assets/svgComponents/industries/TestingIcon";
 import SupplyChain from "@/assets/svgComponents/industries/SupplyChainIcon";
+import TestingIcon from "@/assets/svgComponents/industries/TestingIcon";
 
 export const DexExpertiseDesc =
   "We believe that a solid foundation in decentralized exchange development is key to creating platforms that not only meet today’s demands but also evolve with the growing needs of the cryptocurrency market";
@@ -174,7 +174,7 @@ export const BlockchainServiceData = [
     title: "Blockchain Technology Consulting",
     desc: (
       <>
-        <p>
+        <p className="text-secondary">
           Complex technologies are difficult to navigate through, but with
           blockchain technology consulting services, we ensure that businesses
           have experts who take the mystique out of this process. We guide on
@@ -184,7 +184,7 @@ export const BlockchainServiceData = [
         <p>
           <br />
         </p>
-        <p>
+        <p className="text-secondary">
           Blockchain consulting ensures that you use the best-suited solutions
           for developing smart contracts, decentralized applications, or supply
           chain management systems. Under the blockchain technologies
@@ -198,7 +198,7 @@ export const BlockchainServiceData = [
     title: "Blockchain Business Consulting",
     desc: (
       <>
-        <p>
+        <p className="text-secondary">
           Our blockchain consulting ensures that we help businesses infuse
           technology into the operational processes and help businesses with
           strategic insight into how decentralized systems can streamline
@@ -207,7 +207,7 @@ export const BlockchainServiceData = [
         <p>
           <br />
         </p>
-        <p>
+        <p className="text-secondary">
           Whether it is finance, healthcare, or logistics, blockchain consulting
           will help to tailor the solution to the needs of every industry to
           enhance productivity and operational transparency.

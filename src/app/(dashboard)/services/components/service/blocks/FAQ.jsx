@@ -37,8 +37,15 @@ export default function FAQ({
   data = faqData,
   noBg,
   desc,
-  isSecondary,
-  faq = false
+  isSecondary = false,
+  faq = false,
+  isTwoHalf = false,
+  isDoublePadding = false,
+  titleClasses = "",
+  itemsClasses,
+  hasIcon = true,
+  faqGradient = false,
+  faqHorizontalPadding = false
 }) {
   const [screenWidth, setScreenWidth] = useState();
 
@@ -64,117 +71,143 @@ export default function FAQ({
         </div>
       )}
 
-      <div className="relative grid grid-cols-1 md:grid-cols-5">
+      <div
+        className={cn("relative grid grid-cols-1 md:grid-cols-5", {
+          "md:grid-cols-2": isTwoHalf
+        })}
+      >
         <div
-          className={`md:py-heading px-default md-border-r flex flex-col ${faq ? "justify-center" : "justify-start"} gap-[10px] border-b border-b-th-fade py-[60px] text-left md:col-span-2 md:gap-0`}
+          className={cn(
+            `md:py-heading px-default md-border-r flex flex-col lg:pl-[88px] ${faq ? "justify-center" : "justify-start"} gap-[10px] border-b border-b-th-fade py-[60px] pt-[70px] text-left md:col-span-2 md:gap-[40px]`,
+            {
+              "md:col-span-1": isTwoHalf,
+              "!pt-[126px]": isDoublePadding
+            }
+          )}
         >
           <h2
-            className={`flex ${faq ? "justify-center text-center" : "justify-start text-left"} text-[36px]  uppercase uppercase leading-[40px] text-white md:text-left  custom1000:text-[42px]`}
+            className={cn(
+              `flex max-w-[462px] ${faq ? "justify-center text-center" : "text-pretty"} text-[36px]  uppercase  leading-[37.59px] text-white   custom1000:text-[42px]`,
+              titleClasses
+            )}
           >
             {title}
           </h2>
           {desc && (
             <p
-              className={cn("body my-[40px] text-left leading-6 md:my-[20px]", {
-                "max-w-[434px] text-balance !text-secondary": isSecondary
-              })}
+              className={cn(
+                "body my-[40px] max-w-[462px] text-left leading-6 md:my-[20px]",
+                {
+                  "max-w-[434px] text-balance !text-secondary": isSecondary
+                }
+              )}
             >
               {desc}
             </p>
           )}
         </div>
-        <div className="md:col-span-3">
+        <div
+          className={cn("h-full md:col-span-3", {
+            "md:col-span-1": isTwoHalf
+          })}
+        >
           <Accordion allowToggle>
             {data.map((faq, index) => (
               <AccordionItem key={index} className="border-b border-th-fade">
                 {({ isExpanded }) => (
                   <div
                     className={cn(
-                      "relative bg-cover px-[20px] py-[43px] xl:px-[88px]",
+                      "relative bg-cover px-[20px] py-[43px] xl:pl-[88px] xl:pr-[60px]",
                       {
-                        "bg-[url('/assets/faq-gradient.png')]": isExpanded
-                      }
+                        "bg-[url('/assets/faq-gradient.png')]":
+                          isExpanded && !faqGradient,
+                        "bg-faq-gradient": isExpanded && faqGradient,
+                        "xl:!px-[60px]": faqHorizontalPadding
+                      },
+                      itemsClasses
                     )}
                     key={index}
                   >
                     <AccordionButton className={cn("relative")}>
                       <div className="mr-0 w-full text-left md:mr-auto">
                         <span
-                          className="block !w-full max-w-full text-left font-roc text-[20px]
-                         font-medium uppercase !leading-none text-white lg:!text-xl lg:!leading-none"
+                          className="block !w-full max-w-[623px]  text-left
+                         font-roc text-[18px] font-medium uppercase !leading-none text-white lg:!leading-none"
                         >
                           {faq.title}
                         </span>
                       </div>
-                      <div className={` ${!faq ? "hidden" : "block"}`}>
-                        {isExpanded ? (
-                          <div
-                            className="flex items-center justify-end md:justify-center"
-                            style={{
-                              width: screenWidth > 768 ? 150 : 50
-                            }}
-                          >
-                            <svg
-                              width={screenWidth > 768 ? "50" : "32"}
-                              height={screenWidth > 768 ? "50" : "32"}
-                              viewBox="0 0 32 32"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
+                      {hasIcon && (
+                        <div className={` ${!faq ? "hidden" : "block"}`}>
+                          {isExpanded ? (
+                            <div
+                              className="flex items-center justify-end md:justify-center"
+                              style={{
+                                width: 50
+                              }}
                             >
-                              <circle cx="16" cy="16" r="16" fill="white" />
-                              <path
-                                d="M12.2656 16H19.7323"
-                                stroke="black"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </div>
-                        ) : (
-                          <div
-                            className="flex items-center justify-end md:justify-center"
-                            style={{
-                              width: screenWidth > 768 ? 150 : 50
-                            }}
-                          >
-                            <svg
-                              width={screenWidth > 768 ? "50" : "32"}
-                              height={screenWidth > 768 ? "50" : "32"}
-                              viewBox="0 0 32 32"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
+                              <svg
+                                width={screenWidth > 768 ? "50" : "32"}
+                                height={screenWidth > 768 ? "50" : "32"}
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <circle cx="16" cy="16" r="16" fill="white" />
+                                <path
+                                  d="M12.2656 16H19.7323"
+                                  stroke="black"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            </div>
+                          ) : (
+                            <div
+                              className="flex items-center justify-end md:justify-end"
+                              style={{
+                                width: 50
+                              }}
                             >
-                              <circle
-                                cx="16"
-                                cy="16"
-                                r="15.75"
-                                stroke="white"
-                                strokeOpacity="0.5"
-                                strokeWidth="0.5"
-                              />
-                              <path
-                                d="M16 12.2666V19.7333"
-                                stroke="white"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                              <path
-                                d="M12.2656 16H19.7323"
-                                stroke="white"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </div>
-                        )}
-                      </div>
+                              <svg
+                                width={screenWidth > 768 ? "50" : "32"}
+                                height={screenWidth > 768 ? "50" : "32"}
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <circle
+                                  cx="16"
+                                  cy="16"
+                                  r="15.75"
+                                  stroke="white"
+                                  strokeOpacity="0.5"
+                                  strokeWidth="0.5"
+                                />
+                                <path
+                                  d="M16 12.2666V19.7333"
+                                  stroke="white"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                                <path
+                                  d="M12.2656 16H19.7323"
+                                  stroke="white"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            </div>
+                          )}
+                        </div>
+                      )}
                     </AccordionButton>
                     <AccordionPanel
                       className={cn("opacity-0  will-change-transform", {
-                        "pt-6 opacity-100 ": isExpanded
+                        "pt-6 opacity-100": isExpanded
                       })}
                     >
-                      <div className=" ">
+                      <div>
                         {Array.isArray(faq.content) ? (
                           <ul>
                             {faq.content.map((item, index) => (

@@ -1,15 +1,16 @@
-import { HeroSection } from "../components/service/blocks/HeroSection";
-import Achievements from "../components/service/blocks/Achievements";
+import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
+import Image from "next/image";
+import Achievements from "../components/service/blocks/Achievements";
+import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
+import { Feedback } from "../components/service/blocks/Feedback";
+import { HeroSection } from "../components/service/blocks/HeroSection";
 import { Industries } from "../components/service/blocks/Industries";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
-import { Feedback } from "../components/service/blocks/Feedback";
-import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
-import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
-import Image from "next/image";
+import { metadata } from "./utils/dappDeveMetadata";
 import {
   DappExpertiseDesc,
   EngagementDevData,
@@ -20,7 +21,6 @@ import {
   otherDappServiceData
 } from "./utils/data";
 import { DappExpertiseData } from "./utils/data";
-import { metadata } from "./utils/dappDeveMetadata";
 
 export { metadata };
 
@@ -41,8 +41,11 @@ const DappDevelopment = () => {
         tag={"dApp Development Services"}
         desc={
           <>
-            {" "}
-            As a trusted dapp development company, Cowchain <br />
+            As a trusted{" "}
+            <span className="violet-gradient-text">
+              dapp development company
+            </span>
+            , Cowchain <br />
             offers full-cycle dApp development services against <br />
             the growing demands of modern industries. <br />
             Be it a startup or a big player, with our{" "}
@@ -50,15 +53,15 @@ const DappDevelopment = () => {
               dapp Be it a startup or a big player, with our dapp development
               services
             </span>{" "}
-            by implementing the full <br />
-            potential of blockchain technology, a business can <br />
-            build{" "}
+            by implementing the full potential <br /> of blockchain technology,
+            a business can build <br />{" "}
             <span className="violet-gradient-text">
               highly secure and decentralized applications
             </span>
           </>
         }
       />
+
       <ExpertiseServices
         topBorder={false}
         title={
@@ -80,6 +83,7 @@ const DappDevelopment = () => {
           />
         }
       />
+
       <Industries
         title={"Benefits of dApp Development"}
         desc={
@@ -88,6 +92,7 @@ const DappDevelopment = () => {
         data={dappBenefitsData}
         topBorder={false}
       />
+
       <KeyFeatures
         isOneBlock={true}
         topBorder={false}
@@ -96,6 +101,7 @@ const DappDevelopment = () => {
           "At Cowchain, dapp architecture resilience is developed to ensure that everything works without a hitch even when pressure becomes high. Our dapp development company develops completely decentralized applications that can also be secure, reliable, and scalable according to the demands that they are likely to experience. Thanks to our expertise in working on multiple blockchain networks and the integration of sophisticated features, we ensure that system architecture from our dapp development services is prepared to support long-term growth and stability of operation"
         }
       />
+
       <Industries
         title={"Industries We Serve"}
         desc={
@@ -119,7 +125,7 @@ const DappDevelopment = () => {
         data={dappDevProcessData}
         noTag={true}
       />
-      <ServiceStack />
+      <ServiceStack home={true} />
       <KeyFeatures
         isOneBlock={true}
         title={"Our Approach to Innovation"}
@@ -164,11 +170,12 @@ const DappDevelopment = () => {
           "Clients trust Cowchain because we deliver reliable custom dApp development. Our company dapp development expertise ensures that every application is built to high standards of performance and security, empowering businesses to achieve their goals in the competitive blockchain market"
         }
         noBg={true}
+        descClasses={"max-w-[792px]"}
       />
       <OtherServices
         title={
           <>
-            In addition <br /> to{" "}
+            In addition to{" "}
             <span className="violet-gradient-text">
               dApp
               <br />
@@ -188,8 +195,14 @@ const DappDevelopment = () => {
         }
         data={otherDappServiceData}
         bottomBorder={false}
+        tag={"Other Our Services"}
       />
-      <FAQ data={faqDappData} noBg={true} />
+      <FAQ
+        data={faqDappData}
+        noBg={true}
+        titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+        faqHorizontalPadding={true}
+      />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

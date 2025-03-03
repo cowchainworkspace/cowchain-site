@@ -15,10 +15,11 @@ export default function ExpandingBlocks({ isSecondary = false }) {
       <section
         className={`relative mx-auto max-w-[1440px] border-t border-t-th-fade`}
       >
-        <div className="px-default relative flex flex-col justify-between gap-[107px] pb-[61px] pt-[90px]">
+        <div className="px-default relative flex flex-col justify-between gap-[91px] pb-[61px] pt-[90px]">
           <div className="  lg:gap-16">
             <h2 className="lg:order-0 text-[36px] uppercase text-white sm:text-[60px] ">
-              Advantages of Web3 Development
+              Advantages
+              <br /> of Web3 Development
             </h2>
             <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto" />
             <p

@@ -104,15 +104,16 @@ const SmartContractDevelopment = () => {
             </p>
           </>
         }
+        titleClasses="text-[42px] max-w-[592px]"
       />
 
       <OtherServices
         tag={"web3 development use cases"}
         title={
           <>
-            How smart contracts are <br />
+            How smart contracts <br />
             <span className="violet-gradient-text">
-              transforming business processes?
+              are transforming business processes?
             </span>
             <br />
             Implementing smart contracts <br /> can bring{" "}
@@ -124,7 +125,7 @@ const SmartContractDevelopment = () => {
               your <br /> business,
             </span>
             <br />
-            including:
+            including
           </>
         }
         data={OtherSmartContractData}
@@ -194,6 +195,7 @@ const SmartContractDevelopment = () => {
             </ul>
           </>
         }
+        noBg={true}
       />
 
       <FAQ
@@ -208,11 +210,18 @@ const SmartContractDevelopment = () => {
           "We follow a rigorous and consistent smart contract development process to ensure high quality, security, and customer compliance:"
         }
         data={nftProcessData}
+        isTwoHalf={true}
+        noBg={true}
+        hasIcon={false}
       />
 
       <KeyFeatures
         isOneBlock={true}
-        title={"Our Blockchain Advisory Background"}
+        title={
+          <>
+            Our Blockchain <br /> Advisory Background
+          </>
+        }
         desc={
           <>
             <p>
@@ -226,26 +235,24 @@ const SmartContractDevelopment = () => {
             </ul>
           </>
         }
+        noBg={true}
+        titleClasses="md:mb-10"
       />
 
       <KeyFeatures
         isOneBlock={true}
         title={"Our Engagement Models"}
         desc={
-          <>
-            <p>
-              At Cowchain, we are flexible in our collaboration approach,
-              offering various engagement models tailored to your unique needs
-              and requirements.
-            </p>
-            <br />
-            <p>
-              Regardless of project size or industry specifics, we will find the
-              best way to organize work to ensure the successful implementation
-              of your idea.
-            </p>
-          </>
+          <p>
+            At Cowchain, we are flexible in our collaboration approach, offering
+            various engagement models tailored to your unique needs and
+            requirements. Regardless of project size or industry specifics, we
+            will find the best way to organize work to ensure the successful
+            implementation of your idea.
+          </p>
         }
+        noBg={true}
+        titleClasses="md:mb-10"
       />
 
       <Feedback />
@@ -279,7 +286,12 @@ const SmartContractDevelopment = () => {
         bottomBorder={false}
       />
 
-      <FAQ data={faqNftData} />
+      <FAQ
+        noBg={true}
+        data={faqNftData}
+        titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+        faqHorizontalPadding={true}
+      />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
