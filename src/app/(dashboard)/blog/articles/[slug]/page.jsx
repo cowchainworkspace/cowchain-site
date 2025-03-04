@@ -2,10 +2,11 @@
 import bannerIg from "@/assets/blog/articles/splash.png";
 import { Loading } from "@/components/loader/Loading";
 import FooterForm from "@/components/utils/FooterForm";
-import { useGetArticleBySlug } from "@/hooks/use-strapi";
+import { useGetArticleBySlug, useMutatePost } from "@/hooks/use-strapi";
 import { getSplitText } from "@/lib/utils";
 import Image from "next/image";
 import { useParams } from "next/navigation";
+import { useState } from "react";
 import { BlogBreadCrumb } from "../../components/BreadCrumb/BlogBreadCrumb";
 import { Blog } from "../blocks/Blog";
 import { HeroSection } from "../blocks/HeroSection";
@@ -13,13 +14,35 @@ import { ShareLinks } from "../blocks/ShareLinks";
 import { ArticleParagraphs } from "../components/ArticleParagraphs/ArticleParagraphs";
 import { ReviewsSection } from "../components/ReviewsSection/ReviewsSection";
 import { SideMenu } from "../components/SideMenu/SideMenu";
+import { ThanksReview } from "../components/ThanksReview/ThanksReview";
 
 function Article() {
   const params = useParams();
   const { slug } = params;
   const { data, isLoading, isError } = useGetArticleBySlug(slug);
+  const [reviewItem, setReviewItem] = useState(null);
+  const { mutateAsync: cretePost, isPending } = useMutatePost();
 
   const articleTitles = [];
+
+  const onHandleAddReview = async (review) => {
+    try {
+      const { article, article_rating, icon, text } = review;
+
+      await cretePost({
+        article: review.article,
+        article_rating: review.article_rating
+      });
+      localStorage.setItem(`review-${data.id}`, slug);
+      setReviewItem({ icon, text });
+      setTimeout(() => {
+        setReviewItem(null);
+      }, 4000);
+    } catch (error) {
+      console.log(error);
+      throw new Error(`Can\'nt create new review: ${error}`);
+    }
+  };
 
   if (isLoading) {
     return (
@@ -28,6 +51,7 @@ function Article() {
       </div>
     );
   }
+  const hasVoted = localStorage.getItem(`review-${data.id}`);
 
   const paragraphs = data.attributes.article_paragraphs.map((paragraph) => {
     if (!paragraph.__component.includes("image")) {
@@ -80,7 +104,14 @@ function Article() {
               authorName={data?.attributes.author_name}
               authorInfo={data?.attributes.author_info}
             />
-            <ReviewsSection />
+            {hasVoted !== slug && !reviewItem && (
+              <ReviewsSection
+                onHandleAddReview={onHandleAddReview}
+                articleId={data.id}
+                isPending={isPending}
+              />
+            )}
+            {reviewItem && <ThanksReview review={reviewItem} />}
           </div>
 
           <div className="sticky top-0 ml-[10px] hidden  flex-col items-center overflow-hidden  2xl:flex">
