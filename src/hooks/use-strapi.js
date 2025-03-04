@@ -1,4 +1,4 @@
-import { useInfiniteQuery, useQuery } from '@tanstack/react-query';
+import { useInfiniteQuery, useMutation, useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import qs from 'qs';
 
@@ -194,4 +194,25 @@ export const useGetMorePosts = (currentSlug) => {
 
     initialPageParam: 1,
   });
+}
+
+
+export const useMutatePost = () => {
+  return useMutation({
+    mutationFn: async({article, article_rating }) => {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/reviews`, {
+        data: {
+          article,
+          article_rating
+        }
+      }, {headers: {
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+      }})
+      if (!response.data.data) {
+        throw new Error('Error post creating');
+      }
+      return response.data
+    },
+    
+  })
 }
