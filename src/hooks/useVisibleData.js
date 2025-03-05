@@ -39,7 +39,7 @@ export const useVisibleData = (sections) => {
         window.removeEventListener("scroll", throttledScroll); 
       };
     }
-  }, [sections]); // ✅ Ensures it updates when `sections` change
+  }, [sections]);
 
   return visibleSection;
 };

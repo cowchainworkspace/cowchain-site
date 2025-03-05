@@ -21,7 +21,7 @@ export const HeroSection = ({
   useEffect(() => {
     updateBlogViews(articleId);
   }, [slug, articleId]);
-  console.log(pageViews);
+
   return (
     <section className="scrollbar-none container relative mb-10  w-full pt-[65px] md:mb-[65px]  md:max-w-full lg:pt-[120px]">
       <div className="relative flex flex-col items-center justify-center md:px-8 md:pb-12 lg:px-16 xl:px-24">
