@@ -6,7 +6,7 @@ import { useGetArticleBySlug, useMutatePost } from "@/hooks/use-strapi";
 import { getSplitText } from "@/lib/utils";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BlogBreadCrumb } from "../../components/BreadCrumb/BlogBreadCrumb";
 import { Blog } from "../blocks/Blog";
 import { HeroSection } from "../blocks/HeroSection";
@@ -87,6 +87,8 @@ function Article() {
           title={data?.attributes.article_title}
           author={data?.attributes.author_name.split(",")[0]}
           readingMinutes={data?.attributes.reading_minutes}
+          articleId={data.id}
+          pageViews={data.attributes.article_views}
         />
         <Image
           height={560}
