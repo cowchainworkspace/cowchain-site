@@ -80,16 +80,16 @@ export function KeyFeatures({
         </div>
 
         {!isOneBlock && (
-          <div className="flex justify-between">
-            {data.map(({ title, desc }) => (
-              <div className="relative  max-w-[519px] bg-cover">
+          <div className="flex flex-col gap-4 md:flex-row md:justify-between md:gap-0">
+            {data.map(({ title, desc }, index) => (
+              <div className="relative  max-w-[510px] bg-cover" key={index}>
                 <div className="mr-auto w-full text-left ">
                   <span className="text-left font-roc text-[20px] font-medium uppercase !leading-none text-white">
                     {title}
                   </span>
                 </div>
                 <div>
-                  <p className="mt-[24px] text-[16px] !leading-[22px] !text-[#BBBBBB] ">
+                  <p className="mt-[24px] text-left text-[16px] !leading-[22px] !text-[#BBBBBB] ">
                     {desc}
                   </p>
                 </div>

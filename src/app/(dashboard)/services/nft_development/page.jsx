@@ -70,8 +70,8 @@ const NftDevelopment = () => {
             Our range of NFT development services includes every aspect of NFT
             creation and management, from token generation to long-term platform
             support. Cowchain ensures that each stage of NFT development is
-            streamlined and optimized, enabling businesses to achieve their
-            goals.
+            streamlined <br />
+            and optimized, enabling businesses to achieve their goals.
           </>
         }
         noBg={true}
@@ -81,7 +81,14 @@ const NftDevelopment = () => {
       <FAQ
         title={<>Our Non-Fungible Token Development Process</>}
         desc={
-          "Our NFT development team follows a systematic approach to ensure that each project is handled with care from start to finish, delivering high-quality outcomes. By focusing on every detail of nft development, we create platforms that are robust and adaptable to evolving business needs, enabling clients to achieve lasting impact"
+          <>
+            Our NFT development team follows a systematic approach
+            <br /> to ensure that each project is handled with care from start
+            <br /> to finish, delivering high-quality outcomes. By focusing on
+            <br /> every detail of NFT development, we create platforms that
+            <br /> are robust and adaptable to evolving business needs,
+            <br /> enabling clients to achieve lasting impact
+          </>
         }
         data={nftProcessData}
         isTwoHalf={true}
