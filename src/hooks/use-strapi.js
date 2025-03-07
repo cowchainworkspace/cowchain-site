@@ -1,4 +1,4 @@
-import { useInfiniteQuery, useMutation, useQuery } from '@tanstack/react-query';
+import { useInfiniteQuery, useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
 import qs from 'qs';
 
@@ -130,7 +130,7 @@ export const useGetArticleBySlug = (currentSlug) => {
       
       return res.data.data[0];
     },
-
+    refetchOnMount: true,
     onError: (err) => {
       console.error(err);
     },
@@ -200,19 +200,51 @@ export const useGetMorePosts = (currentSlug) => {
 export const useMutatePost = () => {
   return useMutation({
     mutationFn: async({article, article_rating }) => {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/reviews`, {
-        data: {
-          article,
-          article_rating
+      try {
+        const response = await axios.post(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/reviews`, {
+          data: {
+            article,
+            article_rating
+          }
+        }, {headers: {
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+        }})
+        if (!response.data.data) {
+          throw new Error('Error post creating');
         }
-      }, {headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
-      }})
-      if (!response.data.data) {
-        throw new Error('Error post creating');
+        return response.data
+      } catch (error) {
+        console.error(`Error post creating: ${error}`)
+        throw new Error("Review is not created")
       }
-      return response.data
     },
     
+  })
+}
+export const useMutatePostView = () => {
+ const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: async(articleId) => {
+      try {
+        const response = await axios.patch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles/${articleId}/view`, {}, {
+          headers: {
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+          }
+        });
+        if(!response.data) {
+          throw new Error("Article view's is not updated")
+        }
+        return response.data
+      } catch (error) {
+        console.error(`View is not updated: ${error}`)
+        throw new Error('View is not updated')
+      }
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ['article'],
+        type: 'active'
+      })
+    }
   })
 }
