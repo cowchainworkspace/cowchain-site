@@ -14,14 +14,13 @@ import { Post } from "./components/post";
 export default function Blog() {
   const searchParams = useSearchParams();
   const tag = searchParams.get("tag") || "";
-  const isTablet = useMediaQuery("(max-width: 1023px)");
-  const itemsPerPage = isTablet ? 6 : 5;
+
   const {
     data: articles,
     isLoading,
     fetchNextPage,
     isFetchingNextPage
-  } = useGetArticles({ tag, itemsPerPage });
+  } = useGetArticles({ tag });
 
   if (isLoading) {
     return (
