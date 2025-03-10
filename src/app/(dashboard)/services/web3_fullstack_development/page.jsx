@@ -34,8 +34,9 @@ const FullStackDevelopment = () => {
         desc={
           <>
             Looking for a full stack development company? Cowchain offers
-            comprehensive full stack development <br /> services, handling both
-            the visuals users love and the logic they rely on
+            comprehensive full stack development{" "}
+            <br className="hidden lg:block" /> services, handling both the
+            visuals users love and the logic they rely on
           </>
         }
       />
@@ -46,28 +47,30 @@ const FullStackDevelopment = () => {
             At Cowchain, we specialize in delivering{" "}
             <span className="violet-gradient-text">
               complete
-              <br />
+              <br className="hidden lg:block" />
               full stack development services
             </span>{" "}
-            , covering all <br />
+            , covering all <br className="hidden lg:block" />
             aspects of digital product creation. As a{" "}
             <span className="violet-gradient-text">
-              full stack <br />
+              full stack <br className="hidden lg:block" />
               software development company
             </span>
-            , we create scalable <br />
-            solutions, ensuring seamless operation across all <br />
+            , we create scalable <br className="hidden lg:block" />
+            solutions, ensuring seamless operation across all{" "}
+            <br className="hidden lg:block" />
             system components. By leveraging
             <span className="violet-gradient-text">
               {" "}
-              cutting-edge <br /> technologies
+              cutting-edge <br className="hidden lg:block" /> technologies
             </span>
-            , our engineers deliver systems that <br />
+            , our engineers deliver systems that{" "}
+            <br className="hidden lg:block" />
             work{" "}
             <span className="violet-gradient-text">
               flawlessly across platforms
             </span>
-            , adapting to the <br />
+            , adapting to the <br className="hidden lg:block" />
             unique needs of your business
           </>
         }
@@ -89,11 +92,19 @@ const FullStackDevelopment = () => {
       <Industries
         title={"Industries We Serve"}
         desc={
-          "At Cowchain, our full stack development company has delivered solutions across multiple industries. Our full stack services offer customized software solutions crafted to address requirements of every specific sector. Here are some industries we serve"
+          <>
+            At Cowchain, our full stack development company has delivered
+            solutions across <br className="hidden lg:block" /> multiple
+            industries. Our full stack services offer customized software
+            solutions crafted
+            <br className="hidden lg:block" /> to address requirements of every
+            specific sector. Here are some industries we serve
+          </>
         }
         data={servedIndustriesData}
         topBorder={false}
         bottomBorder={false}
+        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
       />
       <ExpertiseServices
         title={
@@ -116,7 +127,12 @@ const FullStackDevelopment = () => {
           </>
         }
         desc={
-          "Our full stack development company follows a structured process to ensure that every project is delivered on time, meets client expectations, and is optimized for performance"
+          <>
+            Our full stack development company follows a structured process to{" "}
+            <br className="hidden lg:block" /> ensure that every project is
+            delivered on time, meets client expectations,
+            <br className="hidden lg:block" /> and is optimized for performance
+          </>
         }
         data={DevProcessData}
         topBorder={false}
@@ -139,13 +155,24 @@ const FullStackDevelopment = () => {
         data={chooseUsData}
         isTwoHalf={true}
         hasIcon={false}
+        titleClasses="lg:text-[60px] leading-[0.9]"
       />
-      <ServiceStack />
+      <ServiceStack
+        desc={
+          <>
+            As a full stack development agency, we leverage a cutting-edge
+            technology stack to ensure that each project is secure, scalable,
+            and future-ready. Our developers are proficient in using modern
+            tools across both front-end and back-end development
+          </>
+        }
+      />
       <Feedback />
       <CasesHead />
       <Cases />
       <CasesMobile />
       <OtherServices
+        tag={"other our services"}
         title={
           <>
             Along side

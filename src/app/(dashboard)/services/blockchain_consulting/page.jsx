@@ -29,7 +29,7 @@ const BlockChainConsulting = () => {
         desc={
           <>
             Our team provides comprehensive blockchain consulting services to
-            help you build a robust strategy <br />
+            help you build a robust strategy <br className="hidden lg:block" />
             Select your preferred type of blockchain and optimal blockchain
             platform
           </>
@@ -44,27 +44,27 @@ const BlockChainConsulting = () => {
               one of the leading blockchain consulting companies
             </span>
             , we deliver professional
-            <br />
+            <br className="hidden lg:block" />
             <span className="violet-gradient-text">
               blockchain consulting services
             </span>{" "}
             tailored to meet the very unique needs of{" "}
             <span className="violet-gradient-text">
-              every business desirous <br />
+              every business desirous <br className="hidden lg:block" />
               the potentials of blockchain technology
             </span>
             . Be it in the early stages of considering which blockchain best
             suits your needs or working to optimize your current blockchain
             infrastructure,
-            <br />
+            <br className="hidden lg:block" />
             our experts are here to give deep insights and practical{" "}
             <span className="violet-gradient-text">
               blockchain consulting solutions.
             </span>
-            <br />
+            <br className="hidden lg:block" />
             From blockchain advisory services <br />
             to ongoing development, our approach empowers
-            <br />
+            <br className="hidden lg:block" />
             companies to{" "}
             <span className="violet-gradient-text">
               leverage a blockchain opportunity.
@@ -74,22 +74,43 @@ const BlockChainConsulting = () => {
       />
 
       <TustByNumbers
-        title={"Exploring Blockchain’s Potential in the Modern Market"}
-        home
+        title={
+          <>
+            Exploring <br className="hidden lg:block" /> Blockchain’s{" "}
+            <br className="hidden lg:block" /> Potential
+            <br className="hidden lg:block" /> in the Modern
+            <br className="hidden lg:block" /> Market
+          </>
+        }
         data={TustByNumbersData}
+        isBlockChainConsulting={true}
       />
 
       <ExpertiseServices
         title={
           <>
-            Blockchain <br />
-            Consulting <br />
-            Services We <br />
+            Blockchain <br className="hidden lg:block" />
+            Consulting <br className="hidden lg:block" />
+            Services We <br className="hidden lg:block" />
             Provide
           </>
         }
         desc={
-          "We at Cowchain provide a wide range of blockchain consulting services, including crypto consulting services, structured to meet the peculiar challenges that are presented to businesses through industries. As a trusted blockchain consulting firm, we offer end-to-end blockchain consultancy from strategy development to platform implementation, ensuring your business is ready to reap the full benefits of this transformational technology"
+          <>
+            We at Cowchain provide a wide range of blockchain consulting
+            services, <br className="hidden lg:block" /> including crypto
+            consulting services, structured to meet the peculiar
+            <br className="hidden lg:block" /> challenges that are presented to
+            businesses through industries.
+            <br className="hidden lg:block" /> As a trusted blockchain
+            consulting firm, we offer end-to-end blockchain
+            <br className="hidden lg:block" /> consultancy from strategy
+            development to platform implementation,
+            <br className="hidden lg:block" /> ensuring your business is ready
+            to reap the full benefits
+            <br className="hidden lg:block" /> of this transformational
+            technology
+          </>
         }
         data={BlockchainServiceData}
         bg={
@@ -108,6 +129,7 @@ const BlockChainConsulting = () => {
         }
         data={IndustriesDexData}
         topBorder={false}
+        customClasses={"lg:!mt-0"}
       />
 
       <ExpertiseServices
@@ -146,15 +168,19 @@ const BlockChainConsulting = () => {
         desc={
           <>
             Cowchain works with leading blockchains like Ethereum, Solana,
-            Polygon, Binance Smart Chain, and more. Whatever your blockchain
-            needs — expansion, integration, or optimization — our experts are
-            ready to solve it.
+            Polygon,
+            <br className="hidden lg:block" /> Binance Smart Chain, and more.
+            Whatever your blockchain needs — expansion,
+            <br className="hidden lg:block" /> integration, or optimization —
+            our experts are ready to solve it.
             <p>
               <br />
             </p>
-            ave a complex project or need end-to-end implementation? We’ll take
-            care of every detail, delivering a solution that meets the highest
-            standards of functionality, protection, and dependability
+            ave a complex project or need end-to-end implementation?
+            <br className="hidden lg:block" /> We’ll take care of every detail,
+            delivering a solution that meets
+            <br className="hidden lg:block" /> the highest standards of
+            functionality, protection, and dependability
           </>
         }
         noBg={true}
@@ -164,7 +190,14 @@ const BlockChainConsulting = () => {
       <KeyFeatures
         reverse={true}
         isOneBlock={true}
-        title={"Why Choose Us as Your Blockchain Consulting Partner?"}
+        title={
+          <>
+            Why Choose <br className="hidden lg:block" /> Us as Your
+            <br className="hidden lg:block" /> Blockchain
+            <br className="hidden lg:block" /> Consulting
+            <br className="hidden lg:block" /> Partner?
+          </>
+        }
         desc={
           <>
             Choosing Cowchain means partnering with an industry-leading
@@ -183,6 +216,9 @@ const BlockChainConsulting = () => {
             and insights throughout the entire project lifecycle
           </>
         }
+        descClasses={"max-w-[519px]"}
+        titleBlockClasses="flex-col lg:flex-row lg:justify-between"
+        isTextSecondary={true}
       />
 
       <Feedback />
@@ -190,7 +226,13 @@ const BlockChainConsulting = () => {
       <Industries
         title={"Our Engagement Models"}
         desc={
-          "We provide flexible engagement models to suit different business needs, ensuring you receive the right expertise and approach for your project"
+          <>
+            We provide flexible engagement models
+            <br className="hidden lg:block" /> to suit different business needs,
+            <br className="hidden lg:block" /> ensuring you receive the right
+            expertise
+            <br className="hidden lg:block" /> and approach for your project
+          </>
         }
         data={EngagementDevData}
         topBorder={false}
@@ -208,7 +250,19 @@ const BlockChainConsulting = () => {
         isOneBlock={true}
         title={"Why Our Clients Trust Us"}
         desc={
-          "Clients choose Cowchain because we offer a unique combination of deep expertise and a client-focused approach. Our blockchain consulting delivers solutions that align with the individual requirements of each business, ensuring that they receive not only a robust system but also a clear strategy for sustained growth. Our blockchain consulting company is known for delivering projects on time, and within budget, providing lasting support to foster growth and adaptability"
+          <>
+            Clients choose Cowchain because we offer a unique combination of
+            deep expertise
+            <br className="hidden lg:block" /> and a client-focused approach.
+            Our blockchain consulting delivers solutions that align with
+            <br className="hidden lg:block" /> the individual requirements of
+            each business, ensuring that they receive not only a robust
+            <br className="hidden lg:block" /> system but also a clear strategy
+            for sustained growth. Our blockchain consulting company
+            <br className="hidden lg:block" /> is known for delivering projects
+            on time, and within budget, providing lasting support{" "}
+            <br className="hidden lg:block" /> to foster growth and adaptability
+          </>
         }
         noBg={true}
       />

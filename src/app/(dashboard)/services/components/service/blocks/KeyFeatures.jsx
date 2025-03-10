@@ -7,12 +7,33 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 const Keydata = [
   {
-    title: "Security Features of Decentralized Exchange Platform",
-    desc: "Security is a priority in every decentralized exchange development platform we build. From multi-signature wallets to secure authentication processes, we embed advanced security measures that protect user assets and transactions. Our decentralized exchange development includes advanced encryption techniques to safeguard data during transactions"
+    title: (
+      <>
+        Security Features of Decentralized <br className="hidden lg:block" />{" "}
+        Exchange Platform
+      </>
+    ),
+    desc: (
+      <>
+        Security is a priority in every decentralized exchange development
+        platform we build. From multi-signature wallets to secure authentication
+        processes, we embed advanced security measures that protect user assets
+        and transactions. Our decentralized exchange development includes
+        advanced encryption techniques <br className="hidden lg:block" /> to
+        safeguard data during transactions
+      </>
+    )
   },
   {
     title: "Premium Features of Our Decentralized Exchange Platform",
-    desc: "Our platforms offer advanced features, including cross-chain compatibility, liquidity pooling, and staking, ensuring that your decentralized exchange development caters to the growing needs of the market"
+    desc: (
+      <>
+        Our platforms offer advanced features, including cross-chain
+        compatibility, liquidity pooling, and staking, ensuring that your
+        decentralized exchange development caters to the growing
+        <br className="hidden lg:block" /> needs of the market
+      </>
+    )
   }
 ];
 
@@ -30,7 +51,8 @@ export function KeyFeatures({
   isMaxWidthTab = false,
   titleClasses = "",
   isTextSecondary,
-  descClasses
+  descClasses,
+  titleBlockClasses = ""
 }) {
   return (
     <section
@@ -53,7 +75,12 @@ export function KeyFeatures({
       <div
         className={`px-default relative mx-auto flex  max-w-[1440px] flex-col justify-between ${isOneBlock ? "py-[60px] md:py-[126px]" : "pb-[84px] pt-[60px] md:pt-[126px]"} gap-[107px] lg:pl-[88px] lg:pr-[92px]`}
       >
-        <div className={` ${reverse ? "flex flex-row gap-[102px]" : "block"}"`}>
+        <div
+          className={cn(
+            ` ${reverse ? "flex flex-row gap-[102px]" : "block"}`,
+            titleBlockClasses
+          )}
+        >
           {tag && (
             <Tag title={tag} className="mb-[40px] max-w-[194px] md:mb-8" />
           )}
@@ -80,7 +107,7 @@ export function KeyFeatures({
         </div>
 
         {!isOneBlock && (
-          <div className="flex flex-col gap-4 md:flex-row md:justify-between md:gap-0">
+          <div className="flex flex-col gap-4 md:flex-row md:justify-between md:gap-10 xl:gap-0">
             {data.map(({ title, desc }, index) => (
               <div className="relative  max-w-[510px] bg-cover" key={index}>
                 <div className="mr-auto w-full text-left ">

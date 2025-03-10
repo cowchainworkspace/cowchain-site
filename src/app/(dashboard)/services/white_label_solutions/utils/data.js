@@ -177,17 +177,17 @@ export const otherServices = [
   {
     text: "UI / UX Design",
     author:
-      "We craft intuitive and aesthetically pleasing UI/UX designs, focusing on functionality and user experience to ensure seamless interactions across platforms"
+      <>We craft intuitive and aesthetically pleasing UI/UX designs,<br className="hidden lg:block" /> focusing on functionality and user experience to ensure<br className="hidden lg:block" /> seamless interactions across platforms</>
   },
   {
     text: "DISCOVERY & CONSULTATIONS",
     author:
-      "Our team provides strategic consultations, offering insights on project discovery, business goals, and digital strategies, helping align your web development projects with industry standards"
+      <>Our team provides strategic consultations, offering insights<br className="hidden lg:block" /> on project discovery, business goals, and digital strategies,<br className="hidden lg:block" /> helping align your web development projects with industry standards</>
   },
   {
-    text: "White-label Solutions",
+    text: "Full-Stack Development",
     author:
-      "Our white-label services allow you to provide bespoke solutions under your own brand, avoiding the need for in-house management"
+      <>From front-end design to back-end systems, our full-stack development<br className="hidden lg:block" /> team delivers scalable, high-performance web applications that meet<br className="hidden lg:block" /> your business needs</>
   }
 ];
 

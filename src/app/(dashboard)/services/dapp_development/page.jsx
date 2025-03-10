@@ -32,8 +32,8 @@ const DappDevelopment = () => {
         desc={
           <>
             Cowchain.io is a leading decentralized app development company. We
-            build blockchain applications, <br /> dapps, and software for
-            businesses of all sizes
+            build blockchain applications, <br className="hidden lg:block" />{" "}
+            dapps, and software for businesses of all sizes
           </>
         }
       />
@@ -45,16 +45,19 @@ const DappDevelopment = () => {
             <span className="violet-gradient-text">
               dapp development company
             </span>
-            , Cowchain <br />
-            offers full-cycle dApp development services against <br />
-            the growing demands of modern industries. <br />
+            , Cowchain <br className="hidden lg:block" />
+            offers full-cycle dApp development services against{" "}
+            <br className="hidden lg:block" />
+            the growing demands of modern industries.{" "}
+            <br className="hidden lg:block" />
             Be it a startup or a big player, with our{" "}
             <span className="violet-gradient-text">
               dapp Be it a startup or a big player, with our dapp development
               services
             </span>{" "}
-            by implementing the full potential <br /> of blockchain technology,
-            a business can build <br />{" "}
+            by implementing the full potential{" "}
+            <br className="hidden lg:block" /> of blockchain technology, a
+            business can build <br className="hidden lg:block" />{" "}
             <span className="violet-gradient-text">
               highly secure and decentralized applications
             </span>
@@ -66,10 +69,9 @@ const DappDevelopment = () => {
         topBorder={false}
         title={
           <>
-            dApp <br />
-            Development
-            <br />
-            Services <br />
+            dApp <br className="hidden lg:block" /> Development{" "}
+            <br className="hidden lg:block" />
+            Services <br className="hidden lg:block" />
             We Provide
           </>
         }
@@ -82,6 +84,7 @@ const DappDevelopment = () => {
             className="absolute left-0 top-[18%]"
           />
         }
+        titleClasses="text-3xl"
       />
 
       <Industries
@@ -91,6 +94,7 @@ const DappDevelopment = () => {
         }
         data={dappBenefitsData}
         topBorder={false}
+        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
       />
 
       <KeyFeatures
@@ -98,8 +102,24 @@ const DappDevelopment = () => {
         topBorder={false}
         title={"The dApp Architecture"}
         desc={
-          "At Cowchain, dapp architecture resilience is developed to ensure that everything works without a hitch even when pressure becomes high. Our dapp development company develops completely decentralized applications that can also be secure, reliable, and scalable according to the demands that they are likely to experience. Thanks to our expertise in working on multiple blockchain networks and the integration of sophisticated features, we ensure that system architecture from our dapp development services is prepared to support long-term growth and stability of operation"
+          <>
+            At Cowchain, dapp architecture resilience is developed to ensure
+            that everything works without a hitch
+            <br className="hidden lg:block" /> even when pressure becomes high.
+            Our dapp development company develops completely decentralized
+            <br className="hidden lg:block" /> applications that can also be
+            secure, reliable, and scalable according to the demands that they
+            are likely to
+            <br className="hidden lg:block" /> experience. Thanks to our
+            expertise in working on multiple blockchain networks and the
+            integration of
+            <br className="hidden lg:block" /> sophisticated features, we ensure
+            that system architecture from our dapp development services is
+            <br className="hidden lg:block" /> prepared to support long-term
+            growth and stability of operation
+          </>
         }
+        titleClasses="lg:mb-10"
       />
 
       <Industries
@@ -109,6 +129,7 @@ const DappDevelopment = () => {
         }
         data={IndustriesData}
         topBorder={false}
+        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
       />
       <OtherServices
         topBorder={false}
@@ -120,7 +141,16 @@ const DappDevelopment = () => {
           </>
         }
         desc={
-          "At Cowchain, dapp development company, we follow a structured process to ensure the delivery of high-quality decentralized applications. Our dapp development platform is designed to streamline each phase, from planning to deployment"
+          <>
+            At Cowchain, dapp development company, we follow a
+            <br className="hidden: lg:block" /> structured process to ensure the
+            delivery of high-quality
+            <br className="hidden: lg:block" /> decentralized applications. Our
+            dapp development platform is
+            <br className="hidden: lg:block" /> designed to streamline each
+            phase, from planning to
+            <br className="hidden: lg:block" /> deployment
+          </>
         }
         data={dappDevProcessData}
         noTag={true}
@@ -130,7 +160,17 @@ const DappDevelopment = () => {
         isOneBlock={true}
         title={"Our Approach to Innovation"}
         desc={
-          "At Cowchain, we understand that innovation is key to staying ahead in the decentralized space. As a pioneering dapp development company, we actively integrate the latest blockchain advancements into our projects, ensuring that each application not only meets industry standards but also exceeds client expectations in functionality and security"
+          <>
+            At Cowchain, we understand that innovation is key to staying ahead
+            in the decentralized space. As a <br className="hidden: lg:block" />{" "}
+            pioneering dapp development company, we actively integrate the
+            latest blockchain advancements into our
+            <br className="hidden: lg:block" /> projects, ensuring that each
+            application not only meets industry standards but also exceeds
+            client
+            <br className="hidden: lg:block" /> expectations in functionality
+            and security
+          </>
         }
         noBg={true}
       />
@@ -140,7 +180,15 @@ const DappDevelopment = () => {
         isOneBlock={true}
         title={"Our Blockchain Advisory Background"}
         desc={
-          "With years of experience in blockchain advisory, Cowchain provides strategic guidance to businesses seeking to leverage decentralized technologies. Our advisory services ensure that your project is aligned with current trends and future developments in the blockchain space"
+          <>
+            With years of experience in blockchain advisory, Cowchain provides
+            strategic guidance to businesses seeking
+            <br className="hidden: lg:block" /> to leverage decentralized
+            technologies. Our advisory services ensure that your project is
+            aligned with current
+            <br className="hidden: lg:block" /> trends and future developments
+            in the blockchain space
+          </>
         }
         noBg={true}
       />
@@ -148,7 +196,13 @@ const DappDevelopment = () => {
       <Industries
         title={"Our Engagement Models"}
         desc={
-          "Our dapp development company provides adaptable engagement models to accommodate the unique requirements of each project"
+          <>
+            Our dapp development company
+            <br className="hidden: lg:block" /> provides adaptable engagement
+            models
+            <br className="hidden: lg:block" /> to accommodate the unique
+            <br className="hidden: lg:block" /> requirements of each project
+          </>
         }
         isTwoSides={true}
         data={EngagementDevData}
@@ -160,6 +214,7 @@ const DappDevelopment = () => {
             className="absolute left-0"
           />
         }
+        itemClasses="lg:max-w-full"
       />
       <KeyFeatures
         topBorder={false}
@@ -167,10 +222,19 @@ const DappDevelopment = () => {
         isOneBlock={true}
         title={"Why Our Clients Trust Us"}
         desc={
-          "Clients trust Cowchain because we deliver reliable custom dApp development. Our company dapp development expertise ensures that every application is built to high standards of performance and security, empowering businesses to achieve their goals in the competitive blockchain market"
+          <>
+            Clients trust Cowchain because we deliver reliable custom dApp
+            development. Our company dapp <br className="hidden: lg:block" />{" "}
+            development expertise ensures that every application is built to
+            high standards of performance
+            <br className="hidden: lg:block" /> and security, empowering
+            businesses to achieve their goals in the competitive blockchain
+            market
+          </>
         }
         noBg={true}
         descClasses={"max-w-[792px]"}
+        titleClasses="lg:mb-[60px]"
       />
       <OtherServices
         title={
@@ -178,19 +242,19 @@ const DappDevelopment = () => {
             In addition to{" "}
             <span className="violet-gradient-text">
               dApp
-              <br />
+              <br className="hidden: lg:block" />
               development
-              <br />
+              <br className="hidden: lg:block" />
               services
             </span>
             , Cowchain
-            <br />
-            offers a variety of <br />
+            <br className="hidden: lg:block" />
+            offers a variety of <br className="hidden: lg:block" />
             <span className="violet-gradient-text">
-              blockchain <br /> solutions
+              blockchain <br className="hidden: lg:block" /> solutions
             </span>
             ,
-            <br /> including
+            <br className="hidden: lg:block" /> including
           </>
         }
         data={otherDappServiceData}

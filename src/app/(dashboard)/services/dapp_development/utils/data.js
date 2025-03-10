@@ -8,7 +8,7 @@ import HybridIcon from "@/assets/svgComponents/industries/HybridIcon";
 import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon";
 
 export const DappExpertiseDesc =
-  "Our dapp development company offers a comprehensive range of services that enable businesses to harness the potential of decentralized applications. Here are some of the key services we provide";
+  <>Our dapp development company offers a comprehensive range of services that <br className="hidden lg:block" /> enable businesses to harness the potential of decentralized applications.<br className="hidden lg:block" /> Here are some of the key services we provide</>;
 
 export const DappExpertiseData = [
   {
@@ -79,22 +79,22 @@ export const IndustriesData = [
 export const EngagementDevData = [
   {
     title: "Dedicated Team",
-    text: "A full team dedicated to your long-term project",
+    text: <>A full team dedicated to your<br className="hidden lg:block" /> long-term project</>,
     icon: DedicateTeamIcon
   },
   {
     title: "Project-Based",
-    text: "Best suited for clearly defined projects where we oversee each step",
+    text: <>Best suited for clearly defined projects<br className="hidden lg:block" /> where we oversee each step</>,
     icon: ProjectBasedIcon
   },
   {
     title: "Consulting & Advisory",
-    text: "Offering high-level guidance and strategic advice",
+    text: <>Offering high-level guidance<br className="hidden lg:block" /> and strategic advice</>,
     icon: ConsultingAdvisoryIcon
   },
   {
     title: "Hybrid",
-    text: "A mix of development and advisory services for businesses that require flexibility",
+    text: <>A mix of development and advisory services<br className="hidden lg:block" /> for businesses that require flexibility</>,
     icon: HybridIcon
   }
 ];

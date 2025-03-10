@@ -236,7 +236,7 @@ export const TustByNumbersData = [
   {
     number: 10.02,
     desc: "Estimated global blockchain market value in 2024",
-    sighn: "",
+    sighn: "$",
     sufix: "B",
     decimal: 2
   },
@@ -247,7 +247,6 @@ export const TustByNumbersData = [
         <p>Expected CAGR* of the blockchain market from 2024 to 2030</p>
         <p>
           <br />
-          <br />
         </p>{" "}
         <p className="text-[8px] text-[#BBBBBB]">*Compound Annual Growth Rate</p>
       </>
@@ -257,7 +256,9 @@ export const TustByNumbersData = [
   },
   {
     number: 232.46,
-    desc: "fdaily trading volume on systems we’ve built",
+    desc: <>
+    Projected global blockchain<br className="hidden lg:block" /> market value by 2030.
+    </>,
     sighn: "$",
     sufix: "B",
     decimal: 2

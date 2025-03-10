@@ -29,7 +29,7 @@ const WhiteLabelDev = () => {
         desc={
           <>
             Elevate your offerings with our customizable white label solutions.
-            Cowchain provides expert, <br />
+            Cowchain provides expert, <br className="hidden lg:block" />
             customizable solutions that allow you to deliver exceptional digital
             products and platforms
           </>
@@ -43,27 +43,32 @@ const WhiteLabelDev = () => {
             <span className="violet-gradient-text">
               white label web development
             </span>{" "}
-            <br />
-            offers businesses an opportunity to expand their <br />
-            end-to-end services to empower one to build <br /> service portfolio
+            <br className="hidden lg:block" />
+            offers businesses an opportunity to expand their{" "}
+            <br className="hidden lg:block" />
+            end-to-end services to empower one to build{" "}
+            <br className="hidden lg:block" /> service portfolio
             <span className="violet-gradient-text">
-              without the need for extensive <br /> in-house resources
+              without the need for extensive <br className="hidden lg:block" />{" "}
+              in-house resources
             </span>
-            . At Cowchain, we understand <br /> the importance of
+            . At Cowchain, we understand <br className="hidden lg:block" /> the
+            importance of
             <span className="violet-gradient-text">
-              delivering high-quality, custom <br />
+              delivering high-quality, custom <br className="hidden lg:block" />
               web and mobile app solutions
             </span>{" "}
             tailored to each
-            <br />
+            <br className="hidden lg:block" />
             in{" "}
             <span className="violet-gradient-text">
               secure and customized solutions
             </span>{" "}
-            tailored to each <br />
+            tailored to each <br className="hidden lg:block" />
             client’s needs. Whether you are a firm looking for
-            <br />
-            white label services or a business in need of a white <br />
+            <br className="hidden lg:block" />
+            white label services or a business in need of a white{" "}
+            <br className="hidden lg:block" />
             label partner, we’ve got you covered
           </>
         }
@@ -77,20 +82,24 @@ const WhiteLabelDev = () => {
         desc={
           <>
             White label development services allow businesses to expand their
-            offerings without the need to hire or manage an in-house development
+            offerings without the need to hire or{" "}
+            <br className="hidden lg:block" /> manage an in-house development
             team. This model is perfect for companies facing resource
-            constraints, tight deadlines, or budget limitations. By partnering
-            with a white label web development company, you can outsource tasks
+            constraints, <br className="hidden lg:block" /> tight deadlines, or
+            budget limitations. By partnering with a white label web development
+            company, you can <br className="hidden lg:block" /> outsource tasks
             like custom web app creation, platform integration, or ongoing
-            maintenance while keeping your brand at the forefront.
+            maintenance while keeping <br className="hidden lg:block" /> your
+            brand at the forefront.
             <p>
               <br />
             </p>
             Why is this important? It lets you focus on winning new clients and
-            growing your business, while experts handle the technical work
-            behind the scenes. No additional overhead. No stress. Curious how
-            white label development can help your business? Book a call with us
-            today and discover the possibilities!
+            growing your business, while experts
+            <br className="hidden lg:block" /> handle the technical work behind
+            the scenes. No additional overhead. No stress. Curious how white
+            label <br className="hidden lg:block" /> development can help your
+            business? Book a call with us today and discover the possibilities!
             <br />
             <br />
             <p>
@@ -109,34 +118,39 @@ const WhiteLabelDev = () => {
         title={"Industries We Serve"}
         desc={"Our Web3 white label division works with various industries"}
         data={IndustriesDexData}
+        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
       />
 
       <KeyFeatures
         isOneBlock={true}
         title={
           <>
-            Advantages <br /> of White-Label
-            <br /> Web Development
+            Advantages <br className="hidden lg:block" /> of White-Label
+            <br className="hidden lg:block" /> Web Development
           </>
         }
         desc={
           <>
             Our white label development company guarantees that clients receive
-            high-quality, scalable solutions, helping them expand their online
-            presence. By leveraging white label website development, combined
-            with app development, you gain access to a skilled team that ensures
-            professional results while maintaining full control over branding
-            and client relationships
+            high-quality, scalable solutions,
+            <br className="hidden lg:block" /> helping them expand their online
+            presence. By leveraging white label website development,
+            <br className="hidden lg:block" /> combined with app development,
+            you gain access to a skilled team that ensures professional
+            <br className="hidden lg:block" /> results while maintaining full
+            control over branding and client relationships
             <p>
               <br />
             </p>
             Additionally, our services are fully customizable. From complex
-            applications and feature-rich platforms to simple landing pages, we
-            provide the necessary tools and expertise to deliver solutions that
-            match their requirements
+            applications and feature-rich
+            <br className="hidden lg:block" /> platforms to simple landing
+            pages, we provide the necessary tools and expertise to deliver
+            <br className="hidden lg:block" /> solutions that match their
+            requirements
           </>
         }
-        titleClasses="max-w-[573px]"
+        titleClasses="max-w-[573px] lg:mb-[60px]"
         descClasses={"max-w-[798px]"}
       />
       <FAQ
@@ -144,16 +158,22 @@ const WhiteLabelDev = () => {
         desc={
           <>
             <p className="text-secondary">
-              At Cowchain, we believe in a well-structured approach to
-              delivering high-quality white label development services. From
-              analyzing your clients’ needs to creating custom web and mobile
-              solutions, our process is transparent and focused on results.
+              At Cowchain, we believe in a well-structured
+              <br className="hidden lg:block" /> approach to delivering
+              high-quality white label
+              <br className="hidden lg:block" /> development services. From
+              analyzing your clients’
+              <br className="hidden lg:block" /> needs to creating custom web
+              and mobile solutions, our process is transparent and focused on
+              results.
             </p>
             <br />
             <p className="text-secondary">
-              We understand that businesses need reliable partners, and our web
-              development ensures consistent performance across all project
-              stages.
+              We understand that businesses need reliable
+              <br className="hidden lg:block" /> partners, and our web
+              development ensures
+              <br className="hidden lg:block" /> consistent performance across
+              all project stages.
             </p>
           </>
         }
@@ -172,16 +192,22 @@ const WhiteLabelDev = () => {
         desc={
           <>
             Choosing Cowchain as your white label web development partner gives
-            you access to a team that values flexibility, innovation, and
+            you access to a team that values
+            <br className="hidden lg:block" /> flexibility, innovation, and
             reliability. We prioritize building long-term relationships,
-            ensuring that your clients receive high-quality, customized
+            ensuring that your clients
+            <br className="hidden lg:block" /> receive high-quality, customized
             solutions without the need for extensive internal resources. Our
-            deep expertise in web and app technologies allows us to handle
-            complex projects while you maintain full control over branding and
-            client communication
+            deep
+            <br className="hidden lg:block" /> expertise in web and app
+            technologies allows us to handle complex projects while you maintain
+            full
+            <br className="hidden lg:block" /> control over branding and client
+            communication
           </>
         }
         noBg={true}
+        titleClasses="lg:mb-[60px]"
       />
       <OtherServices
         title={

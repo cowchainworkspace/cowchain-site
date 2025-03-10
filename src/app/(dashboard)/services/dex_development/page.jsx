@@ -26,7 +26,7 @@ const DexDevelopment = () => {
         desc={
           <>
             Get the best decentralized exchange development services from
-            Cowchain <br />
+            Cowchain <br className="hidden lg:block" />
             and stand out in the competitive cryptocurrency market
           </>
         }
@@ -38,24 +38,26 @@ const DexDevelopment = () => {
             Cowchain is among the{" "}
             <span className="violet-gradient-text">
               leading decentralized
-              <br />
+              <br className="hidden lg:block" />
               exchange development companies
             </span>{" "}
-            providing <br />
-            end-to-end services to empower one to build <br />
+            providing <br className="hidden lg:block" />
+            end-to-end services to empower one to build{" "}
+            <br className="hidden lg:block" />
             <span className="violet-gradient-text">scalable DEX platforms</span>
-            . As the trusted <br />
+            . As the trusted <br className="hidden lg:block" />
             <span className="violet-gradient-text">
-              decentralized exchange software <br />
+              decentralized exchange software <br className="hidden lg:block" />
               development company
             </span>
-            , we believe <br />
+            , we believe <br className="hidden lg:block" />
             in{" "}
             <span className="violet-gradient-text">
               secure and customized solutions
             </span>{" "}
-            that help <br />
-            organizations address the demands of the market <br />
+            that help <br className="hidden lg:block" />
+            organizations address the demands of the market{" "}
+            <br className="hidden lg:block" />
             and security in trading alongside the users
           </>
         }
@@ -64,10 +66,10 @@ const DexDevelopment = () => {
         title={
           <>
             our
-            <br />
-            Decentralized <br />
-            Exchange <br />
-            Development <br />
+            <br className="hidden lg:block" /> Decentralized{" "}
+            <br className="hidden lg:block" />
+            Exchange <br className="hidden lg:block" />
+            Development <br className="hidden lg:block" />
             Services
           </>
         }
@@ -82,6 +84,7 @@ const DexDevelopment = () => {
           />
         }
       />
+
       <KeyFeatures
         title={"Key Features of Our DEX Development"}
         desc={
@@ -89,7 +92,9 @@ const DexDevelopment = () => {
         }
         noBg={true}
         isMaxWidthTab={true}
+        titleClasses="lg:mb-[60px]"
       />
+
       <Industries
         title={"Industries We Serve"}
         desc={
@@ -97,31 +102,65 @@ const DexDevelopment = () => {
         }
         data={IndustriesDexData}
         topBorder={false}
+        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
       />
       <KeyFeatures
         isOneBlock={true}
         title={"Our Blockchain Advisory Background"}
         desc={
-          "With extensive experience in blockchain advisory services, Cowchain provides strategic guidance on decentralized exchange software development, helping clients navigate the complexities of building secure and feature-rich platforms. Our expertise ensures that every aspect of your decentralized exchange development is handled with precision, from initial planning to deployment, making sure the platform remains adaptable to future blockchain advancements"
+          <>
+            With extensive experience in blockchain advisory services,
+            <br className="hidden lg:block" /> Cowchain provides strategic
+            guidance on decentralized exchange software
+            <br className="hidden lg:block" />
+            development, helping clients navigate the complexities of building
+            secure
+            <br className="hidden lg:block" /> and feature-rich platforms. Our
+            expertise ensures that every aspect of your
+            <br className="hidden lg:block" /> decentralized exchange
+            development is handled with precision, from initial
+            <br className="hidden lg:block" /> planning to deployment, making
+            sure the platform remains adaptable to future
+            <br className="hidden lg:block" /> blockchain advancements
+          </>
         }
-        titleClasses={"!max-w-[737px] mb-10"}
+        titleClasses={"!max-w-[737px] lg:mb-[60px]"}
         isMaxWidthTab={true}
         isTextSecondary={true}
       />
+
       <Industries
         title={"Our Decentralized Exchange Application Development"}
         desc={
-          "Our decentralized cryptocurrency exchange app development follows a structured approach, ensuring seamless development and deployment. By leveraging cutting-edge technologies in decentralized cryptocurrency exchange development, we ensure the creation of secure and scalable platforms, optimized for rapid transactions"
+          <>
+            Our decentralized cryptocurrency exchange app development follows a
+            structured
+            <br className="hidden lg:block" /> approach, ensuring seamless
+            development and deployment. By leveraging cutting-
+            <br className="hidden lg:block" />
+            edge technologies in decentralized cryptocurrency exchange
+            development, we ensure
+            <br className="hidden lg:block" /> the creation of secure and
+            scalable platforms, optimized for rapid transactions
+          </>
         }
         data={DexAppDevData}
         topBorder={false}
+        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
       />
       <ServiceStack />
       <Feedback />
       <Industries
         title={"Our Engagement Models"}
         desc={
-          "As a leading decentralized exchange development company, we provide adaptable engagement models to fit the unique needs of every business"
+          <>
+            As a leading decentralized exchange
+            <br className="hidden lg:block" /> development company, we provide
+            <br className="hidden lg:block" /> adaptable engagement models to
+            fit
+            <br className="hidden lg:block" /> the unique needs of every
+            business
+          </>
         }
         isTwoSides={true}
         data={EngagementDevData}
@@ -131,11 +170,24 @@ const DexDevelopment = () => {
         isOneBlock={true}
         title={" Why Our Clients Trust Us"}
         desc={
-          "Clients trust Cowchain for our in-depth expertise, tailored solutions, and proven results in decentralized exchange development. We consistently deliver secure, scalable platforms while maintaining transparency and trust throughout the project lifecycle. Our track record in decentralized exchange development is evident through our projects across diverse industries."
+          <>
+            Clients trust Cowchain for our in-depth expertise, tailored
+            solutions,
+            <br className="hidden lg:block" /> and proven results in
+            decentralized exchange development.
+            <br className="hidden lg:block" />
+            We consistently deliver secure, scalable platforms while maintaining
+            <br className="hidden lg:block" />
+            transparency and trust throughout the project lifecycle. Our track
+            record
+            <br className="hidden lg:block" /> in decentralized exchange
+            development is evident through our projects
+            <br className="hidden lg:block" /> across diverse industries.
+          </>
         }
         isTextSecondary={true}
         isMaxWidthTab={true}
-        titleClasses="max-w-[553px] mb-10"
+        titleClasses="max-w-[553px] lg:mb-[60px]"
       />
       <OtherServices
         title={

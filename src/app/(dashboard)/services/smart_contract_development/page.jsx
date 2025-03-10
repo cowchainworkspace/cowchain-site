@@ -143,13 +143,14 @@ const SmartContractDevelopment = () => {
         }
         data={SmartContractIndustriesData}
         topBorder={false}
+        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
       />
 
       <ServiceStack
         lopngDesc={true}
         desc={
           <>
-            <p>
+            <p className="text-[#BBBBBB]">
               The experts at our smart contract development company are
               experienced in working with various blockchain networks, which
               allows us to offer optimal solutions depending on the project
@@ -159,7 +160,7 @@ const SmartContractDevelopment = () => {
               <br />
               <br />
             </p>
-            <p>
+            <p className="text-[#BBBBBB]">
               We constantly follow the development of blockchain technologies
               and supplement our stack with new tools to improve development
               efficiency
@@ -168,7 +169,7 @@ const SmartContractDevelopment = () => {
               <br />
               <br />
             </p>
-            <p>
+            <p className="text-[#BBBBBB]">
               Our developers use advanced technologies and tools to provide
               smart contract development service
             </p>
