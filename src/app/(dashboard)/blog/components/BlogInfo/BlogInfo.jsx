@@ -1,7 +1,13 @@
 "use client";
 import Contact from "@/components/Contact";
+import { Loading } from "@/components/loader/Loading";
 import { blogOptions } from "@/hooks/use-strapi";
-import { useSuspenseInfiniteQuery } from "@tanstack/react-query";
+import {
+  useInfiniteQuery,
+  useQuery,
+  useSuspenseInfiniteQuery,
+  useSuspenseQuery
+} from "@tanstack/react-query";
 import { useSearchParams } from "next/navigation";
 import React, { Fragment } from "react";
 import { HeroSection } from "../../blocks/HeroSection";
@@ -16,15 +22,24 @@ const BlogInfo = () => {
   const {
     data: articles,
     fetchNextPage,
-    isFetchingNextPage
-  } = useSuspenseInfiniteQuery(blogOptions(tag));
+    isFetchingNextPage,
+    isLoading
+  } = useInfiniteQuery(blogOptions(tag));
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-[100dvh]">
+        <Loading />
+      </div>
+    );
+  }
 
   const allArticles = articles?.pages.reduce(
     (acc, value) => acc.concat(value.data),
     []
   );
 
-  const totalArticlesInDB = articles.pages.at(-1).meta.pagination.total;
+  const totalArticlesInDB = articles?.pages.at(-1).meta.pagination.total;
 
   return (
     <div className="relative overflow-visible  bg-black">

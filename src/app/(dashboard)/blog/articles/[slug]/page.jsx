@@ -1,21 +1,24 @@
-import { articleOptions } from "@/hooks/use-strapi";
-
-import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
-import { getQueryClient } from "@/lib/api/get-query-client";
+import { getArticleBySlug } from "@/lib/api/articles";
 import ArticleInfo from "../components/ArticleInfo/ArticleInfo";
-import { Suspense } from "react";
-import { Loading } from "@/components/loader/Loading";
+
+export async function generateMetadata({ params }) {
+  const blogPost = await getArticleBySlug(params.slug);
+  const metaTags = blogPost.attributes?.SEO?.MetaTag?.map((tag) => [
+    tag.Name,
+    tag.Content
+  ]);
+
+  return {
+    title: blogPost.attributes.SEO.MetaTitle,
+    description: blogPost.attributes.SEO.MetaDescription,
+    other: metaTags ? Object.fromEntries(metaTags) : null
+  };
+}
 
 export default async function Article() {
-  const queryClient = getQueryClient();
-
-  await queryClient.prefetchQuery(articleOptions);
-
   return (
     <section>
-      <HydrationBoundary state={dehydrate(queryClient)}>
-        <ArticleInfo />
-      </HydrationBoundary>
+      <ArticleInfo />
     </section>
   );
 }

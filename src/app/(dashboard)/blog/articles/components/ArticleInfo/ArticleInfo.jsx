@@ -1,29 +1,38 @@
 "use client";
-import { articleOptions, useMutatePost } from "@/hooks/use-strapi";
 import bannerIg from "@/assets/blog/articles/splash.png";
+import { articleOptions, useMutatePost } from "@/hooks/use-strapi";
 
+import { Loading } from "@/components/loader/Loading";
+import FooterForm from "@/components/utils/FooterForm";
+import { getSplitText } from "@/lib/utils";
+import { useQuery, useSuspenseQuery } from "@tanstack/react-query";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import React, { useState } from "react";
 import { BlogBreadCrumb } from "../../../components/BreadCrumb/BlogBreadCrumb";
+import { Blog } from "../../blocks/Blog";
 import { HeroSection } from "../../blocks/HeroSection";
-import Image from "next/image";
-import { SideMenu } from "../SideMenu/SideMenu";
+import { ShareLinks } from "../../blocks/ShareLinks";
 import { ArticleParagraphs } from "../ArticleParagraphs/ArticleParagraphs";
 import { ReviewsSection } from "../ReviewsSection/ReviewsSection";
+import { SideMenu } from "../SideMenu/SideMenu";
 import { ThanksReview } from "../ThanksReview/ThanksReview";
-import FooterForm from "@/components/utils/FooterForm";
-import { ShareLinks } from "../../blocks/ShareLinks";
-import { useSuspenseQuery } from "@tanstack/react-query";
-import { getSplitText } from "@/lib/utils";
-import { Blog } from "../../blocks/Blog";
 
 const ArticleInfo = () => {
   const params = useParams();
   const { slug } = params;
-  const { data } = useSuspenseQuery(articleOptions(slug));
+  const { data, isLoading } = useQuery(articleOptions(slug));
   const [reviewItem, setReviewItem] = useState(null);
   const { mutateAsync: cretePost, isPending } = useMutatePost();
   const articleTitles = [];
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-[100dvh]">
+        <Loading />
+      </div>
+    );
+  }
 
   const onHandleAddReview = async (review) => {
     try {

@@ -1,7 +1,6 @@
-import {getArticleBySlug, getArticles, updateArticleViews} from '@/lib/api/articles'
+import {getArticleBySlug, getArticles, getMoreArticles, updateArticleViews} from '@/lib/api/articles'
 import { queryOptions, useInfiniteQuery, useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
-import qs from 'qs';
 
 export const useGetItems = (section) => {
   const query = useQuery({
@@ -31,41 +30,7 @@ export const useGetMorePosts = (currentSlug) => {
   return useInfiniteQuery({
     queryKey: ['posts', currentSlug],
   
-    queryFn: async ({pageParam = 1}) => {
-      const queryParams = qs.stringify({
-        filters: {
-          slug: {
-            $ne: currentSlug
-          }
-        },
-        populate: {
-         preview_article_img: { fields: ["url"] }
-        },
-        sort: ["date:desc"],
-        fields: ['article_title', "slug", "id", "article_description", "tag"],
-        pagination: { page: pageParam, pageSize: 8 },
-     
-      }, {
-        encodeValuesOnly: true,
-      })
-      const url = new URL('/api/articles', process.env.NEXT_PUBLIC_STRAPI_URL);
-      url.search = queryParams;
-
-      const res = await axios.get(url.href,
-        
-        {
-          headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
-          }
-        }
-      );
-      
-      if (!res.data) {
-        throw new Error('Articles not found');
-      }
-      
-      return res.data;
-    },
+    queryFn: async ({pageParam = 1}) => getMoreArticles(currentSlug,pageParam),
     onError: (err) => {
       console.error(err);
     },
@@ -149,6 +114,7 @@ export const blogOptions = (currentTag) => queryOptions({
      ? pagination.page + 1 
      : undefined
     },
-
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
   initialPageParam: 1,
 })

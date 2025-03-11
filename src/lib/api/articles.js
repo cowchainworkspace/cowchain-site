@@ -1,4 +1,4 @@
-"use server"
+
 import axios from 'axios';
 import qs from 'qs';
 
@@ -21,6 +21,9 @@ export async function getArticleBySlug(currentSlug) {
         populate: ["url"]
       },
       article_paragraphs: {
+        populate: "*"
+      },
+      SEO: {
         populate: "*"
       }
     },
@@ -97,6 +100,39 @@ export async function updateArticleViews(articleId) {
   }
 }
 
-export async function addArticleRate() {
+export async function getMoreArticles(currentSlug, pageParam) {
+  const queryParams = qs.stringify({
+    filters: {
+      slug: {
+        $ne: currentSlug
+      }
+    },
+    populate: {
+     preview_article_img: { fields: ["url"] }
+    },
+    sort: ["date:desc"],
+    fields: ['article_title', "slug", "id", "article_description", "tag"],
+    pagination: { page: pageParam, pageSize: 8 },
+ 
+  }, {
+    encodeValuesOnly: true,
+  })
+  const url = new URL('/api/articles', process.env.NEXT_PUBLIC_STRAPI_URL);
+  url.search = queryParams;
+
+  const res = await axios.get(url.href,
+    
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+      }
+    }
+  );
   
+  if (!res.data) {
+    throw new Error('Articles not found');
+  }
+  
+  return res.data;
 }
+

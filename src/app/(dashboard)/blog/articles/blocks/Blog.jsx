@@ -2,23 +2,15 @@ import arrow from "@/assets/arrow_right.svg";
 import { Loading } from "@/components/loader/Loading";
 import { useGetMorePosts } from "@/hooks/use-strapi";
 import Image from "next/image";
-import { Fragment, useRef } from "react";
-import { Post } from "../components/Post";
 import ArticlesSlider from "./../../components/Slides/ArticlesSlider";
 
 export const Blog = ({ slug }) => {
-  const wrapper = useRef(null);
-
   const {
     data: articles,
     isLoading,
     fetchNextPage,
     isFetchingNextPage
   } = useGetMorePosts(slug);
-
-  if (isLoading) {
-    return <Loading />;
-  }
 
   const scroll = (scrollOffset, element) => {
     element.scrollLeft += scrollOffset;

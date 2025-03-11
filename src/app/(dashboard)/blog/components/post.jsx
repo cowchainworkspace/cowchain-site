@@ -1,9 +1,9 @@
 import Tag from "@/components/ui/tag";
+import { useLoader } from "@/hooks/useLoader";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Reading } from "./Reading/Reading";
-import { useLoader } from "@/hooks/useLoader";
 
 export const Post = ({ atributes, isThreeLines = false }) => {
   const { setIsLoading, setIsRendering } = useLoader();
@@ -17,22 +17,12 @@ export const Post = ({ atributes, isThreeLines = false }) => {
     reading_minutes
   } = atributes || {};
 
-  const setLoading = () => {
-    setIsLoading(true);
-    setIsRendering(true);
-    setTimeout(() => {
-      setIsLoading(false);
-      setIsRendering(false);
-    }, 500);
-  };
-
   return (
     <Link
       href={`blog/articles/${slug}`}
       className={cn(
         "group relative  flex w-full cursor-pointer flex-col border-th-fade p-6 last-of-type:border-r-0 md:border-r-[0.5px] md:p-6"
       )}
-      onClick={setLoading}
     >
       <Image
         height={362}
@@ -43,7 +33,10 @@ export const Post = ({ atributes, isThreeLines = false }) => {
       />
 
       <div className=" absolute right-5  items-center justify-center opacity-0  transition-opacity duration-300 group-hover:opacity-100">
-        <button className="mx-auto flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white text-center font-roc text-sm font-medium uppercase text-black lg:h-24 lg:w-24 lg:text-base">
+        <button
+          type="button"
+          className="mx-auto flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white text-center font-roc text-sm font-medium uppercase text-black lg:h-24 lg:w-24 lg:text-base"
+        >
           Read
         </button>
       </div>
