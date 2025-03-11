@@ -82,10 +82,7 @@ function App() {
                 }
               />
 
-              <Route
-                path="/article"
-                element={<Article setBurgerOpen={setBurgerOpen} />}
-              />
+              <Route path="/article" element={<Article />} />
 
               <Route
                 path="/blog"

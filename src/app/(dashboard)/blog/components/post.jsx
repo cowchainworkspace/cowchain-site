@@ -1,11 +1,12 @@
-import BookSvg from "@/assets/svg/blog/BookSvg";
 import Tag from "@/components/ui/tag";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Reading } from "./Reading/Reading";
+import { useLoader } from "@/hooks/useLoader";
 
-export const Post = ({ atributes, isMobile = false, isThreeLines = false }) => {
+export const Post = ({ atributes, isThreeLines = false }) => {
+  const { setIsLoading, setIsRendering } = useLoader();
   const {
     slug,
     article_description,
@@ -16,15 +17,22 @@ export const Post = ({ atributes, isMobile = false, isThreeLines = false }) => {
     reading_minutes
   } = atributes || {};
 
+  const setLoading = () => {
+    setIsLoading(true);
+    setIsRendering(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setIsRendering(false);
+    }, 500);
+  };
+
   return (
     <Link
       href={`blog/articles/${slug}`}
       className={cn(
         "group relative  flex w-full cursor-pointer flex-col border-th-fade p-6 last-of-type:border-r-0 md:border-r-[0.5px] md:p-6"
-        // {
-        //   "border-b border-b-th-fade last:border-b-0": isMobile
-        // }
       )}
+      onClick={setLoading}
     >
       <Image
         height={362}
