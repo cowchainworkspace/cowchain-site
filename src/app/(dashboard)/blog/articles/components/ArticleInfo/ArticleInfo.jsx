@@ -21,7 +21,7 @@ import { ThanksReview } from "../ThanksReview/ThanksReview";
 const ArticleInfo = () => {
   const params = useParams();
   const { slug } = params;
-  const { data, isLoading } = useQuery(articleOptions(slug));
+  const { data, isLoading } = useSuspenseQuery(articleOptions(slug));
   const [reviewItem, setReviewItem] = useState(null);
   const { mutateAsync: cretePost, isPending } = useMutatePost();
   const articleTitles = [];

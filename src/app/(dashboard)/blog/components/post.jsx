@@ -5,7 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Reading } from "./Reading/Reading";
 
-export const Post = ({ atributes, isThreeLines = false }) => {
+export const Post = ({
+  atributes,
+  isThreeLines = false,
+  handleClick,
+  isDisabled
+}) => {
   const { setIsLoading, setIsRendering } = useLoader();
   const {
     slug,
@@ -21,8 +26,10 @@ export const Post = ({ atributes, isThreeLines = false }) => {
     <Link
       href={`blog/articles/${slug}`}
       className={cn(
-        "group relative  flex w-full cursor-pointer flex-col border-th-fade p-6 last-of-type:border-r-0 md:border-r-[0.5px] md:p-6"
+        "group relative  flex w-full cursor-pointer flex-col border-th-fade p-6 last-of-type:border-r-0 md:border-r-[0.5px] md:p-6",
+        { "pointer-events-none": isDisabled }
       )}
+      onClick={handleClick}
     >
       <Image
         height={362}

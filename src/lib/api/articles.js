@@ -41,7 +41,7 @@ export async function getArticleBySlug(currentSlug) {
     }
   );
 
-  if (!res.data.data.length) {
+  if (!res.data) {
     throw new Error('Article not found');
   }
 

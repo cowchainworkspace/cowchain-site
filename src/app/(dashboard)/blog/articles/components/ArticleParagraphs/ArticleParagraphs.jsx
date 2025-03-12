@@ -87,7 +87,6 @@ export const ArticleParagraphs = ({
         <Image
           width={56}
           height={56}
-          objectFit="contain"
           className="mb-[16px] h-[56px] w-[56px]  rounded-full"
           src={authorIcon}
           alt="Picture of the author"
@@ -110,7 +109,11 @@ export const ArticleParagraphs = ({
           <span className="text-[16px] uppercase text-[white] underline">
             all articles of this author
           </span>
-          <Image src={rightArrow} className="h-[16px] w-[16px]" alt="" />
+          <Image
+            src={rightArrow}
+            className="h-[16px] w-[16px]"
+            alt="Arrow icon"
+          />
         </a>
       </div>
     </div>

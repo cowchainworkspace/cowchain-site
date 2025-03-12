@@ -2,22 +2,23 @@
 import Contact from "@/components/Contact";
 import { Loading } from "@/components/loader/Loading";
 import { blogOptions } from "@/hooks/use-strapi";
-import {
-  useInfiniteQuery,
-  useQuery,
-  useSuspenseInfiniteQuery,
-  useSuspenseQuery
-} from "@tanstack/react-query";
+import { cn } from "@/lib/utils";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import { useSearchParams } from "next/navigation";
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { HeroSection } from "../../blocks/HeroSection";
 import { ViewMoreSection } from "../../blocks/ViewMore";
 import { BlogBreadCrumb } from "../BreadCrumb/BlogBreadCrumb";
 import { Post } from "../post";
 
 const BlogInfo = () => {
+  const [isClicking, setIsClicking] = useState(false);
   const searchParams = useSearchParams();
   const tag = searchParams.get("tag") || "";
+
+  const handleClick = () => {
+    setIsClicking(true);
+  };
 
   const {
     data: articles,
@@ -42,7 +43,14 @@ const BlogInfo = () => {
   const totalArticlesInDB = articles?.pages.at(-1).meta.pagination.total;
 
   return (
-    <div className="relative overflow-visible  bg-black">
+    <div
+      className={cn(
+        "relative overflow-visible bg-black transition-opacity  duration-300",
+        {
+          "opacity-75": isClicking
+        }
+      )}
+    >
       <BlogBreadCrumb />
       <HeroSection />
       <section className="container max-w-[1440px]">
@@ -51,7 +59,12 @@ const BlogInfo = () => {
             <Fragment key={index}>
               <div className="grid w-full border-t-[0.5px] border-th-fade lg:grid-cols-2">
                 {post.data.slice(0, 2).map((article) => (
-                  <Post key={article.id} atributes={article.attributes} />
+                  <Post
+                    handleClick={handleClick}
+                    key={article.id}
+                    atributes={article.attributes}
+                    isDisabled={isClicking}
+                  />
                 ))}
               </div>
               <div className=" grid border-t-[0.5px] border-th-fade  lg:grid-cols-3 ">
@@ -60,6 +73,8 @@ const BlogInfo = () => {
                     key={article.id}
                     atributes={article.attributes}
                     isThreeLines={true}
+                    handleClick={handleClick}
+                    isDisabled={isClicking}
                   />
                 ))}
               </div>
