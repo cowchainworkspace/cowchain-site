@@ -1,29 +1,29 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-import menu_open from "@/assets/menu_open.svg";
-import menu_close from "@/assets/homepage/modal_close.svg";
+import arrow from "@/assets/arrow_right.svg";
+import bg_clients_lg from "@/assets/bg/clients_navbar_bg_lg.png";
+import bg_clients from "@/assets/bg/clients_navbar_bg_sm.png";
 import bg from "@/assets/bg/navbar_top.png";
 import bg_lg from "@/assets/bg/navbar_top_lg.png";
-import bg_home from "@/assets/homepage/home-mobile.png";
-import bg_clients from "@/assets/bg/clients_navbar_bg_sm.png";
-import bg_clients_lg from "@/assets/bg/clients_navbar_bg_lg.png";
-import { motion, AnimatePresence } from "framer-motion";
-import arrow from "@/assets/arrow_right.svg";
-import Link from "next/link";
-import linkedin from "@/assets/footer/linkedin.svg";
-import telegram from "@/assets/footer/telegram.svg";
-import twitter from "@/assets/footer/twitter.svg";
-import medium from "@/assets/footer/medium.svg";
-import mail from "@/assets/footer/mail.svg";
 import team_bg from "@/assets/bg/team-mobile.png";
 import team from "@/assets/bg/team.png";
-import { cn } from "@/lib/utils";
+import linkedin from "@/assets/footer/linkedin.svg";
+import mail from "@/assets/footer/mail.svg";
+import medium from "@/assets/footer/medium.svg";
+import telegram from "@/assets/footer/telegram.svg";
+import twitter from "@/assets/footer/twitter.svg";
+import bg_home from "@/assets/homepage/home-mobile.png";
+import menu_close from "@/assets/homepage/modal_close.svg";
+import menu_open from "@/assets/menu_open.svg";
 import ContactForm from "@/components/utils/ContactForm";
-import Image from "next/image";
 import { useLoader } from "@/hooks/useLoader";
+import { cn } from "@/lib/utils";
 import emailjs from "emailjs-com";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Navbar({ isPageNotFound = false }) {
   const [burgerOpen, setBurgerOpen] = useState(false);
@@ -117,6 +117,10 @@ export default function Navbar({ isPageNotFound = false }) {
     {
       title: "Team",
       link: "/team"
+    },
+    {
+      title: "Blog",
+      link: "/blog"
     }
   ];
 
