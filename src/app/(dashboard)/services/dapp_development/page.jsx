@@ -45,19 +45,19 @@ const DappDevelopment = () => {
             <span className="violet-gradient-text">
               dapp development company
             </span>
-            , Cowchain <br className="hidden lg:block" />
+            , Cowchain <br className="1400:block hidden" />
             offers full-cycle dApp development services against{" "}
-            <br className="hidden lg:block" />
+            <br className="1400:block hidden" />
             the growing demands of modern industries.{" "}
-            <br className="hidden lg:block" />
+            <br className="1400:block hidden" />
             Be it a startup or a big player, with our{" "}
             <span className="violet-gradient-text">
               dapp Be it a startup or a big player, with our dapp development
               services
             </span>{" "}
             by implementing the full potential{" "}
-            <br className="hidden lg:block" /> of blockchain technology, a
-            business can build <br className="hidden lg:block" />{" "}
+            <br className="1400:block hidden" /> of blockchain technology, a
+            business can build <br className="1400:block hidden" />{" "}
             <span className="violet-gradient-text">
               highly secure and decentralized applications
             </span>

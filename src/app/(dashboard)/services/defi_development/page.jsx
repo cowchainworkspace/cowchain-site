@@ -42,20 +42,20 @@ const DefiDevelopment = () => {
             {" "}
             At Cowchain, we are a leading{" "}
             <span className="violet-gradient-text">
-              defi development <br className="hidden lg:block" /> company
+              defi development <br className="1400:block hidden" /> company
             </span>{" "}
             specializing in providing top-notch
             <span className="violet-gradient-text">
-              defi <br className="hidden lg:block" /> development services
+              defi <br className="1400:block hidden" /> development services
             </span>
-            . Our team is dedicated to <br className="hidden lg:block" />
+            . Our team is dedicated to <br className="1400:block hidden" />
             helping you navigate the world of decentralized{" "}
-            <br className="hidden lg:block" />
+            <br className="1400:block hidden" />
             finance with
             <span className="violet-gradient-text">
               innovative platforms
             </span>{" "}
-            offered by our <br className="hidden lg:block" /> decentralized{" "}
+            offered by our <br className="1400:block hidden" /> decentralized{" "}
             <span className="violet-gradient-text">
               finance development company
             </span>

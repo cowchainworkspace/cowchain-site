@@ -44,18 +44,20 @@ const NftDevelopment = () => {
             <span className="violet-gradient-text">
               NFT development company
             </span>
-            , Cowchain delivers <br />
+            , Cowchain delivers <br className="1400:block hidden" />
             innovative solutions for{" "}
             <span className="violet-gradient-text">
-              creating, managing, <br /> and launching NFTs
+              creating, managing, <br className="1400:block hidden" /> and
+              launching NFTs
             </span>{" "}
-            across industries. <br />
+            across industries. <br className="1400:block hidden" />
             Our approach to{" "}
             <span className="violet-gradient-text">
               blockchain NFT development
             </span>{" "}
-            <br />
-            ensures that your digital assets are accessible <br />
+            <br className="1400:block hidden" />
+            ensures that your digital assets are accessible{" "}
+            <br className="1400:block hidden" />
             <span className="violet-gradient-text">
               without compromising on performance
             </span>

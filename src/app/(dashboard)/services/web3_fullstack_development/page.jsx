@@ -47,30 +47,30 @@ const FullStackDevelopment = () => {
             At Cowchain, we specialize in delivering{" "}
             <span className="violet-gradient-text">
               complete
-              <br className="hidden lg:block" />
+              <br className="1400:block hidden" />
               full stack development services
             </span>{" "}
-            , covering all <br className="hidden lg:block" />
+            , covering all <br className="1400:block hidden" />
             aspects of digital product creation. As a{" "}
             <span className="violet-gradient-text">
-              full stack <br className="hidden lg:block" />
+              full stack <br className="1400:block hidden" />
               software development company
             </span>
-            , we create scalable <br className="hidden lg:block" />
+            , we create scalable <br className="1400:block hidden" />
             solutions, ensuring seamless operation across all{" "}
-            <br className="hidden lg:block" />
+            <br className="1400:block hidden" />
             system components. By leveraging
             <span className="violet-gradient-text">
               {" "}
-              cutting-edge <br className="hidden lg:block" /> technologies
+              cutting-edge <br className="1400:block hidden" /> technologies
             </span>
             , our engineers deliver systems that{" "}
-            <br className="hidden lg:block" />
+            <br className="1400:block hidden" />
             work{" "}
             <span className="violet-gradient-text">
               flawlessly across platforms
             </span>
-            , adapting to the <br className="hidden lg:block" />
+            , adapting to the <br className="1400:block hidden" />
             unique needs of your business
           </>
         }

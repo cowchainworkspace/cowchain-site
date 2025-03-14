@@ -38,7 +38,7 @@ export const HeroSection = ({
             <div className="flex items-center gap-2">
               <ViewSvg />
               <span className="text-sm leading-[22px] tracking-[0] text-secondary">
-                {`${pageViews} views`}
+                {`${pageViews || 0} views`}
               </span>
             </div>
           </div>

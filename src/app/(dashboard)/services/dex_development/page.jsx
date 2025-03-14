@@ -37,27 +37,27 @@ const DexDevelopment = () => {
           <>
             Cowchain is among the{" "}
             <span className="violet-gradient-text">
-              leading decentralized
-              <br className="hidden lg:block" />
+              leading decentralized <br className="1400:block hidden" />
               exchange development companies
             </span>{" "}
-            providing <br className="hidden lg:block" />
+            providing <br className="1400:block hidden" />
             end-to-end services to empower one to build{" "}
-            <br className="hidden lg:block" />
+            <br className="1400:block hidden" />
             <span className="violet-gradient-text">scalable DEX platforms</span>
-            . As the trusted <br className="hidden lg:block" />
+            . As the trusted <br className="1400:block hidden" />
             <span className="violet-gradient-text">
-              decentralized exchange software <br className="hidden lg:block" />
+              decentralized exchange software{" "}
+              <br className="1400:block hidden" />
               development company
             </span>
-            , we believe <br className="hidden lg:block" />
+            , we believe <br className="1400:block hidden" />
             in{" "}
             <span className="violet-gradient-text">
               secure and customized solutions
             </span>{" "}
-            that help <br className="hidden lg:block" />
+            that help <br className="1400:block hidden" />
             organizations address the demands of the market{" "}
-            <br className="hidden lg:block" />
+            <br className="1400:block hidden" />
             and security in trading alongside the users
           </>
         }

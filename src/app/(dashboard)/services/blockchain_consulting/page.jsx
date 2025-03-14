@@ -44,27 +44,28 @@ const BlockChainConsulting = () => {
               one of the leading blockchain consulting companies
             </span>
             , we deliver professional
-            <br className="hidden lg:block" />
+            <br className="1400:block hidden" />
             <span className="violet-gradient-text">
               blockchain consulting services
             </span>{" "}
             tailored to meet the very unique needs of{" "}
             <span className="violet-gradient-text">
-              every business desirous <br className="hidden lg:block" />
+              every business desirous <br className="1400:block hidden" />
               the potentials of blockchain technology
             </span>
             . Be it in the early stages of considering which blockchain best
             suits your needs or working to optimize your current blockchain
             infrastructure,
-            <br className="hidden lg:block" />
+            <br className="1400:block hidden" />
             our experts are here to give deep insights and practical{" "}
             <span className="violet-gradient-text">
               blockchain consulting solutions.
             </span>
-            <br className="hidden lg:block" />
-            From blockchain advisory services <br />
+            <br className="1400:block hidden" />
+            From blockchain advisory services{" "}
+            <br className="1400:block hidden" />
             to ongoing development, our approach empowers
-            <br className="hidden lg:block" />
+            <br className="1400:block hidden" />
             companies to{" "}
             <span className="violet-gradient-text">
               leverage a blockchain opportunity.
