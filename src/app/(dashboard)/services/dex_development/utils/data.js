@@ -60,7 +60,7 @@ export const DexAppDevData = [
   },
   {
     title: "Design & Development",
-    text: "Government agencies benefit from decentralized platforms for public services such as secure voting systems and identity verification",
+    text: "Building a scalable, secure platform.",
     icon: DesignDevIcon
   },
   {

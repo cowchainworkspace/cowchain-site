@@ -1,3 +1,4 @@
+import { useLoader } from '@/hooks/useLoader';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -25,3 +26,4 @@ export const getSplitText = (text) => {
 
   return articleInfo;
 };
+

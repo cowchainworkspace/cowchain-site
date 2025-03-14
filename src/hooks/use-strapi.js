@@ -1,6 +1,6 @@
-import { useInfiniteQuery, useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import {getArticleBySlug, getArticles, getMoreArticles, updateArticleViews} from '@/lib/api/articles'
+import { queryOptions, useInfiniteQuery, useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
-import qs from 'qs';
 
 export const useGetItems = (section) => {
   const query = useQuery({
@@ -25,159 +25,12 @@ export const useGetItems = (section) => {
   return query;
 };
 
-export const useGetArticles = (sortParams) => {
-  const { tag:currentTag } = sortParams;
- 
-  return useInfiniteQuery({
-    queryKey: ['articles', currentTag],
-  
-    queryFn: async ({pageParam = 1}) => {
-      const queryParams = qs.stringify({
-        ...(currentTag && {filters: {
-          tag: {
-            $eqi: currentTag
-          }
-        }}),
-        populate: {
-          preview_article_img: { fields: ["url"] }
-        },
-        sort: ["date:desc"],
-        fields: ['article_title', "slug", "id", "article_description", "tag", "author_name", "reading_minutes"],
-        pagination: { page: pageParam, pageSize: 5},
-      }, {
-        encodeValuesOnly: true,
-      })
-      const url = new URL('/api/articles', process.env.NEXT_PUBLIC_STRAPI_URL);
-      url.search = queryParams;
-
-      const res = await axios.get(url.href,
-        
-        {
-          headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
-          }
-        }
-      );
-      
-      if (!res.data) {
-        throw new Error('Articles not found');
-      }
-      
-      return res.data;
-    },
-
-    onError: (err) => {
-      console.error(err);
-    },
-    getNextPageParam: (data) => {
-
-      const {meta: {
-        pagination
-      }} = data;
-
-       return pagination.page < pagination.pageCount 
-       ? pagination.page + 1 
-       : undefined
-      },
-
-    initialPageParam: 1,
-  });
-}
-
-export const useGetArticleBySlug = (currentSlug) => {
-  return useQuery({
-    queryKey: ['article', currentSlug],
-
-    queryFn: async () => {
-      const queryParams = qs.stringify({
-        filters: {
-          slug: {
-            $eq: currentSlug
-          }
-        },
-
-            populate: {
-              banner_img:{
-                populate: ["url"]
-              },
-              author_avatar: {
-                populate: ["url"]
-              },
-              article_paragraphs: {
-                populate: "*"
-              }
-          },
-          
-          
-     
-      }, {
-        encodeValuesOnly: true,
-      })
-      const url = new URL('/api/articles', process.env.NEXT_PUBLIC_STRAPI_URL);
-      url.search = queryParams;
-      const res = await axios.get(
-        url.href,
-        {
-          headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
-          },
-        }
-      );
-      
-      if (!res.data.data.length) {
-        throw new Error('Article not found');
-      }
-      
-      return res.data.data[0];
-    },
-    refetchOnMount: true,
-    onError: (err) => {
-      console.error(err);
-    },
-  });
-};
-
 export const useGetMorePosts = (currentSlug) => {
 
   return useInfiniteQuery({
     queryKey: ['posts', currentSlug],
   
-    queryFn: async ({pageParam = 1}) => {
-      const queryParams = qs.stringify({
-        filters: {
-          slug: {
-            $ne: currentSlug
-          }
-        },
-        populate: {
-         preview_article_img: { fields: ["url"] }
-        },
-        sort: ["date:desc"],
-        fields: ['article_title', "slug", "id", "article_description", "tag"],
-        pagination: { page: pageParam, pageSize: 8 },
-     
-      }, {
-        encodeValuesOnly: true,
-      })
-      const url = new URL('/api/articles', process.env.NEXT_PUBLIC_STRAPI_URL);
-      url.search = queryParams;
-
-      const res = await axios.get(url.href,
-        
-        {
-          headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
-          }
-        }
-      );
-      
-      if (!res.data) {
-        throw new Error('Articles not found');
-      }
-      
-      return res.data;
-    },
-
+    queryFn: async ({pageParam = 1}) => getMoreArticles(currentSlug,pageParam),
     onError: (err) => {
       console.error(err);
     },
@@ -193,6 +46,8 @@ export const useGetMorePosts = (currentSlug) => {
       },
 
     initialPageParam: 1,
+
+ 
   });
 }
 
@@ -221,25 +76,11 @@ export const useMutatePost = () => {
     
   })
 }
+
 export const useMutatePostView = () => {
  const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: async(articleId) => {
-      try {
-        const response = await axios.patch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles/${articleId}/view`, {}, {
-          headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
-          }
-        });
-        if(!response.data) {
-          throw new Error("Article view's is not updated")
-        }
-        return response.data
-      } catch (error) {
-        console.error(`View is not updated: ${error}`)
-        throw new Error('View is not updated')
-      }
-    },
+    mutationFn: updateArticleViews,
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ['article'],
@@ -248,3 +89,32 @@ export const useMutatePostView = () => {
     }
   })
 }
+
+export const articleOptions = (currentSlug) => queryOptions({
+  queryKey: ['article', currentSlug],
+  queryFn: () => getArticleBySlug(currentSlug),
+  onError: (err) => {
+    console.error(err);
+  },
+});
+
+export const blogOptions = (currentTag) => queryOptions({
+  queryKey: ['articles', currentTag],
+  queryFn: ({pageParam = 1}) => getArticles(currentTag, pageParam),
+  onError: (err) => {
+    console.error(err);
+  },
+  getNextPageParam: (data) => {
+
+    const {meta: {
+      pagination
+    }} = data;
+
+     return pagination.page < pagination.pageCount 
+     ? pagination.page + 1 
+     : undefined
+    },
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+  initialPageParam: 1,
+})

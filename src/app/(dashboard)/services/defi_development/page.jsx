@@ -30,7 +30,7 @@ const DefiDevelopment = () => {
         desc={
           <>
             Find out how DeFi Development Company can help you build a better
-            blockchain ecosystem. <br />
+            blockchain ecosystem. <br className="hidden lg:block" />
             Cowchain is leading the way in blockchain development!
           </>
         }
@@ -42,19 +42,20 @@ const DefiDevelopment = () => {
             {" "}
             At Cowchain, we are a leading{" "}
             <span className="violet-gradient-text">
-              defi development <br /> company
+              defi development <br className="hidden lg:block" /> company
             </span>{" "}
             specializing in providing top-notch
             <span className="violet-gradient-text">
-              defi <br /> development services
+              defi <br className="hidden lg:block" /> development services
             </span>
-            . Our team is dedicated to <br />
-            helping you navigate the world of decentralized <br />
+            . Our team is dedicated to <br className="hidden lg:block" />
+            helping you navigate the world of decentralized{" "}
+            <br className="hidden lg:block" />
             finance with
             <span className="violet-gradient-text">
               innovative platforms
             </span>{" "}
-            offered by our <br /> decentralized{" "}
+            offered by our <br className="hidden lg:block" /> decentralized{" "}
             <span className="violet-gradient-text">
               finance development company
             </span>
@@ -67,17 +68,22 @@ const DefiDevelopment = () => {
         desc={
           <>
             As a leading decentralized finance development company, we
-            specialize in creating innovative DeFi solutions that redefine how
-            businesses and individuals interact with financial systems.
+            specialize
+            <br className="hidden lg:block" /> in creating innovative DeFi
+            solutions that redefine how businesses
+            <br className="hidden lg:block" /> and individuals interact with
+            financial systems.
             <p>
               <br />
             </p>
             Our solutions encompass smart contracts, liquidity protocols, and
+            <br className="hidden lg:block" />
             more to streamline decentralized transactions
           </>
         }
         noBg={true}
         descClasses={"max-w-[592px]"}
+        titleClasses="lg:mb-[60px]"
       />
 
       <ExpertiseServices
@@ -115,6 +121,7 @@ const DefiDevelopment = () => {
         title={"Industries We Serve"}
         data={IndustriesData}
         topBorder={false}
+        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
       />
 
       <KeyFeatures
@@ -124,6 +131,7 @@ const DefiDevelopment = () => {
           "Our defi token development company classifies tokens based on their utility, governance, and other functionalities. We ensure that each token meets the specific needs of your project"
         }
         descClasses={"max-w-[592px]"}
+        titleClasses="lg:mb-[60px]"
       />
 
       <FAQ
@@ -148,10 +156,17 @@ const DefiDevelopment = () => {
         isOneBlock={true}
         title={"DeFi Token Development Perks"}
         desc={
-          "Developing tokens with our defi development company offers several perks, including increased liquidity, global reach, and enhanced security. Our defi development services are tailored to maximize the potential of your tokens. Additionally, defi development creates new opportunities for token utility and broader adoption"
+          <>
+            Developing tokens with our defi development company offers several
+            perks, including increased liquidity, global reach, and enhanced
+            security. Our defi development services are tailored to maximize the
+            potential of your tokens. Additionally, defi development creates new
+            opportunities for token utility <br className="hidden lg:block" />{" "}
+            and broader adoption
+          </>
         }
         noBg={true}
-        titleClasses="lg:mb-10"
+        titleClasses="lg:mb-[60px]"
         descClasses={"max-w-[592px]"}
       />
 

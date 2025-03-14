@@ -30,7 +30,7 @@ const NftDevelopment = () => {
         desc={
           <>
             Cowchain provides reliable and creative NFT development services,
-            offering end-to-end solutions <br />
+            offering end-to-end solutions <br className="hidden lg:block" />
             from token creation to platform launch and maintenance
           </>
         }
@@ -70,8 +70,8 @@ const NftDevelopment = () => {
             Our range of NFT development services includes every aspect of NFT
             creation and management, from token generation to long-term platform
             support. Cowchain ensures that each stage of NFT development is
-            streamlined and optimized, enabling businesses to achieve their
-            goals.
+            streamlined <br className="hidden xl:block" />
+            and optimized, enabling businesses to achieve their goals.
           </>
         }
         noBg={true}
@@ -81,7 +81,19 @@ const NftDevelopment = () => {
       <FAQ
         title={<>Our Non-Fungible Token Development Process</>}
         desc={
-          "Our NFT development team follows a systematic approach to ensure that each project is handled with care from start to finish, delivering high-quality outcomes. By focusing on every detail of nft development, we create platforms that are robust and adaptable to evolving business needs, enabling clients to achieve lasting impact"
+          <>
+            Our NFT development team follows a systematic approach
+            <br className="hidden xl:block" /> to ensure that each project is
+            handled with care from start
+            <br className="hidden xl:block" /> to finish, delivering
+            high-quality outcomes. By focusing on
+            <br className="hidden xl:block" /> every detail of NFT development,
+            we create platforms that
+            <br className="hidden xl:block" /> are robust and adaptable to
+            evolving business needs,
+            <br className="hidden xl:block" /> enabling clients to achieve
+            lasting impact
+          </>
         }
         data={nftProcessData}
         isTwoHalf={true}
@@ -93,10 +105,18 @@ const NftDevelopment = () => {
       <Industries
         title={"NFT Across Industries"}
         desc={
-          "NFTs are reshaping industries, opening unprecedented opportunities for businesses and creators. As a leading NFT development agency, Cowchain provides solutions that unlock the true potential of non-fungible tokens across multiple sectors"
+          <>
+            NFTs are reshaping industries, opening unprecedented opportunities
+            for businesses
+            <br /> and creators. As a leading NFT development agency, Cowchain
+            provides solutions that
+            <br /> unlock the true potential of non-fungible tokens across
+            multiple sectors
+          </>
         }
         data={NftIndustriesData}
         topBorder={false}
+        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
       />
 
       <ExpertiseServices
@@ -113,7 +133,12 @@ const NftDevelopment = () => {
 
       <KeyFeatures
         isOneBlock={true}
-        title={"Why Choose Us As Your NFT Development Company"}
+        title={
+          <>
+            Why Choose Us
+            <br /> As Your NFT Development Company
+          </>
+        }
         desc={
           "Cowchain is recognized as a leading NFT development company, with a reputation for delivering high-qualityNon-Fungible Token development solutions. Our team of NFT developers offers in-depth knowledge in creating cutting-edge solutions for both businesses and creators"
         }
@@ -162,7 +187,7 @@ const NftDevelopment = () => {
       <FAQ
         data={faqNftData}
         noBg={true}
-        titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+        titleClasses="xl:text-[60px] lg:leading-[53.7px]"
         faqHorizontalPadding={true}
       />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />

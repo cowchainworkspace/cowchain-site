@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
@@ -18,8 +19,11 @@ export const Counter = ({ target, duration, decimals, className }) => {
       >
         {({ countUpRef }) => (
           <span
-            className={`block max-h-[18px] md:max-h-none overflow-hidden font-roc text-[18px] font-medium 
-            leading-[18px] text-white md:text-4xl md:leading-tight ${className}`}
+            className={cn(
+              `block max-h-[18px] overflow-hidden font-roc text-[18px] font-medium leading-[18px] 
+            text-white md:max-h-none md:text-4xl md:leading-tight`,
+              className
+            )}
             ref={countUpRef}
           />
         )}

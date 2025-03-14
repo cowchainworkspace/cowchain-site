@@ -26,6 +26,7 @@ export default {
         '1custom': '1400px',
         '2custom': '950px',
         'custom1430': '1430px',
+        'custom1400': '1400px',
         'custom1300': '1300px',
         'custom-1700': '1660px',
         'fullSlider': '3186px',

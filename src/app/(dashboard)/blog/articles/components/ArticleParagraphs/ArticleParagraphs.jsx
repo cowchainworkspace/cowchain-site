@@ -85,11 +85,11 @@ export const ArticleParagraphs = ({
 
       <div className="container flex w-[340px] flex-col items-center px-0 pt-12 md:w-[560px]">
         <Image
-          width={16}
-          height={16}
+          width={56}
+          height={56}
           className="mb-[16px] h-[56px] w-[56px]  rounded-full"
           src={authorIcon}
-          alt=""
+          alt="Picture of the author"
         />
 
         <div className="mb-[24px] flex flex-col items-center gap-[2px]">
@@ -109,7 +109,11 @@ export const ArticleParagraphs = ({
           <span className="text-[16px] uppercase text-[white] underline">
             all articles of this author
           </span>
-          <Image src={rightArrow} className="h-[16px] w-[16px]" alt="" />
+          <Image
+            src={rightArrow}
+            className="h-[16px] w-[16px]"
+            alt="Arrow icon"
+          />
         </a>
       </div>
     </div>

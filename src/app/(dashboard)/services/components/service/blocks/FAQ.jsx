@@ -78,10 +78,10 @@ export default function FAQ({
       >
         <div
           className={cn(
-            `md:py-heading px-default md-border-r flex flex-col lg:pl-[88px] ${faq ? "justify-center" : "justify-start"} gap-[10px] border-b border-b-th-fade py-[60px] pt-[70px] text-left md:col-span-2 md:gap-[40px]`,
+            `md:py-heading px-default md-border-r flex flex-col lg:pl-[88px] ${faq ? "justify-center" : "justify-start"} gap-[10px] border-b border-b-th-fade py-[60px] pt-[70px] text-left md:col-span-2 md:gap-[20px] xl:gap-[40px]`,
             {
               "md:col-span-1": isTwoHalf,
-              "!pt-[126px]": isDoublePadding
+              "xl:!pt-[126px]": isDoublePadding
             }
           )}
         >
@@ -141,7 +141,7 @@ export default function FAQ({
                         <div className={` ${!faq ? "hidden" : "block"}`}>
                           {isExpanded ? (
                             <div
-                              className="flex items-center justify-end md:justify-center"
+                              className="flex items-center justify-end md:justify-end"
                               style={{
                                 width: 50
                               }}

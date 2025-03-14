@@ -309,11 +309,15 @@ export const nftProcessData = [
 export const nftServicesData = [
   {
     title: "Token Creation & Smart Contracts",
-    desc: "We offer NFT development by creating smart contracts that govern the ownership and transfer of NFT assets across different blockchain platforms. These smart contracts form the backbone of NFT development, ensuring seamless integration with decentralized marketplaces and user-friendly operations"
+    desc: <>
+    We offer NFT development by creating smart contracts that govern<br className="hidden xl:block"/> the ownership and transfer of NFT assets across different<br className="hidden xl:block"/> blockchain platforms. These smart contracts form the backbone<br className="hidden xl:block"/> of NFT development, ensuring seamless integration with<br className="hidden xl:block"/> decentralized marketplaces and user-friendly operations
+    </>
   },
   {
     title: "Custom NFT Development",
-    desc: "Our NFT development allows for complete flexibility in how you want to design your tokens and implement them across platforms. This ensures unique, tailor-made solutions for each business, whether for art, collectibles, or virtual assets"
+    desc: <>
+    Our NFT development allows for complete flexibility in how you<br className="hidden xl:block"/> want to design your tokens and implement them across platforms.<br className="hidden xl:block"/> This ensures unique, tailor-made solutions for each business,<br className="hidden xl:block"/> whether for art, collectibles, or virtual assets
+    </>
   }
 ];
 

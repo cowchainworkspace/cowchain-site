@@ -31,6 +31,5 @@ export const reviewsData = [
     text: "It’s bad",
     icon: '😒',
     rating: 1,
-
   }
 ]

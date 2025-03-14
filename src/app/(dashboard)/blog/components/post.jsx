@@ -1,11 +1,17 @@
-import BookSvg from "@/assets/svg/blog/BookSvg";
 import Tag from "@/components/ui/tag";
+import { useLoader } from "@/hooks/useLoader";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Reading } from "./Reading/Reading";
 
-export const Post = ({ atributes, isMobile = false, isThreeLines = false }) => {
+export const Post = ({
+  atributes,
+  isThreeLines = false,
+  handleClick,
+  isDisabled
+}) => {
+  const { setIsLoading, setIsRendering } = useLoader();
   const {
     slug,
     article_description,
@@ -20,11 +26,10 @@ export const Post = ({ atributes, isMobile = false, isThreeLines = false }) => {
     <Link
       href={`blog/articles/${slug}`}
       className={cn(
-        "group relative  flex w-full cursor-pointer flex-col border-th-fade p-6 last-of-type:border-r-0 md:border-r-[0.5px] md:p-6"
-        // {
-        //   "border-b border-b-th-fade last:border-b-0": isMobile
-        // }
+        "group relative  flex w-full cursor-pointer flex-col border-th-fade p-6 last-of-type:border-r-0 md:border-r-[0.5px] md:p-6",
+        { "pointer-events-none": isDisabled }
       )}
+      onClick={handleClick}
     >
       <Image
         height={362}
@@ -35,7 +40,10 @@ export const Post = ({ atributes, isMobile = false, isThreeLines = false }) => {
       />
 
       <div className=" absolute right-5  items-center justify-center opacity-0  transition-opacity duration-300 group-hover:opacity-100">
-        <button className="mx-auto flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white text-center font-roc text-sm font-medium uppercase text-black lg:h-24 lg:w-24 lg:text-base">
+        <button
+          type="button"
+          className="mx-auto flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white text-center font-roc text-sm font-medium uppercase text-black lg:h-24 lg:w-24 lg:text-base"
+        >
           Read
         </button>
       </div>
