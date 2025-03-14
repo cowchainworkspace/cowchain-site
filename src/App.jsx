@@ -1,12 +1,12 @@
-import { useEffect, lazy } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Loading } from "components/loader/Loading";
-import { ParallaxProvider } from "react-scroll-parallax";
 import emailjs from "@emailjs/browser";
+import { Loading } from "components/loader/Loading";
 import { PageNotFound } from "pages/404";
+import { lazy, useEffect } from "react";
 import { Suspense } from "react";
-import { Blog } from "./app/(dashboard)/blog/page";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ParallaxProvider } from "react-scroll-parallax";
 import Article from "./app/(dashboard)/blog/articles/[slug]/page";
+import { Blog } from "./app/(dashboard)/blog/page";
 
 const Home = lazy(() => import("pages/home"));
 const Clients = lazy(() => import("pages/clients"));
@@ -82,7 +82,11 @@ function App() {
                 }
               />
 
-              <Route path="/article" element={<Article />} />
+              <Route
+                path="/article"
+                setBurgerOpen={setBurgerOpen}
+                element={<Article />}
+              />
 
               <Route
                 path="/blog"
