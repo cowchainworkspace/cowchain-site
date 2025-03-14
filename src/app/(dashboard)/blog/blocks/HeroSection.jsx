@@ -24,7 +24,7 @@ export const HeroSection = () => {
       />
       <Image
         src={bgMobileImage}
-        className="pointer-events-none absolute -top-24 right-0  md:hidden"
+        className="pointer-events-none absolute -top-24 right-0 w-full  md:hidden"
       />
       <div className="relative flex flex-col items-center justify-center px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
         <h1 className="z-50 text-center text-5xl uppercase text-white lg:mt-6 lg:max-w-[1200px] lg:text-[82px]">

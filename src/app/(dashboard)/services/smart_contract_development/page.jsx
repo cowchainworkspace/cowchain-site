@@ -47,12 +47,14 @@ const SmartContractDevelopment = () => {
           <>
             Cowchain is a leading{" "}
             <span className="violet-gradient-text">
-              smart contract <br />
+              smart contract <br className="1400:block hidden" />
               development
             </span>{" "}
-            service provider. Our team <br /> of experienced developers has
-            in-depth <br /> knowledge of blockchain technology and <br />{" "}
-            programming languages to develop DApps
+            service provider. Our team <br className="1400:block hidden" /> of
+            experienced developers has in-depth{" "}
+            <br className="1400:block hidden" /> knowledge of blockchain
+            technology and <br className="1400:block hidden" /> programming
+            languages to develop DApps
           </>
         }
       />

@@ -7,7 +7,7 @@ export default function Achievements({ tag, desc }) {
       <div className="justify-left relative mx-auto flex max-w-[1440px] cursor-default flex-col items-start px-5 pb-8 md:px-8 md:pb-[127px] lg:px-16 xl:px-[88px]">
         <Tag title={tag} className={"z-[20] mb-4 md:mb-8"} />
 
-        <h3 className="text-left text-2xl uppercase text-white md:block lg:mt-6  lg:text-[42px]">
+        <h3 className="text-left text-2xl uppercase leading-[0.9] text-white md:block lg:mt-6  lg:text-[42px]">
           {desc}
         </h3>
       </div>

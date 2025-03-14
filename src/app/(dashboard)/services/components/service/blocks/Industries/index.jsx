@@ -38,7 +38,8 @@ export function Industries({
   fullGrid = false,
   bg = false,
   customClasses = "",
-  itemClasses = ""
+  itemClasses = "",
+  isWhiteLabel = ""
 }) {
   return (
     <section
@@ -92,7 +93,7 @@ export function Industries({
               : data.length < 4
                 ? "col-span-3 mt-[120px] grid-cols-3 gap-x-[109px] sm:gap-y-[42px]"
                 : fullGrid
-                  ? "col-span-4 grid-cols-4 gap-x-[109px] gap-y-[42px]"
+                  ? `gap-x-[109px] gap-y-[42px] ${isWhiteLabel && "md:col-span-4 md:grid-cols-2 lg:col-span-4 lg:grid-cols-4"} col-span-4 grid-cols-4`
                   : "col-span-2 grid-cols-2 gap-x-[109px] gap-y-[42px] lg:mt-[120px]"
           } `}
         >
