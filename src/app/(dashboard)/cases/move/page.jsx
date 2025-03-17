@@ -56,7 +56,7 @@ const team_details = [
 ];
 
 // eslint-disable-next-line react/prop-types
-export const CaseStudiesStep = () => {
+const CaseStudiesStep = () => {
   return (
     <section id="clients-wrapper">
       <ParallaxProvider>
