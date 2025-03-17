@@ -56,7 +56,7 @@ const team_details = [
   }
 ];
 
-export const CaseStudiesEva = () => {
+const CaseStudiesEva = () => {
   return (
     <section id="clients-wrapper">
       <ParallaxProvider>
