@@ -1,5 +1,4 @@
 "use client";
-import Contact from "@/components/Contact";
 import { Loading } from "@/components/loader/Loading";
 import { blogOptions } from "@/hooks/use-strapi";
 import { cn } from "@/lib/utils";
@@ -8,6 +7,7 @@ import { useSearchParams } from "next/navigation";
 import React, { Fragment, useState } from "react";
 import { HeroSection } from "../../blocks/HeroSection";
 import { ViewMoreSection } from "../../blocks/ViewMore";
+import BlogContact from "../BlogContact/BlogContact";
 import { BlogBreadCrumb } from "../BreadCrumb/BlogBreadCrumb";
 import { Post } from "../post";
 
@@ -53,11 +53,11 @@ const BlogInfo = () => {
     >
       <BlogBreadCrumb />
       <HeroSection />
-      <section className="container max-w-[1440px]">
+      <section className="container max-w-[1440px] px-0">
         <div className="border-t-[0.5px] border-th-fade md:border-0">
           {articles?.pages.map((post, index) => (
             <Fragment key={index}>
-              <div className="grid w-full border-t-[0.5px] border-th-fade lg:grid-cols-2">
+              <div className="grid w-full border-th-fade md:border-t-[0.5px] lg:grid-cols-2">
                 {post.data.slice(0, 2).map((article) => (
                   <Post
                     handleClick={handleClick}
@@ -67,7 +67,7 @@ const BlogInfo = () => {
                   />
                 ))}
               </div>
-              <div className=" grid border-t-[0.5px] border-th-fade  lg:grid-cols-3 ">
+              <div className=" grid border-th-fade md:border-t-[0.5px]  lg:grid-cols-3 ">
                 {post.data.slice(2).map((article) => (
                   <Post
                     key={article.id}
@@ -89,7 +89,7 @@ const BlogInfo = () => {
         showMorePosts={fetchNextPage}
         isFetchingNextPage={isFetchingNextPage}
       />
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <BlogContact className="px-6 pb-[60px] pt-[72px] md:py-[140px]" />
     </div>
   );
 };

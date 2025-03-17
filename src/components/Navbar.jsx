@@ -214,7 +214,7 @@ export default function Navbar({ isPageNotFound = false }) {
               : "navbar-wrapper relative flex h-24 items-center justify-between gap-x-8 px-4 md:h-16 md:border-b md:border-th-fade md:px-8 lg:px-0"
           }
         >
-          <nav className="hidden w-full max-w-[360px] items-center justify-between pl-12 lg:flex xl:max-w-md">
+          <nav className="z-20 hidden w-full max-w-[360px] items-center justify-between pl-12 lg:flex xl:max-w-md">
             {anchorLinks.map((link, index) => (
               <Link key={index} href={link.link}>
                 <p className="navlink mt-1">{link.title}</p>
@@ -223,8 +223,9 @@ export default function Navbar({ isPageNotFound = false }) {
           </nav>
           <Link
             href={"/"}
-            className="flex items-center justify-center"
+            className="z-20 flex items-center justify-center"
             rel="nofollow"
+            cl
           >
             <Image
               src="/homepage/logo_light.svg"
@@ -243,13 +244,13 @@ export default function Navbar({ isPageNotFound = false }) {
             ></Image>
           ) : (
             <Image
-              className="ml-auto w-6 cursor-pointer lg:hidden"
+              className="z-20 ml-auto w-6 cursor-pointer lg:hidden"
               alt="Open Menu"
               src={menu_open}
               onClick={openBurger}
             ></Image>
           )}
-          <div className="hidden w-full max-w-[360px] items-center justify-end gap-16 lg:flex xl:max-w-md">
+          <div className="z-20 hidden w-full max-w-[360px] items-center justify-end gap-16 lg:flex xl:max-w-md">
             {routerLinks.map((link, index) => (
               <Link key={index * 4} href={link.link}>
                 <p className="navlink mt-1">{link.title}</p>
