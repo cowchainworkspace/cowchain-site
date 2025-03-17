@@ -2,19 +2,19 @@
 
 import React from "react";
 import "./case-studies.css";
-import { HeroSection } from "./blocks/HeroSection";
-import Contact from "@/components/Contact";
-import Projects from "../components/Projects";
-import marsan_mobile from "@/assets/case-study/wallet-app/wallet-blue.png";
 import marsan_mobile_black from "@/assets/case-study/wallet-app/wallet-black.png";
-import Link from "next/link";
-import Chevron from "@/components/icons/chevron";
-import { ProjectDetail } from "../components/project-detail";
-import { CaseMask } from "./blocks/CaseMask";
+import marsan_mobile from "@/assets/case-study/wallet-app/wallet-blue.png";
 import Dubai from "@/assets/icons/dubai";
-import { CaseGallery } from "./blocks/CaseGallery";
-import { ParallaxProvider } from "react-scroll-parallax";
+import Contact from "@/components/Contact";
+import Chevron from "@/components/icons/chevron";
 import Image from "next/image";
+import Link from "next/link";
+import { ParallaxProvider } from "react-scroll-parallax";
+import Projects from "../components/Projects";
+import { ProjectDetail } from "../components/project-detail";
+import { CaseGallery } from "./blocks/CaseGallery";
+import { CaseMask } from "./blocks/CaseMask";
+import { HeroSection } from "./blocks/HeroSection";
 
 const project_details = [
   {
@@ -56,7 +56,7 @@ const team_details = [
   }
 ];
 
-export const CaseStudiesEva = ({ setBurgerOpen }) => {
+export const CaseStudiesEva = () => {
   return (
     <section id="clients-wrapper">
       <ParallaxProvider>

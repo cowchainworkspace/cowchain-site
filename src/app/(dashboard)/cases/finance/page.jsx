@@ -2,19 +2,19 @@
 
 import React from "react";
 import "./case-studies.css";
-import { HeroSection } from "./blocks/HeroSection";
-import Contact from "@/components/Contact";
-import Projects from "../components/Projects";
 import hotel from "@/assets/case-study/finance/1-left.png";
 import hotel_2 from "@/assets/case-study/finance/1-right.png";
-import Link from "next/link";
-import Chevron from "@/components/icons/chevron";
-import { ProjectDetail } from "../components/project-detail";
-import { CaseMask } from "./blocks/CaseMask";
-import { CaseGallery } from "./blocks/CaseGallery";
 import Eu from "@/assets/icons/eu";
-import { ParallaxProvider } from "react-scroll-parallax";
+import Contact from "@/components/Contact";
+import Chevron from "@/components/icons/chevron";
 import Image from "next/image";
+import Link from "next/link";
+import { ParallaxProvider } from "react-scroll-parallax";
+import Projects from "../components/Projects";
+import { ProjectDetail } from "../components/project-detail";
+import { CaseGallery } from "./blocks/CaseGallery";
+import { CaseMask } from "./blocks/CaseMask";
+import { HeroSection } from "./blocks/HeroSection";
 
 const project_details = [
   {
@@ -55,7 +55,7 @@ const team_details = [
   }
 ];
 
-export const CaseStudiesFinance = ({ setBurgerOpen }) => {
+export const CaseStudiesFinance = () => {
   return (
     <section id="clients-wrapper">
       <ParallaxProvider>
