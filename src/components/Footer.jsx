@@ -1,20 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import FooterForm from "./utils/FooterForm";
-import { usePathname } from "next/navigation";
 import linkedin from "@/assets/footer/linkedin.svg";
+import logofont from "@/assets/footer/logofont.svg";
+import mail from "@/assets/footer/mail.svg";
+import medium from "@/assets/footer/medium.svg";
 import telegram from "@/assets/footer/telegram.svg";
 import twitter from "@/assets/footer/twitter.svg";
-import medium from "@/assets/footer/medium.svg";
-import mail from "@/assets/footer/mail.svg";
-import Faq from "react-faq-component";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import logofont from "@/assets/footer/logofont.svg";
-import Link from "next/link";
-import Image from "next/image";
 import { useLoader } from "@/hooks/useLoader";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import Faq from "react-faq-component";
+import FooterForm from "./utils/FooterForm";
 
 const faqRows = {
   title: "",
@@ -41,6 +41,9 @@ const faqRows = {
         <div className="footer-links mb-8 mt-4 flex flex-col gap-y-4">
           <Link href={"/"}>
             <p>Team</p>
+          </Link>
+          <Link href={"/"}>
+            <p>Blog</p>
           </Link>
         </div>
       )
@@ -237,6 +240,9 @@ export default function Footer() {
                   <Link href="/team">
                     <p className="text-[#bbb]">Team</p>
                   </Link>
+                  <Link href="/blog">
+                    <p className="text-[#bbb]">Blog</p>
+                  </Link>
                 </div>
               </div>
               <div className="footer-links">
@@ -261,9 +267,13 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="px-2 text-white py-3 md:col-span-2 md:py-8">
+          <div className="px-2 py-3 text-white md:col-span-2 md:py-8">
             <a href="/">
-              <Image className="w-full" src={logofont} alt="Cowchain Logo"></Image>
+              <Image
+                className="w-full"
+                src={logofont}
+                alt="Cowchain Logo"
+              ></Image>
             </a>
           </div>
         </div>
