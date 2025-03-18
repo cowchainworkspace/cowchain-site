@@ -13,17 +13,17 @@ export async function generateMetadata({ params }) {
   ]);
 
   return {
-    title: blogPost.attributes.SEO.MetaTitle || metadata.title,
+    title: blogPost?.attributes.SEO.MetaTitle || metadata.title,
     description:
-      blogPost.attributes.SEO.MetaDescription || metadata.description,
+      blogPost?.attributes.SEO.MetaDescription || metadata.description,
     other: metaTags ? Object.fromEntries(metaTags) : null
   };
 }
 
-export default async function Article() {
+export default async function Article({ params }) {
   const queryClient = getQueryClient();
 
-  await queryClient.prefetchQuery(articleOptions);
+  await queryClient.prefetchQuery(articleOptions(params.slug));
   return (
     <section>
       <HydrationBoundary state={dehydrate(queryClient)}>
