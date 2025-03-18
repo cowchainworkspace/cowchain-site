@@ -39,10 +39,10 @@ const faqRows = {
       title: <h2>AGENCY</h2>,
       content: (
         <div className="footer-links mb-8 mt-4 flex flex-col gap-y-4">
-          <Link href={"/"}>
+          <Link href={"/team"}>
             <p>Team</p>
           </Link>
-          <Link href={"/"}>
+          <Link href={"/blog"}>
             <p>Blog</p>
           </Link>
         </div>
