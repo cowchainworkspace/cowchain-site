@@ -44,31 +44,31 @@ const BlockChainConsulting = () => {
               one of the leading blockchain consulting companies
             </span>
             , we deliver professional
-            <br className="1400:block hidden" />
+            <br className="hidden custom1400:block" />
             <span className="violet-gradient-text">
               blockchain consulting services
             </span>{" "}
-            tailored to meet the very unique needs of{" "}
+            tailored to meet <br className="hidden custom1400:block" /> the very
+            unique needs of{" "}
             <span className="violet-gradient-text">
-              every business desirous <br className="1400:block hidden" />
+              every business desirous <br className="hidden custom1400:block" />
               the potentials of blockchain technology
             </span>
             . Be it in the early stages of considering which blockchain best
             suits your needs or working to optimize your current blockchain
-            infrastructure,
-            <br className="1400:block hidden" />
-            our experts are here to give deep insights and practical{" "}
+            infrastructure, our experts are here{" "}
+            <br className="hidden custom1400:block" /> to give deep insights and
+            practical{" "}
             <span className="violet-gradient-text">
               blockchain consulting solutions.
             </span>
-            <br className="1400:block hidden" />
-            From blockchain advisory services{" "}
-            <br className="1400:block hidden" />
-            to ongoing development, our approach empowers
-            <br className="1400:block hidden" />
-            companies to{" "}
+            From blockchain advisory
+            <br className="hidden custom1400:block" />
+            services to ongoing development, our approach{" "}
+            <br className="hidden custom1400:block" /> empowers companies to{" "}
             <span className="violet-gradient-text">
-              leverage a blockchain opportunity.
+              leverage a blockchain <br className="hidden custom1400:block" />{" "}
+              opportunity.
             </span>
           </>
         }

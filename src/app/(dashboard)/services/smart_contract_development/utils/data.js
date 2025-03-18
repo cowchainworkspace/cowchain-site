@@ -43,19 +43,19 @@ export const DeFiExpertiseData = [
 export const SnartContractBenefitsData = [
   {
     title: "Expertise in blockchain and business",
-    desc: "The Cowchain team has deep knowledge and experience in blockchain and smart contracts, but we go beyond the technical aspects. We strive to understand our client's business goals so that we can offer the most efficient and cost-effective solution to meet their needs."
+    desc: "Cowchain combines technical proficiency in blockchain and smart contracts with a clear understanding of business goals. Our solutions are crafted to support strategic growth and innovation."
   },
   {
     title: "Customer-centric approach",
-    desc: "We need to build a trusting relationship with our clients. We listen carefully to their requirements, involve them in the development process, and provide regular progress reports. Customer feedback is paramount as we create solutions that meet their business objectives."
+    desc: "We prioritize open communication and client involvement, delivering updates and integrating feedback to align with project goals effectively."
   },
   {
-    title: "Continuous improvement",
-    desc: "The world of blockchain and smart contracts is evolving rapidly, and we keep up with it. We constantly upgrade the skills of our specialists and study the latest trends and technologies to offer our clients cutting-edge solutions that meet the current market needs."
+    title: "Commitment to Innovation",
+    desc: "Staying ahead in the fast-evolving blockchain environment, we continuously enhance our expertise to provide clients with advanced, market-ready solutions."
   },
   {
-    title: "Experienced development team",
-    desc: "Cowchain has a team of highly qualified developers with deep knowledge and experience in various areas related to blockchain and smart contracts. It enables us to deliver high-quality solutions that meet the highest industry standards, regardless of the complexity of the project or the technology used."
+    title: "Skilled Development Team",
+    desc: "Our experienced developers tackle projects of any scale and complexity, delivering solutions that adhere to industry-leading standards and cutting-edge technologies."
   }
 
 ];
@@ -64,14 +64,6 @@ export const SnartContractExpertiseData = [
   {
     title: "Smart contract development",
     desc: "Our experts create high-performance and scalable smart contracts on various blockchain platforms such as Ethereum, Solana, Binance Smart Chain, Polygon, and others. We develop smart contracts for DeFi apps, NFT marketplaces, DEX, GameFi, and other blockchain-based solutions. Using best development practices, we ensure your smart contracts are secure, transparent, and efficient."
-  },
-  {
-    title:  "Smart contract audit",
-    desc: "Smart contract auditing is critical to ensure reliability and protection against potential vulnerabilities. Our cybersecurity experts thoroughly check the source code of smart contracts and identify and address potential risks such as logic errors, overflow errors, re-entry vulnerabilities, and many others.  We provide a detailed report with recommendations to improve the security of your smart contract."
-  },
-  {
-    title: "Smart contract optimization",
-    desc: "Smart contract optimization reduces gas costs (blockchain transaction fees) and improves the performance of your decentralized application. Our developers apply advanced optimization techniques such as reducing memory usage, optimizing external contract calls, using libraries, and more. It ensures that your smart contract runs efficiently and minimizes the execution cost."
   },
   {
     title: "Implementation of smart contracts into business processes",
@@ -214,25 +206,14 @@ export const OtherSmartContractData = [
     text: "Increased transparency and trust between participants"
   },
   {
-    text: "Global accessibility and absence of geographical barriers"
-  },
-  {
-    text: "Eliminating the need for intermediaries and third parties",
-  },
-  {
     text: "Reducing operational costs and risks"
   },
   {
-    text: "Ensuring data security and integrity"
+    text: "Safeguarding data integrity and maintaining security"
   },
-
-  
   {
     text: "Increased speed and accuracy of transaction execution"
   }, 
-  {
-    text: "Flexibility and customization to meet specific requirements"
-  }
 ];
 
 export const SmartContractOtherData = [
@@ -383,4 +364,28 @@ export const blockchainNetworks = [
     id: 4,
     desc: 'Binance Smart Chain (BSC) is an Ethereum Virtual Machine (EVM) compliant blockchain focused on developing decentralized applications.'
   }
+]
+
+export const smartContractsData = [
+  {
+    title: "Requirements Analysis",
+    content: "We define the smart contract logic, drafting comprehensive terms of reference"
+  },
+  {
+    title: "Architecture design",
+    content: "We design the smart contract architecture, including data flows and performance requirements"
+  },
+  {
+    title: "Smart Contract Development",
+    content: "The team writes and tests the smart contract code for functionality and security"
+  },
+  {
+    title: "Deployment and integration",
+    content: "We deploy the smart contract in test and core networks, supporting streamlined integration with existing systems"
+  },
+  {
+    title: "Post-Launch Maintenance",
+    content: "We provide ongoing support by monitoring performance and verifying compatibility through comprehensive testing"
+  },
+  
 ]

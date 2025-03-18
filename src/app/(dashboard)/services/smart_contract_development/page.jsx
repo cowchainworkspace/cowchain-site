@@ -16,11 +16,10 @@ import {
   SmartContractOtherData,
   SnartContractBenefitsData,
   SnartContractExpertiseData,
-  aspectsOfSmartContract,
-  blockchainNetworks,
   consultingServices,
   faqNftData,
-  nftProcessData
+  nftProcessData,
+  smartContractsData
 } from "./utils/data";
 import { metadata } from "./utils/smartContractDevMetadata";
 
@@ -45,16 +44,22 @@ const SmartContractDevelopment = () => {
         tag={"Smart Contract Development Services"}
         desc={
           <>
-            Cowchain is a leading{" "}
+            Cowchain, a leading{" "}
             <span className="violet-gradient-text">
-              smart contract <br className="1400:block hidden" />
-              development
+              smart contract development{" "}
+              <br className="hidden custom1400:block" />
+              service provider,
             </span>{" "}
-            service provider. Our team <br className="1400:block hidden" /> of
-            experienced developers has in-depth{" "}
-            <br className="1400:block hidden" /> knowledge of blockchain
-            technology and <br className="1400:block hidden" /> programming
-            languages to develop DApps
+            specializes in creating dapps{" "}
+            <br className="hidden custom1400:block" />
+            tailored to your business needs. Our{" "}
+            <span className="violet-gradient-text">
+              blockchain smart contract development services
+            </span>{" "}
+            leverage <br className="hidden custom1400:block" /> in-depth
+            expertise in blockchain technology and{" "}
+            <br className="hidden custom1400:block" />
+            programming to deliver customized solutions
           </>
         }
       />
@@ -71,63 +76,27 @@ const SmartContractDevelopment = () => {
         title={"Expertise of Our Smart Contract Development Company"}
         desc={
           <>
-            <p>
-              Cowchain is a team of experts in blockchain smart contract
-              development. We have deep knowledge and practical experience
-              creating decentralized solutions on various blockchain platforms,
-              including Ethereum, Solana, Avalanche, TON, Near, Polygon, and
-              Binance Smart Chain.
-            </p>
-            <br />
-            <p>
-              Our expertise is backed by successful projects for clients in
-              various industries, such as finance, gaming, logistics, medical,
-              and the public sector.
-            </p>
-            <br />
-            <div>
-              <p>
-                Over the years, our smart contract development agency has
-                accumulated expertise in all aspects:
-              </p>
-
-              <ul className="pl-4">
-                {aspectsOfSmartContract.map(({ id, desc }) => (
-                  <li className="-indent-2" key={id}>{`- ${desc}`}</li>
-                ))}
-              </ul>
-            </div>
-            <br />
-
-            <p>
-              When you choose Cowchain, you get a team of experts who can create
-              you a robust, high-performance blockchain solution fully
-              customized to your business needs
-            </p>
+            Cowchain, a leading blockchain smart contract development company,
+            combines deep knowledge and extensive experience in creating
+            decentralized solutions across various industries, including
+            finance, gaming, logistics, healthcare, and the public sector. Our
+            expertise spans smart contract architecture and design with a focus
+            on scalability and security, as well as seamless integration of
+            smart contracts with traditional systems and external data sources
+            via oracles.
           </>
         }
         titleClasses="text-[42px] max-w-[592px]"
       />
 
       <OtherServices
-        tag={"web3 development use cases"}
+        tag={"Smart Contracts in Business Transformation"}
         title={
           <>
-            How smart contracts <br />
-            <span className="violet-gradient-text">
-              are transforming business processes?
-            </span>
-            <br />
-            Implementing smart contracts <br /> can bring{" "}
-            <span className="violet-gradient-text">
-              many <br /> benefits
-            </span>{" "}
-            to{" "}
-            <span className="violet-gradient-text">
-              your <br /> business,
-            </span>
-            <br />
-            including
+            Smart contracts are reshaping industries by automating complex
+            workflows and eliminating the need for intermediaries. Their
+            implementation drives trust and brings many benefits to modern
+            businesses
           </>
         }
         data={OtherSmartContractData}
@@ -136,7 +105,12 @@ const SmartContractDevelopment = () => {
       />
 
       <Industries
-        title={"Key industries for the application of smart contracts"}
+        title={
+          <>
+            Key industries for the application{" "}
+            <br className="hidden custom1400:block" /> of smart contracts
+          </>
+        }
         desc={
           <>
             Our blockchain smart contract development company <br />
@@ -149,6 +123,7 @@ const SmartContractDevelopment = () => {
       />
 
       <ServiceStack
+        home={true}
         lopngDesc={true}
         desc={
           <>
@@ -179,40 +154,23 @@ const SmartContractDevelopment = () => {
         }
       />
 
-      <KeyFeatures
-        isOneBlock={true}
-        title={"Blockchain networks we work with"}
-        desc={
-          <>
-            <p>
-              The experts at our smart contract development company are
-              experienced in working with
-              <br /> various blockchain networks, which allows us to offer
-              optimal solutions depending on the
-              <br /> project requirements:
-            </p>
-            <ul className="pl-2">
-              {blockchainNetworks.map(({ id, desc }) => (
-                <li className="-indent-2" key={id}>{`- ${desc}`}</li>
-              ))}
-            </ul>
-          </>
-        }
-        noBg={true}
-      />
-
       <FAQ
         title={
           <>
-            Our Smart Contracts <br />
-            Development <br />
+            Our Smart Contracts <br className="hidden custom1400:block" />
+            Development <br className="hidden custom1400:block" />
             Process
           </>
         }
         desc={
-          "We follow a rigorous and consistent smart contract development process to ensure high quality, security, and customer compliance:"
+          <>
+            We follow rigorous and consistent blockchain smart contract
+            <br className="hidden custom1400:block" />
+            development standards to maintain high quality, security,
+            <br className="hidden custom1400:block" /> and customer compliance
+          </>
         }
-        data={nftProcessData}
+        data={smartContractsData}
         isTwoHalf={true}
         noBg={true}
         hasIcon={false}
@@ -227,32 +185,17 @@ const SmartContractDevelopment = () => {
         }
         desc={
           <>
-            <p>
-              In addition to developing smart contracts, we provide blockchain
-              consulting services. Our experts can help you:
-            </p>
-            <ul className="pl-2">
-              {consultingServices.map(({ id, desc }) => (
-                <li key={id}>{`- ${desc};`}</li>
-              ))}
-            </ul>
+            At Cowchain, we don’t just develop smart contracts – we guide
+            businesses through the complexities
+            <br className="hidden custom1400:block" /> of blockchain adoption.
+            Our blockchain consulting services provide tailored strategies to
+            help you unlock
+            <br className="hidden custom1400:block" /> the potential of
+            decentralized technologies. Whether optimizing existing systems or
+            exploring
+            <br className="hidden custom1400:block" /> new opportunities, our
+            expertise ensures your business stays ahead in the blockchain space.
           </>
-        }
-        noBg={true}
-        titleClasses="md:mb-10"
-      />
-
-      <KeyFeatures
-        isOneBlock={true}
-        title={"Our Engagement Models"}
-        desc={
-          <p>
-            At Cowchain, we are flexible in our collaboration approach, offering
-            various engagement models tailored to your unique needs and
-            requirements. Regardless of project size or industry specifics, we
-            will find the best way to organize work to ensure the successful
-            implementation of your idea.
-          </p>
         }
         noBg={true}
         titleClasses="md:mb-10"
@@ -271,17 +214,20 @@ const SmartContractDevelopment = () => {
       />
 
       <OtherServices
-        tag={"Other Blockchain Services"}
+        tag={"other blockchain services"}
         title={
           <>
-            In addition to <br />
+            In addition to <br className="hidden custom1400:block" />
             <span className="violet-gradient-text">
-              Smart contract <br /> development
+              smart contract <br className="hidden custom1400:block" />{" "}
+              development
             </span>
-            <br />
-            Cowchain offers <br /> a variety of <br />
+            , we at <br className="hidden custom1400:block" /> Cowchain offer{" "}
+            <br className="hidden custom1400:block" /> a wide range of{" "}
+            <br className="hidden custom1400:block" />
             <span className="violet-gradient-text">
-              complementary <br /> services
+              complementary <br className="hidden custom1400:block" />
+              services
             </span>
           </>
         }
