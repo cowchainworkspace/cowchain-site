@@ -43,33 +43,33 @@ const WhiteLabelDev = () => {
             <span className="violet-gradient-text">
               white label web development
             </span>{" "}
-            <br className="1400:block hidden" />
+            <br className="hidden custom1400:block" />
             offers businesses an opportunity to expand their{" "}
-            <br className="1400:block hidden" />
+            <br className="hidden custom1400:block" />
             end-to-end services to empower one to build{" "}
-            <br className="1400:block hidden" /> service portfolio
+            <br className="hidden custom1400:block" /> service portfolio{" "}
             <span className="violet-gradient-text">
               without the need for extensive{" "}
-              <br className="1400:block hidden" /> in-house resources
+              <br className="hidden custom1400:block" /> in-house resources
             </span>
-            . At Cowchain, we understand <br className="1400:block hidden" />{" "}
-            the importance of
+            . At Cowchain, we understand{" "}
+            <br className="hidden custom1400:block" /> the importance of
             <span className="violet-gradient-text">
               delivering high-quality, custom{" "}
-              <br className="1400:block hidden" />
+              <br className="hidden custom1400:block" />
               web and mobile app solutions
             </span>{" "}
             tailored to each
-            <br className="1400:block hidden" />
+            <br className="hidden custom1400:block" />
             in{" "}
             <span className="violet-gradient-text">
               secure and customized solutions
             </span>{" "}
-            tailored to each <br className="1400:block hidden" />
+            tailored to each <br className="hidden custom1400:block" />
             client’s needs. Whether you are a firm looking for
-            <br className="1400:block hidden" />
+            <br className="hidden custom1400:block" />
             white label services or a business in need of a white{" "}
-            <br className="1400:block hidden" />
+            <br className="hidden custom1400:block" />
             label partner, we’ve got you covered
           </>
         }
