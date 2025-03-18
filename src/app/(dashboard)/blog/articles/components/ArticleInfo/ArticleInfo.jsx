@@ -1,15 +1,13 @@
 "use client";
 import bannerIg from "@/assets/blog/articles/splash.png";
-import { articleOptions, useMutatePost } from "@/hooks/use-strapi";
-
-import { Loading } from "@/components/loader/Loading";
 import FooterForm from "@/components/utils/FooterForm";
+import { articleOptions, useMutatePost } from "@/hooks/use-strapi";
 import { getSplitText } from "@/lib/utils";
-import { useQuery, useSuspenseQuery } from "@tanstack/react-query";
+import { useSuspenseQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import React, { useState } from "react";
-import { BlogBreadCrumb } from "../../../components/BreadCrumb/BlogBreadCrumb";
+import OldBreadCrumbs from "../../../components/BreadCrumb/OldBreadCrumbs";
 import { Blog } from "../../blocks/Blog";
 import { HeroSection } from "../../blocks/HeroSection";
 import { ShareLinks } from "../../blocks/ShareLinks";
@@ -25,14 +23,6 @@ const ArticleInfo = () => {
   const [reviewItem, setReviewItem] = useState(null);
   const { mutateAsync: cretePost, isPending } = useMutatePost();
   const articleTitles = [];
-
-  if (isLoading) {
-    return (
-      <div className="flex min-h-[100dvh]">
-        <Loading />
-      </div>
-    );
-  }
 
   const onHandleAddReview = async (review) => {
     try {
@@ -82,7 +72,7 @@ const ArticleInfo = () => {
 
   return (
     <div className="relative  min-h-screen bg-black">
-      <BlogBreadCrumb slug={slug} />
+      <OldBreadCrumbs title={data.attributes.article_title} />
       <HeroSection
         tag={data.attributes.tag}
         title={data.attributes.article_title}

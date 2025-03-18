@@ -9,6 +9,7 @@ import { HeroSection } from "../../blocks/HeroSection";
 import { ViewMoreSection } from "../../blocks/ViewMore";
 import BlogContact from "../BlogContact/BlogContact";
 import { BlogBreadCrumb } from "../BreadCrumb/BlogBreadCrumb";
+import OldBreadCrumbs from "../BreadCrumb/OldBreadCrumbs";
 import { Post } from "../post";
 
 const BlogInfo = () => {
@@ -29,7 +30,7 @@ const BlogInfo = () => {
 
   if (isLoading) {
     return (
-      <div className="flex min-h-[100dvh]">
+      <div className="flex h-[100dvh] items-center justify-center border-b-[0.5px] border-th-fade">
         <Loading />
       </div>
     );
@@ -51,7 +52,7 @@ const BlogInfo = () => {
         }
       )}
     >
-      <BlogBreadCrumb />
+      <OldBreadCrumbs />
       <HeroSection />
       <section className="container max-w-[1440px] px-0">
         <div className="border-t-[0.5px] border-th-fade md:border-0">

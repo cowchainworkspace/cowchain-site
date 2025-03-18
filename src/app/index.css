@@ -424,3 +424,9 @@ input:-webkit-autofill:active {
   white-space: nowrap;
   display: inline-block;
 }
+
+@media (max-width: 767px) {
+  .breadcrumb-item {
+    max-width: 150px;
+  }
+}
