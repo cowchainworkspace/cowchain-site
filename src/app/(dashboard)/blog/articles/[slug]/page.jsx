@@ -13,9 +13,9 @@ export async function generateMetadata({ params }) {
   ]);
 
   return {
-    title: blogPost?.attributes.SEO.MetaTitle || metadata.title,
+    title: blogPost?.attributes.SEO?.MetaTitle || metadata.title,
     description:
-      blogPost?.attributes.SEO.MetaDescription || metadata.description,
+      blogPost?.attributes.SEO?.MetaDescription || metadata.description,
     other: metaTags ? Object.fromEntries(metaTags) : null
   };
 }
