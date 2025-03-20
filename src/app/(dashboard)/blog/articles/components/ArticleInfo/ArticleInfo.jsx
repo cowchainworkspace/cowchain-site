@@ -107,19 +107,17 @@ const ArticleInfo = () => {
           {reviewItem && <ThanksReview review={reviewItem} />}
         </div>
 
-        <div className="sticky top-0 ml-[10px] hidden  flex-col items-center overflow-hidden  2xl:flex">
-          <h3 id="first-article" className="mb-2 text-2xl uppercase">
+        <div className="sticky top-0 hidden  flex-col items-start overflow-hidden  xl:flex">
+          <h3 id="first-article" className="mb-2 text-lg font-medium uppercase">
             Subscribe to our newsletter
           </h3>
-          <span className="mb-10 text-secondary">
+          <p className="mb-8 text-sm text-secondary">
             Receive weekly updates on new posts and features
-          </span>
+          </p>
           <FooterForm />
 
-          <div className="mt-[40px] w-full">
-            <h3 className="mb-[12px] text-[18px] uppercase">
-              Share the article
-            </h3>
+          <div className="mt-[42px] w-full">
+            <h3 className="mb-3 text-lg uppercase">Share the article</h3>
             <ShareLinks />
           </div>
         </div>

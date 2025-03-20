@@ -42,25 +42,25 @@ export const ArticleParagraphs = ({
               <div className="container relative my-[50px] flex w-full flex-col items-center px-0">
                 <Image
                   src={ellipseBg}
-                  width={546}
+                  width={540}
                   height={335}
                   alt="background decoration"
-                  className="absolute -top-20 hidden scale-150 md:block"
+                  className="-z-1 pointer-events-none absolute -top-[110px] hidden scale-150 md:block"
                 />
                 <Image
                   src={ellipseBgMb}
                   width={546}
                   height={526}
                   alt="background decoration"
-                  className="absolute -top-[300px] w-screen md:hidden"
+                  className="pointer-events-none absolute -top-[300px] w-screen md:hidden"
                 />
-                <h3 className="mb-2 text-center text-2xl uppercase">
+                <h3 className="font z-10 mb-2 text-center text-lg font-medium uppercase ">
                   Subscribe to our newsletter
                 </h3>
-                <p className="mb-10 text-center text-secondary">
+                <p className="z-10 mb-10 text-center text-sm text-secondary">
                   Receive weekly updates on new posts and features
                 </p>
-                <FooterForm isMiddle={true} />
+                <FooterForm classes="z-10" />
               </div>
             </div>
           );

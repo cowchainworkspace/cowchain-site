@@ -177,7 +177,7 @@ export default function Footer() {
                 ></Image>
               </a>
               <a
-                href="https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw"
+                href="https://x.com/cow_chain"
                 rel="nofollow noreferrer"
                 target="_blank"
               >

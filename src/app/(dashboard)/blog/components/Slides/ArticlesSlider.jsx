@@ -16,7 +16,7 @@ const ArticlesSlider = ({ articles, fetchNextPage, isFetchingNextPage }) => {
   return (
     <div
       className={
-        "embla border-y-th h-full  w-screen border-y  border-y-th-fade lg:w-[calc(100vw-510px)]"
+        "embla border-y-th h-full  w-screen border-y  border-y-th-fade md:w-[calc(100vw-300px)] md:border-y-0 lg:w-[calc(100vw-506px)]"
       }
     >
       <div className={"embla__viewport"} ref={emblaRef}>
