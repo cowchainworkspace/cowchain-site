@@ -1,12 +1,13 @@
 "use client";
 
-import React from "react";
-import { useForm } from "react-hook-form";
+import { cn } from "@/lib/utils";
 import emailjs from "@emailjs/browser";
+import React from "react";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import ModalPopup from "./ModalPopup";
 
-export default function FooterForm() {
+export default function FooterForm({ classes = "" }) {
   const {
     register,
     handleSubmit,
@@ -34,10 +35,10 @@ export default function FooterForm() {
     }
   };
   return (
-    <section>
+    <section className={classes}>
       <form
         onSubmit={handleSubmit(sendFormData)}
-        className="footerform mb-2 flex max-w-xl items-stretch"
+        className={cn("footerform mb-2 flex h-12 max-w-xl items-stretch")}
       >
         <input
           type="email"
@@ -50,7 +51,7 @@ export default function FooterForm() {
           })}
           aria-invalid={errors.email ? "true" : "false"}
         />
-        <button type="submit" className="btn-submit xl:px-12">
+        <button type="submit" className={cn("btn-submit")}>
           Submit
         </button>
       </form>

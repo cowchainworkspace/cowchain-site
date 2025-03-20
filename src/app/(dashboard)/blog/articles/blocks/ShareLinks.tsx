@@ -28,7 +28,7 @@ export const ShareLinks = () => {
         <Image alt="telegram" className="w-[14px] lg:w-[14px]" src={telegram} />
       </a>
       <a
-        href="https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw"
+        href="https://x.com/cow_chain"
         rel="nofollow noreferrer"
         target="_blank"
         className="flex h-[48px] w-[48px] items-center justify-center rounded-[50%]"
