@@ -1,11 +1,11 @@
 "use client";
 
 import Tag from "@/components/ui/tag";
-import Link from "next/link";
-import { useState, useEffect } from "react";
 import ContactForm from "@/components/utils/ContactForm";
-import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 
 export default function Header() {
   const [openForm, setOpenForm] = useState(false);
@@ -37,7 +37,7 @@ export default function Header() {
       /* empty */
     }
     setIsSubmit(true);
-    console.log(data);
+
     reset();
   };
 

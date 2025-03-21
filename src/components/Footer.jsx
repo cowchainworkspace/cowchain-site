@@ -121,7 +121,6 @@ export default function Footer() {
   const pathname = usePathname();
 
   useEffect(() => {
-    console.log(pathname);
     setIsBorder(pathname === "/sitemap" || pathname === "/error");
   }, [pathname]);
 

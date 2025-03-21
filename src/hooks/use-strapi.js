@@ -1,4 +1,4 @@
-import {getArticleBySlug, getArticles, getMoreArticles, updateArticleViews} from '@/lib/api/articles'
+import {getArticleBySlug, getArticles, getMoreArticles, getTags, updateArticleViews} from '@/lib/api/articles'
 import { queryOptions, useInfiniteQuery, useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
 
@@ -117,4 +117,9 @@ export const blogOptions = (currentTag) => queryOptions({
     refetchOnMount: false,
     refetchOnWindowFocus: false,
   initialPageParam: 1,
+})
+
+export const tagsOptions = queryOptions({
+  queryKey: ['tags'],
+  queryFn: getTags,
 })
