@@ -17,7 +17,7 @@ export const Post = ({
     article_description,
     article_title,
     preview_article_img,
-    tag,
+    article_tag,
     author_name,
     reading_minutes
   } = atributes || {};
@@ -48,7 +48,7 @@ export const Post = ({
         </button>
       </div>
       <div className="mb-6 flex items-center justify-between">
-        <Tag title={tag} />
+        <Tag title={article_tag.data?.attributes.tag_name} />
         <Reading reading_minutes={reading_minutes} />
       </div>
       <h3 className="mb-4 font-roc text-lg font-medium uppercase leading-6 text-white">

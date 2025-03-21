@@ -74,7 +74,7 @@ const ArticleInfo = () => {
     <div className="relative  min-h-screen bg-black">
       <OldBreadCrumbs title={data.attributes.article_title} />
       <HeroSection
-        tag={data.attributes.tag}
+        tag={data.attributes.article_tag.data.attributes.tag_name}
         title={data.attributes.article_title}
         author={data.attributes.author_name.split(",")[0]}
         readingMinutes={data.attributes.reading_minutes}
