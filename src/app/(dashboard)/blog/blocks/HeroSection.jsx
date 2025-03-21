@@ -4,18 +4,8 @@ import bgMobileImage from "@/assets/blog/bg-blog-mobile.webp";
 import { Category } from "@/components/ui/category";
 import Image from "next/image";
 import React from "react";
-const categories = [
-  "development",
-  "innovation",
-  "interviews",
-  "nft",
-  "gaming",
-  "economy",
-  "crypto",
-  "digital ownership"
-];
 
-export const HeroSection = () => {
+export const HeroSection = ({ categories }) => {
   return (
     <section className="scrollbar-none container relative  mb-9 w-full  pt-20 md:mb-[100px] md:max-w-full  lg:pt-[120px]">
       <Image
@@ -32,8 +22,8 @@ export const HeroSection = () => {
         </h1>
 
         <div className="z-50 mt-9 flex max-w-[110%] items-start justify-start gap-2 overflow-x-scroll md:items-center md:overflow-auto lg:max-w-full lg:justify-between xl:max-w-none ">
-          {categories.map((title, index) => (
-            <Category key={index} title={title} />
+          {categories.data?.map(({ id, attributes }) => (
+            <Category key={id} title={attributes.tag_name} />
           ))}
         </div>
       </div>
