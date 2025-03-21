@@ -1,9 +1,9 @@
 "use client";
 import Contact from "@/components/Contact";
 import { Loading } from "@/components/loader/Loading";
-import { blogOptions } from "@/hooks/use-strapi";
+import { blogOptions, tagsOptions } from "@/hooks/use-strapi";
 import { cn } from "@/lib/utils";
-import { useInfiniteQuery } from "@tanstack/react-query";
+import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { useSearchParams } from "next/navigation";
 import React, { Fragment, useState } from "react";
 import { HeroSection } from "../../blocks/HeroSection";
@@ -15,6 +15,7 @@ const BlogInfo = () => {
   const [isClicking, setIsClicking] = useState(false);
   const searchParams = useSearchParams();
   const tag = searchParams.get("tag") || "";
+  const { data: tags } = useQuery(tagsOptions);
 
   const handleClick = () => {
     setIsClicking(true);
@@ -52,7 +53,7 @@ const BlogInfo = () => {
       )}
     >
       <BlogBreadCrumb />
-      <HeroSection />
+      <HeroSection categories={tags} />
       <section className="container max-w-[1440px]">
         <div className="border-t-[0.5px] border-th-fade md:border-0">
           {articles?.pages.map((post, index) => (

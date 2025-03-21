@@ -25,6 +25,9 @@ export async function getArticleBySlug(currentSlug) {
       },
       SEO: {
         populate: "*"
+      },
+      article_tag: {
+        fields: ["tag_name"]
       }
     },
   }, {
@@ -51,15 +54,20 @@ export async function getArticleBySlug(currentSlug) {
 export async function getArticles(currentTag, pageParam) {
   const queryParams = qs.stringify({
     ...(currentTag && {filters: {
-      tag: {
-        $eqi: currentTag
+      article_tag: {
+        tag_name: {
+          $eqi: currentTag
+        }
       }
     }}),
     populate: {
-      preview_article_img: { fields: ["url"] }
+      preview_article_img: { fields: ["url"] },
+      article_tag: {
+        fields: ["tag_name"]
+      }
     },
     sort: ["date:desc"],
-    fields: ['article_title', "slug", "id", "article_description", "tag", "author_name", "reading_minutes"],
+    fields: ['article_title', "slug", "id", "article_description", "author_name", "reading_minutes"],
     pagination: { page: pageParam, pageSize: 5},
   }, {
     encodeValuesOnly: true,
@@ -108,10 +116,13 @@ export async function getMoreArticles(currentSlug, pageParam) {
       }
     },
     populate: {
-     preview_article_img: { fields: ["url"] }
+     preview_article_img: { fields: ["url"] },
+     article_tag: {
+      fields: ["tag_name"]
+    }
     },
     sort: ["date:desc"],
-    fields: ['article_title', "slug", "id", "article_description", "tag"],
+    fields: ['article_title', "slug", "id", "article_description"],
     pagination: { page: pageParam, pageSize: 8 },
  
   }, {
@@ -136,3 +147,31 @@ export async function getMoreArticles(currentSlug, pageParam) {
   return res.data;
 }
 
+
+export async function getTags() {
+  const queryParams = qs.stringify({
+
+    fields: ["id", "tag_name"],
+
+ 
+  }, {
+    encodeValuesOnly: true,
+  })
+  const url = new URL('/api/tags', process.env.NEXT_PUBLIC_STRAPI_URL);
+  url.search = queryParams;
+
+  const res = await axios.get(url.href,
+    
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+      }
+    }
+  );
+  
+  if (!res.data) {
+    throw new Error('Tags not found');
+  }
+  
+  return res.data;
+}

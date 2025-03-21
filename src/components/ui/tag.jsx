@@ -4,7 +4,7 @@ export default function Tag({ title, className }) {
   return (
     <div
       className={cn(
-        "cursor-default rounded-full w-fit border border-white px-4 py-1 lg:px-6 lg:py-2",
+        "w-fit cursor-default rounded-full border border-white px-4 py-1 capitalize lg:px-6 lg:py-2",
         className
       )}
     >
