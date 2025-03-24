@@ -81,13 +81,15 @@ const ArticleInfo = () => {
         articleId={data.id}
         pageViews={data.attributes.article_views}
       />
-      <Image
-        height={560}
-        width={600}
-        src={data.attributes.banner_img.data?.attributes?.url || bannerIg}
-        className="block h-[234px] w-full object-cover md:max-h-[560px] md:min-h-[430px]"
-        alt=""
-      />
+      <div className="relative block h-[234px] w-full md:max-h-[560px] md:min-h-[430px]">
+        <Image
+          fill
+          src={data.attributes.banner_img.data?.attributes?.url || bannerIg}
+          alt="banner image"
+          objectFit="cover"
+        />
+      </div>
+
       <div className="mt-[60px] flex items-start justify-center  gap-[71px] md:mb-[103px] md:mt-20">
         <SideMenu articleTitles={articleTitles} />
         <div>

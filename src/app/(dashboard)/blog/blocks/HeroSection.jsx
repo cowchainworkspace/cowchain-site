@@ -1,9 +1,8 @@
 import bgImage from "@/assets/blog/bg-blog-ds.webp";
 import bgMobileImage from "@/assets/blog/bg-blog-mobile.webp";
-
-import { Category } from "@/components/ui/category";
 import Image from "next/image";
 import React from "react";
+import Categories from "./Categories";
 
 export const HeroSection = ({ categories }) => {
   return (
@@ -21,11 +20,7 @@ export const HeroSection = ({ categories }) => {
           Insights & more
         </h1>
 
-        <div className="z-20 mt-9 flex max-w-[110%] items-start justify-start gap-2 overflow-x-scroll md:items-center md:overflow-auto lg:max-w-full lg:justify-between xl:max-w-none ">
-          {categories.data?.map(({ id, attributes }) => (
-            <Category key={id} title={attributes.tag_name} />
-          ))}
-        </div>
+        <Categories categories={categories.data} />
       </div>
     </section>
   );

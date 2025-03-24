@@ -13,12 +13,14 @@ export default {
       padding: "10px",
       screens: {
         "2xl": "1220px",
-        "1440": "1440px"
       }
     },
     extend: {
       fontFamily: {
         roc: ["roc-grotesk", "sans-serif"]
+      },
+      screens: {
+        '1440custom': '1440px',
       },
       colors: {
         "th-fade": "#ffffff41",
