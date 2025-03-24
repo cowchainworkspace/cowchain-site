@@ -108,7 +108,7 @@ export async function updateArticleViews(articleId) {
   }
 }
 
-export async function getMoreArticles(currentSlug, pageParam) {
+export async function getMoreArticles(currentSlug) {
   const queryParams = qs.stringify({
     filters: {
       slug: {
@@ -123,7 +123,7 @@ export async function getMoreArticles(currentSlug, pageParam) {
     },
     sort: ["date:desc"],
     fields: ['article_title', "slug", "id", "article_description"],
-    pagination: { page: pageParam, pageSize: 8 },
+    pagination: { pageSize: 8 },
  
   }, {
     encodeValuesOnly: true,

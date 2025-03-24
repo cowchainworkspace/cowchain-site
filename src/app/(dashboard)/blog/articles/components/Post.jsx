@@ -1,10 +1,18 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export const Post = ({ attributes }) => {
   return (
-    <article className="relative  grid h-[479px] w-[271px] grid-rows-[233px_1fr] overflow-hidden border-r border-r-th-fade md:h-[622px] md:w-[368px] md:grid-rows-[370px_1fr]">
+    <article className="1440custom:w-[600px] group relative grid h-[479px] w-[271px] grid-rows-[233px_1fr] overflow-hidden border-r border-r-th-fade md:h-[622px] md:w-[368px] md:grid-rows-[370px_1fr]">
+      <div className="absolute right-5 top-5 z-10  items-center justify-center opacity-0  transition-opacity duration-300 group-hover:opacity-100">
+        <Link
+          href={`/blog/articles/${attributes?.slug}`}
+          className="mx-auto flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white text-center font-roc text-sm font-medium uppercase text-black shadow-sm lg:h-24 lg:w-24 lg:text-base"
+        >
+          Read
+        </Link>
+      </div>
       <div
-        className="h-[233px] w-[271px] group-hover:scale-95 md:h-[370px] md:w-[368px]"
+        className="h-[233px] w-[271px]  transition-transform duration-200 group-hover:scale-95 group-hover:scale-95 md:h-[370px] md:w-full"
         style={{
           backgroundImage: `url(${attributes?.preview_article_img?.data?.attributes?.url})`,
           backgroundPosition: "left",
@@ -23,12 +31,12 @@ export const Post = ({ attributes }) => {
           ))}
         </div>
 
-        <a
+        <Link
           className="font-roc text-base font-medium uppercase text-white underline"
           href={`/blog/articles/${attributes?.slug}`}
         >
           READ MORE
-        </a>
+        </Link>
       </div>
     </article>
   );

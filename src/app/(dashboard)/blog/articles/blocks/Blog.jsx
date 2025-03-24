@@ -1,20 +1,10 @@
 import arrow from "@/assets/arrow_right.svg";
-import { Loading } from "@/components/loader/Loading";
 import { useGetMorePosts } from "@/hooks/use-strapi";
 import Image from "next/image";
 import ArticlesSlider from "./../../components/Slides/ArticlesSlider";
 
 export const Blog = ({ slug }) => {
-  const {
-    data: articles,
-    isLoading,
-    fetchNextPage,
-    isFetchingNextPage
-  } = useGetMorePosts(slug);
-
-  const scroll = (scrollOffset, element) => {
-    element.scrollLeft += scrollOffset;
-  };
+  const { data: articles } = useGetMorePosts(slug);
 
   return (
     <section
@@ -35,11 +25,7 @@ export const Blog = ({ slug }) => {
             </div>
           </a>
         </div>
-        <ArticlesSlider
-          articles={articles}
-          fetchNextPage={fetchNextPage}
-          isFetchingNextPage={isFetchingNextPage}
-        />
+        <ArticlesSlider articles={articles?.data} />
       </div>
     </section>
   );
