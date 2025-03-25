@@ -7,15 +7,15 @@ import ArticleInfo from "../components/ArticleInfo/ArticleInfo";
 
 export async function generateMetadata({ params }) {
   const blogPost = await getArticleBySlug(params.slug);
-  const metaTags = blogPost?.attributes?.SEO?.MetaTag?.map((tag) => [
+
+  const metaTags = blogPost?.SEO?.MetaTag?.map((tag) => [
     tag.Name,
     tag.Content
   ]);
 
   return {
-    title: blogPost.attributes.SEO.MetaTitle || metadata.title,
-    description:
-      blogPost.attributes.SEO.MetaDescription || metadata.description,
+    title: blogPost.SEO.MetaTitle || metadata.title,
+    description: blogPost.SEO.MetaDescription || metadata.description,
     other: metaTags ? Object.fromEntries(metaTags) : null
   };
 }

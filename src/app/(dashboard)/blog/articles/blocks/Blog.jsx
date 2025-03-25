@@ -15,7 +15,6 @@ export const Blog = ({ slug }) => {
   const scroll = (scrollOffset, element) => {
     element.scrollLeft += scrollOffset;
   };
-
   return (
     <section id="blog" className="relative md:h-[622px]">
       <div className="grid h-full w-full md:grid-cols-2 lg:grid-cols-[500px_1fr]">

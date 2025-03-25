@@ -22,8 +22,8 @@ export const HeroSection = ({ categories }) => {
         </h1>
 
         <div className="z-50 mt-9 flex max-w-[110%] items-start justify-start gap-2 overflow-x-scroll md:items-center md:overflow-auto lg:max-w-full lg:justify-between xl:max-w-none ">
-          {categories.data?.map(({ id, attributes }) => (
-            <Category key={id} title={attributes.tag_name} />
+          {categories.data?.map(({ id, tag_name }) => (
+            <Category key={id} title={tag_name} />
           ))}
         </div>
       </div>

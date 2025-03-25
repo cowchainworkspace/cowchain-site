@@ -1,5 +1,5 @@
 import Tag from "@/components/ui/tag";
-import { useLoader } from "@/hooks/useLoader";
+
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,7 +34,7 @@ export const Post = ({
         height={362}
         width={672}
         className="mb-8 max-h-[360px] w-full self-center object-contain transition-transform duration-200 group-hover:scale-95 md:aspect-video  md:h-auto md:object-fill"
-        src={preview_article_img?.data?.attributes?.url}
+        src={preview_article_img?.url}
         alt=""
       />
 
@@ -47,7 +47,7 @@ export const Post = ({
         </button>
       </div>
       <div className="mb-6 flex items-center justify-between">
-        <Tag title={article_tag.data?.attributes.tag_name} />
+        <Tag title={article_tag.tag_name} />
         <Reading reading_minutes={reading_minutes} />
       </div>
       <h3 className="mb-4 font-roc text-lg font-medium uppercase leading-6 text-white">
