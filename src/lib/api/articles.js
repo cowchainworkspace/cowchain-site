@@ -14,25 +14,21 @@ export async function getArticleBySlug(currentSlug) {
       }
     },
     populate: {
-      banner_img: {
-        populate: ["url"]
-      },
-      author_avatar: {
-        populate: ["url"]
-      },
+      banner_img: true,
+      author_avatar: true,
       article_paragraphs: {
-        populate: "*"
+        populate: '*',
       },
       SEO: {
-        populate: "*"
+        populate: '*',
       },
       article_tag: {
-        fields: ["tag_name"]
+        fields: ['tag_name'],
       }
     },
   }, {
     encodeValuesOnly: true,
-  })
+  });
 
   API_URL.search = queryParams;
   const res = await axios.get(

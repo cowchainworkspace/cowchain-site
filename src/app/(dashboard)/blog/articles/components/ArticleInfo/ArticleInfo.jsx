@@ -55,7 +55,7 @@ const ArticleInfo = () => {
 
   const hasVoted = localStorage.getItem(`review-${data.id}`);
 
-  const paragraphs = data.attributes.article_paragraphs.map((paragraph) => {
+  const paragraphs = data.article_paragraphs.map((paragraph) => {
     if (!paragraph.__component.includes("image")) {
       const titleId = crypto.randomUUID();
       const { title, description } = getSplitText(paragraph.text);
@@ -76,7 +76,7 @@ const ArticleInfo = () => {
     return {
       id: paragraph.id,
       component: paragraph.__component,
-      imageUrl: paragraph.paragraph_image.data.attributes.url
+      imageUrl: paragraph.paragraph_image.url
     };
   });
 
@@ -84,17 +84,17 @@ const ArticleInfo = () => {
     <div className="relative  min-h-screen bg-black">
       <BlogBreadCrumb slug={slug} />
       <HeroSection
-        tag={data.attributes.article_tag.data.attributes.tag_name}
-        title={data.attributes.article_title}
-        author={data.attributes.author_name.split(",")[0]}
-        readingMinutes={data.attributes.reading_minutes}
-        articleId={data.id}
-        pageViews={data.attributes.article_views}
+        tag={data.article_tag.tag_name}
+        title={data.article_title}
+        author={data.author_name.split(",")[0]}
+        readingMinutes={data.reading_minutes}
+        articleId={data.documentId}
+        pageViews={data.article_views}
       />
       <Image
         height={560}
         width={600}
-        src={data.attributes.banner_img.data?.attributes?.url || bannerIg}
+        src={data.banner_img?.url || bannerIg}
         className="block h-[234px] w-full object-cover md:max-h-[560px] md:min-h-[430px]"
         alt=""
       />
@@ -103,9 +103,9 @@ const ArticleInfo = () => {
         <div>
           <ArticleParagraphs
             paragraphs={paragraphs}
-            authorIcon={data.attributes.author_avatar.data?.attributes?.url}
-            authorName={data.attributes.author_name}
-            authorInfo={data.attributes.author_info}
+            authorIcon={data.author_avatar.url}
+            authorName={data.author_name}
+            authorInfo={data.author_info}
           />
           {hasVoted !== slug && !reviewItem && (
             <ReviewsSection

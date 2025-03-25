@@ -36,7 +36,7 @@ const ArticlesSlider = ({ articles, fetchNextPage, isFetchingNextPage }) => {
                   const lastItem = post.data.at(-1) === index;
                   return (
                     <div key={article.id}>
-                      <Post key={article.id} attributes={article.attributes} />
+                      <Post key={article.id} attributes={article} />
                     </div>
                   );
                 })}

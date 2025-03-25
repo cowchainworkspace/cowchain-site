@@ -6,7 +6,7 @@ export const Post = ({ attributes }) => {
       <div
         className="h-[233px] w-[271px] group-hover:scale-95 md:h-[370px] md:w-[368px]"
         style={{
-          backgroundImage: `url(${attributes?.preview_article_img?.data?.attributes?.url})`,
+          backgroundImage: `url(${attributes?.preview_article_img?.url})`,
           backgroundPosition: "left",
           backgroundSize: "cover"
         }}

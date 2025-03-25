@@ -63,7 +63,7 @@ const BlogInfo = () => {
                   <Post
                     handleClick={handleClick}
                     key={article.id}
-                    atributes={article.attributes}
+                    atributes={article}
                     isDisabled={isClicking}
                   />
                 ))}
@@ -72,7 +72,7 @@ const BlogInfo = () => {
                 {post.data.slice(2).map((article) => (
                   <Post
                     key={article.id}
-                    atributes={article.attributes}
+                    atributes={article}
                     isThreeLines={true}
                     handleClick={handleClick}
                     isDisabled={isClicking}
