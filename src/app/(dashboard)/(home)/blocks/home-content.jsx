@@ -220,7 +220,7 @@ and aimed at solving real-world challenges"
         data={otherServiceData}
         tag={"additional services"}
       />
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact />
       <FAQ
         noBg={true}
         data={faqHomeData}
