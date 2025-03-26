@@ -149,6 +149,9 @@ importers:
       react-spring:
         specifier: ^9.7.3
         version: 9.7.3(@react-three/fiber@8.15.16(react-dom@18.2.0(react@18.2.0))(react-native@0.73.4(@babel/core@7.23.9)(@babel/preset-env@7.23.9(@babel/core@7.23.9))(react@18.2.0))(react@18.2.0)(three@0.161.0))(konva@9.3.3)(react-dom@18.2.0(react@18.2.0))(react-konva@18.2.10(konva@9.3.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-native@0.73.4(@babel/core@7.23.9)(@babel/preset-env@7.23.9(@babel/core@7.23.9))(react@18.2.0))(react-zdog@1.2.2)(react@18.2.0)(three@0.161.0)(zdog@1.1.3)
+      react-swiper:
+        specifier: ^0.1.5
+        version: 0.1.5
       react-text-truncate:
         specifier: ^0.19.0
         version: 0.19.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -164,6 +167,9 @@ importers:
       sharp:
         specifier: ^0.33.4
         version: 0.33.5
+      swiper:
+        specifier: ^11.1.9
+        version: 11.2.6
       tailwind-merge:
         specifier: ^2.2.1
         version: 2.2.1
@@ -6316,6 +6322,10 @@ packages:
     resolution: {integrity: sha512-nlLGZPMQ/kbmkdIb5yvVzep1jKUII2x6ehNsHpgy71jpnJMW7V+KsB3AjYI2Ajb7UqMAMNjlssg6FUodrEMYzg==}
     engines: {node: '>=18'}
 
+  object-assign@2.1.1:
+    resolution: {integrity: sha512-CdsOUYIh5wIiozhJ3rLQgmUTgcyzFwZZrqhkKhODMoGtPKM+wt0h0CNIoauJWMsS9822EdzPsF/6mb4nLvPN5g==}
+    engines: {node: '>=0.10.0'}
+
   object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
@@ -7664,6 +7674,9 @@ packages:
       '@types/react':
         optional: true
 
+  react-swiper@0.1.5:
+    resolution: {integrity: sha512-6ejmuzood/uh1vTvWryMUR2GeRA4XTjBDAk6i3W4qUf9+calY/TdlIAtqSFkTaHpyn6A7bI9SfFNi+pr+fZJcQ==}
+
   react-text-truncate@0.19.0:
     resolution: {integrity: sha512-QxHpZABfGG0Z3WEYbRTZ+rXdZn50Zvp+sWZXgVAd7FCKAMzv/kcwctTpNmWgXDTpAoHhMjOVwmgRtX3x5yeF4w==}
     peerDependencies:
@@ -8409,6 +8422,10 @@ packages:
     resolution: {integrity: sha512-+N/Q9kV1+F+UeWYoSiULYo4xYSDQlTgb+ayMobAXPwMnLvop7oxKMo9OzIrX5x3eS4L4f2UHhc9axXwY8DpChg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
+
+  swiper@11.2.6:
+    resolution: {integrity: sha512-8aXpYKtjy3DjcbzZfz+/OX/GhcU5h+looA6PbAzHMZT6ESSycSp9nAjPCenczgJyslV+rUGse64LMGpWE3PX9Q==}
+    engines: {node: '>= 4.7.0'}
 
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
@@ -17193,6 +17210,8 @@ snapshots:
 
   ob1@0.80.6: {}
 
+  object-assign@2.1.1: {}
+
   object-assign@4.1.1: {}
 
   object-copy@0.1.0:
@@ -18780,6 +18799,10 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.2.58
 
+  react-swiper@0.1.5:
+    dependencies:
+      object-assign: 2.1.1
+
   react-text-truncate@0.19.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       prop-types: 15.8.1
@@ -19632,6 +19655,8 @@ snapshots:
       csso: 4.2.0
       picocolors: 1.0.0
       stable: 0.1.8
+
+  swiper@11.2.6: {}
 
   symbol-tree@3.2.4: {}
 
