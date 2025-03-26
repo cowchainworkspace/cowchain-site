@@ -16,7 +16,7 @@ export const Blog = () => {
               <p className="header uppercase text-white underline">
                 ALL ARTICLES
               </p>
-              <Image className="w-6" src={arrow} alt="Arrow"></Image>
+              <Image className="w-6" src={arrow} alt=""></Image>
             </div>
           </a>
         </div>

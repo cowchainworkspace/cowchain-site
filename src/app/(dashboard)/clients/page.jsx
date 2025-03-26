@@ -25,7 +25,7 @@ const Clients = () => {
         <Feedback />
         <Credo />
         <Cases />
-        <Contact />
+        <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
       </div>
     </section>
   );
