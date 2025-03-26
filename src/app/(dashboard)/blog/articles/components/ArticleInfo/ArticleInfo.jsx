@@ -42,7 +42,7 @@ const ArticleInfo = () => {
         article: review.article,
         article_rating: review.article_rating
       });
-      localStorage.setItem(`review-${data.id}`, slug);
+      localStorage.setItem(`review-${data.documentId}`, slug);
       setReviewItem({ icon, text });
       setTimeout(() => {
         setReviewItem(null);
@@ -53,7 +53,7 @@ const ArticleInfo = () => {
     }
   };
 
-  const hasVoted = localStorage.getItem(`review-${data.id}`);
+  const hasVoted = localStorage.getItem(`review-${data.documentId}`);
 
   const paragraphs = data.article_paragraphs.map((paragraph) => {
     if (!paragraph.__component.includes("image")) {
@@ -110,7 +110,7 @@ const ArticleInfo = () => {
           {hasVoted !== slug && !reviewItem && (
             <ReviewsSection
               onHandleAddReview={onHandleAddReview}
-              articleId={data.id}
+              articleId={data.documentId}
               isPending={isPending}
             />
           )}
