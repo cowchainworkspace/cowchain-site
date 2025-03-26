@@ -20,13 +20,8 @@ const Services = () => {
       <HeroSection />
       <ViewMoreSection />
       <Products />
-      <Stack
-        gradientStyles="absolute -bottom-1/2 -right-40 block  h-[426px] w-[526px] md:hidden"
-        isGradient={true}
-        title={"Our tech stack"}
-        margin={""}
-      />
-      <Contact />
+      <Stack title={"Our tech stack"} margin={""} />
+      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
 };

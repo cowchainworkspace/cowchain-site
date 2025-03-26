@@ -1,10 +1,10 @@
 "use client";
 import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { blocksData } from "../homeData/data";
-
 export default function ExpandingBlocks({ isSecondary = false }) {
-  const [activeBlock, setActiveBlock] = useState(blocksData[0]);
+  const [activeBlock, setActiveBlock] = useState(blocksData[1]);
 
   const handleClick = (id) => {
     setActiveBlock(id);
@@ -49,22 +49,42 @@ export default function ExpandingBlocks({ isSecondary = false }) {
         <div className="px-default mx-auto  flex h-[411px] max-w-[1440px] border-t border-t-th-fade md:border-0">
           {blocksData.map((block, index) => (
             <>
-              <div
+              <motion.div
                 key={block.id}
-                className={`hidden h-full transition-all duration-300 ease-in-out sm:block ${
-                  activeBlock.id === block.id
-                    ? "w-[635px] bg-[url('/assets/faq-gradient.png')] bg-no-repeat"
-                    : "w-[82px]"
-                } ${index < blocksData.length - 1 && " border-r border-r-th-fade"} flex cursor-pointer flex-col justify-center  text-white`}
+                layout
+                transition={{ duration: 0.4, ease: "easeInOut" }}
                 onClick={() => handleClick(block)}
+                className={cn(
+                  "hidden h-full cursor-pointer flex-col overflow-hidden text-white sm:flex",
+                  index < blocksData.length - 1 && "border-r border-r-th-fade",
+                  activeBlock.id !== block.id && "justify-center"
+                )}
+                style={{
+                  width: activeBlock.id === block.id ? 635 : 82,
+                  backgroundImage:
+                    activeBlock.id === block.id
+                      ? "url('/assets/faq-gradient.png')"
+                      : undefined,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover"
+                }}
               >
                 {activeBlock.id === block.id ? (
-                  <div className="p-6">
+                  <motion.div
+                    key="active"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-full max-w-full p-6"
+                  >
                     <h2 className="mb-4 text-2xl font-bold">{block.title}</h2>
-                    <p className="text-sm leading-6">{block.description}</p>
-                  </div>
+                    <p className="break-words text-sm leading-6">
+                      {block.description}
+                    </p>
+                  </motion.div>
                 ) : (
-                  <div className="flex h-full w-full rotate-180 transform items-center justify-center">
+                  <div className="flex  w-full rotate-180 transform items-center justify-center">
                     <p
                       className="whitespace-nowrap text-sm font-bold uppercase tracking-wide"
                       style={{ writingMode: "vertical-rl" }}
@@ -73,7 +93,7 @@ export default function ExpandingBlocks({ isSecondary = false }) {
                     </p>
                   </div>
                 )}
-              </div>
+              </motion.div>
 
               <div
                 key={block.id}

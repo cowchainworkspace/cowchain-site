@@ -187,7 +187,7 @@ const CaseStudiesEva = () => {
           </div>
 
           <Projects />
-          <Contact />
+          <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
         </div>
       </ParallaxProvider>
     </section>
