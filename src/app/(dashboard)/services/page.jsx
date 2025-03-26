@@ -21,7 +21,7 @@ const Services = () => {
       <ViewMoreSection />
       <Products />
       <Stack title={"Our tech stack"} margin={""} />
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact />
     </section>
   );
 };
