@@ -33,12 +33,17 @@ export default {
       },
       fontFamily: {
         roc: ['roc-grotesk', 'sans-serif'],
+        manrope: ["Manrope", 'sans-serif']
+      },
+      borderRadius: {
+        20: "20px"
       },
       colors: {
         'th-fade': '#ffffff41',
         'th-grey': '#ffffff71',
         'th-violet': '#EABBFF',
         secondary: '#BBBBBB',
+        'white-70': '#FFFFFFB2'
       },
       backgroundImage: {
         credo: 'url("/assets/credo_bg.jpg")',
