@@ -22,12 +22,12 @@ const feedbackData = [
   }
 ];
 
-const Quote = ({ text, author, lastIndex, noItemsBorders }) => {
+const Quote = ({ text, author, lastIndex, noItemsBorders, isHome }) => {
   return (
     <article
       className={
         lastIndex
-          ? `px-[20px] py-[20px] md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] 
+          ? `px-[20px] py-[20px] md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] ${isHome ? "py-[43px]" : ""} 
           ${
             !noItemsBorders
               ? "border-t border-t-th-fade  md:border-r-0 md:border-t-0"
@@ -39,7 +39,7 @@ const Quote = ({ text, author, lastIndex, noItemsBorders }) => {
               ? "border-b-0 border-t border-t-th-fade sm:border-r sm:border-r-th-fade "
               : "gap-[24px] "
           } 
-          relative flex w-full min-w-[320px] flex-col md:gap-0 md:border-b md:border-b md:border-r-0 md:border-t-0 md:border-b-th-fade md:border-b-th-fade`
+          relative flex w-full min-w-[320px] flex-col md:gap-0 md:border-b md:border-b md:border-r-0 md:border-t-0 md:border-b-th-fade md:border-b-th-fade ${isHome ? "py-[43px]" : ""}`
       }
     >
       <p className="max-w-2xl font-roc text-[18px] font-medium uppercase !leading-none !no-underline md:font-normal custom1000:text-[20px]">
@@ -59,7 +59,8 @@ export const OtherServices = ({
   desc,
   topBorder = true,
   bottomBorder = true,
-  noItemsBorders = false
+  noItemsBorders = false,
+  isHome = false
 }) => {
   return (
     <section
@@ -71,7 +72,7 @@ export const OtherServices = ({
         >
           {tag && <Tag title={tag} className="mb-[42px] md:mb-8" />}
 
-          <h3 className="text-left text-[24px] uppercase text-white custom1000:text-[36px] custom1200:text-[42px] ">
+          <h3 className="text-left text-[24px] uppercase leading-[0.9] text-white custom1000:text-[36px] custom1200:text-[42px] ">
             {title}
           </h3>
           {desc && (
@@ -89,6 +90,7 @@ export const OtherServices = ({
               {...feedback}
               lastIndex={index === data.length - 1}
               noItemsBorders={noItemsBorders}
+              isHome={isHome}
             />
           ))}
         </div>

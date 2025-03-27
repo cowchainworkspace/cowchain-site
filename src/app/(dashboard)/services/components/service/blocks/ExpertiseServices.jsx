@@ -14,22 +14,43 @@ export function ExpertiseServices({
   threeColumns,
   tag,
   isDevelop = false,
-  titleClasses = ""
+  titleClasses = "",
+  mobileBg,
+  isHome = false,
+  isHomeEngagement = false
 }) {
   return (
     <section
       className={`relative ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
     >
       {!noBg && bg}
-
+      {mobileBg && mobileBg}
       <div
-        className={`relative mx-auto flex max-w-[1440px] flex-col px-8 py-[60px] md:px-[88px] lg:py-[126px] xl:flex-row ${threeColumns ? "flex grid-cols-3 flex-col gap-5 md:gap-[85px] xl:grid" : " flex justify-between"} `}
+        className={cn(
+          "relative mx-auto flex max-w-[1440px] flex-col justify-between px-8 py-[60px] md:px-[88px] lg:py-[126px] xl:flex-row",
+          threeColumns &&
+            "flex grid-cols-3 flex-col gap-5 md:gap-[85px] xl:grid",
+          isHome && "px-5",
+          isHomeEngagement && "px-5"
+        )}
       >
         <div className="col-span-1 lg:gap-10">
-          {tag && <Tag title={tag} className="mb-4 w-fit md:mb-8" />}
+          {tag && (
+            <Tag
+              title={tag}
+              className={cn(
+                "mb-4 w-fit md:mb-8",
+                isHome && "mb-[42px]",
+                isHomeEngagement && "mb-[42px]"
+              )}
+            />
+          )}
           <h2
             className={cn(
               "lg:order-0 text-[42px] uppercase text-white md:text-[60px]",
+              isHome &&
+                "mb-[42px]  text-2xl font-medium leading-[0.9] md:text-[42px] md:leading-[37.59px]",
+              isHomeEngagement && "mb- text-[36px] font-medium leading-[0.9]",
               {
                 "xl:!text-[50px]": threeColumns,
                 "!text-[42px] leading-[37.59px]": isDevelop
@@ -39,7 +60,12 @@ export function ExpertiseServices({
           >
             {title}
           </h2>
-          <div className="mt-[60px] flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto" />
+          <div
+            className={cn(
+              "mt-[60px] flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto",
+              isHome && "hidden md:flex"
+            )}
+          />
           {desc && (
             <p className="body my-[40px] max-w-[582px] text-base leading-6 md:my-[20px]">
               {desc}
@@ -60,7 +86,12 @@ export function ExpertiseServices({
                       : "mr-auto mt-[42px] w-full text-left md:mt-[60px]"
                   }
                 >
-                  <span className="text-left font-roc text-lg font-medium uppercase !leading-none text-white md:!text-[24px]">
+                  <span
+                    className={cn(
+                      "text-left font-roc text-lg font-medium uppercase !leading-none text-white md:!text-[24px]",
+                      isHomeEngagement && "text-[24px] leading-[0.9]"
+                    )}
+                  >
                     {title}
                   </span>
                 </div>

@@ -96,7 +96,7 @@ export default function FAQ({
           {desc && (
             <p
               className={cn(
-                "body my-[40px] max-w-[462px] text-left leading-6 md:my-[20px]",
+                "body max-w-[462px] text-left leading-6 md:my-[20px]",
                 {
                   "max-w-[434px] text-balance !text-secondary": isSecondary
                 }

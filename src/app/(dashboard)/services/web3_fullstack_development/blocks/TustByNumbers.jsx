@@ -61,7 +61,7 @@ export function TustByNumbers({
             className={cn(
               `flex h-full flex-col  ${home ? "h-fit md:h-[700px]" : "justify-center"}
              gap-[37px] border-r border-r-th-fade
-            px-[20px] pb-[40px] pt-[60px] md:pb-[110px] md:pl-8 md:pt-[126px]   custom1430:pl-[88px] custom1430:pr-[168px] ${isBlockChainConsulting && "lg:pl-[64px] xl:pt-[170px] custom1430:pr-[90px]"}`,
+            px-[20px] pb-[40px] pt-[60px] md:pb-[110px] md:pl-8 md:pt-[126px]   xl:pl-[88px] custom1430:pr-[168px] ${isBlockChainConsulting && "lg:pl-[64px] xl:pt-[170px] custom1430:pr-[90px]"}`,
               {
                 "justify-start": isBlockChainConsulting
               }
