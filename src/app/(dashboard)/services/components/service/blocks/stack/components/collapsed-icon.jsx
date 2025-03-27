@@ -8,8 +8,8 @@ export const CollapsedIcon = ({ logo, alt }) => {
      items-center justify-center gap-x-2 rounded-full border border-th-grey bg-black text-sm"
     >
       {React.createElement(logo)}
-      <div className="tool-text hidden pl-2 text-center">
-        <p className="text-[14px]">{alt}</p>
+      <div className="tool-text hidden pl-1 text-center md:pl-2">
+        <p className=" text-xs md:text-[14px]">{alt}</p>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
 import playIcon from "@/assets/icons/homepage/linkedInIcon.svg";
 import michaelAvatar from "@/assets/icons/homepage/michaelAvatarImg.png";
+import Image from "next/image";
+import React from "react";
 
 export default function HeaderContent() {
   return (
@@ -11,12 +11,12 @@ export default function HeaderContent() {
         work for you
       </h1>
       <h1 className="relative z-[21] mt-8 block cursor-default text-[38px]  font-medium uppercase leading-[44px] md:mt-16 md:hidden lg:mt-24">
-        LET’s make Web3 tech <br />
-        work for you
+        LET’s make Web3 tech work
+        <br /> for you
       </h1>
 
       <div className="mt-auto grid grid-cols-1 lg:grid-cols-2">
-        <div className="relative flex mb-[24px] md:mb-0 items-center md:gap-x-1">
+        <div className="relative mb-[24px] flex items-center md:mb-0 md:gap-x-1">
           <h2 className="text-[16px] font-[500] md:text-[24px] custom1200:text-[32px] custom1200:leading-[29px]">
             BEING FULLY IMMERSED IN WEB3, <br />
             WE'RE NOT JUST DEVS — WE'RE <br />

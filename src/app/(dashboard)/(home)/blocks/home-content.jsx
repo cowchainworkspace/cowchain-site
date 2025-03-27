@@ -2,6 +2,7 @@
 
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import bgEllipse from "@/assets/bg/home-ellipse-bg.webp";
+import mobileProcessEllipse from "@/assets/homepage/ellipse-home-bg-process.webp";
 import Contact from "@/components/Contact";
 import Image from "next/image";
 import { ExpertiseServices } from "../../services/components/service/blocks/ExpertiseServices";
@@ -98,6 +99,7 @@ and aimed at solving real-world challenges"
           hasIcon={false}
           isSecondary={true}
           isTwoHalf={true}
+          titleClasses="mb-[10px]"
         />
       </div>
 
@@ -108,8 +110,8 @@ and aimed at solving real-world challenges"
         data={FSExpertiseData}
         title={
           <>
-            Each project follows <br />
-            a structured path, <br />
+            Each project follows <br className="hidden 1440custom:block" />
+            a structured path, <br className="hidden 1440custom:block" />
             designed to{" "}
             <span className="violet-gradient-text">
               minimize
@@ -118,20 +120,29 @@ and aimed at solving real-world challenges"
             </span>{" "}
             and
             <span className="violet-gradient-text">
-              deliver <br /> results
+              deliver <br className="hidden 1440custom:block" /> results
             </span>{" "}
-            that aligned <br /> with your requirements
+            that aligned <br className="hidden 1440custom:block" /> with your
+            requirements
           </>
         }
         bg={
           <Image
             src={bgEllipse}
             alt="decoration ellipse"
-            className="absolute -top-[10%] left-0"
+            className="absolute -top-[10%] left-0 hidden md:block"
           />
         }
-        isDevelop={true}
+        mobileBg={
+          <Image
+            src={mobileProcessEllipse}
+            alt="decoration ellipse"
+            className="absolute -top-[15%] block md:hidden"
+          />
+        }
+        isHome={true}
       />
+
       <Industries
         title={"Industries Benefiting from Web3 Solutions"}
         desc={
@@ -161,6 +172,7 @@ and aimed at solving real-world challenges"
         }
         data={useCases}
         tag={"web3 development use cases"}
+        isHome={true}
       />
       <Cases />
       <CasesMobile />
@@ -170,7 +182,7 @@ and aimed at solving real-world challenges"
         topBorder={false}
         title={
           <>
-            We offer adaptable <br />
+            We offer adaptable <br className="1400custom:block hidden" />
             engagement models
             <br />
             to best suit your <br />
@@ -182,10 +194,18 @@ and aimed at solving real-world challenges"
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -top-[20%] left-0"
+            className="absolute -top-[20%] left-0 hidden md:block"
+          />
+        }
+        mobileBg={
+          <Image
+            src={mobileProcessEllipse}
+            alt="decoration ellipse"
+            className="absolute -top-[15%] block md:hidden"
           />
         }
         tag={"engagement models"}
+        isHomeEngagement={true}
       />
       <Industries
         title={
@@ -201,6 +221,7 @@ and aimed at solving real-world challenges"
         topBorder={false}
         bottomBorder={false}
         data={WhyClientChooseData}
+        isHomePage={true}
       />
       <OtherServices
         noItemsBorders={true}
@@ -225,7 +246,7 @@ and aimed at solving real-world challenges"
         noBg={true}
         data={faqHomeData}
         faqHorizontalPadding={true}
-        titleClasses="xl:text-[60px] xl:leading-[53.7px]"
+        titleClasses=" text-center px-5 md:text-start wi xl:text-[60px] xl:leading-[53.7px]"
       />
     </>
   );

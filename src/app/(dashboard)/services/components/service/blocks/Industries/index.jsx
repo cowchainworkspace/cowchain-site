@@ -39,7 +39,8 @@ export function Industries({
   bg = false,
   customClasses = "",
   itemClasses = "",
-  isWhiteLabel = ""
+  isWhiteLabel = "",
+  isHomePage = false
 }) {
   return (
     <section
@@ -49,7 +50,7 @@ export function Industries({
     >
       {bg && bg}
       <div
-        className={`mx-auto flex w-full max-w-[1440px] flex-col p-4 py-[60px] sm:grid sm:py-[126px] md:px-[32px] lg:px-[88px] 
+        className={`mx-auto flex w-full max-w-[1440px] flex-col p-5 py-[60px] sm:grid sm:py-[126px] md:px-[32px] lg:px-[88px] 
           ${
             isTwoSides
               ? "grid-cols-2 gap-x-[50px] gap-y-[42px] sm:gap-y-[77px] custom1000:gap-x-[100px] custom1200:gap-x-[134px]"
@@ -70,6 +71,9 @@ export function Industries({
             <h2
               className={cn(
                 "whitespace-pre-line text-left text-[36px] uppercase md:text-center md:text-start md:text-[48px] custom1000:text-[60px]",
+                isHomePage &&
+                  isTwoSides &&
+                  "text-[36px] leading-[0.9] md:text-[48px] custom1000:!text-[60px]",
                 {
                   "!text-[42px]": isTwoSides
                 }

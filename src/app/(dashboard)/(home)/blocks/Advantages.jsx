@@ -12,61 +12,81 @@ export default function ExpandingBlocks({ isSecondary = false }) {
 
   return (
     <>
-      <section
-        className={`relative mx-auto max-w-[1440px] border-t border-t-th-fade`}
-      >
-        <div className="px-default relative flex flex-col justify-between gap-[91px] pb-[61px] pt-[90px]">
-          <div className="  lg:gap-16">
-            <h2 className="lg:order-0 text-[36px] uppercase text-white sm:text-[60px] ">
-              Advantages
-              <br /> of Web3 Development
-            </h2>
-            <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto" />
-            <p
-              className={cn(
-                "body my-[40px] max-w-[592px] text-base leading-6 md:my-[20px]",
-                {
-                  "!text-secondary": isSecondary
-                }
-              )}
-            >
-              Blockchain technology is reshaping industries, offering a range of
-              benefits for businesses ready to embrace decentralized solutions.
-              As a web3 development services company, Cowchain ensures that our
-              solutions address the unique needs of businesses
-            </p>
+      <section className={`relative  border-t border-t-th-fade`}>
+        <div className="mx-auto max-w-[1440px]">
+          <div className="px-default relative flex flex-col justify-between gap-[91px] pb-[42px] pt-[60px] lg:pb-[61px] lg:pt-[90px]">
+            <div>
+              <h2 className="lg:order-0 mb-4 text-[36px] uppercase text-white sm:text-[60px] md:mb-0 ">
+                Advantages
+                <br /> of Web3 Development
+              </h2>
+              <div className="mt-8  hidden w-full max-w-xl flex-col justify-between customSmall:flex-row md:flex  lg:order-3 lg:ml-auto" />
+              <p
+                className={cn(
+                  "body max-w-[592px] text-base leading-6 md:my-[20px]",
+                  {
+                    "!text-secondary": isSecondary
+                  }
+                )}
+              >
+                Blockchain technology is reshaping industries, offering a range
+                of benefits for businesses ready to embrace decentralized
+                solutions. As a web3 development services company, Cowchain
+                ensures that our solutions address the unique needs of
+                businesses
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <div className="w-full border-t border-t-th-fade">
-        <div className="flex flex-col gap-[24px] px-[20px] py-[43px] sm:hidden">
-          <h2 className="lg:order-0 text-[20px] uppercase text-white sm:text-[60px]  ">
-            {activeBlock.title}
-          </h2>
-          <p className="body text-[16px]">{activeBlock.description}</p>
+      <div className="w-full md:border-t md:border-t-th-fade">
+        <div className="faq-home-gradient-mb h-[256px] px-[20px] py-[43px] sm:hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeBlock.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="flex h-full flex-col gap-[24px]"
+            >
+              <motion.h2
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+                className="text-[20px] uppercase text-white sm:text-[60px]"
+              >
+                {activeBlock.title}
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+                className="body text-[16px] !text-secondary"
+              >
+                {activeBlock.description}
+              </motion.p>
+            </motion.div>
+          </AnimatePresence>
         </div>
+
         <div className="px-default mx-auto  flex h-[411px] max-w-[1440px] border-t border-t-th-fade md:border-0">
           {blocksData.map((block, index) => (
             <>
               <motion.div
                 key={block.id}
                 layout
-                transition={{ duration: 0.4, ease: "easeInOut" }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
                 onClick={() => handleClick(block)}
                 className={cn(
-                  "hidden h-full cursor-pointer flex-col overflow-hidden text-white sm:flex",
+                  "op hidden h-full w-[82px] cursor-pointer flex-col overflow-hidden text-white transition-all duration-500 ease-in-out sm:flex",
                   index < blocksData.length - 1 && "border-r border-r-th-fade",
-                  activeBlock.id !== block.id && "justify-center"
+                  activeBlock.id !== block.id && "justify-center",
+                  activeBlock.id === block.id && "faq-home-gradient w-[635px]"
                 )}
                 style={{
-                  width: activeBlock.id === block.id ? 635 : 82,
-                  backgroundImage:
-                    activeBlock.id === block.id
-                      ? "url('/assets/faq-gradient.png')"
-                      : undefined,
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover"
+                  opacity: activeBlock.id === block.id ? 1 : 0.9
                 }}
               >
                 {activeBlock.id === block.id ? (
@@ -75,19 +95,45 @@ export default function ExpandingBlocks({ isSecondary = false }) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="w-full max-w-full p-6"
+                    transition={{ duration: 0.5 }}
+                    className="flex h-full w-full flex-col justify-center p-6 1440custom:px-[56px]" // 👈 centers vertically
                   >
-                    <h2 className="mb-4 text-2xl font-bold">{block.title}</h2>
-                    <p className="break-words text-sm leading-6">
+                    <motion.h2
+                      initial={{ opacity: 0, y: -40 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -40 }}
+                      transition={{
+                        duration: 0.6,
+                        ease: "easeOut",
+                        delay: 0.2
+                      }}
+                      className="mb-4 w-full text-2xl font-bold"
+                    >
+                      {block.title}
+                    </motion.h2>
+
+                    <motion.p
+                      initial={{ opacity: 0, y: -30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -30 }}
+                      transition={{
+                        duration: 0.6,
+                        ease: "easeOut",
+                        delay: 0.4
+                      }}
+                      className="max-w-md text-sm leading-6 text-secondary"
+                    >
                       {block.description}
-                    </p>
+                    </motion.p>
                   </motion.div>
                 ) : (
-                  <div className="flex  w-full rotate-180 transform items-center justify-center">
+                  <div className="flex w-full items-center justify-center">
                     <p
-                      className="whitespace-nowrap text-sm font-bold uppercase tracking-wide"
-                      style={{ writingMode: "vertical-rl" }}
+                      className="whitespace-nowrap text-wrap text-base font-medium uppercase tracking-wide md:text-lg"
+                      style={{
+                        writingMode: "vertical-rl",
+                        transform: "rotate(180deg)"
+                      }}
                     >
                       {block.title}
                     </p>
