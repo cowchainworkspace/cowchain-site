@@ -1,9 +1,19 @@
 import React from "react";
+import Contact from "../../../../components/Contact";
 import Banner from "../components/Banner";
 import CaseHeroScreen from "../components/HeroScreen";
+import MoreProjects from "../components/MoreProjects";
 import ProjectOverview from "../components/ProjectOverview";
+import TeamBehind from "../components/TeamBehind";
+import PixelVerseAvatarAI from "./components/PixelVerseAvatarAI";
 import PixelVerseWhatWeDid from "./components/PixelVerseWhatWeDid";
-import { overviewItems, pixelVerseTags } from "./utils/constants";
+
+import {
+  overviewItems,
+  pixelVerseProjects,
+  pixelVerseTags,
+  pixelVerseTeam
+} from "./utils/constants";
 
 const PixelVerse = () => {
   return (
@@ -54,6 +64,9 @@ const PixelVerse = () => {
         classes={"w-full h-[514px]"}
       />
       <PixelVerseWhatWeDid />
+      <TeamBehind team={pixelVerseTeam} />
+      <MoreProjects projects={pixelVerseProjects} />
+      <PixelVerseAvatarAI />
     </section>
   );
 };

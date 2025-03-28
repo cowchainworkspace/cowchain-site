@@ -1,3 +1,5 @@
+import {coinclub, hybrid, wenix } from "../../../../../../public/projects/index";
+
 export const pixelVerseTags = [
   {
     id: 1,
@@ -83,4 +85,50 @@ export const businessChallenges = [
   }
 ];
 
+export const pixelVerseTeam = [
+  {
+    id: 1,
+    department: "development",
+    people: "Alex Markov, Sania Lee, Fiona Zhang"
+  },
+  {
+    id: 2,
+    department: "project management",
+    people: "Rachel Lim"
+  },
+  {
+    id: 3,
+    department: "marketing & Seo",
+    people: "James Koh, Nadia Patel"
+  },
+  {
+    id: 4,
+    department: "ui/ux design",
+    people: "Lara Mendez"
+  }
+];
 
+export const pixelVerseProjects = [
+  {
+    id: 1,
+    tags: ['App Development', 'Website Development '],
+    title: 'COINCLUB',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
+    img: coinclub,
+  },
+  {
+    id: 2,
+    tags: ['App Development', 'Website Development '],
+    title: 'hybrid',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
+    img: hybrid,
+  },
+  {
+    id: 3,
+    tags: ['App Development', 'Website Development '],
+    title: 'Wenix',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
+    img: wenix
+  },
+  
+]

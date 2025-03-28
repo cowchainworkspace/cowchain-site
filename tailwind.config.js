@@ -40,7 +40,8 @@ export default {
       },
       fontFamily: {
         roc: ['roc-grotesk', 'sans-serif'],
-        manrope: ["Manrope", 'sans-serif']
+        manrope: ["Manrope", 'sans-serif'],
+        rubik: ["Rubik", 'sans-serif']
       },
       borderRadius: {
         20: "20px"
@@ -52,6 +53,7 @@ export default {
         secondary: '#BBBBBB',
         'white-70': '#FFFFFFB2',
         'white-50': '#FFFFFF80',
+        'hyper-violet': '#C64EFF',
       },
       backgroundImage: {
         credo: 'url("/assets/credo_bg.jpg")',
