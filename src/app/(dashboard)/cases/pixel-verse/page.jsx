@@ -1,5 +1,4 @@
 import React from "react";
-import Contact from "../../../../components/Contact";
 import Banner from "../components/Banner";
 import CaseHeroScreen from "../components/HeroScreen";
 import MoreProjects from "../components/MoreProjects";

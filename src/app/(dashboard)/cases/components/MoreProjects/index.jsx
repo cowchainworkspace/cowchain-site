@@ -18,7 +18,6 @@ const MoreProjects = ({ projects }) => {
       </div>
       <div className="!border-white-50 grid grid-cols-3 border-y-[0.5px]">
         {projects.map(({ id, tags, title, desc, img }) => {
-          console.log(img);
           return (
             <div
               key={id}

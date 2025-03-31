@@ -4,7 +4,7 @@ const HeroButton = ({ buttonLabel = "Get a free quote" }) => {
   return (
     <button
       type="button"
-      className="flex h-[50px] w-[226px] items-center justify-center bg-white font-roc font-medium uppercase leading-[0.9] text-black"
+      className="flex h-[50px] w-[226px] items-center justify-center bg-white font-roc font-medium uppercase leading-[0.9] text-black transition-colors duration-500 hover:bg-[#ffffff10] hover:text-white"
     >
       {buttonLabel}
     </button>

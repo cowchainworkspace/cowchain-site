@@ -12,7 +12,7 @@ import TopArrowSvg from "../../../../../../public/svgIcons/TopArrowSvg";
 const OverviewItems = ({ overviewItems }) => {
   return (
     <div className=" w-full">
-      <Accordion allowToggle>
+      <Accordion allowMultiple={true}>
         {overviewItems.map(({ itemName, id, itemValue }) => (
           <AccordionItem
             className="border-white-50 border-b-[0.5px] py-5 first:pt-0"
