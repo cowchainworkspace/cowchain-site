@@ -31,19 +31,36 @@ export default {
         'custom-1700': '1660px',
         'fullSlider': '3186px',
       },
+      spacing: {
+        15: '60px',
+        30: '120px',
+      },
+      lineHeight: {
+        90: 0.9,
+      },
       fontFamily: {
         roc: ['roc-grotesk', 'sans-serif'],
+        manrope: ["Manrope", 'sans-serif'],
+        rubik: ["Rubik", 'sans-serif']
+      },
+      borderRadius: {
+        20: "20px"
       },
       colors: {
         'th-fade': '#ffffff41',
         'th-grey': '#ffffff71',
         'th-violet': '#EABBFF',
         secondary: '#BBBBBB',
+        'white-70': '#FFFFFFB2',
+        'white-50': '#FFFFFF80',
+        'hyper-violet': '#C64EFF',
       },
       backgroundImage: {
         credo: 'url("/assets/credo_bg.jpg")',
         'faq-gradient': 'linear-gradient(120.5deg, #883DBD 3.74%, #010101 68.54%)',
-        "faq-fullstack-gradient": 'background: linear-gradient(163.81deg, #873CBC 0.26%, #5F2C91 16.97%, #11011F 42.6%, #000000 53.68%)'
+        "faq-fullstack-gradient": 'background: linear-gradient(163.81deg, #873CBC 0.26%, #5F2C91 16.97%, #11011F 42.6%, #000000 53.68%)',
+        'cosmic-plum-fade': 'linear-gradient(180deg, rgba(228, 170, 255, 0.6) -5.25%, rgba(156, 52, 205, 0.8) 26.5%, rgba(106, 38, 138, 0.99) 66.5%, rgba(0, 0, 0, 0.71) 100%)',
+        'vintage-blush-gradient': 'linear-gradient(180deg, #994782 -5.25%, #CBB4AB 43.54%, #994782 100%)',
       },
     },
   },
