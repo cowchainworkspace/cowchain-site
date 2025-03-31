@@ -1,0 +1,5 @@
+export { default as aiImage } from "./ai.webp"
+export { default as blockchainImage } from "./blockchain.webp"
+export { default as clockImage } from "./clock.webp"
+export { default as robotImage } from "./robot.webp"
+export { default as stackCoinImage } from "./stack-coin.webp"
