@@ -6,7 +6,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import React, { useCallback, useEffect, useRef } from "react";
 
-const TWEEN_FACTOR_BASE = 0.05;
+const TWEEN_FACTOR_BASE = 0.01;
 
 const numberWithinRange = (number, min, max) =>
   Math.min(Math.max(number, min), max);
@@ -104,16 +104,13 @@ const CasesSlider = ({ images, decorationElement }) => {
       {decorationElement}
       <div className={"embla relative h-full  w-screen"}>
         <div className={"embla__viewport"} ref={emblaRef}>
-          <div className={cn("embla__container flex gap-[15px]")}>
+          <div className={cn("embla__container flex")}>
             {images?.map(({ id, height, width, desc, href }, index) => {
               const lastIndex = index === images.length - 1;
               return (
                 <div
                   key={id}
-                  className={cn(
-                    "relative flex-shrink-0",
-                    lastIndex && "mr-[20px]"
-                  )}
+                  className={cn("relative flex-shrink-0 pl-[30px]")}
                   style={{ width: `${width}px`, height: `${height}px` }}
                 >
                   <Image
