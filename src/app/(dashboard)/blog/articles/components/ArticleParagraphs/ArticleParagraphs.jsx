@@ -33,10 +33,19 @@ export const ArticleParagraphs = ({
                 <h2 className="mb-6 text-left text-2xl uppercase">
                   {paragraph.title}
                 </h2>
-                {paragraph.description.map((item, index) => (
-                  <p key={index} className="text-sm  text-secondary">
-                    {item}
-                  </p>
+                {paragraph.description.map((section, index) => (
+                  <div key={index}>
+                    {section.subtitle && (
+                      <h3 className="mb-3 text-left text-base uppercase">
+                        {section.subtitle}
+                      </h3>
+                    )}
+                    {section.content.map((para, idx) => (
+                      <p key={idx} className="mb-4 text-sm text-secondary">
+                        {para}
+                      </p>
+                    ))}
+                  </div>
                 ))}
               </div>
               <div className="container relative my-[50px] flex w-full flex-col items-center px-0">
@@ -74,10 +83,19 @@ export const ArticleParagraphs = ({
             <h2 className="mb-6 text-left text-2xl uppercase">
               {paragraph.title}
             </h2>
-            {paragraph.description.map((item, index) => (
-              <p key={index} className="text-sm  text-secondary">
-                {item}
-              </p>
+            {paragraph.description.map((section, index) => (
+              <div key={index}>
+                {section.subtitle && (
+                  <h3 className="mb-3 text-left text-base uppercase">
+                    {section.subtitle}
+                  </h3>
+                )}
+                {section.content.map((para, idx) => (
+                  <p key={idx} className="mb-4 text-sm text-secondary">
+                    {para}
+                  </p>
+                ))}
+              </div>
             ))}
           </div>
         );
