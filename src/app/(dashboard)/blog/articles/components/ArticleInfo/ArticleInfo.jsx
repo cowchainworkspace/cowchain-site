@@ -53,7 +53,6 @@ const ArticleInfo = () => {
         id: titleId,
         title
       });
-
       return {
         titleId,
         id: paragraph.id,
