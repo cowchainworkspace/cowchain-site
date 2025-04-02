@@ -1,11 +1,18 @@
 import Contact from "@/components/Contact";
+import Image from "next/image";
 import React from "react";
-import CaseHeroScreen from "../components/HeroScreen";
-import { retroBridgeTags } from "./utils/constants";
 import Banner from "../components/Banner";
-import RetroBridgeOverview from "./components/RetroBridgeOverview";
 import CasesSlider from "../components/CasesSlider";
-import { retroBridgeSlides } from "./utils/constants";
+import CaseHeroScreen from "../components/HeroScreen";
+import TeamBehind from "../components/TeamBehind";
+import Quote from "./components/Quote";
+import RetroBridgeOverview from "./components/RetroBridgeOverview";
+import RetroBridgeWhatWeDid from "./components/RetroBridgeWhatWeDid";
+import {
+  retroBridgeSlides,
+  retroBridgeTags,
+  retroBridgeTeam
+} from "./utils/constants";
 
 const RetroBridge = () => {
   return (
@@ -38,8 +45,21 @@ const RetroBridge = () => {
           "RetroBridge was designed to address the growing need for reliable multichain solutions in the blockchain ecosystem. Supporting over 42 blockchain networks, including EVM Layer 2 chains and others like StarkNet, Aptos, and Cosmos, RetroBridge serves as a dynamic blockchain supply chain platform for digital assets."
         }
       />
-      <CasesSlider images={retroBridgeSlides} />
-
+      <CasesSlider
+        images={retroBridgeSlides}
+        decorationElement={
+          <Image
+            src={"/cases/RetroBridge/cases-retrobridge-ellipse-decr.webp"}
+            width={"933"}
+            height={"251"}
+            alt="decoration ellipse"
+            className="absolute  h-full w-full scale-y-150"
+          />
+        }
+      />
+      <RetroBridgeWhatWeDid />
+      <TeamBehind team={retroBridgeTeam} />
+      <Quote />
       <Contact className={"pb-[138px] pt-40"} />
     </section>
   );

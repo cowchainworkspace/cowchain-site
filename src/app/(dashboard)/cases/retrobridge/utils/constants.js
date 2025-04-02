@@ -1,11 +1,11 @@
+import {slideFour, 
+  slideOne, slideThree, slideTwo 
+} from "../../../../../../public/cases/RetroBridge/slider";
 import {
   activityTc,
   exploreAgent,
   nfts
 } from "../../../../../../public/cases/hybrid/slider";
-import {
-  slideOne, slideTwo, slideThree, slideFour
-} from "../../../../../../public/cases/RetroBridge/slider";
 // import { coinclub, pixelVerse, wenix } from "../../../../../../public/projects"
 
 export const retroBridgeTags = [
@@ -92,109 +92,126 @@ export const retroBridgeSlides = [
 
 ];
 
-// export const hybridSolutions = [
-//   {
-//     id: 1,
-//     title: "Customized MoE Framework",
-//     desc: "This included combining specialized AI models for advanced data handling and execution, allowing developers to create and monetize AI agents.",
-//     textBlockWidth: 469,
-//     img: {
-//       width: 569,
-//       height: 332,
-//       info: "small robots, ai helpers",
-//       href: clockImage
-//     }
-//   },
-//   {
-//     id: 2,
-//     title: "L2 Blockchain Development",
-//     desc: "Our team developed the Hybrid Layer 2 blockchain using the Arbitrum Nitro stack, providing unmatched scalability and compatibility with Ethereum for streamlined AI integration.",
-//     textBlockWidth: 563,
-//     img: {
-//       width: 339,
-//       height: 339,
-//       info: "processor image with ai label on the top",
-//       href: aiImage
-//     }
-//   },
-//   {
-//     id: 3,
-//     title: "Atlas: Web3 Copilot",
-//     desc: "This tool simplifies research and market tracking, enhancing usability for both technical and non-technical users.",
-//     textBlockWidth: 460,
-//     img: {
-//       width: 339,
-//       height: 339,
-//       info: "five different cubes connected together",
-//       href: blockchainImage
-//     }
-//   },
-//   {
-//     id: 4,
-//     title: "Testnet Tools and Ecosystem Support",
-//     desc: "These tools enabled users to interact with the platform effortlessly, contributing to over 1 billion testnet transactions.",
-//     textBlockWidth: 441,
-//     img: {
-//       width: 409,
-//       height: 409,
-//       info: "robot helper",
-//       href: robotImage
-//     }
-//   },
-//   {
-//     id: 5,
-//     title: "Community Engagement Platform",
-//     desc: "These initiatives attracted 617K+ unique users and resulted in 125K+ daily claims, reflecting the flexibility of custom blockchain development.",
-//     textBlockWidth: 516,
-//     img: {
-//       width: 305,
-//       height: 274,
-//       info: "coins with a hybrid icon",
-//       href: stackCoinImage
-//     }
-//   }
-// ];
+export const hybridSolutions = [
+  {
+    id: 1,
+    title: "Website & Bridging App",
+    desc: "The platform’s website and app were built with React and Node.js, showcasing blockchain for business through responsive and scalable solutions.",
+    textBlockWidth: 498,
+    img: {
+      width: 569,
+      height: 332,
+      info: "small robots, ai helpers",
+      href: ''
+    }
+  },
+  {
+    id: 2,
+    title: "Testnet Bridge & Faucet",
+    desc: "Developed a testnet bridge and faucet, allowing users to test cross-chain transactions and gain familiarity with the platform’s functionality before deploying assets on the main network.",
+    textBlockWidth: 608,
+    img: {
+      width: 339,
+      height: 339,
+      info: "processor image with ai label on the top",
+      href: ''
+    }
+  },
+  {
+    id: 3,
+    title: "Multichain Integration",
+    desc: "Supported EVM and Layer 2 networks, plus emerging chains like StarkNet and Cosmos, expanding blockchain use cases while offering practical applications for supply chain blockchain in diverse industries.",
+    textBlockWidth: 599,
+    img: {
+      width: 339,
+      height: 339,
+      info: "five different cubes connected together",
+      href: ''
+    }
+  },
+  {
+    id: 4,
+    title: "Adventure Campaigns",
+    desc: "Gamified experiences with challenges and rewards drove community engagement and adoption.",
+    textBlockWidth: 448,
+    img: {
+      width: 409,
+      height: 409,
+      info: "robot helper",
+      href: ''
+    }
+  },
+  {
+    id: 5,
+    title: "NFT Integration",
+    desc: "Phased project implementation, each stage supported by unique NFTs, fostering user engagement and showcasing blockchain’s potential in enhancing cross-chain transactions and interoperability.",
+    textBlockWidth: 541,
+    img: {
+      width: 305,
+      height: 274,
+      info: "coins with a hybrid icon",
+      href: ''
+    }
+  },
+  {
+    id: 5,
+    title: "dApp Explorer",
+    desc: "Developed a dApp explorer enabling users to track transactions and blockchain activities efficiently, positioning the project as one of the standout blockchain case studies in cross-chain technology.",
+    textBlockWidth: 605,
+    img: {
+      width: 305,
+      height: 274,
+      info: "coins with a hybrid icon",
+      href: ''
+    }
+  }
+];
 
 
-// export const hybridTeam = [
-//   {
-//     id: 1,
-//     department: "development",
-//     people: "Oleh Shutiak, Oleh Proidakov, Dmytro Krasnoholovenko, Danylo Provilsky, Yaroslav Samoilenko"
-//   },
-//   {
-//     id: 2,
-//     department: "project management",
-//     people: "Viacheslav Ivchenko"
-//   },
-//   {
-//     id: 3,
-//     department: "qa",
-//     people: "Vitalii Dorokhin"
-//   }
-// ];
+export const retroBridgeTeam = [
+  {
+    id: 1,
+    department: "development",
+    people: "Oleh Shutiak, Oleh Proidakov"
+  },
+  {
+    id: 2,
+    department: "project management",
+    people: "Aleksandr Bohdanov"
+  },
+  {
+    id: 3,
+    department: "marketing & Seo",
+    people: "Alexandr Yaremenko"
+  },
+  {
+    id: 4,
+    department: "ui/ux design",
+    people: "Valeriya Bobko"
+  }
+];
 
-// export const hybridProjects = [
-//   {
-//     id: 1,
-//     tags: ['App Development', 'Website Development '],
-//     title: 'COINCLUB',
-//     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
-//     img: coinclub,
-//   },
-//   {
-//     id: 2,
-//     tags: ['App Development', 'Website Development '],
-//     title: 'PixelVerse',
-//     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
-//     img: pixelVerse,
-//   },
-//   {
-//     id: 3,
-//     tags: ['App Development', 'Website Development '],
-//     title: 'Wenix',
-//     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
-//     img: wenix
-//   },
+export const retroBridgeProjects = [
+  {
+    id: 1,
+    tags: ['App Development', 'Website Development '],
+    title: 'm2e platform',
+    desc: 'Large Move 2 earn game with complex ecosystem (DEX, crypto wallet, NFT Marketplace and native token)',
+    img: '',
+  },
+  {
+    id: 2,
+    tags: ['App Development', 'Website Development '],
+    title: 'GBC DAPP',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
+    img: '',
+  },
+  {
+    id: 3,
+    tags: ['App Development', 'Website Development '],
+    title: 'agenthub',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
+    img: ''
+  },
 
-// ]
+]
