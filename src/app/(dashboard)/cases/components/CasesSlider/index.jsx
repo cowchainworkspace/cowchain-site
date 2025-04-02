@@ -35,7 +35,7 @@ const CasesSlider = ({ images, decorationElement, isPixelVerse }) => {
 
   const setTweenFactor = useCallback((emblaApi) => {
     tweenFactor.current =
-      (isPixelVerse ? TWEEN_FACTOR_BASE : 0.05) *
+      (isPixelVerse ? 0.05 : TWEEN_FACTOR_BASE) *
       emblaApi.scrollSnapList().length;
   }, []);
 
@@ -119,7 +119,7 @@ const CasesSlider = ({ images, decorationElement, isPixelVerse }) => {
                   key={id}
                   className={cn(
                     "relative flex-shrink-0 pl-[30px]",
-                    isPixelVerse && lastIndex && "last:!mr-[20px]"
+                    isPixelVerse && lastIndex && "last:!mr-[15px]"
                   )}
                   style={{ width: `${width}px`, height: `${height}px` }}
                 >
