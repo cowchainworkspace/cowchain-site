@@ -1,22 +1,23 @@
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 import RightArrowSvg from "../../../../../../public/svgIcons/RightArrowSvg";
 
 const MoreProjects = ({ projects }) => {
   return (
-    <section className="pt-[154px]">
+    <section className={cn("pt-[154px]")}>
       <div className="max-width-[1440px] mx-auto mb-[50px] flex items-start justify-between pl-[95px] pr-[99px]">
         <h2 className="text-[60px] font-semibold uppercase leading-[42px] text-white">
           More projects
         </h2>
         <Link className="flex gap-4" href={"/cases"} target="_blank">
-          <span className="leading-90 text-2xl font-medium uppercase text-white underline">
+          <span className="text-2xl font-medium uppercase leading-90 text-white underline">
             view all
           </span>{" "}
           <RightArrowSvg />
         </Link>
       </div>
-      <div className="!border-white-50 grid grid-cols-3 border-y-[0.5px]">
+      <div className="grid grid-cols-3 border-y-[0.5px] !border-white-50">
         {projects.map(({ id, tags, title, desc, img }) => {
           return (
             <div
@@ -43,7 +44,7 @@ const MoreProjects = ({ projects }) => {
                     </div>
                   ))}
                 </div>
-                <h3 className="leading-90 font-roc text-2xl font-medium uppercase text-white">
+                <h3 className="font-roc text-2xl font-medium uppercase leading-90 text-white">
                   {title}
                 </h3>
                 <p className="font-manrope text-base leading-[22px] text-white">

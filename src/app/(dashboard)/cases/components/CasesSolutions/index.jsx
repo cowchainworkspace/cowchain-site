@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 
-const CasesSolutions = ({ solutions }) => {
+const CasesSolutions = ({ solutions, classes }) => {
   return (
     <section className="py-[120px]">
       <div className="mx-auto max-w-[1440px] px-[176px]">
@@ -15,7 +15,8 @@ const CasesSolutions = ({ solutions }) => {
               key={id}
               className={cn(
                 "flex w-full items-center justify-between",
-                (index + 1) % 2 === 0 && "flex-row-reverse"
+                (index + 1) % 2 === 0 && "flex-row-reverse",
+                classes
               )}
             >
               {/* Text Block */}

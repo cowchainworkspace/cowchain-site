@@ -11,7 +11,7 @@ const TWEEN_FACTOR_BASE = 0.01;
 const numberWithinRange = (number, min, max) =>
   Math.min(Math.max(number, min), max);
 
-const CasesSlider = ({ images, decorationElement }) => {
+const CasesSlider = ({ images, decorationElement, isPixelVerse }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { align: "center", loop: true, slidesToScroll: 1, startIndex: 1 },
     [
@@ -34,7 +34,9 @@ const CasesSlider = ({ images, decorationElement }) => {
   }, []);
 
   const setTweenFactor = useCallback((emblaApi) => {
-    tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length;
+    tweenFactor.current =
+      (isPixelVerse ? TWEEN_FACTOR_BASE : 0.05) *
+      emblaApi.scrollSnapList().length;
   }, []);
 
   const tweenScale = useCallback((emblaApi, eventName) => {
@@ -104,13 +106,21 @@ const CasesSlider = ({ images, decorationElement }) => {
       {decorationElement}
       <div className={"embla relative h-full  w-screen"}>
         <div className={"embla__viewport"} ref={emblaRef}>
-          <div className={cn("embla__container flex")}>
+          <div
+            className={cn(
+              "embla__container flex",
+              isPixelVerse && "gap-[15px]"
+            )}
+          >
             {images?.map(({ id, height, width, desc, href }, index) => {
               const lastIndex = index === images.length - 1;
               return (
                 <div
                   key={id}
-                  className={cn("relative flex-shrink-0 pl-[30px]")}
+                  className={cn(
+                    "relative flex-shrink-0 pl-[30px]",
+                    isPixelVerse && lastIndex && "last:!mr-[20px]"
+                  )}
                   style={{ width: `${width}px`, height: `${height}px` }}
                 >
                   <Image

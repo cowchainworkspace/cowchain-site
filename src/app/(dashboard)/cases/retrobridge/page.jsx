@@ -3,13 +3,17 @@ import Image from "next/image";
 import React from "react";
 import Banner from "../components/Banner";
 import CasesSlider from "../components/CasesSlider";
+import CasesSolutions from "../components/CasesSolutions";
 import CaseHeroScreen from "../components/HeroScreen";
+import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
 import Quote from "./components/Quote";
 import RetroBridgeOverview from "./components/RetroBridgeOverview";
 import RetroBridgeWhatWeDid from "./components/RetroBridgeWhatWeDid";
 import {
+  retroBridgeProjects,
   retroBridgeSlides,
+  retroBridgeSolutions,
   retroBridgeTags,
   retroBridgeTeam
 } from "./utils/constants";
@@ -53,13 +57,18 @@ const RetroBridge = () => {
             width={"933"}
             height={"251"}
             alt="decoration ellipse"
-            className="absolute  h-full w-full scale-y-150"
+            className="absolute h-full w-full scale-y-150"
           />
         }
+      />
+      <CasesSolutions
+        solutions={retroBridgeSolutions}
+        classes={"-mt-[70px]  first:mt-0"}
       />
       <RetroBridgeWhatWeDid />
       <TeamBehind team={retroBridgeTeam} />
       <Quote />
+      <MoreProjects projects={retroBridgeProjects} />
       <Contact className={"pb-[138px] pt-40"} />
     </section>
   );

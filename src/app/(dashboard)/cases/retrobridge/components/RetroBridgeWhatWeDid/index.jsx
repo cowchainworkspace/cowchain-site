@@ -7,7 +7,7 @@ import {
 
 const RetroBridgeWhatWeDid = () => {
   return (
-    <section className="pb-[134px] pt-30">
+    <section className="pb-[134px]">
       <div className="mx-auto max-w-[1440px] pl-[97px] pr-[99px]">
         <div className="mb-20 grid grid-cols-2 gap-10">
           <div className="bg-vintage-velvet relative h-[500px] w-full overflow-hidden">

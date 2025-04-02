@@ -41,7 +41,7 @@ const Hybrid = () => {
         containerClasses="max-w-[853px]"
       />
       <Banner
-        img={"/cases/hybrid/case-banner-retrobridge.webp"}
+        img={"/cases/hybrid/cases-hybrid-banner.webp"}
         classes={"h-[540px] w-full"}
         imgDesc={"hybrid banner image"}
         decorationElement={
@@ -88,6 +88,7 @@ const Hybrid = () => {
             className="absolute  h-full w-full scale-y-150"
           />
         }
+        isPixelVerse={true}
       />
       <CasesSolutions solutions={hybridSolutions} />
       <HybridWhatWeDid />

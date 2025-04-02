@@ -1,12 +1,20 @@
-import {slideFour, 
-  slideOne, slideThree, slideTwo 
-} from "../../../../../../public/cases/RetroBridge/slider";
 import {
-  activityTc,
-  exploreAgent,
-  nfts
-} from "../../../../../../public/cases/hybrid/slider";
-// import { coinclub, pixelVerse, wenix } from "../../../../../../public/projects"
+  slideFour,
+  slideOne,
+  slideThree,
+  slideTwo
+} from "../../../../../../public/cases/RetroBridge/slider";
+
+import {
+  bottles,
+  bottlesTwo,
+  bridger,
+  display,
+  graph,
+  wallet
+} from "../../../../../../public/cases/RetroBridge/solutions";
+
+import { agent, gbc, m2ePlatformImg } from "../../../../../../public/projects";
 
 export const retroBridgeTags = [
   {
@@ -30,33 +38,34 @@ export const overviewRetroBridgeItems = [
     itemName: "Project Outcomes",
     itemValue: [
       {
-       desc: 'Over $200M in bridged transactions.',
+        desc: "Over $200M in bridged transactions."
       },
       {
-        desc: '1M+ executed cross-chain bridges.',
-       },
-       {
-        desc: 'Positioned RetroBridge as a key blockchain application example in multichain operations.',
-       },
+        desc: "1M+ executed cross-chain bridges."
+      },
+      {
+        desc: "Positioned RetroBridge as a key blockchain application example in multichain operations."
+      }
     ]
   },
   {
     id: 3,
     itemName: "Project Architecture",
-    itemDesc: 'RetroBridge integrates robust blockchain technology examples such as smart contracts and decentralized protocols to create an advanced bridging solution. Its architecture includes:',
+    itemDesc:
+      "RetroBridge integrates robust blockchain technology examples such as smart contracts and decentralized protocols to create an advanced bridging solution. Its architecture includes:",
     itemValue: [
-     {
-        desc: 'A DEX for fast and secure token swaps.',
-       },
-       {
-        desc: 'A testnet bridge and faucet for risk-free testing.',
-       },
-       {
-        desc: 'A dApp explorer for tracking transactions.',
-       },
-       {
-        desc: 'NFT-backed project phases for user engagement.',
-       },
+      {
+        desc: "A DEX for fast and secure token swaps."
+      },
+      {
+        desc: "A testnet bridge and faucet for risk-free testing."
+      },
+      {
+        desc: "A dApp explorer for tracking transactions."
+      },
+      {
+        desc: "NFT-backed project phases for user engagement."
+      }
     ]
   }
 ];
@@ -82,39 +91,40 @@ export const retroBridgeSlides = [
     height: 539,
     desc: "mobile screen with a transfer details",
     href: slideThree
-  },  {
+  },
+  {
     id: 4,
     width: 818,
     height: 539,
     desc: "screen with a recent transactions",
     href: slideFour
   }
-
 ];
 
-export const hybridSolutions = [
+export const retroBridgeSolutions = [
   {
     id: 1,
     title: "Website & Bridging App",
     desc: "The platform’s website and app were built with React and Node.js, showcasing blockchain for business through responsive and scalable solutions.",
     textBlockWidth: 498,
     img: {
-      width: 569,
-      height: 332,
-      info: "small robots, ai helpers",
-      href: ''
-    }
+      width: 443,
+      height: 406,
+      info: "decorated bottles with nfts inside",
+      href: bottles
+   }
   },
   {
     id: 2,
     title: "Testnet Bridge & Faucet",
     desc: "Developed a testnet bridge and faucet, allowing users to test cross-chain transactions and gain familiarity with the platform’s functionality before deploying assets on the main network.",
     textBlockWidth: 608,
+    hasDecoration: true,
     img: {
-      width: 339,
-      height: 339,
-      info: "processor image with ai label on the top",
-      href: ''
+      width: 440,
+      height: 400,
+      info: "graph with decoration ellipse",
+      href: graph,
     }
   },
   {
@@ -123,10 +133,10 @@ export const hybridSolutions = [
     desc: "Supported EVM and Layer 2 networks, plus emerging chains like StarkNet and Cosmos, expanding blockchain use cases while offering practical applications for supply chain blockchain in diverse industries.",
     textBlockWidth: 599,
     img: {
-      width: 339,
-      height: 339,
-      info: "five different cubes connected together",
-      href: ''
+      width: 335,
+      height: 406,
+      info: "bridger display",
+      href: display
     }
   },
   {
@@ -134,11 +144,12 @@ export const hybridSolutions = [
     title: "Adventure Campaigns",
     desc: "Gamified experiences with challenges and rewards drove community engagement and adoption.",
     textBlockWidth: 448,
+    hasDecoration: true,
     img: {
-      width: 409,
-      height: 409,
-      info: "robot helper",
-      href: ''
+      width: 400,
+      height: 440,
+      info: "bridge wallet with a decoration ellipse",
+      href: wallet
     }
   },
   {
@@ -147,10 +158,10 @@ export const hybridSolutions = [
     desc: "Phased project implementation, each stage supported by unique NFTs, fostering user engagement and showcasing blockchain’s potential in enhancing cross-chain transactions and interoperability.",
     textBlockWidth: 541,
     img: {
-      width: 305,
-      height: 274,
-      info: "coins with a hybrid icon",
-      href: ''
+      width: 447,
+      height: 320,
+      info: "decorated bottles with nfts inside",
+      href: bottlesTwo
     }
   },
   {
@@ -159,14 +170,13 @@ export const hybridSolutions = [
     desc: "Developed a dApp explorer enabling users to track transactions and blockchain activities efficiently, positioning the project as one of the standout blockchain case studies in cross-chain technology.",
     textBlockWidth: 605,
     img: {
-      width: 305,
-      height: 274,
+      width: 374,
+      height: 320,
       info: "coins with a hybrid icon",
-      href: ''
+      href: bridger
     }
   }
 ];
-
 
 export const retroBridgeTeam = [
   {
@@ -194,24 +204,23 @@ export const retroBridgeTeam = [
 export const retroBridgeProjects = [
   {
     id: 1,
-    tags: ['App Development', 'Website Development '],
-    title: 'm2e platform',
-    desc: 'Large Move 2 earn game with complex ecosystem (DEX, crypto wallet, NFT Marketplace and native token)',
-    img: '',
+    tags: ["App Development", "Website Development "],
+    title: "m2e platform",
+    desc: "Large Move 2 earn game with complex ecosystem (DEX, crypto wallet, NFT Marketplace and native token)",
+    img: m2ePlatformImg
   },
   {
     id: 2,
-    tags: ['App Development', 'Website Development '],
-    title: 'GBC DAPP',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
-    img: '',
+    tags: ["App Development", "Website Development "],
+    title: "GBC DAPP",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .",
+    img: gbc
   },
   {
     id: 3,
-    tags: ['App Development', 'Website Development '],
-    title: 'agenthub',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
-    img: ''
-  },
-
-]
+    tags: ["App Development", "Website Development "],
+    title: "agenthub",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .",
+    img: agent
+  }
+];

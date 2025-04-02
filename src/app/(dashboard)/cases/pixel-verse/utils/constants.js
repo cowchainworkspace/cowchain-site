@@ -1,4 +1,4 @@
-import {coinclub, hybrid, wenix } from "../../../../../../public/projects/index";
+import {coinclub, hybrid, wenix } from "../../../../../../public/projects";
 
 export const pixelVerseTags = [
   {
