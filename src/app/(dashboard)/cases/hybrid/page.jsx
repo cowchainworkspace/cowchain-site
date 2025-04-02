@@ -88,6 +88,7 @@ const Hybrid = () => {
             className="absolute  h-full w-full scale-y-150"
           />
         }
+        isPixelVerse={true}
       />
       <CasesSolutions solutions={hybridSolutions} />
       <HybridWhatWeDid />
