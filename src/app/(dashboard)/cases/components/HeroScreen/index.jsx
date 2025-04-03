@@ -10,7 +10,8 @@ const CaseHeroScreen = ({
   sectionClasses = "",
   containerClasses = "",
   headerClasses = "",
-  descriptionClasses = ""
+  descriptionClasses = "",
+  bgDecoration
 }) => {
   return (
     <section className={cn("w-full pb-32 pt-[111px]", sectionClasses)}>
@@ -20,6 +21,7 @@ const CaseHeroScreen = ({
           containerClasses
         )}
       >
+        {bgDecoration}
         <div className="flex gap-2">
           {tags.map(({ tagLabel, id }) => (
             <CaseTag key={id} tagLabel={tagLabel} />
