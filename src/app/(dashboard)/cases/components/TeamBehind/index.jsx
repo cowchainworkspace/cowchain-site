@@ -1,11 +1,12 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 
-const TeamBehind = ({ team }) => {
+const TeamBehind = ({ team, classes }) => {
   return (
     <section>
-      <div className="mx-auto max-w-[1440px] px-[98px]">
+      <div className={cn("mx-auto max-w-[1440px] px-[98px]", classes)}>
         <div className="grid grid-cols-2">
-          <h2 className="leading-90 font-roc text-[60px] font-medium uppercase">
+          <h2 className="font-roc text-[60px] font-medium uppercase leading-90">
             team behind
             <br /> the project
           </h2>
@@ -13,7 +14,7 @@ const TeamBehind = ({ team }) => {
             {team.map(({ id, department, people }) => (
               <div
                 key={id}
-                className="border-white-50 border-b-[0.5px] pb-8 last:border-0 last:pb-0"
+                className="border-b-[0.5px] border-white-50 pb-8 last:border-0 last:pb-0"
               >
                 <h4 className="mb-4 font-manrope text-xs uppercase leading-5 tracking-[2px] text-secondary">
                   {department}

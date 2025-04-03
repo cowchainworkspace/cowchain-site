@@ -23,7 +23,7 @@ const MoreProjects = ({ projects }) => {
             <div
               key={id}
               className={
-                "flex h-[624px] w-full flex-col items-center pb-[30px]"
+                "z-10 flex h-[624px] w-full flex-col items-center pb-[30px]"
               }
               style={{
                 backgroundImage: `url(${img.src})`,

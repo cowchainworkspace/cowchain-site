@@ -41,7 +41,9 @@ export default {
       fontFamily: {
         roc: ['roc-grotesk', 'sans-serif'],
         manrope: ["Manrope", 'sans-serif'],
-        rubik: ["Rubik", 'sans-serif']
+        rubik: ["Rubik", 'sans-serif'],
+        anton: ["Anton", 'sans-serif'],
+        poppins: ["Poppins", 'sans-serif']
       },
       borderRadius: {
         20: "20px"

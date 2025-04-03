@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&family=Rubik:wght@300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&family=Rubik:wght@300..900&family=Anton&family=Poppins:wght@400;700&display=swap");
 
 @import "/node_modules/react-modal-video/scss/modal-video.scss";
 
@@ -22,6 +22,8 @@ body {
     "Fira Sans",
     "Droid Sans",
     "Helvetica Neue",
+    "Anton",
+    "Poppins",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -470,4 +472,40 @@ input:-webkit-autofill:active {
   text-overflow: ellipsis;
   white-space: nowrap;
   display: inline-block;
+}
+
+.inner-border {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.inner-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  border: 1px solid #ffffff14;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.club-inner-border {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.club-inner-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 14.73px;
+  border: 1.84px solid #ffffff14;
+  pointer-events: none;
+  box-sizing: border-box;
 }

@@ -11,7 +11,12 @@ const TWEEN_FACTOR_BASE = 0.01;
 const numberWithinRange = (number, min, max) =>
   Math.min(Math.max(number, min), max);
 
-const CasesSlider = ({ images, decorationElement, isPixelVerse }) => {
+const CasesSlider = ({
+  images,
+  decorationElement,
+  isPixelVerse,
+  sectionClasses
+}) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { align: "center", loop: true, slidesToScroll: 1, startIndex: 1 },
     [
@@ -102,7 +107,12 @@ const CasesSlider = ({ images, decorationElement, isPixelVerse }) => {
   }, [emblaApi, tweenScale]);
 
   return (
-    <section className="relative mx-auto h-[522px] w-full max-w-[1440px]">
+    <section
+      className={cn(
+        "relative mx-auto h-[522px] w-full max-w-[1440px]",
+        sectionClasses
+      )}
+    >
       {decorationElement}
       <div className={"embla relative h-full  w-screen"}>
         <div className={"embla__viewport"} ref={emblaRef}>

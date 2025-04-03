@@ -5,3 +5,4 @@ export { default as pixelVerse } from "./pixel-verse.webp";
 export { default as agent } from "./agent.webp";
 export { default as gbc } from "./gbc.webp";
 export { default as m2ePlatformImg } from "./m2e-platform.webp";
+export { default as reflect } from "./reflect.webp";
