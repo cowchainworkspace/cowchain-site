@@ -17,7 +17,7 @@ const Quote = () => {
         <Image
           width={120}
           height={166}
-          src={"/cases/retroBridge/retrobridge-icon.png"}
+          src={"/cases/RetroBridge/retrobridge-icon.png"}
           className="absolute -right-[120px] -top-[83px] h-[166px] w-30"
         />
       </div>
