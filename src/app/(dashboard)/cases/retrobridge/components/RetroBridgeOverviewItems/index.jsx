@@ -18,7 +18,7 @@ const RetroBridgeOverviewItems = ({ items }) => {
       >
         {items.map(({ itemName, id, itemValue, itemDesc }, index) => (
           <AccordionItem
-            className="border-b-[0.5px] border-white-50 py-8 first:pt-0"
+            className="border-b-[0.5px] border-white-50 py-8 first:pt-0 "
             key={id}
           >
             {({ isExpanded }) => (
