@@ -107,9 +107,10 @@ export const retroBridgeSolutions = [
     title: "Website & Bridging App",
     desc: "The platform’s website and app were built with React and Node.js, showcasing blockchain for business through responsive and scalable solutions.",
     textBlockWidth: 498,
+    imageClasses: '-mt-[10px]',
     img: {
-      width: 443,
-      height: 406,
+      width: 500,
+      height:500,
       info: "decorated bottles with nfts inside",
       href: bottles
    }
@@ -119,7 +120,6 @@ export const retroBridgeSolutions = [
     title: "Testnet Bridge & Faucet",
     desc: "Developed a testnet bridge and faucet, allowing users to test cross-chain transactions and gain familiarity with the platform’s functionality before deploying assets on the main network.",
     textBlockWidth: 608,
-    hasDecoration: true,
     img: {
       width: 440,
       height: 400,
@@ -144,7 +144,6 @@ export const retroBridgeSolutions = [
     title: "Adventure Campaigns",
     desc: "Gamified experiences with challenges and rewards drove community engagement and adoption.",
     textBlockWidth: 448,
-    hasDecoration: true,
     img: {
       width: 400,
       height: 440,

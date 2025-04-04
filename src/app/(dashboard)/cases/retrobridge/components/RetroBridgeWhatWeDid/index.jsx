@@ -10,7 +10,7 @@ const RetroBridgeWhatWeDid = () => {
     <section className="pb-[134px]">
       <div className="mx-auto max-w-[1440px] pl-[97px] pr-[99px]">
         <div className="mb-20 grid grid-cols-2 gap-10">
-          <div className="bg-vintage-velvet relative h-[500px] w-full overflow-hidden">
+          <div className="relative h-[500px] w-full overflow-hidden bg-vintage-velvet">
             <Image
               className="absolute bottom-0  left-1/2 -translate-x-1/2"
               src={pictureTwo}
@@ -19,7 +19,7 @@ const RetroBridgeWhatWeDid = () => {
               alt="screenshot of the game"
             />
           </div>
-          <div className="bg-muted-horizon relative h-[500px] w-full overflow-hidden">
+          <div className="relative h-[500px] w-full overflow-hidden bg-muted-horizon">
             <Image
               className="absolute bottom-0 left-1/2 -translate-x-1/2"
               src={pictureOne}
@@ -34,7 +34,7 @@ const RetroBridgeWhatWeDid = () => {
         </h2>
         <div className="grid grid-cols-2 gap-10">
           <div className="border-t-[0.5px] border-white-50 pt-8">
-            <h3 className="mb-4 font-manrope text-sm font-semibold uppercase leading-5 tracking-[2px] text-white-70">
+            <h3 className="mb-4 font-manrope text-sm font-bold uppercase leading-5 tracking-[2px] text-white-70">
               CHALLENGE
             </h3>
             <p className="text-xl font-medium leading-[30px] text-white">
@@ -48,7 +48,7 @@ const RetroBridgeWhatWeDid = () => {
           </div>
 
           <div className="border-t-[0.5px] border-white-50 pt-8">
-            <h3 className="mb-4 font-manrope text-sm font-semibold uppercase leading-5 tracking-[2px] text-white-70">
+            <h3 className="mb-4 font-manrope text-sm font-bold uppercase leading-5 tracking-[2px] text-white-70">
               result
             </h3>
             <p className="text-xl font-medium leading-[30px] text-white">

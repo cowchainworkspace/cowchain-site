@@ -10,54 +10,68 @@ const CasesSolutions = ({ solutions, classes }) => {
           solutions
         </h2>
         <div className="flex w-full flex-col gap-4">
-          {solutions.map(({ id, title, desc, img, textBlockWidth }, index) => (
-            <div
-              key={id}
-              className={cn(
-                "flex w-full items-center justify-between",
-                (index + 1) % 2 === 0 && "flex-row-reverse",
-                classes
-              )}
-            >
-              {/* Text Block */}
+          {solutions.map(
+            (
+              {
+                id,
+                title,
+                desc,
+                img,
+                textBlockWidth,
+                blockClasses,
+                imageClasses
+              },
+              index
+            ) => (
               <div
+                key={id}
                 className={cn(
-                  "flex  flex-col gap-[30px]",
-                  (index + 1) % 2 === 0 && "items-end"
+                  "flex w-full items-center justify-between",
+                  (index + 1) % 2 === 0 && "flex-row-reverse",
+                  classes
                 )}
-                style={{
-                  width: `${textBlockWidth}px`
-                }}
               >
-                <h3 className="font-manrope text-xs uppercase leading-5 tracking-[2px] text-secondary">
-                  {title}
-                </h3>
-                <p
+                {/* Text Block */}
+                <div
                   className={cn(
-                    "text-xl font-medium leading-[30px] text-white",
-                    (index + 1) % 2 === 0 && "text-right"
+                    "flex  flex-col gap-[30px]",
+                    (index + 1) % 2 === 0 && "items-end",
+                    blockClasses
                   )}
+                  style={{
+                    width: `${textBlockWidth}px`
+                  }}
                 >
-                  {desc}
-                </p>
-              </div>
+                  <h3 className="font-manrope text-xs uppercase leading-5 tracking-[2px] text-secondary">
+                    {title}
+                  </h3>
+                  <p
+                    className={cn(
+                      "text-xl font-medium leading-[30px] text-white",
+                      (index + 1) % 2 === 0 && "text-right"
+                    )}
+                  >
+                    {desc}
+                  </p>
+                </div>
 
-              <div
-                className="relative flex-shrink-0"
-                style={{
-                  width: `${img.width}px`,
-                  height: `${img.height}px`
-                }}
-              >
-                <Image
-                  src={img.href}
-                  alt={img.info}
-                  fill
-                  className="object-contain"
-                />
+                <div
+                  className={cn("relative flex-shrink-0", imageClasses)}
+                  style={{
+                    width: `${img.width}px`,
+                    height: `${img.height}px`
+                  }}
+                >
+                  <Image
+                    src={img.href}
+                    alt={img.info}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </div>
     </section>

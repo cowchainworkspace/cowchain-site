@@ -35,7 +35,7 @@ const RetroBridge = () => {
             demand for interoperability in Web3.
           </>
         }
-        headerClasses="text-center max-w-[566px] uppercase"
+        headerClasses="text-center max-w-[566px] uppercase font-foc font-medium leading-90"
         containerClasses="max-w-[641px]"
         descriptionClasses="text-center"
       />
@@ -62,13 +62,14 @@ const RetroBridge = () => {
             className="absolute h-full w-full scale-y-150"
           />
         }
+        sectionClasses={"h-[539px]"}
       />
       <CasesSolutions
         solutions={retroBridgeSolutions}
-        classes={"-mt-[70px]  first:mt-0"}
+        classes={"-mt-[70px]  last:mt-0"}
       />
       <RetroBridgeWhatWeDid />
-      <TeamBehind team={retroBridgeTeam} />
+      <TeamBehind descClasses={"font-bold"} team={retroBridgeTeam} />
       <Quote />
       <MoreProjects projects={retroBridgeProjects} />
       <Contact className={"pb-[138px] pt-40"} />
