@@ -12,7 +12,10 @@ import { cn } from "@/lib/utils";
 const RetroBridgeOverviewItems = ({ items }) => {
   return (
     <div className=" w-full">
-      <Accordion allowMultiple={true}>
+      <Accordion
+        allowMultiple={true}
+        defaultIndex={Array.from({ length: items.length }, (_, i) => i)}
+      >
         {items.map(({ itemName, id, itemValue, itemDesc }, index) => (
           <AccordionItem
             className="border-b-[0.5px] border-white-50 py-8 first:pt-0"

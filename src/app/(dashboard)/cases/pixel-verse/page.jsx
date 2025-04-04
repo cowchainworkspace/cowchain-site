@@ -6,13 +6,18 @@ import ProjectOverview from "../components/ProjectOverview";
 import TeamBehind from "../components/TeamBehind";
 import PixelVerseAvatarAI from "./components/PixelVerseAvatarAI";
 import PixelVerseWhatWeDid from "./components/PixelVerseWhatWeDid";
-
+import { metadata } from "./utils/pixelVerseMetadata";
 import {
   overviewItems,
   pixelVerseProjects,
   pixelVerseTags,
-  pixelVerseTeam
+  pixelVerseTeam,
+  pixelVerseSlides
 } from "./utils/constants";
+import CasesSlider from "../components/CasesSlider";
+import Image from "next/image";
+
+export { metadata };
 
 const PixelVerse = () => {
   return (
@@ -57,10 +62,18 @@ const PixelVerse = () => {
         projectTitle={"Project overview"}
         webSiteLink={"https://t.me/pixelverse_xyz"}
       />
-      <Banner
-        img={"/cases/PixelVerse/pixel-verse-banner-md.webp"}
-        imgDesc={"Screenshots from PixelVerse application"}
-        classes={"w-full h-[514px]"}
+      <CasesSlider
+        images={pixelVerseSlides}
+        decorationElement={
+          <Image
+            width={"933"}
+            height={"251"}
+            alt="decoration ellipse"
+            className="absolute  h-full w-full scale-y-150"
+            src={"/cases/PixelVerse/pixel-verse-ellipse.webp"}
+          />
+        }
+        isPixelVerse={true}
       />
       <PixelVerseWhatWeDid />
       <TeamBehind team={pixelVerseTeam} />
