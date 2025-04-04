@@ -43,7 +43,8 @@ export default {
         manrope: ["Manrope", 'sans-serif'],
         rubik: ["Rubik", 'sans-serif'],
         anton: ["Anton", 'sans-serif'],
-        poppins: ["Poppins", 'sans-serif']
+        poppins: ["Poppins", 'sans-serif'],
+        montserrat: ["Montserrat", 'sans-serif']
       },
       borderRadius: {
         20: "20px"

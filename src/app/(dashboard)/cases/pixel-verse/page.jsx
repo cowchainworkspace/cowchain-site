@@ -73,6 +73,7 @@ const PixelVerse = () => {
             src={"/cases/PixelVerse/pixel-verse-ellipse.webp"}
           />
         }
+        sectionClasses={"!h-[514px]"}
         isPixelVerse={true}
       />
       <PixelVerseWhatWeDid />
