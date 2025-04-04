@@ -28,6 +28,7 @@ const PixelVerse = () => {
         heroDescription={
           "PixelVerse bridges Web2 and Web3 gaming with Telegram Mini Apps like PixelTap, achieving 45 million monthly active users (MAU). Through strategic use of Telegram’s user base, it became a leader in GameFi innovation and engagement."
         }
+        headerClasses="font-montserrat"
       />
       <Banner
         img={"/cases/PixelVerse/pixel-verse-banner.webp"}

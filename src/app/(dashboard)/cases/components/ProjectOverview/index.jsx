@@ -2,17 +2,30 @@ import Link from "next/link";
 import React from "react";
 import RightArrowSvg from "../../../../../../public/svgIcons/RightArrowSvg";
 import OverviewItems from "../OverviewItems/OverviewItems";
+import { cn } from "@/lib/utils";
 
 const ProjectOverview = ({
   projectTitle,
   projectDescription,
   overviewItems,
-  webSiteLink
+  webSiteLink,
+  sectionClasses,
+  overviewClasses
 }) => {
   return (
     <section>
-      <div className="mx-auto max-w-[1440px] pb-[127px] pl-[97px] pr-[109px] pt-[141px]">
-        <div className="grid grid-cols-[1fr_521px] gap-[182px]">
+      <div
+        className={cn(
+          "mx-auto max-w-[1440px] pb-[127px] pl-[97px] pr-[109px] pt-[141px]",
+          sectionClasses
+        )}
+      >
+        <div
+          className={cn(
+            "grid grid-cols-[1fr_521px] gap-[182px]",
+            overviewClasses
+          )}
+        >
           <div className="flex flex-col gap-8">
             <h3 className="font-roc text-[54px] font-medium uppercase leading-90 text-white">
               {projectTitle}
