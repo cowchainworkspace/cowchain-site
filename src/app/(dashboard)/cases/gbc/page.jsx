@@ -11,6 +11,8 @@ import GBCRewards from "./components/GBCRewards";
 import GBCSlider from "./components/GBCSlider";
 import GBCSolutions from "./components/GBCSolutions";
 import GBCWhatWeDid from "./components/GBCWhatWeDid";
+import { metadata } from "./utils/gbcMetadata";
+
 import {
   gbcProjects,
   gbcSlides,
@@ -18,6 +20,7 @@ import {
   gbcTags,
   gbcTeam
 } from "./utils/constants";
+export { metadata };
 
 const GBC = () => {
   return (

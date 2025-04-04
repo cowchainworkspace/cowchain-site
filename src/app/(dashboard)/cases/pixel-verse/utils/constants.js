@@ -1,4 +1,5 @@
 import {coinclub, hybrid, wenix } from "../../../../../../public/projects";
+import {slideOne, slideTwo, slideThree, slideFour} from "../../../../../../public/cases/PixelVerse/slider";
 
 export const pixelVerseTags = [
   {
@@ -82,6 +83,65 @@ export const businessChallenges = [
     id: 3,
     title: "User Accessibility",
     desc: "Addressing onboarding friction for non-Web3 players."
+  }
+];
+
+export const pixelVerseSlides = [
+  {
+    id: 1,
+    width: 722,
+    height: 514,
+    desc: "screen daily rewards",
+    href: slideOne
+  },
+  {
+    id: 2,
+    width: 262,
+    height: 514,
+    desc: "Mobile screen with rewards",
+    href: slideTwo
+  },
+  {
+    id: 3,
+    width: 262,
+    height: 514,
+    desc: "Mobile screen with heroes",
+    href: slideThree
+  },
+  {
+    id: 4,
+    width: 262,
+    height: 514,
+    desc: "Mobile screen with rewards for claiming",
+    href: slideFour
+  },
+  {
+    id: 5,
+    width: 722,
+    height: 514,
+    desc: "screen daily rewards",
+    href: slideOne
+  },
+  {
+    id: 6,
+    width: 262,
+    height: 514,
+    desc: "Mobile screen with rewards",
+    href: slideTwo
+  },
+  {
+    id: 7,
+    width: 262,
+    height: 514,
+    desc: "Mobile screen with heroes",
+    href: slideThree
+  },
+  {
+    id: 8,
+    width: 262,
+    height: 514,
+    desc: "Mobile screen with rewards for claiming",
+    href: slideFour
   }
 ];
 

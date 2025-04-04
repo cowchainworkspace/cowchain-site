@@ -12,10 +12,13 @@ import TopArrowSvg from "../../../../../../public/svgIcons/TopArrowSvg";
 const OverviewItems = ({ overviewItems }) => {
   return (
     <div className=" w-full">
-      <Accordion allowMultiple={true}>
+      <Accordion
+        allowMultiple={true}
+        defaultIndex={Array.from({ length: overviewItems.length }, (_, i) => i)}
+      >
         {overviewItems.map(({ itemName, id, itemValue }) => (
           <AccordionItem
-            className="border-white-50 border-b-[0.5px] py-5 first:pt-0"
+            className="border-b-[0.5px] border-white-50 py-5 first:pt-0"
             key={id}
           >
             {({ isExpanded }) => (

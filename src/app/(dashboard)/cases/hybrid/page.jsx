@@ -8,7 +8,7 @@ import CaseHeroScreen from "../components/HeroScreen";
 import ProjectOverview from "../components/ProjectOverview";
 import BannerTitle from "./components/BannerTitle";
 import HybridWhatWeDid from "./components/HybridWhatWeDid";
-
+import { metadata } from "./utils/hybridMetaData";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
 import {
@@ -19,6 +19,8 @@ import {
   hybridTeam,
   overviewHybridItems
 } from "./utils/constants";
+
+export { metadata };
 
 const Hybrid = () => {
   return (
@@ -88,7 +90,7 @@ const Hybrid = () => {
             className="absolute  h-full w-full scale-y-150"
           />
         }
-        isPixelVerse={true}
+        isHybrid={true}
       />
       <CasesSolutions solutions={hybridSolutions} />
       <HybridWhatWeDid />

@@ -10,6 +10,7 @@ import TeamBehind from "../components/TeamBehind";
 import Quote from "./components/Quote";
 import RetroBridgeOverview from "./components/RetroBridgeOverview";
 import RetroBridgeWhatWeDid from "./components/RetroBridgeWhatWeDid";
+import { metadata } from "./utils/retroBridgeMetadata";
 import {
   retroBridgeProjects,
   retroBridgeSlides,
@@ -17,6 +18,7 @@ import {
   retroBridgeTags,
   retroBridgeTeam
 } from "./utils/constants";
+export { metadata };
 
 const RetroBridge = () => {
   return (
