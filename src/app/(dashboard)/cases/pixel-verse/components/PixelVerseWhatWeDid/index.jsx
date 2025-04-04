@@ -10,12 +10,12 @@ const PixelVerseWhatWeDid = () => {
   return (
     <section className="py-30">
       <div className="mx-auto max-w-[1440px] px-[98px]">
-        <h2 className="leading-90 mb-15 font-roc text-[60px] font-medium">
+        <h2 className="mb-15 font-roc text-[60px] font-medium leading-90">
           What we did
         </h2>
         <div className="mb-30 grid grid-cols-2 gap-10">
-          <div className="border-white-50 border-t-[0.5px] pt-8">
-            <h3 className="mb-4 font-manrope text-sm uppercase leading-5 tracking-[2px] !text-secondary">
+          <div className="border-t-[0.5px] border-white-50 pt-8">
+            <h3 className="mb-4 font-manrope text-xs uppercase leading-5 tracking-[2px] !text-secondary">
               Business Challenges
             </h3>
             <div className="flex flex-col gap-[14px]">
@@ -31,8 +31,8 @@ const PixelVerseWhatWeDid = () => {
               ))}
             </div>
           </div>
-          <div className="border-white-50 border-t-[0.5px] pt-8">
-            <h3 className="mb-4 font-manrope text-sm uppercase leading-5 tracking-[2px] text-white">
+          <div className="border-t-[0.5px] border-white-50 pt-8">
+            <h3 className="mb-4 font-manrope text-xs uppercase leading-5 tracking-[2px] text-white">
               Custom Telegram Mini App Development
             </h3>
             <p className="text-sm font-medium leading-6 text-white-70">
@@ -46,7 +46,7 @@ const PixelVerseWhatWeDid = () => {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-10">
-          <div className="bg-cosmic-plum-fade relative h-[500px] w-full overflow-hidden">
+          <div className="relative h-[500px] w-full overflow-hidden bg-cosmic-plum-fade">
             <Image
               className="absolute bottom-0  left-1/2 -translate-x-1/2"
               src={weDidFirst}
@@ -55,7 +55,7 @@ const PixelVerseWhatWeDid = () => {
               alt="screenshot of the game"
             />
           </div>
-          <div className="bg-vintage-blush-gradient relative h-[500px] w-full overflow-hidden">
+          <div className="relative h-[500px] w-full overflow-hidden bg-vintage-blush-gradient">
             <Image
               className="absolute bottom-0 left-1/2 -translate-x-1/2"
               src={weDidSecond}

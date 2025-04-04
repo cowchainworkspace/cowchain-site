@@ -6,12 +6,16 @@ import RightArrowSvg from "../../../../../../public/svgIcons/RightArrowSvg";
 const MoreProjects = ({ projects }) => {
   return (
     <section className={cn("pt-[154px]")}>
-      <div className="max-width-[1440px] mx-auto mb-[50px] flex items-start justify-between pl-[95px] pr-[99px]">
-        <h2 className="text-[60px] font-semibold uppercase leading-[42px] text-white">
+      <div className="mx-auto mb-[50px] flex max-w-[1440px] items-start justify-between pl-[95px] pr-[99px]">
+        <h2 className="font-manrope text-[60px] font-semibold uppercase leading-[42px] text-white">
           More projects
         </h2>
-        <Link className="flex gap-4" href={"/cases"} target="_blank">
-          <span className="text-2xl font-medium uppercase leading-90 text-white underline">
+        <Link
+          className="flex items-center gap-4"
+          href={"/cases"}
+          target="_blank"
+        >
+          <span className="font-roc text-2xl font-medium uppercase leading-90 text-white underline">
             view all
           </span>{" "}
           <RightArrowSvg />
