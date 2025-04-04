@@ -39,8 +39,9 @@ const Hybrid = () => {
             monetization, solidifying its role in blockchain innovation.
           </>
         }
-        headerClasses="uppercase text-center"
+        headerClasses="uppercase font-roc text-center font-medium"
         containerClasses="max-w-[853px]"
+        sectionClasses="pb-[125px]"
       />
       <Banner
         img={"/cases/hybrid/cases-hybrid-banner.webp"}
@@ -78,6 +79,8 @@ const Hybrid = () => {
           </>
         }
         webSiteLink={"#"}
+        sectionClasses={"pt-[119px] pl-[103px] pb-[120px]"}
+        overviewClasses={"gap-[176px]"}
       />
       <CasesSlider
         images={hybridSlides}
@@ -94,7 +97,11 @@ const Hybrid = () => {
       />
       <CasesSolutions solutions={hybridSolutions} />
       <HybridWhatWeDid />
-      <TeamBehind team={hybridTeam} />
+      <TeamBehind
+        team={hybridTeam}
+        descClasses={"font-semibold"}
+        blockClasses={"last:pb-8 last:border-b-[0.5px]"}
+      />
       <MoreProjects projects={hybridProjects} />
       <Contact className={"pb-[138px] pt-[194px]"} />
     </section>

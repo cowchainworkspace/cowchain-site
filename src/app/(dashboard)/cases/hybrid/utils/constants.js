@@ -81,21 +81,21 @@ export const hybridSlides = [
   {
     id: 1,
     width: 807,
-    height: 489,
+    height: 522,
     desc: "activity 10c",
     href: activityTc
   },
   {
     id: 2,
     width: 730,
-    height: 489,
+    height: 522,
     desc: "explore agents one",
     href: exploreAgent
   },
   {
     id: 3,
     width: 700,
-    height: 489,
+    height: 522,
     desc: "nfts",
     href: nfts
   }

@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-const TeamBehind = ({ team, classes }) => {
+const TeamBehind = ({ team, classes, descClasses, blockClasses }) => {
   return (
     <section>
       <div className={cn("mx-auto max-w-[1440px] px-[98px]", classes)}>
@@ -14,12 +14,20 @@ const TeamBehind = ({ team, classes }) => {
             {team.map(({ id, department, people }) => (
               <div
                 key={id}
-                className="border-b-[0.5px] border-white-50 pb-8 last:border-0 last:pb-0"
+                className={cn(
+                  "border-b-[0.5px] border-white-50 pb-8 last:border-0 last:pb-0",
+                  blockClasses
+                )}
               >
                 <h4 className="mb-4 font-manrope text-xs uppercase leading-5 tracking-[2px] text-secondary">
                   {department}
                 </h4>
-                <p className="font-manrope text-xl font-medium leading-[30px] text-white">
+                <p
+                  className={cn(
+                    "font-manrope text-xl font-medium leading-[30px] text-white",
+                    descClasses
+                  )}
+                >
                   {people}
                 </p>
               </div>
