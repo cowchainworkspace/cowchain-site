@@ -40,20 +40,21 @@ const GBC = () => {
         tags={gbcTags}
         descriptionClasses="max-w-[590px] text-[12.89px] font-semiBold leading-[22px] !text-white-70"
         containerClasses="relative"
+        headerClasses="font-montserrat text-[58.92px]"
         bgDecoration={
           <>
             <Image
               width={56}
               height={56}
               src={"/cases/gbc/candy-one.png"}
-              className="absolute left-0 top-[35%] scale-150"
+              className="absolute -left-10 top-[35%] scale-150"
               alt={"lollipop"}
             />
             <Image
               width={78}
               height={79}
               src={"/cases/gbc/candy-two.png"}
-              className="absolute -right-2 bottom-0 scale-150"
+              className="absolute -right-10 bottom-0 scale-150"
               alt={"lollipop"}
             />
           </>
@@ -70,7 +71,12 @@ const GBC = () => {
       <GBCRewards />
       <GBCWhatWeDid />
       <GBCSlider />
-      <TeamBehind team={gbcTeam} classes={"pt-30"} />
+      <TeamBehind
+        headerClasses={"text-[11.05px] leading-[18.41px] tracking-[1.84px]"}
+        descClasses={"text-[18.41px] leading-[27.62px]"}
+        team={gbcTeam}
+        classes={"pt-30"}
+      />
       <MoreProjects projects={gbcProjects} />
       <Contact className={" pb-[125px] pt-[121px]"} />
     </section>

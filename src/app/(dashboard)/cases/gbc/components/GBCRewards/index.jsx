@@ -9,7 +9,7 @@ const GBCRewards = () => {
     <section>
       <div className="mx-auto max-w-[1440px] px-10">
         <div className="w-full rounded-[12.87px] bg-[#FFFFFF0A] pb-[90px] pl-[19px] pr-[23px] pt-[25px]">
-          <h2 className="mb-[19px] align-[text-top] font-roc text-base font-bold normal-case leading-none">
+          <h2 className="mb-[19px] align-[text-top] font-roc text-[16.08px] font-bold normal-case leading-none">
             Rewards
           </h2>
           <p className="mb-[27px] align-[text-top] font-roc font-[11.26px] leading-none">
@@ -23,10 +23,10 @@ const GBCRewards = () => {
                 height={pass.height}
                 alt={pass.imgDesc}
               />
-              <h4 className="align-[text-top] font-roc text-base font-bold leading-none text-white">
+              <h4 className="align-[text-top] font-roc text-[16.08px] font-bold leading-none text-white">
                 {pass.title}
               </h4>
-              <p className="align-[text-top] font-roc text-[13px] leading-none">
+              <p className="align-[text-top] font-roc text-[12.87px] leading-none">
                 {pass.desc}
               </p>
             </article>
@@ -45,7 +45,7 @@ const GBCRewards = () => {
                 <button
                   type="button"
                   className={cn(
-                    "font-poppins  pointer-events-none flex h-8 w-full items-center justify-center rounded-[6.43px] bg-[#4C83FF] align-[text-top] text-[12.87px] font-bold leading-none text-white",
+                    "pointer-events-none  flex h-8 w-full items-center justify-center rounded-[6.43px] bg-[#4C83FF] align-[text-top] font-poppins text-[12.87px] font-bold leading-none text-white",
                     id > 2 && "bg-[#4C83FF29] text-[#FFFFFF52]"
                   )}
                 >
