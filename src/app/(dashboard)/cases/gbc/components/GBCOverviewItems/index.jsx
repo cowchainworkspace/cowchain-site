@@ -31,7 +31,7 @@ const GBCOverviewItems = ({ items }) => {
                 >
                   <span
                     className={cn(
-                      "font-manrope text-xs uppercase leading-5 tracking-[2px] text-secondary"
+                      "font-manrope text-[11.05px] uppercase leading-[18.41px] tracking-[1.84px] text-secondary"
                     )}
                   >
                     {itemName}
@@ -52,14 +52,14 @@ const GBCOverviewItems = ({ items }) => {
                     </p>
                   )}
                   {typeof itemValue === "string" ? (
-                    <p className="font-manrope text-xl font-medium leading-[30px] !text-white">
+                    <p className="font-manrope text-[18.41px] font-medium leading-[27.62px] !text-white">
                       {itemValue}
                     </p>
                   ) : (
                     <ul className="flex flex-col gap-[14px]">
                       {itemValue.map(({ itemValueDescription }) => (
                         <li key={itemValueDescription}>
-                          <p className="font-manrope text-[18.41px] font-normal leading-[28px] !text-white">
+                          <p className="font-manrope text-[18.41px] font-normal leading-[27.62px] !text-white">
                             {itemValueDescription}
                           </p>
                         </li>

@@ -1,7 +1,13 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-const TeamBehind = ({ team, classes, descClasses, blockClasses }) => {
+const TeamBehind = ({
+  team,
+  classes,
+  descClasses,
+  blockClasses,
+  headerClasses
+}) => {
   return (
     <section>
       <div className={cn("mx-auto max-w-[1440px] px-[98px]", classes)}>
@@ -19,7 +25,12 @@ const TeamBehind = ({ team, classes, descClasses, blockClasses }) => {
                   blockClasses
                 )}
               >
-                <h4 className="mb-4 font-manrope text-xs uppercase leading-5 tracking-[2px] text-secondary">
+                <h4
+                  className={cn(
+                    "mb-4 font-manrope text-xs uppercase leading-5 tracking-[2px] text-secondary",
+                    headerClasses
+                  )}
+                >
                   {department}
                 </h4>
                 <p
