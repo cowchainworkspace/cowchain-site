@@ -22,7 +22,7 @@ const MoreProjects = ({ projects }) => {
         </Link>
       </div>
       <div className="grid grid-cols-3 border-y-[0.5px] !border-white-50">
-        {projects.map(({ id, tags, title, desc, img }) => {
+        {projects.map(({ id, tags, title, desc, img, textColor }) => {
           return (
             <div
               key={id}
@@ -32,7 +32,8 @@ const MoreProjects = ({ projects }) => {
               style={{
                 backgroundImage: `url(${img.src})`,
                 backgroundSize: "cover",
-                backgroundPosition: "center"
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat"
               }}
             >
               <div className="mt-auto flex max-w-[403px] flex-col gap-6">
@@ -51,7 +52,12 @@ const MoreProjects = ({ projects }) => {
                 <h3 className="font-roc text-2xl font-medium uppercase leading-90 text-white">
                   {title}
                 </h3>
-                <p className="font-manrope text-base leading-[22px] text-white">
+                <p
+                  className={cn(
+                    "font-manrope text-base leading-[22px] text-white",
+                    textColor
+                  )}
+                >
                   {desc}
                 </p>
               </div>
