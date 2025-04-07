@@ -6,17 +6,25 @@ const TeamBehind = ({
   classes,
   descClasses,
   blockClasses,
-  headerClasses
+  headerClasses,
+  titleClasses,
+  listClasses,
+  containerClasses
 }) => {
   return (
     <section>
       <div className={cn("mx-auto max-w-[1440px] px-[98px]", classes)}>
-        <div className="grid grid-cols-2">
-          <h2 className="font-roc text-[60px] font-medium uppercase leading-90">
+        <div className={cn("grid grid-cols-2", containerClasses)}>
+          <h2
+            className={cn(
+              "font-roc text-[60px] font-medium uppercase leading-90",
+              titleClasses
+            )}
+          >
             team behind
             <br /> the project
           </h2>
-          <div className="flex flex-col gap-8">
+          <div className={cn("flex flex-col gap-8", listClasses)}>
             {team.map(({ id, department, people }) => (
               <div
                 key={id}
