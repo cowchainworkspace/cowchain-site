@@ -1,4 +1,5 @@
 import Tag from "@/components/ui/tag";
+import clsx from "clsx";
 import React from "react";
 
 const feedbackData = [
@@ -21,23 +22,23 @@ const feedbackData = [
   }
 ];
 
-const Quote = ({ text, author, lastIndex, noItemsBorders }) => {
+const Quote = ({ text, author, lastIndex, noItemsBorders, ishomePage }) => {
   return ( <article
     className={`px-[20px] py-[20px] md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] 
     ${
       !noItemsBorders
         ? "relative flex w-full min-w-[320px] flex-col"
-        : "gap-[24px] relative flex w-full min-w-[320px] flex-col"
+        : "relative flex w-full min-w-[320px] flex-col"
     }`}
   >
-    {!noItemsBorders && !lastIndex && (
+    {!lastIndex && (
       <div className="border-t border-t-th-fade h-[1px] w-[calc(100vw)] absolute bottom-0 left-0" />
     )}
-    <p className="max-w-2xl font-roc text-[18px] font-medium uppercase leading-none md:leading-[90%] !no-underline md:font-[500] custom1000:text-[20px]">
+    <p className="max-w-2xl font-roc  whitespace-pre-line text-[18px] font-medium uppercase leading-none md:leading-[90%] !no-underline md:font-[500] custom1000:text-[20px]">
       {text}
     </p>
-    <div className="md:mt-[24px]">
-      <p className="text-[16px] text-th-grey">{author}</p>
+    <div className={clsx(ishomePage? "md:mt-[24px]" :  "md:mt-[20px]")}>
+      <p className="text-[16px] font-thin text-[#BBBBBB]">{author}</p>
     </div>
   </article>
   );
@@ -50,7 +51,8 @@ export const OtherServices = ({
   desc,
   topBorder = true,
   bottomBorder = true,
-  noItemsBorders = false
+  noItemsBorders = false,
+  ishomePage = false,
 }) => {
   return (
     <section
@@ -80,6 +82,7 @@ export const OtherServices = ({
               {...feedback}
               lastIndex={index === data.length - 1}
               noItemsBorders={noItemsBorders}
+              ishomePage={ishomePage}
             />
           ))}
         </div>

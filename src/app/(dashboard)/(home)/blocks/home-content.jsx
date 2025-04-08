@@ -161,6 +161,7 @@ and aimed at solving real-world challenges"
             </>
           }
           data={useCases}
+          ishomePage={true}
           tag={"web3 development use cases"}
         />
       </div>
@@ -212,7 +213,7 @@ and aimed at solving real-world challenges"
               Cowchain{" "}
               <span className="violet-gradient-text">
                 provides <br /> a full range
-              </span>
+              </span> {" "}
               of <br />
               supplementary <br />
               services to ensure <br />

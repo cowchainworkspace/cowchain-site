@@ -144,19 +144,19 @@ export const otherServiceData = [
 
 export const useCases = [
   {
-    text: "Decentralized applications drive transparency and automation"
+    text: "Decentralized applications drive \n transparency and automation"
   },
   {
-    text: "Smart contracts remove the need for intermediaries, streamlining business operations"
+    text: "Smart contracts remove the need \n for intermediaries, streamlining \n business operations"
   },
   {
-    text: "Decentralized Autonomous Organizations (DAOS) empower communities to govern projects without centralized control"
+    text: "Decentralized Autonomous \n Organizations (DAOS) empower \n communities to govern projects \n without centralized control"
   },
   {
-    text: "Decentralized exchanges facilitate secure trading of digital assets"
+    text: "Decentralized exchanges facilitate \n secure trading of digital assets"
   },
   {
-    text: "Social media platforms give users reater control over their data and interactions"
+    text: "Social media platforms give users \n reater control over their data \n and interactions"
   }
 ];
 
