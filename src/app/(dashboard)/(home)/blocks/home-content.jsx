@@ -164,7 +164,11 @@ and aimed at solving real-world challenges"
       />
       <Cases />
       <CasesMobile />
-      <Feedback />
+      <div className="md:">
+        {" "}
+        <Feedback />
+      </div>
+
       <Team />
       <ExpertiseServices
         topBorder={false}

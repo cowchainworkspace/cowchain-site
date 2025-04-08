@@ -3,6 +3,7 @@ import star from "@/assets/clients/reate-star.svg";
 import clutch from "@/assets/homepage/clutch.svg";
 import topRated from "@/assets/homepage/topRatedIcon.svg";
 import upwork from "@/assets/homepage/upwork.svg";
+import clsx from "clsx";
 import Image from "next/image";
 import React from "react";
 
@@ -40,12 +41,17 @@ const feedbackData = [
 const Quote = ({ text, author, index }) => {
   return (
     <article
-      className={
+      className={clsx(
+        "md:overflow-visible",
         index === feedbackData.length - 1
           ? "px-default relative flex w-full min-w-[320px] flex-col border-r border-r-th-fade py-10 md:border-r-0 md:py-16 lg:py-20"
-          : "px-default relative flex w-full min-w-[320px] flex-col border-r border-r-th-fade py-10 md:border-b md:border-r-0 md:border-b-th-fade md:py-16 lg:py-20"
-      }
+          : "px-default relative flex w-full min-w-[320px] flex-col border-r border-r-th-fade py-10  md:border-r-0  md:py-16 lg:py-20"
+      )}
     >
+      {index !== feedbackData.length - 1 && (
+        <div className="absolute bottom-0 left-0 hidden h-[1px] w-[calc(100vw)] md:block md:border-b md:border-b-th-fade " />
+      )}
+
       <p className="header max-w-2xl !font-normal !leading-none !no-underline">
         {text}
       </p>
@@ -66,11 +72,14 @@ const Quote = ({ text, author, index }) => {
 
 export const Feedback = () => {
   return (
-    <section id="clients-feedback">
-      <div className="relative grid grid-cols-1 border-t border-t-th-fade md:grid-cols-5">
-        <div className="md-border-r relative box-border flex border-b border-b-th-fade md:col-span-2">
+    <section
+      id="clients-feedback"
+      className="w-full relative border-b border-t border-b-th-fade border-t-th-fade md:w-full"
+    >
+      <div className="grid grid-cols-1 w-full md:grid-cols-5">
+        <div className="md-border-r md:ml-auto  box-border flex md:col-span-2 md:max-w-[540px]">
           <Image
-            className="absolute -top-[40%] left-0 w-full md:-left-[20%] md:-top-[15vw] md:h-1/2"
+            className="absolute -top-[40%] left-0 md:-left-[10vw] md:-top-[25vw] md:h-1/2 md:h-auto md:w-[50vw]"
             src={bg}
             alt=""
           />
@@ -124,11 +133,13 @@ export const Feedback = () => {
             </div>
           </div>
         </div>
-        <div className="quote_wrapper flex items-stretch overflow-x-scroll border-b border-b-th-fade md:col-span-3 md:flex-col md:overflow-x-hidden md:overflow-y-visible">
-          {feedbackData &&
-            feedbackData.map((feedback, index) => (
-              <Quote key={index} {...feedback} index={index} />
-            ))}
+        <div className="md:w-full md:col-span-3 md:overflow-hidden">
+          <div className="quote_wrapper md:mr-auto flex items-stretch overflow-x-scroll border-b border-b-th-fade  md:max-w-[860px] md:flex-col md:overflow-x-visible md:overflow-y-visible">
+            {feedbackData &&
+              feedbackData.map((feedback, index) => (
+                <Quote key={index} {...feedback} index={index} />
+              ))}
+          </div>
         </div>
       </div>
     </section>
