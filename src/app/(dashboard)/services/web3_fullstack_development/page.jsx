@@ -47,31 +47,31 @@ const FullStackDevelopment = () => {
             At Cowchain, we specialize in delivering{" "}
             <span className="violet-gradient-text">
               complete
-              <br className="custom1400:block hidden" />
+              <br className="hidden custom1400:block" />
               full stack development services
             </span>{" "}
-            , covering all <br className="custom1400:block hidden" />
+            , covering all <br className="hidden custom1400:block" />
             aspects of digital product creation. As a{" "}
             <span className="violet-gradient-text">
-              full stack <br className="custom1400:block hidden" />
+              full stack <br className="hidden custom1400:block" />
               software development company
             </span>
-            , we create scalable <br className="custom1400:block hidden" />
+            , we create scalable <br className="hidden custom1400:block" />
             solutions, ensuring seamless operation across all{" "}
-            <br className="custom1400:block hidden" />
+            <br className="hidden custom1400:block" />
             system components. By leveraging
             <span className="violet-gradient-text">
               {" "}
-              cutting-edge <br className="custom1400:block hidden" />{" "}
+              cutting-edge <br className="hidden custom1400:block" />{" "}
               technologies
             </span>
             , our engineers deliver systems that{" "}
-            <br className="custom1400:block hidden" />
+            <br className="hidden custom1400:block" />
             work{" "}
             <span className="violet-gradient-text">
               flawlessly across platforms
             </span>
-            , adapting to the <br className="custom1400:block hidden" />
+            , adapting to the <br className="hidden custom1400:block" />
             unique needs of your business
           </>
         }
@@ -172,29 +172,33 @@ const FullStackDevelopment = () => {
       <CasesHead />
       <Cases />
       <CasesMobile />
-      <OtherServices
-        tag={"other our services"}
-        title={
-          <>
-            Along side
-            <span className="violet-gradient-text">
-              {" "}
-              full
+      <div className="w-full overflow-hidden">
+        {" "}
+        <OtherServices
+          tag={"other our services"}
+          title={
+            <>
+              Along side
+              <span className="violet-gradient-text">
+                {" "}
+                full
+                <br />
+                stack development <br /> services,
+              </span>{" "}
+              cowchain <br />
+              offers{" "}
+              <span className="violet-gradient-text">
+                additional <br /> support services
+              </span>{" "}
               <br />
-              stack development <br /> services,
-            </span>{" "}
-            cowchain <br />
-            offers{" "}
-            <span className="violet-gradient-text">
-              additional <br /> support services
-            </span>{" "}
-            <br />
-            to fully back your <br />
-            project
-          </>
-        }
-        data={otherServiceData}
-      />
+              to fully back your <br />
+              project
+            </>
+          }
+          data={otherServiceData}
+        />
+      </div>
+
       <FAQ
         data={faqData}
         noBg={true}

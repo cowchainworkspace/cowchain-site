@@ -210,23 +210,26 @@ const WhiteLabelDev = () => {
         noBg={true}
         titleClasses="lg:mb-[60px]"
       />
-      <OtherServices
-        title={
-          <>
-            In addition to <br />
-            <span className="violet-gradient-text">
-              white label <br /> development, <br />
-            </span>
-            Cowchain offers <br />
-            a variety <br /> of{" "}
-            <span className="violet-gradient-text">
-              complementary <br /> services
-            </span>
-          </>
-        }
-        data={otherServices}
-        tag={"other our services"}
-      />
+      <div className="w-full overflow-hidden">
+        <OtherServices
+          title={
+            <>
+              In addition to <br />
+              <span className="violet-gradient-text">
+                white label <br /> development, <br />
+              </span>
+              Cowchain offers <br />
+              a variety <br /> of{" "}
+              <span className="violet-gradient-text">
+                complementary <br /> services
+              </span>
+            </>
+          }
+          data={otherServices}
+          tag={"other our services"}
+        />
+      </div>
+
       <Feedback />
       <WhiteLabelCases />
       <Cases />

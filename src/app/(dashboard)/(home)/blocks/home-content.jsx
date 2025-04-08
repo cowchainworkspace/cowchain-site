@@ -141,27 +141,29 @@ and aimed at solving real-world challenges"
         topBorder={false}
         bottomBorder={false}
       />
-      <OtherServices
-        title={
-          <>
-            The applications of <br />
-            <span className="violet-gradient-text">Web3 development</span>
-            From{" "}
-            <span className="violet-gradient-text">
-              decentralized <br /> exchanges
-            </span>{" "}
-            to{" "}
-            <span className="violet-gradient-text">
-              NFT <br /> platforms
-            </span>
-            , <br />
-            the potential for <br />
-            innovation is limitless
-          </>
-        }
-        data={useCases}
-        tag={"web3 development use cases"}
-      />
+      <div className="w-full overflow-hidden">
+        <OtherServices
+          title={
+            <>
+              The applications of <br />
+              <span className="violet-gradient-text">Web3 development</span>{" "}
+              From{" "}
+              <span className="violet-gradient-text">
+                decentralized <br /> exchanges
+              </span>{" "}
+              to{" "}
+              <span className="violet-gradient-text">
+                NFT <br /> platforms
+              </span>
+              , <br />
+              the potential for <br />
+              innovation is limitless
+            </>
+          }
+          data={useCases}
+          tag={"web3 development use cases"}
+        />
+      </div>
       <Cases />
       <CasesMobile />
       <Feedback />
@@ -202,24 +204,27 @@ and aimed at solving real-world challenges"
         bottomBorder={false}
         data={WhyClientChooseData}
       />
-      <OtherServices
-        noItemsBorders={true}
-        title={
-          <>
-            Cowchain{" "}
-            <span className="violet-gradient-text">
-              provides <br /> a full range
-            </span>
-            of <br />
-            supplementary <br />
-            services to ensure <br />
-            your blockchain <br />
-            project <span className="violet-gradient-text">thrives</span>
-          </>
-        }
-        data={otherServiceData}
-        tag={"additional services"}
-      />
+      <div className="w-full overflow-hidden">
+        <OtherServices
+          noItemsBorders={true}
+          title={
+            <>
+              Cowchain{" "}
+              <span className="violet-gradient-text">
+                provides <br /> a full range
+              </span>
+              of <br />
+              supplementary <br />
+              services to ensure <br />
+              your blockchain <br />
+              project <span className="violet-gradient-text">thrives</span>
+            </>
+          }
+          data={otherServiceData}
+          tag={"additional services"}
+        />
+      </div>
+
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
       <FAQ
         noBg={true}

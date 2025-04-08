@@ -42,23 +42,23 @@ const DefiDevelopment = () => {
             {" "}
             At Cowchain, we are a leading{" "}
             <span className="violet-gradient-text">
-              defi development <br className="custom1400:block hidden" />{" "}
+              defi development <br className="hidden custom1400:block" />{" "}
               company
             </span>{" "}
             specializing in providing top-notch
             <span className="violet-gradient-text">
-              defi <br className="custom1400:block hidden" /> development
+              defi <br className="hidden custom1400:block" /> development
               services
             </span>
             . Our team is dedicated to{" "}
-            <br className="custom1400:block hidden" />
+            <br className="hidden custom1400:block" />
             helping you navigate the world of decentralized{" "}
-            <br className="custom1400:block hidden" />
+            <br className="hidden custom1400:block" />
             finance with
             <span className="violet-gradient-text">
               innovative platforms
             </span>{" "}
-            offered by our <br className="custom1400:block hidden" />{" "}
+            offered by our <br className="hidden custom1400:block" />{" "}
             decentralized{" "}
             <span className="violet-gradient-text">
               finance development company
@@ -199,23 +199,25 @@ const DefiDevelopment = () => {
           </>
         }
       />
+      <div className="w-full overflow-hidden">
+        <OtherServices
+          tag={"Other Blockchain Services"}
+          title={
+            <>
+              In addition to <br />
+              <span className="violet-gradient-text">DEFI development</span>
+              <br />
+              Cowchain offers <br /> a variety <br /> of
+              <span className="violet-gradient-text">
+                complementary <br /> services
+              </span>
+            </>
+          }
+          data={OtherDefiData}
+          bottomBorder={false}
+        />
+      </div>
 
-      <OtherServices
-        tag={"Other Blockchain Services"}
-        title={
-          <>
-            In addition to <br />
-            <span className="violet-gradient-text">DEFI development</span>
-            <br />
-            Cowchain offers <br /> a variety <br /> of
-            <span className="violet-gradient-text">
-              complementary <br /> services
-            </span>
-          </>
-        }
-        data={OtherDefiData}
-        bottomBorder={false}
-      />
       <FAQ
         data={faqDefiData}
         noBg={true}
