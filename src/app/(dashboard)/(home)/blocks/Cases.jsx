@@ -65,7 +65,7 @@ const Cases = () => {
       setCurrentIndex(currentIndex + 1);
     }
   };
-  console.log(currentIndex);
+
   return (
     <section
       ref={containerRef}
