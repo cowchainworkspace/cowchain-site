@@ -66,14 +66,20 @@ export const Feedback = () => {
   return (
     <section
       id="clients-feedback"
-      className="relative w-full justify-center border-b border-t border-b-th-fade border-t-th-fade md:flex md:w-full"
+      className={
+        "relative w-full justify-center border-b border-t border-b-th-fade border-t-th-fade md:flex md:w-full"
+      }
     >
       <div className="grid w-full grid-cols-1 md:flex md:justify-center">
         <div className="md:calc-full-minus-271 md:flex">
           <div className="md-border-r box-border flex md:col-span-2 md:ml-auto md:max-w-[576px] ">
             <Image
-              className="pointer-events-none absolute -top-[40%] left-0 md:-left-[10vw] md:-top-[25vw] md:h-1/2 md:h-auto md:w-[50vw]"
+              className={
+                "pointer-events-none absolute -top-[40%] left-0 md:-left-[10vw] md:-top-[25vw] md:h-1/2 md:h-auto md:w-[50vw]"
+              }
               src={bg}
+              aria-hidden="true"
+              role="presentation"
               alt=""
             />
             <div className="h-[1px]" />

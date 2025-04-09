@@ -1,19 +1,19 @@
 "use client";
 
-import bg_lg from "@/assets/bg/home-clients.png";
 import arrow from "@/assets/arrow_right.svg";
-import { Counter } from "../components/counter";
-import Link from "next/link";
+import bg_lg from "@/assets/bg/home-clients.png";
 import Image from "next/image";
+import Link from "next/link";
+import { Counter } from "../components/counter";
 
 import brc20 from "@/assets/svgComponents/clientsLogo/Brc20";
+import gbc from "@/assets/svgComponents/clientsLogo/GBC";
 import hybrid from "@/assets/svgComponents/clientsLogo/Hybrid";
 import pixel from "@/assets/svgComponents/clientsLogo/Pixel";
 import raiser from "@/assets/svgComponents/clientsLogo/Raiser";
 import retroBridge from "@/assets/svgComponents/clientsLogo/RetroBridge";
 import step from "@/assets/svgComponents/clientsLogo/Step";
 import tenet from "@/assets/svgComponents/clientsLogo/Tenet";
-import gbc from "@/assets/svgComponents/clientsLogo/GBC";
 
 export const logos = [
   { name: "Brc20", logo: brc20 },
@@ -31,11 +31,11 @@ export default function Clients() {
     <section className="relative border-t border-t-th-fade">
       <Image
         alt=""
-        className="absolute -top-[38%] z-[0] right-0 hidden h-screen md:-top-[45%] md:block md:h-min  lg:-top-[65%]"
+        className="pointer-events-none absolute -top-[38%] right-0 z-[0] hidden h-screen md:-top-[45%] md:block md:h-min  lg:-top-[65%]"
         src={bg_lg}
       />
 
-      <div className="py-[60px] md:max-w-[1440px] md:mx-auto pb-[20px] md:pb-[60px] px-default relative flex flex-col">
+      <div className="px-default relative flex flex-col py-[60px] pb-[20px] md:mx-auto md:max-w-[1440px] md:pb-[60px]">
         <div className=" grid grid-cols-1 md:mt-12 lg:grid-cols-2 lg:gap-16">
           <h2 className="lg:order-0 text-4xl uppercase text-white  md:text-[60px]">
             OUR CLIENTS
@@ -54,8 +54,12 @@ export default function Clients() {
           <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row lg:order-3 lg:ml-auto">
             <div>
               <div className="flex items-center">
-                <Counter duration={4} target={35}  className="max-h-[36px] text-[36px]
-                 leading-[36px] md:max-h-[48px] md:text-[48px] md:leading-[48px]" />
+                <Counter
+                  duration={4}
+                  target={35}
+                  className="max-h-[36px] text-[36px]
+                 leading-[36px] md:max-h-[48px] md:text-[48px] md:leading-[48px]"
+                />
               </div>
               <p className="body1 mt-2 uppercase">Techonologies</p>
             </div>
@@ -94,7 +98,7 @@ export default function Clients() {
               <p className="body1 mt-2 uppercase">Clients</p>
             </div>
           </div>
-          <p className="text-[14px] my-[40px] max-w-lg md:text-base leading-6 md:my-[20px] lg:order-2 lg:max-w-xl">
+          <p className="my-[40px] max-w-lg text-[14px] leading-6 md:my-[20px] md:text-base lg:order-2 lg:max-w-xl">
             Over the course of just 3 years, our team has expertly developed and
             got the market for 120+ products in various niches, so we know
             exactly how to make your product successful. NFT marketplace?
@@ -114,7 +118,7 @@ export default function Clients() {
 
         <div className="mt-[37px] grid w-full grid-cols-4 gap-[35px]">
           {logos.map((brand) => (
-            <div className="flex h-[40px] w-[60px] sm:h-[50px] sm:w-[130px]  md:h-[60px] md:w-[150px] items-center justify-center custom1200:h-[116px] custom1200:w-[300px]">
+            <div className="flex h-[40px] w-[60px] items-center justify-center  sm:h-[50px] sm:w-[130px] md:h-[60px] md:w-[150px] custom1200:h-[116px] custom1200:w-[300px]">
               <brand.logo className="w-[60px] sm:w-[100px] custom1200:w-[140px]" />
             </div>
           ))}

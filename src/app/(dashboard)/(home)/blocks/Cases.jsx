@@ -1,14 +1,10 @@
 "use client";
 
-import React, {
-  useRef,
-  useState,
-  useEffect
-} from "react";
-import { casesData } from "../homeData/data";
 import { useScroll } from "framer-motion";
+import React, { useRef, useState, useEffect } from "react";
+import { casesData } from "../homeData/data";
 
-import { useTransform, useMotionValue } from "framer-motion";
+import { useMotionValue, useTransform } from "framer-motion";
 import { ScrollProject } from "./ScrollProject";
 
 import useScrollPercentage from "react-scroll-percentage-hook";
@@ -73,18 +69,19 @@ const Cases = () => {
   return (
     <section
       ref={containerRef}
-      className="relative z-10 hidden h-[546px] border-b border-b-th-fade md:block md:h-[698px] xl:flex"
+      className="relative z-50 hidden h-[546px] border-b border-b-th-fade md:block md:h-[698px] xl:flex"
     >
       <Swiper
-        className="flex h-[546px] md:h-[698px] fullSlider:!hidden"
+        className="z-50 flex h-[546px] md:h-[698px] fullSlider:!hidden"
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
         onSlideChange={(swiper) => {
           setCurrentIndex(swiper.activeIndex);
           setIsBeginning(swiper.isBeginning);
-          setIsEnd(swiper);
         }}
+        onReachEnd={() => setIsEnd(true)}
+        onFromEdge={() => setIsEnd(false)}
         slidesPerView={"auto"}
         spaceBetween={0}
       >
@@ -92,7 +89,7 @@ const Cases = () => {
           casesData.map((project, index) => (
             <SwiperSlide
               key={index}
-              className="h-[546px] max-w-[547px] md:h-[698px]"
+              className="z-50 h-[546px] max-w-[547px] md:h-[698px]"
             >
               <ScrollProject key={index} index={index} {...project} />
             </SwiperSlide>
@@ -109,28 +106,30 @@ const Cases = () => {
       </div>
 
       {!isBeginning && (
-        <div
+        <button
+          type="button"
           style={{
             background: "linear-gradient(to left, transparent 1%, #AB40FF 160%)"
           }}
           onClick={handlePrevClick}
-          className="absolute left-0 top-0 z-50 hidden hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
+          className="absolute left-0 top-0 z-50 z-50 hidden hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
         >
           <Image src={sliderLeftArrow} alt="Next" className="h-8 w-8" />
-        </div>
+        </button>
       )}
 
       {!isEnd && (
-        <div
+        <button
+          type="button"
           style={{
             background:
               "linear-gradient(to right, transparent 1%, #AB40FF 160%)"
           }}
           onClick={handleNextClick}
-          className="absolute right-0 top-0 z-50 hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
+          className="absolute right-0 top-0 z-50 z-50 hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
         >
-          <Image src={sliderRightArrow} alt="Previous" className="h-8 w-8" />
-        </div>
+          <Image src={sliderRightArrow} alt="Previous" className="h-8 w-8" ar />
+        </button>
       )}
     </section>
   );
