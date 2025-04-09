@@ -42,7 +42,7 @@ export function TustByNumbers({
       {!home && !isBlockChainConsulting && (
         <Image
           alt=""
-          className="absolute -bottom-[38%] left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min lg:-bottom-[120%]"
+          className="absolute -bottom-[38%] pointer-events-none left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min lg:-bottom-[120%]"
           src={FSTrustBuyNumbBg}
         />
       )}
@@ -50,7 +50,7 @@ export function TustByNumbers({
       <div className={`relative h-fit md:h-full`}>
         <div
           className={cn(
-            "grid h-full grid-cols-1 md:grid-cols-[minmax(0,_250px)_1fr_1fr] custom815:grid-cols-[minmax(0,_300px)_1fr_1fr] custom1000:grid-cols-[minmax(0,_400px)_1fr_1fr] custom1200:grid-cols-[minmax(0,_480px)_1fr_1fr] custom1430:grid-cols-[minmax(0,_547px)_1fr_1fr]",
+            "grid h-full grid-cols-1 md:grid-cols-[minmax(0,_250px)_1fr_1fr] max-w-[1440px] mx-auto custom815:grid-cols-[minmax(0,_300px)_1fr_1fr] custom1000:grid-cols-[minmax(0,_400px)_1fr_1fr] custom1200:grid-cols-[minmax(0,_480px)_1fr_1fr] custom1430:grid-cols-[minmax(0,_547px)_1fr_1fr]",
             {
               "lg:grid-cols-[minmax(0,_400px)_1fr_1fr md:grid-cols-1":
                 isBlockChainConsulting
