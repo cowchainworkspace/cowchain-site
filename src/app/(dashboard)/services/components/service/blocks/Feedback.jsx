@@ -39,9 +39,7 @@ const feedbackData = [
 
 const Quote = ({ text, author, index }) => {
   return (
-    <article
-      className="px-default relative  flex w-full min-w-[320px] flex-col border-r border-t border-r-th-fade border-t-th-fade py-10 md:overflow-visible md:border-r-0 md:border-t-0 md:py-16 lg:py-20"
-    >
+    <article className="px-default relative  flex w-full min-w-[320px] flex-col border-r border-t border-r-th-fade border-t-th-fade py-10 md:overflow-visible md:border-r-0 md:border-t-0 md:py-16 lg:py-20">
       {index !== feedbackData.length - 1 && (
         <div className="absolute bottom-0 left-0 hidden h-[1px] w-[calc(100vw)] md:block md:border-b md:border-b-th-fade " />
       )}
@@ -71,8 +69,8 @@ export const Feedback = () => {
       className="relative w-full justify-center border-b border-t border-b-th-fade border-t-th-fade md:flex md:w-full"
     >
       <div className="grid w-full grid-cols-1 md:flex md:justify-center">
-        <div style={{ width: "calc(100% - 271px)" }} className="md:flex">
-          <div className="md-border-r box-border md:ml-auto flex md:col-span-2 md:max-w-[576px] ">
+        <div className="md:calc-full-minus-271 md:flex">
+          <div className="md-border-r box-border flex md:col-span-2 md:ml-auto md:max-w-[576px] ">
             <Image
               className="pointer-events-none absolute -top-[40%] left-0 md:-left-[10vw] md:-top-[25vw] md:h-1/2 md:h-auto md:w-[50vw]"
               src={bg}
@@ -134,11 +132,8 @@ export const Feedback = () => {
             </div>
           </div>
         </div>
-        <div
-          className=" md:overflow-hidden "
-          style={{ width: "calc(100% + 329px)" }}
-        >
-          <div className="md:mr-auto  md:col-span-3">
+        <div className="md:calc-full-plus-329 md:overflow-hidden ">
+          <div className="md:col-span-3  md:mr-auto">
             <div className="quote_wrapper flex items-stretch overflow-x-scroll border-b border-b-th-fade  md:max-w-[864px] md:flex-col md:overflow-x-visible md:overflow-y-visible">
               {feedbackData &&
                 feedbackData.map((feedback, index) => (
