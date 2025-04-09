@@ -44,20 +44,20 @@ const NftDevelopment = () => {
             <span className="violet-gradient-text">
               NFT development company
             </span>
-            , Cowchain delivers <br className="custom1400:block hidden" />
+            , Cowchain delivers <br className="hidden custom1400:block" />
             innovative solutions for{" "}
             <span className="violet-gradient-text">
-              creating, managing, <br className="custom1400:block hidden" /> and
+              creating, managing, <br className="hidden custom1400:block" /> and
               launching NFTs
             </span>{" "}
-            across industries. <br className="custom1400:block hidden" />
+            across industries. <br className="hidden custom1400:block" />
             Our approach to{" "}
             <span className="violet-gradient-text">
               blockchain NFT development
             </span>{" "}
-            <br className="custom1400:block hidden" />
+            <br className="hidden custom1400:block" />
             ensures that your digital assets are accessible{" "}
-            <br className="custom1400:block hidden" />
+            <br className="hidden custom1400:block" />
             <span className="violet-gradient-text">
               without compromising on performance
             </span>
@@ -169,23 +169,26 @@ const NftDevelopment = () => {
       />
 
       <Feedback />
+      <div className="w-full overflow-hidden">
+        {" "}
+        <OtherServices
+          tag={"Other Blockchain Services"}
+          title={
+            <>
+              In addition to <br />
+              <span className="violet-gradient-text">NFT development</span>
+              <br />
+              Cowchain offers <br /> a variety <br /> of
+              <span className="violet-gradient-text">
+                complementary <br /> services
+              </span>
+            </>
+          }
+          data={OtherNftData}
+          bottomBorder={false}
+        />
+      </div>
 
-      <OtherServices
-        tag={"Other Blockchain Services"}
-        title={
-          <>
-            In addition to <br />
-            <span className="violet-gradient-text">NFT development</span>
-            <br />
-            Cowchain offers <br /> a variety <br /> of
-            <span className="violet-gradient-text">
-              complementary <br /> services
-            </span>
-          </>
-        }
-        data={OtherNftData}
-        bottomBorder={false}
-      />
       <FAQ
         data={faqNftData}
         noBg={true}

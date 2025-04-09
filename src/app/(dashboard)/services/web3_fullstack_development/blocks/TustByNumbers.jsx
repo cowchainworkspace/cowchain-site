@@ -38,7 +38,7 @@ export function TustByNumbers({
   isBlockChainConsulting = false
 }) {
   return (
-    <section className={`relative ${home && "h-fit md:h-[700px]"}`}>
+    <section className={`relative  ${home && "h-fit md:h-[700px]"}`}>
       {!home && !isBlockChainConsulting && (
         <Image
           alt=""
@@ -115,7 +115,7 @@ export function TustByNumbers({
                 <div
                   key={index}
                   className={cn(
-                    `flex h-full w-full grid-cols-1 grid-rows-1 flex-col z-[10] justify-center border-r border-r-th-fade 
+                    `flex h-full w-full grid-cols-1 md:z-[10] grid-rows-1 flex-col justify-center border-r border-r-th-fade 
                     px-[26px] py-[22px] md:px-[20px] custom815:px-[30px] custom1200:px-[50px] custom1430:px-[70px] ${index < 2 && "border-b border-b-th-fade"}`,
                     {
                       "justify-start gap-4  md:gap-[30px] custom1430:!pt-[110px]":
@@ -128,7 +128,7 @@ export function TustByNumbers({
                 >
                   <div>
                     {number && (
-                      <div className="flex items-center">
+                      <div className="flex  items-center">
                         {sufix ? (
                           <>
                             {sighn && (
@@ -171,7 +171,7 @@ export function TustByNumbers({
                   </div>
                   <p
                     className={cn(
-                      "mt-[12px] max-w-[250px] text-[10px] font-medium text-white md:mt-[30px] md:text-base",
+                      "mt-[12px] max-w-[250px]  text-[10px] font-medium text-white md:mt-[30px] md:text-base",
                       {
                         "!mt-0 max-w-[306px] md:!mt-0": isBlockChainConsulting
                       }

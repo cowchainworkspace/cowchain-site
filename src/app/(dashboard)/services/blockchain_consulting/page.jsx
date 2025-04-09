@@ -267,27 +267,28 @@ const BlockChainConsulting = () => {
         }
         noBg={true}
       />
-
-      <OtherServices
-        tag={"Other Blockchain Services"}
-        title={
-          <>
-            In addition to{" "}
-            <span className="violet-gradient-text">
-              blockchain <br /> consulting
-            </span>
-            , Cowchain <br /> offers a range of <br />
-            complementary solutions <br />
-            <span className="violet-gradient-text">
-              to help businesses fully <br /> integrate technology <br /> into
-              their operations.
-            </span>{" "}
-            <br />
-            These services include
-          </>
-        }
-        data={otherServices}
-      />
+      <div className="w-full overflow-hidden">
+        <OtherServices
+          tag={"Other Blockchain Services"}
+          title={
+            <>
+              In addition to{" "}
+              <span className="violet-gradient-text">
+                blockchain <br /> consulting
+              </span>
+              , Cowchain <br /> offers a range of <br />
+              complementary solutions <br />
+              <span className="violet-gradient-text">
+                to help businesses fully <br /> integrate technology <br /> into
+                their operations.
+              </span>{" "}
+              <br />
+              These services include
+            </>
+          }
+          data={otherServices}
+        />
+      </div>
 
       <FAQ
         data={consultingFAQData}
