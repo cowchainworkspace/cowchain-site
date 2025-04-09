@@ -42,10 +42,7 @@ const Quote = ({ text, author, index }) => {
   return (
     <article
       className={clsx(
-        "md:overflow-visible",
-        index === feedbackData.length - 1
-          ? "px-default relative flex w-full min-w-[320px] flex-col border-r border-r-th-fade py-10 md:border-r-0 md:py-16 lg:py-20"
-          : "px-default relative flex w-full min-w-[320px] flex-col border-r border-r-th-fade py-10  md:border-r-0  md:py-16 lg:py-20"
+        "px-default relative  flex w-full min-w-[320px] flex-col border-r border-t border-r-th-fade border-t-th-fade py-10 md:overflow-visible md:border-r-0 md:border-t-0 md:py-16 lg:py-20"
       )}
     >
       {index !== feedbackData.length - 1 && (
@@ -74,10 +71,10 @@ export const Feedback = () => {
   return (
     <section
       id="clients-feedback"
-      className="w-full relative border-b border-t border-b-th-fade border-t-th-fade md:w-full"
+      className="relative w-full border-b border-t border-b-th-fade border-t-th-fade md:w-full"
     >
-      <div className="grid grid-cols-1 w-full md:grid-cols-5">
-        <div className="md-border-r md:ml-auto  box-border flex md:col-span-2 md:max-w-[540px]">
+      <div className="grid w-full grid-cols-1 md:grid-cols-5">
+        <div className="md-border-r box-border  flex md:col-span-2 md:ml-auto md:max-w-[540px]">
           <Image
             className="absolute -top-[40%] left-0 md:-left-[10vw] md:-top-[25vw] md:h-1/2 md:h-auto md:w-[50vw]"
             src={bg}
@@ -133,8 +130,8 @@ export const Feedback = () => {
             </div>
           </div>
         </div>
-        <div className="md:w-full md:col-span-3 md:overflow-hidden">
-          <div className="quote_wrapper md:mr-auto flex items-stretch overflow-x-scroll border-b border-b-th-fade  md:max-w-[860px] md:flex-col md:overflow-x-visible md:overflow-y-visible">
+        <div className="md:col-span-3 md:w-full md:overflow-hidden">
+          <div className="quote_wrapper flex items-stretch overflow-x-scroll border-b border-b-th-fade md:mr-auto  md:max-w-[860px] md:flex-col md:overflow-x-visible md:overflow-y-visible">
             {feedbackData &&
               feedbackData.map((feedback, index) => (
                 <Quote key={index} {...feedback} index={index} />
