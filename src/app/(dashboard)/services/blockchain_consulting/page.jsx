@@ -149,19 +149,20 @@ const BlockChainConsulting = () => {
           />
         }
       />
-
-      <FAQ
-        desc={
-          "Our blockchain consultation is structured to ensure that businesses can seamlessly integrate technology into their operations. This process includes several key stages"
-        }
-        title={"Our Consulting Process"}
-        data={consultingProcessData}
-        noBg={true}
-        isTwoHalf={true}
-        hasIcon={false}
-        faqGradient={true}
-        itemsClasses={"py-[74.5px]"}
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          desc={
+            "Our blockchain consultation is structured to ensure that businesses can seamlessly integrate technology into their operations. This process includes several key stages"
+          }
+          title={"Our Consulting Process"}
+          data={consultingProcessData}
+          noBg={true}
+          isTwoHalf={true}
+          hasIcon={false}
+          faqGradient={true}
+          itemsClasses={"py-[74.5px]"}
+        />
+      </div>
 
       <KeyFeatures
         isOneBlock={true}
@@ -290,12 +291,14 @@ const BlockChainConsulting = () => {
         />
       </div>
 
-      <FAQ
-        data={consultingFAQData}
-        noBg={true}
-        titleClasses="lg:text-[60px] lg:leading-[53.7px]"
-        faqHorizontalPadding={true}
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          data={consultingFAQData}
+          noBg={true}
+          titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+          faqHorizontalPadding={true}
+        />
+      </div>
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

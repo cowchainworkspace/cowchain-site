@@ -154,28 +154,32 @@ const SmartContractDevelopment = () => {
           </>
         }
       />
-
-      <FAQ
-        title={
-          <>
-            Our Smart Contracts <br className="hidden custom1400:block" />
-            Development <br className="hidden custom1400:block" />
-            Process
-          </>
-        }
-        desc={
-          <>
-            We follow rigorous and consistent blockchain smart contract
-            <br className="hidden custom1400:block" />
-            development standards to maintain high quality, security,
-            <br className="hidden custom1400:block" /> and customer compliance
-          </>
-        }
-        data={smartContractsData}
-        isTwoHalf={true}
-        noBg={true}
-        hasIcon={false}
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          title={
+            <>
+              Our Smart Contracts <br className="hidden custom1400:block" />
+              Development <br className="hidden custom1400:block" />
+              Process
+            </>
+          }
+          desc={
+            <>
+              We follow rigorous and consistent blockchain smart contract
+              <br className="hidden custom1400:block" />
+              development standards to maintain high quality, security,
+              <br className="hidden custom1400:block" /> and customer compliance
+            </>
+          }
+          data={smartContractsData}
+          itemsClasses={"py-[50px]"}
+          isTwoHalf={true}
+          noBg={true}
+          hasIcon={false}
+          faqGradient={true}
+          isDoublePadding={true}
+        />
+      </div>
 
       <KeyFeatures
         isOneBlock={true}
@@ -236,13 +240,15 @@ const SmartContractDevelopment = () => {
           bottomBorder={false}
         />
       </div>
+      <div className="w-full overflow-hidden">
+        <FAQ
+          noBg={true}
+          data={faqNftData}
+          titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+          faqHorizontalPadding={true}
+        />
+      </div>
 
-      <FAQ
-        noBg={true}
-        data={faqNftData}
-        titleClasses="lg:text-[60px] lg:leading-[53.7px]"
-        faqHorizontalPadding={true}
-      />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

@@ -146,18 +146,22 @@ const FullStackDevelopment = () => {
           />
         }
       />
-      <FAQ
-        noBg={true}
-        title={
-          <>
-            Why <br /> Choose <br /> Us?
-          </>
-        }
-        data={chooseUsData}
-        isTwoHalf={true}
-        hasIcon={false}
-        titleClasses="lg:text-[60px] leading-[0.9]"
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          noBg={true}
+          title={
+            <>
+              Why <br /> Choose <br /> Us?
+            </>
+          }
+          data={chooseUsData}
+          isTwoHalf={true}
+          hasIcon={false}
+          titleClasses="lg:text-[60px] leading-[0.9]"
+          faqGradient={true}
+        />
+      </div>
+
       <ServiceStack
         desc={
           <>
@@ -199,12 +203,14 @@ const FullStackDevelopment = () => {
         />
       </div>
 
-      <FAQ
-        data={faqData}
-        noBg={true}
-        titleClasses="lg:text-[60px] leading-[53.7px]"
-        faqHorizontalPadding={true}
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          data={faqData}
+          noBg={true}
+          titleClasses="lg:text-[60px] leading-[53.7px]"
+          faqHorizontalPadding={true}
+        />
+      </div>
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

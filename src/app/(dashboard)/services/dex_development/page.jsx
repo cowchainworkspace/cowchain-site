@@ -210,12 +210,14 @@ const DexDevelopment = () => {
         />
       </div>
 
-      <FAQ
-        noBg={true}
-        data={faqDexData}
-        titleClasses={"custom1000:text-[60px] leading-[53.7px]"}
-        faqHorizontalPadding={true}
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          noBg={true}
+          data={faqDexData}
+          titleClasses={"custom1430:text-[60px] custom1430:leading-[53.7px]"}
+          faqHorizontalPadding={true}
+        />
+      </div>
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

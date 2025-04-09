@@ -266,13 +266,15 @@ const DappDevelopment = () => {
           tag={"Other Our Services"}
         />
       </div>
+      <div className="w-full overflow-hidden">
+        <FAQ
+          data={faqDappData}
+          noBg={true}
+          titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+          faqHorizontalPadding={true}
+        />
+      </div>
 
-      <FAQ
-        data={faqDappData}
-        noBg={true}
-        titleClasses="lg:text-[60px] lg:leading-[53.7px]"
-        faqHorizontalPadding={true}
-      />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

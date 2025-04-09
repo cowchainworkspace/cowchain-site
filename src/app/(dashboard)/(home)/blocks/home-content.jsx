@@ -83,7 +83,7 @@ and aimed at solving real-world challenges"
           isSecondary={true}
         />
       </div>
-      <div className="hidden md:block">
+      <div className="hidden overflow-hidden md:block">
         <FAQ
           noBg={true}
           title={
@@ -92,12 +92,26 @@ and aimed at solving real-world challenges"
             </>
           }
           data={web3DevData}
-          desc="As a leading Web3 development company, Cowchain delivers Web3 development services that empower businesses to fully utilize decentralized technologies. 
-Each solution is crafted with precision, 
-and aimed at solving real-world challenges"
+          desc={
+            <>
+              As a leading Web3 development company, Cowchain
+              <br className="hidden custom1430:block" /> delivers Web3
+              development services that empower
+              <br className="hidden custom1430:block" /> businesses to fully
+              utilize decentralized technologies.
+              <br className="hidden custom1430:block" /> Each solution is
+              crafted with precision, and aimed
+              <br className="hidden custom1430:block" /> at solving real-world
+              challenges
+            </>
+          }
           hasIcon={false}
           isSecondary={true}
           isTwoHalf={true}
+          titleClasses="max-w-[396px] xl:text-[60px] xl:leading-[53.7px]"
+          descriptionClasses="max-w-[400px] md:my-0"
+          isDoublePadding
+          faqGradient={true}
         />
       </div>
 
@@ -228,12 +242,9 @@ and aimed at solving real-world challenges"
       </div>
 
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
-      <FAQ
-        noBg={true}
-        data={faqHomeData}
-        faqHorizontalPadding={true}
-        titleClasses="xl:text-[60px] xl:leading-[53.7px]"
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ noBg={true} data={faqHomeData} faqHorizontalPadding={true} />
+      </div>
     </>
   );
 }

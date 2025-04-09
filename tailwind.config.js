@@ -65,7 +65,8 @@ export default {
         'cosmic-plum-fade': 'linear-gradient(180deg, rgba(228, 170, 255, 0.6) -5.25%, rgba(156, 52, 205, 0.8) 26.5%, rgba(106, 38, 138, 0.99) 66.5%, rgba(0, 0, 0, 0.71) 100%)',
         'vintage-blush-gradient': 'linear-gradient(180deg, #994782 -5.25%, #CBB4AB 43.54%, #994782 100%)',
         'vintage-velvet': "linear-gradient(180deg, #B58F5D -5.25%, #4A1D38 43.54%, rgba(0, 0, 0, 0) 100%)",
-        'muted-horizon': "linear-gradient(180deg, #6D8BB1 -5.25%, #CBB4AB 43.54%, rgba(29, 37, 103, 0.42) 100%)"
+        'muted-horizon': "linear-gradient(180deg, #6D8BB1 -5.25%, #CBB4AB 43.54%, rgba(29, 37, 103, 0.42) 100%)",
+         'custom-gradient': 'linear-gradient(183.72deg, #4D2C91 -8.83%, #000000 60.23%)',
       },
       width: {
         'calc-full-plus-329': 'calc(100% + 329px)',

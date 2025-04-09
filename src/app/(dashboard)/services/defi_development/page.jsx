@@ -137,24 +137,27 @@ const DefiDevelopment = () => {
         descClasses={"max-w-[592px]"}
         titleClasses="lg:mb-[60px]"
       />
-
-      <FAQ
-        title={
-          <>
-            Our DeFi <br />
-            Development <br />
-            Process
-          </>
-        }
-        data={defiProcessData}
-        desc={
-          "Our NFT development team follows a systematic approach to ensure that each project is handled with care from start to finish, delivering high-quality outcomes. By focusing on every detail of nft development, we create platforms that are robust and adaptable to evolving business needs, enabling clients to achieve lasting impact"
-        }
-        noBg={true}
-        isTwoHalf={true}
-        isDoublePadding={true}
-        hasIcon={false}
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          title={
+            <>
+              Our DeFi <br />
+              Development <br />
+              Process
+            </>
+          }
+          data={defiProcessData}
+          desc={
+            "Our NFT development team follows a systematic approach to ensure that each project is handled with care from start to finish, delivering high-quality outcomes. By focusing on every detail of nft development, we create platforms that are robust and adaptable to evolving business needs, enabling clients to achieve lasting impact"
+          }
+          noBg={true}
+          isTwoHalf={true}
+          isDoublePadding={true}
+          hasIcon={false}
+          itemsClasses={"py-[74.5px]"}
+          faqGradient={true}
+        />
+      </div>
 
       <KeyFeatures
         isOneBlock={true}
@@ -218,12 +221,14 @@ const DefiDevelopment = () => {
         />
       </div>
 
-      <FAQ
-        data={faqDefiData}
-        noBg={true}
-        titleClasses="lg:text-[60px] lg:leading-[53.7px]"
-        faqHorizontalPadding={true}
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          data={faqDefiData}
+          noBg={true}
+          titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+          faqHorizontalPadding={true}
+        />
+      </div>
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

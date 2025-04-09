@@ -154,38 +154,45 @@ const WhiteLabelDev = () => {
         titleClasses="max-w-[573px] lg:mb-[60px]"
         descClasses={"max-w-[798px]"}
       />
-      <FAQ
-        title={"Our Proven Process"}
-        desc={
-          <>
-            <p className="text-secondary">
-              At Cowchain, we believe in a well-structured
-              <br className="hidden lg:block" /> approach to delivering
-              high-quality white label
-              <br className="hidden lg:block" /> development services. From
-              analyzing your clients’
-              <br className="hidden lg:block" /> needs to creating custom web
-              and mobile solutions, our process is transparent and focused on
-              results.
-            </p>
-            <br />
-            <p className="text-secondary">
-              We understand that businesses need reliable
-              <br className="hidden lg:block" /> partners, and our web
-              development ensures
-              <br className="hidden lg:block" /> consistent performance across
-              all project stages.
-            </p>
-          </>
-        }
-        data={whiteProcessData}
-        noBg={true}
-        isSecondary={true}
-        isTwoHalf={true}
-        itemsClasses={"py-[74.5px]"}
-        hasIcon={false}
-        faqGradient={true}
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          title={"Our Proven Process"}
+          desc={
+            <>
+              <p className="text-secondary">
+                At Cowchain, we believe in a well-structured
+                <br className="hidden lg:block" /> approach to delivering
+                high-quality white label
+                <br className="hidden lg:block" /> development services. From
+                analyzing your clients’
+                <br className="hidden lg:block" /> needs to creating custom web
+                and mobile solutions, our process is transparent and focused on
+                results.
+              </p>
+              <br />
+              <p className="text-secondary">
+                We understand that businesses need reliable
+                <br className="hidden lg:block" /> partners, and our web
+                development ensures
+                <br className="hidden lg:block" /> consistent performance across
+                all project stages.
+              </p>
+            </>
+          }
+          data={whiteProcessData}
+          noBg={true}
+          isSecondary={true}
+          isTwoHalf={true}
+          itemsClasses={"!py-[90px]"}
+          hasIcon={false}
+          faqGradient={true}
+          titleClasses="max-w-[396px]"
+          descriptionClasses="max-w-[396px]"
+          isDoublePadding={true}
+          noTopBorder={true}
+        />
+      </div>
+
       <ServiceStack home={true} />
       <KeyFeatures
         isOneBlock={true}
@@ -234,7 +241,17 @@ const WhiteLabelDev = () => {
       <WhiteLabelCases />
       <Cases />
       <CasesMobile />
-      <FAQ data={faqQuestions} noBg={true} faqHorizontalPadding={true} />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          data={faqQuestions}
+          noBg={true}
+          faqHorizontalPadding={true}
+          titleClasses="custom1430:text-[60px] leading-[0.9]"
+          typographyContainer="ml-auto max-w-[576px]"
+          noTopBorder={true}
+        />
+      </div>
+
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
