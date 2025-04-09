@@ -160,7 +160,9 @@ and aimed at solving real-world challenges"
           title={
             <>
               The applications of <br />
-              <span className="violet-gradient-text">Web3 development</span>{" "}
+              <span className="violet-gradient-text">
+                Web3 development
+              </span>{" "}
               From{" "}
               <span className="violet-gradient-text">
                 decentralized <br /> exchanges
@@ -181,7 +183,7 @@ and aimed at solving real-world challenges"
       </div>
       <Cases />
       <CasesMobile />
-      <Feedback />
+      <Feedback isHidden={true} />
 
       <Team />
       <ExpertiseServices
@@ -228,7 +230,7 @@ and aimed at solving real-world challenges"
               Cowchain{" "}
               <span className="violet-gradient-text">
                 provides <br /> a full range
-              </span> {" "}
+              </span>{" "}
               of <br />
               supplementary <br />
               services to ensure <br />
