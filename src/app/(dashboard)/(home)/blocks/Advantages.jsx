@@ -5,7 +5,7 @@ import { useState } from "react";
 import { blocksData } from "../homeData/data";
 
 export default function ExpandingBlocks({ isSecondary = false }) {
-  const [activeBlock, setActiveBlock] = useState(blocksData[0]);
+  const [activeBlock, setActiveBlock] = useState(blocksData[1]);
 
   const handleClick = (id) => {
     setActiveBlock(id);
