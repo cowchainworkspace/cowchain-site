@@ -11,7 +11,7 @@ export default function Team() {
       id="team"
       className="relative flex items-center justify-center border-b border-b-th-fade py-[60px] text-center md:pb-[84px] md:pt-[126px] lg:text-left"
     >
-      <div className="relative  grid w-full grid-cols-1 lg:grid-cols-5 min-[2000px]:grid-cols-6">
+      <div className="relative max-w-[1440px]  grid w-full grid-cols-1 lg:grid-cols-5 min-[2000px]:grid-cols-6">
         <div className="px-default z-10 flex flex-col gap-y-6 pb-[84px] md:pb-[60px] lg:col-span-5 lg:flex-row min-[2000px]:col-span-6">
           <div>
             <h2 className="mb-0 text-left text-4xl uppercase text-white md:mb-[60px] md:text-[60px] lg:flex-1">
