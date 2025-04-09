@@ -13,10 +13,8 @@ export default function ExpandingBlocks({ isSecondary = false }) {
 
   return (
     <>
-      <section
-        className={`relative mx-auto max-w-[1440px] border-t border-t-th-fade`}
-      >
-        <div className="px-default relative flex flex-col justify-between gap-[91px] pb-[61px] pt-[90px]">
+      <section className={"relative  border-t border-t-th-fade"}>
+        <div className="px-default relative mx-auto flex max-w-[1440px] flex-col justify-between gap-[91px] pb-[61px] pt-[90px]">
           <div className="  lg:gap-16">
             <h2 className="lg:order-0 text-[36px] uppercase text-white sm:text-[60px] ">
               Advantages
