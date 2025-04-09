@@ -47,31 +47,31 @@ const FullStackDevelopment = () => {
             At Cowchain, we specialize in delivering{" "}
             <span className="violet-gradient-text">
               complete
-              <br className="custom1400:block hidden" />
+              <br className="hidden custom1400:block" />
               full stack development services
             </span>{" "}
-            , covering all <br className="custom1400:block hidden" />
+            , covering all <br className="hidden custom1400:block" />
             aspects of digital product creation. As a{" "}
             <span className="violet-gradient-text">
-              full stack <br className="custom1400:block hidden" />
+              full stack <br className="hidden custom1400:block" />
               software development company
             </span>
-            , we create scalable <br className="custom1400:block hidden" />
+            , we create scalable <br className="hidden custom1400:block" />
             solutions, ensuring seamless operation across all{" "}
-            <br className="custom1400:block hidden" />
+            <br className="hidden custom1400:block" />
             system components. By leveraging
             <span className="violet-gradient-text">
               {" "}
-              cutting-edge <br className="custom1400:block hidden" />{" "}
+              cutting-edge <br className="hidden custom1400:block" />{" "}
               technologies
             </span>
             , our engineers deliver systems that{" "}
-            <br className="custom1400:block hidden" />
+            <br className="hidden custom1400:block" />
             work{" "}
             <span className="violet-gradient-text">
               flawlessly across platforms
             </span>
-            , adapting to the <br className="custom1400:block hidden" />
+            , adapting to the <br className="hidden custom1400:block" />
             unique needs of your business
           </>
         }
@@ -146,18 +146,22 @@ const FullStackDevelopment = () => {
           />
         }
       />
-      <FAQ
-        noBg={true}
-        title={
-          <>
-            Why <br /> Choose <br /> Us?
-          </>
-        }
-        data={chooseUsData}
-        isTwoHalf={true}
-        hasIcon={false}
-        titleClasses="lg:text-[60px] leading-[0.9]"
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          noBg={true}
+          title={
+            <>
+              Why <br /> Choose <br /> Us?
+            </>
+          }
+          data={chooseUsData}
+          isTwoHalf={true}
+          hasIcon={false}
+          titleClasses="lg:text-[60px] leading-[0.9]"
+          faqGradient={true}
+        />
+      </div>
+
       <ServiceStack
         desc={
           <>
@@ -195,12 +199,15 @@ const FullStackDevelopment = () => {
         }
         data={otherServiceData}
       />
-      <FAQ
-        data={faqData}
-        noBg={true}
-        titleClasses="lg:text-[60px] leading-[53.7px]"
-        faqHorizontalPadding={true}
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          data={faqData}
+          noBg={true}
+          titleClasses="lg:text-[60px] leading-[53.7px]"
+          faqHorizontalPadding={true}
+        />
+      </div>
+
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

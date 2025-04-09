@@ -42,23 +42,23 @@ const DefiDevelopment = () => {
             {" "}
             At Cowchain, we are a leading{" "}
             <span className="violet-gradient-text">
-              defi development <br className="custom1400:block hidden" />{" "}
+              defi development <br className="hidden custom1400:block" />{" "}
               company
             </span>{" "}
             specializing in providing top-notch
             <span className="violet-gradient-text">
-              defi <br className="custom1400:block hidden" /> development
+              defi <br className="hidden custom1400:block" /> development
               services
             </span>
             . Our team is dedicated to{" "}
-            <br className="custom1400:block hidden" />
+            <br className="hidden custom1400:block" />
             helping you navigate the world of decentralized{" "}
-            <br className="custom1400:block hidden" />
+            <br className="hidden custom1400:block" />
             finance with
             <span className="violet-gradient-text">
               innovative platforms
             </span>{" "}
-            offered by our <br className="custom1400:block hidden" />{" "}
+            offered by our <br className="hidden custom1400:block" />{" "}
             decentralized{" "}
             <span className="violet-gradient-text">
               finance development company
@@ -137,24 +137,27 @@ const DefiDevelopment = () => {
         descClasses={"max-w-[592px]"}
         titleClasses="lg:mb-[60px]"
       />
-
-      <FAQ
-        title={
-          <>
-            Our DeFi <br />
-            Development <br />
-            Process
-          </>
-        }
-        data={defiProcessData}
-        desc={
-          "Our NFT development team follows a systematic approach to ensure that each project is handled with care from start to finish, delivering high-quality outcomes. By focusing on every detail of nft development, we create platforms that are robust and adaptable to evolving business needs, enabling clients to achieve lasting impact"
-        }
-        noBg={true}
-        isTwoHalf={true}
-        isDoublePadding={true}
-        hasIcon={false}
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          title={
+            <>
+              Our DeFi <br />
+              Development <br />
+              Process
+            </>
+          }
+          data={defiProcessData}
+          desc={
+            "Our NFT development team follows a systematic approach to ensure that each project is handled with care from start to finish, delivering high-quality outcomes. By focusing on every detail of nft development, we create platforms that are robust and adaptable to evolving business needs, enabling clients to achieve lasting impact"
+          }
+          noBg={true}
+          isTwoHalf={true}
+          isDoublePadding={true}
+          hasIcon={false}
+          itemsClasses={"py-[74.5px]"}
+          faqGradient={true}
+        />
+      </div>
 
       <KeyFeatures
         isOneBlock={true}
@@ -216,12 +219,15 @@ const DefiDevelopment = () => {
         data={OtherDefiData}
         bottomBorder={false}
       />
-      <FAQ
-        data={faqDefiData}
-        noBg={true}
-        titleClasses="lg:text-[60px] lg:leading-[53.7px]"
-        faqHorizontalPadding={true}
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          data={faqDefiData}
+          noBg={true}
+          titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+          faqHorizontalPadding={true}
+        />
+      </div>
+
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

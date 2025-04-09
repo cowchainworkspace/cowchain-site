@@ -37,27 +37,27 @@ const DexDevelopment = () => {
           <>
             Cowchain is among the{" "}
             <span className="violet-gradient-text">
-              leading decentralized <br className="custom1400:block hidden" />
+              leading decentralized <br className="hidden custom1400:block" />
               exchange development companies
             </span>{" "}
-            providing <br className="custom1400:block hidden" />
+            providing <br className="hidden custom1400:block" />
             end-to-end services to empower one to build{" "}
-            <br className="custom1400:block hidden" />
+            <br className="hidden custom1400:block" />
             <span className="violet-gradient-text">scalable DEX platforms</span>
-            . As the trusted <br className="custom1400:block hidden" />
+            . As the trusted <br className="hidden custom1400:block" />
             <span className="violet-gradient-text">
               decentralized exchange software{" "}
-              <br className="custom1400:block hidden" />
+              <br className="hidden custom1400:block" />
               development company
             </span>
-            , we believe <br className="custom1400:block hidden" />
+            , we believe <br className="hidden custom1400:block" />
             in{" "}
             <span className="violet-gradient-text">
               secure and customized solutions
             </span>{" "}
-            that help <br className="custom1400:block hidden" />
+            that help <br className="hidden custom1400:block" />
             organizations address the demands of the market{" "}
-            <br className="custom1400:block hidden" />
+            <br className="hidden custom1400:block" />
             and security in trading alongside the users
           </>
         }
@@ -206,12 +206,15 @@ const DexDevelopment = () => {
         }
         tag={"Other Our Services"}
       />
-      <FAQ
-        noBg={true}
-        data={faqDexData}
-        titleClasses={"custom1000:text-[60px] leading-[53.7px]"}
-        faqHorizontalPadding={true}
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          noBg={true}
+          data={faqDexData}
+          titleClasses={"custom1430:text-[60px] custom1430:leading-[53.7px]"}
+          faqHorizontalPadding={true}
+        />
+      </div>
+
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
