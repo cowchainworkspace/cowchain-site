@@ -131,30 +131,33 @@ const DappDevelopment = () => {
         topBorder={false}
         customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
       />
-      <OtherServices
-        topBorder={false}
-        title={
-          <>
-            Our dApp <br />
-            Development <br />
-            Process
-          </>
-        }
-        desc={
-          <>
-            At Cowchain, dapp development company, we follow a
-            <br className="hidden: lg:block" /> structured process to ensure the
-            delivery of high-quality
-            <br className="hidden: lg:block" /> decentralized applications. Our
-            dapp development platform is
-            <br className="hidden: lg:block" /> designed to streamline each
-            phase, from planning to
-            <br className="hidden: lg:block" /> deployment
-          </>
-        }
-        data={dappDevProcessData}
-        noTag={true}
-      />
+      <div className="w-full overflow-hidden">
+        <OtherServices
+          topBorder={false}
+          title={
+            <>
+              Our dApp <br />
+              Development <br />
+              Process
+            </>
+          }
+          desc={
+            <>
+              At Cowchain, dapp development company, we follow a
+              <br className="hidden: lg:block" /> structured process to ensure
+              the delivery of high-quality
+              <br className="hidden: lg:block" /> decentralized applications.
+              Our dapp development platform is
+              <br className="hidden: lg:block" /> designed to streamline each
+              phase, from planning to
+              <br className="hidden: lg:block" /> deployment
+            </>
+          }
+          data={dappDevProcessData}
+          noTag={true}
+        />
+      </div>
+
       <ServiceStack home={true} />
       <KeyFeatures
         isOneBlock={true}
@@ -236,31 +239,33 @@ const DappDevelopment = () => {
         descClasses={"max-w-[792px]"}
         titleClasses="lg:mb-[60px]"
       />
-      <OtherServices
-        title={
-          <>
-            In addition to{" "}
-            <span className="violet-gradient-text">
-              dApp
+      <div className="w-full overflow-hidden">
+        <OtherServices
+          title={
+            <>
+              In addition to{" "}
+              <span className="violet-gradient-text">
+                dApp
+                <br className="hidden: lg:block" />
+                development
+                <br className="hidden: lg:block" />
+                services
+              </span>
+              , Cowchain
               <br className="hidden: lg:block" />
-              development
-              <br className="hidden: lg:block" />
-              services
-            </span>
-            , Cowchain
-            <br className="hidden: lg:block" />
-            offers a variety of <br className="hidden: lg:block" />
-            <span className="violet-gradient-text">
-              blockchain <br className="hidden: lg:block" /> solutions
-            </span>
-            ,
-            <br className="hidden: lg:block" /> including
-          </>
-        }
-        data={otherDappServiceData}
-        bottomBorder={false}
-        tag={"Other Our Services"}
-      />
+              offers a variety of <br className="hidden: lg:block" />
+              <span className="violet-gradient-text">
+                blockchain <br className="hidden: lg:block" /> solutions
+              </span>
+              ,
+              <br className="hidden: lg:block" /> including
+            </>
+          }
+          data={otherDappServiceData}
+          bottomBorder={false}
+          tag={"Other Our Services"}
+        />
+      </div>
       <div className="w-full overflow-hidden">
         <FAQ
           data={faqDappData}

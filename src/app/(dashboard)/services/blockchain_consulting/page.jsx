@@ -268,27 +268,29 @@ const BlockChainConsulting = () => {
         }
         noBg={true}
       />
+      <div className="w-full overflow-hidden">
+        <OtherServices
+          tag={"Other Blockchain Services"}
+          title={
+            <>
+              In addition to{" "}
+              <span className="violet-gradient-text">
+                blockchain <br /> consulting
+              </span>
+              , Cowchain <br /> offers a range of <br />
+              complementary solutions <br />
+              <span className="violet-gradient-text">
+                to help businesses fully <br /> integrate technology <br /> into
+                their operations.
+              </span>{" "}
+              <br />
+              These services include
+            </>
+          }
+          data={otherServices}
+        />
+      </div>
 
-      <OtherServices
-        tag={"Other Blockchain Services"}
-        title={
-          <>
-            In addition to{" "}
-            <span className="violet-gradient-text">
-              blockchain <br /> consulting
-            </span>
-            , Cowchain <br /> offers a range of <br />
-            complementary solutions <br />
-            <span className="violet-gradient-text">
-              to help businesses fully <br /> integrate technology <br /> into
-              their operations.
-            </span>{" "}
-            <br />
-            These services include
-          </>
-        }
-        data={otherServices}
-      />
       <div className="w-full overflow-hidden">
         <FAQ
           data={consultingFAQData}
@@ -297,7 +299,6 @@ const BlockChainConsulting = () => {
           faqHorizontalPadding={true}
         />
       </div>
-
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

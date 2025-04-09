@@ -189,23 +189,27 @@ const DexDevelopment = () => {
         isMaxWidthTab={true}
         titleClasses="max-w-[553px] lg:mb-[60px]"
       />
-      <OtherServices
-        title={
-          <>
-            In addition <br /> to{" "}
-            <span className="violet-gradient-text">
-              dex platform
-              <br />
-              development
-            </span>
-            ,<br />
-            we offer <br />
-            the following <br />
-            <span className="violet-gradient-text">blockchain</span> services
-          </>
-        }
-        tag={"Other Our Services"}
-      />
+      <div className="w-full overflow-hidden">
+        {" "}
+        <OtherServices
+          title={
+            <>
+              In addition <br /> to{" "}
+              <span className="violet-gradient-text">
+                dex platform
+                <br />
+                development
+              </span>
+              ,<br />
+              we offer <br />
+              the following <br />
+              <span className="violet-gradient-text">blockchain</span> services
+            </>
+          }
+          tag={"Other Our Services"}
+        />
+      </div>
+
       <div className="w-full overflow-hidden">
         <FAQ
           noBg={true}
@@ -214,7 +218,6 @@ const DexDevelopment = () => {
           faqHorizontalPadding={true}
         />
       </div>
-
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

@@ -176,29 +176,33 @@ const FullStackDevelopment = () => {
       <CasesHead />
       <Cases />
       <CasesMobile />
-      <OtherServices
-        tag={"other our services"}
-        title={
-          <>
-            Along side
-            <span className="violet-gradient-text">
-              {" "}
-              full
+      <div className="w-full overflow-hidden">
+        {" "}
+        <OtherServices
+          tag={"other our services"}
+          title={
+            <>
+              Along side
+              <span className="violet-gradient-text">
+                {" "}
+                full
+                <br />
+                stack development <br /> services,
+              </span>{" "}
+              cowchain <br />
+              offers{" "}
+              <span className="violet-gradient-text">
+                additional <br /> support services
+              </span>{" "}
               <br />
-              stack development <br /> services,
-            </span>{" "}
-            cowchain <br />
-            offers{" "}
-            <span className="violet-gradient-text">
-              additional <br /> support services
-            </span>{" "}
-            <br />
-            to fully back your <br />
-            project
-          </>
-        }
-        data={otherServiceData}
-      />
+              to fully back your <br />
+              project
+            </>
+          }
+          data={otherServiceData}
+        />
+      </div>
+
       <div className="w-full overflow-hidden">
         <FAQ
           data={faqData}
@@ -207,7 +211,6 @@ const FullStackDevelopment = () => {
           faqHorizontalPadding={true}
         />
       </div>
-
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );

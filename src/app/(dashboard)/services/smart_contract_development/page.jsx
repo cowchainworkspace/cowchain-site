@@ -88,21 +88,22 @@ const SmartContractDevelopment = () => {
         }
         titleClasses="text-[42px] max-w-[592px]"
       />
-
-      <OtherServices
-        tag={"Smart Contracts in Business Transformation"}
-        title={
-          <>
-            Smart contracts are reshaping industries by automating complex
-            workflows and eliminating the need for intermediaries. Their
-            implementation drives trust and brings many benefits to modern
-            businesses
-          </>
-        }
-        data={OtherSmartContractData}
-        bottomBorder={true}
-        isScroll={true}
-      />
+      <div className="w-full overflow-hidden">
+        <OtherServices
+          tag={"Smart Contracts in Business Transformation"}
+          title={
+            <>
+              Smart contracts are reshaping industries by automating complex
+              workflows and eliminating the need for intermediaries. Their
+              implementation drives trust and brings many benefits to modern
+              businesses
+            </>
+          }
+          data={OtherSmartContractData}
+          bottomBorder={true}
+          isScroll={true}
+        />
+      </div>
 
       <Industries
         title={
@@ -216,28 +217,29 @@ const SmartContractDevelopment = () => {
           </>
         }
       />
-
-      <OtherServices
-        tag={"other blockchain services"}
-        title={
-          <>
-            In addition to <br className="hidden custom1400:block" />
-            <span className="violet-gradient-text">
-              smart contract <br className="hidden custom1400:block" />{" "}
-              development
-            </span>
-            , we at <br className="hidden custom1400:block" /> Cowchain offer{" "}
-            <br className="hidden custom1400:block" /> a wide range of{" "}
-            <br className="hidden custom1400:block" />
-            <span className="violet-gradient-text">
-              complementary <br className="hidden custom1400:block" />
-              services
-            </span>
-          </>
-        }
-        data={SmartContractOtherData}
-        bottomBorder={false}
-      />
+      <div className="w-full overflow-hidden">
+        <OtherServices
+          tag={"other blockchain services"}
+          title={
+            <>
+              In addition to <br className="hidden custom1400:block" />
+              <span className="violet-gradient-text">
+                smart contract <br className="hidden custom1400:block" />{" "}
+                development
+              </span>
+              , we at <br className="hidden custom1400:block" /> Cowchain offer{" "}
+              <br className="hidden custom1400:block" /> a wide range of{" "}
+              <br className="hidden custom1400:block" />
+              <span className="violet-gradient-text">
+                complementary <br className="hidden custom1400:block" />
+                services
+              </span>
+            </>
+          }
+          data={SmartContractOtherData}
+          bottomBorder={false}
+        />
+      </div>
       <div className="w-full overflow-hidden">
         <FAQ
           noBg={true}

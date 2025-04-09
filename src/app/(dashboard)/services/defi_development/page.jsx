@@ -202,23 +202,25 @@ const DefiDevelopment = () => {
           </>
         }
       />
+      <div className="w-full overflow-hidden">
+        <OtherServices
+          tag={"Other Blockchain Services"}
+          title={
+            <>
+              In addition to <br />
+              <span className="violet-gradient-text">DEFI development</span>
+              <br />
+              Cowchain offers <br /> a variety <br /> of
+              <span className="violet-gradient-text">
+                complementary <br /> services
+              </span>
+            </>
+          }
+          data={OtherDefiData}
+          bottomBorder={false}
+        />
+      </div>
 
-      <OtherServices
-        tag={"Other Blockchain Services"}
-        title={
-          <>
-            In addition to <br />
-            <span className="violet-gradient-text">DEFI development</span>
-            <br />
-            Cowchain offers <br /> a variety <br /> of
-            <span className="violet-gradient-text">
-              complementary <br /> services
-            </span>
-          </>
-        }
-        data={OtherDefiData}
-        bottomBorder={false}
-      />
       <div className="w-full overflow-hidden">
         <FAQ
           data={faqDefiData}
@@ -227,7 +229,6 @@ const DefiDevelopment = () => {
           faqHorizontalPadding={true}
         />
       </div>
-
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
