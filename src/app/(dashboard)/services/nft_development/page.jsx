@@ -79,31 +79,39 @@ const NftDevelopment = () => {
         noBg={true}
         descClasses={"max-w-[592px]"}
       />
-
-      <FAQ
-        title={<>Our Non-Fungible Token Development Process</>}
-        desc={
-          <>
-            Our NFT development team follows a systematic approach
-            <br className="hidden xl:block" /> to ensure that each project is
-            handled with care from start
-            <br className="hidden xl:block" /> to finish, delivering
-            high-quality outcomes. By focusing on
-            <br className="hidden xl:block" /> every detail of NFT development,
-            we create platforms that
-            <br className="hidden xl:block" /> are robust and adaptable to
-            evolving business needs,
-            <br className="hidden xl:block" /> enabling clients to achieve
-            lasting impact
-          </>
-        }
-        data={nftProcessData}
-        isTwoHalf={true}
-        isDoublePadding={true}
-        noBg={true}
-        hasIcon={false}
-        itemsClasses={"md: py-[74.5px]"}
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ
+          title={
+            <>
+              Our Non-Fungible
+              <br /> Token Development Process
+            </>
+          }
+          desc={
+            <>
+              Our NFT development team follows a systematic approach
+              <br className="hidden xl:block" /> to ensure that each project is
+              handled with care from start
+              <br className="hidden xl:block" /> to finish, delivering
+              high-quality outcomes. By focusing on
+              <br className="hidden xl:block" /> every detail of NFT
+              development, we create platforms that
+              <br className="hidden xl:block" /> are robust and adaptable to
+              evolving business needs,
+              <br className="hidden xl:block" /> enabling clients to achieve
+              lasting impact
+            </>
+          }
+          data={nftProcessData}
+          isTwoHalf={true}
+          isDoublePadding={true}
+          noBg={true}
+          hasIcon={false}
+          itemsClasses={"md: py-[74.5px]"}
+          faqGradient={true}
+          titleClasses="custom1430:text-[42px]"
+        />
+      </div>
 
       <Industries
         title={"NFT Across Industries"}
@@ -190,13 +198,15 @@ const NftDevelopment = () => {
           bottomBorder={false}
         />
       </div>
+      <div className="w-full overflow-hidden">
+        <FAQ
+          data={faqNftData}
+          noBg={true}
+          titleClasses="xl:text-[60px] lg:leading-[53.7px]"
+          faqHorizontalPadding={true}
+        />
+      </div>
 
-      <FAQ
-        data={faqNftData}
-        noBg={true}
-        titleClasses="xl:text-[60px] lg:leading-[53.7px]"
-        faqHorizontalPadding={true}
-      />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
