@@ -19,12 +19,22 @@ import { agent, gbc, m2ePlatformImg } from "../../../../../../public/projects";
 export const retroBridgeTags = [
   {
     id: 1,
-    tagLabel: "Mobile App"
+    tagLabel: "Web Development"
   },
   {
     id: 2,
-    tagLabel: "Non-custodial exchange"
-  }
+    tagLabel: "DeFi"
+  },
+  {
+    id: 3,
+    tagLabel: "Bridge"
+  },
+  {
+    id: 4,
+    tagLabel: "NFT"
+  },
+  
+
 ];
 
 export const overviewRetroBridgeItems = [
@@ -94,6 +104,34 @@ export const retroBridgeSlides = [
   },
   {
     id: 4,
+    width: 818,
+    height: 539,
+    desc: "screen with a recent transactions",
+    href: slideFour
+  },
+  {
+    id: 5,
+    width: 816,
+    height: 539,
+    desc: "sun set phase",
+    href: slideOne
+  },
+  {
+    id: 6,
+    width: 817,
+    height: 539,
+    desc: "screen with a token transfer",
+    href: slideTwo
+  },
+  {
+    id: 7,
+    width: 255,
+    height: 539,
+    desc: "mobile screen with a transfer details",
+    href: slideThree
+  },
+  {
+    id: 8,
     width: 818,
     height: 539,
     desc: "screen with a recent transactions",
@@ -203,23 +241,29 @@ export const retroBridgeTeam = [
 export const retroBridgeProjects = [
   {
     id: 1,
-    tags: ["App Development", "Website Development "],
+    tags: ["Website Development ", "Mobile App", "GameFi", "Trading", "DEX", "DeFi", "NFT", "Staking", "Crypto Wallet"],
     title: "m2e platform",
-    desc: "Large Move 2 earn game with complex ecosystem (DEX, crypto wallet, NFT Marketplace and native token)",
-    img: m2ePlatformImg
+    desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
+    img: m2ePlatformImg,
+    itemClasses: "pb-[30px] mt-auto",
+    projectLink: "#"
   },
   {
-    id: 2,
-    tags: ["App Development", "Website Development "],
+    id: 2,   
+    tags: ["Website Development", "Trading", "NFT"],
     title: "GBC DAPP",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .",
-    img: gbc
+    desc: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
+    img: gbc,
+    itemClasses: "pb-[30px] mt-auto",
+    projectLink: "gbc"
   },
   {
     id: 3,
-    tags: ["App Development", "Website Development "],
+    tags: ["Website Development", "AI Development", "DeFi", "Crypto Wallet"],
     title: "agenthub",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .",
-    img: agent
+    desc: "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
+    img: agent,
+    itemClasses: "pb-[30px] mt-auto",
+    projectLink: "agnt"
   }
 ];

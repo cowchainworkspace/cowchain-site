@@ -27,16 +27,20 @@ import {
   gbcSolutionQuest
 } from "../../../../../../public/cases/gbc/solutions";
 
-import { coinclub, hybrid, reflect } from "../../../../../../public/projects";
+import { memolut, m2eNew, reflectNew } from "../../../../../../public/projects";
 
 export const gbcTags = [
   {
     id: 1,
-    tagLabel: "Mobile App"
+    tagLabel: "Web Development"
   },
   {
     id: 2,
-    tagLabel: "GameFi"
+    tagLabel: "Trading"
+  },
+  {
+    id: 3,
+    tagLabel: "NFT"
   }
 ];
 
@@ -344,24 +348,31 @@ export const gbcTeam = [
 export const gbcProjects = [
   {
     id: 1,
-    tags: ['App Development', 'Website Development '],
-    title: 'HYBRID',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
-    img: hybrid,
+    tags: ["Website Development ", "Mobile App", "GameFi", "Trading", "DEX", "DeFi", "NFT", "Staking", "Crypto Wallet"],
+    title: "m2e platform",
+    desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
+    img: m2eNew,
+    itemClasses: "mt-[363px]",
+    projectLink: "#",
+    textColor: "text-secondary",
+    textGap: "gap-[24px]"
   },
   {
     id: 2,
-    tags: ['App Development', 'Website Development '],
-    title: 'COINCLUB',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
-    img: coinclub,
+    tags: ['Mobile App', 'Trading', "Crypto Wallet"],
+    title: 'memelut',
+    desc: 'Memelut is an all-in-one app that simplifies exploring, trading, and storing memecoins.',
+    img: memolut,
+    projectLink: "#",
+    textGap: "gap-[24px]"
   },
   {
     id: 3,
     tags: [ 'Website Development', '24/7 Support', 'Web3'],
     title: 'REFLECT',
-    desc: 'Multichain portal, which bridged more than 50M$ volume and 200 assets across 25 chains',
-    img: reflect
+    desc: 'Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.',
+    img: reflectNew,
+    projectLink: "#"
   },
 
 ]

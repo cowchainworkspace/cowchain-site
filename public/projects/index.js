@@ -7,4 +7,10 @@ export { default as gbc } from "./gbc.webp";
 export { default as m2ePlatformImg } from "./m2e-platform.webp";
 export { default as reflect } from "./reflect.webp";
 export { default as crossChain } from "./cross-chain.webp";
+export { default as memolut } from "./memolut.webp";
+export { default as reflectNew } from "./reflect-new.webp";
+export { default as m2eNew } from "./m2e-new.webp";
+
+
+
 

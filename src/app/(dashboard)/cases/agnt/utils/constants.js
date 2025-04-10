@@ -181,7 +181,8 @@ export const agntProjects = [
     title: 'Cross-chain transfer bridge',
     desc: 'RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.',
     img: crossChain,
-    textColor: "text-secondary"
+    textColor: "text-secondary",
+    projectLink: "retrobidge"
   },
   {
     id: 2,
@@ -189,7 +190,8 @@ export const agntProjects = [
     title: 'GBC DAPP',
     desc: 'GBC is a next-generation NFT platform that combines customization, trading, and gamification.',
     img: gbc,
-    textColor: "text-white"
+    textColor: "text-white",
+    projectLink: "gbc"
   },
   {
     id: 3,
@@ -197,7 +199,8 @@ export const agntProjects = [
     title: 'm2e platform',
     desc: 'StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.',
     img: m2ePlatformImg,
-    textColor: "text-secondary"
+    textColor: "text-secondary",
+    projectLink: "#"
 
   },
 
