@@ -38,9 +38,9 @@ const GBC = () => {
           </>
         }
         tags={gbcTags}
-        descriptionClasses="max-w-[590px] text-[12.89px] font-semiBold leading-[22px] !text-white-70"
+        descriptionClasses="max-w-[590px] text-[14px] font-semiBold leading-[22px] !text-white-70"
         containerClasses="relative"
-        headerClasses="font-roc text-[64px] xl:leading-[64px]"
+        headerClasses="font-montserrat text-[64px] xl:leading-[64px]"
         bgDecoration={
           <>
             <Image
