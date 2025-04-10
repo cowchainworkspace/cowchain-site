@@ -34,6 +34,7 @@ export default {
         'custom1300': '1300px',
         'custom-1700': '1660px',
         'fullSlider': '3186px',
+        'custom480': '480px'
       },
       colors: {
         "th-fade": "#ffffff41",

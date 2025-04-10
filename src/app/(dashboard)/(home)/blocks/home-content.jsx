@@ -38,7 +38,7 @@ export default function HomeContent() {
         isOneBlock={true}
         topBorder={false}
         noBg={true}
-        tag={"about Cowchain"}
+        tag={"about cowchain"}
         title={
           <>
             Web3 Development <br /> Company

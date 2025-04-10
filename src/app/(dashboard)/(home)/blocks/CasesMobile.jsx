@@ -21,7 +21,7 @@ const CasesMobile = () => {
 
 
   return (
-    <section ref={containerRef} className="block md:hidden">
+    <section ref={containerRef} className="block custom480:hidden">
       {casesMobileData &&
         casesMobileData.map((project, index) => (
           <div key={index} className="">

@@ -19,28 +19,24 @@ export const ScrollProject = ({
       className={cn("project-card group relative flex justify-center", {
         "border  border-th-fade": !mobile,
         "border-b  border-t border-b-th-fade  border-t-th-fade": mobile,
-        "h-[546px]  md:h-[698px]": !mobile,
-        "min-h-[419px]  md:h-[419px]": mobile
+        "h-[546px]  md:h-[624px]": !mobile,
+        "min-h-[20vw] h-[130vw]": mobile
       })}
     >
       <Link
         href={link}
-        className={cn(
-          "relative flex md:w-[547px] py-[20px] flex-col items-start md:h-[698px] md:py-[72px]",
-          {
-            "h-[546px]": !mobile,
-            " max-w-[375px] md:h-[419px]": mobile,
-            "gap-[30px]": !mobile,
-            "gap-[20px] p-[20px] py-[38px]": mobile
-          }
-        )}
+        className={cn("relative flex flex-col  items-start md:w-[547px]", {
+          "h-[624px] w-[480px]": !mobile,
+          " max-w-[375px] md:h-[419px]": mobile,
+          "gap-[30px]": !mobile,
+          "gap-[20px] ": mobile
+        })}
       >
-
-        <div className="w-full flex justify-center">
+        <div className="flex w-full justify-center">
           <Image
-            className={cn("h-[100%] ", {
-              "max-h-[348px] w-auto md:max-h-[370px]": !mobile,
-              "max-h-[231px] w-full ": mobile
+            className={cn("sm:h-[100%] ", {
+              "h-[624px] w-[480px]": !mobile,
+              "h-auto min-w-[100vw]": mobile
             })}
             src={photo.src}
             width={503}
@@ -49,10 +45,10 @@ export const ScrollProject = ({
           />
         </div>
 
-        <div className="flex gap-y-[14px] max-w-[402px] flex-col md:ml-[72px] items-start md:gap-y-4">
-          <div className="hidden gap-x-1 md:flex md:items-start md:gap-x-2">
+        <div className="absolute custom480:left-[38px] z-[2] bottom-[40px] right-0 custom480:top-[406px] flex w-full flex-col  items-start  gap-y-[14px] md:gap-y-4">
+          <div className="hidden max-w-[400px] flex-wrap gap-x-[3px] gap-y-[8px] custom480:flex custom480:items-start custom480:gap-x-2">
             {tags.map((tag, index) => (
-              <div key={index} className="rounded-full bg-white px-3 py-2">
+              <div key={index} className="rounded-full max-h-[34px] bg-white px-[16px] py-2">
                 <p className="text-xs font-medium text-black lg:text-sm">
                   {tag}
                 </p>
@@ -68,13 +64,13 @@ export const ScrollProject = ({
           </p>
         </div>
       </Link>
-
+{/* 
       <div
         style={{
-          background: "linear-gradient(to bottom, transparent 45%, #4D2C91 80%)"
+          background: "linear-gradient(to bottom, transparent 45%, #000 80%)"
         }}
-        className="absolute bottom-0 z-[-1] h-full w-full group-hover:flex md:hidden"
-      ></div>
+        className="absolute bottom-0 z-[1] h-full w-full group-hover:flex md:hidden"
+      ></div> */}
     </div>
   );
 };

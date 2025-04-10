@@ -116,7 +116,7 @@ export function TustByNumbers({
                   key={index}
                   className={cn(
                     `flex h-full w-full grid-cols-1 grid-rows-1 flex-col justify-center border-r border-r-th-fade 
-                    px-[26px] py-[22px] md:px-[20px] custom815:px-[30px] custom1200:px-[50px] custom1430:px-[70px] ${index < 2 && "border-b border-b-th-fade"}`,
+                    px-[26px] py-[22px] md:px-[20px] custom815:px-[30px] z-[10] custom1200:px-[50px] custom1430:px-[70px] ${index < 2 && "border-b border-b-th-fade"}`,
                     {
                       "justify-start gap-4  md:gap-[30px] custom1430:!pt-[110px]":
                         isBlockChainConsulting && index < 2,

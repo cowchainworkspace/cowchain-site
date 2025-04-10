@@ -94,7 +94,7 @@ export function KeyFeatures({
           </h2>
           <p
             className={cn(
-              "mt-[40px] max-w-[824px] text-[14px] leading-6 md:my-[20px] md:text-base",
+              "mt-[40px] max-w-[824px] text-[14px] text-[#fff] leading-6 md:my-[20px] md:text-base",
               {
                 "max-w-[592px]": isMaxWidthTab,
                 "text-secondary": isTextSecondary
