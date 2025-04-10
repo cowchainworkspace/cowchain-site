@@ -10,15 +10,15 @@ import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { TustByNumbers } from "../web3_fullstack_development/blocks/TustByNumbers";
+import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
 import {
   CoreFeaturesTokenization,
   rwaTokenizationFAQData,
   aplicationsTokenizations,
   whyTokenization,
   otherRwaServices,
+  TustByNumbersData
 } from "./utils/data";
-import { IndustriesDexData } from "./utils/data";
-import { TustByNumbersData } from "./utils/data";
 import { BenefitsTokenizationData } from "./utils/data";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
@@ -28,6 +28,7 @@ const RwaTokenization = () => {
   return (
     <section className="overflow-visible">
       <HeroSection
+        isRwa={true}
         title={"RWA Tokenization"}
         desc={
           <>
@@ -97,23 +98,23 @@ const RwaTokenization = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[45%] left-0"
+            className="absolute -bottom-[40%] left-0 h-[1700px]"
           />
         }
       />
 
       <TustByNumbers
+        isRwa={true}
+        noBg={true}
         tag="step-by-step"
         title={
           <>
-            Exploring <br className="hidden lg:block" /> Blockchain’s{" "}
-            <br className="hidden lg:block" /> Potential
-            <br className="hidden lg:block" /> in the Modern
-            <br className="hidden lg:block" /> Market
+            How asset <br />
+            tokenization <br />
+            works
           </>
         }
         data={TustByNumbersData}
-        isBlockChainConsulting={true}
       />
 
       <ExpertiseServices
@@ -125,15 +126,9 @@ const RwaTokenization = () => {
           </>
         }
         data={CoreFeaturesTokenization}
-        topBorder={false}
+        topBorder={true}
         bottomBorder={false}
-        bg={
-          <Image
-            src={dexBg}
-            alt="decoration ellipse"
-            className="absolute -bottom-[65%] left-0"
-          />
-        }
+        bg={<CoreFeaturesRWAbg className="absolute bottom-[25%] right-0" />}
       />
       <div className="w-full overflow-hidden">
         <FAQ
@@ -152,20 +147,14 @@ const RwaTokenization = () => {
       </div>
 
       <ExpertiseServices
-        title={"Our Works"}
-        desc={
-          "At Cowchain, we take pride in delivering tailored blockchain consulting solutions across industries. Our expertise in strategy, development, and implementation has enabled businesses to streamline operations, enhance security, and achieve measurable results. Below are some of the projects that highlight our practical approach to blockchain solutions"
+        title={
+          <>
+            Why Choose Our <br /> Tokenization <br /> Solutions?
+          </>
         }
         data={whyTokenization}
         topBorder={false}
         bottomBorder={false}
-        bg={
-          <Image
-            src={dexBg}
-            alt="decoration ellipse"
-            className="absolute -bottom-[65%] left-0"
-          />
-        }
       />
 
       <KeyFeatures

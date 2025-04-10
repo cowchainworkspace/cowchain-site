@@ -12,7 +12,7 @@ export const WhiteLabelCases = () => {
             <h2 className="lg:order-0 heading-[38px] text-[42px]   uppercase text-white">
               Our White Label Web Development Cases
             </h2>
-            <p className="body my-[40px]  max-w-lg text-base leading-6 md:my-[20px] lg:order-2 lg:max-w-[637px]">
+            <p className="body mb-[40px]  max-w-lg text-base leading-6 md:mb-[20px] lg:order-2 lg:max-w-[637px]">
               Numerous projects, such as Pixeltap, have benefited from our white
               label <br className="hidden lg:block" /> development services,
               enabling them to scale their platforms while maintaining{" "}

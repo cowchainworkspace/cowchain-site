@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Counter } from "../../../(home)/components/counter";
+import Tag from "@/components/ui/tag";
 
 const TustByNumbersData = [
   {
@@ -32,17 +33,20 @@ const TustByNumbersData = [
 
 export function TustByNumbers({
   data = TustByNumbersData,
+  isRwa = false,
+  tag,
   home,
   title = "Trust by Numbers",
   desc,
-  isBlockChainConsulting = false
+  isBlockChainConsulting = false,
+  noBg = false,
 }) {
   return (
     <section className={`relative  ${home && "h-fit md:h-[700px]"}`}>
-      {!home && !isBlockChainConsulting && (
+      {(home || isBlockChainConsulting || !noBg) && (
         <Image
           alt=""
-          className="absolute -bottom-[38%] pointer-events-none left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min lg:-bottom-[120%]"
+          className="pointer-events-none absolute -bottom-[38%] left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min lg:-bottom-[120%]"
           src={FSTrustBuyNumbBg}
         />
       )}
@@ -50,7 +54,7 @@ export function TustByNumbers({
       <div className={`relative h-fit md:h-full`}>
         <div
           className={cn(
-            "grid h-full grid-cols-1 md:grid-cols-[minmax(0,_250px)_1fr_1fr] max-w-[1440px] mx-auto custom815:grid-cols-[minmax(0,_300px)_1fr_1fr] custom1000:grid-cols-[minmax(0,_400px)_1fr_1fr] custom1200:grid-cols-[minmax(0,_480px)_1fr_1fr] custom1430:grid-cols-[minmax(0,_547px)_1fr_1fr]",
+            "mx-auto grid h-full max-w-[1440px] grid-cols-1 md:grid-cols-[minmax(0,_250px)_1fr_1fr] custom815:grid-cols-[minmax(0,_300px)_1fr_1fr] custom1000:grid-cols-[minmax(0,_400px)_1fr_1fr] custom1200:grid-cols-[minmax(0,_480px)_1fr_1fr] custom1430:grid-cols-[minmax(0,_547px)_1fr_1fr]",
             {
               "lg:grid-cols-[minmax(0,_400px)_1fr_1fr md:grid-cols-1":
                 isBlockChainConsulting
@@ -61,24 +65,24 @@ export function TustByNumbers({
             className={cn(
               `flex h-full flex-col  ${home ? "h-fit md:h-[700px]" : "justify-center"}
              gap-[37px] border-r border-r-th-fade
-            px-[20px] pb-[40px] pt-[60px] md:pb-[110px] md:pl-8 md:pt-[126px]   custom1430:pl-[88px] custom1430:pr-[168px] ${isBlockChainConsulting && "lg:pl-[64px] xl:pt-[170px] custom1430:pr-[90px]"}`,
+            px-[20px] pb-[40px] pt-[60px] md:pb-[110px] md:pl-8 md:pt-[126px]   custom1430:pl-[88px]  ${isBlockChainConsulting && "lg:pl-[64px] xl:pt-[170px] custom1430:pr-[90px]"}`,
               {
-                "justify-start": isBlockChainConsulting
-              }
+                "justify-start": isBlockChainConsulting || isRwa,
+              },
+              isRwa ? "pr-[70px]" : "custom1430:pr-[168px]"
             )}
           >
+            {tag && <Tag className="mr-auto cursor-default" title={tag} />}
             <h2
               className={cn(
-                "heading-[42px] text-[36px] uppercase text-white custom815:text-[48px] custom1200:text-[60px] ",
-                {
-                  "self-start leading-[0.9] md:text-[30px] custom815:text-[36px] custom1200:!text-[48px]":
-                    isBlockChainConsulting
-                }
+                "heading-[42px] text-[36px] uppercase text-white custom815:text-[48px] ",
+                isBlockChainConsulting || isRwa ? "self-start leading-[0.9] md:text-[30px] custom815:text-[36px] custom1200:text-[48px]" : "custom1200:text-[60px]",
+                isRwa && 'custom1200:text-[55px]'
               )}
             >
               {title}
             </h2>
-            {!home && !isBlockChainConsulting && (
+            {!home && !isBlockChainConsulting && !isRwa && (
               <p className="body my-0 max-w-lg text-base leading-6 md:my-[20px] lg:order-2 lg:max-w-[306]">
                 We simplify the development process
                 <br className="hidden lg:block" /> by offering business tools
@@ -106,7 +110,7 @@ export function TustByNumbers({
             className={cn(
               "col-span-2 flex grid w-full grid-cols-2 flex-col justify-center border-b border-t border-b-th-fade border-t-th-fade customSmall:flex-row lg:order-3  lg:ml-auto lg:border-0",
               {
-                "justify-start": isBlockChainConsulting
+                "justify-start": isBlockChainConsulting || isRwa
               }
             )}
           >
@@ -115,15 +119,17 @@ export function TustByNumbers({
                 <div
                   key={index}
                   className={cn(
-                    `flex h-full w-full grid-cols-1 md:z-[10] grid-rows-1 flex-col justify-center border-r border-r-th-fade 
-                    px-[26px] py-[22px] md:px-[20px] custom815:px-[30px] custom1200:px-[50px] custom1430:px-[70px] ${index < 2 && "border-b border-b-th-fade"}`,
+                    `flex h-full w-full grid-cols-1 grid-rows-1 flex-col justify-center border-r border-r-th-fade px-[26px] 
+                    py-[22px] md:z-[10]   ${index < 2 && "border-b border-b-th-fade"}`,
                     {
                       "justify-start gap-4  md:gap-[30px] custom1430:!pt-[110px]":
                         isBlockChainConsulting && index < 2,
                       "!justify-start gap-4 md:gap-[30px] custom1430:!pt-[60px] custom1430:pb-[67px]":
                         isBlockChainConsulting && index > 1,
                       "!gap-0": isBlockChainConsulting && !number
-                    }
+                    },
+                    isRwa ? "md:p-[60px] justify-start " : " custom815:px-[30px] md:px-[20px] custom1200:px-[50px] custom1430:px-[70px]",
+                    isRwa && index % 2 !== 0 && 'min-w-[470px]'
                   )}
                 >
                   <div>
@@ -164,16 +170,22 @@ export function TustByNumbers({
                       </div>
                     )}
                     {title && (
-                      <span className="self-start font-roc text-[18px] font-medium uppercase leading-tight text-white text-white md:text-[30px] custom815:text-[36px] custom1300:text-[46px]">
+                      <div
+                        className={cn(
+                          "self-start font-roc text-[18px] font-medium uppercase leading-tight text-white md:text-[30px]  custom815:text-[36px] text-white",
+                          isRwa ? "md:leading-[90%] md:!mb-[30px]" : " custom1300:text-[46px]",
+                        )}
+                      >
                         {title}
-                      </span>
+                      </div>
                     )}
                   </div>
                   <p
                     className={cn(
                       "mt-[12px] max-w-[250px]  text-[10px] font-medium text-white md:mt-[30px] md:text-base",
                       {
-                        "!mt-0 max-w-[306px] md:!mt-0": isBlockChainConsulting
+                        "!mt-0 max-w-[306px] md:!mt-0": isBlockChainConsulting,
+                        "!mt-0 max-w-[333px] md:!mt-0": isRwa
                       }
                     )}
                   >

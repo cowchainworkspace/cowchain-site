@@ -230,36 +230,19 @@ export const whyTokenization = [
 
 export const TustByNumbersData = [
   {
-    number: 10.02,
-    desc: "Estimated global blockchain market value in 2024",
-    sighn: "$",
-    sufix: "B",
-    decimal: 2
+    title: "Asset Evaluation",
+    desc: "Together with the client, we identify suitable assets and assess their tokenization potential, confirming alignment with investment goals",
   },
   {
-    number: 82.4,
-    desc: (
-      <>
-        <p>Expected CAGR* of the blockchain market from 2024 to 2030</p>
-        <p>
-          <br />
-        </p>{" "}
-        <p className="text-[8px] text-[#BBBBBB]">*Compound Annual Growth Rate</p>
-      </>
-    ),
-    sighn: "%",
-    decimal: 1
+    title: "Token Creation",
+    desc: "Digital tokens are created, backed by the asset’s value, leveraging blockchain tokenization techniques. Clients can customize token parameters, such as supply and transfer rules",
   },
   {
-    number: 232.46,
-    desc: <>
-    Projected global blockchain<br className="hidden lg:block" /> market value by 2030.
-    </>,
-    sighn: "$",
-    sufix: "B",
-    decimal: 2
+    title: "Blockchain Integration",
+    desc: "The tokens are deployed on a secure and scalable blockchain, ensuring openness and reliability. This step includes setting up smart contracts to automate key processes like transfers and payouts",
   },
   {
-    desc: "Blockchain enhances transactional transparency and refines internal workflows. Our blockchain consulting works closely with each client to ensure their chosen platform wholly integrates with their systems for maximum scalability and agility in an increasingly digital world"
-  }
+    title: "Management and Distribution",
+    desc: "We assist in creating user-friendly dashboards for token distribution, transaction tracking, and real-time asset performance monitoring, empowering clients to manage their tokenized assets effectively",
+  },
 ];
