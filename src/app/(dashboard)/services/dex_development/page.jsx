@@ -207,6 +207,7 @@ const DexDevelopment = () => {
             </>
           }
           tag={"Other Our Services"}
+          typographyContainerClasses="xl:py-[166px]"
         />
       </div>
 

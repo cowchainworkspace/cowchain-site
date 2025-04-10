@@ -16,13 +16,14 @@ export default function HeaderContent() {
       </h1>
 
       <div className="mt-auto grid grid-cols-1 lg:grid-cols-2">
-        <div className="relative flex mb-[24px] md:mb-0 items-center md:gap-x-1">
-          <h2 className="text-[16px] font-[500] md:text-[24px] custom1200:text-[32px] custom1200:leading-[29px]">
+        <div className="relative mb-[24px] flex items-center md:mb-0 md:gap-x-1">
+          <h2 className="text-[16px] font-[500] md:text-[24px] custom1200:leading-90">
             BEING FULLY IMMERSED IN WEB3, <br />
             WE'RE NOT JUST DEVS — WE'RE <br />
             PRODUCT VISIONARIES WORKING <br />
             AS AN IN-HOUSE TEAM WITH <br />
             YOU TO GROW YOUR <br />
+            BUSINESS WITH
           </h2>
         </div>
         <div className="flex cursor-default flex-col gap-y-4 md:items-end">

@@ -36,7 +36,8 @@ export function ServiceStack({
             className={cn(
               "mx-auto flex flex-col items-center justify-center text-left text-white md:mb-16",
               {
-                "!mb-0": noMarginBottom
+                "!mb-0": noMarginBottom,
+                "items-start": twoColumns
               }
             )}
           >

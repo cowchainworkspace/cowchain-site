@@ -33,7 +33,7 @@ export const expertiseData = [
       { logo: solana, alt: "Solana" },
       { logo: polygon, alt: "Polygon" },
       { logo: ava, alt: "Avalanche" },
-      { logo: binance, alt: "Binance Smart Chain" },
+      { logo: binance, alt: "BNB Chain" },
       { logo: bitcoin, alt: "Bitcoin" },
       { logo: ton, alt: "TON" },
       { logo: near, alt: "Near" }
@@ -95,7 +95,7 @@ export const nftStackData = [
       { logo: solana, alt: "Solana" },
       { logo: bitcoin, alt: "Bitcoin" },
       { logo: ton, alt: "TON" },
-      { logo: binance, alt: "Binance Smart Chain" },
+      { logo: binance, alt: "BNB Chain" },
     ]
   }
 ];

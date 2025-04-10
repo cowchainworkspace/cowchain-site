@@ -102,6 +102,7 @@ const NftDevelopment = () => {
         isDoublePadding={true}
         noBg={true}
         hasIcon={false}
+        itemsClasses={"md: py-[74.5px]"}
       />
 
       <Industries
@@ -146,6 +147,7 @@ const NftDevelopment = () => {
         }
         noBg={true}
         descClasses={"max-w-[700px]"}
+        titleClasses="xl:mb-[60px]"
       />
 
       <ServiceStack

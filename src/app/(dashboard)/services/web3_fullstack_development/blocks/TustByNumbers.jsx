@@ -35,14 +35,15 @@ export function TustByNumbers({
   home,
   title = "Trust by Numbers",
   desc,
-  isBlockChainConsulting = false
+  isBlockChainConsulting = false,
+  typographyContainerClasses = ""
 }) {
   return (
     <section className={`relative  ${home && "h-fit md:h-[700px]"}`}>
       {!home && !isBlockChainConsulting && (
         <Image
           alt=""
-          className="absolute -bottom-[38%] pointer-events-none left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min lg:-bottom-[120%]"
+          className="pointer-events-none absolute -bottom-[38%] left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min lg:-bottom-[120%]"
           src={FSTrustBuyNumbBg}
         />
       )}
@@ -50,7 +51,7 @@ export function TustByNumbers({
       <div className={`relative h-fit md:h-full`}>
         <div
           className={cn(
-            "grid h-full grid-cols-1 md:grid-cols-[minmax(0,_250px)_1fr_1fr] max-w-[1440px] mx-auto custom815:grid-cols-[minmax(0,_300px)_1fr_1fr] custom1000:grid-cols-[minmax(0,_400px)_1fr_1fr] custom1200:grid-cols-[minmax(0,_480px)_1fr_1fr] custom1430:grid-cols-[minmax(0,_547px)_1fr_1fr]",
+            "mx-auto grid h-full max-w-[1440px] grid-cols-1 md:grid-cols-[minmax(0,_250px)_1fr_1fr] custom815:grid-cols-[minmax(0,_300px)_1fr_1fr] custom1000:grid-cols-[minmax(0,_400px)_1fr_1fr] custom1200:grid-cols-[minmax(0,_480px)_1fr_1fr] custom1430:grid-cols-[minmax(0,_547px)_1fr_1fr]",
             {
               "lg:grid-cols-[minmax(0,_400px)_1fr_1fr md:grid-cols-1":
                 isBlockChainConsulting
@@ -64,7 +65,8 @@ export function TustByNumbers({
             px-[20px] pb-[40px] pt-[60px] md:pb-[110px] md:pl-8 md:pt-[126px]   custom1430:pl-[88px] custom1430:pr-[168px] ${isBlockChainConsulting && "lg:pl-[64px] xl:pt-[170px] custom1430:pr-[90px]"}`,
               {
                 "justify-start": isBlockChainConsulting
-              }
+              },
+              typographyContainerClasses
             )}
           >
             <h2
@@ -115,8 +117,8 @@ export function TustByNumbers({
                 <div
                   key={index}
                   className={cn(
-                    `flex h-full w-full grid-cols-1 md:z-[10] grid-rows-1 flex-col justify-center border-r border-r-th-fade 
-                    px-[26px] py-[22px] md:px-[20px] custom815:px-[30px] custom1200:px-[50px] custom1430:px-[70px] ${index < 2 && "border-b border-b-th-fade"}`,
+                    `flex h-full w-full grid-cols-1 grid-rows-1 flex-col justify-center border-r border-r-th-fade px-[26px] 
+                    py-[22px] md:z-[10] md:px-[20px] custom815:px-[30px] custom1200:px-[50px] custom1430:px-[70px] ${index < 2 && "border-b border-b-th-fade"}`,
                     {
                       "justify-start gap-4  md:gap-[30px] custom1430:!pt-[110px]":
                         isBlockChainConsulting && index < 2,
