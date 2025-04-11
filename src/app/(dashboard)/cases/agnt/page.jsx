@@ -27,9 +27,8 @@ const Agnt = () => {
         heroDescription={
           <>
             AGNT.Hub is the first omnichain ecosystem for AI agents in Web3,
-            also integrated into X.
-            <br className="hidden custom1430:block" /> By combining AI
-            automation, Web3 analytics, and cross-chain execution, the platform
+            also integrated into X. By combining AI automation, Web3 analytics,
+            and cross-chain execution, the platform
             <br className="hidden custom1430:block" /> enables users to create,
             deploy, and monetize AI-driven solutions. As part of the DeFAI
             <br className="hidden custom1430:block" /> sector, AGNT.Hub connects
@@ -38,9 +37,9 @@ const Agnt = () => {
             decentralized AI.
           </>
         }
-        headerClasses="!font-roboto font-semibold text-[60px] leading-[58.92px]"
+        headerClasses="font-[550] text-[60px] leading-[58.92px]"
         containerClasses="max-w-[769px] text-center"
-        descriptionClasses="max-w-[587px] text-[14px] leading-[22.1px] font-semibold font-manrope"
+        descriptionClasses="max-w-[615px] text-[14px] leading-[22.1px] font-manrope"
         sectionClasses={"pt-[102px] pb-[120px]"}
       />
       <Banner

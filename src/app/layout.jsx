@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${manrope.variable} ${rubik.variable} ${poppins.variable} ${montserrat.variable} ${anton.variable} `}
+      className={` ${rubik.variable} ${poppins.variable} ${montserrat.variable} ${anton.variable} `}
     >
       <head>
         <link rel="preload" href="/homepage/video.mp4" type="video" />

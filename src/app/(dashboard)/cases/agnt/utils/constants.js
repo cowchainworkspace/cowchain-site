@@ -19,12 +19,25 @@ import { crossChain, gbc, m2ePlatformImg } from "../../../../../../public/projec
 export const agntTags = [
   {
     id: 1,
-    tagLabel: "Mobile App"
+    tagLabel: "Web Development"
   },
   {
     id: 2,
-    tagLabel: "GameFi"
-  }
+    tagLabel: "AI Development"
+  },
+  {
+    id: 3,
+    tagLabel: "Crypto Wallet"
+  },
+  {
+    id: 4,
+    tagLabel: "DeFi"
+  },
+  {
+    id: 5,
+    tagLabel: "NFT"
+  },
+  
 ];
 
 export const overviewAgntItems = [

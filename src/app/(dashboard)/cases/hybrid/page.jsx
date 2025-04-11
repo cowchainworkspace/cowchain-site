@@ -5,12 +5,11 @@ import Banner from "../components/Banner";
 import CasesSlider from "../components/CasesSlider";
 import CasesSolutions from "../components/CasesSolutions";
 import CaseHeroScreen from "../components/HeroScreen";
+import MoreProjects from "../components/MoreProjects";
 import ProjectOverview from "../components/ProjectOverview";
+import TeamBehind from "../components/TeamBehind";
 import BannerTitle from "./components/BannerTitle";
 import HybridWhatWeDid from "./components/HybridWhatWeDid";
-import { metadata } from "./utils/hybridMetaData";
-import MoreProjects from "../components/MoreProjects";
-import TeamBehind from "../components/TeamBehind";
 import {
   hybridProjects,
   hybridSlides,
@@ -19,6 +18,7 @@ import {
   hybridTeam,
   overviewHybridItems
 } from "./utils/constants";
+import { metadata } from "./utils/hybridMetaData";
 
 export { metadata };
 

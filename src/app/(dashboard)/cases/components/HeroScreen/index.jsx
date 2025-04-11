@@ -31,7 +31,7 @@ const CaseHeroScreen = ({
         </div>
         <h1
           className={cn(
-            "font-montserrat text-[64px] font-semibold normal-case text-white",
+            "font-montserrat text-[64px] font-medium normal-case text-white",
             headerClasses
           )}
         >
@@ -39,7 +39,7 @@ const CaseHeroScreen = ({
         </h1>
         <p
           className={cn(
-            "w-[641px] text-center font-manrope text-sm font-semibold leading-6 text-white-70",
+            "w-[641px] text-center font-manrope text-sm font-[450] leading-6  tracking-wider text-white-70",
             descriptionClasses
           )}
         >

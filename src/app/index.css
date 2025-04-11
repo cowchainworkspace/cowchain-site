@@ -7,9 +7,11 @@
 body {
   background-color: #000;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Manrope", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: none;
 }
 
 .scroll-lock {
