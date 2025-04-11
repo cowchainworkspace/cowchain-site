@@ -60,19 +60,19 @@ export const OtherServices = ({
   topBorder = true,
   bottomBorder = true,
   noItemsBorders = false,
-  isHome = false
+  ishomePage = false,
 }) => {
   return (
     <section
-      className={`${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
+      className={` ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
     >
-      <div className="relative grid grid-cols-1 md:grid-cols-6">
+      <div className="relative grid grid-cols-1 sm:mx-auto sm:max-w-[1440px] md:grid-cols-6">
         <div
-          className={`md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} mt-[60px] box-border flex flex-col items-start justify-start px-[20px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[88px] custom1000:pt-[126px]`}
+          className={`md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} mt-[60px] box-border flex flex-col items-start justify-start pr-[20px] pl-[32px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[88px] custom1000:pt-[126px]`}
         >
           {tag && <Tag title={tag} className="mb-[42px] md:mb-8" />}
 
-          <h3 className="text-left text-[24px] uppercase leading-[0.9] text-white custom1000:text-[36px] custom1200:text-[42px] ">
+          <h3 className="text-left text-[24px] uppercase text-white custom1000:text-[36px] custom1200:text-[42px] ">
             {title}
           </h3>
           {desc && (
@@ -82,7 +82,7 @@ export const OtherServices = ({
           )}
         </div>
         <div
-          className={`${noItemsBorders && "gap-[42px] pb-[42px] md:gap-0"} quote_wrapper flex flex-col items-stretch overflow-x-scroll sm:flex-row sm:flex-col md:col-span-3 md:overflow-x-hidden md:overflow-y-visible`}
+          className={`${noItemsBorders && "gap-[42px] pb-[42px] md:gap-0"} quote_wrapper flex flex-col items-stretch overflow-x-scroll sm:flex-row sm:flex-col md:col-span-3 md:overflow-x-visible md:overflow-y-visible`}
         >
           {data?.map((feedback, index) => (
             <Quote
@@ -90,7 +90,7 @@ export const OtherServices = ({
               {...feedback}
               lastIndex={index === data.length - 1}
               noItemsBorders={noItemsBorders}
-              isHome={isHome}
+              ishomePage={ishomePage}
             />
           ))}
         </div>

@@ -66,69 +66,89 @@ const Quote = ({ text, author, index }) => {
 
 export const Feedback = () => {
   return (
-    <section id="clients-feedback">
-      <div className="relative grid grid-cols-1 border-t border-t-th-fade md:grid-cols-5">
-        <div className="md-border-r relative box-border flex border-b border-b-th-fade md:col-span-2">
-          <Image
-            className="absolute -top-[40%] left-0 w-full md:-left-[20%] md:-top-[15vw] md:h-1/2"
-            src={bg}
-            alt=""
-          />
-          <div className="h-[1px]" />
-          <div className="mx-default my-heading sticky bottom-[30vh] w-full self-end lg:ml-[88px] lg:mt-[121px]">
-            <h3 className="uppercase !leading-none text-white">
-              What our
-              <br />
-              Clients say
-            </h3>
-            <p className=" mt-[30px] max-w-[592px] text-base leading-6 text-[#BBBBBB]">
-              Clients have praised our work, citing our deep expertise in NFT
-              development and blockchain technology. We focus on delivering
-              innovative solutions that meet the unique needs of each project
-            </p>
-            <div className="mt-10 flex flex-col gap-y-4 md:mt-16 lg:mt-24 xl:mt-36">
-              <div className="flex items-center gap-x-[28px]">
-                <a
-                  href="https://clutch.co/profile/cowchain"
-                  rel="nofollow noreferrer"
-                  target="_blank"
-                >
-                  <Image className="w-12 md:w-16" src={clutch} alt="" />
-                </a>
-                <div>
-                  <div className="flex items-center gap-x-4">
-                    <p className="markup mt-1 text-white">5.0</p>
-                    <div className="flex items-center gap-x-1">
-                      {[0, 1, 2, 3, 4].map((n, index) => (
-                        <Image key={index} className="w-4" src={star} alt="" />
-                      ))}
+    <section
+      id="clients-feedback"
+      className={
+        "relative w-full justify-center border-b border-t border-b-th-fade border-t-th-fade md:flex md:w-full"
+      }
+    >
+      <div className="grid w-full grid-cols-1 md:flex md:justify-center">
+        <div className="md:calc-full-minus-271 md:flex">
+          <div className="md-border-r box-border flex md:col-span-2 md:ml-auto md:max-w-[576px] ">
+            <Image
+              className={
+                "pointer-events-none absolute -top-[40%] left-0 md:-left-[10vw] md:-top-[25vw] md:h-1/2 md:h-auto md:w-[50vw]"
+              }
+              src={bg}
+              aria-hidden="true"
+              role="presentation"
+              alt=""
+            />
+            <div className="h-[1px]" />
+            <div className="mx-default my-heading sticky bottom-[30vh] w-full self-end lg:ml-[88px] lg:mt-[121px]">
+              <h3 className="uppercase !leading-none text-white">
+                What our
+                <br />
+                Clients say
+              </h3>
+              <p className=" mt-[30px] max-w-[592px] text-base leading-6 text-[#BBBBBB]">
+                Clients have praised our work, citing our deep expertise in NFT
+                development and blockchain technology. We focus on delivering
+                innovative solutions that meet the unique needs of each project
+              </p>
+              <div className="mt-10 flex flex-col gap-y-4 md:mt-16 lg:mt-24 xl:mt-36">
+                <div className="flex items-center gap-x-[28px]">
+                  <a
+                    href="https://clutch.co/profile/cowchain"
+                    rel="nofollow noreferrer"
+                    target="_blank"
+                  >
+                    <Image className="w-12 md:w-16" src={clutch} alt="" />
+                  </a>
+                  <div>
+                    <div className="flex items-center gap-x-4">
+                      <p className="markup mt-1 text-white">5.0</p>
+                      <div className="flex items-center gap-x-1">
+                        {[0, 1, 2, 3, 4].map((n, index) => (
+                          <Image
+                            key={index}
+                            className="w-4"
+                            src={star}
+                            alt=""
+                          />
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="flex items-center gap-x-6">
-                <a
-                  href="https://www.upwork.com/ag/cowchain/"
-                  rel="nofollow noreferrer"
-                  target="_blank"
-                >
-                  <Image className="w-12 md:w-16" src={upwork} alt="" />
-                </a>
-                <div className="flex items-center gap-[8px]">
-                  <Image className="w-[35px]" src={topRated} alt="" />
-                  <p className="markup mt-1 text-[16px] text-white">
-                    Top Rated Plus
-                  </p>
+                <div className="flex items-center gap-x-6">
+                  <a
+                    href="https://www.upwork.com/ag/cowchain/"
+                    rel="nofollow noreferrer"
+                    target="_blank"
+                  >
+                    <Image className="w-12 md:w-16" src={upwork} alt="" />
+                  </a>
+                  <div className="flex items-center gap-[8px]">
+                    <Image className="w-[35px]" src={topRated} alt="" />
+                    <p className="markup mt-1 text-[16px] text-white">
+                      Top Rated Plus
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="quote_wrapper flex items-stretch overflow-x-scroll border-b border-b-th-fade md:col-span-3 md:flex-col md:overflow-x-hidden md:overflow-y-visible">
-          {feedbackData &&
-            feedbackData.map((feedback, index) => (
-              <Quote key={index} {...feedback} index={index} />
-            ))}
+        <div className="md:calc-full-plus-329 md:overflow-hidden ">
+          <div className="md:col-span-3  md:mr-auto">
+            <div className="quote_wrapper flex items-stretch overflow-x-scroll border-b border-b-th-fade  md:max-w-[864px] md:flex-col md:overflow-x-visible md:overflow-y-visible">
+              {feedbackData &&
+                feedbackData.map((feedback, index) => (
+                  <Quote key={index} {...feedback} index={index} />
+                ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

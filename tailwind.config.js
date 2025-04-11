@@ -46,7 +46,11 @@ export default {
         credo: 'url("/assets/credo_bg.jpg")',
          'faq-gradient': 'linear-gradient(120.5deg, #883DBD 3.74%, #010101 68.54%)',
         "faq-fullstack-gradient": 'background: linear-gradient(163.81deg, #873CBC 0.26%, #5F2C91 16.97%, #11011F 42.6%, #000000 53.68%)'
-      }
+      },
+      width: {
+        'calc-full-plus-329': 'calc(100% + 329px)',
+        'calc-full-minus-271': 'calc(100% - 271px)'
+      },
     }
   },
   plugins: [require("tailwindcss/nesting")]
