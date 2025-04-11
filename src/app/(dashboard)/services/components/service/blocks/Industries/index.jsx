@@ -53,7 +53,7 @@ export function Industries({
         className={`mx-auto flex w-full max-w-[1440px] flex-col p-5 py-[60px] sm:grid sm:py-[126px] md:px-[32px] lg:px-[88px] 
           ${
             isTwoSides
-              ? "grid-cols-2 gap-x-[50px] gap-y-[42px] sm:gap-y-[77px] custom1000:gap-x-[100px] custom1200:gap-x-[134px]"
+              ? "grid-cols-2 gap-x-[50px] gap-y-[42px] sm:gap-y-0 custom1000:gap-x-[100px] custom1200:gap-x-[134px]"
               : data.length < 4
                 ? "grid-cols-3 gap-y-[42px] md:gap-x-[100px]"
                 : fullGrid
@@ -66,7 +66,7 @@ export function Industries({
       >
         {!fullGrid && (
           <div
-            className={`flex flex-col items-start gap-[18px] md:justify-start md:gap-[26px] ${isTwoSides ? "col-span-1  row-span-2 max-w-[400px]" : "col-span-2 row-span-1 "}`}
+            className={`flex flex-col md:-mb-[42px] items-start gap-[18px] md:justify-start md:gap-[26px] ${isTwoSides ? "col-span-1  row-span-2 max-w-[400px]" : "col-span-2 row-span-1 "}`}
           >
             <h2
               className={cn(

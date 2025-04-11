@@ -47,10 +47,10 @@ export function ExpertiseServices({
           )}
           <h2
             className={cn(
-              "lg:order-0 text-[42px] uppercase text-white md:text-[60px]",
+              "lg:order-0 text-[42px] uppercase text-white md:max-w-[471px] md:text-[42px]",
               isHome &&
                 "mb-[42px]  text-2xl font-medium leading-[0.9] md:text-[42px] md:leading-[37.59px]",
-              isHomeEngagement && "mb- text-[36px] font-medium leading-[0.9]",
+              isHomeEngagement && "text-[36px] font-medium leading-[0.9]",
               {
                 "xl:!text-[50px]": threeColumns,
                 "!text-[42px] leading-[37.59px]": isDevelop

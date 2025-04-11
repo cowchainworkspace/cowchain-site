@@ -38,12 +38,12 @@ export const servedIndustriesData = [
 
 export const ourServices = [
   {
-    title: "WEB3 FULL STACK DEVELOPMENT",
+    title: "WEB3 FULL STACK \n DEVELOPMENT",
     text: "Bring your vision to life, using our experience from delivering 120+ Web3 projects",
     icon: FullStack
   },
   {
-    title: "Blockchain Consulting",
+    title: "Blockchain \n Consulting",
     text: "Start your project right with a clear plan, architecture, and roadmap",
     icon: BlockchainIcon
   },
@@ -162,20 +162,20 @@ export const useCases = [
 
 export const TustByNumbersData = [
   {
-    number: 120,
+    number: 150,
     title: "PROJECTS",
-    desc: "delivered across Ethereum, Polygon, Binance Smart Chain, and more",
+    desc: "delivered across Ethereum, Polygon, BNB Chain, and more",
     sighn: "+"
   },
   {
-    number: 180,
+    number: 500,
     title: "million In",
     desc: "market capitalization managed through platforms developed by our team",
     sighn: "$",
     sufix: true,
   },
   {
-    number: 20,
+    number: 35,
     title: "million+",
     desc: "fdaily trading volume on systems we’ve built",
     sighn: "$",
