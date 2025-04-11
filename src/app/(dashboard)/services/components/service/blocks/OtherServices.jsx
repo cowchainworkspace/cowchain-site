@@ -33,10 +33,10 @@ const Quote = ({ text, author, lastIndex, noItemsBorders, ishomePage, index }) =
     }`}
     >
       {!lastIndex && (
-        <div className="absolute block md:hidden bottom-0 left-0 h-[1px] w-[calc(100vw)] border-t border-t-th-fade" />
+        <div className="absolute  bottom-0 left-0 h-[1px] w-[calc(100vw)] border-t border-t-th-fade" />
       )}
       {index === 0 && (
-        <div className="absolute left-0 top-0 h-[1px] w-[calc(100vw)] border-t border-t-th-fade" />
+        <div className="absolute block md:hidden left-0 top-0 h-[1px] w-[calc(100vw)] border-t border-t-th-fade" />
       )}
       <p className="max-w-2xl whitespace-pre-line  font-roc text-[18px] font-medium uppercase leading-none !no-underline md:font-[500] md:leading-[90%] custom1000:text-[20px]">
         {text}
