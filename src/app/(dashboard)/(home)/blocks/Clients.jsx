@@ -10,20 +10,20 @@ import brc20 from "@/assets/svgComponents/clientsLogo/Brc20";
 import gbc from "@/assets/svgComponents/clientsLogo/GBC";
 import hybrid from "@/assets/svgComponents/clientsLogo/Hybrid";
 import pixel from "@/assets/svgComponents/clientsLogo/Pixel";
-import raiser from "@/assets/svgComponents/clientsLogo/Raiser";
+import agnt from "@/assets/svgComponents/clientsLogo/Agnt";
 import retroBridge from "@/assets/svgComponents/clientsLogo/RetroBridge";
 import step from "@/assets/svgComponents/clientsLogo/Step";
 import tenet from "@/assets/svgComponents/clientsLogo/Tenet";
 
 export const logos = [
-  { name: "Brc20", logo: brc20 },
-  { name: "Hybrid", logo: hybrid },
-  { name: "Pixel", logo: pixel },
-  { name: "Raiser", logo: raiser },
   { name: "RetroBridge", logo: retroBridge },
   { name: "Step", logo: step },
-  { name: "Tenet", logo: tenet },
-  { name: "GBC", logo: gbc }
+  { name: "GBC", logo: gbc },
+  { name: "Pixel", logo: pixel },
+  { name: "Hybrid", logo: hybrid },
+  { name: "Agnt", logo: agnt },
+  { name: "Brc20", logo: brc20 },
+  { name: "Tenet", logo: tenet }
 ];
 
 export default function Clients() {
@@ -35,7 +35,7 @@ export default function Clients() {
         src={bg_lg}
       />
 
-      <div className="md:px-[88px] relative flex flex-col py-[60px] pb-[20px] md:mx-auto md:max-w-[1440px] md:pb-[60px]">
+      <div className="px-default relative flex flex-col py-[60px] pb-[20px] md:mx-auto md:max-w-[1440px] md:pb-[60px]">
         <div className=" grid grid-cols-1 md:mt-12 lg:grid-cols-2 lg:gap-16">
           <h2 className="lg:order-0 text-4xl uppercase text-white  md:text-[60px]">
             OUR CLIENTS

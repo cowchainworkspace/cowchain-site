@@ -83,7 +83,7 @@ const Cases = () => {
         onSlideChange={(swiper) => {
           setCurrentIndex(swiper.activeIndex);
           setIsBeginning(swiper.isBeginning);
-          setIsEnd(swiper);
+          setIsEnd(swiper.isEnd);
         }}
         slidesPerView={"auto"}
         spaceBetween={0}
