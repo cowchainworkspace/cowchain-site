@@ -127,9 +127,12 @@ export default function FAQ({
           </div>
         </div>
         <div
-          className={cn("h-full md:col-span-3", {
-            "md:col-span-1": isTwoHalf
-          })}
+          className={cn(
+            "h-full border-t border-y-th-fade md:col-span-3 md:border-t-0",
+            {
+              "md:col-span-1": isTwoHalf
+            }
+          )}
         >
           <Accordion allowToggle>
             {data.map((faq, index) => (
@@ -138,14 +141,14 @@ export default function FAQ({
                   <div className={cn("relative")} key={index}>
                     <div
                       className={cn(
-                        "absolute left-0 top-0 h-full w-[calc(60vw)] border-b border-y-th-fade",
+                        "absolute left-0 top-0 h-full w-screen border-b border-y-th-fade bg-cover bg-center bg-no-repeat  md:w-[calc(60vw)]",
                         lastIndex === index && "border-0",
                         isExpanded &&
                           !faqGradient &&
-                          " bg-[url('/assets/faq-gradient-2.png')]  bg-cover bg-center bg-no-repeat",
+                          " bg-[url('/assets/faq-gradient-2.webp')]",
                         isExpanded &&
                           faqGradient &&
-                          " bg-[url('/faq-main-gradient.png')]  bg-cover bg-center bg-no-repeat"
+                          " bg-[url('/assets/faq-main-gradient.webp')]"
                       )}
                     />
                     <div

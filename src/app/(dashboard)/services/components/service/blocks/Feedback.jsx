@@ -39,13 +39,11 @@ const feedbackData = [
 
 const Quote = ({ text, author, index }) => {
   return (
-    <article
-      className={
-        index === feedbackData.length - 1
-          ? "px-default relative flex w-full min-w-[320px] flex-col border-r border-r-th-fade py-10 md:border-r-0 md:py-16 lg:py-20"
-          : "px-default relative flex w-full min-w-[320px] flex-col border-r border-r-th-fade py-10 md:border-b md:border-r-0 md:border-b-th-fade md:py-16 lg:py-20"
-      }
-    >
+    <article className="px-default relative  flex w-full min-w-[320px] flex-col border-r border-t border-r-th-fade border-t-th-fade py-10 md:overflow-visible md:border-r-0 md:border-t-0 md:py-16 lg:py-20">
+      {index !== feedbackData.length - 1 && (
+        <div className="absolute bottom-0 left-0 hidden h-[1px] w-[calc(100vw)] md:block md:border-b md:border-b-th-fade " />
+      )}
+
       <p className="header max-w-2xl !font-normal !leading-none !no-underline">
         {text}
       </p>

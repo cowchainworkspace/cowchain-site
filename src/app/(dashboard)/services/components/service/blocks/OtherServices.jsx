@@ -22,31 +22,24 @@ const feedbackData = [
   }
 ];
 
-const Quote = ({ text, author, lastIndex, noItemsBorders, isHome }) => {
+const Quote = ({ text, author, lastIndex, noItemsBorders, ishomePage }) => {
   return (
     <article
-      className={
-        lastIndex
-          ? `px-[20px] py-[20px] md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] ${isHome ? "py-[43px]" : ""} 
-          ${
-            !noItemsBorders
-              ? "border-t border-t-th-fade  md:border-r-0 md:border-t-0"
-              : "gap-[24px] "
-          } relative flex w-full min-w-[320px] flex-col`
-          : `px-[20px] py-[20px] md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] 
-          ${
-            !noItemsBorders
-              ? "border-b-0 border-t border-t-th-fade sm:border-r sm:border-r-th-fade "
-              : "gap-[24px] "
-          } 
-          relative flex w-full min-w-[320px] flex-col md:gap-0 md:border-b md:border-b md:border-r-0 md:border-t-0 md:border-b-th-fade md:border-b-th-fade ${isHome ? "py-[43px]" : ""}`
-      }
+      className={`px-[20px] py-[20px] md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] 
+    ${
+      !noItemsBorders
+        ? "relative flex w-full min-w-[320px] flex-col"
+        : "relative flex w-full min-w-[320px] flex-col"
+    }`}
     >
-      <p className="max-w-2xl font-roc text-[18px] font-medium uppercase !leading-none !no-underline md:font-normal custom1000:text-[20px]">
+      {!lastIndex && (
+        <div className="absolute bottom-0 left-0 h-[1px] w-[calc(100vw)] border-t border-t-th-fade" />
+      )}
+      <p className="max-w-2xl whitespace-pre-line  font-roc text-[18px] font-medium uppercase leading-none !no-underline md:font-[500] md:leading-[90%] custom1000:text-[20px]">
         {text}
       </p>
-      <div className="md:mt-[24px]">
-        <p className="text-[16px] text-th-grey">{author}</p>
+      <div className={cn(ishomePage ? "md:mt-[24px]" : "md:mt-[20px]")}>
+        <p className="text-[16px] font-thin text-[#BBBBBB]">{author}</p>
       </div>
     </article>
   );
@@ -60,7 +53,7 @@ export const OtherServices = ({
   topBorder = true,
   bottomBorder = true,
   noItemsBorders = false,
-  ishomePage = false,
+  ishomePage = false
 }) => {
   return (
     <section
@@ -68,7 +61,7 @@ export const OtherServices = ({
     >
       <div className="relative grid grid-cols-1 sm:mx-auto sm:max-w-[1440px] md:grid-cols-6">
         <div
-          className={`md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} mt-[60px] box-border flex flex-col items-start justify-start pr-[20px] pl-[32px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[88px] custom1000:pt-[126px]`}
+          className={`md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} mt-[60px] box-border flex flex-col items-start justify-start pl-[32px] pr-[20px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[88px] custom1000:pt-[126px]`}
         >
           {tag && <Tag title={tag} className="mb-[42px] md:mb-8" />}
 
