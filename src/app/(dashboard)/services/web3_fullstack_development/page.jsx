@@ -30,7 +30,12 @@ const FullStackDevelopment = () => {
     <section className="overflow-visible">
       <HeroSection
         tag={"Full Stack Development"}
-        title={"Full Stack Development"}
+        title={
+          <>
+            Full-Stack
+            <br /> Development Services
+          </>
+        }
         desc={
           <>
             Looking for a full stack development company? Cowchain offers
@@ -76,7 +81,7 @@ const FullStackDevelopment = () => {
           </>
         }
       />
-      <TustByNumbers />
+      <TustByNumbers typographyContainerClasses="xl:pt-[170px]" />
       <ExpertiseServices
         title={
           <>

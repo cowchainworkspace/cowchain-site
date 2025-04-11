@@ -109,11 +109,16 @@ const WhiteLabelDev = () => {
             </p>
           </>
         }
+        titleClasses="xl:mb-[60px]"
       />
 
       <Industries data={whiteLabelSolutions} fullGrid isWhiteLabel />
 
-      <TustByNumbers home data={TustByNumbersData} />
+      <TustByNumbers
+        home
+        data={TustByNumbersData}
+        typographyContainerClasses={"xl:pt-[170px]"}
+      />
 
       <Industries
         title={"Industries We Serve"}
@@ -193,7 +198,20 @@ const WhiteLabelDev = () => {
         />
       </div>
 
-      <ServiceStack home={true} />
+      <ServiceStack
+        home={true}
+        desc={
+          <>
+            Our development process is backed <br />
+            by a modern tech stack, ensuring
+            <br /> that every white label developer on
+            <br /> our team has the tools to create
+            <br /> fast, secure, and scalable websites
+            <br />
+            and apps
+          </>
+        }
+      />
       <KeyFeatures
         isOneBlock={true}
         title={"Why choose us?"}

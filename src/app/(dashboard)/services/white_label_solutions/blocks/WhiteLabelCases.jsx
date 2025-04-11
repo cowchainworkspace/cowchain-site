@@ -7,12 +7,12 @@ export const WhiteLabelCases = () => {
   return (
     <section className="relative">
       <div className="relative mx-auto max-w-[1440px] px-5 py-10 md:px-8 md:pb-[84px] md:pt-[126px] xl:px-[88px]">
-        <div className="flex flex-col items-start justify-between md:flex-row ">
+        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:gap-0 ">
           <div className="flex flex-col gap-5 md:gap-[60px]">
             <h2 className="lg:order-0 heading-[38px] text-[42px]   uppercase text-white">
               Our White Label Web Development Cases
             </h2>
-            <p className="body mb-[40px]  max-w-lg text-base leading-6 md:mb-[20px] lg:order-2 lg:max-w-[637px]">
+            <p className="body  max-w-lg text-base leading-6 lg:order-2 lg:max-w-[637px]">
               Numerous projects, such as Pixeltap, have benefited from our white
               label <br className="hidden lg:block" /> development services,
               enabling them to scale their platforms while maintaining{" "}

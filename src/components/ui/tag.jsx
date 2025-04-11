@@ -8,7 +8,7 @@ export default function Tag({ title, className }) {
         className
       )}
     >
-      <p className="text-[16px] font-medium text-white sm:text-base">{title}</p>
+      <p className="font-roc font-normal text-white sm:text-base">{title}</p>
     </div>
   );
 }

@@ -177,7 +177,23 @@ const DefiDevelopment = () => {
         descClasses={"max-w-[592px]"}
       />
 
-      <ServiceStack home={true} />
+      <ServiceStack
+        home={true}
+        desc={
+          <>
+            <>
+              Our defi development company employs a diverse tech stack to
+              deliver customized outcomes from defi development.
+            </>
+            <br />
+            <br />
+            <>
+              We stay updated with the latest technologies to match your
+              requirements using the most advanced tools
+            </>
+          </>
+        }
+      />
 
       <KeyFeatures
         isOneBlock={true}

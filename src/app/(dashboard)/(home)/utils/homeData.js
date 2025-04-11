@@ -177,7 +177,7 @@ export const TustByNumbersData = [
   {
     number: 20,
     title: "million+",
-    desc: "fdaily trading volume on systems we’ve built",
+    desc: "daily trading volume on systems we’ve built",
     sighn: "$",
     sufix: true,
   },

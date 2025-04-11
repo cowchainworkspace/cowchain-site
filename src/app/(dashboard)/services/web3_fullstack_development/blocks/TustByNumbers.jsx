@@ -2,11 +2,11 @@
 
 import arrow from "@/assets/arrow_right.svg";
 import FSTrustBuyNumbBg from "@/assets/bg/FSTrustBuyNumbBg.svg";
+import Tag from "@/components/ui/tag";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Counter } from "../../../(home)/components/counter";
-import Tag from "@/components/ui/tag";
 
 const TustByNumbersData = [
   {
@@ -39,7 +39,8 @@ export function TustByNumbers({
   title = "Trust by Numbers",
   desc,
   isBlockChainConsulting = false,
-  noBg = false,
+  typographyContainerClasses = "",
+  noBg = false
 }) {
   return (
     <section className={`relative  ${home && "h-fit md:h-[700px]"}`}>
@@ -67,7 +68,7 @@ export function TustByNumbers({
              gap-[37px] border-r border-r-th-fade
             px-[20px] pb-[40px] pt-[60px] md:pb-[110px] md:pl-8 md:pt-[126px]   custom1430:pl-[88px]  ${isBlockChainConsulting && "lg:pl-[64px] xl:pt-[170px] custom1430:pr-[90px]"}`,
               {
-                "justify-start": isBlockChainConsulting || isRwa,
+                "justify-start": isBlockChainConsulting || isRwa
               },
               isRwa ? "pr-[70px]" : "custom1430:pr-[168px]"
             )}
@@ -76,8 +77,10 @@ export function TustByNumbers({
             <h2
               className={cn(
                 "heading-[42px] text-[36px] uppercase text-white custom815:text-[48px] ",
-                isBlockChainConsulting || isRwa ? "self-start leading-[0.9] md:text-[30px] custom815:text-[36px] custom1200:text-[48px]" : "custom1200:text-[60px]",
-                isRwa && 'custom1200:text-[55px]'
+                isBlockChainConsulting || isRwa
+                  ? "self-start leading-[0.9] md:text-[30px] custom815:text-[36px] custom1200:text-[48px]"
+                  : "custom1200:text-[60px]",
+                isRwa && "custom1200:text-[55px]"
               )}
             >
               {title}
@@ -128,8 +131,10 @@ export function TustByNumbers({
                         isBlockChainConsulting && index > 1,
                       "!gap-0": isBlockChainConsulting && !number
                     },
-                    isRwa ? "md:p-[60px] justify-start " : " custom815:px-[30px] md:px-[20px] custom1200:px-[50px] custom1430:px-[70px]",
-                    isRwa && index % 2 !== 0 && 'min-w-[470px]'
+                    isRwa
+                      ? "justify-start md:p-[60px] "
+                      : " md:px-[20px] custom815:px-[30px] custom1200:px-[50px] custom1430:px-[70px]",
+                    isRwa && index % 2 !== 0 && "min-w-[470px]"
                   )}
                 >
                   <div>
@@ -172,8 +177,10 @@ export function TustByNumbers({
                     {title && (
                       <div
                         className={cn(
-                          "self-start font-roc text-[18px] font-medium uppercase leading-tight text-white md:text-[30px]  custom815:text-[36px] text-white",
-                          isRwa ? "md:leading-[90%] md:!mb-[30px]" : " custom1300:text-[46px]",
+                          "self-start font-roc text-[18px] font-medium uppercase leading-tight text-white text-white  md:text-[30px] custom815:text-[36px]",
+                          isRwa
+                            ? "md:!mb-[30px] md:leading-[90%]"
+                            : " custom1300:text-[46px]"
                         )}
                       >
                         {title}

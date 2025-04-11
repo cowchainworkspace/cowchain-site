@@ -28,7 +28,12 @@ const DappDevelopment = () => {
   return (
     <section>
       <HeroSection
-        title={"dApp Development Services"}
+        title={
+          <>
+            dApp Development
+            <br /> Services
+          </>
+        }
         desc={
           <>
             Cowchain.io is a leading decentralized app development company. We
@@ -84,7 +89,7 @@ const DappDevelopment = () => {
             className="absolute left-0 top-[18%]"
           />
         }
-        titleClasses="text-3xl"
+        titleClasses="xl:text-[60px] leading-90"
       />
 
       <Industries
@@ -158,7 +163,25 @@ const DappDevelopment = () => {
         />
       </div>
 
-      <ServiceStack home={true} />
+      <ServiceStack
+        home={true}
+        desc={
+          <>
+            {" "}
+            <>
+              Our blockchain dapp development company works with a variety of
+              blockchain networks to ensure flexibility and scalability.
+            </>
+            <br />
+            <br />
+            <>
+              As a top dapp development company, Cowchain utilizes a robust tech
+              stack to ensure high performance and scalability for all our
+              projects
+            </>
+          </>
+        }
+      />
       <KeyFeatures
         isOneBlock={true}
         title={"Our Approach to Innovation"}
@@ -176,12 +199,18 @@ const DappDevelopment = () => {
           </>
         }
         noBg={true}
+        titleClasses="xl:mb-[60px]"
       />
       <KeyFeatures
         topBorder={false}
         bottomBorder={false}
         isOneBlock={true}
-        title={"Our Blockchain Advisory Background"}
+        title={
+          <>
+            Our Blockchain <br className="hidden xl:block" /> Advisory
+            Background
+          </>
+        }
         desc={
           <>
             With years of experience in blockchain advisory, Cowchain provides
@@ -194,6 +223,7 @@ const DappDevelopment = () => {
           </>
         }
         noBg={true}
+        titleClasses="xl:mb-[60px]"
       />
       <Feedback />
       <Industries

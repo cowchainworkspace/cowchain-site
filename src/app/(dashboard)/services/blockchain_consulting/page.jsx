@@ -131,6 +131,7 @@ const BlockChainConsulting = () => {
         data={IndustriesDexData}
         topBorder={false}
         customClasses={"lg:!mt-0"}
+        descClasses={"text-white"}
       />
 
       <ExpertiseServices
@@ -187,6 +188,7 @@ const BlockChainConsulting = () => {
         }
         noBg={true}
         descClasses={"max-w-[592px]"}
+        titleClasses="xl:mb-[60px]"
       />
 
       <KeyFeatures
@@ -267,6 +269,7 @@ const BlockChainConsulting = () => {
           </>
         }
         noBg={true}
+        titleClasses="xl:mb-[60px]"
       />
       <div className="w-full overflow-hidden">
         <OtherServices

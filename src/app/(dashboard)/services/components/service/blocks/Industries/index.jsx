@@ -39,7 +39,8 @@ export function Industries({
   bg = false,
   customClasses = "",
   itemClasses = "",
-  isWhiteLabel = ""
+  isWhiteLabel = "",
+  descClasses
 }) {
   return (
     <section
@@ -79,7 +80,12 @@ export function Industries({
             </h2>
 
             {desc && (
-              <p className="leading-22px max-w-[650px] text-[16px] text-[#BBBBBB]">
+              <p
+                className={cn(
+                  "leading-22px max-w-[650px] text-[16px] text-[#BBBBBB]",
+                  descClasses
+                )}
+              >
                 {desc}
               </p>
             )}

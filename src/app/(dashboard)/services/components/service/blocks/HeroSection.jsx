@@ -32,7 +32,7 @@ export const HeroSection = ({ title, desc, isRwa = false }) => {
       >
         <Tag className={"mr-auto cursor-default"} title={"cowchain"} />
         {title && (
-          <h1 className="mt-4 cursor-default text-[42px] font-medium uppercase text-white md:text-[80px] lg:mt-6 lg:max-w-[1200px]">
+          <h1 className="mt-4 cursor-default text-[42px] font-medium uppercase text-white md:text-[80px] lg:mt-6 lg:max-w-[1200px] xl:mt-8">
             {title}
           </h1>
         )}
