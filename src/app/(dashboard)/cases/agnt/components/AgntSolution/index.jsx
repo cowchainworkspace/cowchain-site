@@ -47,7 +47,7 @@ const AgntSolution = ({ solutions, classes }) => {
                   </h3>
                   <p
                     className={cn(
-                      "text-xl font-medium leading-[30px] text-white",
+                      "font-manrope text-xl font-medium leading-[30px] text-white",
                       (index + 1) % 2 === 0 && "text-right"
                     )}
                   >

@@ -27,19 +27,20 @@ const Agnt = () => {
         heroDescription={
           <>
             AGNT.Hub is the first omnichain ecosystem for AI agents in Web3,
-            also integrated into X. By combining AI
-            <br className="hidden custom1430:block" /> automation, Web3
-            analytics, and cross-chain execution, the platform enables users to
-            create,
-            <br className="hidden custom1430:block" /> deploy, and monetize
-            AI-driven solutions. As part of the DeFAI sector, AGNT.Hub connects
-            AI market strategies with blockchain infrastructure, setting a new
-            standard for decentralized AI.
+            also integrated into X.
+            <br className="hidden custom1430:block" /> By combining AI
+            automation, Web3 analytics, and cross-chain execution, the platform
+            <br className="hidden custom1430:block" /> enables users to create,
+            deploy, and monetize AI-driven solutions. As part of the DeFAI
+            <br className="hidden custom1430:block" /> sector, AGNT.Hub connects
+            AI market strategies with blockchain infrastructure, setting
+            <br className="hidden custom1430:block" /> a new standard for
+            decentralized AI.
           </>
         }
-        headerClasses="font-montserrat font-semibold text-[58.92px]"
+        headerClasses="!font-roboto font-semibold text-[60px] leading-[58.92px]"
         containerClasses="max-w-[769px] text-center"
-        descriptionClasses="max-w-[621px] text-[12.89px] leading-[22.1px] font-semibold font-manrope"
+        descriptionClasses="max-w-[587px] text-[14px] leading-[22.1px] font-semibold font-manrope"
         sectionClasses={"pt-[102px] pb-[120px]"}
       />
       <Banner
@@ -63,7 +64,10 @@ const Agnt = () => {
         titleClasses={"text-[55.24px]"}
         containerClasses={"grid-cols-[1fr_568px]"}
       />
-      <MoreProjects projects={agntProjects} />
+      <MoreProjects
+        projects={agntProjects}
+        headerClasses="font-roc text-[42px] font-medium leading-90"
+      />
       <Contact className={"pb-[163px] pt-[122px]"} />
     </section>
   );

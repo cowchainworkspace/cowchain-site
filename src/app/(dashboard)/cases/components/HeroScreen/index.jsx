@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 import CaseTag from "../CaseTag";
-import HeroButton from "../HeroButton/HeroButton";
 import CasesBackButton from "../CasesBackButton";
+import HeroButton from "../HeroButton/HeroButton";
 
 const CaseHeroScreen = ({
   tags,
@@ -31,7 +31,7 @@ const CaseHeroScreen = ({
         </div>
         <h1
           className={cn(
-            "font-manrope text-[64px] font-semibold normal-case text-white",
+            "font-montserrat text-[64px] font-semibold normal-case text-white",
             headerClasses
           )}
         >
