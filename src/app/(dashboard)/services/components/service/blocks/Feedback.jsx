@@ -71,7 +71,7 @@ export const Feedback = () => {
       }
     >
       <div className="grid w-full grid-cols-1 md:flex md:justify-center">
-        <div className="md:calc-full-minus-271 md:flex">
+        <div className="md:flex md:[width:calc(100%-271px)]">
           <div className="md-border-r box-border flex md:col-span-2 md:ml-auto md:max-w-[576px] ">
             <Image
               className={
@@ -138,7 +138,7 @@ export const Feedback = () => {
             </div>
           </div>
         </div>
-        <div className="md:calc-full-plus-329 md:overflow-hidden ">
+        <div className="md:overflow-hidden md:[width:calc(100%+329px)]">
           <div className="md:col-span-3  md:mr-auto">
             <div className="quote_wrapper flex items-stretch overflow-x-scroll border-b border-b-th-fade  md:max-w-[864px] md:flex-col md:overflow-x-visible md:overflow-y-visible">
               {feedbackData &&
