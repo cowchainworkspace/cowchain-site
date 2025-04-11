@@ -3,11 +3,16 @@ import Link from "next/link";
 import React from "react";
 import RightArrowSvg from "../../../../../../public/svgIcons/RightArrowSvg";
 
-const MoreProjects = ({ projects }) => {
+const MoreProjects = ({ projects, headerClasses = "" }) => {
   return (
     <section className={cn("pt-[154px]")}>
       <div className="mx-auto mb-[50px] flex max-w-[1440px] items-start justify-between pl-[95px] pr-[99px]">
-        <h2 className="font-manrope text-[60px] font-semibold uppercase leading-[42px] text-white">
+        <h2
+          className={cn(
+            "font-manrope text-[60px] font-semibold uppercase leading-[42px] text-white",
+            headerClasses
+          )}
+        >
           More projects
         </h2>
         <Link
@@ -16,7 +21,7 @@ const MoreProjects = ({ projects }) => {
           target="_blank"
         >
           <span className="font-roc text-2xl font-medium uppercase leading-90 text-white underline">
-            view all
+            all cases
           </span>{" "}
           <RightArrowSvg />
         </Link>

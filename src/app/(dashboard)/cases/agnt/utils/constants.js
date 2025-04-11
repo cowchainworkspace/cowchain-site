@@ -19,12 +19,25 @@ import { crossChain, gbc, m2ePlatformImg } from "../../../../../../public/projec
 export const agntTags = [
   {
     id: 1,
-    tagLabel: "Mobile App"
+    tagLabel: "Web Development"
   },
   {
     id: 2,
-    tagLabel: "GameFi"
-  }
+    tagLabel: "AI Development"
+  },
+  {
+    id: 3,
+    tagLabel: "Crypto Wallet"
+  },
+  {
+    id: 4,
+    tagLabel: "DeFi"
+  },
+  {
+    id: 5,
+    tagLabel: "NFT"
+  },
+  
 ];
 
 export const overviewAgntItems = [
@@ -89,7 +102,7 @@ export const agntSolutions = [
     id: 1,
     title: "Quest Gym",
     desc: "AGNT Quest Gym introduces a gamified way to earn AGNT Points by actively participating in the ecosystem. Users complete daily quests, try to make AI laugh, and dive deeper into AGNT.Hub through articles and quizzes to stack more points. A dynamic leaderboard tracks top participants, while NFT-based achievements mark those who were here before the meta flipped.",
-    textBlockWidth: 670,
+    textBlockWidth: 647,
     img: {
       width: 527,
       height: 310,
@@ -100,8 +113,8 @@ export const agntSolutions = [
   {
     id: 2,
     title: "On-Chain Liquidity & DeFAI Automation",
-    desc: "Enabled AI-powered execution across DeFAI, allowing agents to manage liquidity pools, stake, lend, and execute automated DeFAI strategies across multiple chains. No delays, no missed opportunities – just real-time execution. AGNT.Hub’s execution model is one of the most compelling case study reports in AI-driven blockchain automation.",
-    textBlockWidth: 615,
+    desc: <>"Enabled AI-powered execution across DeFAI, allowing agents<br className="hidden xl:block" /> to manage liquidity pools, stake, lend, and execute automated<br className="hidden xl:block" /> DeFAI strategies across multiple chains. No delays, no missed<br className="hidden xl:block" /> opportunities – just real-time execution. AGNT.Hub’s<br className="hidden xl:block" /> execution model is one of the most compelling case<br className="hidden xl:block" /> study reports in AI-driven blockchain automation.",</>,
+    textBlockWidth: 580,
     img: {
       width: 517,
       height: 340,
@@ -178,7 +191,7 @@ export const agntProjects = [
   {
     id: 1,
     tags: ['Website Development', '24/7 Support', 'Web3'],
-    title: 'Cross-chain transfer bridge',
+    title: 'RETROBRIDGE',
     desc: 'RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.',
     img: crossChain,
     textColor: "text-secondary",
@@ -187,7 +200,7 @@ export const agntProjects = [
   {
     id: 2,
     tags: ['App Development', 'Website Development'],
-    title: 'GBC DAPP',
+    title: 'GMX BLUEBERRY CLUB',
     desc: 'GBC is a next-generation NFT platform that combines customization, trading, and gamification.',
     img: gbc,
     textColor: "text-white",
@@ -196,7 +209,7 @@ export const agntProjects = [
   {
     id: 3,
     tags: [ 'App Development', 'Website Development'],
-    title: 'm2e platform',
+    title: 'STEP APP',
     desc: 'StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.',
     img: m2ePlatformImg,
     textColor: "text-secondary",

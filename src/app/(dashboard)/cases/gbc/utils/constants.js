@@ -27,7 +27,7 @@ import {
   gbcSolutionQuest
 } from "../../../../../../public/cases/gbc/solutions";
 
-import { memolut, m2eNew, reflectNew } from "../../../../../../public/projects";
+import { m2eNew, memolut, reflectNew } from "../../../../../../public/projects";
 
 export const gbcTags = [
   {
@@ -151,14 +151,14 @@ export const gbcSolutions = [
     id: 1,
     title: "Sweet Points & Reward System",
     desc: "Built an incentive system where users earn Sweet Points through transactions, participation, and completing quests.",
-    textBlockWidth: 524,
+    textBlockWidth: 572,
     img: null
   },
   {
     id: 2,
     title: "NFT Customization & Trading Integration",
     desc: "Built a customization module allowing users to personalize NFTs and trade Wearables & assets in a secure marketplace.",
-    textBlockWidth: 541,
+    textBlockWidth: 570,
     img: {
       width: 364,
       height: 292,
@@ -171,7 +171,7 @@ export const gbcSolutions = [
     id: 3,
     title: "Secure & Scalable Transactions",
     desc: "Implemented on-chain trading mechanics with optimized performance, ensuring reliable NFT transactions and scalable performance.",
-    textBlockWidth: 524,
+    textBlockWidth: 547,
     img: {
       width: 533,
       height: 352,

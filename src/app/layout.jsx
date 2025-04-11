@@ -1,13 +1,53 @@
 import "./index.css";
 import "./home.css";
 import { ClientProvider } from "@/lib/api/client";
+import { Anton, Manrope, Montserrat, Poppins, Rubik } from "next/font/google";
+
 import { metadata } from "./rootMetadata";
 
+export const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+  variable: "--font-manrope"
+});
+
+export const rubik = Rubik({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
+  variable: "--font-rubik"
+});
+
+export const anton = Anton({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-anton"
+});
+
+export const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-poppins"
+});
+
+export const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["500", "600", "400"],
+  style: ["normal"],
+  display: "swap",
+  variable: "--font-montserrat"
+});
 export { metadata };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={` ${rubik.variable} ${poppins.variable} ${montserrat.variable} ${anton.variable} `}
+    >
       <head>
         <link rel="preload" href="/homepage/video.mp4" type="video" />
         <link

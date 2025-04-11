@@ -12,7 +12,7 @@ const AgntWhatWeDid = () => {
             <h3 className="mb-4 font-manrope text-[11.05px] font-normal uppercase leading-[18.41px]  tracking-[1.84px] !text-secondary">
               Business Challenges
             </h3>
-            <p className="text-[12.89px] font-medium leading-[22.1px] text-white-70">
+            <p className="font-manrope text-sm font-medium leading-[22.1px] text-white-70">
               Integrating AI automation into Web3 required overcoming several
               key obstacles. The platform needed to support cross-chain
               transactions, enable real-time AI execution, and provide a
@@ -27,7 +27,7 @@ const AgntWhatWeDid = () => {
             <h3 className="mb-4 font-manrope text-[11.05px] font-normal uppercase leading-[18.41px] tracking-[1.84px] text-white">
               result
             </h3>
-            <p className="text-[12.89px] font-medium leading-[22.1px] text-white-70">
+            <p className="font-manrope text-sm font-medium leading-[22.1px] text-white-70">
               AGNT.Hub now delivers a fully integrated AI & Web3 experience,
               enabling users to automate trading, analyze trends, and interact
               with AI-driven tools directly inside X. InfoFi capabilities within

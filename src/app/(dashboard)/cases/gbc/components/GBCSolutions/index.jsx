@@ -6,7 +6,7 @@ import GBCSolutionCard from "../GBCSolutionCard";
 const GBCSolutions = ({ solutions, classes }) => {
   return (
     <section className="py-[120px]">
-      <div className="mx-auto max-w-[1440px] pl-[90px] pr-[130px]">
+      <div className="mx-auto max-w-[1440px] pl-[138px] pr-[136px]">
         <h2 className="font-roc text-[50px] font-medium uppercase leading-90 text-white">
           solutions
         </h2>
@@ -35,7 +35,7 @@ const GBCSolutions = ({ solutions, classes }) => {
                 </h3>
                 <p
                   className={cn(
-                    "text-xl font-medium leading-[27.62px] text-white",
+                    "font-manrope text-xl font-medium leading-[27.62px] text-white",
                     (index + 1) % 2 === 0 && "text-right"
                   )}
                 >

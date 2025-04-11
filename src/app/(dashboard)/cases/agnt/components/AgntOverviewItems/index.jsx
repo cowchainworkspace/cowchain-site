@@ -53,7 +53,7 @@ const AgntOverviewItems = ({ items }) => {
                         return (
                           <p
                             key={item}
-                            className="font-manrope text-[18.41px] font-medium leading-[27.62px] !text-white"
+                            className="font-manrope text-xl font-normal leading-[27.62px] !text-white"
                           >
                             {item}
                           </p>
@@ -61,7 +61,7 @@ const AgntOverviewItems = ({ items }) => {
                       }
                       return (
                         <li key={item}>
-                          <h4 className="mb-[6px] font-manrope text-xl normal-case leading-[30px] text-white">
+                          <h4 className="mb-[6px] font-manrope text-xl font-normal normal-case leading-[30px] text-white">
                             {item.itemTitle}
                           </h4>
                           <p className="font-manrope text-sm font-medium leading-6 !text-white-70">
