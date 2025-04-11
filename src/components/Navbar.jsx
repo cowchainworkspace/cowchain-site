@@ -23,13 +23,38 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { ServicesAndTechnologies } from "../app/(dashboard)/(home)/blocks/ServicesAndTechMenu";
+import { ServicesAndTechnologiesMob } from "../app/(dashboard)/(home)/blocks/ServicesAndTechnologiesMob";
 
 export default function Navbar({ isPageNotFound = false }) {
   const [burgerOpen, setBurgerOpen] = useState(false);
+  const [serviceMenuOpen, setServiceMenuOpen] = useState(false);
+  const [serviceMobMenuOpen, setServiceMobMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const menuRef = useRef(null);
 
   useEffect(() => {
-    document.body.style.overflow = burgerOpen ? "hidden" : "visible";
+    setServiceMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        !event.target.closest(".menu-toggle-button")
+      ) {
+        setServiceMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   const [openForm, setOpenForm] = useState(false);
@@ -39,7 +64,6 @@ export default function Navbar({ isPageNotFound = false }) {
   const [isGradient, setIsGradient] = useState(true);
   const [isHomePage, setIsHomePage] = useState(true);
 
-  const pathname = usePathname();
   const { isRendering, setIsLoading, setIsRendering } = useLoader();
 
   useEffect(() => {
@@ -58,10 +82,10 @@ export default function Navbar({ isPageNotFound = false }) {
     setWindowheight(window.innerHeight);
     setIsHomePage(pathname === "/");
     setIsGradient(
-      pathname === "/services" ||
-        pathname === "/cases" ||
+      pathname === "/cases" ||
         pathname === "/clients" ||
-        pathname === "/policy"
+        pathname === "/policy" ||
+        pathname === "/services"
     );
     setIsTeamBg(pathname === "/team" || pathname === "/sitemap");
 
@@ -100,10 +124,6 @@ export default function Navbar({ isPageNotFound = false }) {
 
   const anchorLinks = [
     {
-      title: "Services & Technologies",
-      link: "/services"
-    },
-    {
       title: "Cases",
       link: "/cases"
     },
@@ -140,13 +160,36 @@ export default function Navbar({ isPageNotFound = false }) {
     setOpenForm(true);
   };
 
+  const toggleServices = (e) => {
+    e.stopPropagation();
+    setServiceMenuOpen((prevState) => !prevState);
+  };
+
+  const toggleMobServices = (e) => {
+    e.stopPropagation();
+    setServiceMobMenuOpen((prevState) => !prevState);
+  };
+
+  useEffect(() => {
+    if (toggleMenu) {
+      document.body.classList.add("scroll-lock");
+    } else {
+      document.body.classList.remove("scroll-lock");
+    }
+
+    return () => {
+      document.body.classList.remove("scroll-lock");
+    };
+  }, [toggleMenu]);
+
   return (
     <>
       <section
-        className={cn("relative bg-transparent opacity-0", {
+        className={cn("relative z-[21] bg-transparent opacity-0", {
           "pb-36 md:pb-0": isHomePage,
           "pb-[440px] lg:pb-[670px]": isTeamBg,
-          "opacity-100": !isRendering
+          "opacity-100": !isRendering,
+          "h-screen overflow-auto": toggleMenu
         })}
       >
         {isHomePage ? (
@@ -155,7 +198,7 @@ export default function Navbar({ isPageNotFound = false }) {
               priority
               srcSet={`${bg} 360w, ${bg} 480w, ${bg} 720w, ${bg_lg} 1920w`}
               sizes="(max-width: 640px) 100vw, 100vw"
-              alt="Top Background"
+              alt=""
               className={cn(
                 "absolute bottom-0 left-0 hidden h-full w-full md:block",
                 {
@@ -168,19 +211,19 @@ export default function Navbar({ isPageNotFound = false }) {
               quality={100}
               priority
               className={cn(
-                "absolute bottom-0 left-0 block h-full w-full md:hidden",
+                "absolute bottom-0 left-0 pointer-events-none block h-full w-full md:hidden",
                 {
                   hidden: isGradient
                 }
               )}
               src={bg_home}
-              alt="Navbar Background"
+              alt=""
             />
           </>
         ) : (
           <Image
             srcSet={`${bg_clients} 360w, ${bg_clients} 480w, ${bg_clients} 720w, ${bg_clients_lg} 1920w`}
-            alt="Clients Background"
+            alt=""
             className={cn(
               "absolute bottom-0 right-0 min-h-[140%] min-w-[200vw] md:min-w-full",
               {
@@ -194,12 +237,12 @@ export default function Navbar({ isPageNotFound = false }) {
         {isTeamBg && (
           <>
             <Image
-              className="absolute right-0 top-0 h-full w-full lg:hidden"
+              className="pointer-events-none absolute right-0 top-0 h-full w-full lg:hidden"
               alt="gradient"
               src={team_bg}
             />
             <Image
-              className="absolute top-0 hidden h-full w-full lg:block"
+              className="pointer-events-none absolute top-0 z-[-2] hidden h-full w-full lg:block"
               alt="gradient"
               priority
               src={team}
@@ -211,10 +254,16 @@ export default function Navbar({ isPageNotFound = false }) {
           className={
             isHomePage
               ? "navbar-wrapper relative flex h-24 items-center justify-between gap-x-8   px-4 md:h-16 md:border-b  md:border-th-fade md:border-b-th-fade md:px-8 lg:px-0"
-              : "navbar-wrapper relative flex h-24 items-center justify-between gap-x-8 px-4 md:h-16 md:border-b md:border-th-fade md:px-8 lg:px-0"
+              : "navbar-wrapper  relative flex h-24 items-center justify-between gap-x-8 px-4 md:h-16 md:border-b md:border-th-fade md:px-8 lg:px-0"
           }
         >
-          <nav className="z-20 hidden w-full max-w-[360px] items-center justify-between pl-12 lg:flex xl:max-w-md">
+          <nav className="hidden w-full max-w-[360px] items-center justify-between pl-12 lg:flex xl:max-w-md">
+            <p
+              className="menu-toggle-button navlink mt-1 cursor-pointer"
+              onClick={toggleServices}
+            >
+              Services & Technologies
+            </p>
             {anchorLinks.map((link, index) => (
               <Link key={index} href={link.link}>
                 <p className="navlink mt-1">{link.title}</p>
@@ -223,33 +272,32 @@ export default function Navbar({ isPageNotFound = false }) {
           </nav>
           <Link
             href={"/"}
-            className="z-20 flex items-center justify-center"
+            className="flex items-center justify-center"
             rel="nofollow"
           >
-            <Image
-              src="/homepage/logo_light.svg"
-              alt="Logo"
-              width={160}
-              height={160}
-              priority
-            />
+            <img
+              className="w-32 md:w-36 lg:w-40"
+              title="Home"
+              alt="Home-1"
+              src={"/homepage/logo_light.svg"}
+            ></img>
           </Link>
           {toggleMenu ? (
             <Image
               className="ml-auto w-6 cursor-pointer lg:hidden"
               src={menu_close}
               onClick={closeBurger}
-              alt="Close Menu"
+              alt=""
             ></Image>
           ) : (
             <Image
-              className="z-20 ml-auto w-6 cursor-pointer lg:hidden"
-              alt="Open Menu"
+              className="ml-auto w-6 cursor-pointer lg:hidden"
+              alt=""
               src={menu_open}
               onClick={openBurger}
             ></Image>
           )}
-          <div className="z-20 hidden w-full max-w-[360px] items-center justify-end gap-16 lg:flex xl:max-w-md">
+          <div className="hidden w-full max-w-[360px] items-center justify-end gap-16 lg:flex xl:max-w-md">
             {routerLinks.map((link, index) => (
               <Link key={index * 4} href={link.link}>
                 <p className="navlink mt-1">{link.title}</p>
@@ -269,11 +317,12 @@ export default function Navbar({ isPageNotFound = false }) {
                 initial={{ width: 0 }}
                 exit={{ width: 0 }}
                 animate={{ width: "100%", maxWidth: "100%" }}
-                className="absolute right-0 top-0 z-50 min-h-full w-full"
+                className="absolute right-0 top-0 z-50  min-h-full w-full"
               >
                 <motion.div
                   style={{
-                    height: `${windowHeight}px`
+                    minHeight: `${windowHeight}px`,
+                    height: `${!serviceMobMenuOpen ? `${windowHeight}px` : "auto"}`
                   }}
                   className="relative flex flex-col overflow-y-scroll bg-black pb-8"
                   initial="closed"
@@ -282,64 +331,91 @@ export default function Navbar({ isPageNotFound = false }) {
                 >
                   <motion.div className="relative flex h-24 items-center border-b border-b-th-fade px-4 md:h-16">
                     <a href="/" rel="nofollow">
-                      <Image
+                      <img
                         className="w-32"
                         title="Home"
                         alt="Home-1"
-                        src="/homepage/logo_light.svg"
-                        width={128}
-                        height={128}
-                      />
+                        src={"/homepage/logo_light.svg"}
+                      ></img>
                     </a>
                     <Image
                       className="ml-auto w-8 cursor-pointer lg:hidden"
                       src={menu_close}
-                      onClick={closeBurger}
+                      onClick={(e) => {
+                        closeBurger();
+                        toggleMobServices(e);
+                      }}
                       alt=""
                     ></Image>
                   </motion.div>
-                  <motion.nav className="mt-8 flex flex-col gap-y-6 px-4">
-                    {anchorLinks.map((link, index) => (
-                      <Link
-                        key={index}
-                        href={link.link}
-                        onClick={closeBurger}
-                        variants={linkVariants}
-                        whiletap={{ scale: 0.95 }}
-                      >
-                        <div className="flex items-center">
-                          <p className="font-roc text-base font-medium uppercase text-white">
-                            {link.title}
+                  <motion.nav
+                    className={`${!serviceMobMenuOpen ? "mt-8 px-4" : "h-full"}  flex  flex-col gap-y-6 `}
+                  >
+                    {serviceMobMenuOpen ? (
+                      <ServicesAndTechnologiesMob
+                        toggleMobServices={toggleMobServices}
+                        closeBurger={closeBurger}
+                      />
+                    ) : (
+                      <>
+                        <div
+                          onClick={(e) => {
+                            toggleMobServices(e);
+                          }}
+                          className="flex items-center "
+                        >
+                          <p className="cursor-pointer font-roc text-base font-medium uppercase text-white">
+                            Services & Technologies
                           </p>
                           <Image
                             className="mb-1 ml-auto w-6"
                             src={arrow}
-                            alt="Arrow"
+                            alt=""
                           ></Image>
                         </div>
-                      </Link>
-                    ))}
-                    {routerLinks.map((link, index) => (
-                      <Link
-                        key={index * 4}
-                        href={link.link}
-                        onClick={closeBurger}
-                        variants={linkVariants}
-                        whilehover={{ scale: 1.1 }}
-                        whiletap={{ scale: 0.95 }}
-                      >
-                        <div className="flex items-center">
-                          <p className="font-roc text-base font-medium uppercase text-white">
-                            {link.title}
-                          </p>
-                          <Image
-                            className="mb-1 ml-auto w-6"
-                            src={arrow}
-                            alt="Arrow"
-                          ></Image>
-                        </div>
-                      </Link>
-                    ))}
+                        {anchorLinks.map((link, index) => (
+                          <Link
+                            key={index}
+                            href={link.link}
+                            onClick={closeBurger}
+                            variants={linkVariants}
+                            whiletap={{ scale: 0.95 }}
+                          >
+                            <div className="flex items-center">
+                              <p className="font-roc text-base font-medium uppercase text-white">
+                                {link.title}
+                              </p>
+                              <Image
+                                className="mb-1 ml-auto w-6"
+                                src={arrow}
+                                alt=""
+                              ></Image>
+                            </div>
+                          </Link>
+                        ))}
+                        {routerLinks.map((link, index) => (
+                          <Link
+                            key={index * 4}
+                            href={link.link}
+                            onClick={closeBurger}
+                            variants={linkVariants}
+                            whilehover={{ scale: 1.1 }}
+                            whiletap={{ scale: 0.95 }}
+                          >
+                            <div className="flex items-center">
+                              <p className="font-roc text-base font-medium uppercase text-white">
+                                {link.title}
+                              </p>
+                              <Image
+                                className="mb-1 ml-auto w-6"
+                                src={arrow}
+                                alt=""
+                              ></Image>
+                            </div>
+                          </Link>
+                        ))}
+                      </>
+                    )}
                   </motion.nav>
                   <button
                     className="btn-submit mx-4 mt-auto text-center"
@@ -403,6 +479,11 @@ export default function Navbar({ isPageNotFound = false }) {
         </div>
       </section>
       <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />
+      {serviceMenuOpen && (
+        <div ref={menuRef}>
+          <ServicesAndTechnologies setServiceMenuOpen={setServiceMenuOpen} />
+        </div>
+      )}
     </>
   );
 }

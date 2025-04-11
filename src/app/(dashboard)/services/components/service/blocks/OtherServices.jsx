@@ -22,10 +22,10 @@ const feedbackData = [
   }
 ];
 
-const Quote = ({ text, author, lastIndex, noItemsBorders, ishomePage }) => {
+const Quote = ({ text, author, lastIndex, noItemsBorders, ishomePage, index }) => {
   return (
     <article
-      className={`px-[20px] py-[20px] md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] 
+      className={`gap-[24px] px-[20px] py-[20px]  md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] 
     ${
       !noItemsBorders
         ? "relative flex w-full min-w-[320px] flex-col"
@@ -33,7 +33,10 @@ const Quote = ({ text, author, lastIndex, noItemsBorders, ishomePage }) => {
     }`}
     >
       {!lastIndex && (
-        <div className="absolute bottom-0 left-0 h-[1px] w-[calc(100vw)] border-t border-t-th-fade" />
+        <div className="absolute block md:hidden bottom-0 left-0 h-[1px] w-[calc(100vw)] border-t border-t-th-fade" />
+      )}
+      {index === 0 && (
+        <div className="absolute left-0 top-0 h-[1px] w-[calc(100vw)] border-t border-t-th-fade" />
       )}
       <p className="max-w-2xl whitespace-pre-line  font-roc text-[18px] font-medium uppercase leading-none !no-underline md:font-[500] md:leading-[90%] custom1000:text-[20px]">
         {text}
@@ -61,11 +64,11 @@ export const OtherServices = ({
     >
       <div className="relative grid grid-cols-1 sm:mx-auto sm:max-w-[1440px] md:grid-cols-6">
         <div
-          className={`md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} mt-[60px] box-border flex flex-col items-start justify-start pl-[32px] pr-[20px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[88px] custom1000:pt-[126px]`}
+          className={`md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} mt-[60px] box-border flex flex-col items-start justify-start px-[20px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[88px] custom1000:pt-[126px]`}
         >
           {tag && <Tag title={tag} className="mb-[42px] md:mb-8" />}
 
-          <h3 className="text-left text-[24px] uppercase text-white custom1000:text-[36px] custom1200:text-[42px] ">
+          <h3 className="text-left text-[24px] uppercase leading-[90%] text-white custom1000:text-[36px] custom1200:text-[42px] ">
             {title}
           </h3>
           {desc && (
@@ -79,6 +82,7 @@ export const OtherServices = ({
         >
           {data?.map((feedback, index) => (
             <Quote
+              index={index}
               key={index}
               {...feedback}
               lastIndex={index === data.length - 1}

@@ -244,3 +244,31 @@ export const faqHomeData = [
     content: 'Yes, our Web3 development company ensures seamless integration of blockchain solutions with your existing systems.',
   },
 ]
+
+export const mobileFaqHomeData = [
+  {
+    id: 1,
+    title: 'What Does Web3 \n Development Involve?',
+    content: 'Web3 development involves creating decentralized applications, integrating blockchain technology, and leveraging smart contracts to create secure and efficient systems.',
+  },
+  {
+    id: 2,
+    title: 'How Is Web3 Different from Web2?',
+    content: 'Web3 operates on decentralized networks, allowing users to have greater control over their data and transactions. Unlike Web2, Web3 removes intermediaries and relies on blockchain technology for enhanced security and transparency.',
+  },
+  {
+    id: 3,
+    title: 'What Are Some Common \n Web3 Use Cases?',
+    content: 'Common Web3 use cases include DeFi platforms, decentralized exchanges, NFTs, decentralized applications (dApps), and DAOs.',
+  },
+  {
+    id: 4,
+    title: 'How Long Does It Usually Take \n  to Develop a Web3 Project?',
+    content: 'The timeline for developing a Web3 project depends on its complexity. Generally, the process spans a few months, covering stages from initial planning to final deployment.',
+  },
+  {
+    id: 5,
+    title: 'Can Web3 Solutions Be Integrated \n with Existing Systems?',
+    content: 'Yes, our Web3 development company ensures seamless integration of blockchain solutions with your existing systems.',
+  },
+]

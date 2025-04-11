@@ -33,7 +33,7 @@ Yes, we offer maintenance and support services for smart contracts after deploym
 ];
 
 export default function FAQ({
-  title = "FREQUENTLY ASKED QUESTIONS",
+  title = "FREQUENTLY \n ASKED \n QUESTIONS",
   data = faqData,
   noBg,
   desc,
@@ -105,7 +105,7 @@ export default function FAQ({
           >
             <h2
               className={cn(
-                `flex  ${faq ? "justify-center text-center" : "text-pretty"} text-[36px]  uppercase  leading-[37.59px] text-white custom1000:text-[42px] custom1430:text-[60px] custom1430:leading-[0.9]`,
+                `flex  ${faq ? "justify-center text-center whitespace-pre-line" : "text-pretty"} text-[36px]  uppercase  leading-[37.59px] text-white custom1000:text-[42px] custom1430:text-[60px] custom1430:leading-[0.9]`,
                 titleClasses
               )}
             >
@@ -153,7 +153,7 @@ export default function FAQ({
                     />
                     <div
                       className={cn(
-                        "max-w-[893px] px-4 py-[43px] md:pl-8 xl:pl-[88px] xl:pr-[60px]",
+                        "max-w-[893px] px-4 py-[24px] md:py-[43px] md:pl-8 xl:pl-[88px] xl:pr-[60px]",
                         faqHorizontalPadding && "xl:!px-[60px]",
                         itemsClasses
                       )}
@@ -161,8 +161,8 @@ export default function FAQ({
                       <AccordionButton className={cn("relative")}>
                         <div className="mr-0 w-full text-left md:mr-auto">
                           <span
-                            className="block !w-full max-w-[623px]  text-left
-                         font-roc text-[18px] font-medium uppercase !leading-none text-white lg:!leading-none"
+                            className="block !w-full whitespace-pre-line max-w-[623px]  text-left
+                         font-roc text-[14px] md:text-[18px] font-medium uppercase !leading-none text-white lg:!leading-none"
                           >
                             {faq.title}
                           </span>
@@ -173,7 +173,7 @@ export default function FAQ({
                               <div
                                 className="flex items-center justify-end md:justify-end"
                                 style={{
-                                  width: 50
+                                  width: screenWidth > 768 ? "50" : "32"
                                 }}
                               >
                                 <svg
@@ -196,7 +196,7 @@ export default function FAQ({
                               <div
                                 className="flex items-center justify-end md:justify-end"
                                 style={{
-                                  width: 50
+                                  width: screenWidth > 768 ? "50" : "32"
                                 }}
                               >
                                 <svg

@@ -37,7 +37,7 @@ export function SocialLinks({ footerForm, isMenu }) {
         >
           <Image
             alt="linkedin"
-            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
+            className="w-[54px]"
             src={linkedin}
           ></Image>
         </a>
@@ -48,7 +48,7 @@ export function SocialLinks({ footerForm, isMenu }) {
         >
           <Image
             alt="telegram"
-            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
+            className="w-[54px]"
             src={telegram}
           ></Image>
         </a>
@@ -59,7 +59,7 @@ export function SocialLinks({ footerForm, isMenu }) {
         >
           <Image
             alt="twitter"
-            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
+            className="w-[54px]"
             src={twitter}
           ></Image>
         </a>
@@ -70,7 +70,7 @@ export function SocialLinks({ footerForm, isMenu }) {
         >
           <Image
             alt="medium"
-            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
+            className="w-[54px]"
             src={medium}
           ></Image>
         </a>
@@ -81,7 +81,7 @@ export function SocialLinks({ footerForm, isMenu }) {
         >
           <Image
             alt="mail"
-            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
+            className="w-[54px]"
             src={mail}
           ></Image>
         </a>
@@ -91,7 +91,7 @@ export function SocialLinks({ footerForm, isMenu }) {
           target="_blank"
         >
           <Image
-            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
+            className="w-[54px]"
             src={upwork}
             alt=""
           ></Image>
@@ -102,7 +102,7 @@ export function SocialLinks({ footerForm, isMenu }) {
           target="_blank"
         >
           <Image
-            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
+            className="w-[54px]"
             src={clutch}
             alt=""
           ></Image>

@@ -45,7 +45,7 @@ export const ScrollProject = ({
           />
         </div>
 
-        <div className="absolute custom480:left-[38px] z-[2] bottom-[40px] right-0 custom480:bottom-[30px] flex w-full flex-col  items-start  gap-y-[14px] md:gap-y-4">
+        <div className="absolute left-[20px] right-[20px] custom480:left-[38px] z-[2] bottom-[40px] custom480:bottom-[30px] flex md:w-full flex-col  items-start  gap-y-[14px] md:gap-y-4">
           <div className="flex custom480:hidden max-w-[420px]  group-hover:custom480:flex flex-wrap gap-x-[3px] gap-y-[8px]  custom480:items-start custom480:gap-x-[8px]">
             {tags.map((tag, index) => (
               <div key={index} className="rounded-full max-h-[34px] bg-white px-[16px] py-2">

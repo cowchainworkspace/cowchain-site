@@ -19,6 +19,7 @@ import {
   WhyClientChooseData,
   engagementModels,
   faqHomeData,
+  mobileFaqHomeData,
   otherServiceData,
   ourServices,
   servedIndustriesData,
@@ -30,8 +31,14 @@ import Cases from "./Cases";
 import CasesMobile from "./CasesMobile.jsx";
 import Clients from "./Clients";
 import Team from "./Team";
+import { useEffect, useState } from "react";
 
 export default function HomeContent() {
+  const [screenWidth, setScreenWidth] = useState();
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
+
   return (
     <>
       <KeyFeatures
@@ -123,8 +130,8 @@ and aimed at solving real-world challenges"
         data={FSExpertiseData}
         title={
           <>
-            Each project follows <br className="hidden 1440custom:block" />
-            a structured path, <br className="hidden 1440custom:block" />
+            Each project follows <br />
+            a structured path, <br />
             designed to{" "}
             <span className="violet-gradient-text">
               minimize
@@ -133,9 +140,9 @@ and aimed at solving real-world challenges"
             </span>{" "}
             and
             <span className="violet-gradient-text">
-              deliver <br className="hidden 1440custom:block" /> results
+              deliver <br /> results
             </span>{" "}
-            that aligned <br className="hidden 1440custom:block" /> with your
+            that aligned <br /> with your
             requirements
           </>
         }
@@ -172,7 +179,8 @@ and aimed at solving real-world challenges"
               The applications of <br />
               <span className="violet-gradient-text">
                 Web3 development
-              </span>{" "}
+              </span>{" "} <br className="block md:hidden" /> 
+              are vast and growing.
               From{" "}
               <span className="violet-gradient-text">
                 decentralized <br /> exchanges
@@ -262,7 +270,7 @@ and aimed at solving real-world challenges"
       </div>
       <Contact />
       <div className="w-full overflow-hidden">
-        <FAQ noBg={true} data={faqHomeData} faqHorizontalPadding={true} />
+        <FAQ noBg={true} faq={true} data={screenWidth > 768 ? faqHomeData : mobileFaqHomeData} faqHorizontalPadding={true} />
       </div>
     </>
   );

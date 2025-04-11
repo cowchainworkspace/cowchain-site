@@ -27,7 +27,7 @@ import ton from "@/assets/svgComponents/stack/TONStackIcon";
 
 export const expertiseData = [
   {
-    title: "Blockchain Platforms",
+    title: "Blockchain \n Platforms",
     tools: [
       { logo: eth, alt: "Ethereum" },
       { logo: solana, alt: "Solana" },
@@ -40,7 +40,7 @@ export const expertiseData = [
     ]
   },
   {
-    title: "Front-End Technologies",
+    title: "Front-End  \n  Technologies",
     tools: [
       { logo: react, alt: "React.js" },
       { logo: nextjs, alt: "Next.js" },
@@ -49,7 +49,7 @@ export const expertiseData = [
     ]
   },
   {
-    title: "Back-End Technologies",
+    title: "Back-End  \n  Technologies",
     tools: [
       { logo: nodejs, alt: "Node.js" },
       { logo: express, alt: "Express" },

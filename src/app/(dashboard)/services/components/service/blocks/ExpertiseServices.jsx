@@ -86,14 +86,14 @@ export function ExpertiseServices({
                       : "mr-auto mt-[42px] w-full text-left md:mt-[60px]"
                   }
                 >
-                  <span
+                  <div
                     className={cn(
-                      "text-left font-roc text-lg font-medium uppercase !leading-none text-white md:!text-[24px]",
+                      "text-left font-roc text-lg font-medium uppercase !leading-[90%]  text-white md:!text-[24px]",
                       isHomeEngagement && "text-[24px] leading-[0.9]"
                     )}
                   >
                     {title}
-                  </span>
+                  </div>
                 </div>
               )}
               <div>
