@@ -1,10 +1,14 @@
+import {slideFour, slideOne, slideThree, slideTwo } from "../../../../../../public/cases/PixelVerse/slider";
 import {coinclub, hybrid, wenix } from "../../../../../../public/projects";
-import {slideOne, slideTwo, slideThree, slideFour} from "../../../../../../public/cases/PixelVerse/slider";
 
 export const pixelVerseTags = [
   {
     id: 1,
     tagLabel: "Mobile App"
+  },
+  {
+    id: 2,
+    tagLabel: "Telegram Mini-apps"
   },
   {
     id: 2,
@@ -171,7 +175,7 @@ export const pixelVerseTeam = [
 export const pixelVerseProjects = [
   {
     id: 1,
-    tags: ['App Development', 'Website Development '],
+    tags: ['Mobile App', 'Website Development '],
     title: 'COINCLUB',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
     img: coinclub,

@@ -1,21 +1,21 @@
+import Image from "next/image";
 import React from "react";
 import Banner from "../components/Banner";
+import CasesSlider from "../components/CasesSlider";
 import CaseHeroScreen from "../components/HeroScreen";
 import MoreProjects from "../components/MoreProjects";
 import ProjectOverview from "../components/ProjectOverview";
 import TeamBehind from "../components/TeamBehind";
 import PixelVerseAvatarAI from "./components/PixelVerseAvatarAI";
 import PixelVerseWhatWeDid from "./components/PixelVerseWhatWeDid";
-import { metadata } from "./utils/pixelVerseMetadata";
 import {
   overviewItems,
   pixelVerseProjects,
+  pixelVerseSlides,
   pixelVerseTags,
-  pixelVerseTeam,
-  pixelVerseSlides
+  pixelVerseTeam
 } from "./utils/constants";
-import CasesSlider from "../components/CasesSlider";
-import Image from "next/image";
+import { metadata } from "./utils/pixelVerseMetadata";
 
 export { metadata };
 
@@ -28,6 +28,7 @@ const PixelVerse = () => {
         heroDescription={
           "PixelVerse bridges Web2 and Web3 gaming with Telegram Mini Apps like PixelTap, achieving 45 million monthly active users (MAU). Through strategic use of Telegram’s user base, it became a leader in GameFi innovation and engagement."
         }
+        descriptionClasses="w-[660px]"
         headerClasses="font-montserrat"
       />
       <Banner

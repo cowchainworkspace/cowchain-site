@@ -10,7 +10,6 @@ import TeamBehind from "../components/TeamBehind";
 import Quote from "./components/Quote";
 import RetroBridgeOverview from "./components/RetroBridgeOverview";
 import RetroBridgeWhatWeDid from "./components/RetroBridgeWhatWeDid";
-import { metadata } from "./utils/retroBridgeMetadata";
 import {
   retroBridgeProjects,
   retroBridgeSlides,
@@ -18,6 +17,7 @@ import {
   retroBridgeTags,
   retroBridgeTeam
 } from "./utils/constants";
+import { metadata } from "./utils/retroBridgeMetadata";
 export { metadata };
 
 const RetroBridge = () => {
@@ -29,15 +29,14 @@ const RetroBridge = () => {
         heroDescription={
           <>
             RetroBridge is a blockchain-powered platform enabling seamless
-            cross-chain asset transfers.
-            <br className="hidden custom1430:block" /> With $200M in bridged
-            volume and 1M+ successful transactions, it demonstrates the growing
-            demand for interoperability in Web3.
+            cross-chain asset transfers. With $200M in bridged volume and 1M+
+            successful transactions, it demonstrates the growing demand for
+            interoperability in Web3.
           </>
         }
         headerClasses="text-center max-w-[566px] uppercase font-foc font-medium leading-90"
-        containerClasses="max-w-[641px]"
-        descriptionClasses="text-center"
+        containerClasses="max-w-[671px]"
+        descriptionClasses="text-center w-[671px]"
       />
       <Banner
         img={"/cases/RetroBridge/case-banner-retrobridge.webp"}

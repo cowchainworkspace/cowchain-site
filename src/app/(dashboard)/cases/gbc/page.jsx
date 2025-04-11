@@ -28,9 +28,9 @@ const GBC = () => {
       <CaseHeroScreen
         pageTitle={"GMX Blueberry Club"}
         tags={gbcTags}
-        descriptionClasses="max-w-[611px] font-manrope text-[14px] leading-[22px] !text-white-70"
+        descriptionClasses="max-w-[640px] font-manrope"
         heroDescription={
-          <p className="font-manrope text-sm leading-[22.1px] text-white-70">
+          <p className="text-center font-manrope text-sm font-[450] leading-[22.1px] tracking-wider text-white-70">
             GMX Blueberry Club (GBC) is a next-generation NFT platform that
             combines customization, trading, and gamification. It allows users
             to collect and personalize GBC NFTs, trade assets, earn Sweet
