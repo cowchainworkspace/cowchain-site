@@ -31,11 +31,11 @@ export default function Clients() {
     <section className="relative border-t border-t-th-fade">
       <Image
         alt=""
-        className="absolute -top-[38%] right-0 hidden h-screen md:-top-[45%] md:block md:h-min  lg:-top-[80%]"
+        className="pointer-events-none absolute -top-[38%] right-0 z-[0] hidden h-screen md:-top-[45%] md:block md:h-min  lg:-top-[65%]"
         src={bg_lg}
       />
 
-      <div className="px-default relative flex flex-col py-[60px] pb-[20px] md:pb-[60px]">
+      <div className="px-default relative flex flex-col py-[60px] pb-[20px] md:mx-auto md:max-w-[1440px] md:pb-[60px]">
         <div className=" grid grid-cols-1 md:mt-12 lg:grid-cols-2 lg:gap-16">
           <h2 className="lg:order-0 text-4xl uppercase text-white  md:text-[60px]">
             OUR CLIENTS
