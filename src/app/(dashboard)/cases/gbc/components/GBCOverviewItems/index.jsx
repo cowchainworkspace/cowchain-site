@@ -47,7 +47,7 @@ const GBCOverviewItems = ({ items }) => {
                 </AccordionButton>
                 <AccordionPanel>
                   {itemDesc && (
-                    <p className="mb-[5px] font-manrope text-[12.89px] font-medium leading-[22.1px] !text-white-70">
+                    <p className="mb-[5px] font-manrope text-xl font-medium leading-[30px] !text-white">
                       {itemDesc}
                     </p>
                   )}
@@ -56,10 +56,10 @@ const GBCOverviewItems = ({ items }) => {
                       {itemValue}
                     </p>
                   ) : (
-                    <ul className="flex flex-col gap-[14px]">
+                    <ul className="flex list-disc flex-col gap-[10px] pl-8">
                       {itemValue.map(({ itemValueDescription }) => (
                         <li key={itemValueDescription}>
-                          <p className="font-manrope text-[18.41px] font-normal leading-[27.62px] !text-white">
+                          <p className="list-item font-manrope text-[20px] font-normal leading-[30px] !text-white">
                             {itemValueDescription}
                           </p>
                         </li>
