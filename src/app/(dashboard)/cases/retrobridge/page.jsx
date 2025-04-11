@@ -71,7 +71,7 @@ const RetroBridge = () => {
       <RetroBridgeWhatWeDid />
       <TeamBehind descClasses={"font-bold"} team={retroBridgeTeam} />
       <Quote />
-      <MoreProjects projects={retroBridgeProjects} />
+      <MoreProjects autoMargin={true} projects={retroBridgeProjects} />
       <Contact className={"pb-[138px] pt-40"} />
     </section>
   );

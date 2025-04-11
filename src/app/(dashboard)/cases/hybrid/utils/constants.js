@@ -16,12 +16,30 @@ import { coinclub, pixelVerse, wenix } from "../../../../../../public/projects"
 export const hybridTags = [
   {
     id: 1,
-    tagLabel: "Mobile App"
+    tagLabel: "Web Development"
   },
   {
     id: 2,
-    tagLabel: "Non-custodial exchange"
-  }
+    tagLabel: "AI Development"
+  },
+  {
+    id: 3,
+    tagLabel: "Blockchain Development"
+  },
+  {
+    id: 4,
+    tagLabel: "Bridge"
+  },
+  {
+    id: 5,
+    tagLabel: "Staking"
+  },
+  {
+    id: 6,
+    tagLabel: "L1"
+  },
+  
+
 ];
 
 export const overviewHybridItems = [
@@ -80,21 +98,42 @@ export const overviewHybridItems = [
 export const hybridSlides = [
   {
     id: 1,
-    width: 807,
+    width: 837,
     height: 522,
     desc: "activity 10c",
     href: activityTc
   },
   {
     id: 2,
-    width: 730,
+    width: 760,
     height: 522,
     desc: "explore agents one",
     href: exploreAgent
   },
   {
     id: 3,
-    width: 700,
+    width: 730,
+    height: 522,
+    desc: "nfts",
+    href: nfts
+  },
+  {
+    id: 4,
+    width: 837,
+    height: 522,
+    desc: "activity 10c",
+    href: activityTc
+  },
+  {
+    id: 5,
+    width: 760,
+    height: 522,
+    desc: "explore agents one",
+    href: exploreAgent
+  },
+  {
+    id: 6,
+    width: 730,
     height: 522,
     desc: "nfts",
     href: nfts
@@ -186,24 +225,27 @@ export const hybridTeam = [
 export const hybridProjects = [
   {
     id: 1,
-    tags: ['App Development', 'Website Development '],
+    tags: ['Mobile App', 'Crypto Wallet' , "Trading"],
     title: 'COINCLUB',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
     img: coinclub,
+    projectLink: "#"
   },
   {
     id: 2,
-    tags: ['App Development', 'Website Development '],
+    tags: ["Mobile App", 'Telegram Mini-apps', 'GameFi'],
     title: 'PixelVerse',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
+    desc: 'PixelVerse is a GameFi ecosystem that merges Web2 accessibility with Web3 innovation through Telegram Mini Apps.',
     img: pixelVerse,
+    projectLink: "pixel-verse"
   },
   {
     id: 3,
     tags: ['App Development', 'Website Development '],
     title: 'Wenix',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
-    img: wenix
+    img: wenix,
+    projectLink: "#"
   },
 
 ]

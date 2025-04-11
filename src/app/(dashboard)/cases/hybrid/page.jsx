@@ -39,7 +39,7 @@ const Hybrid = () => {
             monetization, solidifying its role in blockchain innovation.
           </>
         }
-        headerClasses="uppercase font-roc text-center font-medium"
+        headerClasses="uppercase font-roc text-center font-medium text xl:leading-[64px]"
         containerClasses="max-w-[853px]"
         sectionClasses="pb-[125px]"
       />

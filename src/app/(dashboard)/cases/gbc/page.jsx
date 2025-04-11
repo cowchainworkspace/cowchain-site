@@ -38,9 +38,9 @@ const GBC = () => {
           </>
         }
         tags={gbcTags}
-        descriptionClasses="max-w-[590px] text-[12.89px] font-semiBold leading-[22px] !text-white-70"
+        descriptionClasses="max-w-[590px] text-[14px] font-semiBold leading-[22px] !text-white-70"
         containerClasses="relative"
-        headerClasses="font-montserrat text-[58.92px]"
+        headerClasses="font-montserrat text-[64px] xl:leading-[64px]"
         bgDecoration={
           <>
             <Image
@@ -72,8 +72,7 @@ const GBC = () => {
       <GBCWhatWeDid />
       <GBCSlider />
       <TeamBehind
-        headerClasses={"text-[11.05px] leading-[18.41px] tracking-[1.84px]"}
-        descClasses={"text-[18.41px] leading-[27.62px]"}
+        headerClasses={"leading-[18.41px] tracking-[1.84px]"}
         team={gbcTeam}
         classes={"pt-30"}
       />

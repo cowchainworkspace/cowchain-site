@@ -30,12 +30,12 @@ const GBCSolutions = ({ solutions, classes }) => {
                   width: `${textBlockWidth}px`
                 }}
               >
-                <h3 className="font-manrope text-[11.05px] uppercase leading-[18.41px] tracking-[1.84px] text-secondary">
+                <h3 className="font-manrope text-xs uppercase leading-[18.41px] tracking-[1.84px] text-secondary">
                   {title}
                 </h3>
                 <p
                   className={cn(
-                    "text-[18.41px] font-medium leading-[27.62px] text-white",
+                    "text-xl font-medium leading-[27.62px] text-white",
                     (index + 1) % 2 === 0 && "text-right"
                   )}
                 >
