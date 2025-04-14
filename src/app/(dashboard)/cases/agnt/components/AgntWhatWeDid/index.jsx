@@ -9,7 +9,7 @@ const AgntWhatWeDid = () => {
         </h2>
         <div className="relative grid grid-cols-2 gap-[37px]">
           <div className="border-t-[0.5px] border-white-50 pt-[30px]">
-            <h3 className="mb-4 font-manrope text-[11.05px] font-normal uppercase leading-[18.41px]  tracking-[1.84px] !text-secondary">
+            <h3 className="mb-4 font-manrope text-[11.05px] font-normal uppercase leading-[18.41px]  tracking-[1.84px] text-white">
               Business Challenges
             </h3>
             <p className="font-manrope text-sm font-medium leading-[22.1px] text-white-70">

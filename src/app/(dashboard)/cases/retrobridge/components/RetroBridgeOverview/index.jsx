@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import RightArrowSvg from "../../../../../../../public/svgIcons/RightArrowSvg";
-import RetroBridgeOverviewItems from "../RetroBridgeOverviewItems";
 import { overviewRetroBridgeItems } from "../../utils/constants";
+import RetroBridgeOverviewItems from "../RetroBridgeOverviewItems";
 const RetroBridgeOverview = () => {
   return (
     <section>
@@ -12,7 +12,7 @@ const RetroBridgeOverview = () => {
             <h3 className="font-roc text-[54px] font-medium uppercase leading-90 text-white">
               Project overview
             </h3>
-            <p className="text-left font-manrope text-sm font-semibold leading-6 !text-white-70">
+            <p className="text-left font-manrope text-sm font-[450] leading-6 !text-white-70">
               RetroBridge was designed to address the growing need for reliable
               multichain
               <br className="hidden custom1430:block" /> solutions in the

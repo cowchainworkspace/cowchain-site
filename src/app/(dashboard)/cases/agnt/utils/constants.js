@@ -195,7 +195,7 @@ export const agntProjects = [
     desc: 'RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.',
     img: crossChain,
     textColor: "text-secondary",
-    projectLink: "retrobidge"
+    projectLink: "retrobridge"
   },
   {
     id: 2,

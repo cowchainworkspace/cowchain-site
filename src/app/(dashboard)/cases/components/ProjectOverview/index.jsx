@@ -1,8 +1,8 @@
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 import RightArrowSvg from "../../../../../../public/svgIcons/RightArrowSvg";
 import OverviewItems from "../OverviewItems/OverviewItems";
-import { cn } from "@/lib/utils";
 
 const ProjectOverview = ({
   projectTitle,
@@ -30,7 +30,7 @@ const ProjectOverview = ({
             <h3 className="font-roc text-[54px] font-medium uppercase leading-90 text-white">
               {projectTitle}
             </h3>
-            <p className="text-left font-manrope text-sm font-semibold leading-6 !text-white-70">
+            <p className="text-left font-manrope text-sm font-[450] leading-6 !text-white-70">
               {projectDescription}
             </p>
             <Link className="flex gap-4" href={webSiteLink} target="_blank">

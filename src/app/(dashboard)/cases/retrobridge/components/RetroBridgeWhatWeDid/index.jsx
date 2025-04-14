@@ -34,10 +34,10 @@ const RetroBridgeWhatWeDid = () => {
         </h2>
         <div className="grid grid-cols-2 gap-10">
           <div className="border-t-[0.5px] border-white-50 pt-8">
-            <h3 className="mb-4 font-manrope text-sm font-bold uppercase leading-5 tracking-[2px] text-white-70">
+            <h3 className="mb-4 font-manrope text-sm font-medium uppercase leading-5 tracking-[2px] text-white-70">
               CHALLENGE
             </h3>
-            <p className="text-xl font-medium leading-[30px] text-white">
+            <p className="text-xl font-[450] leading-[30px] text-white">
               Cross-chain transactions introduce security risks, inconsistent
               execution rules, and integration barriers across networks.
               Supporting multiple networks meant adapting to different smart
@@ -48,10 +48,10 @@ const RetroBridgeWhatWeDid = () => {
           </div>
 
           <div className="border-t-[0.5px] border-white-50 pt-8">
-            <h3 className="mb-4 font-manrope text-sm font-bold uppercase leading-5 tracking-[2px] text-white-70">
+            <h3 className="mb-4 font-manrope text-sm font-medium uppercase leading-5 tracking-[2px] text-white-70">
               result
             </h3>
-            <p className="text-xl font-medium leading-[30px] text-white">
+            <p className="text-xl font-[450] leading-[30px] text-white">
               RetroBridge now bridges assets across 42+ networks with smart
               contracts and decentralized protocols. A proprietary API and SDK
               for custom blockchain development streamlines integration. The
