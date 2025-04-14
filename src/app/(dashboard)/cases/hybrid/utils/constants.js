@@ -241,7 +241,7 @@ export const hybridProjects = [
   },
   {
     id: 3,
-    tags: ['App Development', 'Website Development '],
+    tags: ['Mobile App', 'Telegram Mini-apps'],
     title: 'Wenix',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
     img: wenix,

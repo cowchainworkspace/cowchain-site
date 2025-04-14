@@ -190,7 +190,7 @@ export const agntTeam = [
 export const agntProjects = [
   {
     id: 1,
-    tags: ['Website Development', '24/7 Support', 'Web3'],
+    tags: ['Web Development', 'Defi', 'Bridge', "NFT"],
     title: 'RETROBRIDGE',
     desc: 'RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.',
     img: crossChain,
@@ -199,7 +199,7 @@ export const agntProjects = [
   },
   {
     id: 2,
-    tags: ['App Development', 'Website Development'],
+    tags: ['Web Development', 'Trading', "NFT"],
     title: 'GMX BLUEBERRY CLUB',
     desc: 'GBC is a next-generation NFT platform that combines customization, trading, and gamification.',
     img: gbc,
@@ -208,12 +208,13 @@ export const agntProjects = [
   },
   {
     id: 3,
-    tags: [ 'App Development', 'Website Development'],
+    tags: ["Web Development ", "Mobile App", "GameFi", "Trading", "DEX", "DeFi", "NFT", "Staking", "Crypto Wallet"],
     title: 'STEP APP',
     desc: 'StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.',
     img: m2ePlatformImg,
     textColor: "text-secondary",
-    projectLink: "#"
+    projectLink: "#",
+    itemClasses: "pb-[30px] mt-auto",
 
   },
 
