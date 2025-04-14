@@ -6,11 +6,11 @@ import React from "react";
 export default function HeaderContent() {
   return (
     <>
-      <h1 className="relative z-[21] mt-8 hidden cursor-default uppercase  md:ml-[55px] md:mt-[103px] md:block lg:mt-24">
+      <h1 className="relative z-[22] mt-8 hidden cursor-default bg-[transparent] uppercase  md:ml-[55px] md:mt-[103px] md:block lg:mt-24">
         LET’s make Web3 tech <br />
         work for you
       </h1>
-      <h1 className="relative z-[21] mt-8 block cursor-default text-[38px]  font-medium uppercase leading-[44px] md:mt-16 md:hidden lg:mt-24">
+      <h1 className="relative z-[22] mt-8 block cursor-default bg-[transparent] text-[38px]  font-medium uppercase leading-[44px] md:mt-16 md:hidden lg:mt-24">
         LET’s make Web3 tech work
         <br /> for you
       </h1>
@@ -25,7 +25,7 @@ export default function HeaderContent() {
             YOU TO GROW YOUR <br />
           </h2>
         </div>
-        <div className="flex cursor-default flex-col gap-y-4 md:items-end">
+        <div className="flex cursor-default flex-col md:pt-[56px] gap-y-4 md:items-end">
           <div className="">
             <div className="justify-left flex gap-[24px] md:items-center md:justify-end">
               <div className="flex gap-[12px]">

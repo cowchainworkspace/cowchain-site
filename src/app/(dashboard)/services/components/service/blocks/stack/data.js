@@ -27,20 +27,20 @@ import ton from "@/assets/svgComponents/stack/TONStackIcon";
 
 export const expertiseData = [
   {
-    title: "Blockchain Platforms",
+    title: "Blockchain \n Platforms",
     tools: [
       { logo: eth, alt: "Ethereum" },
       { logo: solana, alt: "Solana" },
       { logo: polygon, alt: "Polygon" },
       { logo: ava, alt: "Avalanche" },
-      { logo: binance, alt: "Binance Smart Chain" },
+      { logo: binance, alt: "BNB Chain" },
       { logo: bitcoin, alt: "Bitcoin" },
       { logo: ton, alt: "TON" },
       { logo: near, alt: "Near" }
     ]
   },
   {
-    title: "Front-End Technologies",
+    title: "Front-End  \n  Technologies",
     tools: [
       { logo: react, alt: "React.js" },
       { logo: nextjs, alt: "Next.js" },
@@ -49,7 +49,7 @@ export const expertiseData = [
     ]
   },
   {
-    title: "Back-End Technologies",
+    title: "Back-End  \n  Technologies",
     tools: [
       { logo: nodejs, alt: "Node.js" },
       { logo: express, alt: "Express" },
@@ -95,7 +95,7 @@ export const nftStackData = [
       { logo: solana, alt: "Solana" },
       { logo: bitcoin, alt: "Bitcoin" },
       { logo: ton, alt: "TON" },
-      { logo: binance, alt: "Binance Smart Chain" },
+      { logo: binance, alt: "BNB Chain" },
     ]
   }
 ];

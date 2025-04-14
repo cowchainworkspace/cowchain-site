@@ -19,6 +19,7 @@ import {
   WhyClientChooseData,
   engagementModels,
   faqHomeData,
+  mobileFaqHomeData,
   otherServiceData,
   ourServices,
   servedIndustriesData,
@@ -30,15 +31,21 @@ import Cases from "./Cases";
 import CasesMobile from "./CasesMobile.jsx";
 import Clients from "./Clients";
 import Team from "./Team";
+import { useEffect, useState } from "react";
 
 export default function HomeContent() {
+  const [screenWidth, setScreenWidth] = useState();
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
+
   return (
     <>
       <KeyFeatures
         isOneBlock={true}
         topBorder={false}
         noBg={true}
-        tag={"about Cowchain"}
+        tag={"about cowchain"}
         title={
           <>
             Web3 Development <br /> Company
@@ -68,7 +75,7 @@ export default function HomeContent() {
         }
         data={ourServices}
       />
-      <div className="block md:hidden">
+       <div className="block md:hidden">
         <FAQ
           noBg={true}
           title={
@@ -84,7 +91,7 @@ and aimed at solving real-world challenges"
           isSecondary={true}
         />
       </div>
-      <div className="hidden md:block">
+      <div className="hidden overflow-hidden md:block">
         <FAQ
           noBg={true}
           title={
@@ -93,13 +100,26 @@ and aimed at solving real-world challenges"
             </>
           }
           data={web3DevData}
-          desc="As a leading Web3 development company, Cowchain delivers Web3 development services that empower businesses to fully utilize decentralized technologies. 
-Each solution is crafted with precision, 
-and aimed at solving real-world challenges"
+          desc={
+            <>
+              As a leading Web3 development company, Cowchain
+              <br className="hidden custom1430:block" /> delivers Web3
+              development services that empower
+              <br className="hidden custom1430:block" /> businesses to fully
+              utilize decentralized technologies.
+              <br className="hidden custom1430:block" /> Each solution is
+              crafted with precision, and aimed
+              <br className="hidden custom1430:block" /> at solving real-world
+              challenges
+            </>
+          }
           hasIcon={false}
           isSecondary={true}
           isTwoHalf={true}
-          titleClasses="mb-[10px]"
+          titleClasses="max-w-[396px] xl:text-[60px] xl:leading-[53.7px]"
+          descriptionClasses="max-w-[400px] md:my-0"
+          isDoublePadding
+          faqGradient={true}
         />
       </div>
 
@@ -110,8 +130,8 @@ and aimed at solving real-world challenges"
         data={FSExpertiseData}
         title={
           <>
-            Each project follows <br className="hidden 1440custom:block" />
-            a structured path, <br className="hidden 1440custom:block" />
+            Each project follows <br />
+            a structured path, <br />
             designed to{" "}
             <span className="violet-gradient-text">
               minimize
@@ -120,9 +140,9 @@ and aimed at solving real-world challenges"
             </span>{" "}
             and
             <span className="violet-gradient-text">
-              deliver <br className="hidden 1440custom:block" /> results
+              deliver <br /> results
             </span>{" "}
-            that aligned <br className="hidden 1440custom:block" /> with your
+            that aligned <br /> with your
             requirements
           </>
         }
@@ -152,28 +172,33 @@ and aimed at solving real-world challenges"
         topBorder={false}
         bottomBorder={false}
       />
-      <OtherServices
-        title={
-          <>
-            The applications of <br />
-            <span className="violet-gradient-text">Web3 development</span>
-            From{" "}
-            <span className="violet-gradient-text">
-              decentralized <br /> exchanges
-            </span>{" "}
-            to{" "}
-            <span className="violet-gradient-text">
-              NFT <br /> platforms
-            </span>
-            , <br />
-            the potential for <br />
-            innovation is limitless
-          </>
-        }
-        data={useCases}
-        tag={"web3 development use cases"}
-        isHome={true}
-      />
+       <div className="w-full overflow-hidden">
+        <OtherServices
+          title={
+            <>
+              The applications of <br />
+              <span className="violet-gradient-text">
+                Web3 development
+              </span>{" "} <br className="block md:hidden" /> 
+              are vast and growing.
+              From{" "}
+              <span className="violet-gradient-text">
+                decentralized <br /> exchanges
+              </span>{" "}
+              to{" "}
+              <span className="violet-gradient-text">
+                NFT <br /> platforms
+              </span>
+              , <br />
+              the potential for <br />
+              innovation is limitless
+            </>
+          }
+          data={useCases}
+          ishomePage={true}
+          tag={"web3 development use cases"}
+        />
+      </div>
       <Cases />
       <CasesMobile />
       <Feedback />
@@ -223,31 +248,30 @@ and aimed at solving real-world challenges"
         data={WhyClientChooseData}
         isHomePage={true}
       />
-      <OtherServices
-        noItemsBorders={true}
-        title={
-          <>
-            Cowchain{" "}
-            <span className="violet-gradient-text">
-              provides <br /> a full range
-            </span>
-            of <br />
-            supplementary <br />
-            services to ensure <br />
-            your blockchain <br />
-            project <span className="violet-gradient-text">thrives</span>
-          </>
-        }
-        data={otherServiceData}
-        tag={"additional services"}
-      />
+      <div className="w-full overflow-hidden">
+        <OtherServices
+          noItemsBorders={true}
+          title={
+            <>
+              Cowchain{" "}
+              <span className="violet-gradient-text">
+                provides <br /> a full range
+              </span>{" "}
+              of <br />
+              supplementary <br />
+              services to ensure <br />
+              your blockchain <br />
+              project <span className="violet-gradient-text">thrives</span>
+            </>
+          }
+          data={otherServiceData}
+          tag={"additional services"}
+        />
+      </div>
       <Contact />
-      <FAQ
-        noBg={true}
-        data={faqHomeData}
-        faqHorizontalPadding={true}
-        titleClasses=" text-center px-5 md:text-start wi xl:text-[60px] xl:leading-[53.7px]"
-      />
+      <div className="w-full overflow-hidden">
+        <FAQ noBg={true} faq={true} data={screenWidth > 768 ? faqHomeData : mobileFaqHomeData} faqHorizontalPadding={true} />
+      </div>
     </>
   );
 }

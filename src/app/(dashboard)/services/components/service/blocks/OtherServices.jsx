@@ -22,31 +22,27 @@ const feedbackData = [
   }
 ];
 
-const Quote = ({ text, author, lastIndex, noItemsBorders, isHome }) => {
+const Quote = ({ text, author, lastIndex, noItemsBorders, ishomePage, index }) => {
   return (
     <article
-      className={
-        lastIndex
-          ? `px-[20px] py-[20px] md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] ${isHome ? "py-[43px]" : ""} 
-          ${
-            !noItemsBorders
-              ? "border-t border-t-th-fade  md:border-r-0 md:border-t-0"
-              : "gap-[24px] "
-          } relative flex w-full min-w-[320px] flex-col`
-          : `px-[20px] py-[20px] md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] 
-          ${
-            !noItemsBorders
-              ? "border-b-0 border-t border-t-th-fade sm:border-r sm:border-r-th-fade "
-              : "gap-[24px] "
-          } 
-          relative flex w-full min-w-[320px] flex-col md:gap-0 md:border-b md:border-b md:border-r-0 md:border-t-0 md:border-b-th-fade md:border-b-th-fade ${isHome ? "py-[43px]" : ""}`
-      }
+      className={`gap-[24px] px-[20px] py-[20px]  md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] 
+    ${
+      !noItemsBorders
+        ? "relative flex w-full min-w-[320px] flex-col"
+        : "relative flex w-full min-w-[320px] flex-col"
+    }`}
     >
-      <p className="max-w-2xl font-roc text-[18px] font-medium uppercase !leading-none !no-underline md:font-normal custom1000:text-[20px]">
+      {!lastIndex && (
+        <div className="absolute  bottom-0 left-0 h-[1px] w-[calc(100vw)] border-t border-t-th-fade" />
+      )}
+      {index === 0 && (
+        <div className="absolute block md:hidden left-0 top-0 h-[1px] w-[calc(100vw)] border-t border-t-th-fade" />
+      )}
+      <p className="max-w-2xl whitespace-pre-line  font-roc text-[18px] font-medium uppercase leading-none !no-underline md:font-[500] md:leading-[90%] custom1000:text-[20px]">
         {text}
       </p>
-      <div className="md:mt-[24px]">
-        <p className="text-[16px] text-th-grey">{author}</p>
+      <div className={cn(ishomePage ? "md:mt-[24px]" : "md:mt-[20px]")}>
+        <p className="text-[16px] font-thin text-[#BBBBBB]">{author}</p>
       </div>
     </article>
   );
@@ -60,19 +56,19 @@ export const OtherServices = ({
   topBorder = true,
   bottomBorder = true,
   noItemsBorders = false,
-  isHome = false
+  ishomePage = false
 }) => {
   return (
     <section
-      className={`${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
+      className={` ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
     >
-      <div className="relative grid grid-cols-1 md:grid-cols-6">
+      <div className="relative grid grid-cols-1 sm:mx-auto sm:max-w-[1440px] md:grid-cols-6">
         <div
           className={`md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} mt-[60px] box-border flex flex-col items-start justify-start px-[20px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[88px] custom1000:pt-[126px]`}
         >
           {tag && <Tag title={tag} className="mb-[42px] md:mb-8" />}
 
-          <h3 className="text-left text-[24px] uppercase leading-[0.9] text-white custom1000:text-[36px] custom1200:text-[42px] ">
+          <h3 className="text-left text-[24px] uppercase leading-[90%] text-white custom1000:text-[36px] custom1200:text-[42px] ">
             {title}
           </h3>
           {desc && (
@@ -82,15 +78,16 @@ export const OtherServices = ({
           )}
         </div>
         <div
-          className={`${noItemsBorders && "gap-[42px] pb-[42px] md:gap-0"} quote_wrapper flex flex-col items-stretch overflow-x-scroll sm:flex-row sm:flex-col md:col-span-3 md:overflow-x-hidden md:overflow-y-visible`}
+          className={`${noItemsBorders && "gap-[42px] pb-[42px] md:gap-0"} quote_wrapper flex flex-col items-stretch overflow-x-scroll sm:flex-row sm:flex-col md:col-span-3 md:overflow-x-visible md:overflow-y-visible`}
         >
           {data?.map((feedback, index) => (
             <Quote
+              index={index}
               key={index}
               {...feedback}
               lastIndex={index === data.length - 1}
               noItemsBorders={noItemsBorders}
-              isHome={isHome}
+              ishomePage={ishomePage}
             />
           ))}
         </div>

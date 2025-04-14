@@ -73,17 +73,17 @@ const Cases = () => {
   return (
     <section
       ref={containerRef}
-      className="relative z-10 hidden h-[546px] border-b border-b-th-fade md:block md:h-[698px] xl:flex"
+      className="relative z-10 hidden h-[546px] border-b border-b-th-fade custom480:block custom480:h-[624px] xl:flex"
     >
       <Swiper
-        className="flex h-[546px] md:h-[698px] fullSlider:!hidden"
+        className="flex h-[546px] custom480:h-[624px] fullSlider:!hidden"
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
         onSlideChange={(swiper) => {
           setCurrentIndex(swiper.activeIndex);
           setIsBeginning(swiper.isBeginning);
-          setIsEnd(swiper);
+          setIsEnd(swiper.isEnd);
         }}
         slidesPerView={"auto"}
         spaceBetween={0}
@@ -92,7 +92,7 @@ const Cases = () => {
           casesData.map((project, index) => (
             <SwiperSlide
               key={index}
-              className="h-[546px] max-w-[547px] md:h-[698px]"
+              className="h-[546px] max-w-[480px] custom480:h-[624px]"
             >
               <ScrollProject key={index} index={index} {...project} />
             </SwiperSlide>
@@ -102,7 +102,7 @@ const Cases = () => {
       <div className="hidden w-full justify-center fullSlider:flex">
         {casesData &&
           casesData.map((project, index) => (
-            <div key={index} className="h-[546px] max-w-[547px] md:h-[698px]">
+            <div key={index} className="h-[546px]  max-w-[480px] custom480:h-[624px]">
               <ScrollProject key={index} index={index} {...project} />
             </div>
           ))}

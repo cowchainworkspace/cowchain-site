@@ -30,11 +30,11 @@ export function ServiceStack({
          gap-x-[70px] gap-y-[44px] px-[20px] md:gap-y-[50px] md:pl-[88px] md:pr-[46px]`}
       >
         <div
-          className={`relative col-span-1 ${twoColumns ? "row-span-1" : lopngDesc ? "row-span-4" : "row-span-6 lg:row-span-3"}`}
+          className={`relative  col-span-1 ${twoColumns ? "row-span-1" : lopngDesc ? "row-span-4" : "row-span-6 lg:row-span-3"}`}
         >
           <div
             className={cn(
-              "mx-auto flex flex-col items-center justify-center text-left text-white md:mb-16",
+              "mx-auto flex flex-col items-start md:items-center justify-center text-left text-white md:mb-16",
               {
                 "!mb-0": noMarginBottom
               }
@@ -53,12 +53,13 @@ export function ServiceStack({
                   title
                 ) : (
                   <p className="whitespace-nowrap text-left text-[36px] font-[500] uppercase leading-[36px] md:text-start md:text-[60px] md:leading-[53px]">
-                    Tech <br /> Stack <br /> We UsE
+                    Tech <br className="hidden md:block" /> Stack <br /> We UsE
                   </p>
                 )}
               </h2>
 
-              <p className="leading-22px text-[16px] text-[#BBBBBB]">{desc}</p>
+              <p className="hidden sm:block leading-22px text-[16px] text-[#BBBBBB]">{desc}</p>
+              <p className="block sm:hidden leading-22px text-[16px] text-[#BBBBBB]">We offer a full range of services to take your <br /> project from an idea to a working solution</p>
             </div>
           </div>
         </div>
