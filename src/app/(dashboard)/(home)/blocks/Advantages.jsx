@@ -70,7 +70,6 @@ export default function ExpandingBlocks({ isSecondary = false }) {
             </motion.div>
           </AnimatePresence>
         </div>
-
         <div className="px-default mx-auto  flex h-[411px] max-w-[1440px] border-t border-t-th-fade md:border-0">
           {blocksData.map((block, index) => (
             <>
@@ -96,7 +95,7 @@ export default function ExpandingBlocks({ isSecondary = false }) {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="flex h-full w-full flex-col justify-center p-6 1440custom:px-[56px]" // 👈 centers vertically
+                    className="flex h-full w-full flex-col justify-center p-6 1440custom:px-[56px]"
                   >
                     <motion.h2
                       initial={{ opacity: 0, y: -40 }}
@@ -105,7 +104,7 @@ export default function ExpandingBlocks({ isSecondary = false }) {
                       transition={{
                         duration: 0.6,
                         ease: "easeOut",
-                        delay: 0.2
+                        delay: 0.6
                       }}
                       className="mb-4 w-full text-2xl font-bold"
                     >

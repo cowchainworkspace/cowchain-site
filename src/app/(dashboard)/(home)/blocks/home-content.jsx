@@ -5,6 +5,7 @@ import bgEllipse from "@/assets/bg/home-ellipse-bg.webp";
 import mobileProcessEllipse from "@/assets/homepage/ellipse-home-bg-process.webp";
 import Contact from "@/components/Contact";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { ExpertiseServices } from "../../services/components/service/blocks/ExpertiseServices";
 import FAQ from "../../services/components/service/blocks/FAQ";
 import { Feedback } from "../../services/components/service/blocks/Feedback";
@@ -31,7 +32,6 @@ import Cases from "./Cases";
 import CasesMobile from "./CasesMobile.jsx";
 import Clients from "./Clients";
 import Team from "./Team";
-import { useEffect, useState } from "react";
 
 export default function HomeContent() {
   const [screenWidth, setScreenWidth] = useState();
@@ -75,7 +75,7 @@ export default function HomeContent() {
         }
         data={ourServices}
       />
-       <div className="block md:hidden">
+      <div className="block md:hidden">
         <FAQ
           noBg={true}
           title={
@@ -130,20 +130,19 @@ and aimed at solving real-world challenges"
         data={FSExpertiseData}
         title={
           <>
-            Each project follows <br />
-            a structured path, <br />
+            Each project follows <br className="hidden xl:block" />
+            a structured path, <br className="hidden xl:block" />
             designed to{" "}
             <span className="violet-gradient-text">
               minimize
               <br />
               risks
             </span>{" "}
-            and
+            and{" "}
             <span className="violet-gradient-text">
               deliver <br /> results
             </span>{" "}
-            that aligned <br /> with your
-            requirements
+            that aligned <br /> with your requirements
           </>
         }
         bg={
@@ -161,10 +160,17 @@ and aimed at solving real-world challenges"
           />
         }
         isHome={true}
+        titleClasses="custom1430:!max-w-[592px]"
       />
 
       <Industries
-        title={"Industries Benefiting from Web3 Solutions"}
+        title={
+          <>
+            {" "}
+            Industries Benefiting <br className="hidden xl:block" /> from Web3
+            Solutions
+          </>
+        }
         desc={
           "The adaptability of Web3 development allows us to cater to a variety of industries, each gaining significant value from blockchain technologies"
         }
@@ -172,31 +178,33 @@ and aimed at solving real-world challenges"
         topBorder={false}
         bottomBorder={false}
       />
-       <div className="w-full overflow-hidden">
+      <div className="w-full overflow-hidden">
         <OtherServices
           title={
             <>
-              The applications of <br />
+              The applications of <br className="hidden xl:block" />
               <span className="violet-gradient-text">
                 Web3 development
-              </span>{" "} <br className="block md:hidden" /> 
-              are vast and growing.
-              From{" "}
+              </span>{" "}
+              <br className="hidden xl:block" />
+              are vast and growing. <br className="hidden xl:block" /> From{" "}
               <span className="violet-gradient-text">
-                decentralized <br /> exchanges
+                decentralized <br className="hidden xl:block" /> exchanges
               </span>{" "}
               to{" "}
               <span className="violet-gradient-text">
-                NFT <br /> platforms
+                NFT <br className="hidden xl:block" /> platforms
               </span>
-              , <br />
-              the potential for <br />
+              , <br className="hidden xl:block" />
+              the potential for <br className="hidden xl:block" />
               innovation is limitless
             </>
           }
           data={useCases}
           ishomePage={true}
           tag={"web3 development use cases"}
+          titleClasses="max-w-[592px]"
+          quoteClasses={"xl:py-[43px] xl:first:pt-[71px] xl:last:pb-[71px]"}
         />
       </div>
       <Cases />
@@ -266,11 +274,18 @@ and aimed at solving real-world challenges"
           }
           data={otherServiceData}
           tag={"additional services"}
+          quoteClasses={"md:gap-0"}
         />
       </div>
       <Contact />
       <div className="w-full overflow-hidden">
-        <FAQ noBg={true} faq={true} data={screenWidth > 768 ? faqHomeData : mobileFaqHomeData} faqHorizontalPadding={true} />
+        <FAQ
+          noBg={true}
+          faq={true}
+          data={screenWidth > 768 ? faqHomeData : mobileFaqHomeData}
+          faqHorizontalPadding={true}
+          titleClasses="text-left"
+        />
       </div>
     </>
   );
