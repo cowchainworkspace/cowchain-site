@@ -80,12 +80,14 @@ const ArticleInfo = () => {
         articleId={data.id}
         pageViews={data.attributes.article_views}
       />
-      <div className="relative block h-[234px] w-full md:max-h-[560px] md:min-h-[430px]">
+      <div className="relative block h-[234px] w-full md:max-h-[560px] md:min-h-[430px] custom-1700:min-h-[600px]">
         <Image
           fill
           src={data.attributes.banner_img.data?.attributes?.url || bannerIg}
           alt="banner image"
           objectFit="cover"
+          objectPosition="center"
+          className="object-contain xl:object-cover"
         />
       </div>
 

@@ -123,7 +123,7 @@ export const ArticleParagraphs = ({
           {authorInfo}
         </p>
 
-        <a href="/" className="flex items-center gap-[16px]">
+        <a href="/blog" className="flex items-center gap-[16px]">
           <span className="text-[16px] uppercase text-[white] underline">
             all articles of this author
           </span>
