@@ -1,10 +1,14 @@
 import bgImage from "@/assets/blog/bg-blog-ds.webp";
 import bgMobileImage from "@/assets/blog/bg-blog-mobile.webp";
+import { tagsOptions } from "@/hooks/use-strapi";
+import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import React from "react";
 import Categories from "./Categories";
 
-export const HeroSection = ({ categories }) => {
+export const HeroSection = () => {
+  const { data: tags } = useQuery(tagsOptions);
+
   return (
     <section className="scrollbar-none container relative  mb-9 w-full  pt-20 md:mb-[100px] md:max-w-full  lg:pt-[120px]">
       <Image
@@ -20,7 +24,7 @@ export const HeroSection = ({ categories }) => {
           Insights & more
         </h1>
 
-        <Categories categories={categories.data} />
+        <Categories categories={tags?.data} />
       </div>
     </section>
   );

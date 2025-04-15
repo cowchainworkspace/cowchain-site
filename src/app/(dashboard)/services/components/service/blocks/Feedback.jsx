@@ -83,10 +83,9 @@ export const Feedback = () => {
               alt=""
             />
             <div className="h-[1px]" />
-            <div className="mx-default my-heading sticky bottom-[12vh] w-full self-end lg:ml-[88px] lg:mt-[121px]">
-              <h3 className="uppercase !leading-none text-white">
-                What our
-                <br className="xl:bloc hidden" />
+            <div className="mx-default my-heading sticky bottom-[12vh] w-full self-end lg:ml-[88px] lg:mt-[121px] xl:mx-[88px]">
+              <h3 className="uppercase !leading-none text-white lg:text-[42px] custom1430:text-[60px]">
+                What our <br className="hidden custom1430:block" />
                 Clients say
               </h3>
               <p className=" mt-[30px] max-w-[592px] text-base leading-6 text-[#BBBBBB]">

@@ -129,7 +129,7 @@ export default function Navbar({ isPageNotFound = false }) {
     },
     {
       title: "Cases",
-      link: "/cases http://localhost:3000/services"
+      link: "/cases"
     }
   ];
 
@@ -257,7 +257,7 @@ export default function Navbar({ isPageNotFound = false }) {
               : "navbar-wrapper  relative flex h-24 items-center justify-between gap-x-8 px-4 md:h-16 md:border-b md:border-th-fade md:px-8 lg:px-0"
           }
         >
-          <nav className="hidden w-full gap-[80px] max-w-[360px] items-center  pl-12 lg:flex xl:max-w-md">
+          <nav className="hidden w-full max-w-[360px] items-center gap-[80px]  pl-12 lg:flex xl:max-w-md">
             {/* for future services menu */}
 
             {/* <p
@@ -360,8 +360,8 @@ export default function Navbar({ isPageNotFound = false }) {
                       />
                     ) : (
                       <>
-                       {/* for future services menu */}
-                       
+                        {/* for future services menu */}
+
                         {/* <div
                           onClick={(e) => {
                             toggleMobServices(e);
