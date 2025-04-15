@@ -83,10 +83,10 @@ export const Feedback = () => {
               alt=""
             />
             <div className="h-[1px]" />
-            <div className="mx-default my-heading sticky bottom-[30vh] w-full self-end lg:ml-[88px] lg:mt-[121px]">
+            <div className="mx-default my-heading sticky bottom-[12vh] w-full self-end lg:ml-[88px] lg:mt-[121px]">
               <h3 className="uppercase !leading-none text-white">
                 What our
-                <br />
+                <br className="xl:bloc hidden" />
                 Clients say
               </h3>
               <p className=" mt-[30px] max-w-[592px] text-base leading-6 text-[#BBBBBB]">

@@ -39,7 +39,7 @@ export const servedIndustriesData = [
 export const ourServices = [
   {
     title: "WEB3 FULL STACK \n DEVELOPMENT",
-    text: "Bring your vision to life, using our experience from delivering 120+ Web3 projects",
+    text: "Bring your vision to life, using our experience from delivering 150+ Web3 projects",
     icon: FullStack
   },
   {
@@ -165,7 +165,7 @@ export const TustByNumbersData = [
     number: 150,
     title: "PROJECTS",
     desc: "delivered across Ethereum, Polygon, BNB Chain, and more",
-    sighn: "+"
+    sighn: "+",
   },
   {
     number: 500,
@@ -173,19 +173,22 @@ export const TustByNumbersData = [
     desc: "market capitalization managed through platforms developed by our team",
     sighn: "$",
     sufix: true,
+    plusSign: "+",
+
   },
   {
     number: 35,
-    title: "million+",
-    desc: "fdaily trading volume on systems we’ve built",
+    title: "million",
+    desc: "daily trading volume on systems we’ve built",
     sighn: "$",
     sufix: true,
+    plusSign: "+",
   },
   {
     number: 50,
     title: "Web3-native",
     desc: "developers with expertise in blockchain technology",
-    sighn: "+"
+    sighn: "+",
   }
 ];
 
@@ -208,8 +211,8 @@ export const web3DevData = [
     content: `As the demand for digital assets continues to rise, platforms for minting, trading, and managing NFTs are becoming essential. Cowchain builds platforms that support seamless and secure NFT transactions, allowing businesses to engage with this fast-growing market`
   },
   {
-    title: "metaverse Development",
-    content: `Our Web3 development company also specializes in metaverse development, creating immersive virtual worlds and interactive environments. From gaming to virtual reality, we help businesses explore new levels of user engagement`
+    title: "AI Development",
+    content: `Our Web3 development company also provides AI development services, building intelligent systems and autonomous agents for blockchain products. From AI-powered automation to personalized user experiences, we help businesses unlock smarter Web3 solutions.`
   },
   {
     title: "Blockchain Security and Audits",

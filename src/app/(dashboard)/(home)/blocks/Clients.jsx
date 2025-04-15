@@ -6,11 +6,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Counter } from "../components/counter";
 
+import agnt from "@/assets/svgComponents/clientsLogo/Agnt";
 import brc20 from "@/assets/svgComponents/clientsLogo/Brc20";
 import gbc from "@/assets/svgComponents/clientsLogo/GBC";
 import hybrid from "@/assets/svgComponents/clientsLogo/Hybrid";
 import pixel from "@/assets/svgComponents/clientsLogo/Pixel";
-import agnt from "@/assets/svgComponents/clientsLogo/Agnt";
 import retroBridge from "@/assets/svgComponents/clientsLogo/RetroBridge";
 import step from "@/assets/svgComponents/clientsLogo/Step";
 import tenet from "@/assets/svgComponents/clientsLogo/Tenet";
@@ -67,7 +67,7 @@ export default function Clients() {
               <div className="flex items-center">
                 <Counter
                   duration={4}
-                  target={120}
+                  target={150}
                   className="max-h-[36px] text-[36px]
                  leading-[36px] md:max-h-[48px] md:text-[48px] md:leading-[48px]"
                 />
@@ -100,7 +100,7 @@ export default function Clients() {
           </div>
           <p className="my-[40px] max-w-lg text-[14px] leading-6 md:my-[20px] md:text-base lg:order-2 lg:max-w-xl">
             Over the course of just 3 years, our team has expertly developed and
-            got the market for 120+ products in various niches, so we know
+            got the market for 150+ products in various niches, so we know
             exactly how to make your product successful. NFT marketplace?
             Play-to-Earn app? Crypto wallet? DeFi bridge? Chances are, we’ve
             done it all. Take a look at our portfolio and see for yourself
