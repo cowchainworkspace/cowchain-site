@@ -13,7 +13,7 @@ export const HeroSection = () => {
     <section className=" scrollbar-none container relative  mb-9 w-full  pt-20 md:mb-[100px] md:max-w-full  lg:pt-[120px]">
       <Image
         src={bgImage}
-        className="pointer-events-none absolute -top-24 left-0 hidden md:block"
+        className=" pointer-events-none absolute -top-24 left-0 hidden md:block"
       />
       <Image
         src={bgMobileImage}
