@@ -68,12 +68,12 @@ export function KeyFeatures({
       {isWhiteLabelBg && (
         <Image
           alt="background decoration"
-          className="absolute -bottom-[180%] left-0 md:block"
+          className="absolute -bottom-[180%] left-0 hidden md:block"
           src={whiteLabelBg}
         />
       )}
       <div
-        className={`px-default relative mx-auto flex  max-w-[1440px] flex-col justify-between ${isOneBlock ? "py-[60px] md:py-[126px]" : "pb-[84px] pt-[60px] md:pt-[126px]"} gap-[107px] lg:pl-[88px] lg:pr-[92px]`}
+        className={` relative mx-auto flex max-w-[1440px]  flex-col justify-between px-5 md:px-8 ${isOneBlock ? "pb-[30px] pt-[60px] md:py-[126px]" : "pb-[84px] pt-[60px] md:pt-[126px]"} gap-[107px] lg:pl-[88px] lg:pr-[92px]`}
       >
         <div
           className={cn(

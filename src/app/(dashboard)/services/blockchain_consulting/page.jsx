@@ -43,8 +43,7 @@ const BlockChainConsulting = () => {
             <span className="violet-gradient-text">
               one of the leading blockchain consulting companies
             </span>
-            , we deliver professional
-            <br className="hidden custom1400:block" />
+            , we deliver professional <br className="hidden custom1400:block" />
             <span className="violet-gradient-text">
               blockchain consulting services
             </span>{" "}
@@ -61,7 +60,7 @@ const BlockChainConsulting = () => {
             practical{" "}
             <span className="violet-gradient-text">
               blockchain consulting solutions.
-            </span>
+            </span>{" "}
             From blockchain advisory
             <br className="hidden custom1400:block" />
             services to ongoing development, our approach{" "}

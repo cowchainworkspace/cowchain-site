@@ -23,25 +23,25 @@ export function ExpertiseServices({
       {!noBg && bg}
 
       <div
-        className={`relative mx-auto flex max-w-[1440px] flex-col px-8 py-[60px] md:px-[88px] lg:py-[126px] xl:flex-row ${threeColumns ? "flex grid-cols-3 flex-col gap-5 md:gap-[85px] xl:grid" : " flex justify-between"} `}
+        className={`relative mx-auto flex max-w-[1440px] flex-col px-5 py-[60px] md:px-8 md:px-[88px] lg:py-[126px] xl:flex-row ${threeColumns ? "flex grid-cols-3 flex-col gap-5 md:gap-[85px] xl:grid" : " flex justify-between"} `}
       >
         <div className="col-span-1 lg:gap-10">
           {tag && <Tag title={tag} className="mb-4 w-fit md:mb-8" />}
           <h2
             className={cn(
-              "lg:order-0 text-[42px] uppercase text-white md:text-[60px]",
+              "lg:order-0 text-[36px] uppercase text-white md:text-[60px] lg:text-[42px]",
               {
                 "xl:!text-[50px]": threeColumns,
-                "!text-[42px] leading-[37.59px]": isDevelop
+                "text-[36px] leading-[37.59px] md:!text-[42px]": isDevelop
               },
               titleClasses
             )}
           >
             {title}
           </h2>
-          <div className="mt-[60px] flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto" />
+          <div className="mt-5 flex w-full max-w-xl flex-col justify-between customSmall:flex-row md:mt-[60px]  lg:order-3 lg:ml-auto" />
           {desc && (
-            <p className="body my-[40px] max-w-[582px] text-base leading-6 md:my-[20px]">
+            <p className="body mb-10 mt-5 max-w-[582px] text-base leading-6 md:my-[20px] md:my-[40px]">
               {desc}
             </p>
           )}

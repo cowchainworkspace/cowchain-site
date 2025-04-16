@@ -111,11 +111,11 @@ p,
 }
 
 .px-default {
-  @apply px-4 md:px-8 lg:px-16 xl:px-24;
+  @apply px-5 md:px-8 lg:px-16 xl:px-24;
 }
 
 .mx-default {
-  @apply mx-4 md:mx-8 lg:mx-16 xl:mx-24;
+  @apply mx-5 md:mx-8 lg:mx-16 xl:mx-24;
 }
 
 .py-heading {

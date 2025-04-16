@@ -39,7 +39,7 @@ const feedbackData = [
 
 const Quote = ({ text, author, index }) => {
   return (
-    <article className="px-default relative  flex w-full min-w-[320px] flex-col border-r border-t border-r-th-fade border-t-th-fade py-10 md:overflow-visible md:border-r-0 md:border-t-0 md:py-16 lg:py-20">
+    <article className="px-default relative   flex w-full min-w-[320px] flex-col border-r border-t border-r-th-fade border-t-th-fade py-10 md:overflow-visible md:border-r-0 md:border-t-0 md:py-16 lg:py-20">
       {index !== feedbackData.length - 1 && (
         <div className="absolute bottom-0 left-0 hidden h-[1px] w-[calc(100vw)] md:block md:border-b md:border-b-th-fade " />
       )}
@@ -75,7 +75,7 @@ export const Feedback = () => {
           <div className="md-border-r box-border flex md:col-span-2 md:ml-auto md:max-w-[576px] ">
             <Image
               className={
-                "pointer-events-none absolute -top-[40%] left-0 md:-left-[10vw] md:-top-[25vw] md:h-1/2 md:h-auto md:w-[50vw]"
+                "pointer-events-none absolute -top-[40%] left-0 hidden md:-left-[10vw] md:-top-[25vw] md:block md:h-1/2 md:h-auto md:w-[50vw]"
               }
               src={bg}
               aria-hidden="true"

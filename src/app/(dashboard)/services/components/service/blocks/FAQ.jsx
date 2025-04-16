@@ -90,7 +90,7 @@ export default function FAQ({
       >
         <div
           className={cn(
-            "md:py-heading md-border-r py-[60px] !pr-0 pt-[70px] text-left md:col-span-2",
+            "md:py-heading md-border-r !pr-0 pb-[30px] pt-[70px] text-left md:col-span-2 md:pb-[60px]",
             {
               "md:col-span-1": isTwoHalf,
               "xl:!pt-[126px]": isDoublePadding
@@ -99,7 +99,7 @@ export default function FAQ({
         >
           <div
             className={cn(
-              "flex flex-col  gap-[10px] pl-4 md:gap-[20px] md:pl-8 lg:pl-[88px] xl:gap-[40px]",
+              "flex flex-col  gap-[10px] pl-5 md:gap-[20px] md:pl-8 lg:pl-[88px] xl:gap-[40px]",
               typographyContainer
             )}
           >
@@ -162,7 +162,7 @@ export default function FAQ({
                         <div className="mr-0 w-full text-left md:mr-auto">
                           <span
                             className="block !w-full max-w-[623px]  text-left
-                         font-roc text-[18px] font-medium uppercase !leading-none text-white lg:!leading-none"
+                         font-roc text-[14px] font-medium uppercase !leading-none text-white md:text-[18px] lg:!leading-none"
                           >
                             {faq.title}
                           </span>

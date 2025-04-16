@@ -122,7 +122,7 @@ export function TustByNumbers({
                 <div
                   key={index}
                   className={cn(
-                    `flex h-full w-full grid-cols-1 grid-rows-1 flex-col justify-center border-r border-r-th-fade px-[26px] 
+                    `flex h-full w-full grid-cols-1 grid-rows-1 flex-col justify-center border-r border-r-th-fade px-[20px] 
                     py-[22px] md:z-[10]   ${index < 2 && "border-b border-b-th-fade"}`,
                     {
                       "justify-start gap-4  md:gap-[30px] custom1430:!pt-[110px]":
