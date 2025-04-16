@@ -93,7 +93,7 @@ export function Industries({
         )}
 
         <div
-          className={`flex flex-col sm:grid ${customClasses}  ${
+          className={`flex flex-col gap-5 sm:grid ${customClasses}  ${
             isTwoSides
               ? "col-span-1 grid-cols-2 gap-x-[30px] gap-y-[42px] sm:gap-y-[30px] custom1000:gap-x-[77px] custom1000:gap-y-[77px]"
               : data.length < 4

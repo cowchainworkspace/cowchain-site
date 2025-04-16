@@ -117,7 +117,7 @@ const BlockChainConsulting = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[45%] left-0"
+            className="absolute -bottom-[45%] left-0 hidden md:block"
           />
         }
       />
@@ -129,7 +129,7 @@ const BlockChainConsulting = () => {
         }
         data={IndustriesDexData}
         topBorder={false}
-        customClasses={"lg:!mt-0"}
+        customClasses={"mt-0"}
         descClasses={"text-white"}
       />
 
@@ -145,7 +145,7 @@ const BlockChainConsulting = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[65%] left-0"
+            className="absolute -bottom-[65%] left-0 hidden md:block"
           />
         }
       />
