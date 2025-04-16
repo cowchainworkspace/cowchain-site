@@ -61,7 +61,7 @@ export function KeyFeatures({
       {!noBg && (
         <Image
           alt=""
-          className="absolute -bottom-[38%] right-0 md:block"
+          className="absolute -bottom-[38%] right-0 hidden md:block md:block"
           src={dexAdvisoryBg}
         />
       )}
@@ -73,7 +73,7 @@ export function KeyFeatures({
         />
       )}
       <div
-        className={` relative mx-auto flex max-w-[1440px]  flex-col justify-between px-5 md:px-8 ${isOneBlock ? "pb-[30px] pt-[60px] md:py-[126px]" : "pb-[84px] pt-[60px] md:pt-[126px]"} gap-[107px] lg:pl-[88px] lg:pr-[92px]`}
+        className={` relative mx-auto flex max-w-[1440px]  flex-col justify-between px-5 md:px-8 ${isOneBlock ? "pb-[30px] pt-[60px] md:py-[126px] lg:pb-[84px]" : "pb-[30px] pt-[60px] md:py-[126px]"} gap-10 md:gap-[107px] lg:pl-[88px] lg:pr-[92px]`}
       >
         <div
           className={cn(

@@ -90,7 +90,7 @@ export default function FAQ({
       >
         <div
           className={cn(
-            "md:py-heading md-border-r !pr-0 pb-[30px] pt-[70px] text-left md:col-span-2 md:pb-[60px]",
+            "md:py-heading md-border-r !pr-0 pb-[30px] pt-[60px] text-left md:col-span-2 md:pb-[60px] md:pt-[70px]",
             {
               "md:col-span-1": isTwoHalf,
               "xl:!pt-[126px]": isDoublePadding
@@ -114,7 +114,7 @@ export default function FAQ({
             {desc && (
               <p
                 className={cn(
-                  "body my-[40px] max-w-[462px] text-left leading-6 md:my-[20px]",
+                  "body my-5 max-w-[462px] text-left leading-6 md:my-[20px]",
                   {
                     "max-w-[434px] text-balance !text-secondary": isSecondary
                   },
@@ -153,7 +153,7 @@ export default function FAQ({
                     />
                     <div
                       className={cn(
-                        "max-w-[893px] px-4 py-[43px] md:pl-8 xl:pl-[88px] xl:pr-[60px]",
+                        "max-w-[893px] px-5 py-[43px] md:pl-8 xl:pl-[88px] xl:pr-[60px]",
                         faqHorizontalPadding && "xl:!px-[60px]",
                         itemsClasses
                       )}
@@ -161,8 +161,8 @@ export default function FAQ({
                       <AccordionButton className={cn("relative")}>
                         <div className="mr-0 w-full text-left md:mr-auto">
                           <span
-                            className="block !w-full max-w-[623px]  text-left
-                         font-roc text-[14px] font-medium uppercase !leading-none text-white md:text-[18px] lg:!leading-none"
+                            className="block !w-full max-w-[260px] text-left  font-roc
+                         text-[14px] font-medium uppercase !leading-none text-white md:max-w-[623px] md:text-[18px] lg:!leading-none"
                           >
                             {faq.title}
                           </span>

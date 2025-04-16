@@ -36,7 +36,12 @@ const DefiDevelopment = () => {
         }
       />
       <Achievements
-        tag={"Our DeFi Development Services and Solutions"}
+        tag={
+          <>
+            Our DeFi Development Services{" "}
+            <span className="hidden md:block">and Solutions</span>
+          </>
+        }
         desc={
           <>
             {" "}
@@ -45,7 +50,7 @@ const DefiDevelopment = () => {
               defi development <br className="hidden custom1400:block" />{" "}
               company
             </span>{" "}
-            specializing in providing top-notch
+            specializing in providing top-notch{" "}
             <span className="violet-gradient-text">
               defi <br className="hidden custom1400:block" /> development
               services
@@ -54,7 +59,7 @@ const DefiDevelopment = () => {
             <br className="hidden custom1400:block" />
             helping you navigate the world of decentralized{" "}
             <br className="hidden custom1400:block" />
-            finance with
+            finance with{" "}
             <span className="violet-gradient-text">
               innovative platforms
             </span>{" "}
@@ -94,9 +99,9 @@ const DefiDevelopment = () => {
         data={DeFiExpertiseData}
         title={
           <>
-            DeFi <br />
-            Development <br />
-            Services <br />
+            DeFi <br className="hidden md:block" />
+            Development <br className="hidden md:block" />
+            Services <br className="hidden md:block" />
             We Provide
           </>
         }
@@ -104,7 +109,7 @@ const DefiDevelopment = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[35%] left-0"
+            className="absolute -bottom-[35%] left-0 hidden md:block"
           />
         }
       />
@@ -114,11 +119,12 @@ const DefiDevelopment = () => {
         data={DeFiBenefitsData}
         title={
           <>
-            Benefits <br />
-            of DeFi <br />
+            Benefits <br className="hidden md:block" />
+            of DeFi <br className="hidden md:block" />
             Development
           </>
         }
+        containerClasses="grid-cols-1 md:grid-cols-2"
       />
 
       <Industries
@@ -154,8 +160,9 @@ const DefiDevelopment = () => {
           isTwoHalf={true}
           isDoublePadding={true}
           hasIcon={false}
-          itemsClasses={"py-[74.5px]"}
+          itemsClasses={"py-10 md:py-[74.5px]"}
           faqGradient={true}
+          descriptionClasses="!max-w-[320px] md:max-w-[462px]"
         />
       </div>
 
@@ -217,18 +224,20 @@ const DefiDevelopment = () => {
             Trust Us
           </>
         }
+        containerClasses="grid-cols-1 md:grid-cols-2"
       />
       <div className="w-full overflow-hidden">
         <OtherServices
           tag={"Other Blockchain Services"}
           title={
             <>
-              In addition to <br />
+              In addition to <br className="hidden md:block" />
               <span className="violet-gradient-text">DEFI development</span>
               <br />
-              Cowchain offers <br /> a variety <br /> of
+              Cowchain offers <br className="hidden md:block" /> a variety{" "}
+              <br /> of{" "}
               <span className="violet-gradient-text">
-                complementary <br /> services
+                complementary <br className="hidden md:block" /> services
               </span>
             </>
           }
@@ -245,7 +254,7 @@ const DefiDevelopment = () => {
           faqHorizontalPadding={true}
         />
       </div>
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact className="px-[50px] py-[105px] md:px-[64px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
 };

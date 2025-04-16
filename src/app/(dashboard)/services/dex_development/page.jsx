@@ -80,7 +80,7 @@ const DexDevelopment = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -top-24 left-0"
+            className="absolute -top-24 left-0 hidden md:block"
           />
         }
       />
@@ -219,7 +219,7 @@ const DexDevelopment = () => {
           faqHorizontalPadding={true}
         />
       </div>
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact className="px-[50px] py-[105px] md:px-[64px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
 };

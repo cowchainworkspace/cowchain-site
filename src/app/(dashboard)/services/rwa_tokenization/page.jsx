@@ -1,6 +1,9 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
 import Image from "next/image";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
+import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
@@ -10,19 +13,16 @@ import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { TustByNumbers } from "../web3_fullstack_development/blocks/TustByNumbers";
-import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
 import {
   CoreFeaturesTokenization,
-  rwaTokenizationFAQData,
+  TustByNumbersData,
   aplicationsTokenizations,
-  whyTokenization,
   otherRwaServices,
-  TustByNumbersData
+  rwaTokenizationFAQData,
+  whyTokenization
 } from "./utils/data";
 import { BenefitsTokenizationData } from "./utils/data";
-import Cases from "../../(home)/blocks/Cases";
-import CasesMobile from "../../(home)/blocks/CasesMobile";
-import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
 
 const RwaTokenization = () => {
   return (
@@ -34,7 +34,7 @@ const RwaTokenization = () => {
           <>
             Elevate your offerings with our customizable white label solutions.
             Cowchain provides expert,
-            <br />
+            <br className="hidden md:block" />
             customizable solutions that allow you to deliver exceptional digital
             products and platforms
           </>
@@ -46,19 +46,22 @@ const RwaTokenization = () => {
           <>
             <span className="violet-gradient-text">RWA tokenization</span>{" "}
             transforms physical assets into
-            <br />
-            digital tokens, making them easier to manage, trade, <br /> and
-            invest in. By integrating blockchain technology, <br /> this
-            innovative process offers unmatched security, <br /> transparency,
-            and efficiency. With the growing
-            <br />
+            <br className="hidden xl:block" />
+            digital tokens, making them easier to manage, trade,{" "}
+            <br className="hidden xl:block" /> and invest in. By integrating
+            blockchain technology, <br className="hidden xl:block" /> this
+            innovative process offers unmatched security,{" "}
+            <br className="hidden xl:block" /> transparency, and efficiency.
+            With the growing
+            <br className="hidden xl:block" />
             demand for{" "}
             <span className="violet-gradient-text">
               digital asset management,
             </span>{" "}
             tokenization is
-            <br /> redefining how businesses and investors interact
-            <br />
+            <br className="hidden xl:block" /> redefining how businesses and
+            investors interact
+            <br className="hidden xl:block" />
             with real-world assets.
           </>
         }
@@ -68,17 +71,20 @@ const RwaTokenization = () => {
         isOneBlock={true}
         title={
           <>
-            What Is RWA Tokenization <br /> and Why It Matters?
+            What Is RWA Tokenization <br className="hidden md:block" /> and Why
+            It Matters?
           </>
         }
         desc={
           <>
             Real-World Asset Tokenization means digitizing physical real estate,
-            some commodity, or financial <br /> instrument into digital tokens.
-            These tokens are backed by the value of the physical asset, ensuring
-            their <br /> credibility. Blockchain tokenization serves as the
-            foundation, enabling seamless transfer, secure ownership <br />{" "}
-            records, and reduced barriers for global participation.
+            some commodity, or financial <br className="hidden md:block" />{" "}
+            instrument into digital tokens. These tokens are backed by the value
+            of the physical asset, ensuring their{" "}
+            <br className="hidden md:block" /> credibility. Blockchain
+            tokenization serves as the foundation, enabling seamless transfer,
+            secure ownership <br className="hidden md:block" /> records, and
+            reduced barriers for global participation.
           </>
         }
         noBg={true}
@@ -98,7 +104,7 @@ const RwaTokenization = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[40%] left-0 h-[1700px]"
+            className="absolute -bottom-[40%] left-0 hidden h-[1700px] md:block"
           />
         }
       />
@@ -128,7 +134,9 @@ const RwaTokenization = () => {
         data={CoreFeaturesTokenization}
         topBorder={true}
         bottomBorder={false}
-        bg={<CoreFeaturesRWAbg className="absolute bottom-[25%] right-0" />}
+        bg={
+          <CoreFeaturesRWAbg className="absolute bottom-[25%] right-0 hidden md:block" />
+        }
       />
       <div className="w-full overflow-hidden">
         <FAQ

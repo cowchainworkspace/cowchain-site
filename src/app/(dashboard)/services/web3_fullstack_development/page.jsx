@@ -115,10 +115,10 @@ const FullStackDevelopment = () => {
       <ExpertiseServices
         title={
           <>
-            Advantages <br />
-            of Choosing <br />
+            Advantages <br className="hidden xl:block" />
+            of Choosing <br className="hidden xl:block" />
             Full-Stack
-            <br />
+            <br className="hidden xl:block" />
             Development
           </>
         }
@@ -146,7 +146,7 @@ const FullStackDevelopment = () => {
         bg={
           <Image
             alt=""
-            className="absolute -bottom-[45%] left-0  h-screen md:block md:h-min "
+            className="absolute -bottom-[45%] left-0 hidden h-screen  md:block md:block md:h-min "
             src={servideBG}
           />
         }
@@ -156,7 +156,7 @@ const FullStackDevelopment = () => {
           noBg={true}
           title={
             <>
-              Why <br /> Choose <br /> Us?
+              Why <br className="hidden md:block" /> Choose <br /> Us?
             </>
           }
           data={chooseUsData}
@@ -216,7 +216,7 @@ const FullStackDevelopment = () => {
           faqHorizontalPadding={true}
         />
       </div>
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact className="px-[50px] py-[105px] md:px-[64px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
 };

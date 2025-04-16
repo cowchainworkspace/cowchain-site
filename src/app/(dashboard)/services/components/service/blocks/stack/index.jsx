@@ -15,7 +15,8 @@ export function ServiceStack({
   title,
   desc = "To achieve high performance in decentralized exchange softwaredevelopment, we rely on the following tech stack",
   isMarginRight = false,
-  noMarginBottom = false
+  noMarginBottom = false,
+  typographyContainer = ""
 }) {
   return (
     <section
@@ -23,7 +24,11 @@ export function ServiceStack({
       className={cn("relative pb-[30px] pt-[60px] md:mt-0 md:py-[126px]")}
     >
       {!home && (
-        <Image alt="" className="absolute -top-24 left-0" src={dexStackBg} />
+        <Image
+          alt=""
+          className="absolute -top-24 left-0 hidden md:block"
+          src={dexStackBg}
+        />
       )}
       <div
         className={`relative z-20 mx-auto flex max-w-[1440px] flex-col sm:grid ${twoColumns ? "grid-cols-2" : "grid-cols-[265px_1fr] lg:grid-cols-[264px_1fr_1fr]"}
@@ -38,7 +43,8 @@ export function ServiceStack({
               {
                 "!mb-0": noMarginBottom,
                 "items-start": twoColumns
-              }
+              },
+              typographyContainer
             )}
           >
             <div
@@ -49,7 +55,7 @@ export function ServiceStack({
                 }
               )}
             >
-              <h2 className=" text-[36px] uppercase  md:text-start md:text-[60px]">
+              <h2 className="text-[36px] uppercase  md:text-start lg:text-[60px]">
                 {title ? (
                   title
                 ) : (

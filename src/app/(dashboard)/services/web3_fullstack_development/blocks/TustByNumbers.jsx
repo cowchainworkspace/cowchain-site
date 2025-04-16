@@ -66,7 +66,7 @@ export function TustByNumbers({
             className={cn(
               `flex h-full flex-col  ${home ? "h-fit md:h-[700px]" : "justify-center"}
              gap-[37px] border-r border-r-th-fade
-            px-[20px] pb-[40px] pt-[60px] md:pb-[110px] md:pl-8 md:pt-[126px]   custom1430:pl-[88px]  ${isBlockChainConsulting && "lg:pl-[64px] xl:pt-[170px] custom1430:pr-[90px]"}`,
+            px-[20px] pb-[40px] pt-[60px] md:pb-[110px] md:pl-8 md:pt-[126px]   xl:pl-[88px]  ${isBlockChainConsulting && "lg:pl-[64px] xl:pt-[170px] custom1430:pr-[90px]"}`,
               {
                 "justify-start": isBlockChainConsulting || isRwa
               },
@@ -133,7 +133,7 @@ export function TustByNumbers({
                     },
                     isRwa
                       ? "justify-start md:p-[60px] "
-                      : " md:px-[20px] custom815:px-[30px] custom1200:px-[50px] custom1430:px-[70px]",
+                      : " md:px-[32px] custom815:px-[30px] custom1200:px-[50px] custom1430:px-[70px]",
                     isRwa && index % 2 !== 0 && "min-w-[470px]"
                   )}
                 >

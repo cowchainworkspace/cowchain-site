@@ -129,7 +129,7 @@ const BlockChainConsulting = () => {
         }
         data={IndustriesDexData}
         topBorder={false}
-        customClasses={"mt-0"}
+        customClasses={"!mt-0 md:grid-cols-2 lg:grid-cols-3"}
         descClasses={"text-white"}
       />
 
@@ -160,7 +160,7 @@ const BlockChainConsulting = () => {
           isTwoHalf={true}
           hasIcon={false}
           faqGradient={true}
-          itemsClasses={"py-[74.5px]"}
+          itemsClasses={"py-10 md:py-[74.5px]"}
         />
       </div>
 
@@ -220,7 +220,7 @@ const BlockChainConsulting = () => {
           </>
         }
         descClasses={"max-w-[519px]"}
-        titleBlockClasses="flex-col lg:flex-row lg:justify-between"
+        titleBlockClasses="flex-col gap-1 md:gap-[102px] lg:flex-row lg:justify-between"
         isTextSecondary={true}
       />
 
@@ -244,7 +244,7 @@ const BlockChainConsulting = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[45%] left-0"
+            className="absolute -bottom-[45%] left-0 hidden md:block"
           />
         }
       />
@@ -301,7 +301,7 @@ const BlockChainConsulting = () => {
           faqHorizontalPadding={true}
         />
       </div>
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact className="px-[50px] py-[105px] md:px-[64px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
 };

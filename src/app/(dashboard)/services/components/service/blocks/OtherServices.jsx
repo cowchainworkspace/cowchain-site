@@ -39,7 +39,7 @@ const Quote = ({ text, author, lastIndex, noItemsBorders, ishomePage }) => {
       <p className="max-w-2xl whitespace-pre-line  font-roc text-[18px] font-medium uppercase leading-none !no-underline md:font-[500] md:leading-[90%] custom1000:text-[20px]">
         {text}
       </p>
-      <div className={clsx(ishomePage ? "md:mt-[24px]" : "md:mt-[20px]")}>
+      <div className={clsx(ishomePage ? "md:mt-[24px]" : "mt-2 md:mt-[20px]")}>
         <p className="text-[16px] font-thin text-[#BBBBBB]">{author}</p>
       </div>
     </article>
@@ -76,7 +76,7 @@ export const OtherServices = ({
             {title}
           </h3>
           {desc && (
-            <p className="body my-[40px] max-w-[592px] text-base leading-6 md:my-[20px]">
+            <p className="body my-5 max-w-[592px] text-base leading-6 md:my-[20px] md:my-[40px]">
               {desc}
             </p>
           )}
