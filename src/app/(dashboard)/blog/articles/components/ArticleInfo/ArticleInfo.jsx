@@ -3,6 +3,7 @@ import bannerIg from "@/assets/blog/articles/splash.png";
 import FooterForm from "@/components/utils/FooterForm";
 import { articleOptions, useMutatePost } from "@/hooks/use-strapi";
 import { getSplitText } from "@/lib/utils";
+import { useMediaQuery } from "@chakra-ui/react";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import { useParams } from "next/navigation";
@@ -14,6 +15,7 @@ import { ShareLinks } from "../../blocks/ShareLinks";
 import { ArticleParagraphs } from "../ArticleParagraphs/ArticleParagraphs";
 import { ReviewsSection } from "../ReviewsSection/ReviewsSection";
 import { SideMenu } from "../SideMenu/SideMenu";
+
 import { ThanksReview } from "../ThanksReview/ThanksReview";
 
 const ArticleInfo = () => {
@@ -23,6 +25,8 @@ const ArticleInfo = () => {
   const [reviewItem, setReviewItem] = useState(null);
   const { mutateAsync: cretePost, isPending } = useMutatePost();
   const articleTitles = [];
+
+  const [isLessThan1280] = useMediaQuery("(max-width: 1280px)");
 
   const onHandleAddReview = async (review) => {
     try {
@@ -81,14 +85,29 @@ const ArticleInfo = () => {
         pageViews={data.attributes.article_views}
       />
       <div className="relative block h-[234px] w-full md:max-h-[560px] md:min-h-[430px] custom-1700:min-h-[600px]">
-        <Image
-          fill
-          src={data.attributes.banner_img.data?.attributes?.url || bannerIg}
-          alt="banner image"
-          objectFit="cover"
-          objectPosition="center"
-          className="object-contain xl:object-cover"
-        />
+        {isLessThan1280 ? (
+          <Image
+            fill
+            src={data.attributes.banner_img.data?.attributes?.url || bannerIg}
+            alt="banner image"
+            objectFit="cover"
+            quality={100}
+            objectPosition="center"
+            className="object-contain xl:object-cover"
+          />
+        ) : (
+          <div
+            style={{
+              backgroundImage: `url(${data.attributes.banner_img.data?.attributes?.url || bannerIg})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center"
+            }}
+            objectFit="cover"
+            objectPosition="center"
+            className="h-full w-full object-contain xl:object-cover"
+          />
+        )}
       </div>
 
       <div className="mt-[60px] flex items-start justify-center  gap-[71px] md:mb-[103px] md:mt-20">

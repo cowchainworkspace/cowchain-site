@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const Post = ({ attributes }) => {
   return (
-    <article className="group relative grid h-[479px] w-[375px] grid-rows-[233px_1fr] overflow-hidden border-r border-r-th-fade md:h-[622px] md:w-[368px] md:grid-rows-[370px_1fr] 1440custom:w-[600px]">
+    <article className="group relative grid h-[479px] w-[375px] grid-rows-[233px_1fr] overflow-hidden border-r border-r-th-fade xl:h-[622px] xl:w-[600px] xl:grid-rows-[370px_1fr] 1440custom:w-[600px]">
       <div className="absolute right-5 top-5 z-10  items-center justify-center opacity-0  transition-opacity duration-300 group-hover:opacity-100">
         <Link
           href={`/blog/articles/${attributes?.slug}`}
@@ -12,7 +12,7 @@ export const Post = ({ attributes }) => {
         </Link>
       </div>
       <div
-        className="h-[233px] w-[375px] bg-cover bg-center transition-transform duration-200  group-hover:scale-95 group-hover:scale-95 md:h-[370px] md:w-full "
+        className="h-[233px] w-[375px] bg-cover bg-center transition-transform duration-200  group-hover:scale-95 group-hover:scale-95 xl:h-[370px] xl:w-full "
         style={{
           backgroundImage: `url(${attributes?.preview_article_img?.data?.attributes?.url})`,
           backgroundPosition: "left",

@@ -1,23 +1,23 @@
-import bg from "@/assets/homepage/bg.png";
-import bridge from "@/assets/cases/newCases/crossChainTransferBridgeImg.png";
 import payment from "@/assets/cases/newCases/CryptoExchangeImg.png";
+import hotel from "@/assets/cases/newCases/HotelBusinessImg.png";
+import bridge from "@/assets/cases/newCases/crossChainTransferBridgeImg.png";
 import finance from "@/assets/cases/newCases/cryptoWalletApp2Img.png";
 import wallet from "@/assets/cases/newCases/cryptoWalletAppImg.png";
-import hotel from "@/assets/cases/newCases/HotelBusinessImg.png";
 import m2e from "@/assets/cases/newCases/m2ePlatformImg.png";
+import bg from "@/assets/homepage/bg.png";
+import linkedin from "@/assets/homepage/linkedin.svg";
 import pic1 from "@/assets/homepage/projects/1.jpg";
 import pic2 from "@/assets/homepage/projects/2.jpg";
 import pic3 from "@/assets/homepage/projects/3.jpg";
 import MichaelImg from "@/assets/homepage/team/newTeam/michaelImg.png";
 import OlehImg from "@/assets/team/executives/OlehImg2.png";
 import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
-import linkedin from "@/assets/homepage/linkedin.svg";
 
 import agnt from "@/assets/cases/agntCase.png";
 import gbc from "@/assets/cases/gbcCase.png";
-import stepUp from "@/assets/cases/stepUpCase.png";
-import retroBridge from "@/assets/cases/retrobridgeCase.png";
 import hybrid from "@/assets/cases/hybridCase.png";
+import retroBridge from "@/assets/cases/retrobridgeCase.png";
+import stepUp from "@/assets/cases/stepUpCase.png";
 
 export const blocksData = [
   {
@@ -146,7 +146,7 @@ export const benefitsData = [
 export const casesData = [
   {
     title: `agenthub`,
-    link: "/cases/move",
+    link: "",
     description:
       "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
     photo: agnt,
@@ -154,7 +154,7 @@ export const casesData = [
   },
   {
     title: "Cross-chain transfer bridge",
-    link: "/cases/bridge",
+    link: "",
     description:
       "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
     photo: retroBridge,
@@ -162,14 +162,14 @@ export const casesData = [
   },
   {
     title: "GBC DAPP",
-    link: "/cases/wallet",
+    link: "",
     description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     photo: gbc,
     tags: ["Web Development", "Trading", "NFT"]
   },
   {
     title: "step app",
-    link: "/cases/payment",
+    link: "",
     description:
       "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
     photo: stepUp,
@@ -177,7 +177,7 @@ export const casesData = [
   },
   {
     title: "hybrid",
-    link: "/cases/payment",
+    link: "",
     description: "Hybrid is a Layer 2 blockchain on Arbitrum Nitro, integrating the MoE framework  specialized AI agents.",
     photo: hybrid,
     tags: ["Web Development", "Blockchain Development", "Blockchain Development", "Bridge", "Staking", "L1"]
@@ -187,7 +187,7 @@ export const casesData = [
 export const casesMobileData = [
   {
     title: `agenthub`,
-    link: "/cases/move",
+    link: "",
     description:
       "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
     photo: agnt,
@@ -195,7 +195,7 @@ export const casesMobileData = [
   },
   {
     title: "Cross-chain transfer bridge",
-    link: "/cases/bridge",
+    link: "",
     description:
       "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
     photo: retroBridge,
@@ -203,7 +203,7 @@ export const casesMobileData = [
   },
   {
     title: "GBC DAPP",
-    link: "/cases/wallet",
+    link: "",
     description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     photo: gbc,
     tags: ["Web Development", "Trading", "NFT"]

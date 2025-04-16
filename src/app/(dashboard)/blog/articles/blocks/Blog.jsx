@@ -9,7 +9,7 @@ export const Blog = ({ slug }) => {
   return (
     <section
       id="blog"
-      className="relative md:min-h-[622px] md:border-y  md:border-y-th-fade"
+      className="relative md:border-y md:border-y-th-fade  xl:min-h-[622px]"
     >
       <div className="grid h-full w-full md:grid-cols-[300px_1fr] lg:grid-cols-[500px_1fr]">
         <div className="py-heading  px-default md-border-r flex flex-col gap-y-6">

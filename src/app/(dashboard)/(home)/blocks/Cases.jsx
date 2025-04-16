@@ -1,14 +1,10 @@
 "use client";
 
-import React, {
-  useRef,
-  useState,
-  useEffect
-} from "react";
-import { casesData } from "../homeData/data";
 import { useScroll } from "framer-motion";
+import React, { useRef, useState, useEffect } from "react";
+import { casesData } from "../homeData/data";
 
-import { useTransform, useMotionValue } from "framer-motion";
+import { useMotionValue, useTransform } from "framer-motion";
 import { ScrollProject } from "./ScrollProject";
 
 import useScrollPercentage from "react-scroll-percentage-hook";
@@ -83,8 +79,9 @@ const Cases = () => {
         onSlideChange={(swiper) => {
           setCurrentIndex(swiper.activeIndex);
           setIsBeginning(swiper.isBeginning);
-          setIsEnd(swiper.isEnd);
         }}
+        onReachEnd={() => setIsEnd(true)}
+        onFromEdge={() => setIsEnd(false)}
         slidesPerView={"auto"}
         spaceBetween={0}
       >
@@ -102,14 +99,18 @@ const Cases = () => {
       <div className="hidden w-full justify-center fullSlider:flex">
         {casesData &&
           casesData.map((project, index) => (
-            <div key={index} className="h-[546px]  max-w-[480px] custom480:h-[624px]">
+            <div
+              key={index}
+              className="h-[546px]  max-w-[480px] custom480:h-[624px]"
+            >
               <ScrollProject key={index} index={index} {...project} />
             </div>
           ))}
       </div>
 
       {!isBeginning && (
-        <div
+        <button
+          type="button"
           style={{
             background: "linear-gradient(to left, transparent 1%, #AB40FF 160%)"
           }}
@@ -117,11 +118,12 @@ const Cases = () => {
           className="absolute left-0 top-0 z-50 hidden hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
         >
           <Image src={sliderLeftArrow} alt="Next" className="h-8 w-8" />
-        </div>
+        </button>
       )}
 
       {!isEnd && (
-        <div
+        <button
+          type="button"
           style={{
             background:
               "linear-gradient(to right, transparent 1%, #AB40FF 160%)"
@@ -130,7 +132,7 @@ const Cases = () => {
           className="absolute right-0 top-0 z-50 hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
         >
           <Image src={sliderRightArrow} alt="Previous" className="h-8 w-8" />
-        </div>
+        </button>
       )}
     </section>
   );
