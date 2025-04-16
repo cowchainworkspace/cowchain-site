@@ -14,6 +14,9 @@ export function ExpertiseServices({
   threeColumns,
   tag,
   isDevelop = false,
+  customClasses = "",
+  itemsClasses = "",
+  itemClasses = "",
   titleClasses = ""
 }) {
   return (
@@ -23,7 +26,8 @@ export function ExpertiseServices({
       {!noBg && bg}
 
       <div
-        className={`relative mx-auto flex max-w-[1440px] flex-col px-8 py-[60px] md:px-[88px] lg:py-[126px] xl:flex-row ${threeColumns ? "flex grid-cols-3 flex-col gap-5 md:gap-[85px] xl:grid" : " flex justify-between"} `}
+        className={`relative mx-auto flex max-w-[1440px] flex-col px-8 py-[60px] md:px-[88px] lg:py-[126px] xl:flex-row 
+          ${threeColumns ? "flex grid-cols-3 flex-col gap-5 md:gap-[85px] xl:grid" : " flex justify-between"} ${customClasses}`}
       >
         <div className="col-span-1 lg:gap-10">
           {tag && <Tag title={tag} className="mb-4 w-fit md:mb-8" />}
@@ -48,16 +52,21 @@ export function ExpertiseServices({
         </div>
 
         <div
-          className={`${threeColumns ? "col-span-2 grid grid-cols-2 gap-x-[20px] md:gap-x-[85px]" : "md:max-w-[350px] custom1000:max-w-[400px] custom1200:max-w-[519px]"}`}
+          className={`${
+            threeColumns
+              ? "col-span-2 grid grid-cols-2 gap-x-[20px] md:gap-x-[85px]"
+              : "md:max-w-[350px] custom1000:max-w-[400px]  custom1200:max-w-[519px]"
+          } ${itemsClasses}`}
         >
           {data.map(({ title, desc }, index) => (
-            <div className="relative col-span-1 bg-cover">
+            <div className="relative col-span-1 whitespace-pre-line bg-cover">
               {title && (
                 <div
                   className={
-                    index === 0 || (threeColumns && index === 1)
+                    (index === 0 || (threeColumns && index === 1)
                       ? "mr-auto  w-full text-left"
-                      : "mr-auto mt-[42px] w-full text-left md:mt-[60px]"
+                      : "mr-auto mt-[42px] w-full text-left md:mt-[60px]",
+                    `${itemClasses}`)
                   }
                 >
                   <span className="text-left font-roc text-lg font-medium uppercase !leading-none text-white md:!text-[24px]">
