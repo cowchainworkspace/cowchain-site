@@ -1,42 +1,27 @@
 "use client";
 
-import { useRef, useEffect, memo } from "react";
+import { useRef, useEffect } from "react";
 import poster from "@/assets/homepage/thumbnail.png";
 
-const Video = memo(() => {
-  const vidRef = useRef(null);
-
+const Video = () => {
+  const vidRef = useRef();
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && vidRef.current) {
-          vidRef.current.load();
-          vidRef.current.play();
-        }
-      },
-      { root: null, threshold: 0.2 }
-    );
-
-    if (vidRef.current) {
-      observer.observe(vidRef.current);
-    }
-
-    return () => observer.disconnect();
+    vidRef.current.play();
   }, []);
   return (
     <video
       ref={vidRef}
-      className="mt-[68px]"
+      className="-mt-[20px]  md:mt-0"
       id="bg_vid"
       playsInline
       muted
       loop
       controls=""
       src={"/homepage/video.mp4"}
-      preload="none"
+      preload="auto"
       poster={poster}
     ></video>
   );
-});
+};
 
 export default Video;

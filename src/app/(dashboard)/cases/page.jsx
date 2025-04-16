@@ -1,16 +1,16 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
-import { HeroSection } from "./blocks/HeroSection";
-import marsan from "@/assets/cases/marsan.png";
 import eva from "@/assets/cases/eva.png";
-import triend from "@/assets/cases/triend.png";
-import triend_mobile from "@/assets/cases/triend-mobile.png";
-import retrobridge from "@/assets/cases/retrobridge.png";
-import retrobridge_mobile from "@/assets/cases/retrobridge-mobile.png";
-import step from "@/assets/cases/step.png";
-import finance from "@/assets/cases/finance.png";
 import finance_mobile from "@/assets/cases/finance-mobile.png";
+import finance from "@/assets/cases/finance.png";
+import marsan from "@/assets/cases/marsan.png";
+import retrobridge_mobile from "@/assets/cases/retrobridge-mobile.png";
+import retrobridge from "@/assets/cases/retrobridge.png";
+import step from "@/assets/cases/step.png";
+import triend_mobile from "@/assets/cases/triend-mobile.png";
+import triend from "@/assets/cases/triend.png";
+import { useEffect, useMemo, useState } from "react";
+import { HeroSection } from "./blocks/HeroSection";
 import { CaseSplash } from "./components/case-splash";
 
 const cases = [
@@ -58,7 +58,7 @@ const cases = [
   }
 ];
 
-const Cases = ({ setBurgerOpen }) => {
+const Cases = () => {
   const [tags, setTags] = useState([]);
   const filteredCases = useMemo(() => {
     if (tags.length === 0) return cases;

@@ -26,7 +26,7 @@ export const Project = ({
       <motion.div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></motion.div>
       <Link
         href={link}
-        className="absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 group-hover:flex md:hidden xl:py-12"
+        className="absolute left-0 top-0flex h-full w-full flex-col gap-y-4 px-12 py-8 group-hover:flex md:hidden xl:py-12"
       >
         <Link
           href={link}

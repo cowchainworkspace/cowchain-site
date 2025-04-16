@@ -1,6 +1,60 @@
-import { clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
+import { clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
+
+export const getSplitText = (text) => {
+  if (!text) return;
+
+  const lines = text.split('\n').filter(line => line.trim().length > 0);
+
+  const articleInfo = {
+    title: '',
+    description: [],
+  };
+
+  let currentSection = null;
+  let foundAnySubtitle = false;
+
+  lines.forEach((line) => {
+    if (line.startsWith('## ')) {
+      articleInfo.title = line.replace(/^## /, '').trim();
+    } else if (line.startsWith('### ')) {
+      foundAnySubtitle = true;
+      currentSection = {
+        subtitle: line.replace(/^### /, '').trim(),
+        content: [],
+      };
+      articleInfo.description.push(currentSection);
+    } else {
+      if (!foundAnySubtitle) {
+        // No `###` subtitles found yet? Make one default section.
+        if (!articleInfo.description.length) {
+          currentSection = {
+            subtitle: null,
+            content: [],
+          };
+          articleInfo.description.push(currentSection);
+        }
+      }
+
+      if (!currentSection) {
+        currentSection = {
+          subtitle: null,
+          content: [],
+        };
+        articleInfo.description.push(currentSection);
+      }
+
+      currentSection.content.push(line.trim());
+    }
+  });
+
+  return articleInfo;
+};
+
+
+
+

@@ -62,7 +62,7 @@ video {
 }
 
 .tools_wrapper {
-  @apply max-w-[296px];
+  @apply max-w-[360px] xl:max-w-[400px];
 }
 
 .tools_wrapper div:not(:first-child) {
@@ -182,4 +182,20 @@ video {
 
 .chakra-collapse p {
   @apply text-th-grey;
+}
+.vertical-text {
+  writing-mode: vertical-lr;
+}
+
+.faq-home-gradient {
+  background: linear-gradient(180deg, #461683 0%, rgba(0, 0, 0, 0) 100%);
+}
+.faq-home-gradient-mb {
+  background: linear-gradient(
+    163.81deg,
+    #873cbc 0.26%,
+    #5f2c91 16.97%,
+    #11011f 42.6%,
+    #000000 53.68%
+  );
 }

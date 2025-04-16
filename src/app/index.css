@@ -141,7 +141,7 @@ p,
 }
 
 .btn-submit {
-  @apply flex h-12 cursor-pointer items-center justify-center bg-white px-8 pt-1 text-center font-roc text-sm font-medium uppercase text-black lg:h-16;
+  @apply flex h-12 cursor-pointer items-center justify-center bg-white px-8 pt-1 text-center font-roc text-sm font-medium uppercase text-black;
   transition:
     color 0.3s,
     background-color 0.3s ease-in-out;
@@ -394,4 +394,39 @@ input:-webkit-autofill:active {
 
 .scroll-container .ghost {
   width: 100vw;
+}
+
+.embla {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: auto;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  align-items: center;
+}
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 100%;
+  min-width: fit-content;
+}
+
+.breadcrumb-item {
+  display: block;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .breadcrumb-item {
+    max-width: 150px;
+  }
 }

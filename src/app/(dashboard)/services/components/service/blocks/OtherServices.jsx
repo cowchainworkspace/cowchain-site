@@ -1,0 +1,124 @@
+import Tag from "@/components/ui/tag";
+import { cn } from "@/lib/utils";
+import React from "react";
+
+const feedbackData = [
+  {
+    text: "DApp Development",
+    author: "Custom decentralized applications for various industries"
+  },
+  {
+    text: "Smart Contract Development",
+    author: "Secure smart contract design and development"
+  },
+  {
+    text: "Audit and Optimization",
+    author: "Auditing and enhancing existing blockchain systems"
+  },
+  {
+    text: "Token Creation and NFT Development",
+    author:
+      "Comprehensive services for token creation and NFT development tailored to your project’s needs"
+  }
+];
+
+const Quote = ({
+  text,
+  author,
+  lastIndex,
+  noItemsBorders,
+  ishomePage,
+  index,
+  classes,
+  noPreLine = true
+}) => {
+  return (
+    <article
+      className={cn(
+        `gap-[24px] px-[20px] py-[20px]  md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] 
+    ${
+      !noItemsBorders
+        ? "relative flex w-full min-w-[320px] flex-col"
+        : "relative flex w-full min-w-[320px] flex-col"
+    }`,
+        classes
+      )}
+    >
+      {!lastIndex && (
+        <div className="absolute  bottom-0 left-0 h-[1px] w-[calc(100vw)] border-t border-t-th-fade" />
+      )}
+      {index === 0 && (
+        <div className="absolute left-0 top-0 block h-[1px] w-[calc(100vw)] border-t border-t-th-fade md:hidden" />
+      )}
+      <p
+        className={cn(
+          "max-w-2xl   font-roc text-[18px] font-medium uppercase leading-none !no-underline md:font-[500] md:leading-[90%] custom1000:text-[20px]",
+          noPreLine && "whitespace-pre-line"
+        )}
+      >
+        {text}
+      </p>
+      {author && (
+        <div className={cn(ishomePage ? "md:mt-[24px]" : "md:mt-[20px]")}>
+          <p className="text-[16px] font-thin text-[#BBBBBB]">{author}</p>
+        </div>
+      )}
+    </article>
+  );
+};
+
+export const OtherServices = ({
+  title,
+  data = feedbackData,
+  tag,
+  desc,
+  topBorder = true,
+  bottomBorder = true,
+  noItemsBorders = false,
+  ishomePage = false,
+  titleClasses = "",
+  quoteClasses
+}) => {
+  return (
+    <section
+      className={` ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
+    >
+      <div className="relative grid grid-cols-1 sm:mx-auto sm:max-w-[1440px] md:grid-cols-6">
+        <div
+          className={`md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} mt-[60px] box-border flex flex-col items-start justify-start px-[20px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-8 custom1430:pl-[88px] custom1430:pt-[126px]`}
+        >
+          {tag && <Tag title={tag} className="mb-[42px] md:mb-8" />}
+
+          <h3
+            className={cn(
+              "text-left text-[24px] uppercase leading-[90%] text-white custom1000:text-[36px] custom1200:text-[42px] ",
+              titleClasses
+            )}
+          >
+            {title}
+          </h3>
+          {desc && (
+            <p className="body my-[40px] max-w-[592px] text-base leading-6 md:my-[20px]">
+              {desc}
+            </p>
+          )}
+        </div>
+        <div
+          className={`${noItemsBorders && "gap-[42px] pb-[42px] md:gap-0"} quote_wrapper flex flex-col items-stretch overflow-x-scroll sm:flex-row sm:flex-col md:col-span-3 md:overflow-x-visible md:overflow-y-visible`}
+        >
+          {data?.map((feedback, index) => (
+            <Quote
+              classes={quoteClasses}
+              index={index}
+              key={index}
+              {...feedback}
+              lastIndex={index === data.length - 1}
+              noItemsBorders={noItemsBorders}
+              noPreLine={false}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};

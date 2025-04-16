@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
 
 export const ScrollProject = ({
   title,
@@ -11,40 +11,71 @@ export const ScrollProject = ({
   tags,
   id,
   link,
-  index
+  mobile = false
 }) => {
   return (
-    <motion.div
+    <div
       id={"project-" + id}
       className={cn(
-        "project-card group relative flex max-h-[325px] min-h-[325px] min-w-[100vw] max-w-[380vw]  cursor-pointer border-b border-b-th-fade bg-cover  bg-center   bg-no-repeat px-4 py-8 will-change-transform md:max-h-[625px] md:min-h-[625px] md:min-w-[33.5vw] md:max-w-[33.5vw]    md:px-8  lg:px-16"
+        "project-card group relative flex cursor-pointer justify-center",
+        {
+          "border  border-th-fade": !mobile,
+          "border-b  border-t border-b-th-fade  border-t-th-fade": mobile,
+          "h-[546px]  md:h-[624px]": !mobile,
+          "h-[130vw] min-h-[20vw]": mobile
+        }
       )}
-      style={{ backgroundImage: `url(${photo.src})` }}
     >
-      <motion.div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></motion.div>
-      <Link
-        href={link}
-        className="absolute left-0 top-0 flex h-full w-full flex-col gap-y-4 px-12 py-8 group-hover:flex md:hidden xl:py-12"
+      <button
+        className={cn("relative flex flex-col  items-start md:w-[547px]", {
+          "h-[624px] w-[480px]": !mobile,
+          " max-w-[375px] md:h-[419px]": mobile,
+          "gap-[30px]": !mobile,
+          "gap-[20px] ": mobile
+        })}
       >
-        <div className="btn-contact ml-auto max-h-24 max-w-[96px] opacity-0 md:max-h-none md:max-w-none md:opacity-100">
-          VIEW PROJECT
+        <div className="flex w-full justify-center">
+          <Image
+            className={cn("sm:h-[100%] ", {
+              "h-[624px] w-[480px]": !mobile,
+              "h-auto min-w-[100vw]": mobile
+            })}
+            src={photo.src}
+            width={503}
+            height={380}
+            alt={title}
+          />
         </div>
-        <div className="absolute bottom-5 flex max-w-[270px] flex-col gap-y-4 md:max-w-none">
-          <div className="hidden items-center gap-x-1 md:flex md:gap-x-2">
+
+        <div className="absolute bottom-[40px] left-[20px] right-[20px] z-[2] flex flex-col items-start gap-y-[14px] custom480:bottom-[30px]  custom480:left-[38px]  md:w-full md:gap-y-4">
+          <div className="flex max-w-[420px] flex-wrap  gap-x-[3px] gap-y-[8px] custom480:hidden custom480:items-start  custom480:gap-x-[8px] group-hover:custom480:flex">
             {tags.map((tag, index) => (
-              <div key={index} className="rounded-full bg-white px-3 py-2">
+              <div
+                key={index}
+                className="max-h-[34px] rounded-full bg-white px-[16px] py-2"
+              >
                 <p className="text-xs font-medium text-black lg:text-sm">
                   {tag}
                 </p>
               </div>
             ))}
           </div>
-          <span className="mt-2 font-roc text-lg font-medium uppercase text-white md:text-2xl">
+
+          <span className="text-left font-roc text-lg font-medium uppercase text-white md:text-2xl">
             {title}
           </span>
-          <p className="body max-w-sm !text-[#bbb]">{description}</p>
+          <p className="md:body max-w-sm  text-left text-[14px] !text-[#fff]">
+            {description}
+          </p>
         </div>
-      </Link>
-    </motion.div>
+      </button>
+
+      <div
+        style={{
+          background: "linear-gradient(to bottom, transparent 45%, #4D2C91 80%)"
+        }}
+        className="absolute bottom-0 z-[1] hidden h-full w-full custom480:group-hover:flex"
+      ></div>
+    </div>
   );
 };

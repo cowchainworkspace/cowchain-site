@@ -1,102 +1,28 @@
 "use client";
 
-import React, {
-  useRef,
-  useState,
-  useLayoutEffect,
-  useCallback,
-  useEffect
-} from "react";
-import marsan from "@/assets/cases/marsan.png";
-import eva from "@/assets/cases/eva.png";
-import triend from "@/assets/cases/triend-fit.png";
-import bridge from "@/assets/cases/bridge-fit.png";
-import step from "@/assets/cases/step.png";
-import finance from "@/assets/cases/finance-fit.png";
-
 import { useScroll } from "framer-motion";
+import React, { useRef, useState, useEffect } from "react";
+import { casesData } from "../homeData/data";
 
-import ResizeObserver from "resize-observer-polyfill";
-import { motion, useTransform, useMotionValue } from "framer-motion";
+import { useMotionValue, useTransform } from "framer-motion";
 import { ScrollProject } from "./ScrollProject";
 
 import useScrollPercentage from "react-scroll-percentage-hook";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import Image from "next/image";
+import "swiper/css/bundle";
+import "swiper";
+import sliderLeftArrow from "@/assets/icons/sliderLeftArrow copy.svg";
+import sliderRightArrow from "@/assets/icons/sliderRightArrow.svg";
 
-const projectsData = [
-  {
-    title: "Exchange wallet app",
-    link: "/cases/payment",
-    description:
-      "Fiat-to-crypto non-custodial exchange mobile app with seamless user experience for exchanging $CAD for BTC and ETH",
-    photo: marsan,
-    tags: ["React.js", "Solidity", "Subgraph"]
-  },
-  {
-    title: "Blockchain integration into hotel business",
-    link: "/cases/hotel",
-
-    description:
-      "Plugin for travel, hotel, and recreation apps with a blockchain-powered review system and unique incentives for honest reviews from their customers.",
-    photo: triend,
-    tags: ["React.js", "Solidity", "Node.js"]
-  },
-  {
-    title: "Cross-chain transfer bridge",
-    link: "/cases/bridge",
-    description:
-      "Cross-chain bridge that allows users to swap tokens across multiple blockchain networks with minimized commissions.",
-    photo: bridge,
-    tags: ["React Native", "Web3Auth", "Subgraph"]
-  },
-  {
-    title: "m2e platform",
-    link: "/cases/move",
-    description:
-      "Robust ecosystem for fitness finance that contains multiple various applications: move to earn application, blockchain wallet, dex, launchpad, dashboard etc.",
-    photo: step,
-    tags: ["DEX", "Staking", "Move-to-earn"]
-  },
-  {
-    title: "DECENTRALIZED CRYPTO EXCHANGE",
-    link: "/cases/finance",
-
-    description:
-      "Secure and convenient decentralized cryptocurrency exchange that allows to swap hundreds of crypto assets using liquidity pool mechanism.",
-    photo: finance,
-    tags: ["DEX", "DEFI"]
-  },
-  {
-    title: "CRYPTO WALLET APP",
-    link: "/cases/wallet",
-    description:
-      "Non-custodial multichain crypto wallet which allows users to create a blockchain wallet using web2 socials like Google, Facebook, Apple, email in one click.",
-    photo: eva,
-    tags: ["Mobile App", "Non-custodial wallet"]
-  }
-];
 const Cases = () => {
-  const scrollRef = useRef(null);
   const ghostRef = useRef(null);
   const [scrollRange, setScrollRange] = useState(0);
   const [viewportW, setViewportW] = useState(0);
 
   const scrollPerc = useMotionValue(0);
-
-  useLayoutEffect(() => {
-    scrollRef && setScrollRange(scrollRef.current.scrollWidth);
-  }, [scrollRef]);
-
-  const onResize = useCallback((entries) => {
-    for (let entry of entries) {
-      setViewportW(entry.contentRect.width);
-    }
-  }, []);
-
-  useLayoutEffect(() => {
-    const resizeObserver = new ResizeObserver((entries) => onResize(entries));
-    resizeObserver.observe(ghostRef.current);
-    return () => resizeObserver.disconnect();
-  }, [onResize]);
 
   const { scrollYProgress } = useScroll({
     target: ghostRef
@@ -113,33 +39,101 @@ const Cases = () => {
     [0, 0.7],
     [0, -scrollRange + viewportW]
   );
-  // const physics = {
-  //   damping: 20,
-  //   mass: 0.2,
-  //   stiffness: 2000,
-  //   velocity: 100
-  // };
-  // const spring = useSpring(transform, physics);
+
+  const swiperRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
+
+  useEffect(() => {
+    if (swiperRef.current) {
+      setCurrentIndex(swiperRef.current.activeIndex);
+    }
+  }, []);
+
+  const handlePrevClick = () => {
+    if (swiperRef.current && currentIndex > 0) {
+      swiperRef.current.slideTo(currentIndex - 1);
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+  const handleNextClick = () => {
+    if (swiperRef.current && currentIndex < casesData.length - 1) {
+      swiperRef.current.slideTo(currentIndex + 1);
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
 
   return (
-    <section ref={containerRef} className="relative z-10">
-      <div className="scroll-container top-[30%] border-y border-y-th-fade md:overflow-hidden xl:top-[20%]">
-        <motion.div
-          ref={scrollRef}
-          style={{ x: transform }}
-          className="cases_wrapper relative flex overflow-x-scroll   md:overflow-x-visible  "
-        >
-          {projectsData &&
-            projectsData.map((project, index) => (
+    <section
+      ref={containerRef}
+      className="relative z-10 hidden h-[546px] border-b border-b-th-fade custom480:block custom480:h-[624px] xl:flex"
+    >
+      <Swiper
+        className="flex h-[546px] custom480:h-[624px] fullSlider:!hidden"
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+        onSlideChange={(swiper) => {
+          setCurrentIndex(swiper.activeIndex);
+          setIsBeginning(swiper.isBeginning);
+        }}
+        onReachEnd={() => setIsEnd(true)}
+        onFromEdge={() => setIsEnd(false)}
+        slidesPerView={"auto"}
+        spaceBetween={0}
+      >
+        {casesData &&
+          casesData.map((project, index) => (
+            <SwiperSlide
+              key={index}
+              className="h-[546px] max-w-[480px] custom480:h-[624px]"
+            >
               <ScrollProject key={index} index={index} {...project} />
-            ))}
-        </motion.div>
+            </SwiperSlide>
+          ))}
+      </Swiper>
+
+      <div className="hidden w-full justify-center fullSlider:flex">
+        {casesData &&
+          casesData.map((project, index) => (
+            <div
+              key={index}
+              className="h-[546px]  max-w-[480px] custom480:h-[624px]"
+            >
+              <ScrollProject key={index} index={index} {...project} />
+            </div>
+          ))}
       </div>
-      <div
-        ref={ghostRef}
-        style={{ height: scrollRange - scrollRange / 2 }}
-        className="ghost hidden md:block"
-      />
+
+      {!isBeginning && (
+        <button
+          type="button"
+          style={{
+            background: "linear-gradient(to left, transparent 1%, #AB40FF 160%)"
+          }}
+          onClick={handlePrevClick}
+          className="absolute left-0 top-0 z-50 hidden hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
+        >
+          <Image src={sliderLeftArrow} alt="Next" className="h-8 w-8" />
+        </button>
+      )}
+
+      {!isEnd && (
+        <button
+          type="button"
+          style={{
+            background:
+              "linear-gradient(to right, transparent 1%, #AB40FF 160%)"
+          }}
+          onClick={handleNextClick}
+          className="absolute right-0 top-0 z-50 hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
+        >
+          <Image src={sliderRightArrow} alt="Previous" className="h-8 w-8" />
+        </button>
+      )}
     </section>
   );
 };
