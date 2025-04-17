@@ -39,7 +39,7 @@ const WhiteLabelDev = () => {
         tag={
           <>
             white label web design & development{" "}
-            <span className="hidden md:block">services</span>
+            <span className="hidden md:inline">services</span>
           </>
         }
         desc={
@@ -66,11 +66,6 @@ const WhiteLabelDev = () => {
             </span>{" "}
             tailored to each
             <br className="hidden custom1400:block" />
-            in{" "}
-            <span className="violet-gradient-text">
-              secure and customized solutions
-            </span>{" "}
-            tailored to each <br className="hidden custom1400:block" />
             client’s needs. Whether you are a firm looking for
             <br className="hidden custom1400:block" />
             white label services or a business in need of a white{" "}
@@ -106,30 +101,31 @@ const WhiteLabelDev = () => {
             the scenes. No additional overhead. No stress. Curious how white
             label <br className="hidden lg:block" /> development can help your
             business? Book a call with us today and discover the possibilities!
-            <br />
-            <br />
-            <p>
-              Curious how white label development can help your business? Book a
-              call with us today and discover the possibilities!
-            </p>
           </>
         }
         titleClasses="xl:mb-[60px]"
       />
 
-      <Industries data={whiteLabelSolutions} fullGrid isWhiteLabel />
+      <Industries
+        data={whiteLabelSolutions}
+        fullGrid
+        isWhiteLabel
+        itemTitleClasses="md:text-[18px]"
+        customClasses="gap-x-[90px]"
+      />
 
       <TustByNumbers
-        home
         data={TustByNumbersData}
         typographyContainerClasses={"xl:pt-[170px]"}
+        noBg={true}
       />
 
       <Industries
         title={"Industries We Serve"}
         desc={"Our Web3 white label division works with various industries"}
         data={IndustriesDexData}
-        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
+        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[80px]"
+        itemTitleClasses="lg:text-[20px]"
       />
 
       <KeyFeatures
@@ -259,6 +255,7 @@ const WhiteLabelDev = () => {
             </>
           }
           data={otherServices}
+          itemClasses="md:!py-[55px]"
           tag={"other our services"}
         />
       </div>

@@ -163,10 +163,10 @@ export function TustByNumbers({
                               duration={4}
                               decimals={decimal}
                               target={number}
-                              className={"font-roc xl:!text-[46px]"}
+                              className={"font-roc xl:!text-[46px] !leading-[90%]"}
                             />
                             {sighn && (
-                              <span className="font-roc text-[18px] font-medium uppercase leading-tight text-white text-white  md:text-[36px] lg:text-5xl">
+                              <span className="font-roc text-[18px] font-medium uppercase leading-[90%] text-white text-white  md:text-[36px] lg:text-[46px]">
                                 {sighn}
                               </span>
                             )}
@@ -177,7 +177,7 @@ export function TustByNumbers({
                     {title && (
                       <div
                         className={cn(
-                          "self-start font-roc text-[18px] font-medium uppercase leading-tight text-white text-white  md:text-[30px] custom815:text-[36px]",
+                          "self-start font-roc text-[18px] font-medium uppercase leading-[90%] text-white text-white  md:text-[30px] custom815:text-[36px]",
                           isRwa
                             ? "md:!mb-[30px] md:leading-[90%]"
                             : " custom1300:text-[46px]"

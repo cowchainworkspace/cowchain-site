@@ -107,7 +107,7 @@ export function Industries({
           {data.map((expertise, index) => (
             <div
               key={index}
-              className={`col-span-1 row-span-1 flex ${itemClasses}  ${expertise.text ? "items-start" : "items-center"}
+              className={`col-span-1 row-span-1 z-[10] flex ${itemClasses}  ${expertise.text ? "items-start" : "items-center"}
                   ${isTwoSides || fullGrid || data.length < 4 ? "max-w-full flex-col gap-0 sm:max-w-[307px]" : "gap-5 lg:gap-[49px]"}`}
             >
               {expertise.icon && (
@@ -125,7 +125,7 @@ export function Industries({
                 <div className="">
                   <h3
                     className={cn(
-                      "mb-[22px] max-w-[310px] uppercase md:text-xl",
+                      "mb-[22px] max-w-[310px] !leading-[90%] uppercase md:text-xl",
                       itemTitleClasses
                     )}
                   >

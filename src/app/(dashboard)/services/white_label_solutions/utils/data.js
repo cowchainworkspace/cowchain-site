@@ -144,7 +144,7 @@ export const whiteLabelSolutions = [
     icon: EducationIcon
   },
   {
-    title: "ITC (Social Trading Platform)",
+    title: <>ITC <div className="text-[14px] inline">(Social Trading Platform)</div></>,
     text: "Build a social trading environment with community features",
     icon: itc
   }

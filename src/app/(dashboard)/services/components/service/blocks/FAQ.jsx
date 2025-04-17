@@ -249,7 +249,7 @@ export default function FAQ({
                               ))}
                             </ul>
                           ) : (
-                            <p className="max-w-2xl !leading-[160%] !text-[#bbb] lg:!leading-[175%]">
+                            <p className="max-w-2xl !leading-[140%] !text-[#bbb] ">
                               {faq.content}
                             </p>
                           )}
