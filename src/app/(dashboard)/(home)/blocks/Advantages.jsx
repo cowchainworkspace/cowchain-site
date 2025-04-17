@@ -53,7 +53,7 @@ export default function ExpandingBlocks({ isSecondary = false }) {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-                className="text-[20px] uppercase text-white sm:text-[60px]"
+                className="font-roc text-[20px] uppercase text-white sm:text-[60px]"
               >
                 {activeBlock.title}
               </motion.h2>
@@ -126,7 +126,7 @@ export default function ExpandingBlocks({ isSecondary = false }) {
                 ) : (
                   <div className="flex w-full items-center justify-center">
                     <p
-                      className="whitespace-nowrap text-wrap text-base font-medium uppercase tracking-wide md:text-lg"
+                      className="whitespace-nowrap text-wrap font-roc text-base font-medium uppercase tracking-wide md:text-lg"
                       style={{
                         writingMode: "vertical-rl",
                         transform: "rotate(180deg)"

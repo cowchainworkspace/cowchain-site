@@ -13,6 +13,12 @@ import OlehImg from "@/assets/team/executives/OlehImg2.png";
 import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
 import linkedin from "@/assets/homepage/linkedin.svg";
 
+import agnt from "@/assets/cases/agntCase.png";
+import gbc from "@/assets/cases/gbcCase.png";
+import hybrid from "@/assets/cases/hybridCase.png";
+import retroBridge from "@/assets/cases/retrobridgeCase.png";
+import stepUp from "@/assets/cases/stepUpCase.png";
+
 export const blocksData = [
   {
     id: 1,
@@ -137,7 +143,7 @@ export const benefitsData = [
   }
 ];
 
-export const casesData = [
+export const casesOldData = [
   {
     title: `m2e platform`,
     link: "/cases/move",
@@ -186,7 +192,7 @@ export const casesData = [
   }
 ];
 
-export const casesMobileData = [
+export const casesOldMobileData = [
   {
     title: `m2e platform`,
     link: "/cases/move",
@@ -211,6 +217,73 @@ export const casesMobileData = [
     photo: wallet,
     tags: ["App Development", "Website Development"]
   }
+];
+
+export const casesMobileData = [
+  {
+    title: `agenthub`,
+    link: "",
+    description:
+      "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
+    photo: agnt,
+    tags: ["Web Development", "AI Development", "DeFi", "Crypto Wallet", "NFT"]
+  },
+  {
+    title: "Cross-chain transfer bridge",
+    link: "",
+    description:
+      "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
+    photo: retroBridge,
+    tags: ["Web Development", "DeFi", "Bridge", "NFT"]
+  },
+  {
+    title: "GBC DAPP",
+    link: "",
+    description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
+    photo: gbc,
+    tags: ["Web Development", "Trading", "NFT"]
+  },
+];
+
+export const casesData = [
+  {
+    title: `agenthub`,
+    link: "",
+    description:
+      "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
+    photo: agnt,
+    tags: ["Web Development", "AI Development", "DeFi", "Crypto Wallet", "NFT"]
+  },
+  {
+    title: "Cross-chain transfer bridge",
+    link: "",
+    description:
+      "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
+    photo: retroBridge,
+    tags: ["Web Development", "DeFi", "Bridge", "NFT"]
+  },
+  {
+    title: "GBC DAPP",
+    link: "",
+    description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
+    photo: gbc,
+    tags: ["Web Development", "Trading", "NFT"]
+  },
+  {
+    title: "step app",
+    link: "",
+    description:
+      "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
+    photo: stepUp,
+    tags: ["Web Development", "Mobile App", "GameFi", "Trading", "DeFi", "NFT", "Staking", "Crypto Wallet"]
+  },
+  {
+    title: "hybrid",
+    link: "",
+    description: "Hybrid is a Layer 2 blockchain on Arbitrum Nitro, integrating the MoE framework  specialized AI agents.",
+    photo: hybrid,
+    tags: ["Web Development", "Blockchain Development", "Blockchain Development", "Bridge", "Staking", "L1"]
+  },
 ];
 
 export const faqHomeData = [

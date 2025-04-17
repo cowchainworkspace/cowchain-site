@@ -15,7 +15,7 @@ const AgntProjectOverView = () => {
               <h3 className="font-roc text-[54px] font-medium uppercase leading-90 text-white">
                 Project overview
               </h3>
-              <p className="text-left font-manrope text-sm font-semibold leading-[22.1px] !text-white-70">
+              <p className="text-left font-manrope text-sm font-[450] leading-[22.1px] !text-white-70">
                 AGNT.Hub was developed to bridge Web3 infrastructure and AI
                 <br className="hidden custom1430:block" />
                 automation, addressing the growing demand for AI-powered

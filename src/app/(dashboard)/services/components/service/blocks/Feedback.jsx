@@ -62,7 +62,7 @@ const Quote = ({ text, author, index }) => {
   );
 };
 
-export const Feedback = () => {
+export const Feedback = ({ nobg = false }) => {
   return (
     <section
       id="clients-feedback"

@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 export const ScrollProject = ({
   title,
@@ -16,31 +16,29 @@ export const ScrollProject = ({
   return (
     <div
       id={"project-" + id}
-      className={cn("project-card group relative flex justify-center", {
-        "border  border-th-fade": !mobile,
-        "border-b  border-t border-b-th-fade  border-t-th-fade": mobile,
-        "h-[546px]  md:h-[698px]": !mobile,
-        "min-h-[419px]  md:h-[419px]": mobile
-      })}
+      className={cn(
+        "project-card group relative flex cursor-pointer justify-center",
+        {
+          "border  border-th-fade": !mobile,
+          "border-b  border-t border-b-th-fade  border-t-th-fade": mobile,
+          "h-[624px]": !mobile,
+          "h-[130vw] min-h-[20vw]": mobile
+        }
+      )}
     >
-      <Link
-        href={link}
-        className={cn(
-          "relative flex md:w-[547px] py-[20px] flex-col items-start md:h-[698px] md:py-[72px]",
-          {
-            "h-[546px]": !mobile,
-            " max-w-[375px] md:h-[419px]": mobile,
-            "gap-[30px]": !mobile,
-            "gap-[20px] p-[20px] py-[38px]": mobile
-          }
-        )}
+      <button
+        className={cn("relative flex flex-col  items-start md:w-[547px]", {
+          "h-[624px] w-[480px]": !mobile,
+          " max-w-[375px] md:h-[419px]": mobile,
+          "gap-[30px]": !mobile,
+          "gap-[20px] ": mobile
+        })}
       >
-
-        <div className="w-full flex justify-center">
+        <div className="flex w-full justify-center">
           <Image
-            className={cn("h-[100%] ", {
-              "max-h-[348px] w-auto md:max-h-[370px]": !mobile,
-              "max-h-[231px] w-full ": mobile
+            className={cn("sm:h-[100%] ", {
+              "h-[624px] w-[480px]": !mobile,
+              "h-auto min-w-[100vw]": mobile
             })}
             src={photo.src}
             width={503}
@@ -49,10 +47,13 @@ export const ScrollProject = ({
           />
         </div>
 
-        <div className="flex gap-y-[14px] max-w-[402px] flex-col md:ml-[72px] items-start md:gap-y-4">
-          <div className="hidden gap-x-1 md:flex md:items-start md:gap-x-2">
+        <div className="absolute bottom-[40px] left-[20px] right-[20px] z-[2] flex flex-col items-start gap-y-[14px] custom480:bottom-[30px]  custom480:left-[38px]  md:w-full md:gap-y-4">
+          <div className="flex max-w-[420px] flex-wrap  gap-x-[3px] gap-y-[8px] custom480:hidden custom480:items-start  custom480:gap-x-[8px] group-hover:custom480:flex">
             {tags.map((tag, index) => (
-              <div key={index} className="rounded-full bg-white px-3 py-2">
+              <div
+                key={index}
+                className="max-h-[34px] rounded-full bg-white px-[16px] py-2"
+              >
                 <p className="text-xs font-medium text-black lg:text-sm">
                   {tag}
                 </p>
@@ -63,17 +64,17 @@ export const ScrollProject = ({
           <span className="text-left font-roc text-lg font-medium uppercase text-white md:text-2xl">
             {title}
           </span>
-          <p className="md:body max-w-sm  text-left text-[14px] !text-[#bbb]">
+          <p className="md:body max-w-sm  text-left text-[14px] !text-[#fff]">
             {description}
           </p>
         </div>
-      </Link>
+      </button>
 
       <div
         style={{
           background: "linear-gradient(to bottom, transparent 45%, #4D2C91 80%)"
         }}
-        className="absolute bottom-0 z-[-1] h-full w-full group-hover:flex md:hidden"
+        className="absolute bottom-0 z-[1] hidden h-full w-full custom480:group-hover:flex"
       ></div>
     </div>
   );

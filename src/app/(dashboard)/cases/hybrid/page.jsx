@@ -100,7 +100,7 @@ const Hybrid = () => {
       <HybridWhatWeDid />
       <TeamBehind
         team={hybridTeam}
-        descClasses={"font-semibold"}
+        descClasses={"font-medium"}
         blockClasses={"last:pb-8 last:border-b-[0.5px]"}
       />
       <MoreProjects projects={hybridProjects} />

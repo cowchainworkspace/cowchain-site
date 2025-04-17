@@ -14,9 +14,14 @@ export function ExpertiseServices({
   threeColumns,
   tag,
   isDevelop = false,
-  titleClasses = "",
-  containerClasses = "",
+  customClasses = "",
+  itemsClasses = "",
   itemClasses = "",
+  titleClasses = "",
+  descClasses,
+  cryptoWalletClass,
+  itemTitleClasses,
+  containerClasses = "",
   sectionContainerClasses = ""
 }) {
   return (
@@ -45,9 +50,8 @@ export function ExpertiseServices({
           >
             {title}
           </h2>
-          <div className="mt-5 flex w-full max-w-xl flex-col justify-between customSmall:flex-row lg:order-3  lg:ml-auto lg:mt-[60px]" />
           {desc && (
-            <p className="body mb-10 mt-5 max-w-[582px] text-base leading-6 md:my-[20px] md:my-[40px]">
+            <p className="body my-[40px]  max-w-[582px] text-base leading-6 md:my-[20px]">
               {desc}
             </p>
           )}
@@ -55,21 +59,31 @@ export function ExpertiseServices({
 
         <div
           className={cn(
-            `${threeColumns ? "col-span-2 grid grid-cols-2 gap-x-[20px] md:gap-x-[85px]" : "md:max-w-[350px] custom1000:max-w-[400px] custom1200:max-w-[519px]"}`,
+            `${
+              threeColumns
+                ? "col-span-2 grid grid-cols-2 gap-x-[20px] md:gap-x-[85px]"
+                : "md:max-w-[350px] custom1000:max-w-[400px]  custom1200:max-w-[519px]"
+            } ${itemsClasses}`,
             containerClasses
           )}
         >
           {data.map(({ title, desc }, index) => (
-            <div className="relative col-span-1 bg-cover">
+            <div className="relative col-span-1 whitespace-pre-line bg-cover">
               {title && (
                 <div
                   className={
-                    index === 0 || (threeColumns && index === 1)
+                    (index === 0 || (threeColumns && index === 1)
                       ? "mr-auto  w-full text-left"
-                      : `mr-auto mt-[22px] w-full text-left md:mt-[60px] ${itemClasses}`
+                      : "mr-auto mt-[22px] w-full text-left md:mt-[60px]",
+                    `${itemClasses}`)
                   }
                 >
-                  <span className="text-left font-roc text-lg font-medium uppercase !leading-none text-white md:!text-[24px]">
+                  <span
+                    className={cn(
+                      "text-left font-roc text-lg font-medium uppercase !leading-none text-white md:text-[24px]",
+                      itemTitleClasses
+                    )}
+                  >
                     {title}
                   </span>
                 </div>
@@ -80,7 +94,9 @@ export function ExpertiseServices({
                     "mb-6 text-[16px] !leading-[22px] !text-[#BBBBBB]",
                     {
                       "mt-6": title
-                    }
+                    },
+                    descClasses,
+                    index !== data.length - 1 && cryptoWalletClass
                   )}
                 >
                   {desc}
