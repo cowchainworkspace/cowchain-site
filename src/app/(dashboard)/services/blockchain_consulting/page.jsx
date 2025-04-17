@@ -20,6 +20,9 @@ import {
   IndustriesDexData,
   BlockchainServiceData
 } from "./utils/data";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
 
 const BlockChainConsulting = () => {
   return (
@@ -83,6 +86,7 @@ const BlockChainConsulting = () => {
       />
 
       <ExpertiseServices
+        itemTitleClasses="lg:text-[20px]"
         title={
           <>
             Blockchain <br className="hidden lg:block" />
@@ -91,6 +95,7 @@ const BlockChainConsulting = () => {
             Provide
           </>
         }
+        cryptoWalletClass="mb-[80px]"
         desc={
           <>
             We at Cowchain provide a wide range of blockchain consulting
@@ -108,6 +113,7 @@ const BlockChainConsulting = () => {
             technology
           </>
         }
+        titleClasses="xl:!text-[60px] xl:mb-[60px]"
         data={BlockchainServiceData}
         bg={
           <Image
@@ -135,9 +141,12 @@ const BlockChainConsulting = () => {
         desc={
           "At Cowchain, we take pride in delivering tailored blockchain consulting solutions across industries. Our expertise in strategy, development, and implementation has enabled businesses to streamline operations, enhance security, and achieve measurable results. Below are some of the projects that highlight our practical approach to blockchain solutions"
         }
+        itemTitleClasses="lg:text-[20px]"
         data={OurWorksData}
         topBorder={false}
+        titleClasses="xl:text-[60px] xl:mb-[60px]"
         bottomBorder={false}
+        cryptoWalletClass="mb-[80px]"
         bg={
           <Image
             src={dexBg}
@@ -159,7 +168,7 @@ const BlockChainConsulting = () => {
           isTwoHalf={true}
           hasIcon={false}
           faqGradient={true}
-          itemsClasses={"py-10 md:py-[74.5px]"}
+          itemsClasses={"py-10 md:py-[55px]"}
         />
       </div>
 
@@ -211,11 +220,12 @@ const BlockChainConsulting = () => {
             <p>
               <br />
             </p>
-            s a trusted blockchain consulting company, we combine deep technical
-            expertise with a strong business focus, ensuring that every solution
-            we deliver is both technically sound and aligned with your long-term
-            strategy. We work alongside your team, offering continuous support
-            and insights throughout the entire project lifecycle
+            As a trusted blockchain consulting company, we combine deep
+            technical expertise with a strong business focus, ensuring that
+            every solution we deliver is both technically sound and aligned with
+            your long-term strategy. We work alongside your team, offering
+            continuous support and insights throughout the entire project
+            lifecycle
           </>
         }
         descClasses={"max-w-[519px]"}
@@ -239,11 +249,12 @@ const BlockChainConsulting = () => {
         data={EngagementDevData}
         topBorder={false}
         isTwoSides={true}
+        titleClasses="!text-[60px]"
         bg={
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[45%] left-0 hidden md:block"
+            className="pointer-events-none absolute -bottom-[45%] left-0 hidden md:block"
           />
         }
       />
@@ -269,6 +280,9 @@ const BlockChainConsulting = () => {
         noBg={true}
         titleClasses="xl:mb-[60px]"
       />
+      <WhiteLabelCases title="our cases" desc="" blockClasses="md:pb-[60px]" />
+      <Cases />
+      <CasesMobile />
       <div className="w-full overflow-hidden">
         <OtherServices
           tag={"Other Blockchain Services"}

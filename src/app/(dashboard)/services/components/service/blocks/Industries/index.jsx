@@ -41,7 +41,8 @@ export function Industries({
   itemClasses = "",
   isWhiteLabel = "",
   descClasses,
-  itemTitleClasses
+  itemTitleClasses,
+  titleClasses
 }) {
   return (
     <section
@@ -74,7 +75,8 @@ export function Industries({
                 "whitespace-pre-line text-left text-[36px] uppercase md:text-center md:text-start  custom1430:text-[60px]",
                 {
                   "xl:!text-[42px]": isTwoSides
-                }
+                },
+                titleClasses,
               )}
             >
               {title}

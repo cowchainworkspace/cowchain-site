@@ -44,7 +44,7 @@ export function TustByNumbers({
 }) {
   return (
     <section className={`relative  ${home && "h-fit md:h-[700px]"}`}>
-      {(home || isBlockChainConsulting || !noBg) && (
+      {(home || !noBg) && (
         <Image
           alt=""
           className="pointer-events-none absolute -bottom-[38%] left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min lg:-bottom-[120%]"
