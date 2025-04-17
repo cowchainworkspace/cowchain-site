@@ -51,7 +51,7 @@ export function Industries({
     >
       {bg && bg}
       <div
-        className={`mx-auto flex w-full max-w-[1440px] flex-col p-4 py-[60px] sm:grid sm:py-[126px] md:px-[32px] lg:px-[88px] 
+        className={`mx-auto flex w-full max-w-[1440px] flex-col p-5 pb-[30px] pt-[60px] sm:grid sm:py-[126px] md:px-[32px] lg:px-[88px] 
           ${
             isTwoSides
               ? "grid-cols-2 gap-x-[50px] gap-y-[42px] sm:gap-y-[77px] custom1000:gap-x-[100px] custom1200:gap-x-[134px]"
@@ -71,9 +71,9 @@ export function Industries({
           >
             <h2
               className={cn(
-                "whitespace-pre-line text-left text-[36px] uppercase md:text-center md:text-start md:text-[48px] custom1000:text-[60px]",
+                "whitespace-pre-line text-left text-[36px] uppercase md:text-center md:text-start  custom1430:text-[60px]",
                 {
-                  "!text-[42px]": isTwoSides
+                  "xl:!text-[42px]": isTwoSides
                 }
               )}
             >
@@ -94,14 +94,14 @@ export function Industries({
         )}
 
         <div
-          className={`flex flex-col sm:grid    ${
+          className={`flex flex-col gap-5 sm:grid    ${
             isTwoSides
               ? "col-span-1 grid-cols-2 gap-x-[30px]  gap-y-[42px] sm:gap-y-[30px] custom1000:gap-x-[77px] custom1000:gap-y-[77px]"
               : data.length < 4
                 ? "col-span-3 mt-[120px] grid-cols-3  gap-x-[109px] sm:gap-y-[42px]"
                 : fullGrid
                   ? `gap-x-[109px] gap-y-[42px]  ${isWhiteLabel && "md:col-span-4 md:grid-cols-2 lg:col-span-4 lg:grid-cols-4"} col-span-4 grid-cols-4`
-                  : "col-span-2 grid-cols-2 gap-x-[109px]  gap-y-[42px] lg:mt-[120px]"
+                  : "col-span-2 grid-cols-2 gap-y-[42px] lg:mt-[120px] lg:gap-x-[109px]"
           }  ${customClasses}`}
         >
           {data.map((expertise, index) => (
@@ -112,25 +112,35 @@ export function Industries({
             >
               {expertise.icon && (
                 <div
-                  style={{ border: "0.1px solid rgba(255, 255, 255, 0.5)" }}
-                  className="mb-[24px] flex min-h-[42px] min-w-[42px] items-center justify-center rounded-full bg-transparent md:mb-[37px] md:max-h-[64px] md:min-h-[64px] md:min-w-[64px] md:max-w-[64px]"
+                  style={{
+                    border: "0.1px solid rgba(255, 255, 255, 0.5)",
+                    flexShrink: 0
+                  }}
+                  className="mb-[24px] flex h-[42px] w-[42px] items-center justify-center rounded-full  bg-transparent md:mb-[37px] md:max-h-[64px] md:min-h-[64px] md:w-[62px] md:min-w-[64px] md:max-w-[64px] lg:h-[62px] lg:w-[62px]"
                 >
-                  <expertise.icon className="flex h-[20px] w-[20px] items-center justify-center md:h-[28px] md:w-[28px]" />
+                  <expertise.icon className="flex h-[20px] w-[20px] flex-shrink-0 items-center justify-center md:h-[28px] md:w-[28px]" />
                 </div>
               )}
-              <div className="mb-2 flex items-center">
+              <div className="mb-2 flex md:items-center">
                 <div className="">
-                  <h3 className={cn("mb-[22px] max-w-[310px] text-xl uppercase", itemTitleClasses)}>
+                  <h3
+                    className={cn(
+                      "mb-[22px] max-w-[310px] uppercase md:text-xl",
+                      itemTitleClasses
+                    )}
+                  >
                     {expertise.title}
                   </h3>
-                  <p
-                    style={{
-                      color: "#BBBBBB"
-                    }}
-                    className="leading-22px text-[16px]"
-                  >
-                    {expertise.text}
-                  </p>
+                  {expertise.text && (
+                    <p
+                      style={{
+                        color: "#BBBBBB"
+                      }}
+                      className="leading-22px text-[16px]"
+                    >
+                      {expertise.text}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

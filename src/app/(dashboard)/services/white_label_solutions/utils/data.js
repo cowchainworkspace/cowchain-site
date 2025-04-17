@@ -88,8 +88,8 @@ export const DexAppDevData = [
 export const whiteLabelSolutions = [
   {
     title: (
-      <h2 className="whitespace-pre-line text-center text-[36px] uppercase md:text-start md:text-[40px]">
-        Our White <br /> Label <br /> Solutions <br /> Include
+      <h2 className="whitespace-pre-line  text-[36px] uppercase md:text-start md:text-[40px]">
+        Our White <br className=" xl:block hidden" /> Label <br className=" xl:block hidden" /> Solutions <br className=" xl:block hidden" /> Include
       </h2>
     )
   },
@@ -209,7 +209,7 @@ export const faqDappData = [
 
 export const TustByNumbersData = [
   {
-    number: 120,
+    number: 150,
     title: "website Projects",
     desc: "delivered across diverse industries",
     sighn: "+"

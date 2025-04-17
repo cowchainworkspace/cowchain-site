@@ -23,7 +23,14 @@ const feedbackData = [
   }
 ];
 
-const Quote = ({ text, author, lastIndex, noItemsBorders, ishomePage, itemClasses }) => {
+const Quote = ({
+  text,
+  author,
+  lastIndex,
+  noItemsBorders,
+  ishomePage,
+  itemClasses
+}) => {
   return (
     <article
       className={`px-[20px] py-[20px] md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] ${itemClasses}
@@ -39,7 +46,7 @@ const Quote = ({ text, author, lastIndex, noItemsBorders, ishomePage, itemClasse
       <p className="max-w-2xl whitespace-pre-line  font-roc text-[18px] font-medium uppercase leading-none !no-underline md:font-[500] md:leading-[90%] custom1000:text-[20px]">
         {text}
       </p>
-      <div className={clsx(ishomePage ? "md:mt-[24px]" : "md:mt-[20px]")}>
+      <div className={clsx(ishomePage ? "md:mt-[24px]" : "mt-2 md:mt-[20px]")}>
         <p className="text-[16px] font-thin text-[#BBBBBB]">{author}</p>
       </div>
     </article>
@@ -57,7 +64,8 @@ export const OtherServices = ({
   ishomePage = false,
   typographyContainerClasses = "",
   itemClasses,
-  bg
+  bg,
+  descClasses = ""
 }) => {
   return (
     <section
@@ -67,7 +75,7 @@ export const OtherServices = ({
       <div className="relative grid grid-cols-1 sm:mx-auto sm:max-w-[1440px] md:grid-cols-6">
         <div
           className={cn(
-            `md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} mt-[60px] z-[2] box-border flex flex-col items-start justify-start pl-[32px] pr-[20px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[88px] custom1000:pt-[126px]`,
+            `md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} z-[2] mt-[60px] box-border flex flex-col items-start justify-start pl-[20px] pr-[20px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[88px] custom1000:pt-[126px]`,
             typographyContainerClasses
           )}
         >
@@ -75,11 +83,16 @@ export const OtherServices = ({
             <Tag title={tag} className="mb-[42px] md:mb-8 xl:mb-[60px]" />
           )}
 
-          <h3 className="text-left text-[24px] uppercase text-white custom1000:text-[36px] custom1200:text-[42px] ">
+          <h3 className="text-left text-[24px] uppercase text-white xl:text-[36px] custom1430:text-[42px] ">
             {title}
           </h3>
           {desc && (
-            <p className="body my-[40px] max-w-[592px] text-base leading-6 md:my-[20px]">
+            <p
+              className={cn(
+                "body my-5 max-w-[592px] text-base leading-6 md:my-[20px] md:my-[40px]",
+                descClasses
+              )}
+            >
               {desc}
             </p>
           )}

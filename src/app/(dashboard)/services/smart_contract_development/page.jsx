@@ -16,9 +16,7 @@ import {
   SmartContractOtherData,
   SnartContractBenefitsData,
   SnartContractExpertiseData,
-  consultingServices,
   faqNftData,
-  nftProcessData,
   smartContractsData
 } from "./utils/data";
 import { metadata } from "./utils/smartContractDevMetadata";
@@ -34,7 +32,7 @@ const SmartContractDevelopment = () => {
         desc={
           <>
             We offer a full range of blockchain smart contract development
-            services customized <br />
+            services customized <br className="hidden xl:block" />
             to meet your business needs
           </>
         }
@@ -68,7 +66,7 @@ const SmartContractDevelopment = () => {
         bg={
           <Image
             alt=""
-            className="absolute -bottom-[900px] left-0  h-screen md:block md:h-min "
+            className="absolute -bottom-[900px] left-0 hidden  h-screen md:block md:h-min "
             src={servideBG}
           />
         }
@@ -86,16 +84,26 @@ const SmartContractDevelopment = () => {
             via oracles.
           </>
         }
-        titleClasses="text-[42px] max-w-[592px]"
+        titleClasses="xl:text-[42px] max-w-[592px]"
+        sectionContainerClasses={"md:flex-row md:gap-5"}
       />
       <div className="w-full overflow-hidden">
         <OtherServices
           tag={"Smart Contracts in Business Transformation"}
           title={
             <>
-              Smart contracts are reshaping industries by automating complex
-              workflows and eliminating the need for intermediaries. Their
-              implementation drives trust and brings many benefits to modern
+              Smart contracts are
+              <br /> reshaping industries by
+              <br /> automating complex
+              <br />
+              workflows and
+              <br /> eliminating the need for
+              <br /> intermediaries. Their
+              <br />
+              implementation drives
+              <br /> trust and brings many
+              <br /> benefits to modern
+              <br />
               businesses
             </>
           }
@@ -114,7 +122,8 @@ const SmartContractDevelopment = () => {
         }
         desc={
           <>
-            Our blockchain smart contract development company <br />
+            Our blockchain smart contract development company{" "}
+            <br className="hidden md:block" />
             has expertise in a variety of industries
           </>
         }
@@ -178,6 +187,7 @@ const SmartContractDevelopment = () => {
           hasIcon={false}
           faqGradient={true}
           isDoublePadding={true}
+          descriptionClasses="max-w-[320px] xl:max-w-[462px]"
         />
       </div>
 
@@ -216,6 +226,7 @@ const SmartContractDevelopment = () => {
             Why <br /> Our Clients <br /> Trust Us
           </>
         }
+        containerClasses="grid-cols-1 md:grid-cols-2"
       />
       <div className="w-full overflow-hidden">
         <OtherServices
@@ -244,12 +255,12 @@ const SmartContractDevelopment = () => {
         <FAQ
           noBg={true}
           data={faqNftData}
-          titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+          titleClasses="xl:text-[60px] lg:leading-[53.7px]"
           faqHorizontalPadding={true}
         />
       </div>
 
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact className="px-[50px] py-[105px] md:px-[64px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
 };

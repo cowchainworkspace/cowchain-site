@@ -1,6 +1,9 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
 import Image from "next/image";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
+import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
@@ -10,19 +13,16 @@ import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { TustByNumbers } from "../web3_fullstack_development/blocks/TustByNumbers";
-import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
 import {
   CoreFeaturesTokenization,
-  rwaTokenizationFAQData,
+  TustByNumbersData,
   aplicationsTokenizations,
-  whyTokenization,
   otherRwaServices,
-  TustByNumbersData
+  rwaTokenizationFAQData,
+  whyTokenization
 } from "./utils/data";
 import { BenefitsTokenizationData } from "./utils/data";
-import Cases from "../../(home)/blocks/Cases";
-import CasesMobile from "../../(home)/blocks/CasesMobile";
-import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
 
 const RwaTokenization = () => {
   return (
@@ -34,7 +34,7 @@ const RwaTokenization = () => {
           <>
             Elevate your offerings with our customizable white label solutions.
             Cowchain provides expert,
-            <br />
+            <br className="hidden xl:block" />
             customizable solutions that allow you to deliver exceptional digital
             products and platforms
           </>
@@ -46,19 +46,22 @@ const RwaTokenization = () => {
           <>
             <span className="violet-gradient-text">RWA tokenization</span>{" "}
             transforms physical assets into
-            <br />
-            digital tokens, making them easier to manage, trade, <br /> and
-            invest in. By integrating blockchain technology, <br /> this
-            innovative process offers unmatched security, <br /> transparency,
-            and efficiency. With the growing
-            <br />
+            <br className="hidden xl:block" />
+            digital tokens, making them easier to manage, trade,{" "}
+            <br className="hidden xl:block" /> and invest in. By integrating
+            blockchain technology, <br className="hidden xl:block" /> this
+            innovative process offers unmatched security,{" "}
+            <br className="hidden xl:block" /> transparency, and efficiency.
+            With the growing
+            <br className="hidden xl:block" />
             demand for{" "}
             <span className="violet-gradient-text">
               digital asset management,
             </span>{" "}
             tokenization is
-            <br /> redefining how businesses and investors interact
-            <br />
+            <br className="hidden xl:block" /> redefining how businesses and
+            investors interact
+            <br className="hidden xl:block" />
             with real-world assets.
           </>
         }
@@ -68,17 +71,20 @@ const RwaTokenization = () => {
         isOneBlock={true}
         title={
           <>
-            What Is RWA Tokenization <br /> and Why It Matters?
+            What Is RWA Tokenization <br className="hidden md:block" /> and Why
+            It Matters?
           </>
         }
         desc={
           <>
             Real-World Asset Tokenization means digitizing physical real estate,
-            some commodity, or financial <br /> instrument into digital tokens.
-            These tokens are backed by the value of the physical asset, ensuring
-            their <br /> credibility. Blockchain tokenization serves as the
-            foundation, enabling seamless transfer, secure ownership <br />{" "}
-            records, and reduced barriers for global participation.
+            some commodity, or financial <br className="hidden xl:block" />{" "}
+            instrument into digital tokens. These tokens are backed by the value
+            of the physical asset, ensuring their{" "}
+            <br className="hidden xl:block" /> credibility. Blockchain
+            tokenization serves as the foundation, enabling seamless transfer,
+            secure ownership <br className="hidden xl:block" /> records, and
+            reduced barriers for global participation.
           </>
         }
         noBg={true}
@@ -98,9 +104,10 @@ const RwaTokenization = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[40%] left-0 h-[1700px]"
+            className="absolute -bottom-[40%] left-0 hidden h-[1700px] md:block"
           />
         }
+        sectionContainerClasses={"md:flex-row md:gap-5"}
       />
 
       <TustByNumbers
@@ -109,8 +116,8 @@ const RwaTokenization = () => {
         tag="step-by-step"
         title={
           <>
-            How asset <br />
-            tokenization <br />
+            How asset <br className="hidden xl:block" />
+            tokenization <br className="hidden xl:block" />
             works
           </>
         }
@@ -128,7 +135,10 @@ const RwaTokenization = () => {
         data={CoreFeaturesTokenization}
         topBorder={true}
         bottomBorder={false}
-        bg={<CoreFeaturesRWAbg className="absolute bottom-[25%] right-0" />}
+        bg={
+          <CoreFeaturesRWAbg className="absolute bottom-[25%] right-0 hidden md:block" />
+        }
+        sectionContainerClasses={"md:flex-row md:gap-5"}
       />
       <div className="w-full overflow-hidden">
         <FAQ
@@ -155,6 +165,7 @@ const RwaTokenization = () => {
         data={whyTokenization}
         topBorder={false}
         bottomBorder={false}
+        sectionContainerClasses={"md:flex-row md:gap-5"}
       />
 
       <KeyFeatures
@@ -167,15 +178,17 @@ const RwaTokenization = () => {
         desc={
           <>
             Tokenization represents the future of asset management, offering
-            liquidity, security, and accessibility like <br /> never before. Our
-            blockchain tokenization services empower businesses and investors to
-            unlock the full <br /> potential of their assets.
+            liquidity, security, and accessibility like{" "}
+            <br className="hidden xl:block" /> never before. Our blockchain
+            tokenization services empower businesses and investors to unlock the
+            full <br className="hidden xl:block" /> potential of their assets.
             <p>
               <br />
             </p>
             Take the leap into the now of asset management with RWA
-            tokenization. Let us help you realize the full <br /> potential of
-            your assets – get in touch today to start your journey.
+            tokenization. Let us help you realize the full{" "}
+            <br className="hidden xl:block" /> potential of your assets – get in
+            touch today to start your journey.
           </>
         }
         noBg={true}
@@ -183,7 +196,6 @@ const RwaTokenization = () => {
       />
 
       <Feedback />
-      <WhiteLabelCases />
       <Cases />
       <CasesMobile />
 
@@ -212,11 +224,11 @@ const RwaTokenization = () => {
         <FAQ
           data={rwaTokenizationFAQData}
           noBg={true}
-          titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+          titleClasses="xl:text-[60px] lg:leading-[53.7px]"
           faqHorizontalPadding={true}
         />
       </div>
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact className="px-[50px] py-[105px] md:pb-[127px] md:pt-[169px] lg:px-[64px]" />
     </section>
   );
 };

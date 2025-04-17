@@ -36,7 +36,12 @@ const WhiteLabelDev = () => {
         }
       />
       <Achievements
-        tag={"white label web design & development services"}
+        tag={
+          <>
+            white label web design & development{" "}
+            <span className="hidden md:block">services</span>
+          </>
+        }
         desc={
           <>
             In today’s digital world,{" "}
@@ -53,7 +58,7 @@ const WhiteLabelDev = () => {
               <br className="hidden custom1400:block" /> in-house resources
             </span>
             . At Cowchain, we understand{" "}
-            <br className="hidden custom1400:block" /> the importance of
+            <br className="hidden custom1400:block" /> the importance of{" "}
             <span className="violet-gradient-text">
               delivering high-quality, custom{" "}
               <br className="hidden custom1400:block" />
@@ -188,7 +193,7 @@ const WhiteLabelDev = () => {
           noBg={true}
           isSecondary={true}
           isTwoHalf={true}
-          itemsClasses={"!py-[90px]"}
+          itemsClasses={"md:!py-[90px]"}
           hasIcon={false}
           faqGradient={true}
           titleClasses="max-w-[396px]"
@@ -202,12 +207,14 @@ const WhiteLabelDev = () => {
         home={true}
         desc={
           <>
-            Our development process is backed <br />
+            Our development process is backed <br className="hidden xl:block" />
             by a modern tech stack, ensuring
-            <br /> that every white label developer on
-            <br /> our team has the tools to create
-            <br /> fast, secure, and scalable websites
-            <br />
+            <br className="hidden xl:block" /> that every white label developer
+            on
+            <br className="hidden xl:block" /> our team has the tools to create
+            <br className="hidden xl:block" /> fast, secure, and scalable
+            websites
+            <br className="hidden xl:block" />
             and apps
           </>
         }
@@ -239,12 +246,13 @@ const WhiteLabelDev = () => {
         <OtherServices
           title={
             <>
-              In addition to <br />
+              In addition to <br className="hidden xl:block" />
               <span className="violet-gradient-text">
-                white label <br /> development, <br />
+                white label <br className="hidden xl:block" /> development,{" "}
+                <br className="hidden xl:block" />
               </span>
-              Cowchain offers <br />
-              a variety <br /> of{" "}
+              Cowchain offers <br className="hidden xl:block" />
+              a variety <br className="hidden xl:block" /> of{" "}
               <span className="violet-gradient-text">
                 complementary <br /> services
               </span>
@@ -270,7 +278,7 @@ const WhiteLabelDev = () => {
         />
       </div>
 
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact className="px-[50px] py-[105px] md:px-[64px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
 };

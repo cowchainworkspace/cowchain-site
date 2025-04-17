@@ -83,8 +83,8 @@ const NftDevelopment = () => {
         <FAQ
           title={
             <>
-              Our Non-Fungible
-              <br /> Token Development Process
+              Our <br className="block lg:hidden" /> Non-Fungible
+              <br className="hidden md:block" /> Token Development Process
             </>
           }
           desc={
@@ -107,9 +107,10 @@ const NftDevelopment = () => {
           isDoublePadding={true}
           noBg={true}
           hasIcon={false}
-          itemsClasses={"md: py-[74.5px]"}
+          itemsClasses={"md:py-[74.5px]"}
           faqGradient={true}
           titleClasses="custom1430:text-[42px]"
+          descriptionClasses="!max-w-[320px] lg:!max-w-[462px]"
         />
       </div>
 
@@ -140,6 +141,7 @@ const NftDevelopment = () => {
             Development
           </>
         }
+        containerClasses="grid-cols-1 md:grid-cols-2"
       />
 
       <KeyFeatures
@@ -147,7 +149,7 @@ const NftDevelopment = () => {
         title={
           <>
             Why Choose Us
-            <br /> As Your NFT Development Company
+            <br className="hidden md:block" /> As Your NFT Development Company
           </>
         }
         desc={
@@ -162,8 +164,8 @@ const NftDevelopment = () => {
         title={
           <>
             nft
-            <br /> development
-            <br /> stack
+            <br className="hidden lg:block" /> development
+            <br className="hidden lg:block" /> stack
           </>
         }
         desc={
@@ -176,6 +178,7 @@ const NftDevelopment = () => {
         data={nftStackData}
         twoColumns={true}
         noMarginBottom={true}
+        typographyContainer={"md:items-start"}
       />
 
       <Feedback />
@@ -185,10 +188,11 @@ const NftDevelopment = () => {
           tag={"Other Blockchain Services"}
           title={
             <>
-              In addition to <br />
+              In addition to <br className="hidden md:block" />
               <span className="violet-gradient-text">NFT development</span>
               <br />
-              Cowchain offers <br /> a variety <br /> of
+              Cowchain offers <br className="hidden md:block" /> a variety{" "}
+              <br className="hidden md:block" /> of{" "}
               <span className="violet-gradient-text">
                 complementary <br /> services
               </span>
@@ -207,7 +211,7 @@ const NftDevelopment = () => {
         />
       </div>
 
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact className="px-[50px] py-[105px] md:px-[64px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
 };
