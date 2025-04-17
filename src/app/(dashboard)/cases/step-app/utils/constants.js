@@ -1,17 +1,19 @@
 import {
   slideOne,
   slideThree,
-  slideTwo
-} from "../../../../../../public/cases/agnt/slider";
+  slideTwo,
+  slideFour,
+  slideFive,
+  slideSix
+} from "../../../../../../public/cases/step-app/slider";
 
 import {
   solutionFive,
   solutionFour,
   solutionOne,
-  solutionSix,
   solutionThree,
   solutionTwo
-} from "../../../../../../public/cases/agnt/solutions";
+} from "../../../../../../public/cases/step-app/solutions";
 
 
 import { crossChain, gbc, m2ePlatformImg } from "../../../../../../public/projects";
@@ -57,181 +59,222 @@ export const stepAppTags = [
 ];
 
 
-export const overviewAgntItems = [
+export const overviewStepAppItems = [
   {
     id: 1,
-    itemName: "Project Outcomes",
-    itemValue: [
-      "7,241 users registered within 24 hours, reflecting solid initial adoption.",
-      "160,000+ total users, reflecting rapid expansion in Web3 & AI automation.",
-      "94,000 Twitter followers, building a highly engaged community."
-    ]
+    itemName: "tech stack",
+    itemValue: "React Native, Node.js, Solidity, Ethers.js, Web3.js, Bitcoin.js, Persona KYC, Interac E-Transfer, Chat support, Email Templating"
   },
   {
     id: 2,
+    itemName: "Project Outcomes",
+    itemValue: [
+      "A Move-to-Earn platform adopted by 300K+ active users across 100+ countries.", "A DEX, staking dApp, and NFT marketplace integrated into a single ecosystem.", "A user-friendly experience combining real-time asset trading and blockchain integration",
+    ]
+  },
+  {
+    id: 3,
     itemName: "Project Architecture",
     itemValue: [
-      {
-        itemTitle: "AGNT Connect",
-        itemValueDescription:
-          "AGNT Connect, an AI-driven Web3 extension within X, featuring a non-custodial wallet for buying, sending, receiving, and swapping tokens directly inside X. It includes advanced analytics for tracking top accounts, AI-powered project agents for real-time insights, and Tweet-to-Deploy, enabling tokenized AI agent launches directly from X."
-      },
-      {
-        itemTitle: "AGNT Marketplace",
-        itemValueDescription:
-          "AGNT Marketplace, a hub for building, upgrading, and monetizing AI agents. Users can deploy trading bots, risk managers, and on-chain analysts without coding, while the AI Extensions Marketplace provides automation tools and strategy upgrades."
-      },
-      {
-        itemTitle: "AGNT Omnichain Deployer",
-        itemValueDescription:
-          "AGNT Omnichain Deployer, the first cross-chain AI agent hub, powered by LayerZero’s OFT. It enables AI deployment across Solana, Base and other EVM chains, with dynamic liquidity distribution, allowing AI agents to allocate capital across multiple networks based on launch conditions."
-      }
+      "Staking mechanisms for earning rewards.", "An NFT marketplace for real-time asset trading.", "A web wallet supporting custodial and non-custodial transactions.", "A Telegram Mini-App driving Web3 gamification.", "A bridge and launchpad for cross-chain compatibility and project growth.", "A DEX for fast and secure token swaps."
     ]
   }
 ];
 
-export const agntSlides = [
+export const stepAppSlides = [
   {
     id: 1,
-    width: 824,
-    height: 586,
-    desc: "Agent hub screen",
+    width: 248,
+    height: 538,
+    desc: "Step App mobile screen",
     href: slideOne
   },
   {
     id: 2,
-    width: 824,
-    height: 586,
-    desc: "Agent hub screen",
+    width: 248,
+    height: 538,
+    desc: "Step App mobile screen",
     href: slideTwo
   },
   {
     id: 3,
-    width: 824,
-    height: 586,
-    desc: "Agent hub screen",
+    width: 248,
+    height: 538,
+    desc: "Step App mobile screen",
     href: slideThree
+  },
+  {
+    id: 4,
+    width: 248,
+    height: 538,
+    desc: "Step App mobile screen",
+    href: slideFour
+  },
+  {
+    id: 5,
+    width: 248,
+    height: 538,
+    desc: "Step App mobile screen",
+    href: slideFive
+  },
+  {
+    id: 6,
+    width: 248,
+    height: 538,
+    desc: "Step App mobile screen",
+    href: slideSix
+  },
+  {
+    id: 7,
+    width: 248,
+    height: 538,
+    desc: "Step App mobile screen",
+    href: slideOne
+  },
+  {
+    id: 8,
+    width: 248,
+    height: 538,
+    desc: "Step App mobile screen",
+    href: slideTwo
+  },
+  {
+    id: 9,
+    width: 248,
+    height: 538,
+    desc: "Step App mobile screen",
+    href: slideThree
+  },
+  {
+    id: 10,
+    width: 248,
+    height: 538,
+    desc: "Step App mobile screen",
+    href: slideFour
+  },
+  {
+    id: 11,
+    width: 248,
+    height: 538,
+    desc: "Step App mobile screen",
+    href: slideFive
+  },
+  {
+    id: 12,
+    width: 248,
+    height: 538,
+    desc: "Step App mobile screen",
+    href: slideSix
   }
 ];
 
-export const agntSolutions = [
+export const stepAppSolutions = [
   {
     id: 1,
-    title: "Quest Gym",
-    desc: "AGNT Quest Gym introduces a gamified way to earn AGNT Points by actively participating in the ecosystem. Users complete daily quests, try to make AI laugh, and dive deeper into AGNT.Hub through articles and quizzes to stack more points. A dynamic leaderboard tracks top participants, while NFT-based achievements mark those who were here before the meta flipped.",
-    textBlockWidth: 647,
+    title: "Move-to-Earn Engine Development",
+    desc: "We created a system rewarding users for physical movement, integrating blockchain to automate incentivizatio, and showcase real-world blockchain technology examples in action.",
+    textBlockWidth: 613,
     img: {
-      width: 527,
-      height: 310,
-      info: "Agnt screens",
+      width: 397,
+      height: 226,
+      info: "Step app shoes",
       href: solutionOne
     }
   },
   {
     id: 2,
-    title: "On-Chain Liquidity & DeFAI Automation",
-    desc: <>"Enabled AI-powered execution across DeFAI, allowing agents<br className="hidden xl:block" /> to manage liquidity pools, stake, lend, and execute automated<br className="hidden xl:block" /> DeFAI strategies across multiple chains. No delays, no missed<br className="hidden xl:block" /> opportunities – just real-time execution. AGNT.Hub’s<br className="hidden xl:block" /> execution model is one of the most compelling case<br className="hidden xl:block" /> study reports in AI-driven blockchain automation.",</>,
-    textBlockWidth: 580,
+    title: "Multifunctional DEX Implementation",
+    desc: "Step Exchange was developed to support easy and fast swaps of EVM-compatible assets, adding real-world value to blockchain supply chain platforms",
+    textBlockWidth: 600,
     img: {
-      width: 517,
-      height: 340,
-      info: "Agnt screens",
+      width: 372,
+      height: 383,
+      info: "Step app headphones",
       href: solutionTwo
     }
   },
   {
     id: 3,
-    title: "Self-Custodial Web3 Wallet & AI Execution",
-    desc: "Integrated a non-custodial wallet inside AGNT Connect, allowing users to buy, send, receive, and swap tokens directly within X. AI agents execute automated transactions, token swaps, and on-chain interactions with full security.",
-    textBlockWidth: 588,
+    title: "Web Wallet Creation",
+    desc: "A web wallet was designed to manage both custodial and non-custodial assets, demonstrating blockchain application examples by enabling smooth transfers between in-game balances and Web3 wallets.",
+    textBlockWidth: 524,
     img: {
-      width: 567,
-      height: 134,
-      info: "Agnt screens",
-      href: solutionSix
-    }
-  },
-  {
-    id: 4,
-    title: "Web3 & AI Embedded in X",
-    desc: "Developed AGNT Connect, a Web3 extension inside X, embedding AI-powered analytics, token interactions, and agent deployment directly into your feed. Users can track market trends, interact with AI agents, and execute trades seamlessly — without leaving X.",
-    textBlockWidth: 625,
-    img: {
-      width: 517,
-      height: 299,
-      info: "Agnt screens",
+      width: 397,
+      height: 258,
+      info: "Step app shoes",
       href: solutionThree
     }
   },
   {
-    id: 5,
-    title: "AI Agent Marketplace",
-    desc: "Created AGNT Marketplace, a hub where users can deploy, customize, and scale AI agents with modular upgrades. No-code integrations allow agents to gain new trading logic, automation tools, and risk management features.",
-    textBlockWidth: 601,
+    id: 4,
+    title: "Telegram Mini-App Development",
+    desc: "The StepHero added an engaging dimension to the StepApp ecosystem. Designed to encourage activity through gamified daily challenges and social interaction,  it created  a vibrant community hub directly within Telegram.",
+    textBlockWidth: 613,
     img: {
-      width: 567,
-      height: 134,
-      info: "Agnt screens",
+      width: 203,
+      height: 249,
+      info: "Step app watch",
       href: solutionFour
     }
   },
   {
-    id: 6,
-    title: "Omnichain AI Agent Deployment",
-    desc: "Built AGNT Omnichain Deployer, enabling AI agents to operate across Solana, Base and other EVM chains. AI models dynamically allocate liquidity, execute cross-chain strategies, and adapt in real-time using LayerZero OFT.",
-    textBlockWidth: 634,
+    id: 5,
+    title: "Comprehensive Launchpad Setup",
+    desc: "A decentralized Launchpad was introduced to empower project developers within the StepApp ecosystem.",
+    textBlockWidth: 524,
     img: {
-      width: 528,
-      height: 306,
+      width: 442,
+      height: 222,
       info: "Agnt screens",
       href: solutionFive
     }
-  }
+  },
+
 ];
 
 
 
-export const agntTeam = [
-  {
-    id: 1,
-    department: "development",
-    people: "Oleh Shutiak, Andrii Shpontak, Yaroslav Samoilenko, Dmytro Pivkopa, Ruslan Hrinov, Vladyslav Buzhenko, Danylo Provilsky"
-  },
-  {
-    id: 4,
-    department: "qa",
-    people: "Mykola Ursalov, Ivan Chalienko, Taras Pirus"
-  }
-];
+// export const agntTeam = [
+//   {
+//     id: 1,
+//     department: "development",
+//     people: "Oleh Shutiak, Andrii Shpontak, Yaroslav Samoilenko, Dmytro Pivkopa, Ruslan Hrinov, Vladyslav Buzhenko, Danylo Provilsky"
+//   },
+//   {
+//     id: 4,
+//     department: "qa",
+//     people: "Mykola Ursalov, Ivan Chalienko, Taras Pirus"
+//   }
+// ];
 
-export const agntProjects = [
-  {
-    id: 1,
-    tags: ['Website Development', '24/7 Support', 'Web3'],
-    title: 'RETROBRIDGE',
-    desc: 'RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.',
-    img: crossChain,
-    textColor: "text-secondary",
-    projectLink: "retrobidge"
-  },
-  {
-    id: 2,
-    tags: ['App Development', 'Website Development'],
-    title: 'GMX BLUEBERRY CLUB',
-    desc: 'GBC is a next-generation NFT platform that combines customization, trading, and gamification.',
-    img: gbc,
-    textColor: "text-white",
-    projectLink: "gbc"
-  },
-  {
-    id: 3,
-    tags: [ 'App Development', 'Website Development'],
-    title: 'STEP APP',
-    desc: 'StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.',
-    img: m2ePlatformImg,
-    textColor: "text-secondary",
-    projectLink: "#"
+// export const agntProjects = [
+//   {
+//     id: 1,
+//     tags: ['Website Development', '24/7 Support', 'Web3'],
+//     title: 'RETROBRIDGE',
+//     desc: 'RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.',
+//     img: crossChain,
+//     textColor: "text-secondary",
+//     projectLink: "retrobidge"
+//   },
+//   {
+//     id: 2,
+//     tags: ['App Development', 'Website Development'],
+//     title: 'GMX BLUEBERRY CLUB',
+//     desc: 'GBC is a next-generation NFT platform that combines customization, trading, and gamification.',
+//     img: gbc,
+//     textColor: "text-white",
+//     projectLink: "gbc"
+//   },
+//   {
+//     id: 3,
+//     tags: [ 'App Development', 'Website Development'],
+//     title: 'STEP APP',
+//     desc: 'StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.',
+//     img: m2ePlatformImg,
+//     textColor: "text-secondary",
+//     projectLink: "#"
 
-  },
+//   },
 
-]
+// ]

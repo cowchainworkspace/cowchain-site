@@ -1,6 +1,14 @@
 import React from "react";
 import CaseHeroScreen from "../components/HeroScreen";
-import { stepAppTags } from "./utils/constants";
+import {
+  stepAppTags,
+  stepAppSlides,
+  stepAppSolutions
+} from "./utils/constants";
+import Banner from "../components/Banner";
+import StepAppProjectOverView from "./components/StepAppProjectOverView";
+import CasesSlider from "../components/CasesSlider";
+import StepAppSolutions from "./components/StepAppSolutions";
 
 const StepApp = () => {
   return (
@@ -17,7 +25,20 @@ const StepApp = () => {
           </>
         }
         tagContainerClasses="flex-wrap justify-center max-w-[484px]"
+        descriptionClasses="max-w-[595px]"
       />
+      <Banner
+        img={"/cases/step-app/banner-step-app.webp"}
+        classes={"h-[500px] w-full"}
+        imgDesc={"Step-app banner image"}
+      />
+      <StepAppProjectOverView />
+      <CasesSlider
+        itemClasses={"pl-0 ml-7"}
+        sectionClasses={"h-[538px]"}
+        images={stepAppSlides}
+      />
+      <StepAppSolutions solutions={stepAppSolutions} />
     </section>
   );
 };

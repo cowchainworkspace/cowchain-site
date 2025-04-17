@@ -17,17 +17,18 @@ const CasesSlider = ({
   isHybrid,
   sectionClasses,
   isPixelVerse,
-  isAgnt
+  isAgnt,
+  itemClasses
 }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { align: "center", loop: true, slidesToScroll: 1, startIndex: 1 },
     [
-      Autoplay({
-        playOnInit: true,
-        delay: 3000,
-        stopOnInteraction: false,
-        stopOnMouseEnter: true
-      })
+      // Autoplay({
+      //   playOnInit: true,
+      //   delay: 3000,
+      //   stopOnInteraction: false,
+      //   stopOnMouseEnter: true
+      // })
     ]
   );
 
@@ -129,7 +130,8 @@ const CasesSlider = ({
                     "relative flex-shrink-0 pl-[30px]",
                     isHybrid && lastIndex && "last:!mr-[15px]",
                     isPixelVerse && "ml-[50px] pl-0",
-                    isAgnt && "ml-5 pl-0"
+                    isAgnt && "ml-5 pl-0",
+                    itemClasses
                   )}
                   style={{ width: `${width}px`, height: `${height}px` }}
                 >
