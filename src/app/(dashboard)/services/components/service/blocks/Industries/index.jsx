@@ -40,7 +40,8 @@ export function Industries({
   customClasses = "",
   itemClasses = "",
   isWhiteLabel = "",
-  descClasses
+  descClasses,
+  itemTitleClasses
 }) {
   return (
     <section
@@ -119,7 +120,7 @@ export function Industries({
               )}
               <div className="mb-2 flex items-center">
                 <div className="">
-                  <h3 className="mb-[22px] max-w-[310px] text-xl uppercase">
+                  <h3 className={cn("mb-[22px] max-w-[310px] text-xl uppercase", itemTitleClasses)}>
                     {expertise.title}
                   </h3>
                   <p

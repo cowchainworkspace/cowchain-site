@@ -33,6 +33,7 @@ const CryptoWalletDev = () => {
             Crypto Wallet Development <br /> Services for Your Needs
           </>
         }
+        ttileClasses="!pt-0"
       />
       <Achievements
         tag={"Crypto Wallet Development Services"}
@@ -64,11 +65,12 @@ const CryptoWalletDev = () => {
           </>
         }
         data={CryptoWalletTypesData}
+        cryptoWalletClass="mb-[60px]"
         bg={
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[40%] left-0 h-[1700px]"
+            className="absolute -bottom-[100%] pointer-events-none left-0 h-[1800px] w-auto"
           />
         }
       />
@@ -79,6 +81,7 @@ const CryptoWalletDev = () => {
             Key Features of Our Wallet <br /> Development Services
           </>
         }
+        itemTitleClasses="max-w-[350px]"
         data={walletFeaturesData}
         topBorder={false}
         customClasses="!grid-cols-2 !pr-0  xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
@@ -94,11 +97,14 @@ const CryptoWalletDev = () => {
         }
         data={walletProcessData}
         topBorder={true}
+        descClasses="!mb-0"
         customClasses="xl:flex-col"
-        itemsClasses="grid grid-cols-2 grid-rows-2 gap-x-[62px] gap-y-[70px] min-w-full"
+        itemsClasses="grid grid-cols-2 grid-rows-2 gap-x-[82px] gap-y-[70px] min-w-full"
         itemClasses="md:!mt-0"
-        bottomBorder={false}
-        bg={<CoreFeaturesRWAbg className="absolute bottom-[25%] right-0" />}
+        bottomBorder={true}
+        bg={
+          <CoreFeaturesRWAbg className="absolute -bottom-[90%] right-0 h-auto w-[1100px]" />
+        }
       />
 
       <ExpertiseServices
@@ -110,6 +116,8 @@ const CryptoWalletDev = () => {
         data={blockchainServiceData}
         topBorder={false}
         bottomBorder={false}
+        itemClasses="md:text-[20px]"
+        cryptoWalletClass="mb-[80px]"
       />
 
       <div className="w-full overflow-hidden">
@@ -124,7 +132,7 @@ const CryptoWalletDev = () => {
           isTwoHalf={true}
           hasIcon={false}
           faqGradient={true}
-          itemsClasses={"py-[43px]"}
+          itemsClasses={"py-[74px]"}
         />
       </div>
 
@@ -143,7 +151,10 @@ const CryptoWalletDev = () => {
             wallets more versatile in the digital economy
           </>
         }
+        itemClasses="md:text-[20px]"
         data={paymentSystemData}
+        titleClasses="mb-[60px]"
+        cryptoWalletClass="mb-[80px]"
         topBorder={false}
         bottomBorder={false}
       />
@@ -158,7 +169,7 @@ const CryptoWalletDev = () => {
         }
         desc={
           <>
-            <h1 className="font-manrope text-[22px] font-[500]">
+            <h1 className=" text-[24px] font-roc uppercase mt-[40px] font-[500]">
               Proven Expertise in Blockchain Technology
             </h1>
             <p className="mt-[20px] font-manrope text-[16px] font-[500] leading-[24px] text-[#BBBBBB]">
@@ -170,7 +181,7 @@ const CryptoWalletDev = () => {
             <p>
               <br />
             </p>
-            <h1 className="font-manrope text-[22px] font-[500]">
+            <h1 className=" text-[24px]  font-roc uppercase font-[500]">
               Comprehensive Support Services
             </h1>
             <p className="mt-[20px] text-[16px] font-[500] leading-[24px] text-[#BBBBBB]">
@@ -204,40 +215,49 @@ const CryptoWalletDev = () => {
           </>
         }
         noBg={true}
-        descClasses={"max-w-[798px]"}
+        descClasses={"max-w-[798px] !mt-[60px]"}
       />
 
-      <Feedback />
-      <div className="w-full overflow-hidden">
-        <OtherServices
-          tag={"Other Our Services"}
-          title={
-            <>
-              Alongside <br />
-              <span className="violet-gradient-text">
-                crypto wallet <br />
-                development
-              </span>
-              , <br /> Cowchain offers <br />
-              <span className="violet-gradient-text">
-                additional support <br /> services
-              </span>{" "}
-              to fully <br /> back your project
-            </>
-          }
-          data={otherRwaServices}
+      <Feedback nobg={true} />
+
+      <div className="relative">
+        <div className="w-full overflow-hidden">
+          <OtherServices
+            tag={"Other Our Services"}
+            title={
+              <>
+                Alongside <br />
+                <span className="violet-gradient-text">
+                  crypto wallet <br />
+                  development
+                </span>
+                , <br /> Cowchain offers <br />
+                <span className="violet-gradient-text">
+                  additional support <br /> services
+                </span>{" "}
+                to fully <br /> back your project
+              </>
+            }
+            data={otherRwaServices}
+            itemClasses="!py-[50px]"
+          />
+        </div>
+        <Image
+          src={dexBg}
+          alt="decoration ellipse"
+          className="absolute -bottom-[80%] pointer-events-none left-0 z-[1] h-[1400px] w-auto"
         />
-      </div>z
+      </div>
       <WhiteLabelCases
         title="Our Crypto Wallet Development Cases"
         desc={
           <>
             From secure wallet infrastructure to full-featured white label
-            solutions, our team has helped multiple Web3 products <br /> grow fast
-            without compromising user experience. Whether it’s embedded wallets,
-            multi-chain support, or mobile-first <br /> flows, our crypto wallet
-            services deliver real impact where it counts: in retention,
-            security, and usability.
+            solutions, our team has helped multiple Web3 products <br /> grow
+            fast without compromising user experience. Whether it’s embedded
+            wallets, multi-chain support, or mobile-first <br /> flows, our
+            crypto wallet services deliver real impact where it counts: in
+            retention, security, and usability.
           </>
         }
       />

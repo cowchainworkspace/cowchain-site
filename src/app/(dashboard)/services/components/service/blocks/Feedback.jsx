@@ -62,7 +62,7 @@ const Quote = ({ text, author, index }) => {
   );
 };
 
-export const Feedback = () => {
+export const Feedback = ({ nobg = false }) => {
   return (
     <section
       id="clients-feedback"
@@ -73,15 +73,17 @@ export const Feedback = () => {
       <div className="grid w-full grid-cols-1 md:flex md:justify-center">
         <div className="md:calc-full-minus-271 md:flex">
           <div className="md-border-r box-border flex md:col-span-2 md:ml-auto md:max-w-[576px] ">
-            <Image
-              className={
-                "pointer-events-none absolute -top-[40%] left-0 md:-left-[10vw] md:-top-[25vw] md:h-1/2 md:h-auto md:w-[50vw]"
-              }
-              src={bg}
-              aria-hidden="true"
-              role="presentation"
-              alt=""
-            />
+            {!nobg && (
+              <Image
+                className={
+                  "pointer-events-none absolute -top-[40%] left-0 md:-left-[10vw] md:-top-[25vw] md:h-1/2 md:h-auto md:w-[50vw]"
+                }
+                src={bg}
+                aria-hidden="true"
+                role="presentation"
+                alt=""
+              />
+            )}
             <div className="h-[1px]" />
             <div className="mx-default my-heading sticky bottom-[30vh] w-full self-end lg:ml-[88px] lg:mt-[121px]">
               <h3 className="uppercase !leading-none text-white">

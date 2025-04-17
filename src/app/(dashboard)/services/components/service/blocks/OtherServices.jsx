@@ -23,10 +23,10 @@ const feedbackData = [
   }
 ];
 
-const Quote = ({ text, author, lastIndex, noItemsBorders, ishomePage }) => {
+const Quote = ({ text, author, lastIndex, noItemsBorders, ishomePage, itemClasses }) => {
   return (
     <article
-      className={`px-[20px] py-[20px] md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] 
+      className={`px-[20px] py-[20px] md:px-[50px] custom1200:px-[88px] custom1200:py-[44px] ${itemClasses}
     ${
       !noItemsBorders
         ? "relative flex w-full min-w-[320px] flex-col"
@@ -55,16 +55,19 @@ export const OtherServices = ({
   bottomBorder = true,
   noItemsBorders = false,
   ishomePage = false,
-  typographyContainerClasses = ""
+  typographyContainerClasses = "",
+  itemClasses,
+  bg
 }) => {
   return (
     <section
-      className={` ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
+      className={`relative ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
     >
+      {bg && bg}
       <div className="relative grid grid-cols-1 sm:mx-auto sm:max-w-[1440px] md:grid-cols-6">
         <div
           className={cn(
-            `md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} mt-[60px] box-border flex flex-col items-start justify-start pl-[32px] pr-[20px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[88px] custom1000:pt-[126px]`,
+            `md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} mt-[60px] z-[2] box-border flex flex-col items-start justify-start pl-[32px] pr-[20px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[88px] custom1000:pt-[126px]`,
             typographyContainerClasses
           )}
         >
@@ -91,6 +94,7 @@ export const OtherServices = ({
               lastIndex={index === data.length - 1}
               noItemsBorders={noItemsBorders}
               ishomePage={ishomePage}
+              itemClasses={itemClasses}
             />
           ))}
         </div>

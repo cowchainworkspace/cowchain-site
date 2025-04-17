@@ -17,7 +17,10 @@ export function ExpertiseServices({
   customClasses = "",
   itemsClasses = "",
   itemClasses = "",
-  titleClasses = ""
+  titleClasses = "",
+  descClasses,
+  cryptoWalletClass,
+  itemTitleClasses
 }) {
   return (
     <section
@@ -33,7 +36,7 @@ export function ExpertiseServices({
           {tag && <Tag title={tag} className="mb-4 w-fit md:mb-8" />}
           <h2
             className={cn(
-              "lg:order-0 text-[42px] uppercase text-white md:text-[60px]",
+              "lg:order-0 !mb-[60px] text-[42px] uppercase text-white md:text-[60px]",
               {
                 "xl:!text-[50px]": threeColumns,
                 "!text-[42px] leading-[37.59px]": isDevelop
@@ -43,9 +46,9 @@ export function ExpertiseServices({
           >
             {title}
           </h2>
-          <div className="mt-[60px] flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto" />
+          {/* <div className="mt-[60px] flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto" /> */}
           {desc && (
-            <p className="body my-[40px] max-w-[582px] text-base leading-6 md:my-[20px]">
+            <p className="body my-[40px]  max-w-[582px] text-base leading-6 md:my-[20px]">
               {desc}
             </p>
           )}
@@ -69,7 +72,12 @@ export function ExpertiseServices({
                     `${itemClasses}`)
                   }
                 >
-                  <span className="text-left font-roc text-lg font-medium uppercase !leading-none text-white md:!text-[24px]">
+                  <span
+                    className={cn(
+                      "text-left font-roc text-lg font-medium uppercase !leading-none text-white md:text-[24px]",
+                      itemTitleClasses
+                    )}
+                  >
                     {title}
                   </span>
                 </div>
@@ -80,7 +88,9 @@ export function ExpertiseServices({
                     "mb-6 text-[16px] !leading-[22px] !text-[#BBBBBB]",
                     {
                       "mt-6": title
-                    }
+                    },
+                    descClasses,
+                    index !== data.length - 1 && cryptoWalletClass
                   )}
                 >
                   {desc}
