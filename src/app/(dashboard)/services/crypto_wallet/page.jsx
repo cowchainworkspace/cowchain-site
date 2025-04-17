@@ -12,7 +12,7 @@ import { OtherServices } from "../components/service/blocks/OtherServices";
 import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
 import {
   walletProcessData,
-  rwaTokenizationFAQData,
+  cryptoWalletFAQData,
   walletsAppsData,
   paymentSystemData,
   otherRwaServices,
@@ -266,7 +266,7 @@ const CryptoWalletDev = () => {
 
       <div className="w-full overflow-hidden">
         <FAQ
-          data={rwaTokenizationFAQData}
+          data={cryptoWalletFAQData}
           noBg={true}
           titleClasses="lg:text-[60px] lg:leading-[53.7px]"
           faqHorizontalPadding={true}

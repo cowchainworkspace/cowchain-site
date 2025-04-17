@@ -13,6 +13,10 @@ import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon
 import SupplyChain from "@/assets/svgComponents/industries/SupplyChainIcon";
 import TestingIcon from "@/assets/svgComponents/industries/TestingIcon";
 
+import { MultiCurrencySuppIcon } from "../../../../../assets/svgComponents/cryptoWallets/MultiCurrencySuppIcon";
+import { UserFriendlyInter } from "../../../../../assets/svgComponents/cryptoWallets/UserFriendlyInter"; 
+import { Advanced } from "../../../../../assets/svgComponents/cryptoWallets/Advanced"; 
+
 export const DexExpertiseDesc =
   "We believe that a solid foundation in decentralized exchange development is key to creating platforms that not only meet today’s demands but also evolve with the growing needs of the cryptocurrency market";
 
@@ -241,16 +245,16 @@ export const walletFeaturesData = [
   {
     title: "Advanced Security Protocols",
     text: "Our wallets incorporate cutting-edge blockchain wallet security features, such as multi-signature authentication, end-to-end encryption, and biometric verification. These measures safeguard users’ funds and private information.",
-    icon: HealthcareIcon
+    icon: Advanced
   },
   {
     title: "User-Friendly Interface",
     text: "We prioritize creating intuitive and accessible designs. From streamlined navigation to clear transaction histories, our crypto wallet software ensures users of all experience levels can manage their assets effortlessly.",
-    icon: GovernmentIcon
+    icon: UserFriendlyInter
   },
   {
     title: "Multi-Currency Support",
     text: "Multi-Currency Support Our solutions support a wide range of cryptocurrencies, integrating advanced crypto wallet integration for seamless operation across blockchain networks. This feature makes our wallets adaptable for user needs.",
-    icon: FinanceIcon
+    icon: MultiCurrencySuppIcon
   }
 ];
