@@ -162,7 +162,7 @@ export default function FAQ({
                         <div className="mr-0 w-full text-left md:mr-auto">
                           <span
                             className="block !w-full max-w-[623px]  text-left
-                         font-roc text-[18px] font-medium uppercase !leading-none text-white lg:!leading-none"
+                         font-roc text-[20px] font-medium uppercase !leading-none text-white lg:!leading-none"
                           >
                             {faq.title}
                           </span>

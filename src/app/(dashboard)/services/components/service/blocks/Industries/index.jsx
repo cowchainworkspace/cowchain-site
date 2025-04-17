@@ -40,7 +40,8 @@ export function Industries({
   customClasses = "",
   itemClasses = "",
   isWhiteLabel = "",
-  descClasses
+  descClasses,
+  itemTitleClasses
 }) {
   return (
     <section
@@ -93,15 +94,15 @@ export function Industries({
         )}
 
         <div
-          className={`flex flex-col sm:grid ${customClasses}  ${
+          className={`flex flex-col sm:grid    ${
             isTwoSides
-              ? "col-span-1 grid-cols-2 gap-x-[30px] gap-y-[42px] sm:gap-y-[30px] custom1000:gap-x-[77px] custom1000:gap-y-[77px]"
+              ? "col-span-1 grid-cols-2 gap-x-[30px]  gap-y-[42px] sm:gap-y-[30px] custom1000:gap-x-[77px] custom1000:gap-y-[77px]"
               : data.length < 4
-                ? "col-span-3 mt-[120px] grid-cols-3 gap-x-[109px] sm:gap-y-[42px]"
+                ? "col-span-3 mt-[120px] grid-cols-3  gap-x-[109px] sm:gap-y-[42px]"
                 : fullGrid
-                  ? `gap-x-[109px] gap-y-[42px] ${isWhiteLabel && "md:col-span-4 md:grid-cols-2 lg:col-span-4 lg:grid-cols-4"} col-span-4 grid-cols-4`
-                  : "col-span-2 grid-cols-2 gap-x-[109px] gap-y-[42px] lg:mt-[120px]"
-          } `}
+                  ? `gap-x-[109px] gap-y-[42px]  ${isWhiteLabel && "md:col-span-4 md:grid-cols-2 lg:col-span-4 lg:grid-cols-4"} col-span-4 grid-cols-4`
+                  : "col-span-2 grid-cols-2 gap-x-[109px]  gap-y-[42px] lg:mt-[120px]"
+          }  ${customClasses}`}
         >
           {data.map((expertise, index) => (
             <div
@@ -119,7 +120,7 @@ export function Industries({
               )}
               <div className="mb-2 flex items-center">
                 <div className="">
-                  <h3 className="mb-[22px] max-w-[310px] text-xl uppercase">
+                  <h3 className={cn("mb-[22px] max-w-[310px] text-xl uppercase", itemTitleClasses)}>
                     {expertise.title}
                   </h3>
                   <p

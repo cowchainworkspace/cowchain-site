@@ -69,10 +69,10 @@ const Cases = () => {
   return (
     <section
       ref={containerRef}
-      className="relative z-50 hidden h-[546px] border-b border-b-th-fade md:block md:h-[698px] xl:flex"
+      className="relative z-10 hidden  border-b border-b-th-fade custom480:block custom480:h-[624px] xl:flex"
     >
       <Swiper
-        className="z-50 flex h-[546px] md:h-[698px] fullSlider:!hidden"
+        className="flex  custom480:h-[624px] fullSlider:!hidden"
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -89,7 +89,7 @@ const Cases = () => {
           casesData.map((project, index) => (
             <SwiperSlide
               key={index}
-              className="z-50 h-[546px] max-w-[547px] md:h-[698px]"
+              className=" max-w-[480px] custom480:h-[624px]"
             >
               <ScrollProject key={index} index={index} {...project} />
             </SwiperSlide>
@@ -99,7 +99,10 @@ const Cases = () => {
       <div className="hidden w-full justify-center fullSlider:flex">
         {casesData &&
           casesData.map((project, index) => (
-            <div key={index} className="h-[546px] max-w-[547px] md:h-[698px]">
+            <div
+              key={index}
+              className="max-w-[480px] custom480:h-[624px]"
+            >
               <ScrollProject key={index} index={index} {...project} />
             </div>
           ))}
@@ -112,7 +115,7 @@ const Cases = () => {
             background: "linear-gradient(to left, transparent 1%, #AB40FF 160%)"
           }}
           onClick={handlePrevClick}
-          className="absolute left-0 top-0 z-50 z-50 hidden hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
+          className="absolute left-0 top-0 z-50 hidden hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
         >
           <Image src={sliderLeftArrow} alt="Next" className="h-8 w-8" />
         </button>
@@ -126,9 +129,9 @@ const Cases = () => {
               "linear-gradient(to right, transparent 1%, #AB40FF 160%)"
           }}
           onClick={handleNextClick}
-          className="absolute right-0 top-0 z-50 z-50 hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
+          className="absolute right-0 top-0 z-50 hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
         >
-          <Image src={sliderRightArrow} alt="Previous" className="h-8 w-8" ar />
+          <Image src={sliderRightArrow} alt="Previous" className="h-8 w-8" />
         </button>
       )}
     </section>
