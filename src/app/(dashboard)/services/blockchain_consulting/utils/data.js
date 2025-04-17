@@ -234,7 +234,7 @@ export const OurWorksData = [
 
 export const TustByNumbersData = [
   {
-    number: 10.02,
+    number: 42.26,
     desc: "Estimated global blockchain market value in 2024",
     sighn: "$",
     sufix: "B",

@@ -55,7 +55,10 @@ export function TustByNumbers({
       <div className={`relative h-fit md:h-full`}>
         <div
           className={cn(
-            "mx-auto grid h-full max-w-[1440px] grid-cols-1 md:grid-cols-[minmax(0,_250px)_1fr_1fr] custom815:grid-cols-[minmax(0,_300px)_1fr_1fr] custom1000:grid-cols-[minmax(0,_400px)_1fr_1fr] custom1200:grid-cols-[minmax(0,_480px)_1fr_1fr] custom1430:grid-cols-[minmax(0,_547px)_1fr_1fr]",
+            "mx-auto grid h-full max-w-[1440px] grid-cols-1 ",
+            "md:grid-cols-[minmax(0,_250px)_1fr_1fr] custom815:grid-cols-[minmax(0,_300px)_1fr_1fr]",
+            "custom1000:grid-cols-[minmax(0,_400px)_1fr_1fr]",
+            "custom1200:grid-cols-[minmax(0,_480px)_1fr_1fr] custom1430:grid-cols-[minmax(0,_547px)_1fr_1fr]",
             {
               "lg:grid-cols-[minmax(0,_400px)_1fr_1fr md:grid-cols-1":
                 isBlockChainConsulting
@@ -70,7 +73,8 @@ export function TustByNumbers({
               {
                 "justify-start": isBlockChainConsulting || isRwa
               },
-              isRwa ? "pr-[70px]" : "custom1430:pr-[168px]"
+              isRwa ? "pr-[70px]" : "custom1430:pr-[168px]",
+              typographyContainerClasses,
             )}
           >
             {tag && <Tag className="mr-auto cursor-default" title={tag} />}
