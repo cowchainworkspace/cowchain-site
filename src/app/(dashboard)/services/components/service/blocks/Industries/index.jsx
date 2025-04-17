@@ -70,9 +70,9 @@ export function Industries({
           >
             <h2
               className={cn(
-                "whitespace-pre-line text-left text-[36px] uppercase md:text-center md:text-start md:text-[48px] custom1000:text-[60px]",
+                "whitespace-pre-line text-left text-[36px] uppercase md:text-center md:text-start  custom1430:text-[60px]",
                 {
-                  "!text-[42px]": isTwoSides
+                  "xl:!text-[42px]": isTwoSides
                 }
               )}
             >
@@ -100,7 +100,7 @@ export function Industries({
                 ? "col-span-3 mt-[120px] grid-cols-3 gap-x-[109px] sm:gap-y-[42px]"
                 : fullGrid
                   ? `gap-x-[109px] gap-y-[42px] ${isWhiteLabel && "md:col-span-4 md:grid-cols-2 lg:col-span-4 lg:grid-cols-4"} col-span-4 grid-cols-4`
-                  : "col-span-2 grid-cols-2 gap-x-[109px] gap-y-[42px] lg:mt-[120px]"
+                  : "col-span-2 grid-cols-2 gap-y-[42px] lg:mt-[120px] lg:gap-x-[109px]"
           } `}
         >
           {data.map((expertise, index) => (

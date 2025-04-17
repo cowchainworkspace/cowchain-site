@@ -112,6 +112,7 @@ const DefiDevelopment = () => {
             className="absolute -bottom-[35%] left-0 hidden md:block"
           />
         }
+        sectionContainerClasses={"md:flex-row md:gap-5"}
       />
 
       <ExpertiseServices
@@ -250,7 +251,7 @@ const DefiDevelopment = () => {
         <FAQ
           data={faqDefiData}
           noBg={true}
-          titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+          titleClasses="xl:text-[60px] lg:leading-[53.7px]"
           faqHorizontalPadding={true}
         />
       </div>

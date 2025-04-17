@@ -34,7 +34,7 @@ const RwaTokenization = () => {
           <>
             Elevate your offerings with our customizable white label solutions.
             Cowchain provides expert,
-            <br className="hidden md:block" />
+            <br className="hidden xl:block" />
             customizable solutions that allow you to deliver exceptional digital
             products and platforms
           </>
@@ -78,12 +78,12 @@ const RwaTokenization = () => {
         desc={
           <>
             Real-World Asset Tokenization means digitizing physical real estate,
-            some commodity, or financial <br className="hidden md:block" />{" "}
+            some commodity, or financial <br className="hidden xl:block" />{" "}
             instrument into digital tokens. These tokens are backed by the value
             of the physical asset, ensuring their{" "}
-            <br className="hidden md:block" /> credibility. Blockchain
+            <br className="hidden xl:block" /> credibility. Blockchain
             tokenization serves as the foundation, enabling seamless transfer,
-            secure ownership <br className="hidden md:block" /> records, and
+            secure ownership <br className="hidden xl:block" /> records, and
             reduced barriers for global participation.
           </>
         }
@@ -107,6 +107,7 @@ const RwaTokenization = () => {
             className="absolute -bottom-[40%] left-0 hidden h-[1700px] md:block"
           />
         }
+        sectionContainerClasses={"md:flex-row md:gap-5"}
       />
 
       <TustByNumbers
@@ -115,8 +116,8 @@ const RwaTokenization = () => {
         tag="step-by-step"
         title={
           <>
-            How asset <br />
-            tokenization <br />
+            How asset <br className="hidden xl:block" />
+            tokenization <br className="hidden xl:block" />
             works
           </>
         }
@@ -137,6 +138,7 @@ const RwaTokenization = () => {
         bg={
           <CoreFeaturesRWAbg className="absolute bottom-[25%] right-0 hidden md:block" />
         }
+        sectionContainerClasses={"md:flex-row md:gap-5"}
       />
       <div className="w-full overflow-hidden">
         <FAQ
@@ -163,6 +165,7 @@ const RwaTokenization = () => {
         data={whyTokenization}
         topBorder={false}
         bottomBorder={false}
+        sectionContainerClasses={"md:flex-row md:gap-5"}
       />
 
       <KeyFeatures
@@ -175,15 +178,17 @@ const RwaTokenization = () => {
         desc={
           <>
             Tokenization represents the future of asset management, offering
-            liquidity, security, and accessibility like <br /> never before. Our
-            blockchain tokenization services empower businesses and investors to
-            unlock the full <br /> potential of their assets.
+            liquidity, security, and accessibility like{" "}
+            <br className="hidden xl:block" /> never before. Our blockchain
+            tokenization services empower businesses and investors to unlock the
+            full <br className="hidden xl:block" /> potential of their assets.
             <p>
               <br />
             </p>
             Take the leap into the now of asset management with RWA
-            tokenization. Let us help you realize the full <br /> potential of
-            your assets – get in touch today to start your journey.
+            tokenization. Let us help you realize the full{" "}
+            <br className="hidden xl:block" /> potential of your assets – get in
+            touch today to start your journey.
           </>
         }
         noBg={true}
@@ -191,7 +196,6 @@ const RwaTokenization = () => {
       />
 
       <Feedback />
-      <WhiteLabelCases />
       <Cases />
       <CasesMobile />
 
@@ -220,11 +224,11 @@ const RwaTokenization = () => {
         <FAQ
           data={rwaTokenizationFAQData}
           noBg={true}
-          titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+          titleClasses="xl:text-[60px] lg:leading-[53.7px]"
           faqHorizontalPadding={true}
         />
       </div>
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact className="px-[50px] py-[105px] md:pb-[127px] md:pt-[169px] lg:px-[64px]" />
     </section>
   );
 };

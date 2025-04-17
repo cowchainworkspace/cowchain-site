@@ -90,6 +90,7 @@ const DappDevelopment = () => {
           />
         }
         titleClasses="xl:text-[60px] leading-90"
+        sectionContainerClasses={"md:flex-row md:gap-5"}
       />
 
       <Industries
@@ -149,17 +150,18 @@ const DappDevelopment = () => {
           desc={
             <>
               At Cowchain, dapp development company, we follow a
-              <br className="hidden lg:block" /> structured process to ensure
+              <br className="hidden xl:block" /> structured process to ensure
               the delivery of high-quality
-              <br className="hidden lg:block" /> decentralized applications. Our
+              <br className="hidden xl:block" /> decentralized applications. Our
               dapp development platform is
-              <br className="hidden lg:block" /> designed to streamline each
+              <br className="hidden xl:block" /> designed to streamline each
               phase, from planning to
-              <br className="hidden lg:block" /> deployment
+              <br className="hidden xl:block" /> deployment
             </>
           }
           data={dappDevProcessData}
           noTag={true}
+          descClasses="max-w-[320px] xl:max-w-[592px]"
         />
       </div>
 
@@ -298,7 +300,7 @@ const DappDevelopment = () => {
         <FAQ
           data={faqDappData}
           noBg={true}
-          titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+          titleClasses="xl:text-[60px] lg:leading-[53.7px]"
           faqHorizontalPadding={true}
         />
       </div>

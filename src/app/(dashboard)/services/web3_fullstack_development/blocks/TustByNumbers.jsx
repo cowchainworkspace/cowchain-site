@@ -132,9 +132,9 @@ export function TustByNumbers({
                       "!gap-0": isBlockChainConsulting && !number
                     },
                     isRwa
-                      ? "justify-start md:p-[60px] "
+                      ? "justify-start xl:p-[60px] "
                       : " md:px-[32px] custom815:px-[30px] custom1200:px-[50px] custom1430:px-[70px]",
-                    isRwa && index % 2 !== 0 && "min-w-[470px]"
+                    isRwa && index % 2 !== 0 && "custom1430:min-w-[450px]"
                   )}
                 >
                   <div>

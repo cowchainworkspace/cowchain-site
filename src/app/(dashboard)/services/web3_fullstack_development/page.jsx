@@ -40,7 +40,7 @@ const FullStackDevelopment = () => {
           <>
             Looking for a full stack development company? Cowchain offers
             comprehensive full stack development{" "}
-            <br className="hidden lg:block" /> services, handling both the
+            <br className="hidden xl:block" /> services, handling both the
             visuals users love and the logic they rely on
           </>
         }
@@ -94,16 +94,17 @@ const FullStackDevelopment = () => {
         desc={FSExpertiseDesc}
         data={FSExpertiseData}
         noBg={true}
+        sectionContainerClasses={"md:flex-row md:gap-5"}
       />
       <Industries
         title={"Industries We Serve"}
         desc={
           <>
             At Cowchain, our full stack development company has delivered
-            solutions across <br className="hidden lg:block" /> multiple
+            solutions across <br className="hidden xl:block" /> multiple
             industries. Our full stack services offer customized software
             solutions crafted
-            <br className="hidden lg:block" /> to address requirements of every
+            <br className="hidden xl:block" /> to address requirements of every
             specific sector. Here are some industries we serve
           </>
         }
@@ -117,13 +118,13 @@ const FullStackDevelopment = () => {
           <>
             Advantages <br className="hidden xl:block" />
             of Choosing <br className="hidden xl:block" />
-            Full-Stack
-            <br className="hidden xl:block" />
+            Full-Stack <br className="hidden xl:block" />
             Development
           </>
         }
         data={AdvantageseData}
         noBg={true}
+        sectionContainerClasses={"md:flex-row md:gap-5"}
       />
       <ExpertiseServices
         title={
@@ -135,9 +136,9 @@ const FullStackDevelopment = () => {
         desc={
           <>
             Our full stack development company follows a structured process to{" "}
-            <br className="hidden lg:block" /> ensure that every project is
+            <br className="hidden xl:block" /> ensure that every project is
             delivered on time, meets client expectations,
-            <br className="hidden lg:block" /> and is optimized for performance
+            <br className="hidden xl:block" /> and is optimized for performance
           </>
         }
         data={DevProcessData}
@@ -150,6 +151,7 @@ const FullStackDevelopment = () => {
             src={servideBG}
           />
         }
+        sectionContainerClasses={"md:flex-row md:gap-5"}
       />
       <div className="w-full overflow-hidden">
         <FAQ

@@ -16,7 +16,8 @@ export function ExpertiseServices({
   isDevelop = false,
   titleClasses = "",
   containerClasses = "",
-  itemClasses = ""
+  itemClasses = "",
+  sectionContainerClasses = ""
 }) {
   return (
     <section
@@ -25,16 +26,19 @@ export function ExpertiseServices({
       {!noBg && bg}
 
       <div
-        className={`relative mx-auto flex max-w-[1440px] flex-col px-5 pb-[30px] pt-[60px] md:px-8 lg:px-[88px]  lg:py-[126px] xl:flex-row ${threeColumns ? "flex grid-cols-3 flex-col gap-5 md:gap-[85px] xl:grid" : " flex justify-between"} `}
+        className={cn(
+          `relative mx-auto flex max-w-[1440px] flex-col px-5 pb-[30px] pt-[60px] md:px-8 lg:px-[88px]  lg:py-[126px] xl:flex-row ${threeColumns ? "flex grid-cols-3 flex-col gap-5 md:gap-[85px] xl:grid" : " flex justify-between"}`,
+          sectionContainerClasses
+        )}
       >
         <div className="col-span-1 lg:gap-10">
           {tag && <Tag title={tag} className="mb-4 w-fit md:mb-8" />}
           <h2
             className={cn(
-              "lg:order-0 text-[36px] uppercase text-white md:text-[42px] lg:text-[42px]",
+              "lg:order-0 text-[36px] uppercase text-white xl:text-[42px]",
               {
                 "xl:!text-[50px]": threeColumns,
-                "text-[36px] leading-[37.59px] md:!text-[42px]": isDevelop
+                "text-[36px] leading-[37.59px] xl:!text-[42px]": isDevelop
               },
               titleClasses
             )}

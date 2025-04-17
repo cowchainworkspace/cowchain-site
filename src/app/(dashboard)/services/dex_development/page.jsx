@@ -83,6 +83,7 @@ const DexDevelopment = () => {
             className="absolute -top-24 left-0 hidden md:block"
           />
         }
+        sectionContainerClasses={"md:flex-row md:gap-5"}
       />
 
       <KeyFeatures

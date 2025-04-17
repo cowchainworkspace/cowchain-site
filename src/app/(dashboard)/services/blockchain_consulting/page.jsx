@@ -98,17 +98,17 @@ const BlockChainConsulting = () => {
         desc={
           <>
             We at Cowchain provide a wide range of blockchain consulting
-            services, <br className="hidden lg:block" /> including crypto
+            services, <br className="hidden xl:block" /> including crypto
             consulting services, structured to meet the peculiar
-            <br className="hidden lg:block" /> challenges that are presented to
+            <br className="hidden xl:block" /> challenges that are presented to
             businesses through industries.
-            <br className="hidden lg:block" /> As a trusted blockchain
+            <br className="hidden xl:block" /> As a trusted blockchain
             consulting firm, we offer end-to-end blockchain
-            <br className="hidden lg:block" /> consultancy from strategy
+            <br className="hidden xl:block" /> consultancy from strategy
             development to platform implementation,
-            <br className="hidden lg:block" /> ensuring your business is ready
+            <br className="hidden xl:block" /> ensuring your business is ready
             to reap the full benefits
-            <br className="hidden lg:block" /> of this transformational
+            <br className="hidden xl:block" /> of this transformational
             technology
           </>
         }
@@ -120,6 +120,7 @@ const BlockChainConsulting = () => {
             className="absolute -bottom-[45%] left-0 hidden md:block"
           />
         }
+        sectionContainerClasses={"md:flex-row md:gap-5 lg:gap-10"}
       />
 
       <Industries
@@ -148,7 +149,9 @@ const BlockChainConsulting = () => {
             className="absolute -bottom-[65%] left-0 hidden md:block"
           />
         }
+        sectionContainerClasses={"md:flex-row md:gap-5 lg:gap-10"}
       />
+
       <div className="w-full overflow-hidden">
         <FAQ
           desc={
@@ -171,17 +174,17 @@ const BlockChainConsulting = () => {
           <>
             Cowchain works with leading blockchains like Ethereum, Solana,
             Polygon,
-            <br className="hidden lg:block" /> Binance Smart Chain, and more.
+            <br className="hidden xl:block" /> Binance Smart Chain, and more.
             Whatever your blockchain needs — expansion,
-            <br className="hidden lg:block" /> integration, or optimization —
+            <br className="hidden xl:block" /> integration, or optimization —
             our experts are ready to solve it.
             <p>
               <br />
             </p>
             ave a complex project or need end-to-end implementation?
-            <br className="hidden lg:block" /> We’ll take care of every detail,
+            <br className="hidden xl:block" /> We’ll take care of every detail,
             delivering a solution that meets
-            <br className="hidden lg:block" /> the highest standards of
+            <br className="hidden xl:block" /> the highest standards of
             functionality, protection, and dependability
           </>
         }
@@ -195,10 +198,10 @@ const BlockChainConsulting = () => {
         isOneBlock={true}
         title={
           <>
-            Why Choose <br className="hidden lg:block" /> Us as Your
-            <br className="hidden lg:block" /> Blockchain
-            <br className="hidden lg:block" /> Consulting
-            <br className="hidden lg:block" /> Partner?
+            Why Choose <br className="hidden xl:block" /> Us as Your
+            <br className="hidden xl:block" /> Blockchain
+            <br className="hidden xl:block" /> Consulting
+            <br className="hidden xl:block" /> Partner?
           </>
         }
         desc={

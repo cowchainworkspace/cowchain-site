@@ -55,7 +55,8 @@ export const OtherServices = ({
   bottomBorder = true,
   noItemsBorders = false,
   ishomePage = false,
-  typographyContainerClasses = ""
+  typographyContainerClasses = "",
+  descClasses = ""
 }) => {
   return (
     <section
@@ -72,11 +73,16 @@ export const OtherServices = ({
             <Tag title={tag} className="mb-[42px] md:mb-8 xl:mb-[60px]" />
           )}
 
-          <h3 className="text-left text-[24px] uppercase text-white custom1000:text-[36px] custom1200:text-[42px] ">
+          <h3 className="text-left text-[24px] uppercase text-white xl:text-[36px] custom1430:text-[42px] ">
             {title}
           </h3>
           {desc && (
-            <p className="body my-5 max-w-[592px] text-base leading-6 md:my-[20px] md:my-[40px]">
+            <p
+              className={cn(
+                "body my-5 max-w-[592px] text-base leading-6 md:my-[20px] md:my-[40px]",
+                descClasses
+              )}
+            >
               {desc}
             </p>
           )}
