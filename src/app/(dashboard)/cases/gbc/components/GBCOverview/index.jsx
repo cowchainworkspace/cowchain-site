@@ -15,7 +15,7 @@ const GBCOverview = () => {
               <h3 className="font-roc text-[54px] font-medium uppercase leading-90 text-white">
                 Project overview
               </h3>
-              <p className="text-left font-manrope text-sm font-semibold leading-[22px] !text-white-70">
+              <p className="text-left font-manrope text-sm font-[450] leading-[22px] !text-white-70">
                 GMX Blueberry Club (GBC) was developed as a dedicated NFT dApp
                 for the
                 <br className="hidden custom1430:block" /> GMX community, which
