@@ -10,9 +10,9 @@ import Link from "next/link";
 import React from "react";
 import { Helmet } from "react-helmet";
 
-export const HeroSection = ({ title, desc, isRwa = false }) => {
+export const HeroSection = ({ title, desc, isRwa = false, ttileClasses }) => {
   return (
-    <section className="relative overflow-visible  pt-20  lg:pt-[120px]">
+    <section className={cn("relative overflow-visible  lg:pt-[120px]")}>
       <Helmet>
         <link
           rel="canonical"
@@ -21,24 +21,30 @@ export const HeroSection = ({ title, desc, isRwa = false }) => {
       </Helmet>
       <Image
         alt=""
-        className={cn("absolute -top-24 right-0  min-h-[150%] min-w-[200vw] md:min-h-[130%] md:min-w-full ", isRwa ? "lg:min-h-[200%] xl:max-h-[200%]" : "lg:min-h-[120%] xl:max-h-[85%]")}
+        className={cn(
+          "absolute -top-24 right-0  min-h-[150%] min-w-[200vw] md:min-h-[130%] md:min-w-full ",
+          isRwa
+            ? "lg:min-h-[200%] xl:max-h-[200%]"
+            : "lg:min-h-[120%] xl:max-h-[85%]"
+        )}
         src={bg_lg}
       />
       <div
         className={cn(
           "relative mx-auto flex max-w-[1440px] flex-col px-[32px]  pt-5 md:pt-8 lg:px-16 xl:px-[88px]",
-          isRwa ? "pb-[77px]" : "pb-[91px]"
+          isRwa ? "pb-[77px]" : "pb-[30px] md:pb-[91px]",
+          ttileClasses
         )}
       >
         <Tag className={"mr-auto cursor-default"} title={"cowchain"} />
         {title && (
-          <h1 className="mt-4 cursor-default text-[42px] font-medium uppercase text-white md:text-[80px] lg:mt-6 lg:max-w-[1200px] xl:mt-8">
+          <h1 className="mt-10 cursor-default font-roc text-[38px] font-medium uppercase leading-90 text-white md:text-[80px] lg:mt-6 lg:max-w-[1200px] xl:mt-8">
             {title}
           </h1>
         )}
 
         {desc && (
-          <div className="mt-[60px] flex items-center justify-end gap-2 text-[16px] text-white lg:justify-between">
+          <div className="mt-10 flex items-center justify-end gap-2 text-[16px] text-white md:mt-[60px] lg:justify-between">
             {desc}
           </div>
         )}

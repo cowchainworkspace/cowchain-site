@@ -241,7 +241,7 @@ export const retroBridgeTeam = [
 export const retroBridgeProjects = [
   {
     id: 1,
-    tags: ["Website Development ", "Mobile App", "GameFi", "Trading", "DEX", "DeFi", "NFT", "Staking", "Crypto Wallet"],
+    tags: ["Web Development ", "Mobile App", "GameFi", "Trading", "DEX", "DeFi", "NFT", "Staking", "Crypto Wallet"],
     title: "m2e platform",
     desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
     img: m2ePlatformImg,
@@ -250,7 +250,7 @@ export const retroBridgeProjects = [
   },
   {
     id: 2,   
-    tags: ["Website Development", "Trading", "NFT"],
+    tags: ["Web Development", "Trading", "NFT"],
     title: "GBC DAPP",
     desc: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     img: gbc,
@@ -259,7 +259,7 @@ export const retroBridgeProjects = [
   },
   {
     id: 3,
-    tags: ["Website Development", "AI Development", "DeFi", "Crypto Wallet"],
+    tags: ["Web Development", "AI Development", "DeFi", "Crypto Wallet"],
     title: "agenthub",
     desc: "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
     img: agent,

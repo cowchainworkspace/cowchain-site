@@ -43,8 +43,7 @@ const BlockChainConsulting = () => {
             <span className="violet-gradient-text">
               one of the leading blockchain consulting companies
             </span>
-            , we deliver professional
-            <br className="hidden custom1400:block" />
+            , we deliver professional <br className="hidden custom1400:block" />
             <span className="violet-gradient-text">
               blockchain consulting services
             </span>{" "}
@@ -61,7 +60,7 @@ const BlockChainConsulting = () => {
             practical{" "}
             <span className="violet-gradient-text">
               blockchain consulting solutions.
-            </span>
+            </span>{" "}
             From blockchain advisory
             <br className="hidden custom1400:block" />
             services to ongoing development, our approach{" "}
@@ -99,17 +98,17 @@ const BlockChainConsulting = () => {
         desc={
           <>
             We at Cowchain provide a wide range of blockchain consulting
-            services, <br className="hidden lg:block" /> including crypto
+            services, <br className="hidden xl:block" /> including crypto
             consulting services, structured to meet the peculiar
-            <br className="hidden lg:block" /> challenges that are presented to
+            <br className="hidden xl:block" /> challenges that are presented to
             businesses through industries.
-            <br className="hidden lg:block" /> As a trusted blockchain
+            <br className="hidden xl:block" /> As a trusted blockchain
             consulting firm, we offer end-to-end blockchain
-            <br className="hidden lg:block" /> consultancy from strategy
+            <br className="hidden xl:block" /> consultancy from strategy
             development to platform implementation,
-            <br className="hidden lg:block" /> ensuring your business is ready
+            <br className="hidden xl:block" /> ensuring your business is ready
             to reap the full benefits
-            <br className="hidden lg:block" /> of this transformational
+            <br className="hidden xl:block" /> of this transformational
             technology
           </>
         }
@@ -118,9 +117,10 @@ const BlockChainConsulting = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[45%] left-0"
+            className="absolute -bottom-[45%] left-0 hidden md:block"
           />
         }
+        sectionContainerClasses={"md:flex-row md:gap-5 lg:gap-10"}
       />
 
       <Industries
@@ -130,7 +130,7 @@ const BlockChainConsulting = () => {
         }
         data={IndustriesDexData}
         topBorder={false}
-        customClasses={"lg:!mt-0"}
+        customClasses={"!mt-0 md:grid-cols-2 lg:grid-cols-3"}
         descClasses={"text-white"}
       />
 
@@ -146,10 +146,12 @@ const BlockChainConsulting = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[65%] left-0"
+            className="absolute -bottom-[65%] left-0 hidden md:block"
           />
         }
+        sectionContainerClasses={"md:flex-row md:gap-5 lg:gap-10"}
       />
+
       <div className="w-full overflow-hidden">
         <FAQ
           desc={
@@ -161,7 +163,7 @@ const BlockChainConsulting = () => {
           isTwoHalf={true}
           hasIcon={false}
           faqGradient={true}
-          itemsClasses={"py-[74.5px]"}
+          itemsClasses={"py-10 md:py-[74.5px]"}
         />
       </div>
 
@@ -172,17 +174,17 @@ const BlockChainConsulting = () => {
           <>
             Cowchain works with leading blockchains like Ethereum, Solana,
             Polygon,
-            <br className="hidden lg:block" /> Binance Smart Chain, and more.
+            <br className="hidden xl:block" /> Binance Smart Chain, and more.
             Whatever your blockchain needs — expansion,
-            <br className="hidden lg:block" /> integration, or optimization —
+            <br className="hidden xl:block" /> integration, or optimization —
             our experts are ready to solve it.
             <p>
               <br />
             </p>
             ave a complex project or need end-to-end implementation?
-            <br className="hidden lg:block" /> We’ll take care of every detail,
+            <br className="hidden xl:block" /> We’ll take care of every detail,
             delivering a solution that meets
-            <br className="hidden lg:block" /> the highest standards of
+            <br className="hidden xl:block" /> the highest standards of
             functionality, protection, and dependability
           </>
         }
@@ -196,10 +198,10 @@ const BlockChainConsulting = () => {
         isOneBlock={true}
         title={
           <>
-            Why Choose <br className="hidden lg:block" /> Us as Your
-            <br className="hidden lg:block" /> Blockchain
-            <br className="hidden lg:block" /> Consulting
-            <br className="hidden lg:block" /> Partner?
+            Why Choose <br className="hidden xl:block" /> Us as Your
+            <br className="hidden xl:block" /> Blockchain
+            <br className="hidden xl:block" /> Consulting
+            <br className="hidden xl:block" /> Partner?
           </>
         }
         desc={
@@ -221,7 +223,7 @@ const BlockChainConsulting = () => {
           </>
         }
         descClasses={"max-w-[519px]"}
-        titleBlockClasses="flex-col lg:flex-row lg:justify-between"
+        titleBlockClasses="flex-col gap-1 md:gap-[102px] lg:flex-row lg:justify-between"
         isTextSecondary={true}
       />
 
@@ -245,7 +247,7 @@ const BlockChainConsulting = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[45%] left-0"
+            className="absolute -bottom-[45%] left-0 hidden md:block"
           />
         }
       />
@@ -302,7 +304,7 @@ const BlockChainConsulting = () => {
           faqHorizontalPadding={true}
         />
       </div>
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact className="px-[50px] py-[105px] md:px-[64px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
 };

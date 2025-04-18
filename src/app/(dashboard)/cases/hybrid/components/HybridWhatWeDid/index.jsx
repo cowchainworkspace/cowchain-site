@@ -14,10 +14,10 @@ const HybridWhatWeDid = () => {
         </h2>
         <div className="mb-[43px] grid grid-cols-2 gap-10">
           <div className="border-t-[0.5px] border-white-50 pt-8">
-            <h3 className="mb-4 font-manrope text-xs font-bold uppercase leading-5 tracking-[2px] text-white-70">
+            <h3 className="mb-4 font-manrope text-xs font-medium uppercase leading-5 tracking-[2px] text-white-70">
               CHALLENGE
             </h3>
-            <p className="text-sm font-normal leading-6 text-white-70">
+            <p className="text-sm font-normal leading-6 text-white">
               Integrating Ethereum’s Layer 2 scalability with the MoE framework
               required optimizing <br className="hidden custom1430:block" /> AI
               models for on-chain execution. Handling real-time AI-driven
@@ -34,10 +34,10 @@ const HybridWhatWeDid = () => {
           </div>
 
           <div className="border-t-[0.5px] border-white-50 pt-8">
-            <h3 className="mb-4 font-manrope text-xs font-bold uppercase leading-5 tracking-[2px] text-white-70">
+            <h3 className="mb-4 font-manrope text-xs font-medium uppercase leading-5 tracking-[2px] text-white-70">
               result
             </h3>
-            <p className="text-sm font-normal leading-6 text-white-70">
+            <p className="text-sm font-normal leading-6 text-white">
               The platform now runs on a Layer 2 EVM chain, enabling AI agent
               monetization
               <br className="hidden custom1430:block" /> through the MoE

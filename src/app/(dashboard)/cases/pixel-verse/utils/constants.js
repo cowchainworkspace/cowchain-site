@@ -175,7 +175,7 @@ export const pixelVerseTeam = [
 export const pixelVerseProjects = [
   {
     id: 1,
-    tags: ['Mobile App', 'Website Development '],
+    tags: ['Mobile App', 'Web Development '],
     title: 'COINCLUB',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
     img: coinclub,
@@ -183,7 +183,7 @@ export const pixelVerseProjects = [
   },
   {
     id: 2,
-    tags: ['App Development', 'Website Development '],
+    tags: ['App Development', 'Web Development '],
     title: 'hybrid',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
     img: hybrid,
@@ -191,7 +191,7 @@ export const pixelVerseProjects = [
   },
   {
     id: 3,
-    tags: ['App Development', 'Website Development '],
+    tags: ['App Development', 'Web Development '],
     title: 'Wenix',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
     img: wenix,

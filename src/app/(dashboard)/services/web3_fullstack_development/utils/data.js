@@ -35,7 +35,7 @@ export const servedIndustriesData = [
 
 
 export const FSExpertiseDesc = <>
-At Cowchain, our full stack development services cater to diverse industries, <br className="hidden lg:block" /> providing customized stack development solutions that meet diverse <br className="hidden lg:block" /> business needs. We manage the entire process, ensuring that both frontend <br className="hidden lg:block" /> and backend development align to deliver secure and scalable platforms</>;
+At Cowchain, our full stack development services cater to diverse industries, <br className="hidden xl:block" /> providing customized stack development solutions that meet diverse <br className="hidden xl:block" /> business needs. We manage the entire process, ensuring that both frontend <br className="hidden xl:block" /> and backend development align to deliver secure and scalable platforms</>;
 
 export const FSExpertiseData = [
   {

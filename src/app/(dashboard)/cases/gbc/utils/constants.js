@@ -348,7 +348,7 @@ export const gbcTeam = [
 export const gbcProjects = [
   {
     id: 1,
-    tags: ["Website Development ", "Mobile App", "GameFi", "Trading", "DEX", "DeFi", "NFT", "Staking", "Crypto Wallet"],
+    tags: ["Web Development ", "Mobile App", "GameFi", "Trading", "DEX", "DeFi", "NFT", "Staking", "Crypto Wallet"],
     title: "m2e platform",
     desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
     img: m2eNew,
@@ -368,7 +368,7 @@ export const gbcProjects = [
   },
   {
     id: 3,
-    tags: [ 'Website Development', '24/7 Support', 'Web3'],
+    tags: [ 'Web Development', '24/7 Support', 'Web3'],
     title: 'REFLECT',
     desc: 'Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.',
     img: reflectNew,

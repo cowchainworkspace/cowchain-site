@@ -29,7 +29,8 @@ export default {
         custom1400: "1400px",
         custom1300: "1300px",
         "custom-1700": "1660px",
-        fullSlider: "3186px"
+        fullSlider: "3186px",
+        'custom480': '480px'
       },
       spacing: {
         15: "60px",

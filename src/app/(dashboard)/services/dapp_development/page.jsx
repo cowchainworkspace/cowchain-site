@@ -86,10 +86,11 @@ const DappDevelopment = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute left-0 top-[18%]"
+            className="absolute left-0 top-[18%] hidden md:block"
           />
         }
         titleClasses="xl:text-[60px] leading-90"
+        sectionContainerClasses={"md:flex-row md:gap-5"}
       />
 
       <Industries
@@ -149,17 +150,18 @@ const DappDevelopment = () => {
           desc={
             <>
               At Cowchain, dapp development company, we follow a
-              <br className="hidden: lg:block" /> structured process to ensure
+              <br className="hidden xl:block" /> structured process to ensure
               the delivery of high-quality
-              <br className="hidden: lg:block" /> decentralized applications.
-              Our dapp development platform is
-              <br className="hidden: lg:block" /> designed to streamline each
+              <br className="hidden xl:block" /> decentralized applications. Our
+              dapp development platform is
+              <br className="hidden xl:block" /> designed to streamline each
               phase, from planning to
-              <br className="hidden: lg:block" /> deployment
+              <br className="hidden xl:block" /> deployment
             </>
           }
           data={dappDevProcessData}
           noTag={true}
+          descClasses="max-w-[320px] xl:max-w-[592px]"
         />
       </div>
 
@@ -167,7 +169,6 @@ const DappDevelopment = () => {
         home={true}
         desc={
           <>
-            {" "}
             <>
               Our blockchain dapp development company works with a variety of
               blockchain networks to ensure flexibility and scalability.
@@ -188,14 +189,14 @@ const DappDevelopment = () => {
         desc={
           <>
             At Cowchain, we understand that innovation is key to staying ahead
-            in the decentralized space. As a <br className="hidden: lg:block" />{" "}
+            in the decentralized space. As a <br className="hidden lg:block" />{" "}
             pioneering dapp development company, we actively integrate the
             latest blockchain advancements into our
-            <br className="hidden: lg:block" /> projects, ensuring that each
+            <br className="hidden lg:block" /> projects, ensuring that each
             application not only meets industry standards but also exceeds
             client
-            <br className="hidden: lg:block" /> expectations in functionality
-            and security
+            <br className="hidden lg:block" /> expectations in functionality and
+            security
           </>
         }
         noBg={true}
@@ -215,11 +216,11 @@ const DappDevelopment = () => {
           <>
             With years of experience in blockchain advisory, Cowchain provides
             strategic guidance to businesses seeking
-            <br className="hidden: lg:block" /> to leverage decentralized
+            <br className="hidden lg:block" /> to leverage decentralized
             technologies. Our advisory services ensure that your project is
             aligned with current
-            <br className="hidden: lg:block" /> trends and future developments
-            in the blockchain space
+            <br className="hidden lg:block" /> trends and future developments in
+            the blockchain space
           </>
         }
         noBg={true}
@@ -231,10 +232,10 @@ const DappDevelopment = () => {
         desc={
           <>
             Our dapp development company
-            <br className="hidden: lg:block" /> provides adaptable engagement
+            <br className="hidden lg:block" /> provides adaptable engagement
             models
-            <br className="hidden: lg:block" /> to accommodate the unique
-            <br className="hidden: lg:block" /> requirements of each project
+            <br className="hidden lg:block" /> to accommodate the unique
+            <br className="hidden lg:block" /> requirements of each project
           </>
         }
         isTwoSides={true}
@@ -244,7 +245,7 @@ const DappDevelopment = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute left-0"
+            className="absolute left-0 hidden md:block"
           />
         }
         itemClasses="lg:max-w-full"
@@ -276,19 +277,18 @@ const DappDevelopment = () => {
               In addition to{" "}
               <span className="violet-gradient-text">
                 dApp
-                <br className="hidden: lg:block" />
-                development
-                <br className="hidden: lg:block" />
+                <br className="hidden lg:block" />
+                development <br className="hidden lg:block" />
                 services
               </span>
               , Cowchain
-              <br className="hidden: lg:block" />
-              offers a variety of <br className="hidden: lg:block" />
+              <br className="hidden lg:block" /> offers a variety of{" "}
+              <br className="hidden lg:block" />
               <span className="violet-gradient-text">
-                blockchain <br className="hidden: lg:block" /> solutions
+                blockchain <br className="hidden lg:block" /> solutions
               </span>
               ,
-              <br className="hidden: lg:block" /> including
+              <br className="hidden lg:block" /> including
             </>
           }
           data={otherDappServiceData}
@@ -300,12 +300,12 @@ const DappDevelopment = () => {
         <FAQ
           data={faqDappData}
           noBg={true}
-          titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+          titleClasses="xl:text-[60px] lg:leading-[53.7px]"
           faqHorizontalPadding={true}
         />
       </div>
 
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact className="px-[50px] py-[105px] md:px-[64px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
 };

@@ -163,10 +163,6 @@ export default function Footer({ footerForm }) {
                   <Link href="/cases">
                     <p className="text-[#bbb]">Cases</p>
                   </Link>
-                  <Link href="/clients">
-                    {" "}
-                    <p className="text-[#bbb]">Clients</p>
-                  </Link>
                   <div className="flex-grow"></div>
                 </div>
               </div>
