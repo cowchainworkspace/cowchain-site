@@ -1,14 +1,21 @@
+import Contact from "@/components/Contact";
 import React from "react";
-import CaseHeroScreen from "../components/HeroScreen";
-import {
-  stepAppTags,
-  stepAppSlides,
-  stepAppSolutions
-} from "./utils/constants";
 import Banner from "../components/Banner";
-import StepAppProjectOverView from "./components/StepAppProjectOverView";
 import CasesSlider from "../components/CasesSlider";
+import CaseHeroScreen from "../components/HeroScreen";
+import MoreProjects from "../components/MoreProjects";
+import TeamBehind from "../components/TeamBehind";
+import StepAppProjectOverView from "./components/StepAppProjectOverView";
 import StepAppSolutions from "./components/StepAppSolutions";
+import StepAppWhatWeDid from "./components/StepAppWhatWeDid";
+
+import {
+  stepAppProjects,
+  stepAppSlides,
+  stepAppSolutions,
+  stepAppTags,
+  stepAppTeam
+} from "./utils/constants";
 
 const StepApp = () => {
   return (
@@ -24,6 +31,7 @@ const StepApp = () => {
             the intersection of fitness and blockchain innovation.
           </>
         }
+        headerClasses="text-[60px] leading-[64px]"
         tagContainerClasses="flex-wrap justify-center max-w-[484px]"
         descriptionClasses="max-w-[595px]"
       />
@@ -39,6 +47,13 @@ const StepApp = () => {
         images={stepAppSlides}
       />
       <StepAppSolutions solutions={stepAppSolutions} />
+      <StepAppWhatWeDid />
+      <TeamBehind titleClasses={"text-[55.24px]"} team={stepAppTeam} />
+      <MoreProjects
+        headerClasses="text-[42px] font-medium font-roc leading-90"
+        projects={stepAppProjects}
+      />
+      <Contact />
     </section>
   );
 };

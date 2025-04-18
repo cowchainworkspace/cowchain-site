@@ -10,13 +10,13 @@ const StepAppSolutionCard = ({
   imgWidth,
   imgHeight,
   imgSrc,
-  imgInfo
+  top,
+  left
 }) => {
-  console.log(imgSrc, imgInfo);
   return (
     <article
       className={cn(
-        "flex w-full items-center justify-between rounded-[70px] bg-[#FFFFFF1C] py-10 pl-20 pr-6",
+        "flex w-full items-center justify-between rounded-[70px] bg-[#FFFFFF1C] py-10 pl-20 pr-[65px]",
         isReverse && "flex-row-reverse bg-transparent"
       )}
     >
@@ -26,12 +26,12 @@ const StepAppSolutionCard = ({
           width: `${textBlockWidth}px`
         }}
       >
-        <h3 className="font-manrope text-xs uppercase leading-[18.41px] tracking-[1.84px] text-secondary">
+        <h3 className="font-manrope text-xs uppercase leading-[20px] tracking-[2px] text-secondary">
           {title}
         </h3>
         <p
           className={cn(
-            "font-manrope text-xl font-medium leading-[27.62px] text-white",
+            "font-manrope text-xl font-medium leading-[30px] text-white",
             isReverse && "text-right"
           )}
         >
@@ -39,24 +39,15 @@ const StepAppSolutionCard = ({
         </p>
       </div>
       <div className="relative overflow-visible">
-        {/* Floating image that overflows the card */}
-        {/* <Image
-          width={imgWidth}
-          height={imgHeight}
-          src={imgSrc}
-          alt={imgInfo}
-          className="relative -right-10 -top-10 z-20"
-          style={{
-            width: `${imgWidth}px`,
-            height: `${imgHeight}px`
-          }}
-        /> */}
         <div
           className="absolute z-20"
           style={{
+            top: `${top || 50}%`,
+            left: `${left || 50}%`,
+            transform: "translate(-50%, -50%)",
             width: `${imgWidth}px`,
             height: `${imgHeight}px`,
-            backgroundImage: `url(${imgSrc.href})`,
+            backgroundImage: `url(${imgSrc.src})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat"

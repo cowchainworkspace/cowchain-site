@@ -23,12 +23,12 @@ const CasesSlider = ({
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { align: "center", loop: true, slidesToScroll: 1, startIndex: 1 },
     [
-      // Autoplay({
-      //   playOnInit: true,
-      //   delay: 3000,
-      //   stopOnInteraction: false,
-      //   stopOnMouseEnter: true
-      // })
+      Autoplay({
+        playOnInit: true,
+        delay: 3000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: true
+      })
     ]
   );
 
