@@ -83,6 +83,8 @@ const FullStackDevelopment = () => {
       />
       <TustByNumbers typographyContainerClasses="xl:pt-[170px]" />
       <ExpertiseServices
+        itemTitleClasses="lg:text-[20px]"
+        cryptoWalletClass="lg:mb-[80px]"
         title={
           <>
             Expertise of <br />
@@ -93,6 +95,7 @@ const FullStackDevelopment = () => {
         }
         desc={FSExpertiseDesc}
         data={FSExpertiseData}
+        titleClasses="xl:!text-[60px] xl:mb-[60px]"
         noBg={true}
         sectionContainerClasses={"md:flex-row md:gap-5"}
       />
@@ -122,6 +125,7 @@ const FullStackDevelopment = () => {
             Development
           </>
         }
+        titleClasses="xl:!text-[60px] xl:mb-[60px]"
         data={AdvantageseData}
         noBg={true}
         sectionContainerClasses={"md:flex-row md:gap-5"}
@@ -133,6 +137,8 @@ const FullStackDevelopment = () => {
             Process
           </>
         }
+        cryptoWalletClass="lg:mb-[60px]"
+        titleClasses="xl:!text-[60px] xl:mb-[60px]"
         desc={
           <>
             Our full stack development company follows a structured process to{" "}
@@ -179,7 +185,11 @@ const FullStackDevelopment = () => {
           </>
         }
       />
-      <Feedback />
+      <Feedback
+        desc="Clients who have partnered with Cowchain 
+for full stack development services consistently 
+highlight the quality and scalability of our solutions"
+      />
       <CasesHead />
       <Cases />
       <CasesMobile />

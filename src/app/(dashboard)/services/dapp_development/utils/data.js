@@ -53,25 +53,25 @@ export const dappBenefitsData = [
   }
 ];
 
-export const IndustriesData = [
+export const IndustriesDappData = [
   {
     title: "Healthcare",
-    text: "In the healthcare sector, our DEX solutions offer secure data exchange between healthcare providers, ensuring compliance with privacy regulations",
+    text: "In healthcare, dapp development companies like Cowchain enable secure exchange and storage of patient data, ensuring confidentiality and compliance with healthcare regulations",
     icon: HealthcareIcon
   },
   {
     title: "Government",
-    text: "Government agencies benefit from decentralized platforms for public services such as secure voting systems and identity verification",
+    text: "For government agencies, blockchain dapps development companies play a crucial role in creating decentralized systems that bring transparency to public services, including identity verification and secure voting",
     icon: GovernmentIcon
   },
   {
     title: "Finance",
-    text: "The finance industry benefits from decentralized exchanges by enabling direct asset transfers, minimizing the need for middlemen",
+    text: "In the finance industry, blockchain dapps development company solutions support secure, direct transactions, eliminating intermediaries and enhancing transparency in financial activities",
     icon: FinanceIcon
   },
   {
     title: "Education",
-    text: "Decentralized platforms in the education sector streamline the verification of academic records, allowing for immutable storage of credentials",
+    text: "Educational institutions benefit from dapp development services by securely managing academic credentials and ensuring records are stored in an immutable format for easy access and verification",
     icon: EducationIcon
   }
 ];

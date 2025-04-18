@@ -14,13 +14,16 @@ import { metadata } from "./utils/dappDeveMetadata";
 import {
   DappExpertiseDesc,
   EngagementDevData,
-  IndustriesData,
+  IndustriesDappData,
   dappBenefitsData,
   dappDevProcessData,
   faqDappData,
   otherDappServiceData
 } from "./utils/data";
 import { DappExpertiseData } from "./utils/data";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
 
 export { metadata };
 
@@ -72,6 +75,9 @@ const DappDevelopment = () => {
 
       <ExpertiseServices
         topBorder={false}
+        itemTitleClasses="lg:text-[20px]"
+        cryptoWalletClass="lg:mb-[80px]"
+        titleClasses="xl:mb-[60px] xl:text-[60px] leading-90"
         title={
           <>
             dApp <br className="hidden lg:block" /> Development{" "}
@@ -89,7 +95,6 @@ const DappDevelopment = () => {
             className="absolute left-0 top-[18%] hidden md:block"
           />
         }
-        titleClasses="xl:text-[60px] leading-90"
         sectionContainerClasses={"md:flex-row md:gap-5"}
       />
 
@@ -100,7 +105,7 @@ const DappDevelopment = () => {
         }
         data={dappBenefitsData}
         topBorder={false}
-        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
+        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px] xl:gap-y-[120px]"
       />
 
       <KeyFeatures
@@ -133,9 +138,9 @@ const DappDevelopment = () => {
         desc={
           "Cowchain’s dapp development company caters to a wide range of industries, providing specialized solutions for sector-specific challenges. Industries we support encompass the following sectors"
         }
-        data={IndustriesData}
+        data={IndustriesDappData}
         topBorder={false}
-        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
+        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px] xl:gap-y-[120px]"
       />
       <div className="w-full overflow-hidden">
         <OtherServices
@@ -226,7 +231,7 @@ const DappDevelopment = () => {
         noBg={true}
         titleClasses="xl:mb-[60px]"
       />
-      <Feedback />
+      <Feedback desc="Here’s what our clients say about working with Cowchain’s dapp software development company" />
       <Industries
         title={"Our Engagement Models"}
         desc={
@@ -238,6 +243,7 @@ const DappDevelopment = () => {
             <br className="hidden lg:block" /> requirements of each project
           </>
         }
+        customClasses="xl:gap-y-[120px]"
         isTwoSides={true}
         data={EngagementDevData}
         topBorder={false}
@@ -245,10 +251,11 @@ const DappDevelopment = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute left-0 hidden md:block"
+            className="pointer-events-none absolute left-0 hidden md:block"
           />
         }
         itemClasses="lg:max-w-full"
+        titleContainerClasses="!row-span-1"
       />
       <KeyFeatures
         topBorder={false}
@@ -296,6 +303,11 @@ const DappDevelopment = () => {
           tag={"Other Our Services"}
         />
       </div>
+
+      <WhiteLabelCases title="our cases" desc="" blockClasses="md:pb-[60px]" />
+      <Cases />
+      <CasesMobile />
+
       <div className="w-full overflow-hidden">
         <FAQ
           data={faqDappData}

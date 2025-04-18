@@ -216,7 +216,12 @@ const SmartContractDevelopment = () => {
         titleClasses="md:mb-10"
       />
 
-      <Feedback />
+      <Feedback
+        desc="Our clients trust us for our commitment 
+to excellence and the consistent results 
+we produce through defi development. 
+They appreciate our professionalism, expertise, and the outstanding results of their projects"
+      />
 
       <ExpertiseServices
         threeColumns

@@ -42,7 +42,8 @@ export function Industries({
   isWhiteLabel = "",
   descClasses,
   itemTitleClasses,
-  titleClasses
+  titleClasses,
+  titleContainerClasses
 }) {
   return (
     <section
@@ -68,13 +69,13 @@ export function Industries({
       >
         {!fullGrid && (
           <div
-            className={`flex flex-col items-start gap-[18px] md:justify-start md:gap-[26px] ${isTwoSides ? "col-span-1  row-span-2 max-w-[400px]" : "col-span-2 row-span-1 "}`}
+            className={`flex flex-col items-start gap-[18px] md:justify-start md:gap-[26px] ${isTwoSides ? "col-span-1  row-span-2 max-w-[400px]" : "col-span-2 row-span-1 "} ${titleContainerClasses}`}
           >
             <h2
               className={cn(
                 "whitespace-pre-line text-left text-[36px] uppercase md:text-center md:text-start  custom1430:text-[60px]",
                 {
-                  "xl:!text-[42px]": isTwoSides
+                  "xl:text-[42px]": isTwoSides
                 },
                 titleClasses,
               )}
@@ -85,7 +86,7 @@ export function Industries({
             {desc && (
               <p
                 className={cn(
-                  "leading-22px max-w-[650px] text-[16px] text-[#BBBBBB]",
+                  "leading-22px z-[2] max-w-[650px] text-[16px] text-[#BBBBBB]",
                   descClasses
                 )}
               >

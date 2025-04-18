@@ -95,7 +95,7 @@ const BlockChainConsulting = () => {
             Provide
           </>
         }
-        cryptoWalletClass="mb-[80px]"
+        cryptoWalletClass="lg:mb-[80px]"
         desc={
           <>
             We at Cowchain provide a wide range of blockchain consulting
@@ -146,7 +146,7 @@ const BlockChainConsulting = () => {
         topBorder={false}
         titleClasses="xl:text-[60px] xl:mb-[60px]"
         bottomBorder={false}
-        cryptoWalletClass="mb-[80px]"
+        cryptoWalletClass="lg:mb-[80px]"
         bg={
           <Image
             src={dexBg}
@@ -233,7 +233,22 @@ const BlockChainConsulting = () => {
         isTextSecondary={true}
       />
 
-      <Feedback />
+      <Feedback
+        title={
+          <>
+            Clients’ <br /> Stories
+          </>
+        }
+        desc={
+          <>
+            We consistently deliver high-quality blockchain consulting services
+            that produce measurable results. From startups looking to implement
+            their first solution to large enterprises optimizing their
+            infrastructure, we have helped businesses achieve their goals
+          </>
+        }
+        nobg={true}
+      />
 
       <Industries
         title={"Our Engagement Models"}

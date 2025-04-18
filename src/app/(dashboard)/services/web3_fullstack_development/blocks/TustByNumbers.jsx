@@ -10,12 +10,12 @@ import { Counter } from "../../../(home)/components/counter";
 
 const TustByNumbersData = [
   {
-    number: 120,
+    number: 150,
     desc: "projects delivered across diverse industries",
     sighn: "+"
   },
   {
-    number: 150,
+    number: 50,
     desc: "dedicated developers and engineers on our team",
     sighn: "+"
   },

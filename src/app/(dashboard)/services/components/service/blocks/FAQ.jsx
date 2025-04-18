@@ -48,7 +48,8 @@ export default function FAQ({
   faqHorizontalPadding = false,
   descriptionClasses = "",
   typographyContainer = "",
-  noTopBorder = false
+  noTopBorder = false,
+  itemTitleClass
 }) {
   const [screenWidth, setScreenWidth] = useState();
   const lastIndex = data.length - 1;
@@ -161,8 +162,11 @@ export default function FAQ({
                       <AccordionButton className={cn("relative")}>
                         <div className="mr-0 w-full text-left md:mr-auto">
                           <span
-                            className="block !w-full max-w-[260px] text-left  font-roc
-                         text-[14px] font-medium uppercase !leading-none text-white md:max-w-[623px] md:text-[18px] lg:!leading-none"
+                            className={cn(
+                              "block !w-full max-w-[260px] text-left  font-roc",
+                              "text-[14px] font-medium uppercase !leading-none text-white md:max-w-[623px] md:text-[18px] lg:!leading-none",
+                              itemTitleClass
+                            )}
                           >
                             {faq.title}
                           </span>

@@ -260,7 +260,10 @@ const WhiteLabelDev = () => {
         />
       </div>
 
-      <Feedback />
+      <Feedback
+        desc="Our clients know they can rely on Cowchain 
+to deliver reliable, secure blockchain solutions. Here’s what they have to say"
+      />
       <WhiteLabelCases />
       <Cases />
       <CasesMobile />

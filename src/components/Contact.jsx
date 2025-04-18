@@ -16,12 +16,12 @@ export default function Contact({ className }) {
       className={cn("relative border-b border-b-th-fade", className)}
     >
       <Image
-        className="absolute left-1/2  top-[45%] hidden  -translate-x-1/2 -translate-y-1/2  md:block"
+        className="absolute left-1/2 pointer-events-none  top-[45%] hidden  -translate-x-1/2 -translate-y-1/2  md:block"
         src={bgEllipse}
         alt=""
       />
       <Image
-        className="absolute left-1/2 top-[40%] h-auto w-full -translate-x-1/2 -translate-y-1/2 md:hidden"
+        className="absolute left-1/2 top-[40%] pointer-events-none  h-auto w-full -translate-x-1/2 -translate-y-1/2 md:hidden"
         src={bgMb}
         alt=""
       />

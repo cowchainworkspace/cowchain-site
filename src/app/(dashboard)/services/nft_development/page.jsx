@@ -18,6 +18,9 @@ import {
   nftProcessData,
   nftServicesData
 } from "./utils/data";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
 
 export { metadata };
 
@@ -66,6 +69,7 @@ const NftDevelopment = () => {
       />
       <KeyFeatures
         title={"NFT Development Services We Provide"}
+        titleClasses="lg:mb-[60px]"
         data={nftServicesData}
         desc={
           <>
@@ -107,7 +111,7 @@ const NftDevelopment = () => {
           isDoublePadding={true}
           noBg={true}
           hasIcon={false}
-          itemsClasses={"md:py-[74.5px]"}
+          itemsClasses={"md:py-[54.5px]"}
           faqGradient={true}
           titleClasses="custom1430:text-[42px]"
           descriptionClasses="!max-w-[320px] lg:!max-w-[462px]"
@@ -128,7 +132,7 @@ const NftDevelopment = () => {
         }
         data={NftIndustriesData}
         topBorder={false}
-        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
+        customClasses="xl:pl-[55px] lg:gap-y-[120px] xl:pr-[60px] xl:mt-[60px]"
       />
 
       <ExpertiseServices
@@ -142,6 +146,7 @@ const NftDevelopment = () => {
           </>
         }
         containerClasses="grid-cols-1 md:grid-cols-2"
+        cryptoWalletClass="lg:mb-[100px]"
       />
 
       <KeyFeatures
@@ -202,6 +207,11 @@ const NftDevelopment = () => {
           bottomBorder={false}
         />
       </div>
+
+      <WhiteLabelCases title="our cases" desc="" blockClasses="md:pb-[60px]" />
+      <Cases />
+      <CasesMobile />
+
       <div className="w-full overflow-hidden">
         <FAQ
           data={faqNftData}

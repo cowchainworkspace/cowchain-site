@@ -334,8 +334,8 @@ export const nftBenefitsData = [
   },
   {
     id: 3,
-    title: "Flexibility",
-    desc: "Tailored NFT development ensures that your platform aligns perfectly with your business objectives.",
+    title: "Specialized Approach",
+    desc: "Our expertise in NFT development helps businesses leverage blockchain technologies to enhance user engagement and build sustainable ecosystems",
   },
   {
     id: 4,
@@ -344,8 +344,8 @@ export const nftBenefitsData = [
   },
   {
     id: 5,
-    title: "Specialized Approach",
-    desc: "Our expertise in NFT development helps businesses leverage blockchain technologies to enhance user engagement and build sustainable ecosystems.",
+    title: "Flexibility",
+    desc: "Tailored NFT development ensures that your platform aligns perfectly with your business objectives",
   },
 
 
