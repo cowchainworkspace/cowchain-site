@@ -7,16 +7,18 @@ const [pass, ...rewards] = gbcRewards;
 const GBCRewards = () => {
   return (
     <section>
-      <div className="mx-auto max-w-[1440px] px-10">
-        <div className="w-full rounded-[12.87px] bg-[#FFFFFF0A] pb-[90px] pl-[19px] pr-[23px] pt-[25px]">
-          <h2 className="mb-[19px] align-[text-top] font-roc text-[16.08px] font-bold normal-case leading-none">
-            Rewards
-          </h2>
-          <p className="mb-[27px] align-[text-top] font-roc font-[11.26px] leading-none">
-            Unlock new assets and rewards the longer you stay in the Pass.
-          </p>
-          <div className="flex w-full justify-between">
-            <article className="flex w-[177px] flex-col gap-[15px]">
+      <div className="mx-auto max-w-[1440px] px-2 md:px-10">
+        <div className="w-full rounded-[12.87px] bg-[#FFFFFF0A] py-5 md:pl-[19px] md:pr-[23px] md:pt-[25px] xl:pb-[90px]">
+          <div className="px-4 md:px-0">
+            <h2 className="mb-[19px] align-[text-top] font-roc text-[16.08px] font-bold normal-case leading-none">
+              Rewards
+            </h2>
+            <p className="mb-[27px] align-[text-top] font-roc font-[11.26px] leading-none">
+              Unlock new assets and rewards the longer you stay in the Pass.
+            </p>
+          </div>
+          <div className="grid w-full grid-cols-2 md:grid-cols-3 xl:flex xl:justify-between">
+            <article className="flex w-[177px] flex-col gap-[15px] md:justify-self-center">
               <Image
                 src={pass.img}
                 width={pass.width}
@@ -33,7 +35,7 @@ const GBCRewards = () => {
             {rewards.map(({ id, imgDesc, width, height, title, img }) => (
               <article
                 className={cn(
-                  "flex w-[166px] flex-col gap-[21px] rounded-[12.87px] border-[1.61px] border-[#4C83FF] p-3",
+                  "flex w-[166px] flex-col gap-[21px] justify-self-center rounded-[12.87px] border-[1.61px] border-[#4C83FF] p-3",
                   id > 2 && "border-[#FFFFFF14]"
                 )}
                 key={id}

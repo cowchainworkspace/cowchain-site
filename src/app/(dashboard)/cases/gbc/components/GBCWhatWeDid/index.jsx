@@ -3,51 +3,52 @@ import React from "react";
 
 const GBCWhatWeDid = () => {
   return (
-    <section className="py-30">
-      <div className="mx-auto max-w-[1440px] px-[97px]">
-        <h2 className="mb-15 font-roc text-[60px] font-medium leading-90">
+    <section className="py-[50px] xl:py-30">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 xl:px-[97px]">
+        <h2 className="mb-6 font-roc text-[32px] font-medium leading-90 xl:mb-15 xl:text-[60px]">
           What we did
         </h2>
-        <div className="relative grid grid-cols-2 gap-[37px]">
+        <div className="relative grid gap-6 md:grid-cols-2 xl:gap-[37px]">
           <Image
             src={"/cases/gbc/gbc-wwd-img.webp"}
             width={148}
             height={138}
             alt={"gbc with lollipop"}
-            className="absolute -right-[16px] -top-[88%]"
+            className="absolute -right-[16px] -top-[78%] hidden xl:block"
           />
-          <div className="border-t-[0.5px] border-white-50 pt-8">
-            <h3 className="mb-4 font-manrope text-[11.05px] font-normal uppercase leading-[18.41px]  tracking-[1.84px] text-white">
+          <div className="border-t-[0.5px] border-white-50 pt-2 xl:pt-8">
+            <h3 className="mb-2 font-manrope text-xs font-normal uppercase leading-5 tracking-[2px]  text-white md:mb-4">
               Business Challenges
             </h3>
-            <p className="font-semiBold text-sm font-[450] leading-[22.1px] text-white-70">
+            <p className="font-semiBold text-xs font-[450] leading-5 text-white-70 md:text-sm md:leading-[22.1px]">
               Expanding NFT functionality beyond basic ownership required a
               comprehensive dApp
-              <br className="hidden xl:block" /> technology approach.
+              <br className="hidden custom1400:block" /> technology approach.
               Integrating on-chain transactions while maintaining a
               user-friendly
-              <br className="hidden xl:block" /> experience was a key challenge.
-              Additionally, ensuring scalability and security in trading
-              <br className="hidden xl:block" /> mechanics and reward
+              <br className="hidden custom1400:block" /> experience was a key
+              challenge. Additionally, ensuring scalability and security in
+              trading
+              <br className="hidden custom1400:block" /> mechanics and reward
               distribution demanded protocol-level optimization.
             </p>
           </div>
 
-          <div className="border-t-[0.5px] border-white-50 pt-8">
-            <h3 className="mb-4 font-manrope text-[11.05px] font-normal uppercase leading-[18.41px] tracking-[1.84px] text-white">
+          <div className="border-t-[0.5px] border-white-50 pt-2 xl:pt-8">
+            <h3 className="mb-2 font-manrope text-xs font-normal uppercase leading-5 tracking-[2px] text-white md:mb-4">
               result
             </h3>
-            <p className="font-semiBold text-sm font-[450] leading-[22.1px] text-white-70">
+            <p className="font-semiBold text-xs font-[450] leading-5 text-white-70 md:text-sm md:leading-[22.1px]">
               The GBC dApp now supports NFT customization, on-chain trading, and
               gamified
-              <br className="hidden xl:block" /> engagement, creating a
+              <br className="hidden custom1400:block" /> engagement, creating a
               sustainable and interactive ecosystem. The Camp enhances user
-              <br className="hidden xl:block" /> retention while trading
+              <br className="hidden custom1400:block" /> retention while trading
               competitions encourage active participation. Backed by Arbitrum,
-              <br className="hidden xl:block" />
+              <br className="hidden custom1400:block" />
               the platform has positioned itself as a case study in blockchain
               deployment and user-driven
-              <br className="hidden xl:block" /> NFT innovation.
+              <br className="hidden custom1400:block" /> NFT innovation.
             </p>
           </div>
         </div>

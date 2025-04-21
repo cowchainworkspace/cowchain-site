@@ -22,7 +22,7 @@ const GBCSlider = () => {
                   <article
                     key={id}
                     className={
-                      "club-inner-border ml-[25px] w-[190px] flex-shrink-0 rounded-[14.73px] bg-[#FFFFFF0A] p-[15px]"
+                      "club-inner-border ml-3 w-[190px] flex-shrink-0 rounded-[14.73px] bg-[#FFFFFF0A] p-[15px] md:ml-[25px]"
                     }
                   >
                     <Image
@@ -32,10 +32,10 @@ const GBCSlider = () => {
                       alt={imgDesc}
                       className="mb-[15px]"
                     />
-                    <h3 className="font-poppins mb-2 align-[text-top] text-[12.89px] leading-none text-[#FFFFFF80]">
+                    <h3 className="mb-2 align-[text-top] font-poppins text-[12.89px] leading-none text-[#FFFFFF80]">
                       {tag}
                     </h3>
-                    <h4 className="font-poppins align-[text-top] text-[14.73px] font-bold leading-none text-white">
+                    <h4 className="align-[text-top] font-poppins text-[14.73px] font-bold leading-none text-white">
                       {name}
                     </h4>
                   </article>

@@ -8,7 +8,7 @@ import ContactForm from "./utils/ContactForm";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-export default function Contact({ className }) {
+export default function Contact({ className, contactContainer }) {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -24,7 +24,12 @@ export default function Contact({ className }) {
         alt=""
       />
       <div className="relative grid grid-cols-1">
-        <div className="flex flex-col gap-y-[32px] border-b border-b-th-fade px-[30px] py-[105px] text-center md:gap-y-[40px] md:py-24 xl:py-36">
+        <div
+          className={cn(
+            "flex flex-col gap-y-[32px] border-b border-b-th-fade px-[30px] py-[105px] text-center md:gap-y-[40px] md:py-24 xl:py-36",
+            contactContainer
+          )}
+        >
           <div className="flex flex-col  items-center gap-[12px]">
             <h3 className="mx-auto max-w-[303px] text-center lg:max-w-xl">
               HAVE PROJECT <br /> IN MIND?
