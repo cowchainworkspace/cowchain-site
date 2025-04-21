@@ -252,10 +252,14 @@ They appreciate our professionalism, expertise, and the outstanding results of t
               In addition to <br className="hidden md:block" />
               <span className="violet-gradient-text">DEFI development</span>
               <br />
-              Cowchain offers <br className="hidden md:block" /> a variety{" "}
-              <br /> of{" "}
+              Cowchain offers <br className="hidden md:block" /> a set of{" "}
               <span className="violet-gradient-text">
                 complementary <br className="hidden md:block" /> services
+              </span>{" "}
+              that strengthen your product <br /> infrastructure and{" "}
+              <span className="violet-gradient-text">
+                {" "}
+                unlock new layers of functionality.
               </span>
             </>
           }

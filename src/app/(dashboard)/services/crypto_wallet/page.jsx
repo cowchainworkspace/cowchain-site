@@ -235,19 +235,24 @@ const CryptoWalletDev = () => {
       <div className="relative">
         <div className="w-full overflow-hidden">
           <OtherServices
+          typographyContainerClasses="md:!pt-[80px]"
             tag={"Other Our Services"}
             title={
               <>
-                Alongside <br />
+                In addition to <br />
                 <span className="violet-gradient-text">
                   crypto wallet <br />
                   development
                 </span>
-                , <br /> Cowchain offers <br />
+                , <br /> Cowchain provides <br />
                 <span className="violet-gradient-text">
-                  additional support <br /> services
+                  full-cycle blockchain <br /> services
                 </span>{" "}
-                to fully <br /> back your project
+                to support broader{" "}
+                <span className="violet-gradient-text">
+                  platform functionality and user engagement
+                </span>
+                <br />
               </>
             }
             data={otherRwaServices}

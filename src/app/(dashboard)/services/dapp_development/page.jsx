@@ -295,11 +295,10 @@ const DappDevelopment = () => {
                 blockchain <br className="hidden lg:block" /> solutions
               </span>
               ,
-              <br className="hidden lg:block" /> including
+              <br className="hidden lg:block" /> including:
             </>
           }
           data={otherDappServiceData}
-          bottomBorder={false}
           tag={"Other Our Services"}
         />
       </div>

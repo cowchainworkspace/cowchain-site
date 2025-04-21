@@ -173,21 +173,18 @@ export const EngagementDevData = [
   }
 ];
 
-export const otherServices = [
+export const otherWhiteLabelServices = [
   {
-    text: "UI / UX Design",
-    author:
-      <>We craft intuitive and aesthetically pleasing UI/UX designs,<br className="hidden lg:block" /> focusing on functionality and user experience to ensure<br className="hidden lg:block" /> seamless interactions across platforms</>
+    text: "Blockchain Consulting",
+    author: "We help businesses identify the right blockchain architecture, stack, and integration strategy to align with their goals, whether for tokenized platforms, Web3 onboarding, or scalable backends."
   },
   {
-    text: "DISCOVERY & CONSULTATIONS",
-    author:
-      <>Our team provides strategic consultations, offering insights<br className="hidden lg:block" /> on project discovery, business goals, and digital strategies,<br className="hidden lg:block" /> helping align your web development projects with industry standards</>
+    text: "Cryptocurrency Exchange Development",
+    author: "We develop exchange platforms with custom-branded UI and backend logic, supporting token swaps, KYC flows, liquidity management, and scalable trade execution – all tailored to your infrastructure."
   },
   {
-    text: "Full-Stack Development",
-    author:
-      <>From front-end design to back-end systems, our full-stack development<br className="hidden lg:block" /> team delivers scalable, high-performance web applications that meet<br className="hidden lg:block" /> your business needs</>
+    text: "ICO Platform Development",
+    author: "We build modular token sale platforms with vesting, contribution tracking, real-time dashboards, and smart contract integration, allowing projects to launch and manage token offerings under their own brand."
   }
 ];
 

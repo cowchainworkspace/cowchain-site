@@ -219,16 +219,21 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
           tag={"Other Our Services"}
           title={
             <>
-              Alongside{" "}
+              In addition to{" "}
               <span className="violet-gradient-text">
                 RWA
                 <br /> TOKENIZATION{" "}
               </span>
               , <br /> Cowchain offers <br />{" "}
               <span className="violet-gradient-text">
-                additional support <br /> services{" "}
+                development and <br />
+                and advisory services
               </span>{" "}
-              to fully <br /> back your project
+              to help you turn assets into on-chain value with
+              <span className="violet-gradient-text">
+                {" "}
+                scalable infrastructure
+              </span>
             </>
           }
           data={otherRwaServices}

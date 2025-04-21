@@ -10,7 +10,7 @@ import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
-import { DexExpertiseDesc } from "./utils/data";
+import { DexExpertiseDesc, otherDexServices } from "./utils/data";
 import { DexExpertiseData } from "./utils/data";
 import { IndustriesDexData } from "./utils/data";
 import { DexAppDevData } from "./utils/data";
@@ -212,9 +212,10 @@ const DexDevelopment = () => {
               ,<br />
               we offer <br />
               the following <br />
-              <span className="violet-gradient-text">blockchain</span> services
+              <span className="violet-gradient-text">blockchain</span> services:
             </>
           }
+          data={otherDexServices}
           tag={"Other Our Services"}
           typographyContainerClasses="xl:py-[166px]"
         />

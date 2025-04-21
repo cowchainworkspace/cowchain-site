@@ -57,7 +57,6 @@ export const SnartContractBenefitsData = [
     title: "Skilled Development Team",
     desc: "Our experienced developers tackle projects of any scale and complexity, delivering solutions that adhere to industry-leading standards and cutting-edge technologies."
   }
-
 ];
 
 export const SnartContractExpertiseData = [
@@ -68,7 +67,7 @@ export const SnartContractExpertiseData = [
   {
     title: "Implementation of smart contracts into business processes",
     desc: "We help integrate smart contracts into companies' existing business processes, providing operations automation, increased efficiency, and transparency. Our experts will analyze your needs and offer optimal solutions for implementing smart contracts in your business."
-  },
+  }
 ];
 
 export const ClientsTrustData = [
@@ -213,70 +212,88 @@ export const OtherSmartContractData = [
   },
   {
     text: "Increased speed and accuracy of transaction execution"
-  }, 
+  }
 ];
 
 export const SmartContractOtherData = [
   {
-    text: "Blockchain consulting",
+    text: "DeFi Development",
     author:
-      "Our experts will help you evaluate the feasibility of blockchain for your business, choose the most appropriate platform, and develop a strategy for implementing this technology"
+      "We develop DeFi protocols that use smart contracts to automate lending, liquidity mining, staking, and dynamic yield strategies – built for performance, transparency, and composability across chains."
   },
   {
-    text: "DApp development",
+    text: "ICO Platform Development",
     author:
-      "We create reliable and scalable decentralized applications based on smart contracts and provide security and transparency of transactions"
+      "We create ICO platforms powered by secure smart contracts for token sales, vesting schedules, investor whitelisting, and on-chain fundraising logic – all optimized for scalability and compliance."
   },
   {
-    text: "Token creation and NFT",
+    text: "DEX Development",
     author:
-      "Our experts can help you design and issue your own or non-fungible tokens (NFTs) for various purposes, such as crowdfunding, customer loyalty, or digital asset identification"
-  },
-  {
-    text: "Audit and optimization of blockchain solutions",
-    author:
-      "We conduct comprehensive audits of existing blockchain solutions for security, performance, and compliance with industry standards and offer optimization services"
-  },
-  {
-    text: "Implementation of blockchain solutions",
-    author:
-      "We can help you integrate blockchain solutions into your IT infrastructure, ensuring they run smoothly and meet your corporate requirements"
+      "We build decentralized exchanges with features like liquidity pools, token swaps, permissionless listing, and fee logic, ensuring high throughput and secure, non-custodial trading experiences."
   }
 ];
 
 export const faqNftData = [
   {
-    title: "How much does it cost to outsource the project to a Smart Contract development company?",
-    content:"The cost of smart contract development depends on the project's complexity, the technologies used, and the developers' level of expertise. In general, we strive to offer each client the best value for money."  },
-  {
-    title: "How long does a Smart Contract development project take to go live?",
-    content: "The typical timeframe for a smart contract development project is about four days, including requirements analysis, development, testing, and deployment. The duration of the job varies depending on the scope and complexity of the project."
+    title:
+      "How much does it cost to outsource the project to a Smart Contract development company?",
+    content:
+      "The cost of smart contract development depends on the project's complexity, the technologies used, and the developers' level of expertise. In general, we strive to offer each client the best value for money."
   },
   {
-    title: "Does a professional Smart Contract development service provider offer maintenance and support services?",
-    content: "Yes, we offer maintenance and support services for smart contracts after deployment. This ensures the solution's smooth operation in the long term."
+    title:
+      "How long does a Smart Contract development project take to go live?",
+    content:
+      "The typical timeframe for a smart contract development project is about four days, including requirements analysis, development, testing, and deployment. The duration of the job varies depending on the scope and complexity of the project."
+  },
+  {
+    title:
+      "Does a professional Smart Contract development service provider offer maintenance and support services?",
+    content:
+      "Yes, we offer maintenance and support services for smart contracts after deployment. This ensures the solution's smooth operation in the long term."
   }
 ];
 
 export const nftProcessData = [
   {
     title: "Requirements Analysis",
-    content: ['Detailed study of the customer\'s business requirements and goals', 'Defining the smart contract logic and required functions', 'Drafting a clear terms of reference' ]  },
+    content: [
+      "Detailed study of the customer's business requirements and goals",
+      "Defining the smart contract logic and required functions",
+      "Drafting a clear terms of reference"
+    ]
+  },
   {
     title: "Architecture design",
-    content: ['Developing smart contract architecture and blockchain interactions', 'Creating data schemas and flow diagrams', 'Define security and performance requirements']
+    content: [
+      "Developing smart contract architecture and blockchain interactions",
+      "Creating data schemas and flow diagrams",
+      "Define security and performance requirements"
+    ]
   },
   {
     title: "Smart Contract Development",
-    content: ['Writing smart contract code in the chosen language', 'Modular testing and debugging', 'Conduct internal security audits']
+    content: [
+      "Writing smart contract code in the chosen language",
+      "Modular testing and debugging",
+      "Conduct internal security audits"
+    ]
   },
   {
     title: "Deployment and integration",
-    content: ['Deployment of the smart contract in a blockchain test network', 'Comprehensive testing in a near-production environment', 'Deployment in the core network and integration with the customer\'s IT ecosystem']
+    content: [
+      "Deployment of the smart contract in a blockchain test network",
+      "Comprehensive testing in a near-production environment",
+      "Deployment in the core network and integration with the customer's IT ecosystem"
+    ]
   },
   {
     title: "Support and updates",
-    content: ['Monitoring of smart contract performance and identification of change needs', 'Develop and deploy updates with backward compatibility in mind', 'Conduct regression testing after updates']
+    content: [
+      "Monitoring of smart contract performance and identification of change needs",
+      "Develop and deploy updates with backward compatibility in mind",
+      "Conduct regression testing after updates"
+    ]
   }
 ];
 
@@ -293,99 +310,101 @@ export const nftServicesData = [
 
 export const aspectsOfSmartContract = [
   {
-  id:1, 
-  desc: 'Smart contract architecture and design with scalability, efficiency, and security.'
-},
-{
-  id:2, 
-  desc: 'Smart contract development using Solidity, Rust, and other languages.'
-},
-{
-  id:3, 
-  desc: 'Integrating smart contracts with traditional systems and external data sources via oracles.'
-},
-{
-  id:4, 
-  desc: 'Auditing smart contracts to identify and remediate vulnerabilities.'
-},
-{
-  id:5, 
-  desc: 'Optimizing smart contracts to reduce gas costs.'
-},
-{
-  id:6, 
-  desc: 'Upgrade and migrate existing smart contracts.'
-},
-
-]
+    id: 1,
+    desc: "Smart contract architecture and design with scalability, efficiency, and security."
+  },
+  {
+    id: 2,
+    desc: "Smart contract development using Solidity, Rust, and other languages."
+  },
+  {
+    id: 3,
+    desc: "Integrating smart contracts with traditional systems and external data sources via oracles."
+  },
+  {
+    id: 4,
+    desc: "Auditing smart contracts to identify and remediate vulnerabilities."
+  },
+  {
+    id: 5,
+    desc: "Optimizing smart contracts to reduce gas costs."
+  },
+  {
+    id: 6,
+    desc: "Upgrade and migrate existing smart contracts."
+  }
+];
 
 export const consultingServices = [
   {
-    id: 1, 
-    desc: 'Determine the feasibility of blockchain for your business processes',
+    id: 1,
+    desc: "Determine the feasibility of blockchain for your business processes"
   },
   {
-    id: 2, 
-    desc: 'Select the optimal blockchain platform and network',
+    id: 2,
+    desc: "Select the optimal blockchain platform and network"
   },
   {
-    id: 3, 
-    desc: 'Develop a strategy for implementing a blockchain solution into your IT ecosystem',
+    id: 3,
+    desc: "Develop a strategy for implementing a blockchain solution into your IT ecosystem"
   },
   {
-    id: 4, 
-    desc: 'Assess risks and develop a risk management plan',
+    id: 4,
+    desc: "Assess risks and develop a risk management plan"
   },
   {
-    id: 5, 
-    desc: 'Audit existing blockchain solutions and smart contracts',
+    id: 5,
+    desc: "Audit existing blockchain solutions and smart contracts"
   },
   {
-    id: 6, 
-    desc: 'Ensure the solution is compliant with regulatory requirements',
-  },
-  
-]
+    id: 6,
+    desc: "Ensure the solution is compliant with regulatory requirements"
+  }
+];
 
 export const blockchainNetworks = [
   {
     id: 1,
-    desc: 'Ethereum is among the most popular networks, with a rich ecosystem of tools and libraries for smart contract development.'
+    desc: "Ethereum is among the most popular networks, with a rich ecosystem of tools and libraries for smart contract development."
   },
   {
     id: 2,
-    desc: 'Avalanche is a high-performance blockchain platform with low transaction costs and support for smart contracts in Solidity and WASM languages.'
+    desc: "Avalanche is a high-performance blockchain platform with low transaction costs and support for smart contracts in Solidity and WASM languages."
   },
   {
     id: 3,
-    desc: 'Polygon is a scalable Ethereum solution that provides high throughput and low transaction fees.'
+    desc: "Polygon is a scalable Ethereum solution that provides high throughput and low transaction fees."
   },
   {
     id: 4,
-    desc: 'Binance Smart Chain (BSC) is an Ethereum Virtual Machine (EVM) compliant blockchain focused on developing decentralized applications.'
+    desc: "Binance Smart Chain (BSC) is an Ethereum Virtual Machine (EVM) compliant blockchain focused on developing decentralized applications."
   }
-]
+];
 
 export const smartContractsData = [
   {
     title: "Requirements Analysis",
-    content: "We define the smart contract logic, drafting comprehensive terms of reference"
+    content:
+      "We define the smart contract logic, drafting comprehensive terms of reference"
   },
   {
     title: "Architecture design",
-    content: "We design the smart contract architecture, including data flows and performance requirements"
+    content:
+      "We design the smart contract architecture, including data flows and performance requirements"
   },
   {
     title: "Smart Contract Development",
-    content: "The team writes and tests the smart contract code for functionality and security"
+    content:
+      "The team writes and tests the smart contract code for functionality and security"
   },
   {
     title: "Deployment and integration",
-    content: "We deploy the smart contract in test and core networks, supporting streamlined integration with existing systems"
+    content:
+      "We deploy the smart contract in test and core networks, supporting streamlined integration with existing systems"
   },
   {
     title: "Post-Launch Maintenance",
-    content: "We provide ongoing support by monitoring performance and verifying compatibility through comprehensive testing"
-  },
-  
-]
+    content:
+      "We provide ongoing support by monitoring performance and verifying compatibility through comprehensive testing"
+  }
+];

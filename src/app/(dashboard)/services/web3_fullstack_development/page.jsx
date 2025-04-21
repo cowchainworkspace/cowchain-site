@@ -20,7 +20,7 @@ import { servedIndustriesData } from "./utils/data";
 import { AdvantageseData } from "./utils/data";
 import { DevProcessData } from "./utils/data";
 import { chooseUsData } from "./utils/data";
-import { otherServiceData } from "./utils/data";
+import { otherFullStackServiceData } from "./utils/data";
 import { faqData } from "./utils/data";
 
 export { metadata };
@@ -216,7 +216,7 @@ highlight the quality and scalability of our solutions"
               project
             </>
           }
-          data={otherServiceData}
+          data={otherFullStackServiceData}
         />
       </div>
 

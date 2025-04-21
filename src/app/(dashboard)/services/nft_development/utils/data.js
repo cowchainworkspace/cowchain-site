@@ -244,25 +244,15 @@ export const OtherNftData = [
       "We build decentralized applications (dApps) to enable businesses to leverage blockchain for secure and transparent operations, including NFT development"
   },
   {
-    text: "Dex Development",
+    text: "RWA Tokenization",
     author:
-      "Our team specializes in decentralized exchange (DEX) development, allowing peer-to-peer trading of tokens and NFTs on a secure blockchain network"
+      "We help tokenize real-world assets (RWA), such as art, real estate, or collectibles, enabling them to exist as NFTs or tradable units on-chain. This opens new liquidity routes for traditionally illiquid assets."
   },
   {
-    text: "Smart Contract Development",
+    text: "NFT Game Development",
     author:
-      "We create and audit smart contracts to power NFTs, ensuring secure ownership and transfer of digital assets across blockchain networks"
+      "From on-chain items to dynamic ownership mechanics, our team creates blockchain-powered game systems where NFTs serve as playable, upgradeable, or monetizable assets."
   },
-  {
-    text: "Audit and Optimization",
-    author:
-      "Our audit services focus on optimizing smart contracts and blockchain infrastructure, ensuring the safety and efficiency of your NFT platforms"
-  },
-  {
-    text: "Token Creation",
-    author:
-      "Our team provides token creation services for businesses looking to launch new digital assets, including NFTs, utility tokens, and governance tokens"
-  }
 ];
 
 export const faqNftData = [

@@ -199,12 +199,11 @@ const NftDevelopment = () => {
               Cowchain offers <br className="hidden md:block" /> a variety{" "}
               <br className="hidden md:block" /> of{" "}
               <span className="violet-gradient-text">
-                complementary <br /> services
+                complementary <br /> services:
               </span>
             </>
           }
           data={OtherNftData}
-          bottomBorder={false}
         />
       </div>
 

@@ -12,7 +12,7 @@ import { ServiceStack } from "../components/service/blocks/stack";
 import { TustByNumbers } from "../web3_fullstack_development/blocks/TustByNumbers";
 import { WhiteLabelCases } from "./blocks/WhiteLabelCases";
 import { metadata } from "./utils/WhiteLabelDevMetadata";
-import { faqDappData, otherServices, whiteProcessData } from "./utils/data";
+import { faqDappData, otherWhiteLabelServices, whiteProcessData } from "./utils/data";
 import { IndustriesDexData } from "./utils/data";
 import {
   TustByNumbersData,
@@ -250,11 +250,11 @@ const WhiteLabelDev = () => {
               Cowchain offers <br className="hidden xl:block" />
               a variety <br className="hidden xl:block" /> of{" "}
               <span className="violet-gradient-text">
-                complementary <br /> services
+                complementary <br /> services:
               </span>
             </>
           }
-          data={otherServices}
+          data={otherWhiteLabelServices}
           itemClasses="md:!py-[55px]"
           tag={"other our services"}
         />

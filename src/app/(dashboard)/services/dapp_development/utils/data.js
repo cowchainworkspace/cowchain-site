@@ -129,24 +129,24 @@ export const dappDevProcessData = [
 
 export const otherDappServiceData = [
   {
-    text: "Dex Development",
+    text: "Crypto Wallet Development",
     author:
-      "Our Decentralized Application Development Services include DEX platforms designed for secure, peer-to-peer trading of digital assets"
+      "We develop secure, user-friendly crypto wallets with support for multi-chain assets, DeFi protocols, and integrated dApp access, enabling seamless interaction with the decentralized ecosystem."
   },
   {
-    text: "Smart Contract Development",
+    text: "Cryptocurrency Exchange Development",
     author:
-      "We create and deploy secure smart contracts to automate processes on blockchain platforms, reducing manual errors and ensuring trustless transactions"
+      "Our team builds scalable exchange platforms with features like token swaps, order books, liquidity pools, and compliance-ready architecture for trading digital assets."
   },
   {
-    text: "Audit and Optimization",
+    text: "NFT Development",
     author:
-      "Our team provides thorough audits and optimizations of existing blockchain systems, ensuring security, performance, and compliance with industry standards"
+      "We create tailored NFT solutions, from smart contract deployment to marketplace integration, supporting digital art, collectibles, tokenized access, and beyond."
   },
   {
-    text: "Token Creation and NFT Development",
+    text: "Web3 UI / UX Design",
     author:
-      "We offer comprehensive services for creating tokens and NFTs, allowing businesses to leverage blockchain for digital assets and collectibles"
+      "We design intuitive, conversion-focused Web3 interfaces that abstract away complexity and make decentralized apps feel as smooth as any modern web platform."
   }
 ];
 

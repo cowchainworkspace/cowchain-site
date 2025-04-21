@@ -15,7 +15,7 @@ import {
   OurWorksData,
   consultingFAQData,
   consultingProcessData,
-  otherServices,
+  otherBlockChainServices,
   TustByNumbersData,
   IndustriesDexData,
   BlockchainServiceData
@@ -314,10 +314,10 @@ const BlockChainConsulting = () => {
                 their operations.
               </span>{" "}
               <br />
-              These services include
+              These services include:
             </>
           }
-          data={otherServices}
+          data={otherBlockChainServices}
         />
       </div>
 
