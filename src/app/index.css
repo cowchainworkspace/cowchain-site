@@ -514,3 +514,19 @@ input:-webkit-autofill:active {
     linear-gradient(#fff 0 0);
   mask-composite: exclude;
 }
+
+.step-app-solution-card {
+  position: relative;
+  background: #ffffff29;
+}
+
+.step-app-solution-card::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border: 5px solid #ffffff4d;
+  border-radius: 66px;
+}

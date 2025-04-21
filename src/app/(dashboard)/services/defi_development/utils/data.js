@@ -227,24 +227,24 @@ export const dappDevProcessData = [
 
 export const OtherDefiData = [
   {
-    text: "dApp Development",
-    author:
-      "We build decentralized applications (dApps) to enable businesses to leverage blockchain for secure and transparent operations, including NFT development"
-  },
-  {
     text: "Dex Development",
     author:
-      "Our team specializes in decentralized exchange (DEX) development, allowing peer-to-peer trading of tokens and NFTs on a secure blockchain network"
+      "We build scalable exchange platforms with features like token swaps, order books, liquidity pools, and compliance-ready architecture for trading digital assets."
   },
   {
-    text: "Smart Contract Development",
+    text: "Smart Contract Development Services",
     author:
-      "We create and audit smart contracts to power NFTs, ensuring secure ownership and transfer of digital assets across blockchain networks"
+      "Our team designs and audits smart contracts that power DeFi logic – automated lending, staking, yield farming, and beyond – with a focus on security and long-term maintainability."
   },
   {
-    text: "Token Creation",
+    text: "Crypto Wallet Development",
     author:
-      "Our team provides token creation services for businesses looking to launch new digital assets, including NFTs, utility tokens, and governance tokens"
+      "We develop secure, multi-chain wallets for Web3 applications, supporting custom tokens, dApps, and DeFi integrations across mobile and desktop environments."
+  },
+  {
+    text: "AI Development",
+    author:
+      "We integrate AI-powered logic into DeFi protocols – from predictive models for liquidity management to autonomous agents that optimize on-chain strategies in real time."
   }
 ];
 

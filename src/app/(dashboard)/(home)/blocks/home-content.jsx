@@ -183,7 +183,7 @@ and aimed at solving real-world challenges"
       </div>
       <Cases />
       <CasesMobile />
-      <Feedback isHidden={true} />
+      <Feedback desc="Our clients know they can rely on Cowchain to deliver reliable, secure blockchain solutions. Here’s what they have to say" isHidden={true} />
 
       <Team />
       <ExpertiseServices

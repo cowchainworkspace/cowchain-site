@@ -53,25 +53,25 @@ export const dappBenefitsData = [
   }
 ];
 
-export const IndustriesData = [
+export const IndustriesDappData = [
   {
     title: "Healthcare",
-    text: "In the healthcare sector, our DEX solutions offer secure data exchange between healthcare providers, ensuring compliance with privacy regulations",
+    text: "In healthcare, dapp development companies like Cowchain enable secure exchange and storage of patient data, ensuring confidentiality and compliance with healthcare regulations",
     icon: HealthcareIcon
   },
   {
     title: "Government",
-    text: "Government agencies benefit from decentralized platforms for public services such as secure voting systems and identity verification",
+    text: "For government agencies, blockchain dapps development companies play a crucial role in creating decentralized systems that bring transparency to public services, including identity verification and secure voting",
     icon: GovernmentIcon
   },
   {
     title: "Finance",
-    text: "The finance industry benefits from decentralized exchanges by enabling direct asset transfers, minimizing the need for middlemen",
+    text: "In the finance industry, blockchain dapps development company solutions support secure, direct transactions, eliminating intermediaries and enhancing transparency in financial activities",
     icon: FinanceIcon
   },
   {
     title: "Education",
-    text: "Decentralized platforms in the education sector streamline the verification of academic records, allowing for immutable storage of credentials",
+    text: "Educational institutions benefit from dapp development services by securely managing academic credentials and ensuring records are stored in an immutable format for easy access and verification",
     icon: EducationIcon
   }
 ];
@@ -129,24 +129,24 @@ export const dappDevProcessData = [
 
 export const otherDappServiceData = [
   {
-    text: "Dex Development",
+    text: "Crypto Wallet Development",
     author:
-      "Our Decentralized Application Development Services include DEX platforms designed for secure, peer-to-peer trading of digital assets"
+      "We develop secure, user-friendly crypto wallets with support for multi-chain assets, DeFi protocols, and integrated dApp access, enabling seamless interaction with the decentralized ecosystem."
   },
   {
-    text: "Smart Contract Development",
+    text: "Cryptocurrency Exchange Development",
     author:
-      "We create and deploy secure smart contracts to automate processes on blockchain platforms, reducing manual errors and ensuring trustless transactions"
+      "Our team builds scalable exchange platforms with features like token swaps, order books, liquidity pools, and compliance-ready architecture for trading digital assets."
   },
   {
-    text: "Audit and Optimization",
+    text: "NFT Development",
     author:
-      "Our team provides thorough audits and optimizations of existing blockchain systems, ensuring security, performance, and compliance with industry standards"
+      "We create tailored NFT solutions, from smart contract deployment to marketplace integration, supporting digital art, collectibles, tokenized access, and beyond."
   },
   {
-    text: "Token Creation and NFT Development",
+    text: "Web3 UI / UX Design",
     author:
-      "We offer comprehensive services for creating tokens and NFTs, allowing businesses to leverage blockchain for digital assets and collectibles"
+      "We design intuitive, conversion-focused Web3 interfaces that abstract away complexity and make decentralized apps feel as smooth as any modern web platform."
   }
 ];
 

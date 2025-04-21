@@ -101,17 +101,39 @@ export const EngagementDevData = [
 export const faqDexData = [
   {
     id: 1,
-    title: 'What is Decentralized Exchange (DEX)?',
-    content: 'A decentralized exchange enables users to trade digital assets directly, bypassing the need for a central authority. DEX platforms use smart contracts to automate transactions, providing a secure and transparent environment.'
+    title: "What is Decentralized Exchange (DEX)?",
+    content:
+      "A decentralized exchange enables users to trade digital assets directly, bypassing the need for a central authority. DEX platforms use smart contracts to automate transactions, providing a secure and transparent environment."
   },
   {
     id: 2,
-    title: 'How Much Does It Cost to Create a Decentralized Exchange?',
-    content: 'The cost of decentralized exchange development depends on the platform’s complexity, the features needed, and the blockchain integrations involved. Contact us for a custom estimate tailored to your specific needs.'
+    title: "How Much Does It Cost to Create a Decentralized Exchange?",
+    content:
+      "The cost of decentralized exchange development depends on the platform’s complexity, the features needed, and the blockchain integrations involved. Contact us for a custom estimate tailored to your specific needs."
   },
   {
     id: 3,
-    title: 'What Is the Timeline for Developing a Decentralized Finance Exchange?',
-    content: 'Decentralized cryptocurrency exchange development depends on its complexity. On average, a full-scale platform can take several months from design to deployment.'
+    title:
+      "What Is the Timeline for Developing a Decentralized Finance Exchange?",
+    content:
+      "Decentralized cryptocurrency exchange development depends on its complexity. On average, a full-scale platform can take several months from design to deployment."
+  }
+];
+
+export const otherDexServices = [
+  {
+    text: "DeFi Development",
+    author:
+      "We create decentralized finance protocols that support lending, yield farming, liquidity provision, and automated market-making. Our focus is on composability, capital efficiency, and integration with on-chain and off-chain data layers."
   },
-]
+  {
+    text: "Smart Contract Development Services",
+    author:
+      "We write and audit smart contracts that power core exchange logic – from liquidity pool management and swap execution to permissionless listing and fee handling. Built for speed, security, and long-term maintenance."
+  },
+  {
+    text: "Cryptocurrency Exchange Development",
+    author:
+      "We build full-scale exchange platforms that combine centralized UX with decentralized custody. Includes support for fiat ramps, compliance layers, advanced trading tools, and DeFi integrations where needed."
+  }
+];

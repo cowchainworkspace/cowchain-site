@@ -10,7 +10,7 @@ import Link from "next/link";
 import React from "react";
 import { Helmet } from "react-helmet";
 
-export const HeroSection = ({ title, desc, isRwa = false, ttileClasses }) => {
+export const HeroSection = ({ title, desc, isRwa = false, ttileClasses, descClasses }) => {
   return (
     <section className={cn("relative overflow-visible  lg:pt-[120px]")}>
       <Helmet>
@@ -44,7 +44,7 @@ export const HeroSection = ({ title, desc, isRwa = false, ttileClasses }) => {
         )}
 
         {desc && (
-          <div className="mt-10 flex items-center justify-end gap-2 text-[16px] text-white md:mt-[60px] lg:justify-between">
+          <div className={cn("mt-10 flex items-center justify-end gap-2 text-[16px] text-white md:mt-[60px] lg:justify-between", descClasses)}>
             {desc}
           </div>
         )}

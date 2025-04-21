@@ -10,12 +10,15 @@ import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
-import { DexExpertiseDesc } from "./utils/data";
+import { DexExpertiseDesc, otherDexServices } from "./utils/data";
 import { DexExpertiseData } from "./utils/data";
 import { IndustriesDexData } from "./utils/data";
 import { DexAppDevData } from "./utils/data";
 import { EngagementDevData, faqDexData } from "./utils/data";
 import { metadata } from "./utils/dexDevMetadata";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
 export { metadata };
 
 const DexDevelopment = () => {
@@ -73,6 +76,9 @@ const DexDevelopment = () => {
             Services
           </>
         }
+        itemTitleClasses="lg:text-[20px]"
+        cryptoWalletClass="lg:mb-[80px]"
+         titleClasses="xl:!text-[60px] xl:mb-[60px]"
         desc={DexExpertiseDesc}
         data={DexExpertiseData}
         topBorder={false}
@@ -150,7 +156,7 @@ const DexDevelopment = () => {
         customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
       />
       <ServiceStack />
-      <Feedback />
+      <Feedback desc="Here are a few testimonials from clients using our decentralized exchange software development" />
       <Industries
         title={"Our Engagement Models"}
         desc={
@@ -165,6 +171,8 @@ const DexDevelopment = () => {
         }
         isTwoSides={true}
         data={EngagementDevData}
+        titleClasses="custom1430:text-[56px]"
+        itemTitleClasses="xl:text-[24px]"
         topBorder={false}
       />
       <KeyFeatures
@@ -204,13 +212,18 @@ const DexDevelopment = () => {
               ,<br />
               we offer <br />
               the following <br />
-              <span className="violet-gradient-text">blockchain</span> services
+              <span className="violet-gradient-text">blockchain</span> services:
             </>
           }
+          data={otherDexServices}
           tag={"Other Our Services"}
           typographyContainerClasses="xl:py-[166px]"
         />
       </div>
+
+      <WhiteLabelCases title="our cases" desc="" blockClasses="md:pb-[60px]" />
+      <Cases />
+      <CasesMobile />
 
       <div className="w-full overflow-hidden">
         <FAQ
