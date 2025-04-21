@@ -213,7 +213,7 @@ export const agntProjects = [
     desc: 'StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.',
     img: m2ePlatformImg,
     textColor: "text-secondary",
-    projectLink: "#",
+    projectLink: "step-app",
     itemClasses: "pb-[30px] mt-auto",
 
   },
