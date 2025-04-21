@@ -108,21 +108,26 @@ export const chooseUsData = [
 
 
 
-export const otherServiceData = [
+export const otherFullStackServiceData = [
   {
-    text: "UI / UX Design",
+    text: "Blockchain Consulting",
     author:
-      "We craft intuitive and aesthetically pleasing UI/UX designs, focusing on functionality and user experience to ensure  seamless interactions across platforms"
+      "We advise teams on the most suitable blockchain architecture, tech stack, and protocol integrations to match their product roadmap and user needs, from MVP to enterprise-grade infrastructure."
   },
   {
-    text: "DISCOVERY & CONSULTATIONS",
+    text: "Web3 UI / UX Design",
     author:
-      "Our team provides strategic consultations, offering insights  on project discovery, business goals, and digital strategies,  helping align your web development projects with industry standards"
+      "We design clean, intuitive Web3 interfaces that simplify complex interactions like staking, bridging, and wallet connectivity, improving usability without compromising functionality."
   },
   {
-    text: "White-label Solutions",
+    text: "Crypto Wallet Development",
     author:
-      "Our white-label services allow you to provide bespoke solutions under your own brand, avoiding the need for in-house management"
+      "Our team builds secure wallets with features like multi-chain support, token swaps, and fiat onramps – all designed to integrate seamlessly into your product ecosystem."
+  },
+  {
+    text: "AI Development",
+    author:
+      "We create AI-powered tools and agents that automate Web3 tasks, analyze user behavior, and enhance protocol efficiency, including intelligent onboarding flows, trading logic, and on-chain assistants."
   }
 ];
 

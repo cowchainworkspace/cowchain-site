@@ -65,12 +65,15 @@ const CryptoWalletDev = () => {
           </>
         }
         data={CryptoWalletTypesData}
-        cryptoWalletClass="mb-[60px]"
+        cryptoWalletClass="lg:mb-[60px]"
+        sectionContainerClasses="lg:pb-[102px]"
+        itemTitleClasses="lg:text-[20px]"
+        titleClasses="xl:!text-[60px] xl:mb-[60px]"
         bg={
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[100%] pointer-events-none left-0 h-[1800px] w-auto"
+            className="pointer-events-none absolute -bottom-[100%] left-0 h-[1800px] w-auto"
           />
         }
       />
@@ -81,11 +84,11 @@ const CryptoWalletDev = () => {
             Key Features of Our Wallet <br /> Development Services
           </>
         }
-        itemTitleClasses="max-w-[350px]"
+        itemTitleClasses="lg:max-w-[350px] xl:text-[18px]"
         data={walletFeaturesData}
         topBorder={false}
-        customClasses="!grid-cols-2 !pr-0  xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
-        itemClasses="!flex-row gap-[49px]  !min-w-full"
+        customClasses="!grid-cols-2 !pr-0 xl:gap-y-[120px] xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
+        itemClasses="!flex-row gap-[49px] !min-w-full"
       />
 
       <ExpertiseServices
@@ -97,13 +100,15 @@ const CryptoWalletDev = () => {
         }
         data={walletProcessData}
         topBorder={true}
+        itemTitleClasses="lg:text-[26px] leading-[90px]"
         descClasses="!mb-0"
-        customClasses="xl:flex-col"
-        itemsClasses="grid grid-cols-2 grid-rows-2 gap-x-[82px] gap-y-[70px] min-w-full"
+        customClasses="lg:flex-col"
+        sectionContainerClasses="lg:!flex-col gap-[30px] lg:gap-[50px] xl:gap-[70px]"
+        itemsClasses="grid lg:grid-cols-2 grid-rows-2 gap-x-[82px] gap-y-[70px] min-w-full"
         itemClasses="md:!mt-0"
         bottomBorder={true}
         bg={
-          <CoreFeaturesRWAbg className="absolute -bottom-[90%] right-0 h-auto w-[1100px]" />
+          <CoreFeaturesRWAbg className="pointer-events-none absolute -bottom-[90%] right-0 h-auto w-[1100px]" />
         }
       />
 
@@ -117,7 +122,9 @@ const CryptoWalletDev = () => {
         topBorder={false}
         bottomBorder={false}
         itemClasses="md:text-[20px]"
-        cryptoWalletClass="mb-[80px]"
+        cryptoWalletClass="lg:mb-[80px]"
+        titleClasses="lg:!text-[60px]"
+        itemTitleClasses="lg:text-[20px] leading-[90px]"
       />
 
       <div className="w-full overflow-hidden">
@@ -132,7 +139,8 @@ const CryptoWalletDev = () => {
           isTwoHalf={true}
           hasIcon={false}
           faqGradient={true}
-          itemsClasses={"py-[74px]"}
+          itemTitleClass="xl:!text-[20px]"
+          itemsClasses={"py-[74px] "}
         />
       </div>
 
@@ -153,8 +161,9 @@ const CryptoWalletDev = () => {
         }
         itemClasses="md:text-[20px]"
         data={paymentSystemData}
-        titleClasses="mb-[60px]"
-        cryptoWalletClass="mb-[80px]"
+        titleClasses="md:mb-[60px] lg:!text-[60px]"
+        cryptoWalletClass="lg:mb-[80px]"
+        itemTitleClasses="lg:text-[20px] leading-[90px]"
         topBorder={false}
         bottomBorder={false}
       />
@@ -169,7 +178,7 @@ const CryptoWalletDev = () => {
         }
         desc={
           <>
-            <h1 className=" text-[24px] font-roc uppercase mt-[40px] font-[500]">
+            <h1 className=" mt-[40px] font-roc text-[24px] font-[500] uppercase">
               Proven Expertise in Blockchain Technology
             </h1>
             <p className="mt-[20px] font-manrope text-[16px] font-[500] leading-[24px] text-[#BBBBBB]">
@@ -181,7 +190,7 @@ const CryptoWalletDev = () => {
             <p>
               <br />
             </p>
-            <h1 className=" text-[24px]  font-roc uppercase font-[500]">
+            <h1 className=" font-roc  text-[24px] font-[500] uppercase">
               Comprehensive Support Services
             </h1>
             <p className="mt-[20px] text-[16px] font-[500] leading-[24px] text-[#BBBBBB]">
@@ -218,24 +227,32 @@ const CryptoWalletDev = () => {
         descClasses={"max-w-[798px] !mt-[60px]"}
       />
 
-      <Feedback nobg={true} />
+      <Feedback
+        desc="Our clients know they can rely on Cowchain to deliver reliable, secure blockchain solutions. Here’s what they have to say"
+        nobg={true}
+      />
 
       <div className="relative">
         <div className="w-full overflow-hidden">
           <OtherServices
+          typographyContainerClasses="md:!pt-[80px]"
             tag={"Other Our Services"}
             title={
               <>
-                Alongside <br />
+                In addition to <br />
                 <span className="violet-gradient-text">
                   crypto wallet <br />
                   development
                 </span>
-                , <br /> Cowchain offers <br />
+                , <br /> Cowchain provides <br />
                 <span className="violet-gradient-text">
-                  additional support <br /> services
+                  full-cycle blockchain <br /> services
                 </span>{" "}
-                to fully <br /> back your project
+                to support broader{" "}
+                <span className="violet-gradient-text">
+                  platform functionality and user engagement
+                </span>
+                <br />
               </>
             }
             data={otherRwaServices}
@@ -245,7 +262,7 @@ const CryptoWalletDev = () => {
         <Image
           src={dexBg}
           alt="decoration ellipse"
-          className="absolute -bottom-[80%] pointer-events-none left-0 z-[1] h-[1400px] w-auto"
+          className="pointer-events-none absolute -bottom-[80%] left-0 z-[1] h-[1400px] w-auto"
         />
       </div>
       <WhiteLabelCases

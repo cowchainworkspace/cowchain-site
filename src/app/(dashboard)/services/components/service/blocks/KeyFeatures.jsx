@@ -61,14 +61,14 @@ export function KeyFeatures({
       {!noBg && (
         <Image
           alt=""
-          className="absolute -bottom-[38%] right-0 hidden md:block md:block"
+          className="absolute -bottom-[38%] pointer-events-none right-0 hidden md:block md:block"
           src={dexAdvisoryBg}
         />
       )}
       {isWhiteLabelBg && (
         <Image
           alt="background decoration"
-          className="absolute -bottom-[180%] left-0 hidden md:block"
+          className="absolute pointer-events-none -bottom-[180%] left-0 hidden md:block"
           src={whiteLabelBg}
         />
       )}
@@ -94,7 +94,7 @@ export function KeyFeatures({
           </h2>
           <p
             className={cn(
-              "mt-[40px] max-w-[824px] text-[14px] leading-6 md:my-[20px] md:text-base",
+              "mt-[40px] max-w-[824px] relative z-[2] text-[14px] leading-6 md:my-[20px] md:text-base",
               {
                 "max-w-[592px]": isMaxWidthTab,
                 "text-secondary": isTextSecondary

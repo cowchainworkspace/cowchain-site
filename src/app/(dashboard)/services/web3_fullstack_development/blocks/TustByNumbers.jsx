@@ -10,12 +10,12 @@ import { Counter } from "../../../(home)/components/counter";
 
 const TustByNumbersData = [
   {
-    number: 120,
+    number: 150,
     desc: "projects delivered across diverse industries",
     sighn: "+"
   },
   {
-    number: 150,
+    number: 50,
     desc: "dedicated developers and engineers on our team",
     sighn: "+"
   },
@@ -44,7 +44,7 @@ export function TustByNumbers({
 }) {
   return (
     <section className={`relative  ${home && "h-fit md:h-[700px]"}`}>
-      {(home || isBlockChainConsulting || !noBg) && (
+      {(home || !noBg) && (
         <Image
           alt=""
           className="pointer-events-none absolute -bottom-[38%] left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min lg:-bottom-[120%]"
@@ -55,7 +55,10 @@ export function TustByNumbers({
       <div className={`relative h-fit md:h-full`}>
         <div
           className={cn(
-            "mx-auto grid h-full max-w-[1440px] grid-cols-1 md:grid-cols-[minmax(0,_250px)_1fr_1fr] custom815:grid-cols-[minmax(0,_300px)_1fr_1fr] custom1000:grid-cols-[minmax(0,_400px)_1fr_1fr] custom1200:grid-cols-[minmax(0,_480px)_1fr_1fr] custom1430:grid-cols-[minmax(0,_547px)_1fr_1fr]",
+            "mx-auto grid h-full max-w-[1440px] grid-cols-1 ",
+            "md:grid-cols-[minmax(0,_250px)_1fr_1fr] custom815:grid-cols-[minmax(0,_300px)_1fr_1fr]",
+            "custom1000:grid-cols-[minmax(0,_400px)_1fr_1fr]",
+            "custom1200:grid-cols-[minmax(0,_480px)_1fr_1fr] custom1430:grid-cols-[minmax(0,_547px)_1fr_1fr]",
             {
               "lg:grid-cols-[minmax(0,_400px)_1fr_1fr md:grid-cols-1":
                 isBlockChainConsulting
@@ -70,7 +73,8 @@ export function TustByNumbers({
               {
                 "justify-start": isBlockChainConsulting || isRwa
               },
-              isRwa ? "pr-[70px]" : "custom1430:pr-[168px]"
+              isRwa ? "pr-[70px]" : "custom1430:pr-[168px]",
+              typographyContainerClasses,
             )}
           >
             {tag && <Tag className="mr-auto cursor-default" title={tag} />}
@@ -163,10 +167,10 @@ export function TustByNumbers({
                               duration={4}
                               decimals={decimal}
                               target={number}
-                              className={"font-roc xl:!text-[46px]"}
+                              className={"font-roc xl:!text-[46px] !leading-[90%]"}
                             />
                             {sighn && (
-                              <span className="font-roc text-[18px] font-medium uppercase leading-tight text-white text-white  md:text-[36px] lg:text-5xl">
+                              <span className="font-roc text-[18px] font-medium uppercase leading-[90%] text-white text-white  md:text-[36px] lg:text-[46px]">
                                 {sighn}
                               </span>
                             )}
@@ -177,7 +181,7 @@ export function TustByNumbers({
                     {title && (
                       <div
                         className={cn(
-                          "self-start font-roc text-[18px] font-medium uppercase leading-tight text-white text-white  md:text-[30px] custom815:text-[36px]",
+                          "self-start font-roc text-[18px] font-medium uppercase leading-[90%] text-white text-white  md:text-[30px] custom815:text-[36px]",
                           isRwa
                             ? "md:!mb-[30px] md:leading-[90%]"
                             : " custom1300:text-[46px]"

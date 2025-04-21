@@ -27,7 +27,7 @@ import ton from "@/assets/svgComponents/stack/TONStackIcon";
 
 export const expertiseData = [
   {
-    title: "Blockchain Platforms",
+    title: <>Blockchain <br/> Platforms</>,
     tools: [
       { logo: eth, alt: "Ethereum" },
       { logo: solana, alt: "Solana" },
@@ -40,7 +40,15 @@ export const expertiseData = [
     ]
   },
   {
-    title: "Front-End Technologies",
+    title: "Databases",
+    tools: [
+      { logo: mongodb, alt: "MongoDB" },
+      { logo: mysql, alt: "MySQL" },
+      { logo: postgres, alt: "PostgreSQL" }
+    ]
+  },
+  {
+    title: <>Front-End <br/> Technologies</>,
     tools: [
       { logo: react, alt: "React.js" },
       { logo: nextjs, alt: "Next.js" },
@@ -49,7 +57,7 @@ export const expertiseData = [
     ]
   },
   {
-    title: "Back-End Technologies",
+    title: <>Back-End <br/>  Technologies</>,
     tools: [
       { logo: nodejs, alt: "Node.js" },
       { logo: express, alt: "Express" },
@@ -57,14 +65,7 @@ export const expertiseData = [
       { logo: microservices, alt: "Microservices" }
     ]
   },
-  {
-    title: "Databases",
-    tools: [
-      { logo: mongodb, alt: "MongoDB" },
-      { logo: mysql, alt: "MySQL" },
-      { logo: postgres, alt: "PostgreSQL" }
-    ]
-  },
+  
   {
     title: "Cloud Services",
     tools: [
