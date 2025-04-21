@@ -57,7 +57,8 @@ export default {
         secondary: "#BBBBBB",
         "white-70": "#FFFFFFB2",
         "white-50": "#FFFFFF80",
-        "hyper-violet": "#C64EFF"
+        "hyper-violet": "#C64EFF",
+        "white-15": "#FFFFFF26"
       },
       backgroundImage: {
         credo: 'url("/assets/credo_bg.jpg")',
@@ -74,7 +75,8 @@ export default {
         "muted-horizon":
           "linear-gradient(180deg, #6D8BB1 -5.25%, #CBB4AB 43.54%, rgba(29, 37, 103, 0.42) 100%)",
         "custom-gradient":
-          "linear-gradient(183.72deg, #4D2C91 -8.83%, #000000 60.23%)"
+          "linear-gradient(183.72deg, #4D2C91 -8.83%, #000000 60.23%)",
+          'case-gradient': "radial-gradient(84.94% 218.57% at 15.06% 100%, #000000 0%, rgba(0, 0, 0, 0.4) 100%)"
       },
       width: {
         "calc-full-plus-329": "calc(100% + 329px)",
