@@ -393,15 +393,15 @@ export const gbcProjects = [
   },
   {
     id: 3,
-    tags: [ 'Trading', 'Defi', "AI Development", 'Web Development'],
-    isReversed: true,
+    tags: ["AI Development", 'Web Development', 'Trading', 'Defi'],
     title: 'REFLECT',
     desc: 'Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.',
     img: reflectNew,
     projectLink: "#",
     textGap: "md:gap-[24px]",
     cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-    textColor: "text-secondary"
+    textColor: "text-secondary",
+    tagsContainer: "xl:max-w-[330px]"
   },
 
 ]

@@ -74,7 +74,7 @@ const GBC = () => {
       <GBCWhatWeDid />
       <GBCSlider />
       <TeamBehind
-        headerClasses={"leading-[18.41px] tracking-[1.84px]"}
+        headerClasses={"xl:leading-[18.41px] xl:tracking-[1.84px]"}
         team={gbcTeam}
         classes={"pt-[50px] xl:pt-30"}
       />

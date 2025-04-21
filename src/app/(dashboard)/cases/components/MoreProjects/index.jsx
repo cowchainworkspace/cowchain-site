@@ -71,27 +71,16 @@ const MoreProjects = ({ projects, headerClasses = "" }) => {
                   )}
                 >
                   <div className={cn("flex flex-wrap gap-2", tagsContainer)}>
-                    {isReversed && !isMoreThan1280
-                      ? [...tags].reverse().map((tag) => (
-                          <div
-                            className="flex items-center justify-center rounded-20 border-[0.5px] border-white bg-white px-4 py-2"
-                            key={tag}
-                          >
-                            <p className="font-manrope text-sm font-medium leading-[18px] text-black">
-                              {tag}
-                            </p>
-                          </div>
-                        ))
-                      : tags.map((tag) => (
-                          <div
-                            className="flex items-center justify-center rounded-20 border-[0.5px] border-white bg-white px-4 py-2"
-                            key={tag}
-                          >
-                            <p className="font-manrope text-sm font-medium leading-[18px] text-black">
-                              {tag}
-                            </p>
-                          </div>
-                        ))}
+                    {tags.map((tag) => (
+                      <div
+                        className="flex items-center justify-center rounded-20 border-[0.5px] border-white bg-white px-4 py-2"
+                        key={tag}
+                      >
+                        <p className="font-manrope text-sm font-medium leading-[18px] text-black">
+                          {tag}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                   <div className={cn("flex flex-col gap-4", textGap)}>
                     <h3 className="font-roc text-2xl font-medium uppercase leading-90 text-white">
