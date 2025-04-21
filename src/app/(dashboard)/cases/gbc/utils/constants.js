@@ -353,7 +353,7 @@ export const gbcProjects = [
     desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
     img: m2eNew,
     itemClasses: "mt-[363px]",
-    projectLink: "#",
+    projectLink: "step-app",
     textColor: "text-secondary",
     textGap: "gap-[24px]"
   },

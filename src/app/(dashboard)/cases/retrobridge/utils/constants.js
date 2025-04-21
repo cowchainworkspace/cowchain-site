@@ -246,7 +246,7 @@ export const retroBridgeProjects = [
     desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
     img: m2ePlatformImg,
     itemClasses: "pb-[30px] mt-auto",
-    projectLink: "#"
+    projectLink: "step-app"
   },
   {
     id: 2,   
