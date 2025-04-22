@@ -33,8 +33,11 @@ const CasesSlider = ({
     ]
   );
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
+  const [isLargerThan1024] = useMediaQuery("(min-width: 1024px)");
+
   const tweenFactor = useRef(0);
   const tweenNodes = useRef([]);
+  const currentResolution = isHybrid ? isLargerThan1024 : isLargerThan768;
 
   const setTweenNodes = useCallback((emblaApi) => {
     tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
@@ -120,7 +123,7 @@ const CasesSlider = ({
       <div className={"embla relative h-full  w-screen"}>
         <div className={"embla__viewport"} ref={emblaRef}>
           <div
-            className={cn("embla__container flex", isHybrid && "gap-[15px]")}
+            className={cn("embla__container flex", isHybrid && "md:gap-[15px]")}
           >
             {images?.map(
               (
@@ -133,14 +136,14 @@ const CasesSlider = ({
                     key={id}
                     className={cn(
                       "relative flex-shrink-0 pl-[30px]",
-                      isHybrid && lastIndex && "last:!mr-[15px]",
+                      isHybrid && lastIndex && "md:last:!mr-[15px]",
                       isPixelVerse && "ml-[50px] pl-0",
                       isAgnt && "ml-5 pl-0",
                       itemClasses
                     )}
                     style={{
-                      width: `${isLargerThan768 ? width : mobileWidth}px`,
-                      height: `${isLargerThan768 ? height : mobileHeight}px`
+                      width: `${currentResolution ? width : mobileWidth}px`,
+                      height: `${currentResolution ? height : mobileHeight}px`
                     }}
                   >
                     <Image

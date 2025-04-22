@@ -31,13 +31,13 @@ const TeamBehind = ({
               <div
                 key={id}
                 className={cn(
-                  "border-b-[0.5px] border-white-50 px-4 pb-6 first:border-t-[0.5px] first:pt-6 md:border-t-0 md:px-0 md:pb-8 md:last:pb-0",
+                  "border-b-[0.5px] border-white-50 px-4 pb-6 first:border-t-[0.5px] first:pt-6 md:border-t-0 md:px-0 md:pb-[30px] md:first:border-t-0 md:first:pt-0 md:last:border-b-0 md:last:pb-0",
                   blockClasses
                 )}
               >
                 <h4
                   className={cn(
-                    "mb-4 font-manrope text-xs uppercase leading-5 tracking-[2px] text-secondary",
+                    "mb-2 font-manrope text-xs uppercase leading-5 tracking-[2px] text-secondary xl:mb-4",
                     headerClasses
                   )}
                 >

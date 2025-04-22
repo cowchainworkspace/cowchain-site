@@ -78,7 +78,7 @@ const GBC = () => {
         team={gbcTeam}
         classes={"pt-[50px] xl:pt-30"}
       />
-      <MoreProjects projects={gbcProjects} />
+      <MoreProjects projects={gbcProjects} isReversed={true} />
       <Contact
         className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
         descriptionClasses={"hidden md:block"}

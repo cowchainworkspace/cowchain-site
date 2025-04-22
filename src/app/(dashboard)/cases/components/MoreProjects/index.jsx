@@ -5,7 +5,7 @@ import Link from "next/link";
 import React from "react";
 import RightArrowSvg from "../../../../../../public/svgIcons/RightArrowSvg";
 
-const MoreProjects = ({ projects, headerClasses = "" }) => {
+const MoreProjects = ({ projects, headerClasses = "", isReversed }) => {
   const [isMoreThan1280] = useMediaQuery("(min-width: 1280px)");
   return (
     <section className={cn("pt-[50px] xl:pt-[154px]")}>
@@ -31,7 +31,8 @@ const MoreProjects = ({ projects, headerClasses = "" }) => {
       </div>
       <div
         className={cn(
-          "flex flex-col-reverse  border-y-[0.5px] !border-white-50 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3"
+          "flex flex-col border-y-[0.5px] !border-white-50 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3",
+          isReversed && "flex-col-reverse"
         )}
       >
         {projects.map(
@@ -46,8 +47,7 @@ const MoreProjects = ({ projects, headerClasses = "" }) => {
             projectLink,
             textGap,
             cardClasses,
-            tagsContainer,
-            isReversed
+            tagsContainer
           }) => {
             return (
               <Link
