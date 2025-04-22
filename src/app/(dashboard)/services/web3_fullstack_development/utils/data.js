@@ -128,7 +128,7 @@ export const otherFullStackServiceData = [
     text: "AI Development",
     author:
       "We create AI-powered tools and agents that automate Web3 tasks, analyze user behavior, and enhance protocol efficiency, including intelligent onboarding flows, trading logic, and on-chain assistants."
-  }
+  },
 ];
 
 export const faqData = [

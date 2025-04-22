@@ -79,7 +79,11 @@ const GBC = () => {
         classes={"pt-[50px] xl:pt-30"}
       />
       <MoreProjects projects={gbcProjects} />
-      <Contact contactContainer={"py-[50px] xl:py-[143px]"} />
+      <Contact
+        className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
+        descriptionClasses={"hidden md:block"}
+        titleClasses={"mb-8 md:mb-0"}
+      />
     </section>
   );
 };

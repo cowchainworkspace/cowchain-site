@@ -33,7 +33,7 @@ const CryptoWalletDev = () => {
             Crypto Wallet Development <br /> Services for Your Needs
           </>
         }
-        ttileClasses="!pt-0"
+        ttileClasses="md:!pt-0"
       />
       <Achievements
         tag={"Crypto Wallet Development Services"}

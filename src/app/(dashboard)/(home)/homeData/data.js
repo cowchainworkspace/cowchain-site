@@ -1,17 +1,17 @@
-import bg from "@/assets/homepage/bg.png";
-import bridge from "@/assets/cases/newCases/crossChainTransferBridgeImg.png";
 import payment from "@/assets/cases/newCases/CryptoExchangeImg.png";
+import hotel from "@/assets/cases/newCases/HotelBusinessImg.png";
+import bridge from "@/assets/cases/newCases/crossChainTransferBridgeImg.png";
 import finance from "@/assets/cases/newCases/cryptoWalletApp2Img.png";
 import wallet from "@/assets/cases/newCases/cryptoWalletAppImg.png";
-import hotel from "@/assets/cases/newCases/HotelBusinessImg.png";
 import m2e from "@/assets/cases/newCases/m2ePlatformImg.png";
+import bg from "@/assets/homepage/bg.png";
+import linkedin from "@/assets/homepage/linkedin.svg";
 import pic1 from "@/assets/homepage/projects/1.jpg";
 import pic2 from "@/assets/homepage/projects/2.jpg";
 import pic3 from "@/assets/homepage/projects/3.jpg";
 import MichaelImg from "@/assets/homepage/team/newTeam/michaelImg.png";
 import OlehImg from "@/assets/team/executives/OlehImg2.png";
 import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
-import linkedin from "@/assets/homepage/linkedin.svg";
 
 import agnt from "@/assets/cases/agntCase.png";
 import gbc from "@/assets/cases/gbcCase.png";
@@ -357,7 +357,7 @@ export const servicesBlocksData = [
       { title: "Social-fi mini-app", link: "/services/social_fi_mini_app" },
       { title: "Mobile crypto wallet", link: "/services/mobile_crypto_wallet" },
       { title: "ICO constructor", link: "/services/ico_constructor" },
-      { title: "ICO platform", link: "/services/ico_platform" },
+      { title: "ICO platform", link: "/services/ico_platform_development" },
       { title: "NFT Marketplace", link: "/services/nft_marketplace" },
       { title: "Staking", link: "/services/staking" },
       { title: "Crypto Lottery", link: "/services/crypto_lottery" },
@@ -395,7 +395,7 @@ export const servicesBlocksData = [
         link: "/services/cryptocurrency_exchange"
       },
       { title: "P2P crypto exchange", link: "/services/p2p_crypto_exchange" },
-      { title: "ICO Platform", link: "/services/ico_platform" },
+      { title: "ICO Platform", link: "/services/ico_platform_development" },
       { title: "RWA Tokenization", link: "/services/rwa_tokenization" },
       { title: "NFT Game", link: "/services/nft_game" },
       { title: "Metaverse", link: "/services/metaverse" }

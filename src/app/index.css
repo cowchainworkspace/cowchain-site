@@ -495,6 +495,26 @@ input:-webkit-autofill:active {
   box-sizing: border-box;
 }
 
+.cases-border-gradient {
+  position: relative;
+  border-radius: 50%;
+}
+
+.cases-border-gradient::after {
+  content: "";
+  position: absolute;
+  display: block;
+  inset: 0;
+  border-radius: inherit;
+  padding: 10px;
+  background: linear-gradient(137.74deg, #7d40ff 23.8%, #d3b1ff 76.15%);
+  -webkit-mask-composite: xor;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
 .step-app-solution-card {
   position: relative;
   background: #ffffff29;
