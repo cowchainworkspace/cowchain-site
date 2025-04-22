@@ -5,13 +5,13 @@ import { DexIcon } from '@/assets/svgComponents/cryptocurrency/DexIcon'
 import {CexIcon } from "@/assets/svgComponents//cryptocurrency/CexIcon";
 import GovernmentIcon from "@/assets/svgComponents/industries/GovermentIcon";
 import HelthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
-import {HybrydEx} from "@/assets/svgComponents/cryptocurrency/hybrydEx";
 import HybridIcon from "@/assets/svgComponents/industries/HybridIcon";
 import LaunchMaintenanceIcon from "@/assets/svgComponents/industries/LaunchMaitenanceIcon";
 import PlanningConsultingIcon from "@/assets/svgComponents/industries/PlanningConsaltingIcon";
 import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon";
 import SupplyChain from "@/assets/svgComponents/industries/SupplyChainIcon";
 import TestingIcon from "@/assets/svgComponents/industries/TestingIcon";
+import { HybrydEx } from "../../../../../assets/svgComponents/cryptoWallets/HybrydEx";
 
 export const DexExpertiseDesc =
   "We believe that a solid foundation in decentralized exchange development is key to creating platforms that not only meet today’s demands but also evolve with the growing needs of the cryptocurrency market";
