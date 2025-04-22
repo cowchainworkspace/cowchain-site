@@ -30,7 +30,7 @@ const GBC = () => {
         tags={gbcTags}
         descriptionClasses="max-w-[640px] font-manrope"
         heroDescription={
-          <p className="text-center font-manrope text-sm font-[450] leading-[22.1px] tracking-wider text-white-70">
+          <p className="text-center font-manrope text-xs font-[450] leading-5 tracking-wider text-white-70 md:text-sm md:leading-[22.1px]">
             GMX Blueberry Club (GBC) is a next-generation NFT platform that
             combines customization, trading, and gamification. It allows users
             to collect and personalize GBC NFTs, trade assets, earn Sweet
@@ -38,21 +38,21 @@ const GBC = () => {
           </p>
         }
         containerClasses="relative"
-        headerClasses="font-montserrat text-[64px] xl:leading-[64px]"
+        headerClasses="font-montserrat text-[36px] text-center leading-[42px] xl:text-[64px] xl:leading-[64px]"
         bgDecoration={
           <>
             <Image
               width={56}
               height={56}
               src={"/cases/gbc/candy-one.png"}
-              className="absolute -left-10 top-[35%] scale-150"
+              className="absolute -left-10 top-[35%] hidden scale-150 lg:block"
               alt={"lollipop"}
             />
             <Image
               width={78}
               height={79}
               src={"/cases/gbc/candy-two.png"}
-              className="absolute -right-10 bottom-0 scale-150"
+              className="absolute -right-10 bottom-0 hidden scale-150 lg:block"
               alt={"lollipop"}
             />
           </>
@@ -60,22 +60,30 @@ const GBC = () => {
       />
       <Banner
         img={"/cases/gbc/gbc-banner.webp"}
-        classes={"h-[500px]"}
+        classes={"h-[140px] md:h-[200px] lg:h-[300px] xl:h-[500px]"}
         imgDesc={"GBC banner"}
       />
       <GBCOverview />
-      <CasesSlider sectionClasses={"h-[443px]"} images={gbcSlides} />
+      <CasesSlider
+        sectionClasses={"h-[226px] py-5 md:py-0 md:h-[443px]"}
+        images={gbcSlides}
+        itemClasses={"pl-0 ml-[13px] md:ml-7"}
+      />
       <GBCSolutions solutions={gbcSolutions} />
       <GBCRewards />
       <GBCWhatWeDid />
       <GBCSlider />
       <TeamBehind
-        headerClasses={"leading-[18.41px] tracking-[1.84px]"}
+        headerClasses={"xl:leading-[18.41px] xl:tracking-[1.84px]"}
         team={gbcTeam}
-        classes={"pt-30"}
+        classes={"pt-[50px] xl:pt-30"}
       />
       <MoreProjects projects={gbcProjects} />
-      <Contact className={" pb-[125px] pt-[121px]"} />
+      <Contact
+        className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
+        descriptionClasses={"hidden md:block"}
+        titleClasses={"mb-8 md:mb-0"}
+      />
     </section>
   );
 };

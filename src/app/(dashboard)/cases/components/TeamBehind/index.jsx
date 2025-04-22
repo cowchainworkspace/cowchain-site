@@ -13,23 +13,25 @@ const TeamBehind = ({
 }) => {
   return (
     <section>
-      <div className={cn("mx-auto max-w-[1440px] px-[98px]", classes)}>
-        <div className={cn("grid grid-cols-2", containerClasses)}>
+      <div
+        className={cn("mx-auto max-w-[1440px] md:px-8 xl:px-[98px]", classes)}
+      >
+        <div className={cn("grid md:grid-cols-2", containerClasses)}>
           <h2
             className={cn(
-              "font-roc text-[60px] font-medium uppercase leading-90",
+              "mb-6 px-4 font-roc text-[32px] font-medium uppercase leading-90 md:mb-0 md:px-0 xl:text-[60px]",
               titleClasses
             )}
           >
             team behind
             <br /> the project
           </h2>
-          <div className={cn("flex flex-col gap-8", listClasses)}>
+          <div className={cn("flex flex-col gap-6 xl:gap-8", listClasses)}>
             {team.map(({ id, department, people }) => (
               <div
                 key={id}
                 className={cn(
-                  "border-b-[0.5px] border-white-50 pb-8 last:border-0 last:pb-0",
+                  "border-b-[0.5px] border-white-50 px-4 pb-6 first:border-t-[0.5px] first:pt-6 md:border-t-0 md:px-0 md:pb-8 md:last:pb-0",
                   blockClasses
                 )}
               >
@@ -43,7 +45,7 @@ const TeamBehind = ({
                 </h4>
                 <p
                   className={cn(
-                    "font-manrope text-xl font-medium leading-[30px] text-white",
+                    "font-manrope text-sm font-medium leading-6 text-white xl:text-xl xl:leading-[30px]",
                     descClasses
                   )}
                 >

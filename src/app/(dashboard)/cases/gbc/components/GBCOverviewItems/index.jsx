@@ -18,7 +18,7 @@ const GBCOverviewItems = ({ items }) => {
       >
         {items.map(({ itemName, id, itemValue, itemDesc }) => (
           <AccordionItem
-            className="border-b-[0.5px] border-white-50 py-[18px] first:pt-0"
+            className="border-b-[0.5px] border-white-50 px-4 py-[22px] first:pt-0 md:px-0 xl:py-[18px]"
             key={id}
           >
             {({ isExpanded }) => (
@@ -47,19 +47,19 @@ const GBCOverviewItems = ({ items }) => {
                 </AccordionButton>
                 <AccordionPanel>
                   {itemDesc && (
-                    <p className="mb-[5px] font-manrope text-xl font-medium leading-[30px] !text-white">
+                    <p className="mb-[5px] font-manrope text-sm font-normal leading-6 !text-white xl:text-xl xl:font-medium xl:leading-[30px]">
                       {itemDesc}
                     </p>
                   )}
                   {typeof itemValue === "string" ? (
-                    <p className="font-manrope text-[18.41px] font-medium leading-[27.62px] !text-white">
+                    <p className="font-manrope text-sm font-normal leading-6 !text-white xl:text-[18.41px] xl:font-medium xl:leading-[27.62px]">
                       {itemValue}
                     </p>
                   ) : (
-                    <ul className="flex list-disc flex-col gap-[10px] pl-8">
+                    <ul className="flex flex-col gap-[14px] xl:list-disc xl:gap-[10px] xl:pl-8">
                       {itemValue.map(({ itemValueDescription }) => (
                         <li key={itemValueDescription}>
-                          <p className="list-item font-manrope text-[20px] font-normal leading-[30px] !text-white">
+                          <p className="font-manrope text-sm font-normal leading-6 !text-white xl:list-item xl:text-[20px] xl:leading-[30px]">
                             {itemValueDescription}
                           </p>
                         </li>
