@@ -1,15 +1,16 @@
+"use client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 
 const CasesSolutions = ({ solutions, classes }) => {
   return (
-    <section className="py-[120px]">
-      <div className="mx-auto max-w-[1440px] px-[176px]">
-        <h2 className="mb-1 font-roc text-[54px] font-medium uppercase leading-90 text-white">
+    <section className="py-[50px] xl:py-[120px]">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-10 xl:px-[176px]">
+        <h2 className="mb-6 font-roc text-[32px] font-medium uppercase leading-90 text-white xl:mb-1 xl:text-[54px]">
           solutions
         </h2>
-        <div className="flex w-full flex-col gap-4">
+        <div className="grid w-full gap-14 md:grid-cols-2  xl:grid-cols-1  xl:gap-4 ">
           {solutions.map(
             (
               {
@@ -26,20 +27,20 @@ const CasesSolutions = ({ solutions, classes }) => {
               <div
                 key={id}
                 className={cn(
-                  "flex w-full items-center justify-between",
-                  (index + 1) % 2 === 0 && "flex-row-reverse",
+                  "flex w-full flex-col-reverse items-center gap-4 xl:flex-row xl:justify-between xl:gap-0",
+                  (index + 1) % 2 === 0 && "xl:flex-row-reverse",
                   classes
                 )}
               >
                 {/* Text Block */}
                 <div
                   className={cn(
-                    "flex  flex-col gap-[30px]",
-                    (index + 1) % 2 === 0 && "items-end",
+                    "flex  flex-col gap-4 xl:gap-[30px]",
+                    (index + 1) % 2 === 0 && "xl:items-end",
                     blockClasses
                   )}
                   style={{
-                    width: `${textBlockWidth}px`
+                    maxWidth: `${textBlockWidth}px`
                   }}
                 >
                   <h3 className="font-manrope text-xs uppercase leading-5 tracking-[2px] text-secondary">
@@ -47,27 +48,32 @@ const CasesSolutions = ({ solutions, classes }) => {
                   </h3>
                   <p
                     className={cn(
-                      "text-xl font-medium leading-[30px] text-white",
-                      (index + 1) % 2 === 0 && "text-right"
+                      "text-xs font-medium leading-5 text-white xl:text-xl xl:leading-[30px]",
+                      (index + 1) % 2 === 0 && "xl:text-right"
                     )}
                   >
                     {desc}
                   </p>
                 </div>
 
+                <Image
+                  width={img.mobileWidth}
+                  height={img.mobileHeight}
+                  src={img.mobileHref.src}
+                  alt={img.info}
+                  className={"xl:hidden"}
+                />
                 <div
-                  className={cn("relative flex-shrink-0", imageClasses)}
+                  className={cn(
+                    "relative hidden flex-shrink-0 xl:block",
+                    imageClasses
+                  )}
                   style={{
                     width: `${img.width}px`,
                     height: `${img.height}px`
                   }}
                 >
-                  <Image
-                    src={img.href}
-                    alt={img.info}
-                    fill
-                    className="object-contain"
-                  />
+                  <Image src={img.href} fill className="object-contain" />
                 </div>
               </div>
             )

@@ -13,7 +13,7 @@ const Banner = ({ img, imgDesc, classes, decorationElement, bannerTitle }) => {
           width={442}
           height={219}
           src={"/cases/hybrid/cases-hybrid-ellipse.webp"}
-          className="absolute left-[77px] top-[140px] z-50 scale-150"
+          className="absolute left-10 top-10 z-50 h-[56] w-[112px] md:left-[65px] md:top-[83px] lg:top-[140px] lg:h-[219px] lg:h-[219px] lg:w-[442px] lg:w-[442px] lg:scale-150 xl:left-[77px]"
           alt="background decoration ellipse"
         />
       )}

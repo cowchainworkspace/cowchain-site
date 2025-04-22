@@ -18,15 +18,15 @@ const OverviewItems = ({ overviewItems }) => {
       >
         {overviewItems.map(({ itemName, id, itemValue }) => (
           <AccordionItem
-            className="border-b-[0.5px] border-white-50 py-5 first:pt-0"
+            className="border-b-[0.5px] border-white-50 px-4 py-[22px] first:pt-0 md:px-0 xl:py-5"
             key={id}
           >
             {({ isExpanded }) => (
               <div>
                 <AccordionButton
                   className={cn(
-                    "flex items-center justify-between",
-                    isExpanded && "mb-[14px]"
+                    "z-[100] flex items-center justify-between",
+                    isExpanded && "mb-4 xl:mb-[14px]"
                   )}
                 >
                   <span className="font-manrope text-xs uppercase leading-5 tracking-[2px] text-secondary">
@@ -34,7 +34,7 @@ const OverviewItems = ({ overviewItems }) => {
                   </span>
                   <div
                     className={cn(
-                      "flex -rotate-180 items-center justify-center transition-transform duration-300",
+                      "z-10 flex -rotate-180 items-center justify-center transition-transform duration-300",
                       isExpanded && "rotate-0"
                     )}
                   >
@@ -51,10 +51,10 @@ const OverviewItems = ({ overviewItems }) => {
                       {itemValue.map(
                         ({ itemValueTitle, itemValueDescription }) => (
                           <div key={itemValueTitle}>
-                            <h4 className="mb-[6px] font-manrope text-xl normal-case leading-[30px] text-white">
+                            <h4 className="mb-[6px] hidden font-manrope text-xl normal-case leading-[30px] text-white xl:block">
                               {itemValueTitle}
                             </h4>
-                            <p className="font-manrope text-sm font-medium leading-6 !text-white-70">
+                            <p className="font-manrope text-sm font-medium leading-6 !text-white xl:!text-white-70">
                               {itemValueDescription}
                             </p>
                           </div>
