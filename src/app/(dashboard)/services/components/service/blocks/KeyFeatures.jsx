@@ -86,7 +86,7 @@ export function KeyFeatures({
           )}
           <h2
             className={cn(
-              "lg:order-0 text-[36px] uppercase text-white  md:text-[60px]",
+              "lg:order-0 relative text-[36px] uppercase text-white z-[2]  md:text-[60px]",
               titleClasses
             )}
           >

@@ -73,7 +73,7 @@ export function Industries({
           >
             <h2
               className={cn(
-                "whitespace-pre-line text-left text-[36px] uppercase md:text-center md:text-start  custom1430:text-[60px]",
+                "whitespace-pre-line z-[2] text-left text-[36px] uppercase md:text-center md:text-start  custom1430:text-[60px]",
                 {
                   "xl:text-[42px]": isTwoSides
                 },
