@@ -8,6 +8,8 @@ import React, { useState } from "react";
 import ContactForm from "./utils/ContactForm";
 
 export default function Contact({
+  title,
+  desc,
   className,
   descriptionClasses,
   titleClasses
@@ -37,7 +39,11 @@ export default function Contact({
               titleClasses
             )}
           >
-            HAVE PROJECT <br className="hidden md:block" /> IN MIND?
+            {title || (
+              <>
+                HAVE PROJECT <br className="hidden md:block" /> IN MIND?
+              </>
+            )}
           </h3>
           <p
             className={cn(
@@ -45,9 +51,13 @@ export default function Contact({
               descriptionClasses
             )}
           >
-            We often look for new talents, so if you are interested in working
-            in Cowchain, <br className="hidden md:block" /> send your CV and our
-            HRs will get in touch if you are a great fit
+            {desc || (
+              <>
+                We often look for new talents, so if you are interested in
+                working in Cowchain, <br className="hidden md:block" /> send
+                your CV and our HRs will get in touch if you are a great fit
+              </>
+            )}
           </p>
           <button
             className="btn-contact mx-auto lg:h-48 lg:w-48"

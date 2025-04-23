@@ -213,7 +213,7 @@ export const chooseCryptocurrencyData = [
     desc: "Experience matters when choosing a development partner. Our group has a track record of developing dependable, inventive, and growth-ready cryptocurrency exchange solutions. In order to provide you the assurance that your platform is in capable hands, we offer end-to-end development services, supported by client endorsements and a portfolio of projects."
   },
   {
-    title: "Assessing Blockchain  and Multi-Currency Support",
+    title: "Assessing Blockchain and Multi-Currency Support",
     desc: "Choose a team that excels in blockchain integration and supports a wide range of cryptocurrencies. Our expertise in creating multi-currency exchange platforms establishes your platform will cater to a diverse audience and remain competitive."
   }
 ];

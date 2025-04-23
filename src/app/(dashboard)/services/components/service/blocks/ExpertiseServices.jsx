@@ -18,12 +18,13 @@ export function ExpertiseServices({
   itemsClasses = "",
   itemClasses = "",
   titleClasses = "",
-  descClasses,
+  descClasses = "",
   cryptoWalletClass,
   itemTitleClasses,
   containerClasses = "",
   sectionContainerClasses = ""
 }) {
+  console.log(descClasses);
   return (
     <section
       className={`relative ${topBorder && "border-t border-t-th-fade"} ${bottomBorder && "border-b border-b-th-fade"}`}
@@ -91,10 +92,8 @@ export function ExpertiseServices({
               <div>
                 <p
                   className={cn(
-                    "mb-6 text-[16px] !leading-[22px] !text-[#BBBBBB]",
-                    {
-                      "mt-6": title
-                    },
+                    "mb-6 text-[16px] !leading-[22px] !text-secondary",
+                    title && "mt-6",
                     descClasses,
                     index !== data.length - 1 && cryptoWalletClass
                   )}

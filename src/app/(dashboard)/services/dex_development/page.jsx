@@ -78,7 +78,7 @@ const DexDevelopment = () => {
         }
         itemTitleClasses="lg:text-[20px]"
         cryptoWalletClass="lg:mb-[80px]"
-         titleClasses="xl:!text-[60px] xl:mb-[60px]"
+        titleClasses="xl:!text-[60px] xl:mb-[60px]"
         desc={DexExpertiseDesc}
         data={DexExpertiseData}
         topBorder={false}

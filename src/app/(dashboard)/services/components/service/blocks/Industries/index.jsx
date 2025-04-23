@@ -43,7 +43,9 @@ export function Industries({
   descClasses,
   itemTitleClasses,
   titleClasses,
-  titleContainerClasses
+  titleContainerClasses,
+  itemContainerClasses,
+  containerClasses
 }) {
   return (
     <section
@@ -53,7 +55,8 @@ export function Industries({
     >
       {bg && bg}
       <div
-        className={`mx-auto flex w-full max-w-[1440px] flex-col p-5 pb-[30px] pt-[60px] sm:grid sm:py-[126px] md:px-[32px] lg:px-[88px] 
+        className={cn(
+          `mx-auto flex w-full max-w-[1440px] flex-col p-5 pb-[30px] pt-[60px] sm:grid sm:py-[126px] md:px-[32px] lg:px-[88px] 
           ${
             isTwoSides
               ? "grid-cols-2 gap-x-[50px] gap-y-[42px] sm:gap-y-[77px] custom1000:gap-x-[100px] custom1200:gap-x-[134px]"
@@ -65,7 +68,9 @@ export function Industries({
           } 
              ${data.length < 4 && !isTwoSides ? "grid-cols-[405px_1fr_1fr]" : ""}
   ${fullGrid ? "" : "grid-cols-[250px_1fr] custom1000:grid-cols-[323px_1fr]"}
-            `}
+            `,
+          containerClasses
+        )}
       >
         {!fullGrid && (
           <div
@@ -73,11 +78,11 @@ export function Industries({
           >
             <h2
               className={cn(
-                "whitespace-pre-line z-[2] text-left text-[36px] uppercase md:text-center md:text-start  custom1430:text-[60px]",
+                "z-[2] whitespace-pre-line text-left text-[36px] uppercase md:text-center md:text-start  custom1430:text-[60px]",
                 {
                   "xl:text-[42px]": isTwoSides
                 },
-                titleClasses,
+                titleClasses
               )}
             >
               {title}
@@ -110,8 +115,11 @@ export function Industries({
           {data.map((expertise, index) => (
             <div
               key={index}
-              className={`col-span-1 row-span-1 z-[10] flex ${itemClasses}  ${expertise.text ? "items-start" : "items-center"}
-                  ${isTwoSides || fullGrid || data.length < 4 ? "max-w-full flex-col gap-0 sm:max-w-[307px]" : "gap-5 lg:gap-[49px]"}`}
+              className={cn(
+                `z-[10] col-span-1 row-span-1 flex ${itemClasses}  ${expertise.text ? "items-start" : "items-center"}
+                  ${isTwoSides || fullGrid || data.length < 4 ? "max-w-full flex-col gap-0 sm:max-w-[307px]" : "gap-5 lg:gap-[49px]"}`,
+                itemContainerClasses
+              )}
             >
               {expertise.icon && (
                 <div
@@ -128,7 +136,7 @@ export function Industries({
                 <div className="">
                   <h3
                     className={cn(
-                      "mb-[22px] max-w-[310px] !leading-[90%] uppercase md:text-xl",
+                      "mb-[22px] max-w-[310px] uppercase !leading-[90%] md:text-xl",
                       itemTitleClasses
                     )}
                   >

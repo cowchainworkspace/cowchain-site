@@ -3,6 +3,7 @@ import star from "@/assets/clients/reate-star.svg";
 import clutch from "@/assets/homepage/clutch.svg";
 import topRated from "@/assets/homepage/topRatedIcon.svg";
 import upwork from "@/assets/homepage/upwork.svg";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 
@@ -34,7 +35,7 @@ const feedbackData = [
   {
     text: '"Thanks to Cowchain’s work, the client was able to complete their ecosystem and full flow cycle. The team was meticulous and efficient in their project management; they delivered on time and beyond expectations. Overall, they stood out for their high level of expertise and professionalism."',
     author: "Artem Poliakoff, CEO, Biometric technologies"
-  },
+  }
 ];
 
 const Quote = ({ text, author, index }) => {
@@ -80,7 +81,8 @@ export const Feedback = ({
       development and blockchain technology. We focus on delivering innovative
       solutions that meet the unique needs of each project
     </>
-  )
+  ),
+  imageClasses = ""
 }) => {
   return (
     <section
@@ -94,9 +96,10 @@ export const Feedback = ({
           <div className="md-border-r box-border flex md:col-span-2 md:ml-auto md:max-w-[576px] ">
             {!nobg && (
               <Image
-                className={
-                  "pointer-events-none absolute -top-[40%] left-0 md:-left-[10vw] md:-top-[25vw] md:h-1/2 md:h-auto md:w-[50vw]"
-                }
+                className={cn(
+                  "pointer-events-none absolute -top-[40%] left-0 md:-left-[10vw] md:-top-[25vw] md:h-1/2 md:h-auto md:w-[50vw]",
+                  imageClasses
+                )}
                 src={bg}
                 aria-hidden="true"
                 role="presentation"
