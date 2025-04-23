@@ -30,6 +30,7 @@ const RwaTokenization = () => {
       <HeroSection
         isRwa={true}
         title={"RWA Tokenization"}
+        descClasses="lg:mt-[34px]"
         desc={
           <>
             Elevate your offerings with our customizable white label solutions.
@@ -107,6 +108,9 @@ const RwaTokenization = () => {
             className="absolute -bottom-[40%] left-0 hidden h-[1700px] md:block"
           />
         }
+        titleClasses=" xl:text-[60px] leading-90"
+        itemTitleClasses="lg:text-[20px]"
+        cryptoWalletClass="lg:mb-[80px]"
         sectionContainerClasses={"md:flex-row md:gap-5"}
       />
 
@@ -135,10 +139,13 @@ const RwaTokenization = () => {
         data={CoreFeaturesTokenization}
         topBorder={true}
         bottomBorder={false}
+        titleClasses=" xl:text-[60px] leading-90"
         bg={
           <CoreFeaturesRWAbg className="absolute bottom-[25%] right-0 hidden md:block" />
         }
         sectionContainerClasses={"md:flex-row md:gap-5"}
+        itemTitleClasses="lg:text-[20px]"
+        cryptoWalletClass="lg:mb-[60px]"
       />
       <div className="w-full overflow-hidden">
         <FAQ
@@ -157,6 +164,9 @@ const RwaTokenization = () => {
       </div>
 
       <ExpertiseServices
+        itemTitleClasses="lg:text-[20px]"
+        cryptoWalletClass="lg:mb-[60px]"
+        titleClasses=" xl:text-[60px] leading-90"
         title={
           <>
             Why Choose Our <br /> Tokenization <br /> Solutions?
@@ -165,7 +175,7 @@ const RwaTokenization = () => {
         data={whyTokenization}
         topBorder={false}
         bottomBorder={false}
-        sectionContainerClasses={"md:flex-row md:gap-5"}
+        sectionContainerClasses={"md:flex-row md:gap-5 lg:pb-[100px]"}
       />
 
       <KeyFeatures
@@ -195,7 +205,12 @@ const RwaTokenization = () => {
         descClasses={"max-w-[798px]"}
       />
 
-      <Feedback />
+      <Feedback
+        desc="Our clients know they can rely on Cowchain 
+to deliver reliable, secure blockchain solutions. Here’s what they have to say"
+      />
+      <WhiteLabelCases title="our cases" desc="" blockClasses="md:pb-[60px]" />
+
       <Cases />
       <CasesMobile />
 
@@ -204,16 +219,21 @@ const RwaTokenization = () => {
           tag={"Other Our Services"}
           title={
             <>
-              Alongside{" "}
+              In addition to{" "}
               <span className="violet-gradient-text">
                 RWA
                 <br /> TOKENIZATION{" "}
               </span>
               , <br /> Cowchain offers <br />{" "}
               <span className="violet-gradient-text">
-                additional support <br /> services{" "}
+                development and <br />
+                and advisory services
               </span>{" "}
-              to fully <br /> back your project
+              to help you turn assets into on-chain value with
+              <span className="violet-gradient-text">
+                {" "}
+                scalable infrastructure
+              </span>
             </>
           }
           data={otherRwaServices}

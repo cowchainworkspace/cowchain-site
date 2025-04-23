@@ -23,8 +23,11 @@ import {
 } from "../../../../../../public/cases/gbc/slides";
 import {
   gbcSolutionGroup,
+  gbcSolutionGroupMobile,
   gbcSolutionKey,
-  gbcSolutionQuest
+  gbcSolutionKeyMobile,
+  gbcSolutionQuest,
+  gbcSolutionQuestMobile
 } from "../../../../../../public/cases/gbc/solutions";
 
 import { m2eNew, memolut, reflectNew } from "../../../../../../public/projects";
@@ -106,6 +109,8 @@ export const gbcSlides = [
     id: 1,
     width: 623,
     height: 443,
+    mobileHeight: 190,
+    mobileWidth: 262,
     desc: "GBC wardrobe screen",
     href: gbcSlideOne
   },
@@ -113,6 +118,8 @@ export const gbcSlides = [
     id: 2,
     width: 623,
     height: 442,
+    mobileHeight: 190,
+    mobileWidth: 262,
     desc: "GBC NFT screen",
     href: gbcSlideTwo
   },
@@ -120,6 +127,8 @@ export const gbcSlides = [
     id: 3,
     width: 623,
     height: 445,
+    mobileHeight: 190,
+    mobileWidth: 262,
     desc: "GBC Wallet screen",
     href: gbcSlideThree
   },
@@ -127,6 +136,8 @@ export const gbcSlides = [
     id: 4,
     width: 623,
     height: 443,
+    mobileHeight: 190,
+    mobileWidth: 262,
     desc: "GBC wardrobe screen",
     href: gbcSlideOne
   },
@@ -134,6 +145,8 @@ export const gbcSlides = [
     id: 5,
     width: 623,
     height: 442,
+    mobileHeight: 190,
+    mobileWidth: 262,
     desc: "GBC NFT screen",
     href: gbcSlideTwo
   },
@@ -141,6 +154,8 @@ export const gbcSlides = [
     id: 6,
     width: 623,
     height: 445,
+    mobileHeight: 190,
+    mobileWidth: 262,
     desc: "GBC Wallet screen",
     href: gbcSlideThree
   }
@@ -160,11 +175,13 @@ export const gbcSolutions = [
     desc: "Built a customization module allowing users to personalize NFTs and trade Wearables & assets in a secure marketplace.",
     textBlockWidth: 570,
     img: {
-      width: 364,
-      height: 292,
+      mobileHeight: 141,
+      mobileWidth: 273,
+      width: 363,
+      height: 250,
       info: "GBC keys",
-      leftMargin: "ml-[52px]",
-      href: gbcSolutionKey
+      href: gbcSolutionKey,
+      mobileHref: gbcSolutionKeyMobile,
     }
   },
   {
@@ -173,11 +190,14 @@ export const gbcSolutions = [
     desc: "Implemented on-chain trading mechanics with optimized performance, ensuring reliable NFT transactions and scalable performance.",
     textBlockWidth: 547,
     img: {
-      width: 533,
-      height: 352,
+      mobileHeight: 196,
+      mobileWidth: 343,
+      width: 510,
+      height: 332,
       info: "GBC NFT groups",
-      leftMargin: "-mr-[30px]",
-      href: gbcSolutionGroup
+      leftMargin: "xl:-mr-[30px]",
+      href: gbcSolutionGroup,
+      mobileHref: gbcSolutionGroupMobile,
     }
   },
   {
@@ -186,11 +206,14 @@ export const gbcSolutions = [
     desc: "Introduced Camp, a learning hub that combines interactive quests and structured blockchain study, making engagement both educational and rewarding.",
     textBlockWidth: 598,
     img: {
+      mobileHeight: 196,
+      mobileWidth: 196,
       width: 340,
       height: 340,
       info: "GBC quest",
-      leftMargin: "ml-[61px]",
-      href: gbcSolutionQuest
+      leftMargin: "xl:ml-[61px]",
+      href: gbcSolutionQuest,
+      mobileHref: gbcSolutionQuestMobile,
     }
   }
 ];
@@ -352,10 +375,11 @@ export const gbcProjects = [
     title: "m2e platform",
     desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
     img: m2eNew,
-    itemClasses: "mt-[363px]",
-    projectLink: "#",
+    itemClasses: "",
+    projectLink: "step-app",
     textColor: "text-secondary",
-    textGap: "gap-[24px]"
+    textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
   },
   {
     id: 2,
@@ -364,15 +388,20 @@ export const gbcProjects = [
     desc: 'Memelut is an all-in-one app that simplifies exploring, trading, and storing memecoins.',
     img: memolut,
     projectLink: "#",
-    textGap: "gap-[24px]"
+    textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
   },
   {
     id: 3,
-    tags: [ 'Web Development', '24/7 Support', 'Web3'],
+    tags: ["AI Development", 'Web Development', 'Trading', 'Defi'],
     title: 'REFLECT',
     desc: 'Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.',
     img: reflectNew,
-    projectLink: "#"
+    projectLink: "#",
+    textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
+    textColor: "text-secondary",
+    tagsContainer: "xl:max-w-[330px]"
   },
 
 ]

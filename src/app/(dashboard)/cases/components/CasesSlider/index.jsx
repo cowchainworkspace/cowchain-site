@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { useMediaQuery } from "@chakra-ui/react";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
@@ -17,7 +18,8 @@ const CasesSlider = ({
   isHybrid,
   sectionClasses,
   isPixelVerse,
-  isAgnt
+  isAgnt,
+  itemClasses
 }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { align: "center", loop: true, slidesToScroll: 1, startIndex: 1 },
@@ -30,9 +32,12 @@ const CasesSlider = ({
       })
     ]
   );
+  const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
+  const [isLargerThan1024] = useMediaQuery("(min-width: 1024px)");
 
   const tweenFactor = useRef(0);
   const tweenNodes = useRef([]);
+  const currentResolution = isHybrid ? isLargerThan1024 : isLargerThan768;
 
   const setTweenNodes = useCallback((emblaApi) => {
     tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
@@ -118,32 +123,41 @@ const CasesSlider = ({
       <div className={"embla relative h-full  w-screen"}>
         <div className={"embla__viewport"} ref={emblaRef}>
           <div
-            className={cn("embla__container flex", isHybrid && "gap-[15px]")}
+            className={cn("embla__container flex", isHybrid && "md:gap-[15px]")}
           >
-            {images?.map(({ id, height, width, desc, href }, index) => {
-              const lastIndex = index === images.length - 1;
-              return (
-                <div
-                  key={id}
-                  className={cn(
-                    "relative flex-shrink-0 pl-[30px]",
-                    isHybrid && lastIndex && "last:!mr-[15px]",
-                    isPixelVerse && "ml-[50px] pl-0",
-                    isAgnt && "ml-5 pl-0"
-                  )}
-                  style={{ width: `${width}px`, height: `${height}px` }}
-                >
-                  <Image
-                    src={href}
-                    width={width}
-                    height={width}
-                    alt={desc}
-                    objectFit="contain"
-                    className="embla__slide__number h-full w-full"
-                  />
-                </div>
-              );
-            })}
+            {images?.map(
+              (
+                { id, height, width, desc, href, mobileWidth, mobileHeight },
+                index
+              ) => {
+                const lastIndex = index === images.length - 1;
+                return (
+                  <div
+                    key={id}
+                    className={cn(
+                      "relative flex-shrink-0 pl-[30px]",
+                      isHybrid && lastIndex && "md:last:!mr-[15px]",
+                      isPixelVerse && "ml-[50px] pl-0",
+                      isAgnt && "ml-5 pl-0",
+                      itemClasses
+                    )}
+                    style={{
+                      width: `${currentResolution ? width : mobileWidth}px`,
+                      height: `${currentResolution ? height : mobileHeight}px`
+                    }}
+                  >
+                    <Image
+                      src={href}
+                      width={width}
+                      height={width}
+                      alt={desc}
+                      objectFit="contain"
+                      className="embla__slide__number h-full w-full"
+                    />
+                  </div>
+                );
+              }
+            )}
           </div>
         </div>
       </div>

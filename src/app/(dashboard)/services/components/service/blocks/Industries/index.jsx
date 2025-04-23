@@ -41,7 +41,9 @@ export function Industries({
   itemClasses = "",
   isWhiteLabel = "",
   descClasses,
-  itemTitleClasses
+  itemTitleClasses,
+  titleClasses,
+  titleContainerClasses
 }) {
   return (
     <section
@@ -67,14 +69,15 @@ export function Industries({
       >
         {!fullGrid && (
           <div
-            className={`flex flex-col items-start gap-[18px] md:justify-start md:gap-[26px] ${isTwoSides ? "col-span-1  row-span-2 max-w-[400px]" : "col-span-2 row-span-1 "}`}
+            className={`flex flex-col items-start gap-[18px] md:justify-start md:gap-[26px] ${isTwoSides ? "col-span-1  row-span-2 max-w-[400px]" : "col-span-2 row-span-1 "} ${titleContainerClasses}`}
           >
             <h2
               className={cn(
-                "whitespace-pre-line text-left text-[36px] uppercase md:text-center md:text-start  custom1430:text-[60px]",
+                "whitespace-pre-line z-[2] text-left text-[36px] uppercase md:text-center md:text-start  custom1430:text-[60px]",
                 {
-                  "xl:!text-[42px]": isTwoSides
-                }
+                  "xl:text-[42px]": isTwoSides
+                },
+                titleClasses,
               )}
             >
               {title}
@@ -83,7 +86,7 @@ export function Industries({
             {desc && (
               <p
                 className={cn(
-                  "leading-22px max-w-[650px] text-[16px] text-[#BBBBBB]",
+                  "leading-22px z-[2] max-w-[650px] text-[16px] text-[#BBBBBB]",
                   descClasses
                 )}
               >
@@ -107,7 +110,7 @@ export function Industries({
           {data.map((expertise, index) => (
             <div
               key={index}
-              className={`col-span-1 row-span-1 flex ${itemClasses}  ${expertise.text ? "items-start" : "items-center"}
+              className={`col-span-1 row-span-1 z-[10] flex ${itemClasses}  ${expertise.text ? "items-start" : "items-center"}
                   ${isTwoSides || fullGrid || data.length < 4 ? "max-w-full flex-col gap-0 sm:max-w-[307px]" : "gap-5 lg:gap-[49px]"}`}
             >
               {expertise.icon && (
@@ -125,7 +128,7 @@ export function Industries({
                 <div className="">
                   <h3
                     className={cn(
-                      "mb-[22px] max-w-[310px] uppercase md:text-xl",
+                      "mb-[22px] max-w-[310px] !leading-[90%] uppercase md:text-xl",
                       itemTitleClasses
                     )}
                   >

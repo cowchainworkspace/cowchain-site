@@ -20,6 +20,9 @@ import {
   faqDefiData
 } from "./utils/data";
 import { metadata } from "./utils/defiDevMetadata";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
 export { metadata };
 
 const DefiDevelopment = () => {
@@ -39,7 +42,7 @@ const DefiDevelopment = () => {
         tag={
           <>
             Our DeFi Development Services{" "}
-            <span className="hidden md:block">and Solutions</span>
+            <span className="hidden md:inline">and Solutions</span>
           </>
         }
         desc={
@@ -109,15 +112,20 @@ const DefiDevelopment = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[35%] left-0 hidden md:block"
+            className="pointer-events-none absolute -bottom-[35%] left-0 hidden md:block"
           />
         }
+        itemTitleClasses="lg:text-[20px]"
+        cryptoWalletClass="lg:mb-[80px]"
+        titleClasses="xl:!text-[60px] xl:mb-[60px]"
         sectionContainerClasses={"md:flex-row md:gap-5"}
       />
 
       <ExpertiseServices
         threeColumns
         data={DeFiBenefitsData}
+        cryptoWalletClass="lg:mb-[100px]"
+        sectionContainerClasses="lg:pb-[26px]"
         title={
           <>
             Benefits <br className="hidden md:block" />
@@ -132,7 +140,8 @@ const DefiDevelopment = () => {
         title={"Industries We Serve"}
         data={IndustriesData}
         topBorder={false}
-        customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
+        itemTitleClasses="xl:text-[24px]"
+        customClasses="xl:pl-[55px] xl:gap-y-[120px] xl:pr-[60px] xl:mt-[60px]"
       />
 
       <KeyFeatures
@@ -161,7 +170,7 @@ const DefiDevelopment = () => {
           isTwoHalf={true}
           isDoublePadding={true}
           hasIcon={false}
-          itemsClasses={"py-10 md:py-[74.5px]"}
+          itemsClasses={"py-10 md:py-[54.5px]"}
           faqGradient={true}
           descriptionClasses="!max-w-[320px] md:max-w-[462px]"
         />
@@ -213,7 +222,12 @@ const DefiDevelopment = () => {
         noBg={true}
       />
 
-      <Feedback />
+      <Feedback
+        desc="Our clients trust us for our commitment 
+to excellence and the consistent results 
+we produce through defi development. 
+They appreciate our professionalism, expertise, and the outstanding results of their projects"
+      />
 
       <ExpertiseServices
         threeColumns
@@ -226,6 +240,9 @@ const DefiDevelopment = () => {
           </>
         }
         containerClasses="grid-cols-1 md:grid-cols-2"
+        cryptoWalletClass="lg:mb-[100px]"
+        sectionContainerClasses="lg:pb-[26px]"
+        itemTitleClasses="lg:text-[20px]"
       />
       <div className="w-full overflow-hidden">
         <OtherServices
@@ -235,17 +252,24 @@ const DefiDevelopment = () => {
               In addition to <br className="hidden md:block" />
               <span className="violet-gradient-text">DEFI development</span>
               <br />
-              Cowchain offers <br className="hidden md:block" /> a variety{" "}
-              <br /> of{" "}
+              Cowchain offers <br className="hidden md:block" /> a set of{" "}
               <span className="violet-gradient-text">
                 complementary <br className="hidden md:block" /> services
+              </span>{" "}
+              that strengthen your product <br /> infrastructure and{" "}
+              <span className="violet-gradient-text">
+                {" "}
+                unlock new layers of functionality.
               </span>
             </>
           }
           data={OtherDefiData}
-          bottomBorder={false}
         />
       </div>
+
+      <WhiteLabelCases title="our cases" desc="" blockClasses="md:pb-[60px]" />
+      <Cases />
+      <CasesMobile />
 
       <div className="w-full overflow-hidden">
         <FAQ

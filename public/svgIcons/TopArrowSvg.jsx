@@ -1,6 +1,6 @@
 import React from "react";
 
-const TopArrowSvg = () => {
+const TopArrowSvg = ({ props }) => {
   return (
     <svg
       width="23"
@@ -8,6 +8,7 @@ const TopArrowSvg = () => {
       viewBox="0 0 23 13"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <title className="sr-only">Arrow top</title>
       <path

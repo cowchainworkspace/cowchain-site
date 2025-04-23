@@ -120,19 +120,19 @@ export const otherServices = [
 
 export const otherRwaServices = [
   {
-    text: "UI / UX Design",
+    text: "NFT Development",
     author:
-      "We craft intuitive and aesthetically pleasing UI/UX designs, focusing on functionality and user experience to ensure seamless interactions across platforms"
+      "We design and launch NFT collections that represent real-world or digital assets with built-in metadata, custom utilities, and marketplace integration – ideal for tokenizing art, collectibles, or ownership certificates."
   },
   {
-    text: "DISCOVERY & CONSULTATIONS",
+    text: "ICO Platform Development",
     author:
-      "Our team provides strategic consultations, offering insights on project discovery, business goals, and digital strategies, helping align your web development projects with industry standards"
+      "Our team builds secure, investor-ready ICO platforms with integrated wallets, KYC/AML modules, and smart contract logic for seamless fundraising and token distribution."
   },
   {
-    text: "White-label Solutions",
+    text: "AI Development",
     author:
-      "Our white-label services allow you to provide bespoke solutions under your own brand, avoiding the need for in-house management"
+      "We create AI agents and automation tools tailored for blockchain use cases, including asset tracking, compliance monitoring, and dynamic pricing for tokenized assets."
   },
 ];
 

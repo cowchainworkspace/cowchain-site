@@ -15,11 +15,14 @@ import {
   OurWorksData,
   consultingFAQData,
   consultingProcessData,
-  otherServices
+  otherBlockChainServices,
+  TustByNumbersData,
+  IndustriesDexData,
+  BlockchainServiceData
 } from "./utils/data";
-import { IndustriesDexData } from "./utils/data";
-import { TustByNumbersData } from "./utils/data";
-import { BlockchainServiceData } from "./utils/data";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
 
 const BlockChainConsulting = () => {
   return (
@@ -39,35 +42,29 @@ const BlockChainConsulting = () => {
         tag={"blockchain consulting services"}
         desc={
           <>
-            At Cowchain,{" "}
+            As a{" "}
             <span className="violet-gradient-text">
-              one of the leading blockchain consulting companies
-            </span>
-            , we deliver professional <br className="hidden custom1400:block" />
+              blockchain consulting company
+            </span>{" "}
+            , we deliver <br /> professional{" "}
             <span className="violet-gradient-text">
               blockchain consulting services
             </span>{" "}
-            tailored to meet <br className="hidden custom1400:block" /> the very
-            unique needs of{" "}
+            <br /> tailored to the unique needs of{" "}
             <span className="violet-gradient-text">
-              every business desirous <br className="hidden custom1400:block" />
-              the potentials of blockchain technology
+              businesses looking to leverage blockchain technology
             </span>
-            . Be it in the early stages of considering which blockchain best
-            suits your needs or working to optimize your current blockchain
-            infrastructure, our experts are here{" "}
-            <br className="hidden custom1400:block" /> to give deep insights and
-            practical{" "}
+            . Whether you <br /> are determining which blockchain best suits
+            your <br /> requirements or optimizing your current <br />{" "}
+            infrastructure, our experts are prepared to deliver <br /> deep
+            insights and{" "}
             <span className="violet-gradient-text">
-              blockchain consulting solutions.
-            </span>{" "}
-            From blockchain advisory
-            <br className="hidden custom1400:block" />
-            services to ongoing development, our approach{" "}
-            <br className="hidden custom1400:block" /> empowers companies to{" "}
+              practical blockchain consulting solutions
+            </span>
+            . From blockchain advisory services <br />
+            to ongoing development, our approach empowers <br /> companies to{" "}
             <span className="violet-gradient-text">
-              leverage a blockchain <br className="hidden custom1400:block" />{" "}
-              opportunity.
+              maximize blockchain opportunities
             </span>
           </>
         }
@@ -84,9 +81,12 @@ const BlockChainConsulting = () => {
         }
         data={TustByNumbersData}
         isBlockChainConsulting={true}
+        typographyContainerClasses="md:!pr-0"
+        noBg={true}
       />
 
       <ExpertiseServices
+        itemTitleClasses="lg:text-[20px]"
         title={
           <>
             Blockchain <br className="hidden lg:block" />
@@ -95,6 +95,7 @@ const BlockChainConsulting = () => {
             Provide
           </>
         }
+        cryptoWalletClass="lg:mb-[80px]"
         desc={
           <>
             We at Cowchain provide a wide range of blockchain consulting
@@ -112,6 +113,7 @@ const BlockChainConsulting = () => {
             technology
           </>
         }
+        titleClasses="xl:!text-[60px] xl:mb-[60px]"
         data={BlockchainServiceData}
         bg={
           <Image
@@ -139,9 +141,12 @@ const BlockChainConsulting = () => {
         desc={
           "At Cowchain, we take pride in delivering tailored blockchain consulting solutions across industries. Our expertise in strategy, development, and implementation has enabled businesses to streamline operations, enhance security, and achieve measurable results. Below are some of the projects that highlight our practical approach to blockchain solutions"
         }
+        itemTitleClasses="lg:text-[20px]"
         data={OurWorksData}
         topBorder={false}
+        titleClasses="xl:text-[60px] xl:mb-[60px]"
         bottomBorder={false}
+        cryptoWalletClass="lg:mb-[80px]"
         bg={
           <Image
             src={dexBg}
@@ -163,7 +168,7 @@ const BlockChainConsulting = () => {
           isTwoHalf={true}
           hasIcon={false}
           faqGradient={true}
-          itemsClasses={"py-10 md:py-[74.5px]"}
+          itemsClasses={"py-10 md:py-[55px]"}
         />
       </div>
 
@@ -215,11 +220,12 @@ const BlockChainConsulting = () => {
             <p>
               <br />
             </p>
-            s a trusted blockchain consulting company, we combine deep technical
-            expertise with a strong business focus, ensuring that every solution
-            we deliver is both technically sound and aligned with your long-term
-            strategy. We work alongside your team, offering continuous support
-            and insights throughout the entire project lifecycle
+            As a trusted blockchain consulting company, we combine deep
+            technical expertise with a strong business focus, ensuring that
+            every solution we deliver is both technically sound and aligned with
+            your long-term strategy. We work alongside your team, offering
+            continuous support and insights throughout the entire project
+            lifecycle
           </>
         }
         descClasses={"max-w-[519px]"}
@@ -227,7 +233,22 @@ const BlockChainConsulting = () => {
         isTextSecondary={true}
       />
 
-      <Feedback />
+      <Feedback
+        title={
+          <>
+            Clients’ <br /> Stories
+          </>
+        }
+        desc={
+          <>
+            We consistently deliver high-quality blockchain consulting services
+            that produce measurable results. From startups looking to implement
+            their first solution to large enterprises optimizing their
+            infrastructure, we have helped businesses achieve their goals
+          </>
+        }
+        nobg={true}
+      />
 
       <Industries
         title={"Our Engagement Models"}
@@ -243,11 +264,12 @@ const BlockChainConsulting = () => {
         data={EngagementDevData}
         topBorder={false}
         isTwoSides={true}
+        titleClasses="!text-[60px]"
         bg={
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="absolute -bottom-[45%] left-0 hidden md:block"
+            className="pointer-events-none absolute -bottom-[45%] left-0 hidden md:block"
           />
         }
       />
@@ -273,6 +295,9 @@ const BlockChainConsulting = () => {
         noBg={true}
         titleClasses="xl:mb-[60px]"
       />
+      <WhiteLabelCases title="our cases" desc="" blockClasses="md:pb-[60px]" />
+      <Cases />
+      <CasesMobile />
       <div className="w-full overflow-hidden">
         <OtherServices
           tag={"Other Blockchain Services"}
@@ -289,10 +314,10 @@ const BlockChainConsulting = () => {
                 their operations.
               </span>{" "}
               <br />
-              These services include
+              These services include:
             </>
           }
-          data={otherServices}
+          data={otherBlockChainServices}
         />
       </div>
 

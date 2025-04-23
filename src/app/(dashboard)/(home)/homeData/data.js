@@ -1,17 +1,17 @@
-import bg from "@/assets/homepage/bg.png";
-import bridge from "@/assets/cases/newCases/crossChainTransferBridgeImg.png";
 import payment from "@/assets/cases/newCases/CryptoExchangeImg.png";
+import hotel from "@/assets/cases/newCases/HotelBusinessImg.png";
+import bridge from "@/assets/cases/newCases/crossChainTransferBridgeImg.png";
 import finance from "@/assets/cases/newCases/cryptoWalletApp2Img.png";
 import wallet from "@/assets/cases/newCases/cryptoWalletAppImg.png";
-import hotel from "@/assets/cases/newCases/HotelBusinessImg.png";
 import m2e from "@/assets/cases/newCases/m2ePlatformImg.png";
+import bg from "@/assets/homepage/bg.png";
+import linkedin from "@/assets/homepage/linkedin.svg";
 import pic1 from "@/assets/homepage/projects/1.jpg";
 import pic2 from "@/assets/homepage/projects/2.jpg";
 import pic3 from "@/assets/homepage/projects/3.jpg";
 import MichaelImg from "@/assets/homepage/team/newTeam/michaelImg.png";
 import OlehImg from "@/assets/team/executives/OlehImg2.png";
 import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
-import linkedin from "@/assets/homepage/linkedin.svg";
 
 import agnt from "@/assets/cases/agntCase.png";
 import gbc from "@/assets/cases/gbcCase.png";
@@ -221,7 +221,7 @@ export const casesOldMobileData = [
 
 export const casesMobileData = [
   {
-    title: `agenthub`,
+    title: `AGNT HUB`,
     link: "",
     description:
       "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
@@ -229,7 +229,7 @@ export const casesMobileData = [
     tags: ["Web Development", "AI Development", "DeFi", "Crypto Wallet", "NFT"]
   },
   {
-    title: "Cross-chain transfer bridge",
+    title: "Retro Bridge",
     link: "",
     description:
       "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
@@ -237,7 +237,7 @@ export const casesMobileData = [
     tags: ["Web Development", "DeFi", "Bridge", "NFT"]
   },
   {
-    title: "GBC DAPP",
+    title: "GMX Blueberry Club",
     link: "",
     description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     photo: gbc,
@@ -247,7 +247,7 @@ export const casesMobileData = [
 
 export const casesData = [
   {
-    title: `agenthub`,
+    title: `AGNT HUB`,
     link: "",
     description:
       "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
@@ -255,7 +255,7 @@ export const casesData = [
     tags: ["Web Development", "AI Development", "DeFi", "Crypto Wallet", "NFT"]
   },
   {
-    title: "Cross-chain transfer bridge",
+    title: "Retro Bridge",
     link: "",
     description:
       "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
@@ -263,7 +263,7 @@ export const casesData = [
     tags: ["Web Development", "DeFi", "Bridge", "NFT"]
   },
   {
-    title: "GBC DAPP",
+    title: "GMX Blueberry Club",
     link: "",
     description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     photo: gbc,

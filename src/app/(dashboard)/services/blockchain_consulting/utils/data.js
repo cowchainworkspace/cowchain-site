@@ -95,27 +95,22 @@ export const EngagementDevData = [
   }
 ];
 
-export const otherServices = [
+export const otherBlockChainServices = [
   {
-    text: "DApp Development",
+    text: "Full-stack Development Services",
     author:
-      "Our team develops decentralized applications designed to enhance operational capabilities, security, and scalability. These applications are ideal for businesses looking to expand their digital offerings, whether it’s for customer engagement, supply chain transparency, or internal process automation"
+      "We provide full-stack development support – handling both the visuals users love and the logic they rely on. From smart contract logic to frontend frameworks and backend architecture, we cover the complete development cycle for blockchain-based products."
   },
   {
-    text: "Token Creation and NFT Development",
+    text: "AI Development",
     author:
-      "Our blockchain development services include creating custom tokens and NFT development for projects in the blockchain ecosystem. Whether for fundraising, utility, or asset representation, we help you develop the right tokenomics"
+      "We build AI-powered systems tailored for Web3 use cases. Whether you need autonomous agents, predictive analytics, or AI-integrated user flows, our team brings intelligence to decentralized infrastructure while keeping everything trustless and verifiable."
   },
   {
-    text: "Smart Contract Development",
+    text: "White Label Web Development",
     author:
-      "We specialize in developing secure smart contracts, ensuring the integrity of transactions across various platforms. Our contracts are designed with a focus on reliability and transparency, making them essential for industries that rely on precise, automated processes"
+      "We offer ready-to-deploy white label solutions for platforms looking to enter the blockchain space quickly. From NFT marketplaces to token dashboards, our customizable templates save time while delivering clean, brandable web interfaces."
   },
-  {
-    text: "DEX Development",
-    author:
-      "Cowchain develops decentralized exchanges (DEX) designed for fast and secure digital asset trading. Our DEX solutions support token swaps, liquidity pools, and multi-chain compatibility"
-  }
 ];
 
 export const consultingProcessData = [
@@ -234,7 +229,7 @@ export const OurWorksData = [
 
 export const TustByNumbersData = [
   {
-    number: 10.02,
+    number: 42.26,
     desc: "Estimated global blockchain market value in 2024",
     sighn: "$",
     sufix: "B",

@@ -1,9 +1,11 @@
 import arrow from "@/assets/arrow_right.svg";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export const WhiteLabelCases = ({
+  blockClasses,
   title = "Our White Label Web Development Cases",
   desc = (
     <>
@@ -17,15 +19,17 @@ export const WhiteLabelCases = ({
 }) => {
   return (
     <section className="relative">
-      <div className="relative mx-auto max-w-[1440px] px-5 py-10 md:px-8 md:pb-[84px] md:pt-[126px] xl:px-[88px]">
+      <div className={cn("relative mx-auto max-w-[1440px] px-5 py-10 md:px-8 md:pb-[84px] md:pt-[126px] xl:px-[88px]", blockClasses)}>
         <div className="flex flex-col items-start justify-between gap-6 xl:flex-row xl:gap-0 ">
           <div className="flex flex-col gap-5 xl:gap-[60px]">
-            <h2 className="lg:order-0 heading-[38px] text-[42px]   uppercase text-white">
+            <h2 className="lg:order-0 heading-[38px] text-[42px] z-[2]  uppercase text-white">
               {title}
             </h2>
-            <p className="body  max-w-lg text-base leading-6 lg:order-2 lg:max-w-full">
-              {desc}
-            </p>
+            {desc && (
+              <p className="body  max-w-lg text-base z-[2] leading-6 lg:order-2 lg:max-w-full">
+                {desc}
+              </p>
+            )}
           </div>
           <Link href="/cases" className=" lg:order-1 lg:block xl:ml-auto">
             <div className="flex items-center gap-x-2">

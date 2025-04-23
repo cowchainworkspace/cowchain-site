@@ -5,7 +5,7 @@ import React from "react";
 export default function Achievements({
   tag,
   desc,
-  descClasses,
+  descClass,
   containerClasses
 }) {
   return (
@@ -16,12 +16,17 @@ export default function Achievements({
           containerClasses
         )}
       >
-        <Tag title={tag} className={"z-[20] mb-10 md:mb-8 xl:mb-[60px]"} />
+        <Tag
+          title={tag}
+          className={
+            "z-[20] mb-10 w-auto !whitespace-nowrap md:mb-8 xl:mb-[60px]"
+          }
+        />
 
         <h3
           className={cn(
-            "text-left text-2xl uppercase leading-[0.9] text-white md:block   lg:text-[42px]",
-            descClasses
+            "text-left text-2xl uppercase leading-[0.9] text-white md:block lg:text-[42px]",
+            descClass
           )}
         >
           {desc}

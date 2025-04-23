@@ -39,22 +39,39 @@ const Hybrid = () => {
             monetization, solidifying its role in blockchain innovation.
           </>
         }
-        descriptionClasses="w-[670px]"
-        headerClasses="uppercase font-roc text-center font-medium text xl:leading-[64px]"
-        containerClasses="max-w-[853px]"
-        sectionClasses="pb-[125px]"
+        tagContainerClasses={
+          "flex-wrap justify-center max-w-[320px] xl:max-w-full"
+        }
+        descriptionClasses="md:w-[670px]"
+        headerClasses="font-roc text-center font-medium text-[36px] leading-[42px] xl:text-[60px] xl:leading-[64px]"
+        containerClasses="max-w-[769px]"
+        sectionClasses="pb-[50px] xl:pb-[125px]"
       />
       <Banner
         img={"/cases/hybrid/cases-hybrid-banner.webp"}
-        classes={"h-[540px] w-full"}
+        classes={"h-[141px] md:h-[200px] lg:h-[300px] xl:h-[540px]"}
         imgDesc={"hybrid banner image"}
         decorationElement={
-          <Image
-            height={700}
-            width={743}
-            src={"/cases/hybrid/cases-hybrid-atlas.webp"}
-            className="absolute -top-[60%] left-0 z-10"
-          />
+          <>
+            <Image
+              height={700}
+              width={743}
+              src={"/cases/hybrid/cases-hybrid-atlas.webp"}
+              className="absolute -top-[45%] left-0 z-10 hidden h-[400px] w-[273px] md:block  lg:h-[600px]  lg:w-[443px] xl:hidden"
+            />
+            <Image
+              height={177}
+              width={181}
+              className="absolute left-0 top-0 z-10 md:hidden"
+              src={"/cases/hybrid/hybrid-atlas-mobile.png"}
+            />
+            <Image
+              height={700}
+              width={743}
+              src={"/cases/hybrid/cases-hybrid-atlas.webp"}
+              className="absolute -top-[60%] left-0 z-10 hidden xl:block"
+            />
+          </>
         }
         bannerTitle={<BannerTitle />}
       />
@@ -80,31 +97,42 @@ const Hybrid = () => {
           </>
         }
         webSiteLink={"#"}
-        sectionClasses={"pt-[119px] pl-[103px] pb-[120px]"}
-        overviewClasses={"gap-[176px]"}
+        sectionClasses={"xl:pt-[119px] xl:pl-[103px] xl:pb-[120px]"}
+        overviewClasses={"xl:gap-[176px]"}
       />
       <CasesSlider
         images={hybridSlides}
         decorationElement={
-          <Image
-            src={"/cases/hybrid/cases-hybrid-scroll-ellipse.webp"}
-            width={"933"}
-            height={"251"}
-            alt="decoration ellipse"
-            className="absolute  h-full w-full scale-y-150"
-          />
+          <>
+            <Image
+              src={"/cases/hybrid/cases-hybrid-scroll-ellipse.webp"}
+              width={"933"}
+              height={"251"}
+              alt="decoration ellipse"
+              className="absolute  hidden h-full w-full scale-y-150 md:block"
+            />
+            <Image
+              width={349}
+              height={94}
+              src={"/cases/hybrid/hybrid-ellipse-mobile.webp"}
+              alt="decoration ellipse"
+              className="absolute  h-full w-full scale-y-150 md:hidden"
+            />
+          </>
         }
+        sectionClasses={"h-[226px] py-5 lg:py-0 lg:h-[522px]"}
+        itemClasses={"pl-0 ml-[13px] md:ml-7"}
         isHybrid={true}
       />
       <CasesSolutions solutions={hybridSolutions} />
       <HybridWhatWeDid />
-      <TeamBehind
-        team={hybridTeam}
-        descClasses={"font-medium"}
-        blockClasses={"last:pb-8 last:border-b-[0.5px]"}
-      />
+      <TeamBehind team={hybridTeam} descClasses={"font-medium"} />
       <MoreProjects projects={hybridProjects} />
-      <Contact className={"pb-[138px] pt-[194px]"} />
+      <Contact
+        className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
+        descriptionClasses={"hidden md:block"}
+        titleClasses={"mb-8 md:mb-0"}
+      />
     </section>
   );
 };

@@ -4,7 +4,7 @@ export const ExpertiseBlock = ({ title, text, tools }) => {
   return (
     <article className="relative col-span-1 row-span-1 cursor-default">
       <div className="relative flex !max-h-[112px] !min-h-[112px] flex-col justify-between">
-        <p className="body3 text-white">{title}</p>
+        <p className="body3 max-w-[294px] !leading-[90%] uppercase text-white">{title}</p>
         <div className="tools_wrapper flex items-center">
           {tools.map((tool, index) => (
             <CollapsedIcon key={index} {...tool} />
@@ -17,7 +17,7 @@ export const ExpertiseBlock = ({ title, text, tools }) => {
             style={{
               color: "#BBBBBB"
             }}
-            className="leading-22px text-[16px]"
+            className="leading-[22px] text-[16px]"
           >
             {text}
           </p>

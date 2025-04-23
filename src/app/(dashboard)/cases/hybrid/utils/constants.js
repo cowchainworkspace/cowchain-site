@@ -5,22 +5,27 @@ import {
 } from "../../../../../../public/cases/hybrid/slider";
 import {
   aiImage,
+  aiImageMobile,
   blockchainImage,
+  blockchainImageMobile,
   clockImage,
+  clockImageMobile,
   robotImage,
-  stackCoinImage
+  robotImageMobile,
+  stackCoinImage,
+  stackCoinImageMobile
 } from "../../../../../../public/cases/hybrid/solutions";
 
-import { coinclub, pixelVerse, wenix } from "../../../../../../public/projects"
+import { coinclub, pixelVerse, wenix } from "../../../../../../public/projects";
 
 export const hybridTags = [
   {
     id: 1,
-    tagLabel: "Web Development"
+    tagLabel: "Web Development"
   },
   {
     id: 2,
-    tagLabel: "AI Development"
+    tagLabel: "AI Development"
   },
   {
     id: 3,
@@ -37,9 +42,33 @@ export const hybridTags = [
   {
     id: 6,
     tagLabel: "L1"
+  }
+];
+export const mobileTags = [
+  {
+    id: 3,
+    tagLabel: "Blockchain Development"
   },
-  
-
+  {
+    id: 1,
+    tagLabel: "Web Development"
+  },
+  {
+    id: 2,
+    tagLabel: "AI Development"
+  },
+  {
+    id: 4,
+    tagLabel: "Bridge"
+  },
+  {
+    id: 5,
+    tagLabel: "Staking"
+  },
+  {
+    id: 6,
+    tagLabel: "L1"
+  }
 ];
 
 export const overviewHybridItems = [
@@ -101,42 +130,54 @@ export const hybridSlides = [
     width: 837,
     height: 522,
     desc: "activity 10c",
-    href: activityTc
+    href: activityTc,
+    mobileWidth: 302,
+    mobileHeight: 196
   },
   {
     id: 2,
     width: 760,
     height: 522,
     desc: "explore agents one",
-    href: exploreAgent
+    href: exploreAgent,
+    mobileWidth: 275,
+    mobileHeight: 196
   },
   {
     id: 3,
     width: 730,
     height: 522,
     desc: "nfts",
-    href: nfts
+    href: nfts,
+    mobileWidth: 275,
+    mobileHeight: 196
   },
   {
     id: 4,
     width: 837,
     height: 522,
     desc: "activity 10c",
-    href: activityTc
+    href: activityTc,
+    mobileWidth: 302,
+    mobileHeight: 196
   },
   {
     id: 5,
     width: 760,
     height: 522,
     desc: "explore agents one",
-    href: exploreAgent
+    href: exploreAgent,
+    mobileWidth: 275,
+    mobileHeight: 196
   },
   {
     id: 6,
     width: 730,
     height: 522,
     desc: "nfts",
-    href: nfts
+    href: nfts,
+    mobileWidth: 275,
+    mobileHeight: 196
   }
 ];
 
@@ -150,7 +191,10 @@ export const hybridSolutions = [
       width: 569,
       height: 332,
       info: "small robots, ai helpers",
-      href: clockImage
+      href: clockImage,
+      mobileHeight: 185,
+      mobileWidth: 343,
+      mobileHref: clockImageMobile
     }
   },
   {
@@ -162,7 +206,10 @@ export const hybridSolutions = [
       width: 339,
       height: 339,
       info: "processor image with ai label on the top",
-      href: aiImage
+      href: aiImage,
+      mobileHeight: 200,
+      mobileWidth: 200,
+      mobileHref: aiImageMobile
     }
   },
   {
@@ -174,7 +221,10 @@ export const hybridSolutions = [
       width: 339,
       height: 339,
       info: "five different cubes connected together",
-      href: blockchainImage
+      href: blockchainImage,
+      mobileHeight: 245,
+      mobileWidth: 198,
+      mobileHref: blockchainImageMobile
     }
   },
   {
@@ -186,7 +236,10 @@ export const hybridSolutions = [
       width: 409,
       height: 409,
       info: "robot helper",
-      href: robotImage
+      href: robotImage,
+      mobileHeight: 216,
+      mobileWidth: 198,
+      mobileHref: robotImageMobile
     }
   },
   {
@@ -198,17 +251,20 @@ export const hybridSolutions = [
       width: 305,
       height: 274,
       info: "coins with a hybrid icon",
-      href: stackCoinImage
+      href: stackCoinImage,
+      mobileHeight: 156,
+      mobileWidth: 170,
+      mobileHref: stackCoinImageMobile
     }
   }
 ];
-
 
 export const hybridTeam = [
   {
     id: 1,
     department: "development",
-    people: "Oleh Shutiak, Oleh Proidakov, Dmytro Krasnoholovenko, Danylo Provilsky, Yaroslav Samoilenko"
+    people:
+      "Oleh Shutiak, Oleh Proidakov, Dmytro Krasnoholovenko, Danylo Provilsky, Yaroslav Samoilenko"
   },
   {
     id: 2,
@@ -225,27 +281,38 @@ export const hybridTeam = [
 export const hybridProjects = [
   {
     id: 1,
-    tags: ['Mobile App', 'Crypto Wallet' , "Trading"],
-    title: 'COINCLUB',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
+    tags: ["Mobile App", "Crypto Wallet", "Trading"],
+    title: "COINCLUB",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .",
     img: coinclub,
-    projectLink: "#"
+    projectLink: "#",
+    textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
+    textColor: "text-secondary",
+    
   },
   {
     id: 2,
-    tags: ["Mobile App", 'Telegram Mini-apps', 'GameFi'],
-    title: 'PixelVerse',
-    desc: 'PixelVerse is a GameFi ecosystem that merges Web2 accessibility with Web3 innovation through Telegram Mini Apps.',
+    tags: ["Mobile App", "Telegram Mini-apps", "GameFi"],
+    title: "PixelVerse",
+    desc: "PixelVerse is a GameFi ecosystem that merges Web2 accessibility with Web3 innovation through Telegram Mini Apps.",
     img: pixelVerse,
-    projectLink: "pixel-verse"
+    projectLink: "pixel-verse",
+    textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[17px]",
+    textColor: "text-secondary",
+
   },
   {
     id: 3,
-    tags: ['Mobile App', 'Telegram Mini-apps'],
-    title: 'Wenix',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
+    tags: ["Mobile App", "Telegram Mini-apps"],
+    title: "Wenix",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .",
     img: wenix,
-    projectLink: "#"
-  },
+    projectLink: "#",
+    textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
+    textColor: "text-secondary",
 
-]
+  }
+];
