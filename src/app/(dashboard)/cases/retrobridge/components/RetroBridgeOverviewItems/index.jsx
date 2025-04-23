@@ -1,11 +1,11 @@
 "use client";
-import React from "react";
 import {
   Accordion,
   AccordionButton,
   AccordionItem,
   AccordionPanel
 } from "@chakra-ui/react";
+import React from "react";
 import TopArrowSvg from "../../../../../../../public/svgIcons/TopArrowSvg";
 
 import { cn } from "@/lib/utils";
@@ -18,7 +18,7 @@ const RetroBridgeOverviewItems = ({ items }) => {
       >
         {items.map(({ itemName, id, itemValue, itemDesc }, index) => (
           <AccordionItem
-            className="border-b-[0.5px] border-white-50 py-8 first:pt-0 "
+            className="border-b-[0.5px] border-white-50 px-4 py-[22px] first:pt-0 md:px-0 "
             key={id}
           >
             {({ isExpanded }) => (
@@ -31,8 +31,7 @@ const RetroBridgeOverviewItems = ({ items }) => {
                 >
                   <span
                     className={cn(
-                      "font-manrope text-xs uppercase leading-5 tracking-[2px] text-secondary",
-                      index === 0 && "text-white"
+                      "font-manrope text-xs uppercase leading-5 tracking-[2px] text-secondary"
                     )}
                   >
                     {itemName}
@@ -48,19 +47,19 @@ const RetroBridgeOverviewItems = ({ items }) => {
                 </AccordionButton>
                 <AccordionPanel>
                   {itemDesc && (
-                    <p className="mb-4 font-manrope text-xl font-medium leading-[30px] !text-white">
+                    <p className="mb-4 hidden font-manrope text-xl font-medium leading-[30px] !text-white xl:block">
                       {itemDesc}
                     </p>
                   )}
                   {typeof itemValue === "string" ? (
-                    <p className="font-manrope text-xl font-medium leading-[30px] !text-white">
+                    <p className="font-manrope text-sm font-normal leading-6 !text-white xl:text-xl xl:font-medium xl:leading-[30px]">
                       {itemValue}
                     </p>
                   ) : (
-                    <ul className="flex list-disc flex-col gap-[10px] pl-8">
+                    <ul className="flex flex-col gap-[14px] xl:list-disc xl:pl-8">
                       {itemValue.map(({ desc }) => (
                         <li key={desc}>
-                          <p className="list-item  pl-2 font-manrope text-xl font-medium leading-[30px] !text-white">
+                          <p className="font-manrope  text-sm font-normal leading-6 !text-white xl:list-item xl:pl-2 xl:text-xl xl:font-medium xl:leading-[30px]">
                             {desc}
                           </p>
                         </li>

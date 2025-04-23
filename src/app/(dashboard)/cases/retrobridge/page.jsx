@@ -24,7 +24,7 @@ const RetroBridge = () => {
   return (
     <section>
       <CaseHeroScreen
-        pageTitle={"Cross-chain transfer bridge"}
+        pageTitle={"Retrobridge"}
         tags={retroBridgeTags}
         heroDescription={
           <>
@@ -34,14 +34,15 @@ const RetroBridge = () => {
             interoperability in Web3.
           </>
         }
-        headerClasses="text-center max-w-[566px] uppercase font-foc font-medium leading-90"
+        headerClasses="text-center max-w-[566px] text-[36px] leading-[42px] xl:text-[60px] xl:leading-[64px] uppercase font-foc font-medium"
         containerClasses="max-w-[671px]"
-        descriptionClasses="text-center w-[671px]"
+        descriptionClasses="text-center max-w-[671px]"
+        tagContainerClasses="flex-wrap md:flex-nowrap justify-center max-w-[299px] md:max-w-fit"
       />
       <Banner
         img={"/cases/RetroBridge/case-banner-retrobridge.webp"}
         imgDesc={"banner RetroBridge with with RetroBridge logo"}
-        classes={"w-full h-[499px]"}
+        classes={"h-[140px] md:h-[200px] lg:h-[300px] xl:h-[500px]"}
       />
       <RetroBridgeOverview
         projectTitle={"project overview"}
@@ -53,25 +54,45 @@ const RetroBridge = () => {
       <CasesSlider
         images={retroBridgeSlides}
         decorationElement={
-          <Image
-            src={"/cases/RetroBridge/cases-retrobridge-ellipse-decr.webp"}
-            width={"933"}
-            height={"251"}
-            alt="decoration ellipse"
-            className="absolute h-full w-full scale-y-150"
-          />
+          <>
+            <Image
+              src={"/cases/RetroBridge/cases-retrobridge-ellipse-decr.webp"}
+              width={933}
+              height={251}
+              alt="decoration ellipse"
+              className="absolute hidden h-full w-full scale-y-150 lg:block"
+            />
+            <Image
+              src={"/cases/RetroBridge/retrobridge-ellipse-slider-bg.webp"}
+              width={471}
+              height={64}
+              alt="decoration ellipse"
+              className="absolute h-full w-full scale-y-150 lg:hidden"
+            />
+          </>
         }
-        sectionClasses={"h-[539px]"}
+        sectionClasses={"h-[226px] py-5 lg:py-0 lg:h-[539px]"}
+        itemClasses={"pl-0 ml-[13px] md:ml-7"}
+        isHybrid={true}
       />
       <CasesSolutions
         solutions={retroBridgeSolutions}
-        classes={"-mt-[70px]  last:mt-0"}
+        classes={"xl:-mt-[70px]  xl:last:mt-0"}
+        isRetroBridge={true}
       />
       <RetroBridgeWhatWeDid />
       <TeamBehind descClasses={"font-bold"} team={retroBridgeTeam} />
       <Quote />
-      <MoreProjects autoMargin={true} projects={retroBridgeProjects} />
-      <Contact className={"pb-[138px] pt-40"} />
+      <MoreProjects
+        isReversed
+        autoMargin={true}
+        projects={retroBridgeProjects}
+      />
+      <Contact
+        className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
+        descriptionClasses={"hidden md:block"}
+        titleClasses={"mb-8 md:mb-0"}
+      />
     </section>
   );
 };
