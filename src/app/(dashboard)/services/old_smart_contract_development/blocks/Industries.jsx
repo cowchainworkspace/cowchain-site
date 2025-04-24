@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useState, createElement } from "react";
-import Link from "next/link";
-import arrow from "@/assets/arrow_right.svg";
 import { cn } from "@/lib/utils";
 import Markdown from "markdown-to-jsx";
 import { useGetItems } from "@/hooks/use-strapi";
@@ -46,15 +44,18 @@ export const Industries = () => {
       id="view_more"
       className="relative z-10 hidden border-b  border-t border-b-th-fade border-t-th-fade md:block"
     >
-      <div style={{ pointerEvents: "none" }} className="absolute right-0 bottom-0 -top-[480px] left-0 z-[-3] overflow-hidden">
-    <Image
-        alt=""
-        width={1380}
-        height={1330}
+      <div
         style={{ pointerEvents: "none" }}
-        className="absolute -right-[650px] -z-10 min-h-[1330px] min-w-[900px]"
-        src={bg}
-      />
+        className="absolute -top-[480px] bottom-0 left-0 right-0 z-[-3] overflow-hidden"
+      >
+        <Image
+          alt=""
+          width={1380}
+          height={1330}
+          style={{ pointerEvents: "none" }}
+          className="absolute -right-[650px] -z-10 min-h-[1330px] min-w-[900px]"
+          src={bg}
+        />
       </div>
       <div className="relative grid grid-cols-1">
         <div className="mx-auto my-[101px] flex max-w-[870px] flex-col items-center justify-center gap-y-8 px-4 text-center    text-white ">
