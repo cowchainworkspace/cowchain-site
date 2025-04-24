@@ -15,18 +15,24 @@ export const WhiteLabelCases = ({
       scale their platforms while maintaining <br className="hidden lg:block" />{" "}
       user engagement and satisfaction
     </>
-  )
+  ),
+  hasNoDescription = false
 }) => {
   return (
     <section className="relative">
-      <div className={cn("relative mx-auto max-w-[1440px] px-5 py-10 md:px-8 md:pb-[84px] md:pt-[126px] xl:px-[88px]", blockClasses)}>
+      <div
+        className={cn(
+          "relative mx-auto max-w-[1440px] px-5 py-10 md:px-8 md:pb-[84px] md:pt-[126px] xl:px-[88px]",
+          blockClasses
+        )}
+      >
         <div className="flex flex-col items-start justify-between gap-6 xl:flex-row xl:gap-0 ">
           <div className="flex flex-col gap-5 xl:gap-[60px]">
-            <h2 className="lg:order-0 heading-[38px] text-[42px] z-[2] leading-[90%] uppercase text-white">
+            <h2 className="lg:order-0 heading-[38px] z-[2] text-[42px] uppercase leading-[90%] text-white">
               {title}
             </h2>
-            {desc && (
-              <p className="body  max-w-lg text-base z-[2] leading-6 lg:order-2 lg:max-w-full">
+            {!hasNoDescription && desc && (
+              <p className="body  z-[2] max-w-lg text-base leading-6 lg:order-2 lg:max-w-full">
                 {desc}
               </p>
             )}

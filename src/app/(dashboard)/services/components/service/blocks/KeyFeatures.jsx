@@ -52,7 +52,10 @@ export function KeyFeatures({
   titleClasses = "",
   isTextSecondary,
   descClasses,
-  titleBlockClasses = ""
+  titleBlockClasses = "",
+  imageClasses = "",
+  containerClasses = "",
+  customBg
 }) {
   return (
     <section
@@ -61,19 +64,26 @@ export function KeyFeatures({
       {!noBg && (
         <Image
           alt=""
-          className="absolute -bottom-[38%] pointer-events-none right-0 hidden md:block md:block"
+          className={cn(
+            "pointer-events-none absolute -bottom-[38%] right-0 hidden md:block",
+            imageClasses
+          )}
           src={dexAdvisoryBg}
         />
       )}
       {isWhiteLabelBg && (
         <Image
           alt="background decoration"
-          className="absolute pointer-events-none -bottom-[180%] left-0 hidden md:block"
+          className="pointer-events-none absolute -bottom-[180%] left-0 hidden md:block"
           src={whiteLabelBg}
         />
       )}
+      {customBg}
       <div
-        className={` relative mx-auto flex max-w-[1440px]  flex-col justify-between px-5 md:px-8 ${isOneBlock ? "pb-[30px] pt-[60px] md:py-[126px] lg:pb-[84px]" : "pb-[30px] pt-[60px] md:py-[126px]"} gap-10 md:gap-[107px] lg:pl-[88px] lg:pr-[92px]`}
+        className={cn(
+          ` relative mx-auto flex max-w-[1440px]  flex-col justify-between px-5 md:px-8 ${isOneBlock ? "pb-[30px] pt-[60px] md:py-[126px] lg:pb-[84px]" : "pb-[30px] pt-[60px] md:py-[126px]"} gap-10 md:gap-[107px] lg:pl-[88px] lg:pr-[92px]`,
+          containerClasses
+        )}
       >
         <div
           className={cn(
@@ -86,7 +96,7 @@ export function KeyFeatures({
           )}
           <h2
             className={cn(
-              "lg:order-0 relative text-[36px] leading-[90%] uppercase text-white z-[2]  md:text-[60px]",
+              "lg:order-0 relative z-[2] text-[36px] uppercase leading-[90%] text-white  md:text-[60px]",
               titleClasses
             )}
           >
@@ -94,7 +104,7 @@ export function KeyFeatures({
           </h2>
           <p
             className={cn(
-              "mt-[40px] max-w-[824px] relative z-[2] text-[14px] leading-6 md:my-[20px] md:text-base",
+              "relative z-[2] mt-[40px] max-w-[824px] text-[14px] leading-6 md:my-[20px] md:text-base",
               {
                 "max-w-[592px]": isMaxWidthTab,
                 "text-secondary": isTextSecondary
