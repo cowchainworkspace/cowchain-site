@@ -2,7 +2,7 @@ import React from "react";
 import { HeroSection } from "../components/service/blocks/HeroSection";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
-import bg from "@/assets/services/FAQServiceBg.svg";
+import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 
 import {
   icoPlatformBenefits,
@@ -32,6 +32,7 @@ const IcoPlatformDevelopment = () => {
         desc={
           "Expert ICO Platform Development Services for Your Blockchain Project"
         }
+        descClasses={"md:justify-start"}
       />
       <Achievements
         tag={"What Are ICO Platform Development Services?"}
@@ -79,7 +80,7 @@ const IcoPlatformDevelopment = () => {
         bg={
           <Image
             alt="background decoration"
-            className="pointer-events-none absolute -top-[30%] left-0 hidden md:block"
+            className="pointer-events-none absolute -top-[30%] left-0 hidden xl:block"
             src={whiteLabelBg}
           />
         }
@@ -93,14 +94,14 @@ const IcoPlatformDevelopment = () => {
         }
         data={icoPlatformsFeatures}
         topBorder={false}
-        customClasses="md:grid-cols-2 md:gap-y-10 md:gap-x-10 xl:gap-y-[109px] xl:gap-x-[120px] xl:pl-[65px] mt-0"
+        customClasses="md:grid-cols-2 md:gap-y-10 md:gap-x-10 xl:gap-y-[109px] xl:gap-x-[120px] xl:pl-[65px] !mt-0"
         itemContainerClasses={
           "flex-row gap-3 md:gap-5 xl:gap-[49px] md:max-w-full"
         }
         containerClasses={"xl:gap-30 custom1430:pr-[143px] xl:py-[126px]"}
         itemTitleClasses={"text-xl max-w-full"}
         bg={
-          <CoreFeaturesRWAbg className="pointer-events-none absolute -bottom-[90%] right-0 h-auto w-[1100px]" />
+          <CoreFeaturesRWAbg className="pointer-events-none absolute -bottom-[90%] right-0 hidden h-auto w-[1100px] lg:block" />
         }
       />
       <ExpertiseServices
@@ -182,26 +183,28 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
       </div>
       <Cases />
       <CasesMobile />
-      <div className="relative">
-        <div
-          style={{ pointerEvents: "none" }}
-          className="top absolute bottom-0 left-0 right-0 top-0 overflow-hidden"
-        >
-          <Image
-            alt=""
-            width={1380}
-            height={1330}
-            style={{ pointerEvents: "none" }}
-            className="absolute -left-[650px] min-h-[1330px] min-w-[900px]"
-            src={bg}
-          />
-        </div>
-        <div className="w-full overflow-hidden">
-          <FAQ noBg={true} data={icoPlatformFaqBotData} />
-        </div>
-      </div>
 
-      <Contact className={"xl:py-[119px]"} />
+      <div className="relative w-full overflow-hidden">
+        <Image
+          src={dexBg}
+          alt="decoration ellipse"
+          className="pointer-events-none absolute -bottom-[10%] -top-[25%] left-0 hidden h-[1600px]  w-auto  md:block"
+        />
+        <FAQ noBg={true} data={icoPlatformFaqBotData} />
+        <Contact
+          titleClasses={
+            "uppercase mb-6 md:mb-0 text-[32px§§§§§§§§§§§§§§§§§§§§§§§§§] xl:max-w-[994px] xl:text-[64px]"
+          }
+          title={"The Future of ICO Platforms for Fundraising"}
+          desc={
+            "ICO platform development services empower businesses to adopt blockchain technology for efficient and secure fundraising. By integrating advanced tools, smart contracts, and global accessibility, these platforms redefine how projects connect with investors. Ready to launch your crypto project? Contact us today to explore tailored ICO development services that align with your vision."
+          }
+          descriptionClasses={
+            "xl:max-w-[828px] mb-6 md:mb-0 px-4 md:px-0 xl:text-base xl:font-normal xl:leading-6"
+          }
+          className={"py-[50px] xl:py-[119px]"}
+        />
+      </div>
     </section>
   );
 };

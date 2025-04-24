@@ -88,7 +88,7 @@ const CryptoWalletDev = () => {
         data={walletFeaturesData}
         topBorder={false}
         customClasses="!grid-cols-2 !pr-0 xl:gap-y-[120px] xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
-        itemClasses="!flex-row gap-[49px] !min-w-full"
+        itemClasses="!flex-row md:gap-[49px] !min-w-full"
       />
 
       <ExpertiseServices
@@ -235,7 +235,7 @@ const CryptoWalletDev = () => {
       <div className="relative">
         <div className="w-full overflow-hidden">
           <OtherServices
-          typographyContainerClasses="md:!pt-[80px]"
+            typographyContainerClasses="md:!pt-[80px]"
             tag={"Other Our Services"}
             title={
               <>
