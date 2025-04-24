@@ -2,12 +2,13 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
+import SolutionCardImage from "../SolutionCardImage";
 
-const CasesSolutions = ({ solutions, classes }) => {
+const CasesSolutions = ({ solutions, classes, isRetroBridge }) => {
   return (
-    <section className="py-[50px] xl:py-[120px]">
+    <section className="overflow-hidden py-[50px] xl:py-[120px]">
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-10 xl:px-[176px]">
-        <h2 className="mb-6 font-roc text-[32px] font-medium uppercase leading-90 text-white xl:mb-1 xl:text-[54px]">
+        <h2 className="z-[100] mb-6 font-roc text-[32px] font-medium uppercase leading-90 text-white xl:mb-1 xl:text-[54px]">
           solutions
         </h2>
         <div className="grid w-full gap-14 md:grid-cols-2  xl:grid-cols-1  xl:gap-4 ">
@@ -55,14 +56,22 @@ const CasesSolutions = ({ solutions, classes }) => {
                     {desc}
                   </p>
                 </div>
-
-                <Image
-                  width={img.mobileWidth}
-                  height={img.mobileHeight}
-                  src={img.mobileHref.src}
-                  alt={img.info}
-                  className={"xl:hidden"}
-                />
+                {isRetroBridge ? (
+                  <SolutionCardImage
+                    mobileWidth={img.mobileWidth}
+                    imgSrc={img.href}
+                    mobileHeight={img.mobileHeight}
+                    top={img.top}
+                  />
+                ) : (
+                  <Image
+                    width={img.mobileWidth}
+                    height={img.mobileHeight}
+                    src={img.href}
+                    alt={img.info}
+                    className={"xl:hidden"}
+                  />
+                )}
                 <div
                   className={cn(
                     "relative hidden flex-shrink-0 xl:block",

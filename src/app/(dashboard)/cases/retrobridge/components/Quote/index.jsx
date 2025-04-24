@@ -3,7 +3,7 @@ import React from "react";
 
 const Quote = () => {
   return (
-    <section className="pt-[203px]">
+    <section className="hidden pt-[203px] xl:block">
       <div className="relative mx-auto flex max-w-[839px] flex-col items-center gap-10">
         <blockquote className="text-center font-roc text-4xl uppercase leading-[42px] text-white">
           “As the founder of RetroBridge, I am immensely proud of the incredible
