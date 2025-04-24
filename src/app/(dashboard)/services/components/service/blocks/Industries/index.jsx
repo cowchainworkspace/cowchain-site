@@ -73,7 +73,7 @@ export function Industries({
           >
             <h2
               className={cn(
-                "whitespace-pre-line z-[2] text-left text-[36px] uppercase md:text-center md:text-start  custom1430:text-[60px]",
+                "whitespace-pre-line  !leading-[90%] z-[2] text-left text-[36px] uppercase md:text-center md:text-start  custom1430:text-[60px]",
                 {
                   "xl:text-[42px]": isTwoSides
                 },
@@ -97,11 +97,11 @@ export function Industries({
         )}
 
         <div
-          className={`flex flex-col gap-5 sm:grid    ${
+          className={`flex flex-col gap-5 sm:grid ${
             isTwoSides
               ? "col-span-1 grid-cols-2 gap-x-[30px]  gap-y-[42px] sm:gap-y-[30px] custom1000:gap-x-[77px] custom1000:gap-y-[77px]"
               : data.length < 4
-                ? "col-span-3 mt-[120px] grid-cols-3  gap-x-[109px] sm:gap-y-[42px]"
+                ? "col-span-3 md:mt-[120px] grid-cols-3  gap-x-[109px] sm:gap-y-[42px]"
                 : fullGrid
                   ? `gap-x-[109px] gap-y-[42px]  ${isWhiteLabel && "md:col-span-4 md:grid-cols-2 lg:col-span-4 lg:grid-cols-4"} col-span-4 grid-cols-4`
                   : "col-span-2 grid-cols-2 gap-y-[42px] lg:mt-[120px] lg:gap-x-[109px]"
@@ -110,8 +110,8 @@ export function Industries({
           {data.map((expertise, index) => (
             <div
               key={index}
-              className={`col-span-1 row-span-1 z-[10] flex ${itemClasses}  ${expertise.text ? "items-start" : "items-center"}
-                  ${isTwoSides || fullGrid || data.length < 4 ? "max-w-full flex-col gap-0 sm:max-w-[307px]" : "gap-5 lg:gap-[49px]"}`}
+              className={`col-span-1 row-span-1 gap-[20px] z-[10] flex ${expertise.text ? "items-start" : "items-center"}
+                  ${isTwoSides || fullGrid || data.length < 4 ? "max-w-full flex-col gap-0 sm:max-w-[307px]" : "gap-5 gap-[20px] lg:gap-[49px]"}  ${itemClasses} `}
             >
               {expertise.icon && (
                 <div
@@ -128,7 +128,7 @@ export function Industries({
                 <div className="">
                   <h3
                     className={cn(
-                      "mb-[22px] max-w-[310px] !leading-[90%] uppercase md:text-xl",
+                      "mb-[22px] max-w-[310px] text-[18px] !leading-[90%] uppercase md:text-[20px]",
                       itemTitleClasses
                     )}
                   >

@@ -10,7 +10,17 @@ import ContactForm from "./utils/ContactForm";
 export default function Contact({
   className,
   descriptionClasses,
-  titleClasses
+  titleClasses,
+  title = (
+    <>HAVE PROJECT <br className="hidden md:block" /> IN MIND?</>
+  ),
+  desc = (
+    <>
+      We often look for new talents, so if you are interested in working in
+      Cowchain, <br className="hidden md:block" /> send your CV and our HRs will
+      get in touch if you are a great fit
+    </>
+  )
 }) {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -33,29 +43,31 @@ export default function Contact({
         <div className="flex flex-col text-center md:gap-10">
           <h3
             className={cn(
-              "mx-auto max-w-[303px] items-center  text-center lg:max-w-xl",
+              "mx-auto  items-center uppercase text-center",
               titleClasses
             )}
           >
-            HAVE PROJECT <br className="hidden md:block" /> IN MIND?
+            {title}
           </h3>
-          <p
-            className={cn(
-              "mx-auto max-w-[550px] text-[14px] font-[400] leading-[22px] text-[#BBBBBB]",
-              descriptionClasses
-            )}
-          >
-            We often look for new talents, so if you are interested in working
-            in Cowchain, <br className="hidden md:block" /> send your CV and our
-            HRs will get in touch if you are a great fit
-          </p>
+          {desc && (
+            <p
+              className={cn(
+                "mx-auto mb-[20px] max-w-[550px] text-[14px] font-[400] leading-[22px] text-[#BBBBBB]",
+                descriptionClasses
+              )}
+            >{desc}</p>
+          )}
+
           <button
             className="btn-contact mx-auto lg:h-48 lg:w-48"
             onClick={() => setModalOpen(true)}
           >
             Get in touch
           </button>
-          <ContactForm modalOpen={modalOpen} setModalOpen={setModalOpen} />
+          <ContactForm
+            modalOpen={modalOpen}
+            setModalOpen={setModalOpen}
+          />
         </div>
       </div>
     </section>
