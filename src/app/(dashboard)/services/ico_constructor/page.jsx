@@ -250,7 +250,10 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
       <WhiteLabelCases hasNoDescription={true} title="Our Cases" />
       <Cases />
       <CasesMobile />
-      <FAQ noBg={true} data={icoConstructorFaqBotData} />
+      <div className="w-full overflow-hidden">
+        <FAQ noBg={true} data={icoConstructorFaqBotData} />
+      </div>
+
       <Contact
         descriptionClasses={"mb-6 md:mb-0"}
         className={"px-4 py-[50px] md:px-0 xl:py-[143px]"}
