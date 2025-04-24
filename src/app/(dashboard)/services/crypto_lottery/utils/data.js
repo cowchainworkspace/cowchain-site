@@ -11,7 +11,7 @@ import SupplyChain from "@/assets/svgComponents/industries/SupplyChainIcon";
 import TestingIcon from "@/assets/svgComponents/industries/TestingIcon";
 import { BridgingKnowladgeIcon } from "@/assets/svgComponents/web3Design/BridgingKnowladgeIcon";
 import { SimpleWorkflow } from "@/assets/svgComponents/web3Design/SimpleWorkflow";
-import { SeamlessBlockchainIcon } from "@/assets/svgComponents/whiteLabel/seamlessBlockchainIcon";
+import { SeamlessBlockchainIcon } from "@/assets/svgComponents/lottery/SeamlessBlockchainIcon"
 import { EnsuringCrossPlatformIcon } from "@/assets/svgComponents/web3Design/EnsuringCrossPlatformIcon";
 
 export const DexExpertiseDesc =
