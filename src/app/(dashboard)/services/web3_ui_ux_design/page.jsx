@@ -36,29 +36,32 @@ const Web3UiUx = () => {
         descClass="lg:text-[39px]"
         desc={
           <>
-            Web3 is revolutionizing the digital ecosystem, <br /> transitioning
-            from{" "}
+            Web3 is revolutionizing the digital ecosystem,{" "}
+            <br className="hidden custom1400:block" /> transitioning from{" "}
             <span className="violet-gradient-text">
-              centralized Web2 systems to <br /> decentralized blockchain-based
-              environments
+              centralized Web2 systems to{" "}
+              <br className="hidden custom1400:block" /> decentralized
+              blockchain-based environments
             </span>
-            . <br />
-            This shift demands a fresh approach to Web3 design, <br /> where
-            usability and functionality{" "}
+            . <br className="hidden custom1400:block" />
+            This shift demands a fresh approach to Web3 design,{" "}
+            <br className="hidden custom1400:block" /> where usability and
+            functionality{" "}
+            <span className="violet-gradient-text"> merge seamlessly </span>{" "}
+            with <br className="hidden custom1400:block" /> advanced
+            technologies. Unlike traditional platforms,{" "}
+            <br className="hidden custom1400:block" />{" "}
             <span className="violet-gradient-text">
               {" "}
-              merge seamlessly{" "}
-            </span>{" "}
-            with <br /> advanced technologies. Unlike traditional platforms,{" "}
-            <br />{" "}
-            <span className="violet-gradient-text">
-              {" "}
-              Web3 platforms emphasize user autonomy, open data <br />{" "}
+              Web3 platforms emphasize user autonomy, open data <br className="hidden custom1400:block" />{" "}
               accessibility, and the elimination of intermediaries
             </span>
-            . <br /> Intuitive blockchain UI and blockchain UX are crucial{" "}
-            <br /> for addressing the complexities of Web3 interactions <br />{" "}
-            while ensuring user satisfaction
+            . <br className="hidden custom1400:block" /> Intuitive blockchain UI
+            and blockchain UX are crucial{" "}
+            <br className="hidden custom1400:block" /> for addressing the
+            complexities of Web3 interactions{" "}
+            <br className="hidden custom1400:block" /> while ensuring user
+            satisfaction
           </>
         }
       />
@@ -89,12 +92,12 @@ const Web3UiUx = () => {
           </>
         }
         desc="Designing for Web3 comes with its own set of challenges, often revolving around balancing complex technology with user accessibility."
-        itemTitleClasses="lg:max-w-[350px] xl:text-[18px]"
+        itemTitleClasses="lg:max-w-[350px] md:text-[18px]"
         data={challengesUiUxData}
         topBorder={false}
         titleClasses="xl:mb-[54px]"
         customClasses="!grid-cols-2 !pr-0 xl:gap-y-[120px] xl:pl-[55px] xl:pr-[60px] xl:mt-[80px]"
-        itemClasses="!flex-row gap-[49px] !min-w-full"
+        itemClasses="!flex-row gap-[20px] lg:gap-[49px] !min-w-full"
         bg={
           <Image
             src={dexBg}
@@ -134,7 +137,7 @@ const Web3UiUx = () => {
           hasIcon={false}
           faqGradient={true}
           itemTitleClass="xl:!text-[20px]"
-          itemsClasses={"py-[75px] "}
+          itemsClasses={"py-[40px] md:py-[75px] "}
         />
       </div>
 
@@ -237,7 +240,7 @@ const Web3UiUx = () => {
         <Image
           src={dexBg}
           alt="decoration ellipse"
-          className="pointer-events-none absolute -bottom-[10%] left-0 z-[10] h-[1600px] w-auto"
+          className="pointer-events-none absolute -bottom-[10%] left-0 z-[10] hidden h-[1600px] w-auto md:inline"
         />
 
         <Cases />

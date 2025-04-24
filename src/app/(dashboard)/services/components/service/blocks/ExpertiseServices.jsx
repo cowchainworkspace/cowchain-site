@@ -14,7 +14,6 @@ export function ExpertiseServices({
   threeColumns,
   tag,
   isDevelop = false,
-  customClasses = "",
   itemsClasses = "",
   itemClasses = "",
   titleClasses = "",
@@ -36,14 +35,16 @@ export function ExpertiseServices({
           sectionContainerClasses
         )}
       >
-        <div className="col-span-1 lg:gap-10">
+        <div
+          className={cn("col-span-1  lg:gap-10", !desc && "mb-[50px] md:mb-0")}
+        >
           {tag && <Tag title={tag} className="mb-4 w-fit md:mb-8" />}
           <h2
             className={cn(
-              "lg:order-0 text-[36px] uppercase text-white xl:text-[42px]",
+              "lg:order-0 relative  z-[2] text-[36px] uppercase !leading-[90%] text-white xl:text-[42px]",
               {
                 "xl:!text-[50px]": threeColumns,
-                "text-[36px] leading-[37.59px] xl:!text-[42px]": isDevelop
+                "text-[36px] xl:!text-[42px]": isDevelop
               },
               titleClasses
             )}
@@ -51,7 +52,7 @@ export function ExpertiseServices({
             {title}
           </h2>
           {desc && (
-            <p className="body my-[40px]  max-w-[582px] text-base leading-6 md:my-[20px]">
+            <p className="body relative z-[2] my-[40px] max-w-[582px] text-base leading-6 md:my-[20px]">
               {desc}
             </p>
           )}
@@ -61,7 +62,7 @@ export function ExpertiseServices({
           className={cn(
             `${
               threeColumns
-                ? "col-span-2 grid grid-cols-2 gap-x-[20px] md:gap-x-[85px]"
+                ? "relative z-[20] col-span-2 grid grid-cols-2 gap-x-[20px] md:gap-x-[85px]"
                 : "md:max-w-[350px] custom1000:max-w-[400px]  custom1200:max-w-[519px]"
             } ${itemsClasses}`,
             containerClasses

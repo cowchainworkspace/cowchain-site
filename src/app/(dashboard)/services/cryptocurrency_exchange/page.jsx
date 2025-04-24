@@ -34,25 +34,26 @@ const CryptoCurrencyDev = () => {
           </>
         }
         ttileClasses="md:!pt-[37px]"
+         hightLightClass="text-[34px] leading-[90%] md:text-[80px]"
       />
       <Achievements
-        tag={"Cryptocurrency Exchange Development Services for Your Business"}
+        tag={<>Cryptocurrency Exchange Development Services <span className="hidden sm:inline">for Your Business</span></>}
         desc={
           <>
-            Exchanges for cryptocurrencies are now necessary <br /> for
+            Exchanges for cryptocurrencies are now necessary <br className="hidden custom1400:block" /> for
             navigating
             <span className="violet-gradient-text">
               the future of digital finance
             </span>
-            ; they are <br /> no longer optional. Our cryptocurrency exchange{" "}
+            ; they are <br className="hidden custom1400:block" /> no longer optional. Our cryptocurrency exchange{" "}
             <br /> development services{" "}
             <span className="violet-gradient-text">
               {" "}
-              will assist you in creating a <br /> safe, adaptable, and entirely
+              will assist you in creating a <br className="hidden custom1400:block" /> safe, adaptable, and entirely
               customized solution{" "}
             </span>{" "}
-            that satisfies your particular business objectives, <br />{" "}
-            regardless of whether you're planning to launch <br /> your first
+            that satisfies your particular business objectives, <br className="hidden custom1400:block" />{" "}
+            regardless of whether you're planning to launch <br className="hidden custom1400:block" /> your first
             platform or scale an existing idea.
           </>
         }
@@ -107,7 +108,7 @@ const CryptoCurrencyDev = () => {
         data={cryptoCurrencyFeaturesData}
         topBorder={false}
         customClasses="!grid-cols-2 !pr-0 xl:gap-y-[120px] xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
-        itemClasses="!flex-row gap-[49px] !min-w-full"
+        itemClasses="!flex-row md:gap-[49px] !min-w-full"
         bg={
           <CoreFeaturesRWAbg className="pointer-events-none absolute -bottom-[90%] right-0 h-auto w-[1100px]" />
         }
