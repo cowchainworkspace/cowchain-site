@@ -6,7 +6,8 @@ export default function Achievements({
   tag,
   desc,
   descClass,
-  containerClasses
+  containerClasses,
+  sub
 }) {
   return (
     <section className="relative  w-full overflow-hidden border-b border-t border-b-th-fade border-t-th-fade pt-[60px] md:max-w-full md:pt-[126px] ">
