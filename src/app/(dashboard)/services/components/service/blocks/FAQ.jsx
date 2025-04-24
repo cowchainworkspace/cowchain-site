@@ -106,7 +106,7 @@ export default function FAQ({
           >
             <h2
               className={cn(
-                `flex  ${faq ? "justify-center text-center" : "text-pretty"} text-[36px]  uppercase  leading-[37.59px] text-white custom1000:text-[42px] custom1430:text-[60px] custom1430:leading-[0.9]`,
+                `flex  ${faq ? "justify-center text-center" : "text-pretty"} text-[36px]  uppercase  leading-[90%] text-white custom1000:text-[42px] custom1430:text-[60px] custom1430:leading-[0.9]`,
                 titleClasses
               )}
             >

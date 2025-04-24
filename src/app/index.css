@@ -12,6 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-variant-ligatures: none;
+  overscroll-behavior: none;
 }
 
 .scroll-lock {

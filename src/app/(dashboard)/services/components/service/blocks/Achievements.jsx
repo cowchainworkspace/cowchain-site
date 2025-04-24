@@ -31,6 +31,12 @@ export default function Achievements({
         >
           {desc}
         </h3>
+
+        {sub && (
+          <p className="mt-[30px] max-w-[800px] text-[16px] !leading-[22px] !text-[#BBBBBB]">
+            {sub}
+          </p>
+        )}
       </div>
     </section>
   );

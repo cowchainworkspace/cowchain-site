@@ -12,7 +12,19 @@ export default function Contact({
   desc,
   className,
   descriptionClasses,
-  titleClasses
+  titleClasses,
+  title = (
+    <>
+      HAVE PROJECT <br className="hidden md:block" /> IN MIND?
+    </>
+  ),
+  desc = (
+    <>
+      We often look for new talents, so if you are interested in working in
+      Cowchain, <br className="hidden md:block" /> send your CV and our HRs will
+      get in touch if you are a great fit
+    </>
+  )
 }) {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -35,7 +47,7 @@ export default function Contact({
         <div className="flex flex-col text-center md:gap-10">
           <h3
             className={cn(
-              "mx-auto max-w-[303px] items-center  text-center lg:max-w-xl",
+              "mx-auto  items-center text-center uppercase",
               titleClasses
             )}
           >

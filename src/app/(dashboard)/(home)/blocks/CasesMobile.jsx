@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useMotionValue } from "framer-motion";
 import { ScrollProject } from "./ScrollProject";
 import useScrollPercentage from "react-scroll-percentage-hook";
-import { casesMobileData } from '../homeData/data'
+import { casesMobileData } from '../homeData/data';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/bundle";
@@ -21,7 +21,7 @@ const CasesMobile = () => {
 
 
   return (
-    <section ref={containerRef} className="block custom480:hidden">
+    <section ref={containerRef} className="block relative z-[2] custom480:hidden">
       {casesMobileData &&
         casesMobileData.map((project, index) => (
           <div key={index} className="">

@@ -10,7 +10,7 @@ import Link from "next/link";
 import React from "react";
 import { Helmet } from "react-helmet";
 
-export const HeroSection = ({ title, desc, isRwa = false, ttileClasses, descClasses }) => {
+export const HeroSection = ({ title, desc, isRwa = false, ttileClasses, descClasses, hightLightClass }) => {
   return (
     <section className={cn("relative overflow-visible  lg:pt-[120px]")}>
       <Helmet>
@@ -38,7 +38,7 @@ export const HeroSection = ({ title, desc, isRwa = false, ttileClasses, descClas
       >
         <Tag className={"mr-auto cursor-default"} title={"cowchain"} />
         {title && (
-          <h1 className="mt-10 cursor-default font-roc text-[38px] font-medium uppercase leading-90 text-white md:text-[80px] lg:mt-6 lg:max-w-[1200px] xl:mt-8">
+          <h1 className={cn("mt-10 cursor-default font-roc text-[38px] font-medium uppercase leading-90 text-white md:text-[80px] lg:mt-6 lg:max-w-[1200px] xl:mt-8", hightLightClass)}>
             {title}
           </h1>
         )}

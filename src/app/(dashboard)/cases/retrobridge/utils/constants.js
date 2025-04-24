@@ -11,7 +11,7 @@ import {
   bridger,
   display,
   graph,
-  wallet
+  wallet,
 } from "../../../../../../public/cases/RetroBridge/solutions";
 
 import { agent, gbc, m2ePlatformImg } from "../../../../../../public/projects";
@@ -22,19 +22,17 @@ export const retroBridgeTags = [
     tagLabel: "Web Development"
   },
   {
-    id: 2,
-    tagLabel: "DeFi"
-  },
-  {
     id: 3,
     tagLabel: "Bridge"
+  },
+  {
+    id: 2,
+    tagLabel: "DeFi"
   },
   {
     id: 4,
     tagLabel: "NFT"
   },
-  
-
 ];
 
 export const overviewRetroBridgeItems = [
@@ -86,56 +84,72 @@ export const retroBridgeSlides = [
     width: 816,
     height: 539,
     desc: "sun set phase",
-    href: slideOne
+    href: slideOne,
+    mobileHeight: 202,
+    mobileWidth: 303,
   },
   {
     id: 2,
     width: 817,
     height: 539,
     desc: "screen with a token transfer",
-    href: slideTwo
+    href: slideTwo,
+    mobileHeight: 202,
+    mobileWidth: 303,
   },
   {
     id: 3,
     width: 255,
     height: 539,
     desc: "mobile screen with a transfer details",
-    href: slideThree
+    href: slideThree,
+    mobileHeight: 202,
+    mobileWidth: 94,
   },
   {
     id: 4,
     width: 818,
     height: 539,
     desc: "screen with a recent transactions",
-    href: slideFour
+    href: slideFour,
+    mobileHeight: 202,
+    mobileWidth: 303,
   },
   {
     id: 5,
     width: 816,
     height: 539,
     desc: "sun set phase",
-    href: slideOne
+    href: slideOne,
+    mobileHeight: 202,
+    mobileWidth: 303,
   },
   {
     id: 6,
     width: 817,
     height: 539,
     desc: "screen with a token transfer",
-    href: slideTwo
+    href: slideTwo,
+    mobileHeight: 202,
+    mobileWidth: 303,
   },
   {
     id: 7,
     width: 255,
     height: 539,
     desc: "mobile screen with a transfer details",
-    href: slideThree
+    href: slideThree,
+    mobileHeight: 202,
+    mobileWidth: 94,
   },
   {
     id: 8,
     width: 818,
     height: 539,
     desc: "screen with a recent transactions",
-    href: slideFour
+    href: slideFour,
+    mobileHeight: 202,
+    mobileWidth: 303,
   }
 ];
 
@@ -145,12 +159,14 @@ export const retroBridgeSolutions = [
     title: "Website & Bridging App",
     desc: "The platform’s website and app were built with React and Node.js, showcasing blockchain for business through responsive and scalable solutions.",
     textBlockWidth: 498,
-    imageClasses: '-mt-[10px]',
+    imageClasses: 'xl:-mt-[10px]',
     img: {
       width: 500,
       height:500,
       info: "decorated bottles with nfts inside",
-      href: bottles
+      href: bottles,
+      mobileWidth:343, 
+      mobileHeight: 270,
    }
   },
   {
@@ -163,6 +179,8 @@ export const retroBridgeSolutions = [
       height: 400,
       info: "graph with decoration ellipse",
       href: graph,
+      mobileWidth:343, 
+      mobileHeight: 280,
     }
   },
   {
@@ -174,9 +192,13 @@ export const retroBridgeSolutions = [
       width: 335,
       height: 406,
       info: "bridger display",
-      href: display
+      href: display,
+      mobileWidth:227, 
+      mobileHeight: 260,
+
     }
-  },
+    },
+
   {
     id: 4,
     title: "Adventure Campaigns",
@@ -186,9 +208,13 @@ export const retroBridgeSolutions = [
       width: 400,
       height: 440,
       info: "bridge wallet with a decoration ellipse",
-      href: wallet
+      href: wallet,
+      mobileWidth:343, 
+      mobileHeight: 260,
+
+
     }
-  },
+    },
   {
     id: 5,
     title: "NFT Integration",
@@ -198,11 +224,14 @@ export const retroBridgeSolutions = [
       width: 447,
       height: 320,
       info: "decorated bottles with nfts inside",
-      href: bottlesTwo
+      href: bottlesTwo,
+      mobileWidth:343, 
+      mobileHeight: 270,
+
     }
   },
   {
-    id: 5,
+    id: 6,
     title: "dApp Explorer",
     desc: "Developed a dApp explorer enabling users to track transactions and blockchain activities efficiently, positioning the project as one of the standout blockchain case studies in cross-chain technology.",
     textBlockWidth: 605,
@@ -210,7 +239,10 @@ export const retroBridgeSolutions = [
       width: 374,
       height: 320,
       info: "coins with a hybrid icon",
-      href: bridger
+      href: bridger,
+      mobileWidth:240, 
+      mobileHeight: 204,
+
     }
   }
 ];
@@ -245,8 +277,10 @@ export const retroBridgeProjects = [
     title: "m2e platform",
     desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
     img: m2ePlatformImg,
-    itemClasses: "pb-[30px] mt-auto",
-    projectLink: "step-app"
+    projectLink: "step-app",
+    textColor: "text-secondary",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
+
   },
   {
     id: 2,   
@@ -254,8 +288,9 @@ export const retroBridgeProjects = [
     title: "GBC DAPP",
     desc: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     img: gbc,
-    itemClasses: "pb-[30px] mt-auto",
-    projectLink: "gbc"
+    projectLink: "gbc",
+    textColor: "text-secondary",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
   },
   {
     id: 3,
@@ -263,7 +298,9 @@ export const retroBridgeProjects = [
     title: "agenthub",
     desc: "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
     img: agent,
-    itemClasses: "pb-[30px] mt-auto",
-    projectLink: "agnt"
+    textColor: "text-secondary",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
+    projectLink: "agnt",
+    tagsWidth: "max-w-[320px] md:max-w-fit"
   }
 ];

@@ -75,7 +75,9 @@ export const OtherServices = ({
       <div className="relative grid grid-cols-1 sm:mx-auto sm:max-w-[1440px] md:grid-cols-6">
         <div
           className={cn(
-            `md-border-r relative ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} z-[2] mt-[60px] box-border flex flex-col items-start justify-start pl-[20px] pr-[20px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[88px] custom1000:pt-[126px]`,
+            "pr-[20px] sm:mt-0 sm:pt-[60px] md:col-span-3 md:mb-0 md:h-full custom1000:px-0 custom1000:pl-[88px] ",
+            `md-border-r relative custom1000:pt-[126px] ${noItemsBorders ? "mb-[60px]" : "mb-[24px]"} z-[2]`,
+            " mt-[60px] box-border flex flex-col items-start justify-start pl-[20px]",
             typographyContainerClasses
           )}
         >
@@ -83,7 +85,7 @@ export const OtherServices = ({
             <Tag title={tag} className="mb-[42px] md:mb-8 xl:mb-[60px]" />
           )}
 
-          <h3 className="text-left text-[24px] uppercase leading-[90%] text-white xl:text-[36px] custom1430:text-[42px] ">
+          <h3 className="text-left text-[32px] uppercase leading-[90%] text-white xl:text-[36px] custom1430:text-[42px] ">
             {title}
           </h3>
           {desc && (
@@ -98,7 +100,10 @@ export const OtherServices = ({
           )}
         </div>
         <div
-          className={`${noItemsBorders && "gap-[42px] pb-[42px] md:gap-0"} quote_wrapper flex flex-col items-stretch overflow-x-scroll sm:flex-row sm:flex-col md:col-span-3 md:overflow-x-visible md:overflow-y-visible`}
+          className={`${noItemsBorders && "gap-[42px] pb-[42px] md:gap-0"} quote_wrapper 
+          flex flex-col z-[2]
+          items-stretch overflow-x-scroll sm:flex-row sm:flex-col md:col-span-3 
+          md:overflow-x-visible md:overflow-y-visible`}
         >
           {data?.map((feedback, index) => (
             <Quote
