@@ -12,7 +12,9 @@ export default function Contact({
   descriptionClasses,
   titleClasses,
   title = (
-    <>HAVE PROJECT <br className="hidden md:block" /> IN MIND?</>
+    <>
+      HAVE PROJECT <br className="hidden md:block" /> IN MIND?
+    </>
   ),
   desc = (
     <>
@@ -43,31 +45,27 @@ export default function Contact({
         <div className="flex flex-col text-center md:gap-10">
           <h3
             className={cn(
-              "mx-auto  items-center uppercase text-center",
+              "mx-auto  items-center text-center uppercase",
               titleClasses
             )}
           >
             {title}
           </h3>
-          {desc && (
-            <p
-              className={cn(
-                "mx-auto mb-[20px] max-w-[550px] text-[14px] font-[400] leading-[22px] text-[#BBBBBB]",
-                descriptionClasses
-              )}
-            >{desc}</p>
-          )}
-
+          <p
+            className={cn(
+              "mx-auto max-w-[550px] text-[14px] font-[400] leading-[22px] text-[#BBBBBB]",
+              descriptionClasses
+            )}
+          >
+            {desc}
+          </p>
           <button
             className="btn-contact mx-auto lg:h-48 lg:w-48"
             onClick={() => setModalOpen(true)}
           >
             Get in touch
           </button>
-          <ContactForm
-            modalOpen={modalOpen}
-            setModalOpen={setModalOpen}
-          />
+          <ContactForm modalOpen={modalOpen} setModalOpen={setModalOpen} />
         </div>
       </div>
     </section>

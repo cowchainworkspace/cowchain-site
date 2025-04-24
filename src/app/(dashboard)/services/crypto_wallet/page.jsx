@@ -235,7 +235,7 @@ const CryptoWalletDev = () => {
       <div className="relative">
         <div className="w-full overflow-hidden">
           <OtherServices
-          typographyContainerClasses="md:!pt-[80px]"
+            typographyContainerClasses="md:!pt-[80px]"
             tag={"Other Our Services"}
             title={
               <>

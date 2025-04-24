@@ -2,10 +2,21 @@ import Tag from "@/components/ui/tag";
 import { cn } from "@/lib/utils";
 import React from "react";
 
-export default function Achievements({ tag, desc, sub, descClass }) {
+export default function Achievements({
+  tag,
+  desc,
+  descClass,
+  containerClasses,
+  sub
+}) {
   return (
     <section className="relative  w-full overflow-hidden border-b border-t border-b-th-fade border-t-th-fade pt-[60px] md:max-w-full md:pt-[126px] ">
-      <div className="justify-left relative mx-auto flex max-w-[1440px] cursor-default flex-col items-start px-5 pb-[30px] md:px-8 md:pb-[127px] lg:px-16 xl:px-[88px]">
+      <div
+        className={cn(
+          "justify-left relative mx-auto flex max-w-[1440px] cursor-default flex-col items-start px-5 pb-[30px] md:px-8 md:pb-[127px] lg:px-16 xl:px-[88px]",
+          containerClasses
+        )}
+      >
         <Tag
           title={tag}
           className={
@@ -22,7 +33,11 @@ export default function Achievements({ tag, desc, sub, descClass }) {
           {desc}
         </h3>
 
-        {sub && <p className="mt-[30px] text-[16px] !leading-[22px] max-w-[800px] !text-[#BBBBBB]">{sub}</p>}
+        {sub && (
+          <p className="mt-[30px] max-w-[800px] text-[16px] !leading-[22px] !text-[#BBBBBB]">
+            {sub}
+          </p>
+        )}
       </div>
     </section>
   );
