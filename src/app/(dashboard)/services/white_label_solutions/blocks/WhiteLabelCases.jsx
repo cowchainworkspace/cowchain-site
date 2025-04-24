@@ -28,7 +28,7 @@ export const WhiteLabelCases = ({
       >
         <div className="flex flex-col items-start justify-between gap-6 xl:flex-row xl:gap-0 ">
           <div className="flex flex-col gap-5 xl:gap-[60px]">
-            <h2 className="lg:order-0 heading-[38px] z-[2] text-[42px] uppercase leading-[90%] text-white">
+            <h2 className="lg:order-0 heading-[38px] z-[15] text-[42px] uppercase leading-[90%] text-white">
               {title}
             </h2>
             {!hasNoDescription && desc && (
