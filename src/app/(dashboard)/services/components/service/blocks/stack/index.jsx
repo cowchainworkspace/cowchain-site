@@ -66,7 +66,9 @@ export function ServiceStack({
                 )}
               </h2>
 
-              <p className="leading-[22px] text-[16px] text-[#BBBBBB]">{desc}</p>
+              <p className="text-[16px] leading-[22px] text-[#BBBBBB]">
+                {desc}
+              </p>
             </div>
           </div>
         </div>

@@ -91,7 +91,7 @@ export const OtherServices = ({
           {desc && (
             <p
               className={cn(
-                "body my-5 max-w-[592px] text-base leading-6 md:leading-[22px] md:my-[20px] md:my-[40px]",
+                "body my-5 max-w-[592px] text-base leading-6 md:my-[20px] md:my-[40px] md:leading-[22px]",
                 descClasses
               )}
             >
@@ -101,7 +101,7 @@ export const OtherServices = ({
         </div>
         <div
           className={`${noItemsBorders && "gap-[42px] pb-[42px] md:gap-0"} quote_wrapper 
-          flex flex-col z-[2]
+          z-[2] flex flex-col
           items-stretch overflow-x-scroll sm:flex-row sm:flex-col md:col-span-3 
           md:overflow-x-visible md:overflow-y-visible`}
         >

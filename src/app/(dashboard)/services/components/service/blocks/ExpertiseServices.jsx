@@ -21,7 +21,8 @@ export function ExpertiseServices({
   cryptoWalletClass,
   itemTitleClasses,
   containerClasses = "",
-  sectionContainerClasses = ""
+  sectionContainerClasses = "",
+  titleDescClasses = ""
 }) {
   return (
     <section
@@ -52,7 +53,12 @@ export function ExpertiseServices({
             {title}
           </h2>
           {desc && (
-            <p className="body relative z-[2] my-[40px] max-w-[582px] text-base leading-6 md:my-[20px]">
+            <p
+              className={cn(
+                "body relative z-[2] my-[40px] max-w-[582px] text-base leading-6 md:my-[20px]",
+                titleDescClasses
+              )}
+            >
               {desc}
             </p>
           )}

@@ -7,7 +7,8 @@ export default function Achievements({
   desc,
   descClass,
   containerClasses,
-  sub
+  sub,
+  subClasses = ""
 }) {
   return (
     <section className="relative  w-full overflow-hidden border-b border-t border-b-th-fade border-t-th-fade pt-[60px] md:max-w-full md:pt-[126px] ">
@@ -26,7 +27,7 @@ export default function Achievements({
 
         <h3
           className={cn(
-            "text-left text-2xl uppercase leading-[0.9] relative z-[2] text-white md:block lg:text-[42px]",
+            "relative z-[2] text-left text-2xl uppercase leading-[0.9] text-white md:block lg:text-[42px]",
             descClass
           )}
         >
@@ -34,7 +35,12 @@ export default function Achievements({
         </h3>
 
         {sub && (
-          <p className="mt-[30px] max-w-[800px] text-[16px] relative z-[2]  !leading-[22px] !text-[#BBBBBB]">
+          <p
+            className={cn(
+              "relative z-[2] mt-[30px] max-w-[800px] text-[16px]  !leading-[22px] !text-[#BBBBBB]",
+              subClasses
+            )}
+          >
             {sub}
           </p>
         )}

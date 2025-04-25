@@ -82,7 +82,7 @@ it sets you up for growth with lower risk and stronger infrastructure"
             Crypto Lottery Platform
           </>
         }
-        desc="Using white label lottery software isn’t just about launching faster — it’s about building smarter. With pre-audited smart contracts,  integrated payout systems, and built-in blockchain validation, white label platforms offer a head start without compromising control or scalability"
+        desc="Using white label lottery software isn’t just about launching faster — it’s about building smarter. With pre-audited smart contracts, integrated payout systems, and built-in blockchain validation, white label platforms offer a head start without compromising control or scalability"
         itemTitleClasses="lg:max-w-[350px] md:text-[18px]"
         data={keyFeaturesLotteryData}
         topBorder={false}
@@ -128,8 +128,8 @@ it sets you up for growth with lower risk and stronger infrastructure"
             Whether you’re a startup testing a new model or a Web3 company
             looking to expand your ecosystem, launching with white label lottery
             solutions gives you a reliable, fast, and future-ready path to
-            market.  With a team that understands both blockchain infrastructure
-            and user experience, you’re not just  launching a lottery — you’re
+            market. With a team that understands both blockchain infrastructure
+            and user experience, you’re not just launching a lottery — you’re
             building a product people trust
           </>
         }
