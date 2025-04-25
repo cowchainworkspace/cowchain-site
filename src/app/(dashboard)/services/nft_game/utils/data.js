@@ -36,6 +36,22 @@ export const DexExpertiseData = [
   }
 ];
 
+export const nftGameFAQData = [
+  {
+    title: "What types of NFT games can you develop?",
+    content:
+      "We build a wide variety of NFT games, including collectible card games, open-world RPGs, play-to-earn platforms, idle clickers, and metaverse experiences. Whether you’re targeting competitive mechanics, breeding systems, or marketplace-driven gameplay – we help shape your concept into a playable product."
+  },
+  {
+    title: "How do you ensure blockchain integration doesn’t hurt gameplay performance?",
+    content: `We design game logic and blockchain functions to work together seamlessly. Heavy lifting (minting, transfers, etc.) is handled off the main gameplay loop to keep performance smooth. We also integrate Layer 2 networks or sidechains when needed to reduce gas costs and improve speed.`
+  },
+  {
+    title: "Can you help with marketplace development for in-game assets?",
+    content: `Absolutely. We offer in-game and external NFT marketplace development as part of our NFT game development services. Whether you want to list items within your own ecosystem or connect to third-party platforms, we can build secure, user-friendly marketplaces tailored to your economy.`
+  }
+];
+
 export const IndustriesDexData = [
   {
     title: "Government",
@@ -123,21 +139,26 @@ export const otherServices = [
   }
 ];
 
-export const otherWeb3DesignServices = [
+export const otherNftGameServices = [
   {
-    text: "Full-stack Development Services",
+    text: "NFT Development",
     author:
-      "We handle both front-end and back-end development, combining intuitive user flows with reliable on-chain logic to deliver scalable Web3 applications that perform smoothly across devices."
+      "We build custom NFT solutions for projects that require verifiable digital ownership – from static collections to dynamic NFTs with programmable logic and cross-platform utility."
   },
   {
-    text: "NFT Game Development",
+    text: "Web3 UI / UX Design",
     author:
-      "We design and develop NFT-based games with custom mechanics, in-game token economies, and marketplace integrations, delivering engaging experiences powered by intuitive UI and dynamic on-chain assets."
+      "Our team specializes in decentralized exchange (DEX) development, allowing peer-to-peer trading of tokens and NFTs on a secure blockchain network"
   },
   {
-    text: "DApp Development",
+    text: "Smart Contract Development",
     author:
-      "Our team builds decentralized applications tailored for user-friendly interaction, ensuring that even complex blockchain operations like staking or swapping feel effortless and familiar."
+      "Our team designs intuitive interfaces for Web3 products, ensuring seamless interaction between users and decentralized systems. We focus on usability, clarity, and integration with core blockchain functions."
+  },
+  {
+    text: "Crypto Wallet Development",
+    author:
+      "We develop crypto wallets tailored to specific use cases. Whether it’s multi-chain asset management, token swaps, or in-app NFT storage, our wallet solutions prioritize security and performance."
   }
 ];
 
@@ -160,12 +181,12 @@ export const web3DesignTrendsData = [
 export const benefitsNftGameData = [
   {
     title: "Expertise in Blockchain and NFT Technologies",
-    content:
+    desc:
       "Creating an NFT-based game isn’t just about adding tokens to a character. It’s about designing economies, experiences, and logic that work on-chain. A professional NFT game development company understands how to balance gameplay with asset utility, how smart contracts influence your game economy, and how to align player incentives with project sustainability. Whether you’re building a collectible card battler or a Web3 shooter with mintable cosmetics, technical knowledge matters"
   },
   {
     title: "End-to-End Development Services",
-    content: `From the first wireframe to token launch, working with a skilled team means you’re not left guessing. We offer blockchain game development as a complete service, covering concept design, smart contract development, wallet integration, backend scaling, and even go-to-market support. You bring the vision. We’ll bring the infrastructure, strategy, and execution to match it`
+    desc: `From the first wireframe to token launch, working with a skilled team means you’re not left guessing. We offer blockchain game development as a complete service, covering concept design, smart contract development, wallet integration, backend scaling, and even go-to-market support. You bring the vision. We’ll bring the infrastructure, strategy, and execution to match it`
   }
 ];
 
@@ -176,18 +197,18 @@ export const metadata = {
   }
 };
 
-export const keyFeaturesWeb3DesignData = [
+export const keyFeaturesOfNftData = [
   {
-    title: "Effortless User Experience",
-    desc: "A fluid Web3 user experience prioritizes intuitive workflows and efficient navigation. Features like fast load times, clear actions, and streamlined paths for tasks – such as token swaps or NFT minting – are essential for retaining users. Such design ensures that even advanced blockchain interactions feel accessible and frustration-free"
+    title: "Custom NFT Game Design",
+    desc: "We don’t just build games — we build NFT game worlds where design and asset creation go hand in hand. From defining asset scarcity and mechanics to crafting player-driven economies, every detail is shaped to enhance both gameplay and collectibility. Our approach to NFT game design combines storytelling, gamification, and scalability, ensuring each NFT is more than a digital collectible. It’s a playable, tradable part of your game’s identity"
   },
   {
-    title: "Accessibility and Inclusivity",
-    desc: "Decentralized solutions must cater to a broad audience, including blockchain novices. Accessible Web3 design ensures usability for everyone, incorporating multilingual support, clear visual cues, and onboarding guides. Inclusivity fosters confidence among diverse user bases, accelerating platform adoption"
+    title: "Seamless Blockchain Integration",
+    desc: "Smooth blockchain integration is critical for any NFT game. We connect your core game logic with networks like Ethereum, Polygon, BNB Chain, and others, enabling real-time minting, trading, and validation of NFT game assets without slowing down the player experience.Players can move between gameplay and marketplace naturally, without leaving your ecosystem"
   },
   {
-    title: "Security and Transparency in Design",
-    desc: "In UI/UX blockchain projects, security isn’t just a backend priority, it must be embedded in the design. Transparent flows that educate users about permissions, confirmations, and transaction processes foster trust. Clear visibility into smart contract functionality helps users feel secure during interactions"
+    title: "Play-to-Earn Mechanics",
+    desc: "Play-to-earn games turn time and skill into real-world rewards. Whether it’s through native tokens, rare NFT drops, or leaderboard-based incentives, our systems are built to balance fair earning models with sustainable game economies.These mechanics aren’t just about payouts – they drive retention, social competition, and community-led value creation"
   }
 ];
 

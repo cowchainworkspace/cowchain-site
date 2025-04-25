@@ -43,7 +43,7 @@ const Quote = ({
       {!lastIndex && (
         <div className="absolute bottom-0 left-0 h-[1px] w-[calc(100vw)] border-t border-t-th-fade" />
       )}
-      <p className="max-w-2xl whitespace-pre-line  font-roc text-[18px] font-medium uppercase leading-none !no-underline md:font-[500] md:leading-[90%] custom1000:text-[20px]">
+      <p className="max-w-2xl whitespace-pre-line  font-roc text-[18px] font-medium uppercase leading-none !no-underline md:font-[500] md:leading-[90%] custom1000:text-[24px]">
         {text}
       </p>
       <div className={clsx(ishomePage ? "md:mt-[24px]" : "mt-2 md:mt-[20px]")}>
@@ -91,7 +91,7 @@ export const OtherServices = ({
           {desc && (
             <p
               className={cn(
-                "body my-5 max-w-[592px] text-base leading-6 md:leading-[22px] md:my-[20px] md:my-[40px]",
+                "body my-5 max-w-[592px] text-base leading-6 md:my-[20px] md:my-[40px] md:leading-[22px]",
                 descClasses
               )}
             >
@@ -101,7 +101,7 @@ export const OtherServices = ({
         </div>
         <div
           className={`${noItemsBorders && "gap-[42px] pb-[42px] md:gap-0"} quote_wrapper 
-          flex flex-col z-[2]
+          z-[2] flex flex-col
           items-stretch overflow-x-scroll sm:flex-row sm:flex-col md:col-span-3 
           md:overflow-x-visible md:overflow-y-visible`}
         >

@@ -14,7 +14,8 @@ import {
   keyFeaturesOfNftData,
   whyChooseNftGameData,
   web3DesignTrendsData,
-  otherWeb3DesignServices,
+  nftGameFAQData,
+  otherNftGameServices,
   challengesUiUxData,
   benefitsNftGameData,
   howToGetStartedNftGameData
@@ -31,8 +32,7 @@ const NftGameDev = () => {
         ttileClasses="md:!pt-[37px]"
       />
       <Achievements
-        tag={"Introduction to Web3 UI/UX Design"}
-        descClass="lg:text-[39px]"
+        tag={"Introduction to NFT Game Development"}
         sub="This shift is fueling a new kind of game economy where creativity, rarity, and interaction shape value. With NFT game development, projects can build vibrant virtual ecosystems where players are stakeholders, not just users"
         desc={
           <>
@@ -85,7 +85,7 @@ const NftGameDev = () => {
           </>
         }
         noBg={true}
-        descClasses={"max-w-[798px] !mt-[60px]"}
+        descClasses={"max-w-[798px] md:mt-[60px]"}
       />
 
       <ExpertiseServices
@@ -93,10 +93,10 @@ const NftGameDev = () => {
         titleClasses="xl:text-[60px] leading-[90%]"
         data={whyChooseNftGameData}
         topBorder={true}
-        itemTitleClasses="lg:text-[26px] leading-[90%]"
+        itemTitleClasses="lg:text-[20px] leading-[90%]"
         descClasses="!mb-0"
         customClasses="lg:flex-col"
-        sectionContainerClasses="lg:!flex-col gap-[30px] lg:gap-[50px] xl:gap-[70px]"
+        sectionContainerClasses="lg:!flex-col gap-[30px] lg:gap-[50px] xl:gap-[107px]"
         itemsClasses="grid lg:grid-cols-2 lg:grid-rows-1 gap-x-[82px] gap-y-[70px] min-w-full"
         itemClasses="md:!mt-0"
         bottomBorder={true}
@@ -104,7 +104,7 @@ const NftGameDev = () => {
           <Image
             src={dexBg}
             alt="decoration ellipse"
-            className="pointer-events-none absolute -bottom-[200%] left-0 z-[0] h-[1500px] w-auto"
+            className="pointer-events-none absolute bottom-[10%] left-0 z-[0] h-[1100px] w-auto"
           />
         }
       />
@@ -113,42 +113,40 @@ const NftGameDev = () => {
         <FAQ
           title={
             <>
-             Key Features of NFT <br /> Game Development <br />  Services
+              Key Features of NFT <br /> Game Development <br /> Services
             </>
           }
           data={keyFeaturesOfNftData}
           noBg={true}
+          titleClasses="custom1430:text-[42px]"
           isTwoHalf={true}
           hasIcon={false}
           faqGradient={true}
           itemTitleClass="xl:!text-[20px]"
-          itemsClasses={"py-[40px] md:py-[75px] "}
+          itemsClasses={"py-[40px] md:py-[55px] "}
         />
       </div>
 
       <ExpertiseServices
         title={
           <>
-           Benefits of <br /> Working with <br />
-           a Professional <br /> NFT Game Development <br /> Company
+            Benefits of <br /> Working with <br />
+            a Professional <br /> NFT Game <br /> Development <br /> Company
           </>
         }
         data={benefitsNftGameData}
-        cryptoWalletClass="lg:mb-[60px]"
+        cryptoWalletClass="lg:mb-[80px]"
         sectionContainerClasses="lg:pb-[102px]"
         itemTitleClasses="lg:text-[20px]"
         titleClasses="xl:!text-[60px] xl:mb-[60px]"
-        bg={
-          <CoreFeaturesRWAbg className="pointer-events-none absolute -bottom-[30%] right-0 h-auto w-[1400px]" />
-        }
       />
 
       <ExpertiseServices
         title={
           <>
             How to <br />
-Get Started <br />
-with NFT Game <br /> Development
+            Get Started <br />
+            with NFT Game <br /> Development
           </>
         }
         data={howToGetStartedNftGameData}
@@ -158,58 +156,59 @@ with NFT Game <br /> Development
         cryptoWalletClass="lg:mb-[80px]"
         titleClasses="lg:!text-[60px]"
         itemTitleClasses="lg:text-[20px] leading-[90px]"
+        bg={
+          <CoreFeaturesRWAbg className="pointer-events-none absolute -bottom-[10%] right-0 h-auto w-[1200px]" />
+        }
       />
 
       <KeyFeatures
         isOneBlock={true}
-        title={<>Introduction to NFT Game Development</>}
+        title={<>Ready to Launch Your NFT Game?</>}
         desc={
           <>
             <p>
               {" "}
-              NFT games are transforming the way players interact with digital
-              worlds. Instead of just playing, users now own, trade, and
-              monetize in-game assets backed by blockchain. Each NFT represents
-              a unique digital item – whether it’s a character, weapon, or skin
-              – that belongs to the player, not the game server.
+              NFT-powered games are the foundation of the next generation of
+              interactive entertainment. Whether you’re building a play-to-earn
+              ecosystem, a collectible-driven experience, or a full Web3 gaming
+              universe, the right development team makes all the difference. 
             </p>
             <br />
             <p>
-              This shift is fueling a new kind of game economy where creativity,
-              rarity, and interaction shape value. With NFT game development,
-              projects can build vibrant virtual ecosystems where players are
-              stakeholders, not just users.
+              Let’s turn your game idea into a playable, ownable, scalable
+              reality. Contact us today to start building
             </p>{" "}
           </>
         }
         noBg={true}
-        descClasses={"max-w-[798px] !mt-[60px]"}
+        descClasses={"max-w-[798px] md:mt-[80px]"}
       />
 
-      <Feedback
-        nobg={true}
-        desc="Our clients know they can rely on Cowchain to deliver reliable, secure blockchain solutions. Here’s what they have to say"
-      />
+      <Feedback desc="Our clients know they can rely on Cowchain to deliver reliable, secure blockchain solutions. Here’s what they have to say" />
 
       <div className="relative">
         <div className="w-full overflow-hidden">
           <OtherServices
-            tag={"Other our Services"}
+            tag={"Other Blockchain Services"}
+            itemTitleClass=""
             title={
               <>
-                In addition to <br />
-                <span className="violet-gradient-text">Web3 UI/UX design</span>
-                , <br /> Cowchain offers <br />a range of{" "}
+                In addition to <br />{" "}
                 <span className="violet-gradient-text">
-                  development <br /> services
+                  {" "}
+                  NFT Game <br /> Development,
                 </span>{" "}
-                that help turn interface ideas into fully functioning{" "}
+                <br /> Cowchain offers <br />
+                a wide range of <br /> blockchain <br /> development services{" "}
+                <br /> to support product <br />{" "}
                 <span className="violet-gradient-text">
-                  blockchain products
+                  {" "}
+                  scalability, usability, <br /> and security across <br />{" "}
+                  industries{" "}
                 </span>
               </>
             }
-            data={otherWeb3DesignServices}
+            data={otherNftGameServices}
             itemClasses="!py-[50px]"
           />
         </div>
@@ -220,14 +219,17 @@ with NFT Game <br /> Development
           desc=""
           blockClasses="md:pb-[60px]"
         />
-        <Image
-          src={dexBg}
-          alt="decoration ellipse"
-          className="pointer-events-none absolute -bottom-[10%] left-0 z-[10] hidden h-[1600px] w-auto md:inline"
-        />
 
         <Cases />
         <CasesMobile />
+        <div className="w-full overflow-hidden">
+          <FAQ
+            data={nftGameFAQData}
+            noBg={true}
+            titleClasses="lg:text-[60px] lg:leading-[53.7px]"
+            faqHorizontalPadding={true}
+          />
+        </div>
       </div>
 
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />

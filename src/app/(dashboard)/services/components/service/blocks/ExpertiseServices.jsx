@@ -77,7 +77,7 @@ export function ExpertiseServices({
           {data.map(({ title, desc }, index) => (
             <div
               key={index}
-              className="relative col-span-1 whitespace-pre-line bg-cover"
+              className="relative col-span-1 z-[2] whitespace-pre-line bg-cover"
             >
               {title && (
                 <div
