@@ -3,6 +3,7 @@ import { HeroSection } from "../components/service/blocks/HeroSection";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
+import { metadata } from "./utils/icoPlatformMetadata";
 
 import {
   icoPlatformBenefits,
@@ -13,6 +14,7 @@ import {
   icoPlatformServicesData,
   icoPlatformFaqBotData
 } from "./utils/data";
+
 import { Industries } from "../components/service/blocks/Industries/index";
 import FAQ from "../components/service/blocks/FAQ";
 import { Feedback } from "../components/service/blocks/Feedback";
@@ -23,6 +25,8 @@ import { CoreFeaturesRWAbg } from "@/assets/svgComponents/CoreFeaturesRWAbg";
 import whiteLabelBg from "@/assets/bg/white-label-ellipse.webp";
 import Image from "next/image";
 import Contact from "@/components/Contact";
+
+export { metadata };
 
 const IcoPlatformDevelopment = () => {
   return (

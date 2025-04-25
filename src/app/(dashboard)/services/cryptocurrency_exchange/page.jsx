@@ -224,7 +224,7 @@ const CryptoCurrencyDev = () => {
           </>
         }
         noBg={true}
-        descClasses={"max-w-[798px] !mt-[60px]"}
+        descClasses={"max-w-[798px] md:mt-[60px]"}
       />
       <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>

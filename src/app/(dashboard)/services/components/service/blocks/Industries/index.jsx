@@ -45,7 +45,8 @@ export function Industries({
   titleClasses,
   titleContainerClasses,
   itemContainerClasses,
-  containerClasses
+  containerClasses,
+  itemDescClasses
 }) {
   return (
     <section
@@ -147,7 +148,10 @@ export function Industries({
                       style={{
                         color: "#BBBBBB"
                       }}
-                      className="leading-22px text-[16px]"
+                      className={cn(
+                        "leading-22px text-[16px]",
+                        itemDescClasses
+                      )}
                     >
                       {expertise.text}
                     </p>
