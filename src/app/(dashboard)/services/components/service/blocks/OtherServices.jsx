@@ -43,7 +43,7 @@ const Quote = ({
       {!lastIndex && (
         <div className="absolute bottom-0 left-0 h-[1px] w-[calc(100vw)] border-t border-t-th-fade" />
       )}
-      <p className="max-w-2xl whitespace-pre-line  font-roc text-[18px] font-medium uppercase leading-none !no-underline md:font-[500] md:leading-[90%] custom1000:text-[20px]">
+      <p className="max-w-2xl whitespace-pre-line  font-roc text-[18px] font-medium uppercase leading-none !no-underline md:font-[500] md:leading-[90%] custom1000:text-[24px]">
         {text}
       </p>
       <div className={clsx(ishomePage ? "md:mt-[24px]" : "mt-2 md:mt-[20px]")}>
