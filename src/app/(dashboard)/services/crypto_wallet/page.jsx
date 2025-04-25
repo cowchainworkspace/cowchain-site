@@ -224,7 +224,7 @@ const CryptoWalletDev = () => {
           </>
         }
         noBg={true}
-        descClasses={"max-w-[798px] !mt-[60px]"}
+        descClasses={"max-w-[798px] md:mt-[60px]"}
       />
 
       <Feedback
