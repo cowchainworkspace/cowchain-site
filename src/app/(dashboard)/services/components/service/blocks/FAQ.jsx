@@ -49,7 +49,9 @@ export default function FAQ({
   descriptionClasses = "",
   typographyContainer = "",
   noTopBorder = false,
-  itemTitleClass
+  itemTitleClass,
+  expandedItemClasses = "",
+  isDisabled = false
 }) {
   const [screenWidth, setScreenWidth] = useState();
   const lastIndex = data.length - 1;
@@ -137,7 +139,7 @@ export default function FAQ({
         >
           <Accordion allowToggle>
             {data.map((faq, index) => (
-              <AccordionItem key={index}>
+              <AccordionItem key={index} isDisabled={isDisabled}>
                 {({ isExpanded }) => (
                   <div className={cn("relative")} key={index}>
                     <div
@@ -156,7 +158,8 @@ export default function FAQ({
                       className={cn(
                         "max-w-[893px] px-5 py-[43px] md:pl-8 xl:pl-[88px] xl:pr-[60px]",
                         faqHorizontalPadding && "xl:!px-[60px]",
-                        itemsClasses
+                        itemsClasses,
+                        isExpanded && expandedItemClasses
                       )}
                     >
                       <AccordionButton className={cn("relative")}>
