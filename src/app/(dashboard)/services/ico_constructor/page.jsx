@@ -12,6 +12,7 @@ import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import { metadata } from "./utils/icoConstructorMetadata";
 
 import {
   icoConstructorBenefits,
@@ -24,6 +25,7 @@ import {
   icoPlatformAdvantages,
   icoPlatformFaqData
 } from "./utils/data";
+export { metadata };
 
 const IcoConstructor = () => {
   return (
