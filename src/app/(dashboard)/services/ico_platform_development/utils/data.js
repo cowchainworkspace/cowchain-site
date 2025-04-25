@@ -1,5 +1,5 @@
 import ContractIntegration from "../../../../../../public/svgIcons/ContractIntegration"
-import DashBoardSvg from "../../../../../../public/svgIcons/InterfaceSvg"
+import DashBoardSvg from "../../../../../../public/svgIcons/DashBoardSvg"
 import TokenToolsSvg from "../../../../../../public/svgIcons/TokenToolsSvg"
 
 export const icoPlatformBenefits = [
