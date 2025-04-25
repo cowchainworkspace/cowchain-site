@@ -22,7 +22,7 @@ export const WhiteLabelCases = ({
       <div className={cn("relative mx-auto max-w-[1440px] px-5 py-10 md:px-8 md:pb-[84px] md:pt-[126px] xl:px-[88px]", blockClasses)}>
         <div className="flex flex-col items-start justify-between gap-6 xl:flex-row xl:gap-0 ">
           <div className="flex flex-col gap-5 xl:gap-[60px]">
-            <h2 className="lg:order-0 heading-[38px] text-[42px] z-[2] leading-[90%] uppercase text-white">
+            <h2 className="lg:order-0 heading-[38px] text-[42px] z-[15] leading-[90%] uppercase text-white">
               {title}
             </h2>
             {desc && (

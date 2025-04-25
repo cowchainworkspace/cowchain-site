@@ -1,8 +1,6 @@
 import ConsultingAdvisoryIcon from "@/assets/svgComponents/industries/ConsultingAdvisoryIcon";
 import DedicateTeamIcon from "@/assets/svgComponents/industries/DedicateTeamIcon";
 import DesignDevIcon from "@/assets/svgComponents/industries/DesignDevIcon";
-import { DexIcon } from "@/assets/svgComponents/cryptocurrency/DexIcon";
-import { CexIcon } from "@/assets/svgComponents//cryptocurrency/CexIcon";
 import GovernmentIcon from "@/assets/svgComponents/industries/GovermentIcon";
 import HelthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
 import HybridIcon from "@/assets/svgComponents/industries/HybridIcon";
@@ -11,7 +9,10 @@ import PlanningConsultingIcon from "@/assets/svgComponents/industries/PlanningCo
 import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon";
 import SupplyChain from "@/assets/svgComponents/industries/SupplyChainIcon";
 import TestingIcon from "@/assets/svgComponents/industries/TestingIcon";
-import { HybrydEx } from "../../../../../assets/svgComponents/cryptoWallets/HybrydEx";
+import { BridgingKnowladgeIcon } from "@/assets/svgComponents/web3Design/BridgingKnowladgeIcon";
+import { SimpleWorkflow } from "@/assets/svgComponents/web3Design/SimpleWorkflow";
+import { SeamlessBlockchainIcon } from "@/assets/svgComponents/lottery/SeamlessBlockchainIcon"
+import { EnsuringCrossPlatformIcon } from "@/assets/svgComponents/web3Design/EnsuringCrossPlatformIcon";
 
 export const DexExpertiseDesc =
   "We believe that a solid foundation in decentralized exchange development is key to creating platforms that not only meet today’s demands but also evolve with the growing needs of the cryptocurrency market";
@@ -118,60 +119,53 @@ export const otherServices = [
   }
 ];
 
-export const otherCryptoCurrencyServices = [
+export const otherLotteryServices = [
   {
-    text: "DEX Development",
+    text: "Cryptocurrency Exchange Development",
     author:
-      "We build decentralized exchanges (DEX) with liquidity pools, token swaps, and permissionless trading mechanics – ideal for projects prioritizing transparency and on-chain execution."
+      "We develop centralized and hybrid exchange platforms with trading engines, order books, fiat on-ramps, and robust admin panels, all tailored for regulated and high-volume environments"
   },
   {
-    text: "P2P Crypto Exchange Development",
+    text: "Web3 UI / UX Design",
     author:
-      "Our team develops peer-to-peer platforms that enable users to trade assets directly, with integrated escrow logic, dispute resolution systems, and customizable fee models."
+      "Our design team crafts intuitive, conversion-focused interfaces for P2P exchanges, prioritizing user trust, transparency, and smooth interaction with smart contracts or custodial flows"
   },
   {
-    text: "Crypto Wallet Development",
+    text: "Full-stack Development Services",
     author:
-      "We design wallets tailored for exchange use, ensuring secure and seamless user asset management."
-  },
-  {
-    text: "White Label Web Development",
-    author:
-      "We provide customizable white-label exchange solutions, allowing you to launch with a polished front-end, admin panel, and fully branded experience without starting from scratch."
+      "We offer full-stack development that covers both the user-facing front-end and robust back-end infrastructure, ensuring your platform is responsive, scalable, and built to handle complex trading logic"
   }
 ];
 
-export const cryptoCurrencySecurityData = [
+export const web3DesignTrendsData = [
   {
-    title: "Private Key Management",
+    title: "Minimalist Aesthetics in Blockchain Design",
     content:
-      "Private key management safeguards user assets through encryption protocols and offline storage solutions. Our solutions minimize risks by employing hardware-based storage and multi-layered security techniques, ensuring that sensitive data remains protected from unauthorized access."
+      "Minimalist design enhances user focus by eliminating visual clutter, creating an interface that communicates key actions without overwhelming users. With clean layouts and reduced complexity, minimalist interfaces improve focus and usability, particularly for blockchain interactions that benefit from simplicity."
   },
   {
-    title: "Two-Factor Authentication (2FA)",
-    content: `2FA adds an extra layer of protection by requiring users to verify their identity through multiple authentication methods. It enhances account security while maintaining ease of use.`
+    title: "Personalization in Blockchain Solutions",
+    content: `Customizable dashboards and adaptive interfaces allow Web3 applications to cater to individual user preferences. Personalized features, like tailored transaction histories or theme adjustments, enhance engagement and usability, keeping users invested in the system.`
   },
   {
-    title: "Secure Transaction Protocols",
-    content: `Implementing secure transaction protocols minimizes the risk of fraud and hacking. These protocols confirm that every transaction is verified and processed safely, reinforcing platform credibility.
-`
+    title: "Integration of Advanced Technologies",
+    content: `The incorporation of advanced technologies, such as AI and machine learning, is transforming Web3 interface design. By utilizing predictive analytics and user behavior insights, platforms can anticipate needs and provide tailored recommendations. These innovations enable smarter workflows, like automatically suggesting optimized transaction settings or highlighting security alerts, enhancing both user convenience and confidence.`
   }
 ];
 
-export const cryptoCurrencyFAQData = [
+export const cryptoLotteryFAQData = [
   {
-    title: "How long does it take to develop a custom cryptocurrency exchange?",
+    title: "What does white-label web design and development involve?",
     content:
-      "The development timeline depends on your platform’s complexity and feature set. On average, an MVP for a centralized exchange takes 6–10 weeks, including wallet integration, trading engine, and security features. More advanced or hybrid solutions may require additional time for architecture and compliance setup."
+      "Such services allow organizations to offer complete web solutions for their clients without maintaining an internal development team. The work is done by a white label development company, and you maintain control of the client relationship and branding"
   },
   {
-    title: "What security features are included in your exchange software?",
-    content: `We implement multi-layered security, including encrypted data storage, DDoS protection, two-factor authentication (2FA), private key management, and secure transaction protocols. Smart contract audits and KYC/AML integration are also available depending on your requirements.`
+    title: "How does the white-label development process work?",
+    content: `We begin by gathering detailed project requirements, followed by creating mockups or prototypes for initial feedback. Once finalized, our development team handles the technical implementation. Our process is fully transparent, keeping you informed at every stage`
   },
   {
-    title:
-      "Can you support both centralized and decentralized exchange models?",
-    content: `Yes. We build centralized, decentralized (DEX), and hybrid platforms. Each model comes with tailored features like liquidity management, user custody logic, and blockchain integration. We’ll help you choose the best fit for your business model and target users.`
+    title: "What key elements should be included in a white-label web design contract?",
+    content: `It’s important to include clear terms regarding delivery timelines, project scope, and ownership of the final product. As a trusted white label partner, we ensure all legal and technical details are covered`
   }
 ];
 
@@ -182,29 +176,29 @@ export const metadata = {
   }
 };
 
-export const CryptoExchangeypesData = [
+export const whyCryptoLotteryData = [
   {
-    title: "Digital Asset Trading",
-    desc: "The core of any cryptocurrency exchange is its ability to facilitate uninterrupted digital asset trading. Our solutions prioritize speed, accuracy, and security to ensure every transaction is processed with minimal latency. With features like advanced trading pairs, customizable order types, and real-time market data, your users will have everything they need for efficient trading."
+    title: "Cost-Efficiency and Time-Saving",
+    desc: "From idea to deployment, traditional development could take months – and a full team of engineers. A white label lottery solution accelerates your launch by offering a ready-made system that only needs light customization. This means reduced development costs, faster time to market, and quicker user onboarding"
   },
   {
-    title: "Multi-Currency Exchange Platform",
-    desc: "Our platform supports multiple cryptocurrencies, offering users flexibility and choice. A multi-currency exchange platform attracts a broader audience and helps businesses reach diverse user segments. Whether it’s Bitcoin, stablecoins, or altcoins, multi-currency support facilitates seamless asset exchange for global users."
+    title: "Customization Options",
+    desc: "Just because it’s ready-made doesn’t mean it’s one-size-fits-all. We deliver custom lottery software that you can tailor to your audience, tokenomics, and marketing strategy. From interface design and draw mechanics to reward types and payout logic — it’s your vision, just faster"
   },
   {
-    title: "Crypto Wallet Integration",
-    desc: "Crypto wallet integration is essential for any exchange. Our wallets are equipped with advanced encryption, multi-signature technology, and streamlined transaction capabilities. Users can confidently store, send, and receive digital assets. Combined with private key management systems, we offer unparalleled protection for your users."
+    title: "Security and Trust in Blockchain",
+    desc: "Trust is everything in lotteries. A blockchain lottery platform ensures every entry, draw, and payout is traceable, verifiable, and tamper-proof. With on-chain validation and smart contract automation, users can verify outcomes without relying on third parties — building confidence and long-term engagement"
   }
 ];
 
-export const walletProcessData = [
+export const realLifeAppWeb3DesignData = [
   {
-    title: "What is Cryptocurrency Exchange Development?",
-    desc: "Developing a crypto exchange solution means building more than just a trading platform – it’s about creating a safe, adaptable ecosystem that meets the needs of your business and users. With a deep understanding of the crypto market and cutting-edge blockchain technologies, our team focuses on designing resilient backend systems, intuitive user interfaces, and integrating advanced trading tools, ensuring your platform stands out in a challenging market."
+    title: "Blockchain Lottery Platform Example",
+    desc: "One example of exceptional blockchain UI design is a lottery platform where simplicity is critical. Clear instructions, easy wallet integration, and real-time prize tracking demonstrate how effective Web3 design can ensure reliability and user satisfaction"
   },
   {
-    title: "Why is it Important?",
-    desc: "The rapid growth of blockchain and cryptocurrencies has created a surge in demand for crypto trading software. Developing a customized exchange allows businesses to capitalize on this demand while maintaining compliance, data protection, and harmonized integration with payment systems and wallets. A well-designed platform builds user trust and helps maintain a competitive edge in this dynamic market."
+    title: "Use Cases in Other Industries",
+    desc: "Web3 design trends are also transforming industries like fintech, gaming, and NFT marketplaces. For example, blockchain UX in NFT trading solutions combines visual appeal with robust functionality. In DeFi, intuitive dashboards simplify lending and staking for both retail investors and institutional participants, creating a bridge between technical complexity and usability"
   }
 ];
 
@@ -214,23 +208,23 @@ export const chooseCryptocurrencyData = [
     desc: "Experience matters when choosing a development partner. Our group has a track record of developing dependable, inventive, and growth-ready cryptocurrency exchange solutions. In order to provide you the assurance that your platform is in capable hands, we offer end-to-end development services, supported by client endorsements and a portfolio of projects."
   },
   {
-    title: "Assessing Blockchain and Multi-Currency Support",
+    title: "Assessing Blockchain  and Multi-Currency Support",
     desc: "Choose a team that excels in blockchain integration and supports a wide range of cryptocurrencies. Our expertise in creating multi-currency exchange platforms establishes your platform will cater to a diverse audience and remain competitive."
   }
 ];
 
-export const cruptoCurrencyServiceData = [
+export const howToLaunchLotteryData = [
   {
-    title: "Blockchain Exchange Platform",
-    desc: "Blockchain is at the heart of a dependable cryptocurrency exchange. By recording every transaction on an immutable ledger, we guarantee transparency and prevent tampering. Our platform seamlessly integrates with top blockchain networks to deliver unmatched reliability and traceability, building trust for your users and stakeholders."
+    title: "Selecting a Reliable Lottery Software Provider",
+    desc: "The foundation of any crypto lottery is its tech stack. As your lottery software provider, we deliver a full ecosystem — from smart contract deployment to user dashboards and backend control panels. All modules are tested, secure, and designed for future growth"
   },
   {
-    title: "Trading Platform Software",
-    desc: "Reliable trading platform software is essential for maintaining a stable and efficient exchange. Our exchange includes key elements such as an order-matching engine, price charts, and analytics tools to support informed trading decisions."
+    title: "Customizing Your Platform",
+    desc: "A white label product doesn’t mean generic. We offer full UI/UX customization, letting you align the platform with your brand. Want multi-chain support? Regional payment methods? Gamified entries? Our crypto lottery service is designed to adapt to your business, not the other way around"
   },
   {
-    title: "Exchange Software Development for Scalability",
-    desc: "Scalability is crucial for handling a growing user base. Our advanced exchange software development guarantees that the platform can expand without compromising performance or resilience, even during high traffic periods."
+    title: "Ensuring Compliance and Security",
+    desc: "Running a lottery on-chain means high visibility — and high expectations. We implement secure lottery solutions with contract-level safeguards, KYC/AML integrations (if needed), and compliance-ready features. Our focus: help you meet regulatory standards while protecting both user funds and platform integrity"
   }
 ];
 
@@ -249,20 +243,15 @@ export const paymentSystemData = [
   }
 ];
 
-export const cryptoCurrencyFeaturesData = [
+export const keyFeaturesLotteryData = [
   {
-    title: "Decentralized Exchange Platforms",
-    text: "Decentralized exchanges (DEXs) give users full control over their assets by removing intermediaries. Transactions occur directly on the blockchain, providing privacy and integrity. While DEXs promote decentralization, their limited liquidity and slower transaction speeds can be challenges",
-    icon: DexIcon
+    title: "Seamless Blockchain Integration",
+    text: "A solid lottery platform needs more than flashy UI, it needs trust baked into every transaction. With lottery blockchain integration, every entry, draw, and payout is recorded on-chain, granting full transparency and zero room for manipulation. Whether you’re using Ethereum, BNB Chain, or a custom protocol, we ensure your lottery connects reliably with the chain of your choice",
+    icon: SeamlessBlockchainIcon
   },
   {
-    title: "Hybrid Exchange Platforms",
-    text: "Hybrid exchanges combine the best of centralized and decentralized platforms. They offer the convenience and liquidity of centralized exchanges while maintaining the privacy and control of DEXs. This blend is ideal for businesses looking to offer users the best of both worlds.",
-    icon: CexIcon
-  },
-  {
-    title: "Centralized Trading Platforms",
-    text: "The most popular and reliable platforms in the industry are centralized exchanges. They provide user-friendly interfaces, quick transaction speeds, and high liquidity. However, they need advanced security measures to shield user money from possible dangers.",
-    icon: HybrydEx
+    title: "Scalable Architecture for Growing Demand",
+    text: "As user numbers grow, so do infrastructure demands. Our architecture is built to — both horizontally and vertically — so your platform stays fast, responsive, and secure under load. You get a lottery platform setup that handles everything from thousands of daily entries to real-time result processing without skipping a beat",
+    icon: EnsuringCrossPlatformIcon
   }
 ];

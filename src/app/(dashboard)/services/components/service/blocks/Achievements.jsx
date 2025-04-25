@@ -26,7 +26,7 @@ export default function Achievements({
 
         <h3
           className={cn(
-            "text-left text-2xl uppercase leading-[0.9] text-white md:block lg:text-[42px]",
+            "text-left text-2xl uppercase leading-[0.9] relative z-[2] text-white md:block lg:text-[42px]",
             descClass
           )}
         >
@@ -34,7 +34,7 @@ export default function Achievements({
         </h3>
 
         {sub && (
-          <p className="mt-[30px] max-w-[800px] text-[16px] !leading-[22px] !text-[#BBBBBB]">
+          <p className="mt-[30px] max-w-[800px] text-[16px] relative z-[2]  !leading-[22px] !text-[#BBBBBB]">
             {sub}
           </p>
         )}
