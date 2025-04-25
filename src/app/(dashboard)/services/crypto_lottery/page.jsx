@@ -25,8 +25,13 @@ const CryptoLottery = () => {
   return (
     <section className="overflow-visible">
       <HeroSection
-        title={<>Web3 UI/UX Design</>}
-        desc="Cutting-Edge Web3 UI/UX Design Services for Blockchain Solutions"
+        title={
+          <>
+            Build Your Crypto Lottery <br className="hidden custom1400:block" />{" "}
+            Platform with White Label <br className="hidden custom1400:block" />{" "}
+            Solutions
+          </>
+        }
         ttileClasses="md:!pt-[37px]"
       />
       <Achievements
