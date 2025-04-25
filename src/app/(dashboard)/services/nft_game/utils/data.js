@@ -1,6 +1,8 @@
 import ConsultingAdvisoryIcon from "@/assets/svgComponents/industries/ConsultingAdvisoryIcon";
 import DedicateTeamIcon from "@/assets/svgComponents/industries/DedicateTeamIcon";
 import DesignDevIcon from "@/assets/svgComponents/industries/DesignDevIcon";
+import { DexIcon } from "@/assets/svgComponents/cryptocurrency/DexIcon";
+import { CexIcon } from "@/assets/svgComponents//cryptocurrency/CexIcon";
 import GovernmentIcon from "@/assets/svgComponents/industries/GovermentIcon";
 import HelthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
 import HybridIcon from "@/assets/svgComponents/industries/HybridIcon";
@@ -9,10 +11,12 @@ import PlanningConsultingIcon from "@/assets/svgComponents/industries/PlanningCo
 import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon";
 import SupplyChain from "@/assets/svgComponents/industries/SupplyChainIcon";
 import TestingIcon from "@/assets/svgComponents/industries/TestingIcon";
+import { HybrydEx } from "../../../../../assets/svgComponents/cryptoWallets/HybrydEx";
+
+import { BalancingIcon } from "@/assets/svgComponents/web3Design/BalancingIcon";
 import { BridgingKnowladgeIcon } from "@/assets/svgComponents/web3Design/BridgingKnowladgeIcon";
-import { SimpleWorkflow } from "@/assets/svgComponents/web3Design/SimpleWorkflow";
-import { SeamlessBlockchainIcon } from "@/assets/svgComponents/lottery/SeamlessBlockchainIcon"
 import { EnsuringCrossPlatformIcon } from "@/assets/svgComponents/web3Design/EnsuringCrossPlatformIcon";
+import { SimpleWorkflow } from "@/assets/svgComponents/web3Design/SimpleWorkflow";
 
 export const DexExpertiseDesc =
   "We believe that a solid foundation in decentralized exchange development is key to creating platforms that not only meet today’s demands but also evolve with the growing needs of the cryptocurrency market";
@@ -29,6 +33,22 @@ export const DexExpertiseData = [
   {
     title: "White Label Decentralized Exchange Software",
     desc: "For companies looking for a quick launch, our decentralized exchange software development services provide a customizable solution that can be branded and scaled to meet your business goals"
+  }
+];
+
+export const nftGameFAQData = [
+  {
+    title: "What types of NFT games can you develop?",
+    content:
+      "We build a wide variety of NFT games, including collectible card games, open-world RPGs, play-to-earn platforms, idle clickers, and metaverse experiences. Whether you’re targeting competitive mechanics, breeding systems, or marketplace-driven gameplay – we help shape your concept into a playable product."
+  },
+  {
+    title: "How do you ensure blockchain integration doesn’t hurt gameplay performance?",
+    content: `We design game logic and blockchain functions to work together seamlessly. Heavy lifting (minting, transfers, etc.) is handled off the main gameplay loop to keep performance smooth. We also integrate Layer 2 networks or sidechains when needed to reduce gas costs and improve speed.`
+  },
+  {
+    title: "Can you help with marketplace development for in-game assets?",
+    content: `Absolutely. We offer in-game and external NFT marketplace development as part of our NFT game development services. Whether you want to list items within your own ecosystem or connect to third-party platforms, we can build secure, user-friendly marketplaces tailored to your economy.`
   }
 ];
 
@@ -119,21 +139,26 @@ export const otherServices = [
   }
 ];
 
-export const otherLotteryServices = [
+export const otherNftGameServices = [
   {
-    text: "Cryptocurrency Exchange Development",
+    text: "NFT Development",
     author:
-      "We develop centralized and hybrid exchange platforms with trading engines, order books, fiat on-ramps, and robust admin panels, all tailored for regulated and high-volume environments"
+      "We build custom NFT solutions for projects that require verifiable digital ownership – from static collections to dynamic NFTs with programmable logic and cross-platform utility."
   },
   {
     text: "Web3 UI / UX Design",
     author:
-      "Our design team crafts intuitive, conversion-focused interfaces for P2P exchanges, prioritizing user trust, transparency, and smooth interaction with smart contracts or custodial flows"
+      "Our team specializes in decentralized exchange (DEX) development, allowing peer-to-peer trading of tokens and NFTs on a secure blockchain network"
   },
   {
-    text: "Full-stack Development Services",
+    text: "Smart Contract Development",
     author:
-      "We offer full-stack development that covers both the user-facing front-end and robust back-end infrastructure, ensuring your platform is responsive, scalable, and built to handle complex trading logic"
+      "Our team designs intuitive interfaces for Web3 products, ensuring seamless interaction between users and decentralized systems. We focus on usability, clarity, and integration with core blockchain functions."
+  },
+  {
+    text: "Crypto Wallet Development",
+    author:
+      "We develop crypto wallets tailored to specific use cases. Whether it’s multi-chain asset management, token swaps, or in-app NFT storage, our wallet solutions prioritize security and performance."
   }
 ];
 
@@ -153,19 +178,15 @@ export const web3DesignTrendsData = [
   }
 ];
 
-export const cryptoLotteryFAQData = [
+export const benefitsNftGameData = [
   {
-    title: "What does white-label web design and development involve?",
-    content:
-      "Such services allow organizations to offer complete web solutions for their clients without maintaining an internal development team. The work is done by a white label development company, and you maintain control of the client relationship and branding"
+    title: "Expertise in Blockchain and NFT Technologies",
+    desc:
+      "Creating an NFT-based game isn’t just about adding tokens to a character. It’s about designing economies, experiences, and logic that work on-chain. A professional NFT game development company understands how to balance gameplay with asset utility, how smart contracts influence your game economy, and how to align player incentives with project sustainability. Whether you’re building a collectible card battler or a Web3 shooter with mintable cosmetics, technical knowledge matters"
   },
   {
-    title: "How does the white-label development process work?",
-    content: `We begin by gathering detailed project requirements, followed by creating mockups or prototypes for initial feedback. Once finalized, our development team handles the technical implementation. Our process is fully transparent, keeping you informed at every stage`
-  },
-  {
-    title: "What key elements should be included in a white-label web design contract?",
-    content: `It’s important to include clear terms regarding delivery timelines, project scope, and ownership of the final product. As a trusted white label partner, we ensure all legal and technical details are covered`
+    title: "End-to-End Development Services",
+    desc: `From the first wireframe to token launch, working with a skilled team means you’re not left guessing. We offer blockchain game development as a complete service, covering concept design, smart contract development, wallet integration, backend scaling, and even go-to-market support. You bring the vision. We’ll bring the infrastructure, strategy, and execution to match it`
   }
 ];
 
@@ -176,29 +197,29 @@ export const metadata = {
   }
 };
 
-export const whyCryptoLotteryData = [
+export const keyFeaturesOfNftData = [
   {
-    title: "Cost-Efficiency and Time-Saving",
-    desc: "From idea to deployment, traditional development could take months – and a full team of engineers. A white label lottery solution accelerates your launch by offering a ready-made system that only needs light customization. This means reduced development costs, faster time to market, and quicker user onboarding"
+    title: "Custom NFT Game Design",
+    desc: "We don’t just build games — we build NFT game worlds where design and asset creation go hand in hand. From defining asset scarcity and mechanics to crafting player-driven economies, every detail is shaped to enhance both gameplay and collectibility. Our approach to NFT game design combines storytelling, gamification, and scalability, ensuring each NFT is more than a digital collectible. It’s a playable, tradable part of your game’s identity"
   },
   {
-    title: "Customization Options",
-    desc: "Just because it’s ready-made doesn’t mean it’s one-size-fits-all. We deliver custom lottery software that you can tailor to your audience, tokenomics, and marketing strategy. From interface design and draw mechanics to reward types and payout logic — it’s your vision, just faster"
+    title: "Seamless Blockchain Integration",
+    desc: "Smooth blockchain integration is critical for any NFT game. We connect your core game logic with networks like Ethereum, Polygon, BNB Chain, and others, enabling real-time minting, trading, and validation of NFT game assets without slowing down the player experience.Players can move between gameplay and marketplace naturally, without leaving your ecosystem"
   },
   {
-    title: "Security and Trust in Blockchain",
-    desc: "Trust is everything in lotteries. A blockchain lottery platform ensures every entry, draw, and payout is traceable, verifiable, and tamper-proof. With on-chain validation and smart contract automation, users can verify outcomes without relying on third parties — building confidence and long-term engagement"
+    title: "Play-to-Earn Mechanics",
+    desc: "Play-to-earn games turn time and skill into real-world rewards. Whether it’s through native tokens, rare NFT drops, or leaderboard-based incentives, our systems are built to balance fair earning models with sustainable game economies.These mechanics aren’t just about payouts – they drive retention, social competition, and community-led value creation"
   }
 ];
 
-export const realLifeAppWeb3DesignData = [
+export const whyChooseNftGameData = [
   {
-    title: "Blockchain Lottery Platform Example",
-    desc: "One example of exceptional blockchain UI design is a lottery platform where simplicity is critical. Clear instructions, easy wallet integration, and real-time prize tracking demonstrate how effective Web3 design can ensure reliability and user satisfaction"
+    title: "Unique Opportunities for Gamers and Developers",
+    desc: "NFTs unlock real ownership for players — their gear, progress, and collectibles exist outside the game and can be traded or sold. For developers, this creates stronger player engagement, longer game lifespans, and new monetization models like secondary marketplace fees or tokenized rewards. Games become more than entertainment, they evolve into digital economies that reward both participation and contribution"
   },
   {
-    title: "Use Cases in Other Industries",
-    desc: "Web3 design trends are also transforming industries like fintech, gaming, and NFT marketplaces. For example, blockchain UX in NFT trading solutions combines visual appeal with robust functionality. In DeFi, intuitive dashboards simplify lending and staking for both retail investors and institutional participants, creating a bridge between technical complexity and usability"
+    title: "The Role of Blockchain in Game Development",
+    desc: "Blockchain ensures that game logic, transactions, and ownership records are secure and tamper-proof. It brings transparency to gameplay mechanics and asset provenance while removing single points of failure common in traditional online games. For Web3 game development, this decentralization is a core feature — not just a technical layer. Players trust the game because the rules and rewards live on-chain"
   }
 ];
 
@@ -213,18 +234,18 @@ export const chooseCryptocurrencyData = [
   }
 ];
 
-export const howToLaunchLotteryData = [
+export const howToGetStartedNftGameData = [
   {
-    title: "Selecting a Reliable Lottery Software Provider",
-    desc: "The foundation of any crypto lottery is its tech stack. As your lottery software provider, we deliver a full ecosystem — from smart contract deployment to user dashboards and backend control panels. All modules are tested, secure, and designed for future growth"
+    title: "Defining Your Game Concept",
+    desc: "Your NFT game starts with the core idea — gameplay loops, asset mechanics, player rewards, and community goals. Are you building a competitive arena game or a collectible idle clicker? Will your assets evolve, breed, merge, or burn?"
   },
   {
-    title: "Customizing Your Platform",
-    desc: "A white label product doesn’t mean generic. We offer full UI/UX customization, letting you align the platform with your brand. Want multi-chain support? Regional payment methods? Gamified entries? Our crypto lottery service is designed to adapt to your business, not the other way around"
+    title: "Choosing the Right NFT Game  Development Partner",
+    desc: "Picking the right partner goes beyond tech skills. You want a team that understands the rhythm of Web3 – fast iterations, live economy tuning, and user feedback loops"
   },
   {
-    title: "Ensuring Compliance and Security",
-    desc: "Running a lottery on-chain means high visibility — and high expectations. We implement secure lottery solutions with contract-level safeguards, KYC/AML integrations (if needed), and compliance-ready features. Our focus: help you meet regulatory standards while protecting both user funds and platform integrity"
+    title: "beyond game development",
+    desc: "As a decentralized game development company, we don’t just build games. We co-create ecosystems. That means thinking through token utility, governance mechanics, and long-term value for players. If your project needs more than just a dev shop — if you need collaborators who understand the culture of Web3 gaming — we’re here for it."
   }
 ];
 
@@ -243,15 +264,25 @@ export const paymentSystemData = [
   }
 ];
 
-export const keyFeaturesLotteryData = [
+export const challengesUiUxData = [
   {
-    title: "Seamless Blockchain Integration",
-    text: "A solid lottery platform needs more than flashy UI, it needs trust baked into every transaction. With lottery blockchain integration, every entry, draw, and payout is recorded on-chain, granting full transparency and zero room for manipulation. Whether you’re using Ethereum, BNB Chain, or a custom protocol, we ensure your lottery connects reliably with the chain of your choice",
-    icon: SeamlessBlockchainIcon
+    title: "Simplifying Workflows",
+    text: "Complex tasks like wallet connections or token transfers should be divided into intuitive, step-by-step actions with clear progress indicators to reduce user confusion",
+    icon: SimpleWorkflow
   },
   {
-    title: "Scalable Architecture for Growing Demand",
-    text: "As user numbers grow, so do infrastructure demands. Our architecture is built to — both horizontally and vertically — so your platform stays fast, responsive, and secure under load. You get a lottery platform setup that handles everything from thousands of daily entries to real-time result processing without skipping a beat",
+    title: "Bridging Knowledge Gaps",
+    text: "To demystify blockchain concepts like gas fees and smart contracts, integrate contextual guides, tooltips, and interactive tutorials, empowering users without overwhelming them",
+    icon: BridgingKnowladgeIcon
+  },
+  {
+    title: "Ensuring Cross-Platform Consistency",
+    text: "Design must adapt seamlessly across mobile, desktop, and browser platforms, delivering a cohesive experience and maintaining usability",
     icon: EnsuringCrossPlatformIcon
+  },
+  {
+    title: "Balancing Transparency and Simplicity",
+    text: "Strategic microcopy and dynamic hints can clarify transaction details without overloading users, fostering trust through clear yet streamlined interfaces",
+    icon: BalancingIcon
   }
 ];

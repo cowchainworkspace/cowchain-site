@@ -75,7 +75,10 @@ export function ExpertiseServices({
           )}
         >
           {data.map(({ title, desc }, index) => (
-            <div className="relative col-span-1 whitespace-pre-line bg-cover">
+            <div
+              key={index}
+              className="relative col-span-1 z-[2] whitespace-pre-line bg-cover"
+            >
               {title && (
                 <div
                   className={
@@ -96,16 +99,33 @@ export function ExpertiseServices({
                 </div>
               )}
               <div>
-                <p
-                  className={cn(
-                    "mb-6 text-[16px] !leading-[22px] !text-secondary",
-                    title && "mt-6",
-                    descClasses,
-                    index !== data.length - 1 && cryptoWalletClass
-                  )}
-                >
-                  {desc}
-                </p>
+                {typeof desc === "string" ? (
+                  <p
+                    className={cn(
+                      "mb-6 text-[16px] !leading-[22px] !text-secondary",
+                      title && "mt-6",
+                      descClasses,
+                      index !== data.length - 1 && cryptoWalletClass
+                    )}
+                  >
+                    {desc}
+                  </p>
+                ) : (
+                  <div className="mt-6">
+                    <h3 className="font-manrope text-base leading-[22px] text-secondary">
+                      {desc.header}
+                    </h3>
+                    <ul className="flex list-disc flex-col pl-4">
+                      {desc.list.map((value) => (
+                        <li key={value}>
+                          <p className="list-item font-manrope text-base leading-[22px] text-secondary">
+                            {value}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           ))}

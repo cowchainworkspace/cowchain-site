@@ -137,7 +137,7 @@ export function Industries({
                 <div className="">
                   <h3
                     className={cn(
-                      "mb-[22px] max-w-[310px] text-[18px] uppercase !leading-[90%] md:text-[20px]",
+                      "mb-[22px] max-w-[310px] whitespace-pre-line text-[18px] uppercase !leading-[90%] md:text-[20px]",
                       itemTitleClasses
                     )}
                   >
