@@ -5,8 +5,12 @@ export { default as HammerSvg } from "./HammerSvg";
 export { default as InstrumentsSvg } from "./InstrumentsSvg";
 export { default as CustomizationSvg } from "./CustomizationSvg";
 export { default as InterfaceSvg } from "./CustomizationSvg";
-
-
-
-
-
+export { default as SupportSvg } from "./SupportSvg";
+export { default as WalletIntegrationSvg } from "./WalletIntegrationSvg";
+export { default as TradingEngineSvg } from "./TradingEngineSvg";
+export { default as AdminPanelSvg } from "./AdminPanelSvg";
+export { default as AnalyticSvg } from "./AnalyticSvg";
+export { default as SecureSvg } from "./SecureSvg";
+export { default as CustomizationInterfaceSvg } from "./CustomizationInterfaceSvg";
+export { default as ReduceSvg } from "./ReduceSvg";
+export { default as SpeedSvg } from "./SpeedSvg";

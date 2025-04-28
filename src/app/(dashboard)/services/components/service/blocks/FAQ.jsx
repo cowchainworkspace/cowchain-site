@@ -49,7 +49,8 @@ export default function FAQ({
   descriptionClasses = "",
   typographyContainer = "",
   noTopBorder = false,
-  itemTitleClass
+  itemTitleClass = "",
+  faqContentClasses = ""
 }) {
   const [screenWidth, setScreenWidth] = useState();
   const lastIndex = data.length - 1;
@@ -253,7 +254,12 @@ export default function FAQ({
                               ))}
                             </ul>
                           ) : (
-                            <p className="max-w-2xl !leading-[140%] !text-[#bbb] ">
+                            <p
+                              className={cn(
+                                "max-w-2xl !leading-[140%] !text-[#bbb] ",
+                                faqContentClasses
+                              )}
+                            >
                               {faq.content}
                             </p>
                           )}
