@@ -6,7 +6,6 @@ import TenetSolutionImage from "../TenetSolutionImage";
 
 const TenetSolutions = ({ solutions, classes }) => {
   const [isMoreThan1280] = useMediaQuery("(min-width: 1280px)");
-  console.log(isMoreThan1280);
   return (
     <section className=" overflow-hidden py-[50px] xl:overflow-visible xl:py-[120px]">
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 xl:px-[97px]">
