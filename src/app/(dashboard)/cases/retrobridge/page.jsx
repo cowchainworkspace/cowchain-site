@@ -4,17 +4,16 @@ import React from "react";
 import Banner from "../components/Banner";
 import CasesSlider from "../components/CasesSlider";
 import CasesSolutions from "../components/CasesSolutions";
-import CaseHeroScreen from "../components/HeroScreen";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
 import Quote from "./components/Quote";
 import RetroBridgeOverview from "./components/RetroBridgeOverview";
 import RetroBridgeWhatWeDid from "./components/RetroBridgeWhatWeDid";
+import HeroScreenContainer from "./components/HeroScreenContainer";
 import {
   retroBridgeProjects,
   retroBridgeSlides,
   retroBridgeSolutions,
-  retroBridgeTags,
   retroBridgeTeam
 } from "./utils/constants";
 import { metadata } from "./utils/retroBridgeMetadata";
@@ -23,22 +22,7 @@ export { metadata };
 const RetroBridge = () => {
   return (
     <section>
-      <CaseHeroScreen
-        pageTitle={"Retrobridge"}
-        tags={retroBridgeTags}
-        heroDescription={
-          <>
-            RetroBridge is a blockchain-powered platform enabling seamless
-            cross-chain asset transfers. With $200M in bridged volume and 1M+
-            successful transactions, it demonstrates the growing demand for
-            interoperability in Web3.
-          </>
-        }
-        headerClasses="text-center max-w-[566px] text-[36px] leading-[42px] xl:text-[60px] xl:leading-[64px] uppercase font-foc font-medium"
-        containerClasses="max-w-[671px]"
-        descriptionClasses="text-center max-w-[671px]"
-        tagContainerClasses="flex-wrap md:flex-nowrap justify-center max-w-[299px] md:max-w-fit"
-      />
+      <HeroScreenContainer />
       <Banner
         img={"/cases/RetroBridge/case-banner-retrobridge.webp"}
         imgDesc={"banner RetroBridge with with RetroBridge logo"}
