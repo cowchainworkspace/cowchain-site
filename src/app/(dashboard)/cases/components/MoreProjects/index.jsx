@@ -48,9 +48,10 @@ const MoreProjects = ({ projects, headerClasses = "", isReversed }) => {
             textGap,
             tagsContainerClass,
             cardClasses,
-            titleClass,
             tagsContainer,
-            tagsClass
+            titleClasses = "",
+            tagClasses = "",
+            tagDescClasses = ""
           }) => {
             return (
               <Link
@@ -76,17 +77,30 @@ const MoreProjects = ({ projects, headerClasses = "", isReversed }) => {
                   <div className={cn("flex flex-wrap gap-2", tagsContainer)}>
                     {tags.map((tag) => (
                       <div
-                        className={cn("flex items-center justify-center rounded-20 border-[0.5px] border-white px-4 py-2 bg-white", tagsContainerClass)}
+                        className={cn(
+                          "flex items-center justify-center rounded-20 border-[0.5px] border-white bg-white px-4 py-2",
+                          tagClasses
+                        )}
                         key={tag}
                       >
-                        <p className={cn("font-manrope text-sm font-medium leading-[18px] text-black", tagsClass)}>
+                        <p
+                          className={cn(
+                            "font-manrope text-sm font-medium leading-[18px] text-black",
+                            tagDescClasses
+                          )}
+                        >
                           {tag}
                         </p>
                       </div>
                     ))}
                   </div>
                   <div className={cn("flex flex-col gap-4", textGap)}>
-                    <h3 className={cn("font-roc text-2xl font-medium uppercase leading-90 text-white", titleClass)}>
+                    <h3
+                      className={cn(
+                        "font-roc text-2xl font-medium uppercase leading-90 text-white",
+                        titleClasses
+                      )}
+                    >
                       {title}
                     </h3>
                     <p
