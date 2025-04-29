@@ -12,6 +12,9 @@ export { default as reflectNew } from "./reflect-case-bg.webp";
 export { default as m2eNew } from "./m2e-new.webp";
 export { default as brc20 } from "./brc-20.webp";
 export { default as stars } from "./stars.webp";
+export { default as tenet } from "./tenet-project.webp";
+export { default as kruuu } from "./kruuu-project.webp";
+export { default as reflectBg } from "./reflect-case-bg.webp";
 
 
 
