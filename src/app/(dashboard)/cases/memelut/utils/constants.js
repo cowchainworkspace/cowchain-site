@@ -1,28 +1,10 @@
 import {
-  gbcRewardsFive,
-  gbcRewardsFour,
-  gbcRewardsKeys,
-  gbcRewardsOne,
-  gbcRewardsThree,
-  gbcRewardsTwo
-} from "../../../../../../public/cases/gbc/rewards";
-import {
   FirstslideMemelut,
   SecondslideMemelut,
   ThirdslideMemelut,
   FourthslideMemelut,
   FifthlideMemelut
 } from "../../../../../../public/cases/memelut/slider";
-import {
-  gbcClubSlideEight,
-  gbcClubSlideFive,
-  gbcClubSlideFour,
-  gbcClubSlideOne,
-  gbcClubSlideSeven,
-  gbcClubSlideSix,
-  gbcClubSlideThree,
-  gbcClubSlideTwo
-} from "../../../../../../public/cases/gbc/slides";
 import {
   memelutDirectMessage,
   memelutSecureWallet,
@@ -54,7 +36,7 @@ export const memeluteTags = [
   }
 ];
 
-export const overviewGbcItems = [
+export const overviewMemelutItems = [
   {
     id: 1,
     itemName: "tech stack",
@@ -85,14 +67,14 @@ export const overviewGbcItems = [
   }
 ];
 
-export const gbcSlides = [
+export const memelutSlides = [
   {
     id: 1,
     width: 260,
     height: 562,
     mobileHeight: 201,
     mobileWidth: 93,
-    desc: "GBC wardrobe screen",
+    desc: "Memelut Screen",
     href: FirstslideMemelut
   },
   {
@@ -101,7 +83,7 @@ export const gbcSlides = [
     height: 562,
     mobileHeight: 201,
     mobileWidth: 93,
-    desc: "GBC NFT screen",
+    desc: "Memelut Screen",
     href: SecondslideMemelut
   },
   {
@@ -110,7 +92,7 @@ export const gbcSlides = [
     height: 562,
     mobileHeight: 201,
     mobileWidth: 93,
-    desc: "GBC Wallet screen",
+    desc: "Memelut Wallet screen",
     href: ThirdslideMemelut
   },
   {
@@ -119,7 +101,7 @@ export const gbcSlides = [
     height: 562,
     mobileHeight: 201,
     mobileWidth: 93,
-    desc: "GBC wardrobe screen",
+    desc: "Memelut Screen",
     href: FourthslideMemelut
   },
   {
@@ -128,7 +110,7 @@ export const gbcSlides = [
     height: 562,
     mobileHeight: 201,
     mobileWidth: 93,
-    desc: "GBC NFT screen",
+    desc: "Memelut Screen",
     href: FifthlideMemelut
   },
   {
@@ -137,7 +119,7 @@ export const gbcSlides = [
     height: 562,
     mobileHeight: 201,
     mobileWidth: 93,
-    desc: "GBC wardrobe screen",
+    desc: "Memelut Screen",
     href: FirstslideMemelut
   },
   {
@@ -146,7 +128,7 @@ export const gbcSlides = [
     height: 562,
     mobileHeight: 201,
     mobileWidth: 93,
-    desc: "GBC NFT screen",
+    desc: "Memelut Screen",
     href: SecondslideMemelut
   },
   {
@@ -155,7 +137,7 @@ export const gbcSlides = [
     height: 562,
     mobileHeight: 201,
     mobileWidth: 93,
-    desc: "GBC Wallet screen",
+    desc: "Memelut Screen",
     href: ThirdslideMemelut
   },
   {
@@ -164,7 +146,7 @@ export const gbcSlides = [
     height: 562,
     mobileHeight: 201,
     mobileWidth: 93,
-    desc: "GBC wardrobe screen",
+    desc: "Memelut Screen",
     href: FourthslideMemelut
   },
   {
@@ -173,12 +155,12 @@ export const gbcSlides = [
     height: 562,
     mobileHeight: 201,
     mobileWidth: 93,
-    desc: "GBC NFT screen",
+    desc: "Memelut Screen",
     href: FifthlideMemelut
   }
 ];
 
-export const gbcSolutions = [
+export const memelutSolutions = [
   {
     id: 1,
     title: "Swipe-to-Trade Feed",
@@ -189,7 +171,7 @@ export const gbcSolutions = [
       mobileWidth: 343,
       width: 558,
       height: 316,
-      info: "GBC keys",
+      info: "Memelut Swipe-to-Trade",
       href: memelutSwipeTrade,
       mobileHref: mobMemelutSwipeTrade
     }
@@ -205,7 +187,7 @@ export const gbcSolutions = [
       mobileWidth: 343,
       width: 558,
       height: 316,
-      info: "GBC NFT groups",
+      info: "Memelut Secure Wallet",
       href: memelutSecureWallet,
       mobileHref: mobMemelutSecureWallet
     }
@@ -220,7 +202,7 @@ export const gbcSolutions = [
       mobileWidth: 343,
       width: 558,
       height: 316,
-      info: "GBC quest",
+      info: "Memelut Social Trading",
       href: memelutSocialTrading,
       mobileHref: mobMemelutSocialTrading
     }
@@ -236,7 +218,7 @@ export const gbcSolutions = [
       mobileWidth: 343,
       width: 558,
       height: 316,
-      info: "GBC quest",
+      info: "Memelut Integrated Trading",
       href: memeluteIntegratedTrding,
       mobileHref: mobMemeluteIntegratedTrding
     }
@@ -251,139 +233,13 @@ export const gbcSolutions = [
       mobileWidth: 343,
       width: 558,
       height: 316,
-      info: "GBC quest",
+      info: "Memelut Direct Messaging ",
       href: memelutDirectMessage,
-      mobileHref: memelutDirectMessage
+      mobileHref: mobMemelutDirectMessage
     }
   }
 ];
 
-export const gbcRewards = [
-  {
-    id: 1,
-    title: "GMX Pass",
-    desc: "Keep your deposit to reach the next tier",
-    img: gbcRewardsKeys,
-    width: 177,
-    height: 177,
-    imgDesc: "GMX Pass"
-  },
-  {
-    id: 2,
-    title: "GMX Pass Tier 1",
-    img: gbcRewardsOne,
-    width: 140,
-    height: 140,
-    imgDesc: "GMX Pass Tier 1"
-  },
-  {
-    id: 3,
-    title: "Classic Polo",
-    img: gbcRewardsTwo,
-    width: 140,
-    height: 140,
-    imgDesc: "Classic Polo"
-  },
-  {
-    id: 3,
-    title: "Stonk",
-    img: gbcRewardsThree,
-    width: 140,
-    height: 140,
-    imgDesc: "Stonk"
-  },
-  {
-    id: 4,
-    title: "Old Money Hat",
-    img: gbcRewardsFour,
-    width: 140,
-    height: 140,
-    imgDesc: "Old Money Hat"
-  },
-  {
-    id: 5,
-    title: "Chart",
-    img: gbcRewardsFive,
-    width: 140,
-    height: 140,
-    imgDesc: "Chart"
-  }
-];
-
-export const gbcClubSlides = [
-  {
-    id: 1,
-    tag: "GBC Starter",
-    name: "Kudaberi",
-    width: 160,
-    height: 160,
-    imgDesc: "Kudaberi",
-    img: gbcClubSlideOne
-  },
-  {
-    id: 2,
-    tag: "GMX Blueberry Club",
-    name: "GBC #5939",
-    width: 160,
-    height: 160,
-    imgDesc: "GBC #5939",
-    img: gbcClubSlideTwo
-  },
-  {
-    id: 3,
-    tag: "GMX Blueberry Club",
-    name: "GBC #5939",
-    width: 160,
-    height: 160,
-    imgDesc: "GBC #5939",
-    img: gbcClubSlideThree
-  },
-  {
-    id: 4,
-    tag: "GMX Blueberry Club",
-    name: "GBC #5939",
-    width: 160,
-    height: 160,
-    imgDesc: '"GBC #5939',
-    img: gbcClubSlideFour
-  },
-  {
-    id: 5,
-    tag: "GBC Starter",
-    name: "GBC #5939",
-    width: 160,
-    height: 160,
-    imgDesc: "GBC #5939",
-    img: gbcClubSlideFive
-  },
-  {
-    id: 6,
-    tag: "GMX Blueberry Club",
-    name: "GBC #5939",
-    width: 160,
-    height: 160,
-    imgDesc: '"GBC #5939',
-    img: gbcClubSlideSix
-  },
-  {
-    id: 7,
-    tag: "GMX Blueberry Club",
-    name: "GBC #5939",
-    width: 160,
-    height: 160,
-    imgDesc: '"GBC #5939',
-    img: gbcClubSlideSeven
-  },
-  {
-    id: 8,
-    tag: "GMX Blueberry Club",
-    name: "GBC #5939",
-    width: 160,
-    height: 160,
-    imgDesc: '"GBC #5939',
-    img: gbcClubSlideEight
-  }
-];
 
 export const memelutTeam = [
   {
@@ -403,7 +259,7 @@ export const memelutTeam = [
   }
 ];
 
-export const gbcProjects = [
+export const memelutProjects = [
   {
     id: 1,
     tags: ["Trading", "Defi", "Web Development ", "AI Development"],

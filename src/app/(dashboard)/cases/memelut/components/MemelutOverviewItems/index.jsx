@@ -9,7 +9,7 @@ import React from "react";
 import TopArrowSvg from "../../../../../../../public/svgIcons/TopArrowSvg";
 
 import { cn } from "@/lib/utils";
-const GBCOverviewItems = ({ items }) => {
+const MemelutOverviewItems = ({ items }) => {
   return (
     <div className=" w-full">
       <Accordion
@@ -76,4 +76,4 @@ const GBCOverviewItems = ({ items }) => {
   );
 };
 
-export default GBCOverviewItems;
+export default MemelutOverviewItems;

@@ -6,17 +6,15 @@ import CasesSlider from "../components/CasesSlider";
 import CaseHeroScreen from "../components/HeroScreen";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
-import GBCOverview from "./components/GBCOverview";
-import GBCRewards from "./components/GBCRewards";
-import GBCSlider from "./components/GBCSlider";
-import GBCSolutions from "./components/GBCSolutions";
-import GBCWhatWeDid from "./components/GBCWhatWeDid";
-import { metadata } from "./utils/gbcMetadata";
+import MemelutOverview from "./components/MemelutOverview";
+import MemelutSolutions from "./components/MemelutSolutions";
+import MemelutWhatWeDid from "./components/MemelutWhatWeDid";
+import { metadata } from "./utils/memelutMetadata";
 
 import {
-  gbcProjects,
-  gbcSlides,
-  gbcSolutions,
+  memelutProjects,
+  memelutSlides,
+  memelutSolutions,
   memeluteTags,
   memelutTeam
 } from "./utils/constants";
@@ -46,19 +44,19 @@ const Memelut = () => {
       <Banner
         img={"/cases/memelut/memelut-banner.webp"}
         classes={"h-[104px] md:h-[200px] lg:h-[300px] xl:h-[402px]"}
-        imgDesc={"GBC banner"}
+        imgDesc={"Memelut banner"}
       />
-      <GBCOverview containerClasses="xl:pb-[120px]" />
+      <MemelutOverview containerClasses="xl:pb-[120px]" />
       <CasesSlider
         sectionClasses={"h-[226px] md:mb-[120px] py-5 md:py-0 md:h-[443px]"}
-        images={gbcSlides}
+        images={memelutSlides}
         itemClasses={"pl-0 ml-[13px]  md:ml-7"}
       />
 
       <div className="mx-auto w-full max-w-[1246px] px-4 md:px-10 xl:px-0">
         {" "}
-        <GBCSolutions
-          solutions={gbcSolutions}
+        <MemelutSolutions
+          solutions={memelutSolutions}
           classes="md:gap-[85px] xl:last:-mt-0"
           containerClasses="w-full"
           gridClass="xl:gap-[50px]"
@@ -67,9 +65,9 @@ const Memelut = () => {
       <Banner
         img={"/cases/memelut/memelut-second-banner.webp"}
         classes={"h-[113px] md:h-[200px] lg:h-[300px] xl:h-[452px] "}
-        imgDesc={"GBC banner"}
+        imgDesc={"Memelut banner"}
       />
-      <GBCWhatWeDid />
+      <MemelutWhatWeDid />
 
       <Image
         width={1349}
@@ -82,7 +80,7 @@ const Memelut = () => {
         team={memelutTeam}
         classes={"pt-[50px] xl:pt-[60px]"}
       />
-      <MoreProjects projects={gbcProjects} isReversed={true} />
+      <MoreProjects projects={memelutProjects} isReversed={true} />
       <Contact
         className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
         descriptionClasses={"hidden md:block"}

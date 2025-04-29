@@ -3,9 +3,13 @@ import { cn } from "@/lib/utils";
 import { useMediaQuery } from "@chakra-ui/react";
 import Image from "next/image";
 import React, { Fragment } from "react";
-import GBCSolutionCard from "../GBCSolutionCard";
 
-const GBCSolutions = ({ solutions, classes, containerClasses, gridClass }) => {
+const MemelutSolutions = ({
+  solutions,
+  classes,
+  containerClasses,
+  gridClass
+}) => {
   const [isLargerThan1280] = useMediaQuery("(min-width: 1280px)");
 
   return (
@@ -21,7 +25,12 @@ const GBCSolutions = ({ solutions, classes, containerClasses, gridClass }) => {
         <h2 className="mb-6 font-roc text-[32px] font-medium uppercase leading-90 text-white xl:mb-0 xl:text-[50px]">
           solutions
         </h2>
-        <div className={cn("grid w-full gap-14 md:grid-cols-2 md:gap-5  xl:grid-cols-1 xl:gap-20", gridClass)}>
+        <div
+          className={cn(
+            "grid w-full gap-14 md:grid-cols-2 md:gap-5  xl:grid-cols-1 xl:gap-20",
+            gridClass
+          )}
+        >
           {solutions.map(
             ({ id, title, desc, img, textBlockWidth, textStyle }, index) => (
               <Fragment key={id}>
@@ -60,19 +69,13 @@ const GBCSolutions = ({ solutions, classes, containerClasses, gridClass }) => {
                       {desc}
                     </p>
                   </div>
-                  {!img ? (
-                    <div className="flex h-full items-center py-7 xl:py-0">
-                      <GBCSolutionCard />
-                    </div>
-                  ) : (
-                    <Image
-                      width={isLargerThan1280 ? img.width : img.mobileWidth}
-                      height={isLargerThan1280 ? img.height : img.mobileHeight}
-                      src={isLargerThan1280 ? img.href : img.mobileHref}
-                      alt={img.info}
-                      className={img.leftMargin}
-                    />
-                  )}
+                  <Image
+                    width={isLargerThan1280 ? img.width : img.mobileWidth}
+                    height={isLargerThan1280 ? img.height : img.mobileHeight}
+                    src={isLargerThan1280 ? img.href : img.mobileHref}
+                    alt={img.info}
+                    className={img.leftMargin}
+                  />
                 </div>
 
                 {index < solutions.length - 1 && (
@@ -87,4 +90,4 @@ const GBCSolutions = ({ solutions, classes, containerClasses, gridClass }) => {
   );
 };
 
-export default GBCSolutions;
+export default MemelutSolutions;
