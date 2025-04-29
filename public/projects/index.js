@@ -10,6 +10,10 @@ export { default as crossChain } from "./cross-chain.webp";
 export { default as memolut } from "./memolut.webp";
 export { default as reflectNew } from "./reflect-case-bg.webp";
 export { default as m2eNew } from "./m2e-new.webp";
+export { default as brc20 } from "./brc-20.webp";
+export { default as stars } from "./stars.webp";
+
+
 
 
 

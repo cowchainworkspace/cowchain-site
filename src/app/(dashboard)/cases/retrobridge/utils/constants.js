@@ -22,6 +22,25 @@ export const retroBridgeTags = [
     tagLabel: "Web Development"
   },
   {
+    id: 2,
+    tagLabel: "DeFi"
+  },
+  {
+    id: 3,
+    tagLabel: "Bridge"
+  },
+  {
+    id: 4,
+    tagLabel: "NFT"
+  },
+];
+
+export const retroBridgeMobileTags = [
+  {
+    id: 1,
+    tagLabel: "Web Development"
+  },
+  {
     id: 3,
     tagLabel: "Bridge"
   },

@@ -4,7 +4,7 @@ import React from "react";
 import Banner from "../components/Banner";
 import CasesSlider from "../components/CasesSlider";
 import CasesSolutions from "../components/CasesSolutions";
-import CaseHeroScreen from "../components/HeroScreen";
+import HeroScreenContainer from "./components/HeroScreenContainer";
 import MoreProjects from "../components/MoreProjects";
 import ProjectOverview from "../components/ProjectOverview";
 import TeamBehind from "../components/TeamBehind";
@@ -25,28 +25,7 @@ export { metadata };
 const Hybrid = () => {
   return (
     <section className="w-full">
-      <CaseHeroScreen
-        tags={hybridTags}
-        pageTitle={"Hybrid: Revolutionizing Blockchain and AI Integration"}
-        heroDescription={
-          <>
-            Hybrid is a Layer 2 blockchain on Arbitrum Nitro, integrating the
-            Mixture of Experts (MoE)
-            <br className="hidden custom1430:block" /> framework to power
-            specialized AI agents. By enabling real-time AI execution on-chain,
-            it bridges blockchain and AI-driven solutions. With Atlas – The Web3
-            Copilot, Hybrid simplifies market research, data tracking, and AI
-            monetization, solidifying its role in blockchain innovation.
-          </>
-        }
-        tagContainerClasses={
-          "flex-wrap justify-center max-w-[320px] xl:max-w-full"
-        }
-        descriptionClasses="md:w-[670px]"
-        headerClasses="font-roc text-center font-medium text-[36px] leading-[42px] xl:text-[60px] xl:leading-[64px]"
-        containerClasses="max-w-[769px]"
-        sectionClasses="pb-[50px] xl:pb-[125px]"
-      />
+      <HeroScreenContainer />
       <Banner
         img={"/cases/hybrid/cases-hybrid-banner.webp"}
         classes={"h-[141px] md:h-[200px] lg:h-[300px] xl:h-[540px]"}
