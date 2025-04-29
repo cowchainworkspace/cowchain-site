@@ -1,8 +1,8 @@
 "use client";
 import { useMediaQuery } from "@chakra-ui/react";
 import React from "react";
-import CaseHeroScreen from "../../components/HeroScreen";
-import { mobileTenetTagData, tenetTags } from "../utils/constants";
+import CaseHeroScreen from "../../../components/HeroScreen";
+import { mobileTenetTagData, tenetTags } from "../../utils/constants";
 
 const HeroScreenContainer = () => {
   const [isMoreThan768] = useMediaQuery("(min-width: 768px)");

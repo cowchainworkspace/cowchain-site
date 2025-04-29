@@ -4,17 +4,19 @@ import Banner from "../components/Banner";
 import CasesSlider from "../components/CasesSlider";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
-import HeroScreenContainer from "./HeroScreenContainer";
+import HeroScreenContainer from "./components/HeroScreenContainer";
 import TenetOverview from "./components/TenetOverview";
 import TenetSolutions from "./components/TenetSolutions";
 import TenetWhatWeDid from "./components/TenetWhatWeDid";
-
+import { metadata } from "./utils/tenetMetadata";
 import {
   tenetProjects,
   tenetSlides,
   tenetSolutions,
   tenetTeam
 } from "./utils/constants";
+
+export { metadata };
 
 const Tenet = () => {
   return (
