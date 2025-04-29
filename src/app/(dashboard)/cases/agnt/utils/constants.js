@@ -10,11 +10,17 @@ import {
   solutionOne,
   solutionSix,
   solutionThree,
-  solutionTwo
+  solutionTwo, 
+  solutionMobFive,
+  solutionMobSix,
+  solutionMobFour,
+  solutionMobOne,
+  solutionMobThree,
+  solutionMobTwo
 } from "../../../../../../public/cases/agnt/solutions";
 
 
-import { crossChain, gbc, m2ePlatformImg } from "../../../../../../public/projects";
+import { crossChain, gbc, m2eNewOne } from "../../../../../../public/projects";
 
 export const agntTags = [
   {
@@ -78,6 +84,8 @@ export const agntSlides = [
     id: 1,
     width: 824,
     height: 586,
+    mobileHeight: 200,
+    mobileWidth: 282,
     desc: "Agent hub screen",
     href: slideOne
   },
@@ -85,6 +93,8 @@ export const agntSlides = [
     id: 2,
     width: 824,
     height: 586,
+    mobileHeight: 200,
+    mobileWidth: 282,
     desc: "Agent hub screen",
     href: slideTwo
   },
@@ -92,6 +102,35 @@ export const agntSlides = [
     id: 3,
     width: 824,
     height: 586,
+    mobileHeight: 200,
+    mobileWidth: 282,
+    desc: "Agent hub screen",
+    href: slideThree
+  },
+  {
+    id: 4,
+    width: 824,
+    height: 586,
+    mobileHeight: 200,
+    mobileWidth: 282,
+    desc: "Agent hub screen",
+    href: slideOne
+  },
+  {
+    id: 5,
+    width: 824,
+    height: 586,
+    mobileHeight: 200,
+    mobileWidth: 282,
+    desc: "Agent hub screen",
+    href: slideTwo
+  },
+  {
+    id: 6,
+    width: 824,
+    height: 586,
+    mobileHeight: 200,
+    mobileWidth: 282,
     desc: "Agent hub screen",
     href: slideThree
   }
@@ -104,22 +143,28 @@ export const agntSolutions = [
     desc: "AGNT Quest Gym introduces a gamified way to earn AGNT Points by actively participating in the ecosystem. Users complete daily quests, try to make AI laugh, and dive deeper into AGNT.Hub through articles and quizzes to stack more points. A dynamic leaderboard tracks top participants, while NFT-based achievements mark those who were here before the meta flipped.",
     textBlockWidth: 647,
     img: {
+      mobileHeight: 202,
+      mobileWidth: 343,
       width: 527,
       height: 310,
       info: "Agnt screens",
-      href: solutionOne
+      href: solutionOne,
+      mobileHref: solutionMobOne
     }
   },
   {
     id: 2,
     title: "On-Chain Liquidity & DeFAI Automation",
-    desc: <>"Enabled AI-powered execution across DeFAI, allowing agents<br className="hidden xl:block" /> to manage liquidity pools, stake, lend, and execute automated<br className="hidden xl:block" /> DeFAI strategies across multiple chains. No delays, no missed<br className="hidden xl:block" /> opportunities – just real-time execution. AGNT.Hub’s<br className="hidden xl:block" /> execution model is one of the most compelling case<br className="hidden xl:block" /> study reports in AI-driven blockchain automation.",</>,
+    desc: <>"Enabled AI-powered execution across DeFAI, allowing agents<br className="hidden custom1430:block" /> to manage liquidity pools, stake, lend, and execute automated<br className="hidden custom1430:block" /> DeFAI strategies across multiple chains. No delays, no missed<br className="hidden custom1430:block" /> opportunities – just real-time execution. AGNT.Hub’s<br className="hidden custom1430:block" /> execution model is one of the most compelling case<br className="hidden custom1430:block" /> study reports in AI-driven blockchain automation."</>,
     textBlockWidth: 580,
     img: {
       width: 517,
       height: 340,
+      mobileHeight: 222,
+      mobileWidth: 343,
       info: "Agnt screens",
-      href: solutionTwo
+      href: solutionTwo,
+      mobileHref: solutionMobTwo
     }
   },
   {
@@ -128,10 +173,14 @@ export const agntSolutions = [
     desc: "Integrated a non-custodial wallet inside AGNT Connect, allowing users to buy, send, receive, and swap tokens directly within X. AI agents execute automated transactions, token swaps, and on-chain interactions with full security.",
     textBlockWidth: 588,
     img: {
+      mobileHeight: 82,
+      mobileWidth: 343,
       width: 567,
       height: 134,
       info: "Agnt screens",
-      href: solutionSix
+      href: solutionSix,
+      mobileHref: solutionMobThree
+
     }
   },
   {
@@ -142,8 +191,11 @@ export const agntSolutions = [
     img: {
       width: 517,
       height: 299,
+      mobileHeight: 199,
+      mobileWidth: 343,
       info: "Agnt screens",
-      href: solutionThree
+      href: solutionThree,
+      mobileHref: solutionMobFour
     }
   },
   {
@@ -154,8 +206,12 @@ export const agntSolutions = [
     img: {
       width: 567,
       height: 134,
+      mobileHeight: 82,
+      mobileWidth: 343,
       info: "Agnt screens",
-      href: solutionFour
+      href: solutionFour,
+      mobileHref: solutionMobFive
+
     }
   },
   {
@@ -166,8 +222,11 @@ export const agntSolutions = [
     img: {
       width: 528,
       height: 306,
+      mobileHeight: 210,
+      mobileWidth: 343,
       info: "Agnt screens",
-      href: solutionFive
+      href: solutionFive,
+      mobileHref: solutionMobSix
     }
   }
 ];
@@ -195,7 +254,9 @@ export const agntProjects = [
     desc: 'RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.',
     img: crossChain,
     textColor: "text-secondary",
-    projectLink: "retrobridge"
+    projectLink: "retrobridge",
+    textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
   },
   {
     id: 2,
@@ -204,18 +265,19 @@ export const agntProjects = [
     desc: 'GBC is a next-generation NFT platform that combines customization, trading, and gamification.',
     img: gbc,
     textColor: "text-white",
-    projectLink: "gbc"
+    projectLink: "gbc",
+    textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
   },
   {
     id: 3,
     tags: ["Web Development ", "Mobile App", "GameFi", "Trading", "DEX", "DeFi", "NFT", "Staking", "Crypto Wallet"],
     title: 'STEP APP',
     desc: 'StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.',
-    img: m2ePlatformImg,
+    img: m2eNewOne,
     textColor: "text-secondary",
     projectLink: "step-app",
-    itemClasses: "pb-[30px] mt-auto",
-
+    textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
   },
-
 ]

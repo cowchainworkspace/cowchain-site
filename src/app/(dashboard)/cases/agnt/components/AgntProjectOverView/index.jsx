@@ -8,14 +8,14 @@ import AgntOverviewItems from "../AgntOverviewItems";
 const AgntProjectOverView = () => {
   return (
     <section>
-      <div className="mx-auto max-w-[1440px] pl-[97px] pr-[109px] pt-[118px]">
-        <div className="grid grid-cols-[1fr_521px] gap-[133px]">
-          <div className="flex flex-col">
-            <div className="flex flex-col gap-[30px]">
-              <h3 className="font-roc text-[54px] font-medium uppercase leading-90 text-white">
+      <div className="mx-auto max-w-[1440px] pt-[50px] md:px-8 lg:px-10 xl:pl-[97px] xl:pr-[109px] xl:pt-[118px]">
+        <div className="grid gap-[50px] md:grid-cols-2 xl:grid-cols-[1fr_521px] xl:gap-[133px]">
+          <div className="flex flex-col px-4 md:px-0">
+            <div className="flex flex-col gap-6 xl:gap-[30px]">
+              <h3 className="font-roc text-[32px] font-medium uppercase leading-90 text-white xl:text-[54px]">
                 Project overview
               </h3>
-              <p className="text-left font-manrope text-sm font-[450] leading-[22.1px] !text-white-70">
+              <p className="text-left font-manrope text-xs font-[450] leading-5 !text-white-70 xl:text-sm xl:leading-[22.1px]">
                 AGNT.Hub was developed to bridge Web3 infrastructure and AI
                 <br className="hidden custom1430:block" />
                 automation, addressing the growing demand for AI-powered
@@ -35,8 +35,12 @@ const AgntProjectOverView = () => {
                 <br className="hidden custom1430:block" />
                 automation.
               </p>
-              <Link className="flex gap-4" href={"#"} target="_blank">
-                <span className="font-roc text-[22px] font-medium uppercase leading-90 text-white underline">
+              <Link
+                className="flex items-center gap-4"
+                href={"#"}
+                target="_blank"
+              >
+                <span className="font-roc text-lg font-medium uppercase leading-90 text-white underline xl:text-[22px]">
                   visit website
                 </span>{" "}
                 <RightArrowSvg />
@@ -47,7 +51,7 @@ const AgntProjectOverView = () => {
               width={390}
               height={691}
               alt="Agent Person"
-              className="ml-auto"
+              className="ml-auto hidden xl:block"
             />
           </div>
           <AgntOverviewItems items={overviewAgntItems} />

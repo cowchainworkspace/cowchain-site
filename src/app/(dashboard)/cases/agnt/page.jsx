@@ -24,6 +24,7 @@ const Agnt = () => {
       <CaseHeroScreen
         tags={agntTags}
         pageTitle={"AGNT.Hub: Bringing AI Agents to Web3 and X"}
+        tagContainerClasses="flex-wrap justify-center"
         heroDescription={
           <>
             AGNT.Hub is the first omnichain ecosystem for AI agents in Web3,
@@ -37,37 +38,46 @@ const Agnt = () => {
             decentralized AI.
           </>
         }
-        headerClasses="font-[550] text-[60px] leading-[58.92px]"
+        headerClasses="font-[550] text-[36px]  font-roc text-center leading-[42px] xl:text-[60px] xl:leading-[58.92px]"
         containerClasses="max-w-[769px] text-center"
-        descriptionClasses="max-w-[615px] text-[14px] leading-[22.1px] font-manrope"
-        sectionClasses={"pt-[102px] pb-[120px]"}
+        descriptionClasses="md:max-w-[615px] text-xs text-balance tracking-[0] xl:tracking-wider leading-5 xl:text-sm xl:leading-6 font-manrope"
+        sectionClasses={"xl:pt-[102px] xl:pb-[120px]"}
       />
       <Banner
         img={"/cases/agnt/banner-image.webp"}
-        classes={"h-[500px] w-full"}
+        classes={"h-[140px] md:h-[200px] lg:h-[300px] xl:h-[500px] w-full"}
       />
       <AgntProjectOverView />
       <CasesSlider
+        sectionClasses={"h-[240px] py-5 md:py-0 lg:h-[586px]"}
+        itemClasses={"ml-[6px] xl:ml-5"}
         isAgnt={true}
-        sectionClasses={"h-[586px]"}
+        isHybrid={true}
         images={agntSlides}
       />
       <AgntSolution solutions={agntSolutions} />
-      <Banner img={"/cases/agnt/agent-line.webp"} classes={"h-[73px] w-full"} />
+      <Banner
+        img={"/cases/agnt/agent-line.webp"}
+        classes={"h-[35px] md:h-[50px] xl:h-[73px] w-full"}
+      />
       <AgntWhatWeDid />
       <TeamBehind
         team={agntTeam}
-        headerClasses={"text-[11.05px] leading-[18.41px] tracking-[1.84px]"}
-        descClasses={"text-[18.41px] leading-[27.62px]"}
-        classes={"pl-[147px] pr-[133px]"}
-        titleClasses={"text-[55.24px]"}
-        containerClasses={"grid-cols-[1fr_568px]"}
+        headerClasses={"text-xs leading-5 tracking-[2px]"}
+        descClasses={"xl:text-[18.41px] xl:leading-[27.62px]"}
+        classes={"xl:pl-[147px] xl:pr-[133px]"}
+        titleClasses={"xl:text-[55.24px]"}
+        containerClasses={"md:grid-cols-2 xl:grid-cols-[1fr_568px]"}
       />
       <MoreProjects
         projects={agntProjects}
         headerClasses="font-roc text-[42px] font-medium leading-90"
       />
-      <Contact className={"pb-[163px] pt-[122px]"} />
+      <Contact
+        descriptionClasses={"hidden md:block"}
+        titleClasses={"mb-8 md:mb-0"}
+        className={"px-5 py-[50px] md:px-0 xl:pb-[163px] xl:pt-[122px]"}
+      />
     </section>
   );
 };

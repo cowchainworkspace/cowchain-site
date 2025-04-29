@@ -53,7 +53,11 @@ const StepApp = () => {
         headerClasses="text-[42px] font-medium font-roc leading-90"
         projects={stepAppProjects}
       />
-      <Contact />
+      <Contact
+        descriptionClasses={"hidden md:block"}
+        titleClasses={"mb-8 md:mb-0"}
+        className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
+      />
     </section>
   );
 };
