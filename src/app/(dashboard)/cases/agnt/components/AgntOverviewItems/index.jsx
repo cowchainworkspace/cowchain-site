@@ -19,7 +19,7 @@ const AgntOverviewItems = ({ items }) => {
       >
         {items.map(({ itemName, id, itemValue }) => (
           <AccordionItem
-            className="border-b-[0.5px] border-white-50 py-[18px] first:pt-0"
+            className="border-b-[0.5px] border-white-50 px-4 py-[22px] first:pt-0 md:px-0"
             key={id}
           >
             {({ isExpanded }) => (
@@ -27,7 +27,7 @@ const AgntOverviewItems = ({ items }) => {
                 <AccordionButton
                   className={cn(
                     "flex items-center justify-between",
-                    isExpanded && "mb-5"
+                    isExpanded && "mb-4"
                   )}
                 >
                   <span
@@ -53,7 +53,7 @@ const AgntOverviewItems = ({ items }) => {
                         return (
                           <p
                             key={item}
-                            className="font-manrope text-xl font-normal leading-[27.62px] !text-white"
+                            className="font-manrope text-sm font-normal leading-6 !text-white xl:text-xl xl:leading-[27.62px]"
                           >
                             {item}
                           </p>
@@ -64,7 +64,7 @@ const AgntOverviewItems = ({ items }) => {
                           <h4 className="mb-[6px] font-manrope text-xl font-normal normal-case leading-[30px] text-white">
                             {item.itemTitle}
                           </h4>
-                          <p className="font-manrope text-sm font-medium leading-6 !text-white-70">
+                          <p className="font-manrope text-xs font-medium leading-5 !text-white-70 xl:text-sm xl:leading-6">
                             {item.itemValueDescription}
                           </p>
                         </li>
