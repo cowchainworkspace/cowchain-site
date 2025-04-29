@@ -46,7 +46,6 @@ const MoreProjects = ({ projects, headerClasses = "", isReversed }) => {
             itemClasses,
             projectLink,
             textGap,
-            tagsContainerClass,
             cardClasses,
             tagsContainer,
             titleClasses = "",
