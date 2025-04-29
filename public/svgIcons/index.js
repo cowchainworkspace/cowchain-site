@@ -14,3 +14,8 @@ export { default as SecureSvg } from "./SecureSvg";
 export { default as CustomizationInterfaceSvg } from "./CustomizationInterfaceSvg";
 export { default as ReduceSvg } from "./ReduceSvg";
 export { default as SpeedSvg } from "./SpeedSvg";
+export {default as ContractIntegration} from "./ContractIntegration"
+export {default as ArrowDown} from "./ArrowDown"
+export {default as ChartIcoSvg} from "./ChartIcoSvg"
+export {default as DistributionSvg} from "./DistributionSvg"
+

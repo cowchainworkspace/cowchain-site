@@ -55,7 +55,8 @@ export function KeyFeatures({
   titleBlockClasses = "",
   imageClasses = "",
   containerClasses = "",
-  customBg
+  customBg,
+  whiteLabelBgClasses = ""
 }) {
   return (
     <section
@@ -74,7 +75,10 @@ export function KeyFeatures({
       {isWhiteLabelBg && (
         <Image
           alt="background decoration"
-          className="pointer-events-none absolute -bottom-[180%] left-0 hidden md:block"
+          className={cn(
+            "pointer-events-none absolute -bottom-[180%] left-0 hidden md:block",
+            whiteLabelBgClasses
+          )}
           src={whiteLabelBg}
         />
       )}
