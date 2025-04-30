@@ -357,7 +357,7 @@ export const servicesBlocksData = [
       { title: "Social-fi mini-app", link: "/services/social_fi_mini_app" },
       { title: "Mobile crypto wallet", link: "/services/mobile_crypto_wallet" },
       { title: "ICO constructor", link: "/services/ico_constructor" },
-      { title: "ICO platform", link: "/services/ico_platform_development" },
+      { title: "ICO platform", link: "/services/ico_platform" },
       { title: "NFT Marketplace", link: "/services/nft_marketplace" },
       { title: "Staking", link: "/services/staking" },
       { title: "Crypto Lottery", link: "/services/crypto_lottery" },

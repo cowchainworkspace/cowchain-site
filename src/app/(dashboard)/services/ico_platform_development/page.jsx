@@ -4,6 +4,7 @@ import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import { metadata } from "./utils/icoPlatformMetadata";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
 
 import {
   icoPlatformBenefits,
@@ -185,6 +186,7 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
           />
         </div>
       </div>
+      <WhiteLabelCases hasNoDescription={true} title="Our Cases" />
       <Cases />
       <CasesMobile />
 
