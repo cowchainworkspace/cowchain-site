@@ -267,7 +267,7 @@ export const memelutProjects = [
     desc: "Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.",
     img: reflectBg,
     tagClasses: "h-[34px] md:h-[36px]",
-    projectLink: "reflect",
+    projectLink: "",
     textColor: "text-secondary",
     textGap: "md:gap-[24px]",
     cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
@@ -282,7 +282,7 @@ export const memelutProjects = [
     titleClasses: "text-black",
     tagDescClasses: "text-white",
     textColor: "text-black",
-    projectLink: "#",
+    projectLink: "",
     textGap: "md:gap-[24px]",
     cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
   },
@@ -307,7 +307,7 @@ export const memelutProjects = [
     tagClasses: "bg-[#000000] border-[1px] border-white h-[34px] md:h-[36px]",
     tagDescClasses: "text-white",
     textColor: "text-black",
-    projectLink: "#",
+    projectLink: "tenet",
     textGap: "md:gap-[24px]",
     cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
   }

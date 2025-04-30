@@ -387,7 +387,7 @@ export const gbcProjects = [
     title: 'memelut',
     desc: 'Memelut is an all-in-one app that simplifies exploring, trading, and storing memecoins.',
     img: memolut,
-    projectLink: "#",
+    projectLink: "memelut",
     textGap: "md:gap-[24px]",
     cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
   },
@@ -397,7 +397,7 @@ export const gbcProjects = [
     title: 'REFLECT',
     desc: 'Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.',
     img: reflectNew,
-    projectLink: "#",
+    projectLink: "",
     textGap: "md:gap-[24px]",
     cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
     textColor: "text-secondary",

@@ -58,7 +58,8 @@ const MoreProjects = ({ projects, headerClasses = "", isReversed }) => {
                 key={id}
                 className={cn(
                   "z-10 flex h-[487px] w-full flex-col items-center xl:h-[624px]",
-                  cardClasses
+                  cardClasses,
+                  !projectLink && 'pointer-events-none',
                 )}
                 style={{
                   backgroundImage: `url(${img.src})`,

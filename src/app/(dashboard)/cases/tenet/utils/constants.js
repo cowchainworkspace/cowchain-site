@@ -296,7 +296,7 @@ export const tenetProjects = [
     title: "STARS",
     desc: "Primex Finance is a non-custodial Prime Brokerage protocol redefining decentralized finance by enabling leveraged trading.",
     img: stars,
-    projectLink: "step-app",
+    projectLink: "",
     textColor: "text-black",
     textGap: "md:gap-[24px]",
     cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[17px]",
@@ -310,7 +310,7 @@ export const tenetProjects = [
     title: "BRC20",
     desc: "BRC20 is the Launchpad built for the Ordinals ecosystem, redefining how Bitcoin-based assets are distributed and traded.",
     img: brc20,
-    projectLink: "#",
+    projectLink: "",
     textGap: "md:gap-[24px]",
     cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[17px]"
   },
@@ -320,7 +320,7 @@ export const tenetProjects = [
     title: "REFLECT",
     desc: "Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.",
     img: memolut,
-    projectLink: "#",
+    projectLink: "",
     textGap: "md:gap-[24px]",
     cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[17px]"
   }

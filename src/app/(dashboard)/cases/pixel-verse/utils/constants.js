@@ -179,7 +179,7 @@ export const pixelVerseProjects = [
     title: 'COINCLUB',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
     img: coinclub,
-    projectLink: "#"
+    projectLink: ""
   },
   {
     id: 2,
@@ -195,7 +195,7 @@ export const pixelVerseProjects = [
     title: 'Wenix',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
     img: wenix,
-     projectLink: "#"
+     projectLink: ""
   },
   
 ]

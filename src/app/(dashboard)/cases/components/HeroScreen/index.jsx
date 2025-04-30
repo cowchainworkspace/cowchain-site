@@ -1,8 +1,11 @@
+"use client";
+
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { useState } from "react";
 import CaseTag from "../CaseTag";
 import CasesBackButton from "../CasesBackButton";
 import HeroButton from "../HeroButton/HeroButton";
+import ContactForm from "@/components/utils/ContactForm";
 
 const CaseHeroScreen = ({
   tags,
@@ -15,6 +18,7 @@ const CaseHeroScreen = ({
   bgDecoration,
   tagContainerClasses = ""
 }) => {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <section
       className={cn(
@@ -55,7 +59,8 @@ const CaseHeroScreen = ({
         >
           {heroDescription}
         </p>
-        <HeroButton />
+        <HeroButton setModalOpen={setModalOpen} />
+        <ContactForm modalOpen={modalOpen} setModalOpen={setModalOpen} />
       </div>
     </section>
   );
