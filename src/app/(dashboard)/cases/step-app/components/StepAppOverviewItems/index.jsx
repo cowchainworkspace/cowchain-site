@@ -19,7 +19,7 @@ const StepAppOverviewItems = ({ items }) => {
       >
         {items.map(({ itemName, id, itemValue }) => (
           <AccordionItem
-            className="border-b-[0.5px] border-white-50 py-[22px] first:pt-0"
+            className="border-b-[0.5px] border-white-50 px-4 py-[22px] first:pt-0 md:px-0"
             key={id}
           >
             {({ isExpanded }) => (
@@ -27,7 +27,7 @@ const StepAppOverviewItems = ({ items }) => {
                 <AccordionButton
                   className={cn(
                     "flex items-center justify-between",
-                    isExpanded && "mb-5"
+                    isExpanded && "mb-[22px]"
                   )}
                 >
                   <span
@@ -48,15 +48,15 @@ const StepAppOverviewItems = ({ items }) => {
                 </AccordionButton>
                 <AccordionPanel>
                   {typeof itemValue === "string" ? (
-                    <p className="font-manrope text-xl font-medium leading-[30px] !text-white">
+                    <p className="font-manrope text-sm font-medium leading-6 !text-white xl:text-xl xl:leading-[30px]">
                       {itemValue}
                     </p>
                   ) : (
-                    <ul className="flex list-disc flex-col gap-[14px] pl-8">
+                    <ul className="flex flex-col gap-[14px] xl:list-disc xl:pl-8">
                       {itemValue.map((item) => {
                         return (
                           <li key={item}>
-                            <p className="list-item  pl-2 font-manrope text-xl font-normal leading-[30px] !text-white">
+                            <p className="list-item font-manrope text-sm  font-normal leading-6 !text-white xl:pl-2 xl:text-xl xl:leading-[30px]">
                               {item}
                             </p>
                           </li>

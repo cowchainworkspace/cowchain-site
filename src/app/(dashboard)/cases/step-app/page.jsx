@@ -31,32 +31,32 @@ const StepApp = () => {
             the intersection of fitness and blockchain innovation.
           </>
         }
-        headerClasses="text-[60px] leading-[64px]"
+        headerClasses="font-roc text-[36px] leading-[42px] xl:text-[60px] xl:leading-[64px]"
         tagContainerClasses="flex-wrap justify-center max-w-[484px]"
         descriptionClasses="max-w-[595px]"
       />
       <Banner
         img={"/cases/step-app/banner-step-app.webp"}
-        classes={"h-[500px] w-full"}
+        classes={"h-[131px] md:h-[250px] lg:h-[350px] xl:h-[500px] w-full"}
         imgDesc={"Step-app banner image"}
       />
       <StepAppProjectOverView />
       <CasesSlider
-        itemClasses={"pl-0 ml-7"}
-        sectionClasses={"h-[538px]"}
+        itemClasses={"pl-0 ml-[11px] md:ml-7"}
+        sectionClasses={"h-[229px] py-5 md:py-0 md:h-[538px]"}
         images={stepAppSlides}
       />
       <StepAppSolutions solutions={stepAppSolutions} />
       <StepAppWhatWeDid />
-      <TeamBehind titleClasses={"text-[55.24px]"} team={stepAppTeam} />
+      <TeamBehind titleClasses={"xl:text-[55.24px]"} team={stepAppTeam} />
       <MoreProjects
-        headerClasses="text-[42px] font-medium font-roc leading-90"
+        headerClasses="xl:text-[42px] font-medium font-roc leading-90"
         projects={stepAppProjects}
       />
       <Contact
+        className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
         descriptionClasses={"hidden md:block"}
         titleClasses={"mb-8 md:mb-0"}
-        className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
       />
     </section>
   );
