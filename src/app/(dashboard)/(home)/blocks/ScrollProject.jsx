@@ -14,7 +14,8 @@ export const ScrollProject = ({
   mobile = false
 }) => {
   return (
-    <div
+    <a
+      href={link}
       id={"project-" + id}
       className={cn(
         "project-card group relative flex cursor-pointer justify-center",
@@ -76,6 +77,6 @@ export const ScrollProject = ({
         }}
         className="absolute bottom-0 z-[1] hidden h-full w-full custom480:group-hover:flex"
       ></div>
-    </div>
+    </a>
   );
 };

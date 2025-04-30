@@ -1,11 +1,6 @@
-export const metadata = {
-  title: "Blockchain Integration - Our Case Study | Cowchain",
-  description: "Cowchain’s Blockchain Integration optimizes hotel operations, streamlining processes and enhancing data management.",
-  metadataBase: new URL("https://cowchain.io/"),
-  alternates: {
-    canonical: "/cases/hotel"
-  }
-};
+import { metadata } from "./hotelCaseMetadata";
+
+export { metadata };
 
 export default async function HotelCasesLayout({ children }) {
   return (

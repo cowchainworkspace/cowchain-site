@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
 
@@ -16,8 +15,7 @@ export const CaseMask = () => {
         className="relative m-auto aspect-[2/1] h-[274px] lg:h-[504px]"
       >
         <div className="absolute bottom-0 left-28 flex items-center justify-center md:left-auto md:right-32">
-          {/* <img src="/images/step.png" alt="" /> */}
-          <Image src="/images/step.png" alt="m2e platform" width={650} height={444} />
+          <img src="/images/step.png" alt="" />
         </div>
       </ParallaxBanner>
     </div>

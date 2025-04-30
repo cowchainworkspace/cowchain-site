@@ -1,28 +1,29 @@
-import React from "react";
 import bg_lg from "@/assets/bg/clients_header_bg_lg.png";
-import Tag from "@/components/ui/tag";
-import { Helmet } from "react-helmet";
-import Image from "next/image";
-import home from "@/assets/icons/home.png";
-import Link from "next/link";
 import arrow from "@/assets/icons/arrow.svg";
+import home from "@/assets/icons/home.png";
+import Tag from "@/components/ui/tag";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { Helmet } from "react-helmet";
+import CasesFilter from "../components/CasesFilter";
+import { casesTags } from "../constants";
 
-export const HeroSection = ({ setTags, tags }) => {
+export const HeroSection = ({ setTag, currentTag }) => {
   return (
     <section className="relative pt-20 lg:pt-[120px]">
       <Helmet>
         <link rel="canonical" href={"https://cowchain.io/cases"} />
       </Helmet>
       <Image
-        alt="Header Background"
+        alt=""
         className="absolute right-0 top-0 min-h-[150%] min-w-[200vw] md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
         src={bg_lg}
       />
       <div className="relative flex flex-col px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
         <div className="mb-6 flex gap-4">
-          <Link className="flex gap-2" href={"/"}>
+          <Link href={"/"}>
             <Image className="h-[24px] w-[24px]" src={home} />
-            <span className="text-white">Home</span>
           </Link>
           <Image className="h-[24px] w-[24px]" src={arrow} />
           <span className="text-white">Cases</span>
@@ -31,7 +32,7 @@ export const HeroSection = ({ setTags, tags }) => {
         <h1 className="mt-4 cursor-default text-5xl uppercase text-white lg:mt-6 lg:max-w-[1200px] lg:text-[100px]">
           we offer the diversity of skills
         </h1>
-        <div className="my-14 flex items-center justify-end gap-2 lg:justify-between"></div>
+        <CasesFilter setTag={setTag} tags={casesTags} currentTag={currentTag} />
       </div>
     </section>
   );

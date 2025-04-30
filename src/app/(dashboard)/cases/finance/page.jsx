@@ -2,19 +2,19 @@
 
 import React from "react";
 import "./case-studies.css";
+import { HeroSection } from "./blocks/HeroSection";
+import Contact from "@/components/Contact";
+import Projects from "../components/Projects";
 import hotel from "@/assets/case-study/finance/1-left.png";
 import hotel_2 from "@/assets/case-study/finance/1-right.png";
-import Eu from "@/assets/icons/eu";
-import Contact from "@/components/Contact";
-import Chevron from "@/components/icons/chevron";
-import Image from "next/image";
 import Link from "next/link";
-import { ParallaxProvider } from "react-scroll-parallax";
-import Projects from "../components/Projects";
+import Chevron from "@/components/icons/chevron";
 import { ProjectDetail } from "../components/project-detail";
-import { CaseGallery } from "./blocks/CaseGallery";
 import { CaseMask } from "./blocks/CaseMask";
-import { HeroSection } from "./blocks/HeroSection";
+import { CaseGallery } from "./blocks/CaseGallery";
+import Eu from "@/assets/icons/eu";
+import { ParallaxProvider } from "react-scroll-parallax";
+import Image from "next/image";
 
 const project_details = [
   {
@@ -122,7 +122,7 @@ const CaseStudiesFinance = () => {
                     <Image
                       src={hotel}
                       className="mt-8 min-h-[270px] w-full object-cover lg:mt-14 lg:min-h-[500px]"
-                      alt="Finance Case"
+                      alt=""
                     />
                   </div>
                   <div className="w-full border-t-2 border-white/50 px-5 pt-4 lg:max-w-[600px] lg:px-0">
@@ -148,7 +148,7 @@ const CaseStudiesFinance = () => {
                     <Image
                       src={hotel_2}
                       className="mt-8 min-h-[270px] w-full object-cover md:mt-20 lg:min-h-[500px]"
-                      alt="Finance Case"
+                      alt=""
                     />
                   </div>
                 </div>
