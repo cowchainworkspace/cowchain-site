@@ -37,7 +37,7 @@ const AgntProjectOverView = () => {
               </p>
               <Link
                 className="flex items-center gap-4"
-                href={"#"}
+                href={"https://agnthub.ai/"}
                 target="_blank"
               >
                 <span className="font-roc text-lg font-medium uppercase leading-90 text-white underline xl:text-[22px]">

@@ -4,3 +4,6 @@ export { default as bridger } from "./bridger.webp";
 export { default as display } from "./display.webp";
 export { default as graph } from "./graph.png";
 export { default as wallet } from "./wallet.png";
+export { default as walletVanilla } from "./wallet.webp";
+export { default as bottlesVanilla } from "./rb-bottles-solution.webp";
+export { default as bottlesColl } from "./rb-sollution-colbs.webp";

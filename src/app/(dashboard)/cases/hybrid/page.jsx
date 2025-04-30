@@ -4,17 +4,16 @@ import React from "react";
 import Banner from "../components/Banner";
 import CasesSlider from "../components/CasesSlider";
 import CasesSolutions from "../components/CasesSolutions";
-import HeroScreenContainer from "./components/HeroScreenContainer";
 import MoreProjects from "../components/MoreProjects";
 import ProjectOverview from "../components/ProjectOverview";
 import TeamBehind from "../components/TeamBehind";
 import BannerTitle from "./components/BannerTitle";
+import HeroScreenContainer from "./components/HeroScreenContainer";
 import HybridWhatWeDid from "./components/HybridWhatWeDid";
 import {
   hybridProjects,
   hybridSlides,
   hybridSolutions,
-  hybridTags,
   hybridTeam,
   overviewHybridItems
 } from "./utils/constants";
@@ -75,7 +74,7 @@ const Hybrid = () => {
             AI data flow and monetization.
           </>
         }
-        webSiteLink={"#"}
+        webSiteLink={"https://agents.buildonhybrid.com/"}
         sectionClasses={"xl:pt-[119px] xl:pl-[103px] xl:pb-[120px]"}
         overviewClasses={"xl:gap-[176px]"}
       />

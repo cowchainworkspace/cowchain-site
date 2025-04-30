@@ -31,7 +31,11 @@ const StepAppProjectOverView = () => {
                 <br className="hidden custom1430:block" /> blockchain to ensure
                 secure and transparent asset flows.
               </p>
-              <Link className="flex gap-4" href={"#"} target="_blank">
+              <Link
+                className="flex gap-4"
+                href={"https://step.app/"}
+                target="_blank"
+              >
                 <span className="font-roc text-lg font-medium uppercase leading-90 text-white underline xl:text-[22px]">
                   visit website
                 </span>{" "}
