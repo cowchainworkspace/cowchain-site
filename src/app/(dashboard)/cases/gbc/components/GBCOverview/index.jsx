@@ -35,7 +35,11 @@ const GBCOverview = () => {
                 followers and an NFT market with over 1,900 ETH in trading
                 <br className="hidden custom1430:block" /> volume on OpenSea.
               </p>
-              <Link className="flex gap-4" href={"#"} target="_blank">
+              <Link
+                className="flex gap-4"
+                href={" https://hub.findgbc.io/"}
+                target="_blank"
+              >
                 <span className="text-2xl font-medium uppercase leading-90 text-white underline">
                   visit website
                 </span>{" "}

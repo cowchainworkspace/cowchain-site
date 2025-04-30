@@ -62,7 +62,7 @@ const PixelVerse = () => {
         }
         overviewItems={overviewItems}
         projectTitle={"Project overview"}
-        webSiteLink={"https://t.me/pixelverse_xyz"}
+        webSiteLink={"https://www.pixelverse.xyz/"}
       />
       <CasesSlider
         images={pixelVerseSlides}

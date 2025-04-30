@@ -179,7 +179,9 @@ export const pixelVerseProjects = [
     title: 'COINCLUB',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
     img: coinclub,
-    projectLink: "#"
+    projectLink: "#",
+    textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
   },
   {
     id: 2,
@@ -187,7 +189,9 @@ export const pixelVerseProjects = [
     title: 'hybrid',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
     img: hybrid,
-    projectLink: "hybrid"
+    projectLink: "hybrid",
+    textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
   },
   {
     id: 3,
@@ -195,7 +199,9 @@ export const pixelVerseProjects = [
     title: 'Wenix',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
     img: wenix,
-     projectLink: "#"
+     projectLink: "#",
+     textGap: "md:gap-[24px]",
+     cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
   },
   
 ]

@@ -23,7 +23,11 @@ const RetroBridgeOverview = () => {
               serves as a dynamic blockchain supply chain platform for
               <br className="hidden custom1430:block" /> digital assets.
             </p>
-            <Link className="flex gap-4" href={"#"} target="_blank">
+            <Link
+              className="flex gap-4"
+              href={"https://retrobridge.io/"}
+              target="_blank"
+            >
               <span className="text-lg font-medium uppercase leading-90 text-white underline xl:text-2xl">
                 visit website
               </span>{" "}
