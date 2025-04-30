@@ -21,13 +21,13 @@ import {
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
 import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
-import { metadata } from "./utils/RwaPlatformMetaData";
+import { metadata } from "./utils/SocialMiniAppMetaData";
 import { consultingProcessData } from "../blockchain_consulting/utils/data";
 import { CoreFeaturesRWAbg } from "@/assets/svgComponents/CoreFeaturesRWAbg";
 
 export { metadata };
 
-const RwaPlatform = () => {
+const SicialMiniApp = () => {
   return (
     <section className="overflow-visible">
       <HeroSection
@@ -283,4 +283,4 @@ of the box — ready to scale with your vision"
   );
 };
 
-export default RwaPlatform;
+export default SicialMiniApp;
