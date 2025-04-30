@@ -15,8 +15,11 @@ import {
   solutionTwo
 } from "../../../../../../public/cases/step-app/solutions";
 
-
-import { crossChain, gbc, m2ePlatformImg } from "../../../../../../public/projects";
+import {
+  crossChain,
+  gbc,
+  reflectNew
+} from "../../../../../../public/projects";
 
 export const stepAppTags = [
   {
@@ -54,29 +57,35 @@ export const stepAppTags = [
   {
     id: 9,
     tagLabel: "Staking"
-  },
-  
+  }
 ];
-
 
 export const overviewStepAppItems = [
   {
     id: 1,
     itemName: "tech stack",
-    itemValue: "React Native, Node.js, Solidity, Ethers.js, Web3.js, Bitcoin.js, Persona KYC, Interac E-Transfer, Chat support, Email Templating"
+    itemValue:
+      "React Native, Node.js, Solidity, Ethers.js, Web3.js, Bitcoin.js, Persona KYC, Interac E-Transfer, Chat support, Email Templating"
   },
   {
     id: 2,
     itemName: "Project Outcomes",
     itemValue: [
-      "A Move-to-Earn platform adopted by 300K+ active users across 100+ countries.", "A DEX, staking dApp, and NFT marketplace integrated into a single ecosystem.", "A user-friendly experience combining real-time asset trading and blockchain integration",
+      "A Move-to-Earn platform adopted by 300K+ active users across 100+ countries.",
+      "A DEX, staking dApp, and NFT marketplace integrated into a single ecosystem.",
+      "A user-friendly experience combining real-time asset trading and blockchain integration"
     ]
   },
   {
     id: 3,
     itemName: "Project Architecture",
     itemValue: [
-      "Staking mechanisms for earning rewards.", "An NFT marketplace for real-time asset trading.", "A web wallet supporting custodial and non-custodial transactions.", "A Telegram Mini-App driving Web3 gamification.", "A bridge and launchpad for cross-chain compatibility and project growth.", "A DEX for fast and secure token swaps."
+      "Staking mechanisms for earning rewards.",
+      "An NFT marketplace for real-time asset trading.",
+      "A web wallet supporting custodial and non-custodial transactions.",
+      "A Telegram Mini-App driving Web3 gamification.",
+      "A bridge and launchpad for cross-chain compatibility and project growth.",
+      "A DEX for fast and secure token swaps."
     ]
   }
 ];
@@ -87,84 +96,108 @@ export const stepAppSlides = [
     width: 248,
     height: 538,
     desc: "Step App mobile screen",
-    href: slideOne
+    href: slideOne,
+    mobileHeight: 189,
+    mobileWidth: 87
   },
   {
     id: 2,
     width: 248,
     height: 538,
     desc: "Step App mobile screen",
-    href: slideTwo
+    href: slideTwo,
+    mobileHeight: 189,
+    mobileWidth: 87
   },
   {
     id: 3,
     width: 248,
     height: 538,
     desc: "Step App mobile screen",
-    href: slideThree
+    href: slideThree,
+    mobileHeight: 189,
+    mobileWidth: 87
   },
   {
     id: 4,
     width: 248,
     height: 538,
     desc: "Step App mobile screen",
-    href: slideFour
+    href: slideFour,
+    mobileHeight: 189,
+    mobileWidth: 84
   },
   {
     id: 5,
     width: 248,
     height: 538,
     desc: "Step App mobile screen",
-    href: slideFive
+    href: slideFive,
+    mobileHeight: 189,
+    mobileWidth: 87
   },
   {
     id: 6,
     width: 248,
     height: 538,
     desc: "Step App mobile screen",
-    href: slideSix
+    href: slideSix,
+    mobileHeight: 189,
+    mobileWidth: 87
   },
   {
     id: 7,
     width: 248,
     height: 538,
     desc: "Step App mobile screen",
-    href: slideOne
+    href: slideOne,
+    mobileHeight: 189,
+    mobileWidth: 87
   },
   {
     id: 8,
     width: 248,
     height: 538,
     desc: "Step App mobile screen",
-    href: slideTwo
+    href: slideTwo,
+    mobileHeight: 189,
+    mobileWidth: 87
   },
   {
     id: 9,
     width: 248,
     height: 538,
     desc: "Step App mobile screen",
-    href: slideThree
+    href: slideThree,
+    mobileHeight: 189,
+    mobileWidth: 87
   },
   {
     id: 10,
     width: 248,
     height: 538,
     desc: "Step App mobile screen",
-    href: slideFour
+    href: slideFour,
+    mobileHeight: 189,
+    mobileWidth: 84
   },
   {
     id: 11,
     width: 248,
     height: 538,
     desc: "Step App mobile screen",
-    href: slideFive
+    href: slideFive,
+    mobileHeight: 189,
+    mobileWidth: 87
   },
   {
     id: 12,
     width: 248,
     height: 538,
     desc: "Step App mobile screen",
-    href: slideSix
+    href: slideSix,
+    mobileHeight: 189,
+    mobileWidth: 87
   }
 ];
 
@@ -178,21 +211,34 @@ export const stepAppSolutions = [
       width: 397,
       height: 226,
       info: "Step app shoes",
-      href: solutionOne
+      href: solutionOne,
+      mobileHeight: 129,
+      mobileWidth: 228,
     }
   },
   {
     id: 2,
     title: "Multifunctional DEX Implementation",
-    desc: <>Step Exchange was developed to support easy and fast swaps<br className="hidden xl:block" /> of EVM-compatible assets, adding real-world value<br className="hidden xl:block" /> to blockchain supply chain platforms</>,
+    desc: (
+      <>
+        Step Exchange was developed to support easy and fast swaps
+        <br className="hidden xl:block" /> of EVM-compatible assets, adding
+        real-world value
+        <br className="hidden xl:block" /> to blockchain supply chain platforms
+      </>
+    ),
     textBlockWidth: 600,
     img: {
       width: 372,
       height: 383,
       info: "Step app headphones",
       href: solutionTwo,
-      top: 45, 
+      top: 45,
       left: 56,
+      mobileHeight: 163,
+      mobileWidth: 156,
+      topMobile: 50, 
+      leftMobile: 50
     }
   },
   {
@@ -206,21 +252,34 @@ export const stepAppSolutions = [
       info: "Step app shoes",
       href: solutionThree,
       top: 42,
-      left:45
+      left: 45,
+      mobileHeight: 165,
+      mobileWidth: 240,
+      topMobile: 35,
     }
   },
   {
     id: 4,
     title: "Telegram Mini-App Development",
-    desc: <>The StepHero added an engaging dimension<br className="hidden xl:block"/>
-    to the StepApp ecosystem. Designed to encourage activity<br className="hidden xl:block"/> through gamified daily challenges and social interaction,<br className="hidden xl:block"/> 
-    it created  a vibrant community hub directly within Telegram.</>,
+    desc: (
+      <>
+        The StepHero added an engaging dimension
+        <br className="hidden xl:block" />
+        to the StepApp ecosystem. Designed to encourage activity
+        <br className="hidden xl:block" /> through gamified daily challenges and
+        social interaction,
+        <br className="hidden xl:block" />
+        it created a vibrant community hub directly within Telegram.
+      </>
+    ),
     textBlockWidth: 613,
     img: {
       width: 210,
       height: 256,
       info: "Step app watch",
       href: solutionFour,
+      mobileHeight: 140,
+      mobileWidth: 120,
     }
   },
   {
@@ -231,14 +290,13 @@ export const stepAppSolutions = [
     img: {
       width: 442,
       height: 222,
-      info: "Agnt screens",
-      href: solutionFive
+      info: "Step app shoes",
+      href: solutionFive,
+      mobileHeight: 116,
+      mobileWidth: 232,
     }
-  },
-
+  }
 ];
-
-
 
 export const stepAppTeam = [
   {
@@ -266,32 +324,36 @@ export const stepAppTeam = [
 export const stepAppProjects = [
   {
     id: 1,
-    tags: ['Web Development', 'Defi', 'Bridge', "NFT"],
-    title: 'RETROBRIDGE',
-    desc: 'RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.',
+    tags: ["Web Development", "Defi", "Bridge", "NFT"],
+    title: "RETROBRIDGE",
+    desc: "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
     img: crossChain,
     textColor: "text-secondary",
-    projectLink: "retrobridge"
-  },
-  {
-    id: 2,
-    tags: ['Web Development', 'Trading', "NFT"],
-    title: 'GMX BLUEBERRY CLUB',
-    desc: 'GBC is a next-generation NFT platform that combines customization, trading, and gamification.',
-    img: gbc,
-    textColor: "text-white",
-    projectLink: "gbc"
+    projectLink: "retrobridge",
+      textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
   },
   {
     id: 3,
-    tags: ["Web Development ", "Mobile App", "GameFi", "Trading", "DEX", "DeFi", "NFT", "Staking", "Crypto Wallet"],
-    title: 'STEP APP',
-    desc: 'StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.',
-    img: m2ePlatformImg,
+    tags: ['Web Development', "AI Development",  'Trading', 'Defi'],
+    title: 'REFLECT',
+    desc: 'Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.',
+    img: reflectNew,
+    projectLink: "#",
     textColor: "text-secondary",
-    projectLink: "step-app",
-    itemClasses: "pb-[30px] mt-auto",
-
+    tagsContainer: "xl:max-w-[330px]",
+    textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
   },
-
-]
+  {
+    id: 2,
+    tags: ["Web Development", "Trading", "NFT"],
+    title: "GMX BLUEBERRY CLUB",
+    desc: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
+    img: gbc,
+    textColor: "text-white",
+    projectLink: "gbc",
+      textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
+  },
+];

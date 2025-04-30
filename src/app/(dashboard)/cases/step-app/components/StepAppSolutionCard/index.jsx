@@ -1,5 +1,6 @@
+"use client";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
+import { useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 
 const StepAppSolutionCard = ({
@@ -11,28 +12,37 @@ const StepAppSolutionCard = ({
   imgHeight,
   imgSrc,
   top,
-  left
+  left,
+  mobileHeight,
+  mobileWidth,
+  topMobile,
+  leftMobile
 }) => {
+  const [isLargerThan1280] = useMediaQuery("(min-width: 1280px)");
+
   return (
     <article
       className={cn(
-        "flex w-full items-center justify-between rounded-[70px] bg-[#FFFFFF1C] py-10 pl-20 pr-[65px]",
-        isReverse && "flex-row-reverse bg-transparent"
+        " flex w-full flex-col-reverse  gap-4 overflow-hidden rounded-[26px] bg-[#FFFFFF1C] p-4 md:px-[18px] lg:px-6 xl:flex-row xl:items-center xl:justify-between xl:gap-0 xl:overflow-visible xl:rounded-[70px] xl:py-10 xl:pl-20 xl:pr-[65px]",
+        isReverse && "xl:flex-row-reverse xl:bg-transparent"
       )}
     >
       <div
-        className={cn("flex  flex-col gap-[30px]", isReverse && "items-end")}
+        className={cn(
+          "flex  flex-col gap-4 xl:gap-[30px]",
+          isReverse && "xl:items-end"
+        )}
         style={{
-          width: `${textBlockWidth}px`
+          maxWidth: `${textBlockWidth}px`
         }}
       >
-        <h3 className="font-manrope text-xs uppercase leading-[20px] tracking-[2px] text-secondary">
+        <h3 className=" lg:trcking-[2px] font-manrope text-xs font-normal uppercase leading-5 tracking-[1.8px] text-secondary">
           {title}
         </h3>
         <p
           className={cn(
-            "font-manrope text-xl font-medium leading-[30px] text-white",
-            isReverse && "text-right"
+            "font-manrope text-xs font-medium leading-5 text-white xl:text-xl xl:leading-[30px]",
+            isReverse && "xl:text-right"
           )}
         >
           {desc}
@@ -42,11 +52,11 @@ const StepAppSolutionCard = ({
         <div
           className="absolute z-20"
           style={{
-            top: `${top || 50}%`,
-            left: `${left || 50}%`,
+            top: isLargerThan1280 ? `${top || 50}%` : `${topMobile || 50}%`,
+            left: isLargerThan1280 ? `${left || 50}%` : `${leftMobile || 50}%`,
             transform: "translate(-50%, -50%)",
-            width: `${imgWidth}px`,
-            height: `${imgHeight}px`,
+            width: `${isLargerThan1280 ? imgWidth : mobileWidth}px`,
+            height: `${isLargerThan1280 ? imgHeight : mobileHeight}px`,
             backgroundImage: `url(${imgSrc.src})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -55,11 +65,13 @@ const StepAppSolutionCard = ({
         />
 
         {/* Clipped decorative card */}
-        <div className="relative z-10 size-[300px] overflow-hidden rounded-[66px]">
+        <div className="step-app-solution-card relative z-10 h-[140px] w-full  overflow-hidden xl:size-[300px] xl:rounded-[16px] xl:rounded-[66px]">
           <div
-            className="absolute inset-0 z-0"
+            className="absolute inset-0 z-0 rounded-[16px] xl:rounded-[66px]"
             style={{
-              backgroundImage: 'url("/cases/step-app/solution-card-bg.png")',
+              backgroundImage: isLargerThan1280
+                ? 'url("/cases/step-app/solution-card-ellipse.png")'
+                : 'url("/cases/step-app/step-solution-mob-card.png")',
               backgroundSize: "cover",
               backgroundPosition: "center"
             }}

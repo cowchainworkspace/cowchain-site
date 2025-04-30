@@ -7,15 +7,15 @@ import StepAppOverviewItems from "../StepAppOverviewItems";
 const StepAppProjectOverView = () => {
   return (
     <section>
-      <div className="mx-auto max-w-[1440px] py-30 pl-[97px] pr-[109px]">
-        <div className="grid grid-cols-[1fr_521px] gap-[182px]">
+      <div className="mx-auto max-w-[1440px] pt-[50px] md:px-8 lg:px-10 xl:py-30 xl:pl-[97px] xl:pr-[109px]">
+        <div className="grid gap-[50px] md:grid-cols-2 xl:grid-cols-[1fr_521px] xl:gap-[182px]">
           <div>
-            <div className="flex flex-col gap-[30px]">
-              <h3 className="font-roc text-[54px] font-medium uppercase leading-90 text-white">
+            <div className="flex flex-col gap-[30px] px-4 md:px-0">
+              <h3 className="font-roc text-[32px] font-medium uppercase leading-90 text-white xl:text-[54px]">
                 Project overview
               </h3>
               <br className="hidden custom1430:block" />
-              <p className="text-left font-manrope text-sm font-[450] leading-[22.1px] !text-white-70">
+              <p className="text-left font-manrope text-xs font-[450] leading-5 !text-white-70 xl:text-sm xl:leading-6">
                 StepApp combines fitness, gaming, and blockchain, offering one
                 of the
                 <br className="hidden custom1430:block" /> most practical
@@ -32,7 +32,7 @@ const StepAppProjectOverView = () => {
                 secure and transparent asset flows.
               </p>
               <Link className="flex gap-4" href={"#"} target="_blank">
-                <span className="font-roc text-[22px] font-medium uppercase leading-90 text-white underline">
+                <span className="font-roc text-lg font-medium uppercase leading-90 text-white underline xl:text-[22px]">
                   visit website
                 </span>{" "}
                 <RightArrowSvg />
