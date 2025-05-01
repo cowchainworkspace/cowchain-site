@@ -1,13 +1,13 @@
 import "./clients.css";
+import Contact from "@/components/Contact";
+import Cases from "./blocks/Cases";
+import Credo from "./blocks/Credo";
+import Feedback from "./blocks/Feedback";
 import Header from "./blocks/Header";
 import Projects from "./blocks/Projects";
-import Feedback from "./blocks/Feedback";
-import Credo from "./blocks/Credo";
-import Cases from "./blocks/Cases";
-import Contact from "@/components/Contact";
 import { metadata } from "./clientsMetadata";
 
-export { metadata }
+export { metadata };
 
 const Clients = () => {
   return (

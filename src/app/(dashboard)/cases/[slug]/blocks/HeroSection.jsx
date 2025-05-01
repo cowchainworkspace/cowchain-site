@@ -10,11 +10,12 @@ export const HeroSection = ({ title, linkTitle, tags }) => {
     <section className="relative px-4 md:pt-16">
       <div className="relative pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">
         <div className="mb-6 flex gap-4">
-          <Link href={"/"}>
+          <Link className="flex gap-2" href={"/"}>
             <Image
               className="h-[22px] w-[24px] md:h-[24px] md:w-[24px]"
               src={home}
             />
+            <span className="text-white">Home</span>
           </Link>
           <Image
             className="h-[22px] w-[24px] md:h-[24px] md:w-[24px]"

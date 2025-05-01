@@ -20,7 +20,7 @@ export const Blog = () => {
           scroll(480, wrapper.current);
         }}
       >
-        <Image className="h-full w-full" src={arrow_btn} alt=""></Image>
+        <Image className="h-full w-full" src={arrow_btn} alt="Arrow"></Image>
       </button>
       <div className="grid grid-cols-1 md:grid-cols-5">
         <div className="py-heading px-default md-border-r flex flex-col gap-y-6 border-b border-b-th-fade md:col-span-2">
@@ -32,7 +32,7 @@ export const Blog = () => {
               <p className="header uppercase text-white underline">
                 ALL ARTICLES
               </p>
-              <Image className="w-6" src={arrow} alt=""></Image>
+              <Image className="w-6" src={arrow} alt="Arrow"></Image>
             </div>
           </a>
         </div>

@@ -6,23 +6,55 @@ export function cn(...inputs) {
 }
 
 export const getSplitText = (text) => {
-  if (!text) {
-    return;
-  }
+  if (!text) return;
+
+  const lines = text.split('\n').filter(line => line.trim().length > 0);
+
   const articleInfo = {
     title: '',
     description: [],
-  }
+  };
 
-  text.split("\n").filter(item => item.length > 0).forEach(element => {
-    if(element.length > 0 && element.includes("#")) {
-      articleInfo.title = element.replaceAll("#", "")
+  let currentSection = null;
+  let foundAnySubtitle = false;
+
+  lines.forEach((line) => {
+    if (line.startsWith('## ')) {
+      articleInfo.title = line.replace(/^## /, '').trim();
+    } else if (line.startsWith('### ')) {
+      foundAnySubtitle = true;
+      currentSection = {
+        subtitle: line.replace(/^### /, '').trim(),
+        content: [],
+      };
+      articleInfo.description.push(currentSection);
     } else {
-      articleInfo.description.push(element)
+      if (!foundAnySubtitle) {
+        // No `###` subtitles found yet? Make one default section.
+        if (!articleInfo.description.length) {
+          currentSection = {
+            subtitle: null,
+            content: [],
+          };
+          articleInfo.description.push(currentSection);
+        }
+      }
+
+      if (!currentSection) {
+        currentSection = {
+          subtitle: null,
+          content: [],
+        };
+        articleInfo.description.push(currentSection);
+      }
+
+      currentSection.content.push(line.trim());
     }
   });
 
-
   return articleInfo;
 };
+
+
+
 

@@ -64,7 +64,7 @@ export const Values = () => {
           <Image
             className="absolute -bottom-[400px] left-0 hidden h-[1625px] w-[700px] xl:block"
             src={bg}
-            alt=""
+            alt="Values Bg"
           ></Image>
 
           <div className="flex flex-col xl:flex-row">

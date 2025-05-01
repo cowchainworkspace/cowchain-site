@@ -27,27 +27,13 @@ export const useGetItems = (section) => {
 
 export const useGetMorePosts = (currentSlug) => {
 
-  return useInfiniteQuery({
+  return useQuery({
     queryKey: ['posts', currentSlug],
   
-    queryFn: async ({pageParam = 1}) => getMoreArticles(currentSlug,pageParam),
+    queryFn: async () => getMoreArticles(currentSlug),
     onError: (err) => {
       console.error(err);
     },
-    getNextPageParam: (data) => {
-
-      const {meta: {
-        pagination
-      }} = data;
-
-       return pagination.page < pagination.pageCount 
-       ? pagination.page + 1 
-       : undefined
-      },
-
-    initialPageParam: 1,
-
- 
   });
 }
 

@@ -1,10 +1,10 @@
-import React from "react";
-import Image from "next/image";
 import fullStackImg from "@/assets/icons/expertice/fullStackImg.svg";
 import whiteLabel from "@/assets/icons/expertice/marketing.svg";
 import startaps from "@/assets/icons/expertice/startaps.svg";
 import venture from "@/assets/icons/expertice/venture.svg";
 import marketing from "@/assets/icons/expertice/whiteLabel.svg";
+import Image from "next/image";
+import React from "react";
 
 const expertiseData = [
   {
@@ -43,11 +43,11 @@ export default function Stack({
   return (
     <section
       id="expertise"
-      className="relative flex justify-center border-b border-b-th-fade border-t border-t-th-fade px-[20px] py-[60px] md:pb-[132px] md:pl-[84px] md:pr-[64px] md:pt-[108px]"
+      className="relative flex justify-center border-b border-t border-b-th-fade border-t-th-fade px-[20px] py-[60px] md:pb-[132px] md:pl-[84px] md:pr-[64px] md:pt-[108px]"
     >
       <div className="grid grid-cols-1 gap-y-[42px] md:grid-rows-2 md:gap-x-[100px] lg:grid-cols-3">
         <div className="col-span-1 row-span-1 flex items-center justify-center md:justify-start">
-          <h2 className="whitespace-pre-line text-[36px] text-center uppercase md:text-start md:text-[60px]">
+          <h2 className="whitespace-pre-line text-center text-[36px] uppercase md:text-start md:text-[60px]">
             {title}
           </h2>
         </div>
@@ -59,13 +59,13 @@ export default function Stack({
           >
             <div
               style={{ border: "0.1px solid rgba(255, 255, 255, 0.5)" }}
-              className="mb-[24px] md:mb-[37px] flex min-h-[42px] min-w-[42px] md:min-h-[64px] md:min-w-[64px] items-center justify-center rounded-full bg-transparent"
+              className="mb-[24px] flex min-h-[42px] min-w-[42px] items-center justify-center rounded-full bg-transparent md:mb-[37px] md:min-h-[64px] md:min-w-[64px]"
             >
               <Image
                 src={expertise.icon}
-                width={'auto'}
-                height={'auto'}
-                className="w-[20px] h-[20px] md:w-[28px] md:h-[28px]"
+                width={"auto"}
+                height={"auto"}
+                className="h-[20px] w-[20px] md:h-[28px] md:w-[28px]"
                 alt={expertise.title}
               />
             </div>
@@ -78,7 +78,7 @@ export default function Stack({
                   style={{
                     color: "#BBBBBB"
                   }}
-                  className="text-[16px] leading-22px"
+                  className="leading-22px text-[16px]"
                 >
                   {expertise.text}
                 </p>

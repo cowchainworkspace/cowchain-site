@@ -14,16 +14,16 @@ export default function ExpandingBlocks({ isSecondary = false }) {
   return (
     <>
       <section className={"relative  border-t border-t-th-fade"}>
-        <div className="px-default relative mx-auto flex max-w-[1440px] flex-col justify-between gap-[91px] pb-[61px] pt-[90px]">
-          <div className="  lg:gap-16">
-            <h2 className="lg:order-0 text-[36px] uppercase text-white sm:text-[60px] ">
+        <div className="px-default relative mx-auto flex max-w-[1440px] flex-col justify-between gap-[91px] pb-[42px] pt-[60px] lg:pb-[61px] lg:pt-[90px]">
+          <div>
+            <h2 className="lg:order-0 mb-4 text-[36px] uppercase text-white sm:text-[60px] md:mb-0 ">
               Advantages
               <br /> of Web3 Development
             </h2>
-            <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row  lg:order-3 lg:ml-auto" />
+            <div className="mt-8  hidden w-full max-w-xl flex-col justify-between customSmall:flex-row md:flex  lg:order-3 lg:ml-auto" />
             <p
               className={cn(
-                "body my-[40px] max-w-[592px] text-base leading-6 md:my-[20px]",
+                "body max-w-[592px] text-base leading-6 md:my-[20px]",
                 {
                   "!text-secondary": isSecondary
                 }
@@ -93,7 +93,7 @@ export default function ExpandingBlocks({ isSecondary = false }) {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="1440custom:px-[56px] flex h-full w-full flex-col justify-center p-6"
+                    className="flex h-full w-full flex-col justify-center p-6 1440custom:px-[56px]"
                   >
                     <motion.h2
                       initial={{ opacity: 0, y: -40 }}

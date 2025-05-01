@@ -1,12 +1,12 @@
-import FooterForm from "./utils/FooterForm";
 import linkedin from "@/assets/footer/linkedin.svg";
+import mail from "@/assets/footer/mail.svg";
+import medium from "@/assets/footer/medium.svg";
 import telegram from "@/assets/footer/telegram.svg";
 import twitter from "@/assets/footer/twitter.svg";
-import medium from "@/assets/footer/medium.svg";
-import mail from "@/assets/footer/mail.svg";
-import Image from "next/image";
-import upwork from "@/assets/homepage/upwork.svg";
 import clutch from "@/assets/homepage/clutch.svg";
+import upwork from "@/assets/homepage/upwork.svg";
+import Image from "next/image";
+import FooterForm from "./utils/FooterForm";
 
 export function SocialLinks({ footerForm, isMenu }) {
   return (

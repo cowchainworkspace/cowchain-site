@@ -1,10 +1,10 @@
 "use client";
 
-import { HeroSection } from "./blocks/HeroSection";
 import Contact from "@/components/Contact";
+import Stack from "@/components/stack";
+import { HeroSection } from "./blocks/HeroSection";
 import { Products } from "./blocks/Products";
 import { ViewMoreSection } from "./blocks/ViewMore";
-import Stack from "@/components/stack";
 
 const Services = () => {
   return (
@@ -12,12 +12,7 @@ const Services = () => {
       <HeroSection />
       <ViewMoreSection />
       <Products />
-      <Stack
-        gradientStyles="absolute -bottom-1/2 -right-40 block  h-[426px] w-[526px] md:hidden"
-        isGradient={true}
-        title={"Our tech stack"}
-        margin={""}
-      />
+      <Stack title={"Our tech stack"} margin={""} />
       <Contact />
     </section>
   );

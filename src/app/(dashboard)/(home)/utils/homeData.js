@@ -38,12 +38,12 @@ export const servedIndustriesData = [
 
 export const ourServices = [
   {
-    title: "WEB3 FULL STACK DEVELOPMENT",
-    text: "Bring your vision to life, using our experience from delivering 120+ Web3 projects",
+    title: "WEB3 FULL STACK \n DEVELOPMENT",
+    text: "Bring your vision to life, using our experience from delivering 150+ Web3 projects",
     icon: FullStack
   },
   {
-    title: "Blockchain Consulting",
+    title: "Blockchain \n Consulting",
     text: "Start your project right with a clear plan, architecture, and roadmap",
     icon: BlockchainIcon
   },
@@ -144,48 +144,51 @@ export const otherServiceData = [
 
 export const useCases = [
   {
-    text: "Decentralized applications drive \n transparency and automation"
+    text: "Decentralized applications drive transparency and automation"
   },
   {
-    text: "Smart contracts remove the need \n for intermediaries, streamlining \n business operations"
+    text: "Smart contracts remove the need for intermediaries, streamlining business operations"
   },
   {
-    text: "Decentralized Autonomous \n Organizations (DAOS) empower \n communities to govern projects \n without centralized control"
+    text: "Decentralized Autonomous Organizations (DAOS) empower communities to govern projects without centralized control"
   },
   {
-    text: "Decentralized exchanges facilitate \n secure trading of digital assets"
+    text: "Decentralized exchanges facilitate secure trading of digital assets"
   },
   {
-    text: "Social media platforms give users \n reater control over their data \n and interactions"
+    text: "Social media platforms give users reater control over their data and interactions"
   }
 ];
 
 export const TustByNumbersData = [
   {
-    number: 120,
+    number: 150,
     title: "PROJECTS",
-    desc: "delivered across Ethereum, Polygon, Binance Smart Chain, and more",
-    sighn: "+"
+    desc: "delivered across Ethereum, Polygon, BNB Chain, and more",
+    sighn: "+",
   },
   {
-    number: 180,
+    number: 500,
     title: "million In",
     desc: "market capitalization managed through platforms developed by our team",
     sighn: "$",
     sufix: true,
+    plusSign: "+",
+
   },
   {
-    number: 20,
-    title: "million+",
+    number: 35,
+    title: "million",
     desc: "daily trading volume on systems we’ve built",
     sighn: "$",
     sufix: true,
+    plusSign: "+",
   },
   {
     number: 50,
     title: "Web3-native",
     desc: "developers with expertise in blockchain technology",
-    sighn: "+"
+    sighn: "+",
   }
 ];
 
@@ -208,8 +211,8 @@ export const web3DevData = [
     content: `As the demand for digital assets continues to rise, platforms for minting, trading, and managing NFTs are becoming essential. Cowchain builds platforms that support seamless and secure NFT transactions, allowing businesses to engage with this fast-growing market`
   },
   {
-    title: "metaverse Development",
-    content: `Our Web3 development company also specializes in metaverse development, creating immersive virtual worlds and interactive environments. From gaming to virtual reality, we help businesses explore new levels of user engagement`
+    title: "AI Development",
+    content: `Our Web3 development company also provides AI development services, building intelligent systems and autonomous agents for blockchain products. From AI-powered automation to personalized user experiences, we help businesses unlock smarter Web3 solutions.`
   },
   {
     title: "Blockchain Security and Audits",
@@ -241,6 +244,34 @@ export const faqHomeData = [
   {
     id: 5,
     title: 'Can Web3 Solutions Be Integrated with Existing Systems?',
+    content: 'Yes, our Web3 development company ensures seamless integration of blockchain solutions with your existing systems.',
+  },
+]
+
+export const mobileFaqHomeData = [
+  {
+    id: 1,
+    title: 'What Does Web3 \n Development Involve?',
+    content: 'Web3 development involves creating decentralized applications, integrating blockchain technology, and leveraging smart contracts to create secure and efficient systems.',
+  },
+  {
+    id: 2,
+    title: 'How Is Web3 Different from Web2?',
+    content: 'Web3 operates on decentralized networks, allowing users to have greater control over their data and transactions. Unlike Web2, Web3 removes intermediaries and relies on blockchain technology for enhanced security and transparency.',
+  },
+  {
+    id: 3,
+    title: 'What Are Some Common \n Web3 Use Cases?',
+    content: 'Common Web3 use cases include DeFi platforms, decentralized exchanges, NFTs, decentralized applications (dApps), and DAOs.',
+  },
+  {
+    id: 4,
+    title: 'How Long Does It Usually Take \n  to Develop a Web3 Project?',
+    content: 'The timeline for developing a Web3 project depends on its complexity. Generally, the process spans a few months, covering stages from initial planning to final deployment.',
+  },
+  {
+    id: 5,
+    title: 'Can Web3 Solutions Be Integrated \n with Existing Systems?',
     content: 'Yes, our Web3 development company ensures seamless integration of blockchain solutions with your existing systems.',
   },
 ]

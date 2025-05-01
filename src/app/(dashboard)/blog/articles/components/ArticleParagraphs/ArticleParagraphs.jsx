@@ -33,34 +33,43 @@ export const ArticleParagraphs = ({
                 <h2 className="mb-6 text-left text-2xl uppercase">
                   {paragraph.title}
                 </h2>
-                {paragraph.description.map((item, index) => (
-                  <p key={index} className="text-sm  text-secondary">
-                    {item}
-                  </p>
+                {paragraph.description.map((section, index) => (
+                  <div key={index}>
+                    {section.subtitle && (
+                      <h3 className="mb-3 text-left text-base uppercase">
+                        {section.subtitle}
+                      </h3>
+                    )}
+                    {section.content.map((para, idx) => (
+                      <p key={idx} className="mb-4 text-sm text-secondary">
+                        {para}
+                      </p>
+                    ))}
+                  </div>
                 ))}
               </div>
               <div className="container relative my-[50px] flex w-full flex-col items-center px-0">
                 <Image
                   src={ellipseBg}
-                  width={546}
+                  width={540}
                   height={335}
                   alt="background decoration"
-                  className="absolute -top-20 hidden scale-150 md:block"
+                  className="-z-1 pointer-events-none absolute -top-[110px] hidden scale-150 md:block"
                 />
                 <Image
                   src={ellipseBgMb}
                   width={546}
                   height={526}
                   alt="background decoration"
-                  className="absolute -top-[300px] w-screen md:hidden"
+                  className="pointer-events-none absolute -top-[300px] w-screen md:hidden"
                 />
-                <h3 className="mb-2 text-center text-2xl uppercase">
+                <h3 className="font z-10 mb-2 text-center text-lg font-medium uppercase ">
                   Subscribe to our newsletter
                 </h3>
-                <p className="mb-10 text-center text-secondary">
+                <p className="z-10 mb-10 text-center text-sm text-secondary">
                   Receive weekly updates on new posts and features
                 </p>
-                <FooterForm isMiddle={true} />
+                <FooterForm classes="z-10" />
               </div>
             </div>
           );
@@ -74,10 +83,19 @@ export const ArticleParagraphs = ({
             <h2 className="mb-6 text-left text-2xl uppercase">
               {paragraph.title}
             </h2>
-            {paragraph.description.map((item, index) => (
-              <p key={index} className="text-sm  text-secondary">
-                {item}
-              </p>
+            {paragraph.description.map((section, index) => (
+              <div key={index}>
+                {section.subtitle && (
+                  <h3 className="mb-3 text-left text-base uppercase">
+                    {section.subtitle}
+                  </h3>
+                )}
+                {section.content.map((para, idx) => (
+                  <p key={idx} className="mb-4 text-sm text-secondary">
+                    {para}
+                  </p>
+                ))}
+              </div>
             ))}
           </div>
         );
@@ -105,7 +123,7 @@ export const ArticleParagraphs = ({
           {authorInfo}
         </p>
 
-        <a href="/" className="flex items-center gap-[16px]">
+        <a href="/blog" className="flex items-center gap-[16px]">
           <span className="text-[16px] uppercase text-[white] underline">
             all articles of this author
           </span>

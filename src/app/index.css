@@ -152,7 +152,7 @@ p,
 }
 
 .btn-submit {
-  @apply flex h-12 cursor-pointer items-center justify-center bg-white px-8 pt-1 text-center font-roc text-sm font-medium uppercase text-black lg:h-16;
+  @apply flex h-12 cursor-pointer items-center justify-center bg-white px-8 pt-1 text-center font-roc text-sm font-medium uppercase text-black;
   transition:
     color 0.3s,
     background-color 0.3s ease-in-out;
@@ -458,6 +458,12 @@ input:-webkit-autofill:active {
   text-overflow: ellipsis;
   white-space: nowrap;
   display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .breadcrumb-item {
+    max-width: 150px;
+  }
 }
 
 .inner-border {

@@ -1,6 +1,4 @@
-import { cn } from "@/lib/utils";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
-import { usePathname } from "next/navigation";
 import React from "react";
 
 export const BlogBreadCrumb = ({ slug }) => {
@@ -8,7 +6,7 @@ export const BlogBreadCrumb = ({ slug }) => {
     <>
       {slug ? (
         <Breadcrumb
-          className="absolute left-5 top-0 z-50 line-clamp-1 flex max-w-[300px] gap-1 overflow-hidden md:left-10 md:top-[23px]"
+          className="absolute left-5 top-0 z-20 line-clamp-1 flex max-w-[300px] gap-1 overflow-hidden md:left-10 md:top-[23px]"
           separator={"/"}
           size={"sm"}
         >
@@ -28,7 +26,7 @@ export const BlogBreadCrumb = ({ slug }) => {
         </Breadcrumb>
       ) : (
         <Breadcrumb
-          className="absolute left-5 top-0 z-50 line-clamp-1 flex max-w-[300px] gap-1 overflow-hidden md:left-10 md:top-[23px]"
+          className="absolute left-5 top-0 z-20 line-clamp-1 flex max-w-[300px] gap-1 overflow-hidden md:left-10 md:top-[23px]"
           separator={"/"}
           size={"sm"}
         >

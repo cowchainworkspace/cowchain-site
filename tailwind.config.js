@@ -12,7 +12,7 @@ export default {
       center: true,
       padding: "10px",
       screens: {
-        "2xl": "1220px"
+        "2xl": "1220px",
       }
     },
     extend: {
@@ -50,6 +50,23 @@ export default {
       borderRadius: {
         20: "20px"
       },
+      screens: {
+        '1440custom': '1440px',
+        'customSmall': '340px',
+        '3xl': '1800px',
+        '4xl': '2000px',
+        'custom1200': '1200px',
+        'custom1000': '1000px',
+        'custom815': '815px',
+        '1custom': '1400px',
+        '2custom': '950px',
+        'custom1430': '1430px',
+        'custom1400': '1400px',
+        'custom1300': '1300px',
+        'custom-1700': '1660px',
+        'fullSlider': '3186px',
+        'custom480': '480px'
+      },
       colors: {
         "th-fade": "#ffffff41",
         "th-grey": "#ffffff71",
@@ -76,7 +93,8 @@ export default {
           "linear-gradient(180deg, #6D8BB1 -5.25%, #CBB4AB 43.54%, rgba(29, 37, 103, 0.42) 100%)",
         "custom-gradient":
           "linear-gradient(183.72deg, #4D2C91 -8.83%, #000000 60.23%)",
-          'case-gradient': "radial-gradient(84.94% 218.57% at 15.06% 100%, #000000 0%, rgba(0, 0, 0, 0.4) 100%)"
+          'case-gradient': "radial-gradient(84.94% 218.57% at 15.06% 100%, #000000 0%, rgba(0, 0, 0, 0.4) 100%)",
+         
       },
       width: {
         "calc-full-plus-329": "calc(100% + 329px)",

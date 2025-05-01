@@ -1,7 +1,7 @@
 import "./clients.css";
 import Header from "./blocks/Header";
-import { metadata } from "./policyData/policyMetadata";
 import { policy } from "./policyData/policyData";
+import { metadata } from "./policyData/policyMetadata";
 
 export { metadata };
 

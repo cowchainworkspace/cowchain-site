@@ -26,9 +26,9 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/assets/svgComponents/industries/SmartContractIcon.jsx", "src/app/(dashboard)/(home)/blocks/ServicesAndTechMenu.jsx"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "**/*.tsx",
+    "src/assets/svgComponents/industries/SmartContractIcon.jsx",
+    "src/app/(dashboard)/(home)/blocks/ServicesAndTechMenu.jsx"
+  ],
+  "exclude": ["node_modules"]
 }

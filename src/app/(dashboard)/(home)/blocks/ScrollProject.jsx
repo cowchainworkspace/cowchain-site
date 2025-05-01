@@ -14,19 +14,20 @@ export const ScrollProject = ({
   mobile = false
 }) => {
   return (
-    <div
+    <Link
+      href={link}
       id={"project-" + id}
       className={cn(
         "project-card group relative flex cursor-pointer justify-center",
         {
           "border  border-th-fade": !mobile,
           "border-b  border-t border-b-th-fade  border-t-th-fade": mobile,
-          "h-[624px]": !mobile,
+          "h-[546px]  md:h-[624px]": !mobile,
           "h-[130vw] min-h-[20vw]": mobile
         }
       )}
     >
-      <button
+      <div
         className={cn("relative flex flex-col  items-start md:w-[547px]", {
           "h-[624px] w-[480px]": !mobile,
           " max-w-[375px] md:h-[419px]": mobile,
@@ -68,7 +69,7 @@ export const ScrollProject = ({
             {description}
           </p>
         </div>
-      </button>
+      </div>
 
       <div
         style={{
@@ -76,6 +77,6 @@ export const ScrollProject = ({
         }}
         className="absolute bottom-0 z-[1] hidden h-full w-full custom480:group-hover:flex"
       ></div>
-    </div>
+    </Link>
   );
 };

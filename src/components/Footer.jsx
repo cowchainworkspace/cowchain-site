@@ -1,13 +1,6 @@
 "use client";
 
-import linkedin from "@/assets/footer/linkedin.svg";
 import logofont from "@/assets/footer/logofont.svg";
-import mail from "@/assets/footer/mail.svg";
-import medium from "@/assets/footer/medium.svg";
-import telegram from "@/assets/footer/telegram.svg";
-import twitter from "@/assets/footer/twitter.svg";
-import clutch from "@/assets/homepage/clutch.svg";
-import upwork from "@/assets/homepage/upwork.svg";
 import { useLoader } from "@/hooks/useLoader";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -15,10 +8,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { alignPropType } from "react-bootstrap/esm/types";
 import Faq from "react-faq-component";
 import { SocialLinks } from "./SocialLinks";
-import FooterForm from "./utils/FooterForm";
 
 const faqRows = {
   title: "",

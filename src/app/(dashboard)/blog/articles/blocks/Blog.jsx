@@ -1,24 +1,18 @@
 import arrow from "@/assets/arrow_right.svg";
-import { Loading } from "@/components/loader/Loading";
 import { useGetMorePosts } from "@/hooks/use-strapi";
 import Image from "next/image";
 import ArticlesSlider from "./../../components/Slides/ArticlesSlider";
 
 export const Blog = ({ slug }) => {
-  const {
-    data: articles,
-    isLoading,
-    fetchNextPage,
-    isFetchingNextPage
-  } = useGetMorePosts(slug);
+  const { data: articles } = useGetMorePosts(slug);
 
-  const scroll = (scrollOffset, element) => {
-    element.scrollLeft += scrollOffset;
-  };
   return (
-    <section id="blog" className="relative md:h-[622px]">
-      <div className="grid h-full w-full md:grid-cols-2 lg:grid-cols-[500px_1fr]">
-        <div className="py-heading  px-default md-border-r flex flex-1 flex-col gap-y-6 border-b-th-fade border-t-th-fade md:border-b md:border-t ">
+    <section
+      id="blog"
+      className="relative md:border-y md:border-y-th-fade  xl:min-h-[622px]"
+    >
+      <div className="grid h-full w-full md:grid-cols-[300px_1fr] lg:grid-cols-[500px_1fr]">
+        <div className="py-heading  px-default md-border-r flex flex-col gap-y-6">
           <h3 className="text-center md:text-left lg:max-w-[320px]">
             Stay up to date
           </h3>
@@ -31,11 +25,7 @@ export const Blog = ({ slug }) => {
             </div>
           </a>
         </div>
-        <ArticlesSlider
-          articles={articles}
-          fetchNextPage={fetchNextPage}
-          isFetchingNextPage={isFetchingNextPage}
-        />
+        <ArticlesSlider articles={articles?.data} />
       </div>
     </section>
   );

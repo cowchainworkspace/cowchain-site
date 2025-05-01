@@ -1,9 +1,3 @@
-import payment from "@/assets/cases/newCases/CryptoExchangeImg.png";
-import hotel from "@/assets/cases/newCases/HotelBusinessImg.png";
-import bridge from "@/assets/cases/newCases/crossChainTransferBridgeImg.png";
-import finance from "@/assets/cases/newCases/cryptoWalletApp2Img.png";
-import wallet from "@/assets/cases/newCases/cryptoWalletAppImg.png";
-import m2e from "@/assets/cases/newCases/m2ePlatformImg.png";
 import bg from "@/assets/homepage/bg.png";
 import linkedin from "@/assets/homepage/linkedin.svg";
 import pic1 from "@/assets/homepage/projects/1.jpg";
@@ -143,135 +137,33 @@ export const benefitsData = [
   }
 ];
 
-export const casesOldData = [
-  {
-    title: `m2e platform`,
-    link: "/cases/move",
-    description:
-      "Large Move 2 earn game with complex ecosystem (DEX, crypto wallet, NFT Marketplace and native token)",
-    photo: m2e,
-    tags: ["App Development", "Website Development"]
-  },
-  {
-    title: "Cross-chain transfer bridge",
-    link: "/cases/bridge",
-    description:
-      "Multichain portal, which bridged more than 50M$ volume and 200 assets across 25 chains",
-    photo: bridge,
-    tags: ["Website Development", "24/7 Support", "Web3"]
-  },
-  {
-    title: "Crypto wallet app",
-    link: "/cases/wallet",
-    description: "Crypto wallet app for iOS and Android",
-    photo: wallet,
-    tags: ["App Development", "Website Development"]
-  },
-  {
-    title: "decentralized crypto exchange",
-    link: "/cases/finance",
-    description:
-      "DEX platform featuring an innovative fee structure, with token, and admin panel",
-    photo: payment,
-    tags: ["App Development", "SEO"]
-  },
-  {
-    title: "Exchange wallet app",
-    link: "/cases/payment",
-    description: "First BTC/USDT crypto exchange in Canada",
-    photo: finance,
-    tags: ["App Development", "Website Development"]
-  },
-  {
-    title: "Integration blockchain into hotel business",
-    link: "/cases/hotel",
-
-    description: "Web browser AI crypto plugin and Dapp for travel and hotels",
-    photo: hotel,
-    tags: ["App Development", "Website Development"]
-  }
-];
-
-export const casesOldMobileData = [
-  {
-    title: `m2e platform`,
-    link: "/cases/move",
-    description:
-      "Large Move 2 earn game with complex ecosystem (DEX, crypto wallet, NFT Marketplace and native token)",
-    photo: m2e,
-    tags: ["App Development", "Website Development"]
-  },
-  {
-    title: "Cross-chain transfer bridge",
-    link: "/cases/bridge",
-    description:
-      "Multichain portal, which bridged more than 50M$ volume and 200 assets across 25 chains",
-    photo: bridge,
-    tags: ["Website Development", "24/7 Support", "Web3"]
-  },
-  {
-    title: "Crypto wallet app",
-    link: "/cases/wallet",
-    description:
-      "Crypto wallet app for iOS and Android",
-    photo: wallet,
-    tags: ["App Development", "Website Development"]
-  }
-];
-
-export const casesMobileData = [
-  {
-    title: `AGNT HUB`,
-    link: "",
-    description:
-      "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
-    photo: agnt,
-    tags: ["Web Development", "AI Development", "DeFi", "Crypto Wallet", "NFT"]
-  },
-  {
-    title: "Retro Bridge",
-    link: "",
-    description:
-      "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
-    photo: retroBridge,
-    tags: ["Web Development", "DeFi", "Bridge", "NFT"]
-  },
-  {
-    title: "GMX Blueberry Club",
-    link: "",
-    description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
-    photo: gbc,
-    tags: ["Web Development", "Trading", "NFT"]
-  },
-];
-
 export const casesData = [
   {
-    title: `AGNT HUB`,
-    link: "",
+    title: "agent.hub",
+    link: "cases/agnt",
     description:
       "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
     photo: agnt,
     tags: ["Web Development", "AI Development", "DeFi", "Crypto Wallet", "NFT"]
   },
   {
-    title: "Retro Bridge",
-    link: "",
+    title: "Cross-chain transfer bridge",
+    link: "cases/retrobridge",
     description:
       "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
     photo: retroBridge,
     tags: ["Web Development", "DeFi", "Bridge", "NFT"]
   },
   {
-    title: "GMX Blueberry Club",
-    link: "",
+    title: "GBC DAPP",
+    link: "cases/gbc",
     description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     photo: gbc,
     tags: ["Web Development", "Trading", "NFT"]
   },
   {
     title: "step app",
-    link: "",
+    link: "cases/step-app",
     description:
       "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
     photo: stepUp,
@@ -279,10 +171,36 @@ export const casesData = [
   },
   {
     title: "hybrid",
-    link: "",
+    link: "cases/hybrid",
     description: "Hybrid is a Layer 2 blockchain on Arbitrum Nitro, integrating the MoE framework  specialized AI agents.",
     photo: hybrid,
     tags: ["Web Development", "Blockchain Development", "Blockchain Development", "Bridge", "Staking", "L1"]
+  },
+];
+
+export const casesMobileData = [
+  {
+    title: "agent.hub",
+    link: "cases/agnt",
+    description:
+      "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
+    photo: agnt,
+    tags: ["Web Development", "AI Development", "DeFi", "Crypto Wallet", "NFT"]
+  },
+  {
+    title: "Cross-chain transfer bridge",
+    link: "cases/retrobridge",
+    description:
+      "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
+    photo: retroBridge,
+    tags: ["Web Development", "DeFi", "Bridge", "NFT"]
+  },
+  {
+    title: "GBC DAPP",
+    link: "cases/gbc",
+    description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
+    photo: gbc,
+    tags: ["Web Development", "Trading", "NFT"]
   },
 ];
 

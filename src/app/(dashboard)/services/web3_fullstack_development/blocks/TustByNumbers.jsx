@@ -44,7 +44,7 @@ export function TustByNumbers({
 }) {
   return (
     <section className={`relative  ${home && "h-fit md:h-[700px]"}`}>
-      {(home || !noBg) && (
+      {!noBg && (
         <Image
           alt=""
           className="pointer-events-none absolute -bottom-[38%] left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min lg:-bottom-[120%]"
@@ -74,7 +74,7 @@ export function TustByNumbers({
                 "justify-start": isBlockChainConsulting || isRwa
               },
               isRwa ? "pr-[70px]" : "custom1430:pr-[168px]",
-              typographyContainerClasses,
+              typographyContainerClasses
             )}
           >
             {tag && <Tag className="mr-auto cursor-default" title={tag} />}
@@ -122,7 +122,10 @@ export function TustByNumbers({
             )}
           >
             {data.map(
-              ({ number, desc, sighn, title, sufix, decimal }, index) => (
+              (
+                { number, desc, sighn, title, sufix, decimal, plusSign },
+                index
+              ) => (
                 <div
                   key={index}
                   className={cn(
@@ -159,6 +162,7 @@ export function TustByNumbers({
                             />
                             <span className="font-roc text-[18px] font-medium leading-[18px] text-white text-white md:text-[42px] md:leading-tight  lg:text-[46px]">
                               {sufix}
+                              {plusSign}
                             </span>
                           </>
                         ) : (
@@ -167,7 +171,9 @@ export function TustByNumbers({
                               duration={4}
                               decimals={decimal}
                               target={number}
-                              className={"font-roc xl:!text-[46px] !leading-[90%]"}
+                              className={
+                                "font-roc !leading-[90%] xl:!text-[46px]"
+                              }
                             />
                             {sighn && (
                               <span className="font-roc text-[18px] font-medium uppercase leading-[90%] text-white text-white  md:text-[36px] lg:text-[46px]">

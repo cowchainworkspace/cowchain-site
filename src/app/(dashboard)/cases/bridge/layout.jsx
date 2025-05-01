@@ -1,6 +1,6 @@
 import { metadata } from "./bridgeMetadata";
 
-export { metadata }
+export { metadata };
 
 export default async function BridgeCasesLayout({ children }) {
   return (

@@ -46,7 +46,8 @@ export function Industries({
   titleContainerClasses,
   itemContainerClasses,
   containerClasses,
-  itemDescClasses
+  itemDescClasses,
+  isHomePage = false
 }) {
   return (
     <section

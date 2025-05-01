@@ -126,10 +126,6 @@ export default function Navbar({ isPageNotFound = false }) {
     {
       title: "Cases",
       link: "/cases"
-    },
-    {
-      title: "Clients",
-      link: "/clients"
     }
   ];
 
@@ -211,7 +207,7 @@ export default function Navbar({ isPageNotFound = false }) {
               quality={100}
               priority
               className={cn(
-                "absolute bottom-0 left-0 block h-full w-full md:hidden",
+                "pointer-events-none absolute bottom-0 left-0 block h-full w-full md:hidden",
                 {
                   hidden: isGradient
                 }

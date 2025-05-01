@@ -99,10 +99,7 @@ const Cases = () => {
       <div className="hidden w-full justify-center fullSlider:flex">
         {casesData &&
           casesData.map((project, index) => (
-            <div
-              key={index}
-              className="max-w-[480px] custom480:h-[624px]"
-            >
+            <div key={index} className="max-w-[480px] custom480:h-[624px]">
               <ScrollProject key={index} index={index} {...project} />
             </div>
           ))}

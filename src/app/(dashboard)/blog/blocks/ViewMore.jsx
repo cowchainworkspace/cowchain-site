@@ -1,5 +1,4 @@
 import { DotsLoader } from "@/components/loader/DotsLoader";
-import { Loading } from "@/components/loader/Loading";
 import { cn } from "@/lib/utils";
 
 export const ViewMoreSection = ({
@@ -16,7 +15,9 @@ export const ViewMoreSection = ({
       <div className="relative grid grid-cols-1">
         <div className="flex flex-col items-center justify-center gap-y-5 px-4 py-16 text-center ">
           <h3 className="mx-auto text-center text-2xl leading-7">
-            You are viewing {current} of {count} articles
+            {!count || count === 0
+              ? "There are no articles yet"
+              : `You are viewing ${current} of ${count} articles`}
           </h3>
 
           <button
@@ -27,7 +28,7 @@ export const ViewMoreSection = ({
             onClick={() => {
               showMorePosts();
             }}
-            disabled={current >= count}
+            disabled={!count || count === 0 || current >= count}
           >
             {isFetchingNextPage ? <DotsLoader /> : "Load More"}
           </button>

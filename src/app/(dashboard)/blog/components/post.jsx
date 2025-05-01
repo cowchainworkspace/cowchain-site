@@ -1,5 +1,5 @@
 import Tag from "@/components/ui/tag";
-
+import { useLoader } from "@/hooks/useLoader";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,6 +11,7 @@ export const Post = ({
   handleClick,
   isDisabled
 }) => {
+  const { setIsLoading, setIsRendering } = useLoader();
   const {
     slug,
     article_description,
@@ -25,7 +26,7 @@ export const Post = ({
     <Link
       href={`blog/articles/${slug}`}
       className={cn(
-        "group relative  flex w-full cursor-pointer flex-col border-th-fade p-6 last-of-type:border-r-0 md:border-r-[0.5px] md:p-6",
+        "group relative  flex w-full  cursor-pointer flex-col border-b-[0.5px] border-th-fade p-6 last-of-type:border-r-0 md:border-r-[0.5px] md:p-6 lg:border-b-0",
         { "pointer-events-none": isDisabled }
       )}
       onClick={handleClick}

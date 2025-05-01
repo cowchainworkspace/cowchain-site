@@ -1,9 +1,9 @@
-import React from "react";
-import { HeroSection } from "./blocks/HeroSections";
-import Link from "next/link";
 import dot from "@/assets/icons/dot.png";
 import Image from "next/image";
-import { links, casesLinks } from "./data/data";
+import Link from "next/link";
+import React from "react";
+import { HeroSection } from "./blocks/HeroSections";
+import { casesLinks, links } from "./data/data";
 import { metadata } from "./data/siteMapMetaData";
 
 export { metadata };
@@ -38,7 +38,7 @@ export default function Page() {
                         key={index}
                         className="my-4 ml-4 flex items-center gap-2"
                       >
-                        <Image alt="" className="h-4 w-4" src={dot} />
+                        <Image alt="Dot" className="h-4 w-4" src={dot} />
                         <p className="opacity-80">{link.title}</p>
                       </Link>
                     ))}

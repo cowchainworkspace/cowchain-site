@@ -37,7 +37,10 @@ export function ExpertiseServices({
         )}
       >
         <div
-          className={cn("col-span-1 z-[15] lg:gap-10", !desc && "mb-[50px] md:mb-0")}
+          className={cn(
+            "z-[15] col-span-1 lg:gap-10",
+            !desc && "mb-[50px] md:mb-0"
+          )}
         >
           {tag && <Tag title={tag} className="mb-4 w-fit md:mb-8" />}
           <h2
@@ -55,7 +58,7 @@ export function ExpertiseServices({
           {desc && (
             <p
               className={cn(
-                "body relative z-[2]  my-[40px] max-w-[582px] !text-[#BBBBBB] leading-6 md:my-[20px]",
+                "body relative z-[2]  my-[40px] max-w-[582px] leading-6 !text-[#BBBBBB] md:my-[20px]",
                 titleDescClasses
               )}
             >
@@ -77,7 +80,7 @@ export function ExpertiseServices({
           {data.map(({ title, desc }, index) => (
             <div
               key={index}
-              className="relative col-span-1 z-[2] whitespace-pre-line bg-cover"
+              className="relative z-[2] col-span-1 whitespace-pre-line bg-cover"
             >
               {title && (
                 <div

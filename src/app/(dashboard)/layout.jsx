@@ -2,8 +2,8 @@
 
 import { Loading } from "@/components/loader/Loading";
 import dynamic from "next/dynamic";
-import LoaderWrapper from "./loaderWrapper";
 import { usePathname } from "next/navigation";
+import LoaderWrapper from "./loaderWrapper";
 
 const Navbar = dynamic(() => import("@/components/Navbar"), {
   loading: () => <Loading />

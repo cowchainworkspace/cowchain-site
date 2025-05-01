@@ -2,18 +2,14 @@
 
 import React from "react";
 import "./case-studies.css";
-import { HeroSection } from "./blocks/HeroSection";
-import Contact from "@/components/Contact";
-import Projects from "../components/Projects";
-import marsan_mobile from "@/assets/case-study/wallet-app/wallet-blue.png";
 import marsan_mobile_black from "@/assets/case-study/wallet-app/wallet-black.png";
-import Link from "next/link";
 import Chevron from "@/components/icons/chevron";
-import { ProjectDetail } from "../components/project-detail";
-import { CaseMask } from "./blocks/CaseMask";
-import { CaseGallery } from "./blocks/CaseGallery";
-import { ParallaxProvider } from "react-scroll-parallax";
 import Image from "next/image";
+import Link from "next/link";
+import { ParallaxProvider } from "react-scroll-parallax";
+import { ProjectDetail } from "../components/project-detail";
+import { CaseGallery } from "./blocks/CaseGallery";
+import { CaseMask } from "./blocks/CaseMask";
 import { projectDetails, teamDetails } from "./walletCaseData/walletCaseData";
 
 const CaseStudiesEva = () => {
@@ -85,7 +81,7 @@ const CaseStudiesEva = () => {
                     <Image
                       src={marsan_mobile}
                       className="mt-8 min-h-[270px] w-full object-cover lg:mt-14 lg:min-h-[500px]"
-                      alt=""
+                      alt="Exchange Wallet App"
                     />
                   </div>
                   <div className="w-full border-t-2 border-white/50 px-5 pt-4 lg:max-w-[600px] lg:px-0">
@@ -114,7 +110,7 @@ const CaseStudiesEva = () => {
                     <Image
                       src={marsan_mobile_black}
                       className="mt-8 min-h-[270px] w-full object-cover lg:min-h-[500px]"
-                      alt=""
+                      alt="Exchange Wallet App"
                     />
                   </div>
                 </div>

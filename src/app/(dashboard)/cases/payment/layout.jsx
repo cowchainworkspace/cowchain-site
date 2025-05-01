@@ -1,6 +1,6 @@
 import { metadata } from "./paymentCase";
 
-export { metadata }
+export { metadata };
 
 export default async function PaymentCasesLayout({ children }) {
   return (

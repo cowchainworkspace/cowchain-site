@@ -1,15 +1,14 @@
 "use client";
 import bannerIg from "@/assets/blog/articles/splash.png";
-import { articleOptions, useMutatePost } from "@/hooks/use-strapi";
-
-import { Loading } from "@/components/loader/Loading";
 import FooterForm from "@/components/utils/FooterForm";
+import { articleOptions, useMutatePost } from "@/hooks/use-strapi";
 import { getSplitText } from "@/lib/utils";
-import { useQuery, useSuspenseQuery } from "@tanstack/react-query";
+import { useMediaQuery } from "@chakra-ui/react";
+import { useSuspenseQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import React, { useState } from "react";
-import { BlogBreadCrumb } from "../../../components/BreadCrumb/BlogBreadCrumb";
+import OldBreadCrumbs from "../../../components/BreadCrumb/OldBreadCrumbs";
 import { Blog } from "../../blocks/Blog";
 import { HeroSection } from "../../blocks/HeroSection";
 import { ShareLinks } from "../../blocks/ShareLinks";
@@ -26,13 +25,7 @@ const ArticleInfo = () => {
   const { mutateAsync: cretePost, isPending } = useMutatePost();
   const articleTitles = [];
 
-  if (isLoading) {
-    return (
-      <div className="flex min-h-[100dvh]">
-        <Loading />
-      </div>
-    );
-  }
+  const [isLessThan1280] = useMediaQuery("(max-width: 1280px)");
 
   const onHandleAddReview = async (review) => {
     try {
@@ -63,7 +56,6 @@ const ArticleInfo = () => {
         id: titleId,
         title
       });
-
       return {
         titleId,
         id: paragraph.id,
@@ -82,7 +74,7 @@ const ArticleInfo = () => {
 
   return (
     <div className="relative  min-h-screen bg-black">
-      <BlogBreadCrumb slug={slug} />
+      <OldBreadCrumbs title={data.article_title} />
       <HeroSection
         tag={data.article_tag.tag_name}
         title={data.article_title}
@@ -91,13 +83,32 @@ const ArticleInfo = () => {
         articleId={data.documentId}
         pageViews={data.article_views}
       />
-      <Image
-        height={560}
-        width={600}
-        src={data.banner_img?.url || bannerIg}
-        className="block h-[234px] w-full object-cover md:max-h-[560px] md:min-h-[430px]"
-        alt=""
-      />
+      <div className="relative block h-[234px] w-full md:max-h-[560px] md:min-h-[430px] custom-1700:min-h-[600px]">
+        {isLessThan1280 ? (
+          <Image
+            fill
+            src={data.banner_img?.url || bannerIg}
+            alt="banner image"
+            objectFit="cover"
+            quality={100}
+            objectPosition="center"
+            className="object-contain xl:object-cover"
+          />
+        ) : (
+          <div
+            style={{
+              backgroundImage: `url(${data.banner_img?.url || bannerIg})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center"
+            }}
+            objectFit="cover"
+            objectPosition="center"
+            className="h-full w-full object-contain xl:object-cover"
+          />
+        )}
+      </div>
+
       <div className="mt-[60px] flex items-start justify-center  gap-[71px] md:mb-[103px] md:mt-20">
         <SideMenu articleTitles={articleTitles} />
         <div>
@@ -117,19 +128,17 @@ const ArticleInfo = () => {
           {reviewItem && <ThanksReview review={reviewItem} />}
         </div>
 
-        <div className="sticky top-0 ml-[10px] hidden  flex-col items-center overflow-hidden  2xl:flex">
-          <h3 id="first-article" className="mb-2 text-2xl uppercase">
+        <div className="sticky top-0 hidden  flex-col items-start overflow-hidden  xl:flex">
+          <h3 id="first-article" className="mb-2 text-lg font-medium uppercase">
             Subscribe to our newsletter
           </h3>
-          <span className="mb-10 text-secondary">
+          <p className="mb-8 text-sm text-secondary">
             Receive weekly updates on new posts and features
-          </span>
+          </p>
           <FooterForm />
 
-          <div className="mt-[40px] w-full">
-            <h3 className="mb-[12px] text-[18px] uppercase">
-              Share the article
-            </h3>
+          <div className="mt-[42px] w-full">
+            <h3 className="mb-3 text-lg uppercase">Share the article</h3>
             <ShareLinks />
           </div>
         </div>
