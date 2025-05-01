@@ -4,7 +4,7 @@ import { ClientProvider } from "@/lib/api/client";
 
 export const metadata = {
   title: "Web3 Development Services | Cowchain",
-  description: `Unlock the future with Cowchain's Web3 solutions: dApps, DeFi, and metaverse development to transform your business.`,
+  description: `Unlock the future with Cowchain's Web3 solutions: dApps, DeFi, and metaverse development to transform your business.`
 };
 
 export default function RootLayout({ children }) {
@@ -34,15 +34,20 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://use.typekit.net/cqp2qoa.css" />
 
         {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVL9LDFN3V"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-8LWED57JRG"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-EVL9LDFN3V');
+            gtag('config', 'G-8LWED57JRG');
           `
-        }} />
+          }}
+        />
 
         <meta name="theme-color" content="#000000" />
       </head>
