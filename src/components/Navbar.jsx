@@ -253,7 +253,7 @@ export default function Navbar({ isPageNotFound = false }) {
               : "navbar-wrapper  relative flex h-24 items-center justify-between gap-x-8 px-4 md:h-16 md:border-b md:border-th-fade md:px-8 lg:px-0"
           }
         >
-          <nav className="hidden w-full max-w-[360px] items-center justify-between pl-12 lg:flex xl:max-w-md">
+          <nav className="hidden w-full max-w-[360px] items-center gap-[80px]  pl-12 lg:flex xl:max-w-md">
             <p
               className="menu-toggle-button navlink mt-1 cursor-pointer"
               onClick={toggleServices}
