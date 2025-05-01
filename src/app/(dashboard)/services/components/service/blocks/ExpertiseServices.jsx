@@ -116,7 +116,7 @@ export function ExpertiseServices({
                       {desc.header}
                     </h3>
                     <ul className="flex list-disc flex-col pl-4">
-                      {desc.list.map((value) => (
+                      {desc?.list?.map((value) => (
                         <li key={value}>
                           <p className="list-item font-manrope text-base leading-[22px] text-secondary">
                             {value}

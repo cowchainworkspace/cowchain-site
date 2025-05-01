@@ -16,7 +16,7 @@ export const RealEstateIcon = ({ ...props }) => (
       y="0"
       width="28"
       height="28"
-       maskType="alpha"
+      maskType="alpha" 
     >
       <rect width="28" height="28" fill="#D9D9D9" />
     </mask>
