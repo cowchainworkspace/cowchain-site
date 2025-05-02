@@ -123,8 +123,8 @@ const AIDevelopment = () => {
             <br />
           </>
         }
-        sectionContainerClasses={"md:flex-row md:gap-5 custom1430:pr-[134px]"}
-        titleClasses="mb-6 md:mb-0 xl:text-[60px] xl:leading-90"
+        sectionContainerClasses={"md:flex-row md:gap-5  custom1430:pr-[134px]"}
+        titleClasses="mb-6 md:mb-0 xl:text-[60px] xl:leading-90 max-w-[592px]"
         containerClasses="xl:grid "
         itemTitleClasses={"xl:text-[20px] xl:leading-90"}
         bg={
@@ -135,6 +135,7 @@ const AIDevelopment = () => {
             className="absolute -top-80 right-0 hidden md:block"
           />
         }
+        descClasses={"max-w-[490px]"}
       />
       <ExpertiseServices
         topBorder={false}
