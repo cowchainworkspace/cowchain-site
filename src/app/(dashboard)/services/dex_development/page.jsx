@@ -1,6 +1,8 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
 import Image from "next/image";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
@@ -10,15 +12,13 @@ import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
 import { DexExpertiseDesc, otherDexServices } from "./utils/data";
 import { DexExpertiseData } from "./utils/data";
 import { IndustriesDexData } from "./utils/data";
 import { DexAppDevData } from "./utils/data";
 import { EngagementDevData, faqDexData } from "./utils/data";
 import { metadata } from "./utils/dexDevMetadata";
-import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
-import Cases from "../../(home)/blocks/Cases";
-import CasesMobile from "../../(home)/blocks/CasesMobile";
 export { metadata };
 
 const DexDevelopment = () => {
@@ -79,7 +79,9 @@ const DexDevelopment = () => {
         itemTitleClasses="lg:text-[20px]"
         cryptoWalletClass="lg:mb-[80px]"
         titleClasses="xl:!text-[60px] xl:mb-[60px]"
-        desc={DexExpertiseDesc}
+        desc={
+          "We believe that a solid foundation in decentralized exchange development is key to creating platforms that not only meet today’s demands but also evolve with the growing needs of the cryptocurrency market"
+        }
         data={DexExpertiseData}
         topBorder={false}
         bg={
@@ -89,6 +91,7 @@ const DexDevelopment = () => {
             className="absolute -top-24 left-0 hidden md:block"
           />
         }
+        titleDescClasses="!text-white max-w-[570px]"
         sectionContainerClasses={"md:flex-row md:gap-5"}
       />
 

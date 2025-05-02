@@ -8,6 +8,7 @@ export const icoConstructorInfo = [
   },
   {
     title: 'Why Create an ICO?',
+    listOfItem: true,
     desc: {
       header: 'For blockchain-based startups, ICOs offer:',
       list: ['A decentralized funding mechanism, reducing reliance on traditional financial institutions',  'Enhanced visibility within the blockchain community', 'Early-stage funding to accelerate development and innovation']

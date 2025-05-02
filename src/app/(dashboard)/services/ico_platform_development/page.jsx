@@ -1,31 +1,31 @@
+import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import React from "react";
-import { HeroSection } from "../components/service/blocks/HeroSection";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
-import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
-import { metadata } from "./utils/icoPlatformMetadata";
+import { HeroSection } from "../components/service/blocks/HeroSection";
 import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import { metadata } from "./utils/icoPlatformMetadata";
 
 import {
   icoPlatformBenefits,
-  icoPlatformsFeatures,
-  icoPlatformProcessData,
-  icoPlatformFaqData,
   icoPlatformChooseData,
+  icoPlatformFaqBotData,
+  icoPlatformFaqData,
+  icoPlatformProcessData,
   icoPlatformServicesData,
-  icoPlatformFaqBotData
+  icoPlatformsFeatures
 } from "./utils/data";
 
-import { Industries } from "../components/service/blocks/Industries/index";
-import FAQ from "../components/service/blocks/FAQ";
-import { Feedback } from "../components/service/blocks/Feedback";
-import { OtherServices } from "../components/service/blocks/OtherServices";
+import whiteLabelBg from "@/assets/bg/white-label-ellipse.webp";
+import { CoreFeaturesRWAbg } from "@/assets/svgComponents/CoreFeaturesRWAbg";
+import Contact from "@/components/Contact";
+import Image from "next/image";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
-import { CoreFeaturesRWAbg } from "@/assets/svgComponents/CoreFeaturesRWAbg";
-import whiteLabelBg from "@/assets/bg/white-label-ellipse.webp";
-import Image from "next/image";
-import Contact from "@/components/Contact";
+import FAQ from "../components/service/blocks/FAQ";
+import { Feedback } from "../components/service/blocks/Feedback";
+import { Industries } from "../components/service/blocks/Industries/index";
+import { OtherServices } from "../components/service/blocks/OtherServices";
 
 export { metadata };
 
@@ -199,7 +199,7 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
         <FAQ noBg={true} data={icoPlatformFaqBotData} />
         <Contact
           titleClasses={
-            "uppercase mb-6 md:mb-0 text-[32px§§§§§§§§§§§§§§§§§§§§§§§§§] xl:max-w-[994px] xl:text-[64px]"
+            "uppercase mb-6 md:mb-0 text-[32px] xl:max-w-[994px] xl:text-[64px]"
           }
           title={"The Future of ICO Platforms for Fundraising"}
           desc={

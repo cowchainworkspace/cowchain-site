@@ -95,6 +95,7 @@ const FullStackDevelopment = () => {
         }
         desc={FSExpertiseDesc}
         data={FSExpertiseData}
+        descClasses="max-w-[500px]"
         titleClasses="xl:!text-[60px] xl:mb-[60px]"
         noBg={true}
         sectionContainerClasses={"md:flex-row md:gap-5"}
@@ -115,6 +116,7 @@ const FullStackDevelopment = () => {
         topBorder={false}
         bottomBorder={false}
         customClasses="xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
+        itemDescClasses={"max-w-[390px]"}
       />
       <ExpertiseServices
         title={
@@ -129,6 +131,7 @@ const FullStackDevelopment = () => {
         data={AdvantageseData}
         noBg={true}
         sectionContainerClasses={"md:flex-row md:gap-5"}
+        descClasses="max-w-[490px]"
       />
       <ExpertiseServices
         title={
@@ -150,6 +153,8 @@ const FullStackDevelopment = () => {
         data={DevProcessData}
         topBorder={false}
         bottomBorder={false}
+        titleDescClasses="!text-white"
+        descClasses="max-w-[475px]"
         bg={
           <Image
             alt=""
@@ -172,6 +177,7 @@ const FullStackDevelopment = () => {
           hasIcon={false}
           titleClasses="lg:text-[60px] leading-[0.9]"
           faqGradient={true}
+          faqContentClasses="max-w-[536px]"
         />
       </div>
 
@@ -184,6 +190,7 @@ const FullStackDevelopment = () => {
             tools across both front-end and back-end development
           </>
         }
+        descClasses="custom1430:w-[275px]"
       />
       <Feedback
         desc="Clients who have partnered with Cowchain 

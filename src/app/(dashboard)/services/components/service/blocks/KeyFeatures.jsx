@@ -51,7 +51,7 @@ export function KeyFeatures({
   isMaxWidthTab = false,
   titleClasses = "",
   isTextSecondary,
-  descClasses,
+  descClasses = "",
   titleBlockClasses = "",
   imageClasses = "",
   containerClasses = "",

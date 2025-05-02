@@ -19,7 +19,7 @@ export function ExpertiseServices({
   titleClasses = "",
   descClasses = "",
   cryptoWalletClass,
-  itemTitleClasses,
+  itemTitleClasses = "",
   containerClasses = "",
   sectionContainerClasses = "",
   titleDescClasses = ""
@@ -58,7 +58,7 @@ export function ExpertiseServices({
           {desc && (
             <p
               className={cn(
-                "body relative z-[2]  my-[40px] max-w-[582px] leading-6 !text-[#BBBBBB] md:my-[20px]",
+                "body relative z-10  my-[40px] max-w-[582px] leading-6 !text-[#BBBBBB] md:my-[20px]",
                 titleDescClasses
               )}
             >
@@ -77,7 +77,7 @@ export function ExpertiseServices({
             containerClasses
           )}
         >
-          {data.map(({ title, desc }, index) => (
+          {data.map(({ title, desc, listOfItem }, index) => (
             <div
               key={index}
               className="relative z-[2] col-span-1 whitespace-pre-line bg-cover"
@@ -102,7 +102,7 @@ export function ExpertiseServices({
                 </div>
               )}
               <div>
-                {typeof desc === "string" ? (
+                {desc && !listOfItem && (
                   <p
                     className={cn(
                       "mb-6 text-[16px] !leading-[22px] !text-secondary",
@@ -113,7 +113,8 @@ export function ExpertiseServices({
                   >
                     {desc}
                   </p>
-                ) : (
+                )}
+                {desc && listOfItem && (
                   <div className="mt-6">
                     <h3 className="font-manrope text-base leading-[22px] text-secondary">
                       {desc.header}

@@ -62,7 +62,7 @@ video {
 }
 
 .tools_wrapper {
-  @apply max-w-[360px] xl:max-w-[400px];
+  @apply max-w-[360px] xl:max-w-[450px];
 }
 
 .tools_wrapper div:not(:first-child) {

@@ -68,7 +68,7 @@ export default function FAQ({
         noTopBorder && "border-t-0"
       )}
     >
-      {!noBg && (
+      {/* {!noBg && (
         <div
           style={{ pointerEvents: "none" }}
           className="absolute -top-[380px] bottom-0 left-0 right-0 z-[-3] overflow-hidden"
@@ -82,7 +82,7 @@ export default function FAQ({
             src={bg}
           />
         </div>
-      )}
+      )} */}
 
       <div
         className={cn(

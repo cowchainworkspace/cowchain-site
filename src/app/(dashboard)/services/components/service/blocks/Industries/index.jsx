@@ -129,7 +129,10 @@ export function Industries({
                     border: "0.1px solid rgba(255, 255, 255, 0.5)",
                     flexShrink: 0
                   }}
-                  className="mb-[24px] flex h-[42px] w-[42px] items-center justify-center rounded-full  bg-transparent md:mb-[37px] md:max-h-[64px] md:min-h-[64px] md:w-[62px] md:min-w-[64px] md:max-w-[64px] lg:h-[62px] lg:w-[62px]"
+                  className={cn(
+                    "mb-[24px] flex h-[42px] w-[42px] items-center justify-center rounded-full  bg-transparent md:mb-[37px] md:max-h-[64px] md:min-h-[64px] md:w-[62px] md:min-w-[64px] md:max-w-[64px] lg:h-[62px] lg:w-[62px]",
+                    expertise.hasBlackBg && "bg-black"
+                  )}
                 >
                   <expertise.icon className="flex h-[20px] w-[20px] flex-shrink-0 items-center justify-center md:h-[28px] md:w-[28px]" />
                 </div>
@@ -139,6 +142,7 @@ export function Industries({
                   <h3
                     className={cn(
                       "mb-[22px] max-w-[310px] whitespace-pre-line text-[18px] uppercase !leading-[90%] md:text-[20px]",
+                      expertise.isMainTitle && "pt-6",
                       itemTitleClasses
                     )}
                   >

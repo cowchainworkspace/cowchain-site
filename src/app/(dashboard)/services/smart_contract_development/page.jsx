@@ -1,6 +1,8 @@
 import servideBG from "@/assets/bg/dexServiceBg.svg";
 import Contact from "@/components/Contact";
 import Image from "next/image";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
@@ -10,6 +12,8 @@ import { Industries } from "../components/service/blocks/Industries";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+
 import {
   OtherSmartContractData,
   SmartContractIndustriesData,
@@ -256,6 +260,9 @@ They appreciate our professionalism, expertise, and the outstanding results of t
           bottomBorder={false}
         />
       </div>
+      <WhiteLabelCases title="our cases" hasNoDescription />
+      <Cases />
+      <CasesMobile />
       <div className="w-full overflow-hidden">
         <FAQ
           noBg={true}

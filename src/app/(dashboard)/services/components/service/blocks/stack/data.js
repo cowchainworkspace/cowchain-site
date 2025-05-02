@@ -27,7 +27,7 @@ import thirdWeb from "@/assets/svgComponents/stack/ThirdWebStackIcon";
 
 export const expertiseData = [
   {
-    title: <>Blockchain <br/> Platforms</>,
+    title: <>Blockchains</>,
     tools: [
       { logo: eth, alt: "Ethereum" },
       { logo: solana, alt: "Solana" },

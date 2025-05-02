@@ -371,7 +371,17 @@ export const gbcTeam = [
 export const gbcProjects = [
   {
     id: 1,
-    tags: ["Web Development ", "Mobile App", "GameFi", "Trading", "DEX", "DeFi", "NFT", "Staking", "Crypto Wallet"],
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "Mobile App" },
+      { isMain: false, tagName: "GameFi" },
+      { isMain: false, tagName: "Crypto Wallet" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "DEX" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "NFT" },
+      { isMain: false, tagName: "Staking" }
+    ],
     title: "m2e platform",
     desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
     img: m2eNew,
@@ -383,7 +393,11 @@ export const gbcProjects = [
   },
   {
     id: 2,
-    tags: ['Mobile App', 'Trading', "Crypto Wallet"],
+    tags: [
+      { isMain: true, tagName: "Mobile App" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "Crypto Wallet" }
+    ],
     title: 'memelut',
     desc: 'Memelut is an all-in-one app that simplifies exploring, trading, and storing memecoins.',
     img: memolut,
@@ -393,7 +407,12 @@ export const gbcProjects = [
   },
   {
     id: 3,
-    tags: ["AI Development", 'Web Development', 'Trading', 'Defi'],
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "AI Development" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "DeFi" }
+    ],
     title: 'REFLECT',
     desc: 'Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.',
     img: reflectNew,

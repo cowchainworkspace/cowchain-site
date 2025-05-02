@@ -1,6 +1,9 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
 import Image from "next/image";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
+import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
@@ -9,19 +12,19 @@ import { HeroSection } from "../components/service/blocks/HeroSection";
 import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
-import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
-import {
-  web3DesignFAQData,
-  realLifeAppWeb3DesignData,
-  web3DesignTrendsData,
-  otherWeb3DesignServices,
-  challengesUiUxData,
-  keyFeaturesWeb3DesignData,
-  deliversWeb3DesignData
-} from "./utils/data";
-import Cases from "../../(home)/blocks/Cases";
-import CasesMobile from "../../(home)/blocks/CasesMobile";
 import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import {
+  challengesUiUxData,
+  deliversWeb3DesignData,
+  keyFeaturesWeb3DesignData,
+  otherWeb3DesignServices,
+  realLifeAppWeb3DesignData,
+  web3DesignFAQData,
+  web3DesignTrendsData
+} from "./utils/data";
+import { metadata } from "./utils/web3UXMetadata";
+
+export { metadata };
 
 const Web3UiUx = () => {
   return (
@@ -53,8 +56,9 @@ const Web3UiUx = () => {
             <br className="hidden custom1400:block" />{" "}
             <span className="violet-gradient-text">
               {" "}
-              Web3 platforms emphasize user autonomy, open data <br className="hidden custom1400:block" />{" "}
-              accessibility, and the elimination of intermediaries
+              Web3 platforms emphasize user autonomy, open data{" "}
+              <br className="hidden custom1400:block" /> accessibility, and the
+              elimination of intermediaries
             </span>
             . <br className="hidden custom1400:block" /> Intuitive blockchain UI
             and blockchain UX are crucial{" "}
@@ -81,7 +85,7 @@ const Web3UiUx = () => {
           </>
         }
         noBg={true}
-        descClasses={"max-w-[798px] md:mt-[60px]"}
+        descClasses={"max-w-[738px] md:mt-[60px]"}
       />
 
       <Industries
@@ -92,7 +96,7 @@ const Web3UiUx = () => {
           </>
         }
         desc="Designing for Web3 comes with its own set of challenges, often revolving around balancing complex technology with user accessibility."
-        itemTitleClasses="lg:max-w-[350px] md:text-[18px]"
+        itemTitleClasses="lg:max-w-[400px] md:text-[18px]"
         data={challengesUiUxData}
         topBorder={false}
         titleClasses="xl:mb-[54px]"
@@ -105,6 +109,7 @@ const Web3UiUx = () => {
             className="pointer-events-none absolute bottom-[10%] left-0 z-[0] h-[1600px] w-auto"
           />
         }
+        itemDescClasses="max-w-[400px]"
       />
 
       <ExpertiseServices
@@ -116,12 +121,13 @@ const Web3UiUx = () => {
         }
         data={keyFeaturesWeb3DesignData}
         cryptoWalletClass="lg:mb-[60px]"
-        sectionContainerClasses="lg:pb-[102px]"
+        sectionContainerClasses="lg:pb-[102px] md:flex-row"
         itemTitleClasses="lg:text-[20px]"
         titleClasses="xl:!text-[60px] xl:mb-[60px]"
         bg={
           <CoreFeaturesRWAbg className="pointer-events-none absolute -bottom-[30%] right-0 h-auto w-[1400px]" />
         }
+        descClasses="max-w-[500px]"
       />
 
       <div className="w-full overflow-hidden">
@@ -138,6 +144,7 @@ const Web3UiUx = () => {
           faqGradient={true}
           itemTitleClass="xl:!text-[20px]"
           itemsClasses={"py-[40px] md:py-[75px] "}
+          faqContentClasses={"max-w-[545px]"}
         />
       </div>
 
@@ -152,7 +159,7 @@ const Web3UiUx = () => {
         data={realLifeAppWeb3DesignData}
         topBorder={true}
         itemTitleClasses="lg:text-[26px] leading-[90%]"
-        descClasses="!mb-0"
+        descClasses="!mb-0 max-w-[550px]"
         customClasses="lg:flex-col"
         sectionContainerClasses="lg:!flex-col gap-[30px] lg:gap-[50px] xl:gap-[70px]"
         itemsClasses="grid lg:grid-cols-2 lg:grid-rows-1 gap-x-[82px] gap-y-[70px] min-w-full"
@@ -181,14 +188,11 @@ const Web3UiUx = () => {
         cryptoWalletClass="lg:mb-[80px]"
         titleClasses="lg:!text-[60px]"
         itemTitleClasses="lg:text-[20px] leading-[90px]"
+        descClasses="max-w-[500px]"
       />
       <KeyFeatures
         isOneBlock={true}
-        title={
-          <>
-            Transform Your Blockchain Vision <br /> with Cowchain
-          </>
-        }
+        title={"Transform Your Blockchain Vision  with Cowchain"}
         desc={
           <>
             High-quality Web3 UI/UX design services are the foundation of
@@ -200,6 +204,7 @@ const Web3UiUx = () => {
           </>
         }
         noBg={true}
+        titleClasses="max-w-[1200px]"
         descClasses={"max-w-[798px] md:mt-[60px]"}
       />
 
@@ -240,13 +245,13 @@ const Web3UiUx = () => {
         <Image
           src={dexBg}
           alt="decoration ellipse"
-          className="pointer-events-none absolute -bottom-[10%] left-0 z-[10] hidden h-[1600px] w-auto md:inline"
+          className="pointer-events-none absolute -bottom-[5%] left-0 z-[10] hidden h-[1600px] w-auto md:inline"
         />
 
         <Cases />
         <CasesMobile />
 
-        <div className="w-full overflow-hidden">
+        <div className="relative w-full overflow-hidden">
           <FAQ
             data={web3DesignFAQData}
             noBg={true}
@@ -254,9 +259,16 @@ const Web3UiUx = () => {
             faqHorizontalPadding={true}
           />
         </div>
+        <Contact
+          titleClasses={" z-10 max-w-[1110px] mb-4 md:mb-0"}
+          title="Transform Your Blockchain Vision with Cowchain"
+          descriptionClasses={"hidden md:block max-w-[770px]"}
+          desc={
+            "High-quality Web3 UI/UX design services are the foundation of impactful blockchain platforms. From user-centric interfaces to cutting-edge innovations, these designs enhance usability, security, and engagement. Let Cowchain help you transform your vision into reality with tailored Web3 applications that resonate with your audience"
+          }
+          className="z-10 px-4 py-[50px] md:px-[64px] md:pb-[127px] md:pt-[131px]"
+        />
       </div>
-
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
     </section>
   );
 };

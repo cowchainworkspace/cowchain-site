@@ -292,7 +292,7 @@ export const tenetTeam = [
 export const tenetProjects = [
   {
     id: 1,
-    tags: ["Mobile App", "Telegram Mini-apps", "Trading"],
+    tags: [{ isMain: true, tagName: "Mobile App" }, { isMain: true, tagName: "Telegram Mini Apps" }, { isMain: false, tagName: "Trading" }],
     title: "STARS",
     desc: "Primex Finance is a non-custodial Prime Brokerage protocol redefining decentralized finance by enabling leveraged trading.",
     img: stars,
@@ -306,7 +306,7 @@ export const tenetProjects = [
   },
   {
     id: 2,
-    tags: ["Web Development", "DeFi"],
+    tags: [{ isMain: true, tagName: "Web Development" }, { isMain: false, tagName: "DeFi" }],
     title: "BRC20",
     desc: "BRC20 is the Launchpad built for the Ordinals ecosystem, redefining how Bitcoin-based assets are distributed and traded.",
     img: brc20,
@@ -316,7 +316,12 @@ export const tenetProjects = [
   },
   {
     id: 3,
-    tags: ["Mobile App", "Trading", "Crypto Wallet"],
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "AI Development" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "DeFi" }
+    ],
     title: "REFLECT",
     desc: "Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.",
     img: memolut,

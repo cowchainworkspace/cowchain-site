@@ -1,8 +1,8 @@
 "use client";
-import React from "react";
+import { Loading } from "@/components/loader/Loading";
 import { useLoader } from "@/hooks/useLoader";
 import { cn } from "@/lib/utils";
-import { Loading } from "@/components/loader/Loading";
+import React from "react";
 
 export default function LoaderWrapper({ children }) {
   const { isRendering, isLoading } = useLoader();
