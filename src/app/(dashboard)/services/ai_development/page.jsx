@@ -87,9 +87,11 @@ const AIDevelopment = () => {
           </>
         }
         isOneBlock={true}
-        imageClasses="-bottom-[115%]"
         descClasses={"max-w-[755px] xl:my-0"}
         containerClasses="md:py-[50px] xl:pt-[126px] xl:pb-[127px]"
+        noBg={true}
+        isWhiteLabelBg={true}
+        whiteLabelBgClasses="-bottom-[114%]"
       />
       <Industries
         data={aiDevelopmentBenefits}
@@ -125,14 +127,14 @@ const AIDevelopment = () => {
         titleClasses="mb-6 md:mb-0 xl:text-[60px] xl:leading-90"
         containerClasses="xl:grid "
         itemTitleClasses={"xl:text-[20px] xl:leading-90"}
-        // bg={
-        //   <Image
-        //     width={970}
-        //     height={650}
-        //     src={"/ico-constructor-ellipse.webp"}
-        //     className="absolute"
-        //   />
-        // }
+        bg={
+          <Image
+            width={870}
+            height={550}
+            src={"/ai-dev-decoration-ellipse.webp"}
+            className="absolute -top-80 right-0 hidden md:block"
+          />
+        }
       />
       <ExpertiseServices
         topBorder={false}
@@ -148,14 +150,6 @@ const AIDevelopment = () => {
         containerClasses="xl:grid xl:gap-9"
         itemTitleClasses={"xl:text-[20px] xl:leading-90"}
         descClasses={"max-w-[490px]"}
-        // bg={
-        //   <Image
-        //     width={970}
-        //     height={650}
-        //     src={"/ico-constructor-ellipse.webp"}
-        //     className="absolute"
-        //   />
-        // }
       />
       <KeyFeatures
         title={
@@ -195,6 +189,8 @@ const AIDevelopment = () => {
         descClasses={"max-w-[755px] xl:my-0"}
         containerClasses="md:py-[50px] xl:pt-[126px] xl:pb-[127px]"
         noBg={true}
+        isWhiteLabelBg={true}
+        whiteLabelBgClasses="-bottom-[45%]"
       />
       <div className="w-full overflow-hidden">
         <FAQ
@@ -229,14 +225,6 @@ const AIDevelopment = () => {
         containerClasses="xl:grid "
         itemTitleClasses={"xl:text-[20px] xl:leading-90"}
         descClasses="max-w-[500px]"
-        // bg={
-        //   <Image
-        //     width={970}
-        //     height={650}
-        //     src={"/ico-constructor-ellipse.webp"}
-        //     className="absolute"
-        //   />
-        // }
       />
       <Feedback
         desc="Our clients know they can rely on Cowchain 
@@ -283,13 +271,13 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
           </>
         }
         titleClasses={
-          "font-roc xl:max-w-[828px] xl:text-normal custom1430:text-[64px]"
+          "font-roc mb-4 md:mb-0 xl:max-w-[828px] md:px-4 xl:px-0 xl:text-normal custom1430:text-[64px]"
         }
         desc={
           "Whether you’re building smarter interactions, scaling internal systems, or designing AI-native products, we help you move fast without cutting corners. Let’s build the intelligence layer your platform actually needs.Contact us to explore AI development services built around your business"
         }
         descriptionClasses={
-          "xl:max-w-[828px] mb-6 md:mb-0 px-4 md:px-0 xl:text-base xl:font-normal xl:leading-6"
+          "xl:max-w-[795px] mb-6 md:mb-0 px-4 md:px-4 xl:px-0 xl:text-base xl:font-normal xl:leading-6"
         }
         className={"px-4 py-[50px] md:px-0 xl:py-[143px]"}
       />
