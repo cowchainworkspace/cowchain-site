@@ -1,6 +1,8 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
 import Image from "next/image";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
@@ -9,18 +11,17 @@ import { HeroSection } from "../components/service/blocks/HeroSection";
 import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
-import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
 import { ServiceStack } from "../components/service/blocks/stack";
-import {
-  stakingFAQData,
-  otherStakingServices,
-  steByStepStakingData,
-  essentialStakingData,
-  advantagesStakingData
-} from "./utils/data";
-import Cases from "../../(home)/blocks/Cases";
-import CasesMobile from "../../(home)/blocks/CasesMobile";
 import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import {
+  advantagesStakingData,
+  essentialStakingData,
+  otherStakingServices,
+  stakingFAQData,
+  steByStepStakingData
+} from "./utils/data";
+import { metadata } from "./utils/stackingMetaData";
+export { metadata };
 
 const Staking = () => {
   return (
@@ -156,7 +157,7 @@ looking to enter the staking markets"
               </li>
               <li>
                 Enterprises and DAOs launching custom staking services to create
-                passive  income streams for token holders
+                passive income streams for token holders
               </li>
             </ul>
           </>
@@ -239,9 +240,7 @@ looking to enter the staking markets"
         </div>
       </div>
 
-      <Feedback
-        desc="Our clients know they can rely on Cowchain to deliver reliable, secure blockchain solutions. Here’s what they have to say"
-      />
+      <Feedback desc="Our clients know they can rely on Cowchain to deliver reliable, secure blockchain solutions. Here’s what they have to say" />
 
       <div className="relative">
         <WhiteLabelCases

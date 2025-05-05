@@ -1,8 +1,8 @@
+import { CexIcon } from "@/assets/svgComponents//cryptocurrency/CexIcon";
+import { DexIcon } from "@/assets/svgComponents/cryptocurrency/DexIcon";
 import ConsultingAdvisoryIcon from "@/assets/svgComponents/industries/ConsultingAdvisoryIcon";
 import DedicateTeamIcon from "@/assets/svgComponents/industries/DedicateTeamIcon";
 import DesignDevIcon from "@/assets/svgComponents/industries/DesignDevIcon";
-import { DexIcon } from "@/assets/svgComponents/cryptocurrency/DexIcon";
-import { CexIcon } from "@/assets/svgComponents//cryptocurrency/CexIcon";
 import GovernmentIcon from "@/assets/svgComponents/industries/GovermentIcon";
 import HelthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
 import HybridIcon from "@/assets/svgComponents/industries/HybridIcon";
@@ -210,11 +210,11 @@ export const walletProcessData = [
 
 export const chooseCryptocurrencyData = [
   {
-    title: "Evaluating Experience in Exchange Software Development",
+    title: "Evaluating Experience \n in Exchange Software Development",
     desc: "Experience matters when choosing a development partner. Our group has a track record of developing dependable, inventive, and growth-ready cryptocurrency exchange solutions. In order to provide you the assurance that your platform is in capable hands, we offer end-to-end development services, supported by client endorsements and a portfolio of projects."
   },
   {
-    title: "Assessing Blockchain and Multi-Currency Support",
+    title: "Assessing Blockchain \n and Multi-Currency Support",
     desc: "Choose a team that excels in blockchain integration and supports a wide range of cryptocurrencies. Our expertise in creating multi-currency exchange platforms establishes your platform will cater to a diverse audience and remain competitive."
   }
 ];
@@ -229,7 +229,7 @@ export const cruptoCurrencyServiceData = [
     desc: "Reliable trading platform software is essential for maintaining a stable and efficient exchange. Our exchange includes key elements such as an order-matching engine, price charts, and analytics tools to support informed trading decisions."
   },
   {
-    title: "Exchange Software Development for Scalability",
+    title: "Exchange Software Development \n for Scalability",
     desc: "Scalability is crucial for handling a growing user base. Our advanced exchange software development guarantees that the platform can expand without compromising performance or resilience, even during high traffic periods."
   }
 ];

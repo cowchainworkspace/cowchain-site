@@ -9,11 +9,11 @@ import React from "react";
 
 const feedbackData = [
   {
-    text: '"Cowchain completed the platform on time and within budget. They completed a detailed technical research phase, created a state-of-the-art web3 infrastructure, and helped develop and deploy the platform efficiently. Moreover, their clear communication and innovative solutions impressed the client."',
+    text: '"Cowchain completed the platform on time  and within budget. They completed a detailed technical research phase, created a state-of-the-art web3 infrastructure, and helped develop and deploy the platform efficiently. Moreover, their clear communication and innovative solutions impressed the client."',
     author: "Davyd Koriahin, Co-CEO, Retro Bridge"
   },
   {
-    text: '"The app is currently in beta testing, and the client has seen good traction. Cowchain leads proactive project management; they deliver on time and communicate regularly through Telegram. Moreover, the team&#39;s invaluable experience has ensured deliverables with exceptional quality."',
+    text: `"The app is currently in beta testing, and the client has seen good traction. Cowchain leads proactive project management; they deliver on time and communicate regularly through Telegram. Moreover, the team's invaluable experience has ensured deliverables with exceptional quality."`,
     author: "Antoine Marsan, CEO & Founder, CoinClub Inc."
   },
   {
@@ -45,7 +45,7 @@ const Quote = ({ text, author, index }) => {
         <div className="absolute bottom-0 left-0 hidden h-[1px] w-[calc(100vw)] md:block md:border-b md:border-b-th-fade " />
       )}
 
-      <p className="header max-w-2xl !font-normal !leading-none !no-underline">
+      <p className="header max-w-2xl whitespace-pre-line !font-normal !leading-none !no-underline">
         {text}
       </p>
       <div className="mt-8">
@@ -82,7 +82,8 @@ export const Feedback = ({
       solutions that meet the unique needs of each project
     </>
   ),
-  imageClasses = ""
+  imageClasses = "",
+  descClasses = ""
 }) => {
   return (
     <section
@@ -112,7 +113,12 @@ export const Feedback = ({
               <h3 className="uppercase text-white lg:text-[42px] custom1430:text-[60px]">
                 {title}
               </h3>
-              <p className=" mt-[30px] max-w-[592px] text-base leading-6 text-[#BBBBBB]">
+              <p
+                className={cn(
+                  " mt-[30px] max-w-[592px] text-base leading-6 text-[#BBBBBB]",
+                  descClasses
+                )}
+              >
                 {desc}
               </p>
               <div className="mt-10 flex flex-col gap-y-4 md:mt-16 lg:mt-24 xl:mt-36">

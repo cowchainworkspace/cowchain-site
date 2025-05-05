@@ -9,7 +9,6 @@ import { ExpertiseServices } from "../components/service/blocks/ExpertiseService
 import FAQ from "../components/service/blocks/FAQ";
 import { Feedback } from "../components/service/blocks/Feedback";
 import { HeroSection } from "../components/service/blocks/HeroSection";
-import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { TustByNumbers } from "../web3_fullstack_development/blocks/TustByNumbers";
@@ -23,6 +22,9 @@ import {
   whyTokenization
 } from "./utils/data";
 import { BenefitsTokenizationData } from "./utils/data";
+import { metadata } from "./utils/rwaTokenizationMetadata";
+
+export { metadata };
 
 const RwaTokenization = () => {
   return (
@@ -112,6 +114,7 @@ const RwaTokenization = () => {
         itemTitleClasses="lg:text-[20px]"
         cryptoWalletClass="lg:mb-[80px]"
         sectionContainerClasses={"md:flex-row md:gap-5"}
+        descClasses="max-w-[510px]"
       />
 
       <TustByNumbers
@@ -146,6 +149,7 @@ const RwaTokenization = () => {
         sectionContainerClasses={"md:flex-row md:gap-5"}
         itemTitleClasses="lg:text-[20px]"
         cryptoWalletClass="lg:mb-[60px]"
+        descClasses="max-w-[495px]"
       />
       <div className="w-full overflow-hidden">
         <FAQ
@@ -176,6 +180,7 @@ const RwaTokenization = () => {
         topBorder={false}
         bottomBorder={false}
         sectionContainerClasses={"md:flex-row md:gap-5 lg:pb-[100px]"}
+        descClasses="max-w-[505px]"
       />
 
       <KeyFeatures
@@ -248,7 +253,11 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
           faqHorizontalPadding={true}
         />
       </div>
-      <Contact className="px-[50px] py-[105px] md:pb-[127px] md:pt-[169px] lg:px-[64px]" />
+      <Contact
+        titleClasses={"mb-4 md:mb-0"}
+        descriptionClasses={"mb-4 md:mb-0"}
+        className="px-[50px] py-[50px] md:pb-[127px] md:pt-[169px] lg:px-[64px]"
+      />
     </section>
   );
 };

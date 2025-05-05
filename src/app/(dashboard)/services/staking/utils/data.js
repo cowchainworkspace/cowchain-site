@@ -9,8 +9,7 @@ import PlanningConsultingIcon from "@/assets/svgComponents/industries/PlanningCo
 import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon";
 import SupplyChain from "@/assets/svgComponents/industries/SupplyChainIcon";
 import TestingIcon from "@/assets/svgComponents/industries/TestingIcon";
-import { SeamlessBlockchainIcon } from "@/assets/svgComponents/lottery/SeamlessBlockchainIcon"
-import { EnsuringCrossPlatformIcon } from "@/assets/svgComponents/web3Design/EnsuringCrossPlatformIcon";
+
 
 import { BankGradeSecurIcon } from '@/assets/svgComponents/staking/BankGradeSecurIcon';
 import { BlockChainIcon } from '@/assets/svgComponents/staking/BlockChainIcon';
@@ -209,7 +208,7 @@ export const chooseCryptocurrencyData = [
     desc: "Experience matters when choosing a development partner. Our group has a track record of developing dependable, inventive, and growth-ready cryptocurrency exchange solutions. In order to provide you the assurance that your platform is in capable hands, we offer end-to-end development services, supported by client endorsements and a portfolio of projects."
   },
   {
-    title: "Assessing Blockchain  and Multi-Currency Support",
+    title: "Assessing Blockchain and Multi-Currency Support",
     desc: "Choose a team that excels in blockchain integration and supports a wide range of cryptocurrencies. Our expertise in creating multi-currency exchange platforms establishes your platform will cater to a diverse audience and remain competitive."
   }
 ];
@@ -252,11 +251,11 @@ export const steByStepStakingData = [
   },
   {
     title: "Blockchain Integration",
-    text: "We handle the heavy lifting so you don’t have to. Whether you need Ethereum, Solana, Binance Smart Chain, or a custom network, our solution  is pre-configured for easy deployment across multiple protocols",
+    text: "We handle the heavy lifting so you don’t have to. Whether you need Ethereum, Solana, Binance Smart Chain, or a custom network, our solution is pre-configured for easy deployment across multiple protocols",
     icon: BlockChainIcon
   },
   {
-    title: "Bank-Grade Security  from Day One",
+    title: "Bank-Grade Security from Day One",
     text: "Security isn’t an afterthought — it’s built into the core of our secure staking software. Our infrastructure includessmart contract audits to prevent vulnerabilities, multi-layer security protocols for asset protection, automated monitoring to detect and prevent fraudulent activity",
     icon: BankGradeSecurIcon
   },

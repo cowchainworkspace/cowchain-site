@@ -1,8 +1,8 @@
+import { CexIcon } from "@/assets/svgComponents//cryptocurrency/CexIcon";
+import { DexIcon } from "@/assets/svgComponents/cryptocurrency/DexIcon";
 import ConsultingAdvisoryIcon from "@/assets/svgComponents/industries/ConsultingAdvisoryIcon";
 import DedicateTeamIcon from "@/assets/svgComponents/industries/DedicateTeamIcon";
 import DesignDevIcon from "@/assets/svgComponents/industries/DesignDevIcon";
-import { DexIcon } from "@/assets/svgComponents/cryptocurrency/DexIcon";
-import { CexIcon } from "@/assets/svgComponents//cryptocurrency/CexIcon";
 import GovernmentIcon from "@/assets/svgComponents/industries/GovermentIcon";
 import HelthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
 import HybridIcon from "@/assets/svgComponents/industries/HybridIcon";
@@ -212,7 +212,7 @@ export const chooseCryptocurrencyData = [
     desc: "Experience matters when choosing a development partner. Our group has a track record of developing dependable, inventive, and growth-ready cryptocurrency exchange solutions. In order to provide you the assurance that your platform is in capable hands, we offer end-to-end development services, supported by client endorsements and a portfolio of projects."
   },
   {
-    title: "Assessing Blockchain  and Multi-Currency Support",
+    title: "Assessing Blockchain and Multi-Currency Support",
     desc: "Choose a team that excels in blockchain integration and supports a wide range of cryptocurrencies. Our expertise in creating multi-currency exchange platforms establishes your platform will cater to a diverse audience and remain competitive."
   }
 ];
@@ -247,21 +247,25 @@ export const challengesUiUxData = [
   {
     title: "Simplifying Workflows",
     text: "Complex tasks like wallet connections or token transfers should be divided into intuitive, step-by-step actions with clear progress indicators to reduce user confusion",
-    icon: SimpleWorkflow
+    icon: SimpleWorkflow,
+    hasBlackBg: true
   },
   {
     title: "Bridging Knowledge Gaps",
     text: "To demystify blockchain concepts like gas fees and smart contracts, integrate contextual guides, tooltips, and interactive tutorials, empowering users without overwhelming them",
-    icon: BridgingKnowladgeIcon
+    icon: BridgingKnowladgeIcon,
+    hasBlackBg: true
   },
   {
     title: "Ensuring Cross-Platform Consistency",
     text: "Design must adapt seamlessly across mobile, desktop, and browser platforms, delivering a cohesive experience and maintaining usability",
-    icon: EnsuringCrossPlatformIcon
+    icon: EnsuringCrossPlatformIcon,
+    hasBlackBg: true
   },
   {
     title: "Balancing Transparency and Simplicity",
     text: "Strategic microcopy and dynamic hints can clarify transaction details without overloading users, fostering trust through clear yet streamlined interfaces",
-    icon: BalancingIcon
+    icon: BalancingIcon,
+    hasBlackBg: true
   }
 ];

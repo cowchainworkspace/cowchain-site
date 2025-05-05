@@ -1,4 +1,6 @@
 import Contact from "@/components/Contact";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
@@ -9,6 +11,7 @@ import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
 import { nftStackData } from "../components/service/blocks/stack/data";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
 import { metadata } from "./utils/NftDevMetadata";
 import {
   NftIndustriesData,
@@ -18,9 +21,6 @@ import {
   nftProcessData,
   nftServicesData
 } from "./utils/data";
-import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
-import Cases from "../../(home)/blocks/Cases";
-import CasesMobile from "../../(home)/blocks/CasesMobile";
 
 export { metadata };
 
@@ -81,7 +81,7 @@ const NftDevelopment = () => {
           </>
         }
         noBg={true}
-        descClasses={"max-w-[592px]"}
+        descClasses={"max-w-[575px]"}
       />
       <div className="w-full overflow-hidden">
         <FAQ
@@ -158,7 +158,7 @@ const NftDevelopment = () => {
           </>
         }
         desc={
-          "Cowchain is recognized as a leading NFT development company, with a reputation for delivering high-qualityNon-Fungible Token development solutions. Our team of NFT developers offers in-depth knowledge in creating cutting-edge solutions for both businesses and creators"
+          "Cowchain is recognized as a leading NFT development company, with a reputation for delivering high-quality Non-Fungible Token development solutions. Our team of NFT developers offers in-depth knowledge in creating cutting-edge solutions for both businesses and creators"
         }
         noBg={true}
         descClasses={"max-w-[700px]"}

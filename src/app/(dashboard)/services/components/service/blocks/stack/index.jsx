@@ -16,7 +16,8 @@ export function ServiceStack({
   desc = "To achieve high performance in decentralized exchange softwaredevelopment, we rely on the following tech stack",
   isMarginRight = false,
   noMarginBottom = false,
-  typographyContainer = ""
+  typographyContainer = "",
+  descClasses = ""
 }) {
   return (
     <section
@@ -31,8 +32,8 @@ export function ServiceStack({
         />
       )}
       <div
-        className={`relative z-20 mx-auto flex max-w-[1440px] flex-col sm:grid ${twoColumns ? "grid-cols-2" : "grid-cols-[265px_1fr] lg:grid-cols-[265px_1fr_1fr]"}
-         gap-x-[200px] gap-y-[44px] px-[20px] md:gap-y-[50px] md:pl-8 md:pr-[46px] xl:pl-[88px]`}
+        className={`relative z-20 mx-auto flex max-w-[1440px] flex-col overflow-hidden sm:grid ${twoColumns ? "grid-cols-2" : "grid-cols-2 lg:grid-cols-[220px_1fr_1fr]  xl:grid-cols-[265px_1fr_1fr]"}
+          gap-y-[44px] px-[20px] md:gap-10 md:gap-y-[50px] md:pl-8 md:pr-8 xl:gap-x-[200px] xl:pl-[88px]`}
       >
         <div
           className={`relative col-span-1 ${twoColumns ? "row-span-1" : lopngDesc ? "row-span-4" : "row-span-6  lg:row-span-3"}`}
@@ -66,7 +67,12 @@ export function ServiceStack({
                 )}
               </h2>
 
-              <p className="text-[16px] leading-[22px] text-[#BBBBBB]">
+              <p
+                className={cn(
+                  "text-[16px] leading-[22px] text-[#BBBBBB]",
+                  descClasses
+                )}
+              >
                 {desc}
               </p>
             </div>

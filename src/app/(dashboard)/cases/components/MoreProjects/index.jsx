@@ -74,21 +74,22 @@ const MoreProjects = ({ projects, headerClasses = "", isReversed }) => {
                   )}
                 >
                   <div className={cn("flex flex-wrap gap-2", tagsContainer)}>
-                    {tags.map((tag) => (
+                    {tags.map(({ tagName, isMain }) => (
                       <div
                         className={cn(
                           "flex items-center justify-center rounded-20 border-[0.5px] border-white bg-white px-4 py-2",
                           tagClasses
                         )}
-                        key={tag}
+                        key={tagName}
                       >
                         <p
                           className={cn(
                             "font-manrope text-sm font-medium leading-[18px] text-black",
+                            isMain && "!font-bold",
                             tagDescClasses
                           )}
                         >
-                          {tag}
+                          {tagName}
                         </p>
                       </div>
                     ))}

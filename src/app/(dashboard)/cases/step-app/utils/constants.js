@@ -324,7 +324,12 @@ export const stepAppTeam = [
 export const stepAppProjects = [
   {
     id: 1,
-    tags: ["Web Development", "Defi", "Bridge", "NFT"],
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "Bridge" },
+      { isMain: false, tagName: "NFT" }
+    ],
     title: "RETROBRIDGE",
     desc: "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
     img: crossChain,
@@ -335,7 +340,12 @@ export const stepAppProjects = [
   },
   {
     id: 3,
-    tags: ['Web Development', "AI Development",  'Trading', 'Defi'],
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "AI Development" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "DeFi" }
+    ],
     title: 'REFLECT',
     desc: 'Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.',
     img: reflectNew,
@@ -347,7 +357,11 @@ export const stepAppProjects = [
   },
   {
     id: 2,
-    tags: ["Web Development", "Trading", "NFT"],
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "NFT" }
+    ],
     title: "GMX BLUEBERRY CLUB",
     desc: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     img: gbc,

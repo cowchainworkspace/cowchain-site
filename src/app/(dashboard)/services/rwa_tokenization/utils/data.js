@@ -180,15 +180,15 @@ export const metadata = {
 export const BenefitsTokenizationData = [
   {
     title: "Enhanced Liquidity",
-    desc: "Tokenized assets can be traded 24/7 on digital marketplaces, providing \n liquidity to traditionally illiquid assets"
+    desc: "Tokenized assets can be traded 24/7 on digital marketplaces, providing  liquidity to traditionally illiquid assets"
   },
   {
     title: "Increased Transparency",
-    desc: "Blockchain technology provides an unalterable ledger of transaction \n records, fostering clarity and investor confidence"
+    desc: "Blockchain technology provides an unalterable ledger of transaction  records, fostering clarity and investor confidence"
   },
   {
     title: "Fractional Ownership",
-    desc: "Tokenization allows assets to be divided into smaller portions, enabling \n more accessible investment opportunities"
+    desc: "Tokenization allows assets to be divided into smaller portions, enabling  more accessible investment opportunities"
   },
   {
     title: "Cost Efficiency",
@@ -234,7 +234,7 @@ export const TustByNumbersData = [
     desc: "Together with the client, we identify suitable assets and assess their tokenization potential, confirming alignment with investment goals",
   },
   {
-    title: "Token Creation",
+    title: "Token  \n Creation",
     desc: "Digital tokens are created, backed by the asset’s value, leveraging blockchain tokenization techniques. Clients can customize token parameters, such as supply and transfer rules",
   },
   {

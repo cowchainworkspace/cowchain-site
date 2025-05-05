@@ -7,7 +7,7 @@ export const ExpertiseBlock = ({ title, text, tools }) => {
         <p className="body3 max-w-[294px] uppercase !leading-[90%] text-white">
           {title}
         </p>
-        <div className="tools_wrapper flex items-center">
+        <div className="tools_wrapper absolute bottom-0 left-0 flex w-[200%] items-center">
           {tools.map((tool, index) => (
             <CollapsedIcon key={index} {...tool} />
           ))}

@@ -46,19 +46,23 @@ export const DexExpertiseData = [
 export const IndustriesDexData = [
   {
     title: "E-commerce platforms that empower online businesses",
-    icon: EcomerceIcon
+    icon: EcomerceIcon,
+    hasBlackBg: true,
   },
   {
     title: "Consumer applications across diverse use cases",
-    icon: CustomerApp
+    icon: CustomerApp,
+    hasBlackBg: true
   },
   {
     title: "Fintech solutions transforming modern financial systems",
-    icon: FintechSolution
+    icon: FintechSolution,
+    hasBlackBg: true
   },
   {
     title: "And more",
-    icon: AndMore
+    icon: AndMore,
+    hasBlackBg: true
   }
 ];
 
@@ -91,7 +95,8 @@ export const whiteLabelSolutions = [
       <h2 className="whitespace-pre-line  text-[36px] uppercase md:text-start md:text-[40px]">
         Our White <br className=" xl:block hidden" /> Label <br className=" xl:block hidden" /> Solutions <br className=" xl:block hidden" /> Include
       </h2>
-    )
+    ),
+    isMainTitle: true
   },
   {
     title: "RWA Platform",

@@ -12,7 +12,7 @@ import { ServiceStack } from "../components/service/blocks/stack";
 import { TustByNumbers } from "../web3_fullstack_development/blocks/TustByNumbers";
 import { WhiteLabelCases } from "./blocks/WhiteLabelCases";
 import { metadata } from "./utils/WhiteLabelDevMetadata";
-import { faqDappData, otherWhiteLabelServices, whiteProcessData } from "./utils/data";
+import { otherWhiteLabelServices, whiteProcessData } from "./utils/data";
 import { IndustriesDexData } from "./utils/data";
 import {
   TustByNumbersData,

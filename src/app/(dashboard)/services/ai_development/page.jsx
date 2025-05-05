@@ -16,6 +16,7 @@ import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases
 import { metadata } from "./utils/aiDevelopmentMetadata";
 import {
   aiDevelopmentBenefits,
+  aiDevelopmentBotFaqData,
   aiDevelopmentFaqData,
   aiDevelopmentPlatforms,
   aiDevelopmentProtocol,
@@ -264,6 +265,9 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
       <WhiteLabelCases title="our cases" hasNoDescription={true} />
       <Cases />
       <CasesMobile />
+      <div className="w-full overflow-hidden">
+        <FAQ noBg={true} data={aiDevelopmentBotFaqData} />
+      </div>
       <Contact
         title={
           <>

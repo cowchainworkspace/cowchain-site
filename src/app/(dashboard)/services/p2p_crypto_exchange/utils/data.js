@@ -10,9 +10,6 @@ import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon
 import SupplyChain from "@/assets/svgComponents/industries/SupplyChainIcon";
 import TestingIcon from "@/assets/svgComponents/industries/TestingIcon";
 
-import { BridgingKnowladgeIcon } from "@/assets/svgComponents/web3Design/BridgingKnowladgeIcon";
-import { EnsuringCrossPlatformIcon } from "@/assets/svgComponents/web3Design/EnsuringCrossPlatformIcon";
-
 import { EnhanceSecurityIcon } from "@/assets/svgComponents/p2pservice/EnhanceSecurityIcon";
 import { TailorTradingIcon } from "@/assets/svgComponents/p2pservice/TailorTradingIcon";
 import { UserFriendlyIcon } from "@/assets/svgComponents/p2pservice/UserFriendlyIcon";
@@ -182,7 +179,7 @@ export const metadata = {
 export const keyFeaturesp2pData = [
   {
     title: "Decentralized Exchange Software",
-    desc: "Most P2P exchanges aren’t fully decentralized – but they do offer  non-custodial trading, meaning users never give up control over their crypto. Instead of holding funds on the platform, trades are facilitated through escrow smart contracts or multi-sig wallets that release assets only when conditions are met"
+    desc: "Most P2P exchanges aren’t fully decentralized – but they do offer non-custodial trading, meaning users never give up control over their crypto. Instead of holding funds on the platform, trades are facilitated through escrow smart contracts or multi-sig wallets that release assets only when conditions are met"
   },
   {
     title: "Multi-Currency Trading Support",
@@ -205,7 +202,7 @@ export const howToDevelopp2pData = [
   },
   {
     title: "Testing and Deployment",
-    desc: "Before launch, your custom P2P exchange goes through full QA testing, smart contract auditing, and performance benchmarking. Once everything checks out, we deploy your platform and guide  you through post-launch scaling"
+    desc: "Before launch, your custom P2P exchange goes through full QA testing, smart contract auditing, and performance benchmarking. Once everything checks out, we deploy your platform and guide you through post-launch scaling"
   }
 ];
 
@@ -215,7 +212,7 @@ export const chooseCryptocurrencyData = [
     desc: "Experience matters when choosing a development partner. Our group has a track record of developing dependable, inventive, and growth-ready cryptocurrency exchange solutions. In order to provide you the assurance that your platform is in capable hands, we offer end-to-end development services, supported by client endorsements and a portfolio of projects."
   },
   {
-    title: "Assessing Blockchain  and Multi-Currency Support",
+    title: "Assessing Blockchain and Multi-Currency Support",
     desc: "Choose a team that excels in blockchain integration and supports a wide range of cryptocurrencies. Our expertise in creating multi-currency exchange platforms establishes your platform will cater to a diverse audience and remain competitive."
   }
 ];

@@ -16,7 +16,8 @@ export const WhiteLabelCases = ({
       user engagement and satisfaction
     </>
   ),
-  hasNoDescription = false
+  hasNoDescription = false,
+  descClasses = ""
 }) => {
   return (
     <section className="relative">
@@ -32,7 +33,12 @@ export const WhiteLabelCases = ({
               {title}
             </h2>
             {!hasNoDescription && desc && (
-              <p className="body z-[15] max-w-lg text-base leading-6 lg:order-2 lg:max-w-[800px]">
+              <p
+                className={cn(
+                  "body z-[15] max-w-lg text-base leading-6 lg:order-2 lg:max-w-[800px]",
+                  descClasses
+                )}
+              >
                 {desc}
               </p>
             )}

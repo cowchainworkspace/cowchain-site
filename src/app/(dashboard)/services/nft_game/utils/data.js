@@ -1,8 +1,8 @@
+import { CexIcon } from "@/assets/svgComponents//cryptocurrency/CexIcon";
+import { DexIcon } from "@/assets/svgComponents/cryptocurrency/DexIcon";
 import ConsultingAdvisoryIcon from "@/assets/svgComponents/industries/ConsultingAdvisoryIcon";
 import DedicateTeamIcon from "@/assets/svgComponents/industries/DedicateTeamIcon";
 import DesignDevIcon from "@/assets/svgComponents/industries/DesignDevIcon";
-import { DexIcon } from "@/assets/svgComponents/cryptocurrency/DexIcon";
-import { CexIcon } from "@/assets/svgComponents//cryptocurrency/CexIcon";
 import GovernmentIcon from "@/assets/svgComponents/industries/GovermentIcon";
 import HelthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
 import HybridIcon from "@/assets/svgComponents/industries/HybridIcon";
@@ -200,15 +200,15 @@ export const metadata = {
 export const keyFeaturesOfNftData = [
   {
     title: "Custom NFT Game Design",
-    desc: "We don’t just build games — we build NFT game worlds where design and asset creation go hand in hand. From defining asset scarcity and mechanics to crafting player-driven economies, every detail is shaped to enhance both gameplay and collectibility. Our approach to NFT game design combines storytelling, gamification, and scalability, ensuring each NFT is more than a digital collectible. It’s a playable, tradable part of your game’s identity"
+    content: "We don’t just build games — we build NFT game worlds where design and asset creation go hand in hand. From defining asset scarcity and mechanics to crafting player-driven economies, every detail is shaped to enhance both gameplay and collectibility. Our approach to NFT game design combines storytelling, gamification, and scalability, ensuring each NFT is more than a digital collectible. It’s a playable, tradable part of your game’s identity"
   },
   {
     title: "Seamless Blockchain Integration",
-    desc: "Smooth blockchain integration is critical for any NFT game. We connect your core game logic with networks like Ethereum, Polygon, BNB Chain, and others, enabling real-time minting, trading, and validation of NFT game assets without slowing down the player experience.Players can move between gameplay and marketplace naturally, without leaving your ecosystem"
+    content: "Smooth blockchain integration is critical for any NFT game. We connect your core game logic with networks like Ethereum, Polygon, BNB Chain, and others, enabling real-time minting, trading, and validation of NFT game assets without slowing down the player experience.Players can move between gameplay and marketplace naturally, without leaving your ecosystem"
   },
   {
     title: "Play-to-Earn Mechanics",
-    desc: "Play-to-earn games turn time and skill into real-world rewards. Whether it’s through native tokens, rare NFT drops, or leaderboard-based incentives, our systems are built to balance fair earning models with sustainable game economies.These mechanics aren’t just about payouts – they drive retention, social competition, and community-led value creation"
+    content: "Play-to-earn games turn time and skill into real-world rewards. Whether it’s through native tokens, rare NFT drops, or leaderboard-based incentives, our systems are built to balance fair earning models with sustainable game economies.These mechanics aren’t just about payouts – they drive retention, social competition, and community-led value creation"
   }
 ];
 
@@ -229,7 +229,7 @@ export const chooseCryptocurrencyData = [
     desc: "Experience matters when choosing a development partner. Our group has a track record of developing dependable, inventive, and growth-ready cryptocurrency exchange solutions. In order to provide you the assurance that your platform is in capable hands, we offer end-to-end development services, supported by client endorsements and a portfolio of projects."
   },
   {
-    title: "Assessing Blockchain  and Multi-Currency Support",
+    title: "Assessing Blockchain and Multi-Currency Support",
     desc: "Choose a team that excels in blockchain integration and supports a wide range of cryptocurrencies. Our expertise in creating multi-currency exchange platforms establishes your platform will cater to a diverse audience and remain competitive."
   }
 ];
@@ -240,7 +240,7 @@ export const howToGetStartedNftGameData = [
     desc: "Your NFT game starts with the core idea — gameplay loops, asset mechanics, player rewards, and community goals. Are you building a competitive arena game or a collectible idle clicker? Will your assets evolve, breed, merge, or burn?"
   },
   {
-    title: "Choosing the Right NFT Game  Development Partner",
+    title: "Choosing the Right NFT Game Development Partner",
     desc: "Picking the right partner goes beyond tech skills. You want a team that understands the rhythm of Web3 – fast iterations, live economy tuning, and user feedback loops"
   },
   {
