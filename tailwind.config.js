@@ -16,22 +16,6 @@ export default {
       }
     },
     extend: {
-      screens: {
-        customSmall: "340px",
-        "3xl": "1800px",
-        "4xl": "2000px",
-        custom1200: "1200px",
-        custom1000: "1000px",
-        custom815: "815px",
-        "1custom": "1400px",
-        "2custom": "950px",
-        custom1430: "1430px",
-        custom1400: "1400px",
-        custom1300: "1300px",
-        "custom-1700": "1660px",
-        fullSlider: "3186px",
-        'custom480': '480px'
-      },
       spacing: {
         15: "60px",
         30: "120px"
