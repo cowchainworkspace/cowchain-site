@@ -22,7 +22,8 @@ export function ExpertiseServices({
   itemTitleClasses,
   containerClasses = "",
   sectionContainerClasses = "",
-  titleDescClasses = ""
+  titleDescClasses = "",
+  itemListClasses = ""
 }) {
   return (
     <section
@@ -77,7 +78,7 @@ export function ExpertiseServices({
             containerClasses
           )}
         >
-          {data.map(({ title, desc }, index) => (
+          {data.map(({ title, desc, listOfItem }, index) => (
             <div
               key={index}
               className="relative z-[2] col-span-1 whitespace-pre-line bg-cover"
@@ -102,7 +103,7 @@ export function ExpertiseServices({
                 </div>
               )}
               <div>
-                {typeof desc === "string" ? (
+                {desc && !listOfItem && (
                   <p
                     className={cn(
                       "mb-6 text-[16px] !leading-[22px] !text-secondary",
@@ -113,8 +114,9 @@ export function ExpertiseServices({
                   >
                     {desc}
                   </p>
-                ) : (
-                  <div className="mt-6">
+                )}
+                {desc && listOfItem && (
+                  <div className={cn("mt-6", itemListClasses)}>
                     <h3 className="font-manrope text-base leading-[22px] text-secondary">
                       {desc.header}
                     </h3>

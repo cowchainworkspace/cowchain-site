@@ -21,7 +21,5 @@ export {default as DistributionSvg} from "./DistributionSvg"
 export {default as AIEfficiency} from "./AIEfficiency"
 export {default as AIOptimizationSvg} from "./AIOptimizationSvg"
 export {default as CompetitiveSvg} from "./CompetitiveSvg"
-
-
-
-
+export {default as AccessSvg } from "./AccessSvg"
+export {default as InfinitySvg } from "./InfinitySvg"
