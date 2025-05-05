@@ -18,4 +18,10 @@ export {default as ContractIntegration} from "./ContractIntegration"
 export {default as ArrowDown} from "./ArrowDown"
 export {default as ChartIcoSvg} from "./ChartIcoSvg"
 export {default as DistributionSvg} from "./DistributionSvg"
+export {default as AIEfficiency} from "./AIEfficiency"
+export {default as AIOptimizationSvg} from "./AIOptimizationSvg"
+export {default as CompetitiveSvg} from "./CompetitiveSvg"
+
+
+
 

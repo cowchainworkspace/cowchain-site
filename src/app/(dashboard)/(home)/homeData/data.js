@@ -140,7 +140,7 @@ export const benefitsData = [
 export const casesData = [
   {
     title: "agent.hub",
-    link: "cases/agnt",
+    link: "/cases/agnt",
     description:
       "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
     photo: agnt,
@@ -154,7 +154,7 @@ export const casesData = [
   },
   {
     title: "Cross-chain transfer bridge",
-    link: "cases/retrobridge",
+    link: "/cases/retrobridge",
     description:
       "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
     photo: retroBridge,
@@ -167,7 +167,7 @@ export const casesData = [
   },
   {
     title: "GBC DAPP",
-    link: "cases/gbc",
+    link: "/cases/gbc",
     description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     photo: gbc,
     tags: [
@@ -178,7 +178,7 @@ export const casesData = [
   },
   {
     title: "step app",
-    link: "cases/step-app",
+    link: "/cases/step-app",
     description:
       "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
     photo: stepUp,
@@ -196,7 +196,7 @@ export const casesData = [
   },
   {
     title: "hybrid",
-    link: "cases/hybrid",
+    link: "/cases/hybrid",
     description: "Hybrid is a Layer 2 blockchain on Arbitrum Nitro, integrating the MoE framework  specialized AI agents.",
     photo: hybrid,
     tags: [
@@ -213,7 +213,7 @@ export const casesData = [
 export const casesMobileData = [
   {
     title: "agent.hub",
-    link: "cases/agnt",
+    link: "/cases/agnt",
     description:
       "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
     photo: agnt,
@@ -227,7 +227,7 @@ export const casesMobileData = [
   },
   {
     title: "Cross-chain transfer bridge",
-    link: "cases/retrobridge",
+    link: "/cases/retrobridge",
     description:
       "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
     photo: retroBridge,
@@ -240,7 +240,7 @@ export const casesMobileData = [
   },
   {
     title: "GBC DAPP",
-    link: "cases/gbc",
+    link: "/cases/gbc",
     description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     photo: gbc,
     tags: [
