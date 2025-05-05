@@ -6,17 +6,20 @@ export const aiDevelopmentBenefits = [
   {
     title: 'AI for process optimization',
     text: "Streamline complex workflows like KYC validation, data tagging, or transaction analysis",
-    icon: AIOptimizationSvg
+    icon: AIOptimizationSvg,
+    hasBlackBg: true
   },
   {
     title: 'AI for operational efficiency',
     text: "Free up resources by automating repetitive tasks or augmenting manual reviews with intelligent filters",
-    icon: AIEfficiency
+    icon: AIEfficiency,
+    hasBlackBg: true
   },
   {
     title: 'Competitive differentiation',
     text: "While your competitors are still exploring dashboards, your AI is already adapting to market shifts in real time",
     icon: CompetitiveSvg,
+    hasBlackBg: true
   }
 ]
 
@@ -100,3 +103,17 @@ export const aiPlatformServiceData = [
     author: "Our team helps tokenize real-world assets — like invoices, property, or intellectual property – using AI-powered valuation and risk modeling to support smarter asset-backed issuance"
   }
 ];
+
+export const aiDevelopmentBotFaqData = [
+  {
+    title: "How long does a custom AI project usually take to launch?",
+    content: "It depends on the complexity and scope. MVPs for narrow use cases (e.g., fraud detection or user scoring) can take 4–6 weeks. More advanced multi-chain systems or AI agents can take 8–12+ weeks, including integration and testing"
+  },
+  {title: "Do you only work with Web3 businesses?",
+    content: "No — but we specialize in Web3 because it demands real-time decision-making and interoperability across decentralized systems. That said, we’ve also built custom AI solutions for fintech, e-commerce, and SaaS products"
+  },
+  {
+    title: "Can you help maintain and retrain the models after launch?",
+    content: "Absolutely. We offer post-launch support, model monitoring, retraining cycles, and infrastructure tuning as part of long-term cooperation. AI isn’t static — it needs iteration, and we build with that in mind"
+  },
+]
