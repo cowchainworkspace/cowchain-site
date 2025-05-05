@@ -1,6 +1,9 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
 import Image from "next/image";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
+import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
@@ -9,52 +12,54 @@ import { HeroSection } from "../components/service/blocks/HeroSection";
 import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
-import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
-import {
-  walletProcessData,
-  cryptoWalletFAQData,
-  walletsAppsData,
-  paymentSystemData,
-  otherRwaServices,
-  walletFeaturesData,
-  CryptoWalletTypesData,
-  blockchainServiceData
-} from "./utils/data";
-import Cases from "../../(home)/blocks/Cases";
-import CasesMobile from "../../(home)/blocks/CasesMobile";
 import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import { metadata } from "./utils/cryptoWalletMetadata";
+import {
+  CryptoWalletTypesData,
+  blockchainServiceData,
+  cryptoWalletFAQData,
+  otherRwaServices,
+  paymentSystemData,
+  walletFeaturesData,
+  walletProcessData,
+  walletsAppsData
+} from "./utils/data";
+
+export { metadata };
 
 const CryptoWalletDev = () => {
   return (
     <section className="overflow-visible">
       <HeroSection
-        title={
-          <>
-            Crypto Wallet Development <br /> Services for Your Needs
-          </>
-        }
-        ttileClasses="md:!pt-0 "
+        title={"Crypto Wallet Development Services for Your Needs"}
+        ttileClasses="md:!pt-0"
+        hightLightClass={"lg:max-w-[1300px]"}
       />
       <Achievements
         tag={"Crypto Wallet Development Services"}
         desc={
           <>
-            Crypto wallets are essential tools in the blockchain <br className="hidden custom1400:block" />{" "}
-            ecosystem, enabling secure storage, management, <br /> and transfer
-            of digital assets. As the digital <br className="hidden custom1400:block" /> economy expands, the demand
-            for reliable{" "}
+            Crypto wallets are essential tools in the blockchain{" "}
+            <br className="hidden custom1400:block" /> ecosystem, enabling
+            secure storage, management, <br /> and transfer of digital assets.
+            As the digital <br className="hidden custom1400:block" /> economy
+            expands, the demand for reliable{" "}
             <span className="violet-gradient-text">
               crypto
               <br className="hidden custom1400:block" /> wallet software{" "}
             </span>{" "}
-            grows, emphasizing the importance <br className="hidden custom1400:block" /> of robust and user-friendly
-            wallet solutions. <br className="hidden custom1400:block" /> Modern wallet app development not only
-            ensures <br className="hidden custom1400:block" /> efficient transactions but also integrates advanced{" "}
-            <br />
+            grows, emphasizing the importance{" "}
+            <br className="hidden custom1400:block" /> of robust and
+            user-friendly wallet solutions.{" "}
+            <br className="hidden custom1400:block" /> Modern wallet app
+            development not only ensures{" "}
+            <br className="hidden custom1400:block" /> efficient transactions
+            but also integrates advanced <br />
             <span className="violet-gradient-text">
               blockchain wallet security
             </span>{" "}
-            measures, fostering <br className="hidden custom1400:block" /> trust among users.
+            measures, fostering <br className="hidden custom1400:block" /> trust
+            among users.
           </>
         }
       />
@@ -76,6 +81,7 @@ const CryptoWalletDev = () => {
             className="pointer-events-none absolute -bottom-[100%] left-0 h-[1800px] w-auto"
           />
         }
+        descClasses="max-w-[500px]"
       />
 
       <Industries
@@ -89,6 +95,7 @@ const CryptoWalletDev = () => {
         topBorder={false}
         customClasses="!grid-cols-2 !pr-0 xl:gap-y-[120px] xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
         itemClasses="!flex-row md:gap-[49px] !min-w-full"
+        itemDescClasses={"max-w-[420px]"}
       />
 
       <ExpertiseServices
@@ -101,7 +108,7 @@ const CryptoWalletDev = () => {
         data={walletProcessData}
         topBorder={true}
         itemTitleClasses="lg:text-[26px] leading-[90px]"
-        descClasses="!mb-0"
+        descClasses="!mb-0 max-w-[520px]"
         customClasses="lg:flex-col"
         sectionContainerClasses="lg:!flex-col gap-[30px] lg:gap-[50px] xl:gap-[70px]"
         itemsClasses="grid lg:grid-cols-2 grid-rows-2 gap-x-[82px] gap-y-[70px] min-w-full"
@@ -154,9 +161,10 @@ const CryptoWalletDev = () => {
         desc={
           <>
             Modern crypto wallets are transforming into comprehensive financial
-            tools by <br className="hidden custom1400:block" /> integrating advanced payment systems. These
-            enhancements empower both <br className="hidden custom1400:block" /> users and businesses, making
-            wallets more versatile in the digital economy
+            tools by <br className="hidden custom1400:block" /> integrating
+            advanced payment systems. These enhancements empower both{" "}
+            <br className="hidden custom1400:block" /> users and businesses,
+            making wallets more versatile in the digital economy
           </>
         }
         itemClasses="md:text-[20px]"
@@ -166,6 +174,8 @@ const CryptoWalletDev = () => {
         itemTitleClasses="lg:text-[20px] leading-[90px]"
         topBorder={false}
         bottomBorder={false}
+        descClasses="max-w-[480px]"
+        titleDescClasses={"!text-white"}
       />
 
       <KeyFeatures
@@ -183,20 +193,20 @@ const CryptoWalletDev = () => {
             </h1>
             <p className="mt-[20px] font-manrope text-[16px] font-[500] leading-[24px] text-[#BBBBBB]">
               With extensive experience in crypto wallet software and blockchain
-              development, our team delivers innovative <br className="hidden custom1400:block" /> solutions
-              tailored to your needs. From digital wallet creation to scalable
-              systems, we ensure top-tier results.
+              development, our team delivers innovative{" "}
+              <br className="hidden custom1400:block" /> solutions tailored to
+              your needs. From digital wallet creation to scalable systems, we
+              ensure top-tier results.
             </p>
-            <p>
-              <br />
-            </p>
+            <p className="mb-15"></p>
             <h1 className=" font-roc  text-[24px] font-[500] uppercase">
               Comprehensive Support Services
             </h1>
             <p className="mt-[20px] text-[16px] font-[500] leading-[24px] text-[#BBBBBB]">
               Our services include post-deployment support, regular updates, and
-              dedicated assistance to ensure your wallet <br className="hidden custom1400:block" /> remains secure
-              and functional. Whether you need help with upgrades or
+              dedicated assistance to ensure your wallet{" "}
+              <br className="hidden custom1400:block" /> remains secure and
+              functional. Whether you need help with upgrades or
               troubleshooting, we’ve got you covered.
             </p>
           </>
@@ -215,9 +225,11 @@ const CryptoWalletDev = () => {
         desc={
           <>
             A professionally developed wallet is crucial for navigating the
-            growing digital economy. By leveraging <br className="hidden lg:block" />
+            growing digital economy. By leveraging{" "}
+            <br className="hidden lg:block" />
             our expertise in crypto wallet services and advanced security, you
-            can create solutions that resonate <br className="hidden lg:block" />
+            can create solutions that resonate{" "}
+            <br className="hidden lg:block" />
             with users and stand out in the market. Contact us today to explore
             how our crypto wallet integration <br className="hidden lg:block" />
             and development services can elevate your blockchain projects.
@@ -244,9 +256,11 @@ const CryptoWalletDev = () => {
                   crypto wallet <br className="hidden lg:block" />
                   development
                 </span>
-                , <br className="hidden lg:block" /> Cowchain provides <br className="hidden lg:block" />
+                , <br className="hidden lg:block" /> Cowchain provides{" "}
+                <br className="hidden lg:block" />
                 <span className="violet-gradient-text">
-                  full-cycle blockchain <br className="hidden lg:block" /> services
+                  full-cycle blockchain <br className="hidden lg:block" />{" "}
+                  services
                 </span>{" "}
                 to support broader{" "}
                 <span className="violet-gradient-text">
@@ -270,13 +284,13 @@ const CryptoWalletDev = () => {
         desc={
           <>
             From secure wallet infrastructure to full-featured white label
-            solutions, our team has helped multiple Web3 products <br /> grow
-            fast without compromising user experience. Whether it’s embedded
-            wallets, multi-chain support, or mobile-first <br /> flows, our
-            crypto wallet services deliver real impact where it counts: in
+            solutions, our team has helped multiple Web3 products compromising
+            user experience. Whether it’s embedded wallets, multi-chain support,
+            or mobile-first services deliver real impact where it counts: in
             retention, security, and usability.
           </>
         }
+        descClasses={"max-w-[888px]"}
       />
       <Cases />
       <CasesMobile />
@@ -289,7 +303,17 @@ const CryptoWalletDev = () => {
           faqHorizontalPadding={true}
         />
       </div>
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact
+        title={"Secure Your Crypto Future Today"}
+        titleClasses={"mb-4 md:mb-0 max-w-[700px] custom1430:text-[64px]"}
+        descriptionClasses={
+          " hidden md:block max-w-[530px] xl:text-base xl:leading-6"
+        }
+        desc={
+          "A professionally developed wallet is crucial for navigating the growing digital economy. By leveraging our expertise in crypto wallet services and advanced security, you can create solutions that resonate with users and stand out in the market. Contact us today to explore how our crypto wallet integration and development services can elevate your blockchain projects."
+        }
+        className="px-4 py-[50px] md:px-[64px] md:py-[107px] "
+      />
     </section>
   );
 };

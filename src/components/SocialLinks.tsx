@@ -9,6 +9,7 @@ import Image from "next/image";
 import FooterForm from "./utils/FooterForm";
 
 export function SocialLinks({ footerForm, isMenu }) {
+  const date = new Date();
   return (
     <div
       className={` flex flex-col gap-y-8 ${
@@ -18,7 +19,8 @@ export function SocialLinks({ footerForm, isMenu }) {
     >
       <div className="max-w-[320px]">
         <p className={`text-left ${isMenu && "text-[12px]"} text-[#bbb]`}>
-          © 2024 Сowchain сo. All rights reserved. {!isMenu && <br />}
+          © {date.getFullYear()} Сowchain сo. All rights reserved.{" "}
+          {!isMenu && <br />}
           For business inquiries{" "}
           <a
             className="ml-1 inline text-left md:text-white md:underline"

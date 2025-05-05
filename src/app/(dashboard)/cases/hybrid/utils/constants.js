@@ -281,7 +281,7 @@ export const hybridTeam = [
 export const hybridProjects = [
   {
     id: 1,
-    tags: ["Mobile App", "Crypto Wallet", "Trading"],
+    tags: [ { isMain: true, tagName: "Mobile App" }, { isMain: false, tagName: "Crypto Wallet" }, { isMain: false, tagName: "Trading" }],
     title: "COINCLUB",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .",
     img: coinclub,
@@ -293,7 +293,11 @@ export const hybridProjects = [
   },
   {
     id: 2,
-    tags: ["Mobile App", "Telegram Mini-apps", "GameFi"],
+    tags: [
+      { isMain: true, tagName: "Mobile App" },
+      { isMain: true, tagName: "Telegram Mini Apps" },
+      { isMain: false, tagName: "GameFi" }
+    ],
     title: "PixelVerse",
     desc: "PixelVerse is a GameFi ecosystem that merges Web2 accessibility with Web3 innovation through Telegram Mini Apps.",
     img: pixelVerse,
@@ -305,7 +309,7 @@ export const hybridProjects = [
   },
   {
     id: 3,
-    tags: ["Mobile App", "Telegram Mini-apps"],
+    tags: [ { isMain: true, tagName: "Mobile App" }, { isMain: true, tagName: "Telegram Mini Apps" }],
     title: "Wenix",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .",
     img: wenix,

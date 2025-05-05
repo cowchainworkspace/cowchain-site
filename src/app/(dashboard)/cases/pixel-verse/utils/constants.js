@@ -175,7 +175,7 @@ export const pixelVerseTeam = [
 export const pixelVerseProjects = [
   {
     id: 1,
-    tags: ['Mobile App', 'Web Development '],
+    tags: [{ isMain: true, tagName: "Mobile App" }, { isMain: false, tagName: "Crypto Wallet" }, { isMain: false, tagName: "Trading" }],
     title: 'COINCLUB',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
     img: coinclub,
@@ -185,7 +185,14 @@ export const pixelVerseProjects = [
   },
   {
     id: 2,
-    tags: ['App Development', 'Web Development '],
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "AI Development" },
+      { isMain: true, tagName: "Blockchain Development" },
+      { isMain: false, tagName: "Bridge" },
+      { isMain: false, tagName: "Staking" },
+      { isMain: false, tagName: "L1" }
+    ],
     title: 'hybrid',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
     img: hybrid,
@@ -195,7 +202,7 @@ export const pixelVerseProjects = [
   },
   {
     id: 3,
-    tags: ['App Development', 'Web Development '],
+    tags: [{ isMain: true, tagName: "Mobile App" }, { isMain: true, tagName: "Telegram Mini Apps" }],
     title: 'Wenix',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
     img: wenix,

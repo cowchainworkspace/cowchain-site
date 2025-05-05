@@ -1,6 +1,9 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
+import dexAdvisoryBg from "@/assets/bg/dexAdvisoryBg.svg";
 import Contact from "@/components/Contact";
 import Image from "next/image";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
@@ -10,19 +13,20 @@ import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { TustByNumbers } from "../web3_fullstack_development/blocks/TustByNumbers";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import { metadata } from "./utils/blockChainConsultingMetadata";
 import {
+  BlockchainServiceData,
   EngagementDevData,
+  IndustriesDexData,
   OurWorksData,
+  TustByNumbersData,
+  blockChainChooseData,
   consultingFAQData,
   consultingProcessData,
-  otherBlockChainServices,
-  TustByNumbersData,
-  IndustriesDexData,
-  BlockchainServiceData
+  otherBlockChainServices
 } from "./utils/data";
-import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
-import Cases from "../../(home)/blocks/Cases";
-import CasesMobile from "../../(home)/blocks/CasesMobile";
+export { metadata };
 
 const BlockChainConsulting = () => {
   return (
@@ -46,23 +50,28 @@ const BlockChainConsulting = () => {
             <span className="violet-gradient-text">
               blockchain consulting company
             </span>{" "}
-            , we deliver <br /> professional{" "}
+            , we deliver <br className="hidden custom1430:block" /> professional{" "}
             <span className="violet-gradient-text">
               blockchain consulting services
             </span>{" "}
-            <br /> tailored to the unique needs of{" "}
+            <br className="hidden custom1430:block" /> tailored to the unique
+            needs of{" "}
             <span className="violet-gradient-text">
               businesses looking to leverage blockchain technology
             </span>
-            . Whether you <br /> are determining which blockchain best suits
-            your <br /> requirements or optimizing your current <br />{" "}
-            infrastructure, our experts are prepared to deliver <br /> deep
-            insights and{" "}
+            . Whether you <br className="hidden custom1430:block" /> are
+            determining which blockchain best suits your{" "}
+            <br className="hidden custom1430:block" /> requirements or
+            optimizing your current <br className="hidden custom1430:block" />{" "}
+            infrastructure, our experts are prepared to deliver{" "}
+            <br className="hidden custom1430:block" /> deep insights and{" "}
             <span className="violet-gradient-text">
               practical blockchain consulting solutions
             </span>
-            . From blockchain advisory services <br />
-            to ongoing development, our approach empowers <br /> companies to{" "}
+            . From blockchain advisory services{" "}
+            <br className="hidden custom1430:block" />
+            to ongoing development, our approach empowers{" "}
+            <br className="hidden custom1430:block" /> companies to{" "}
             <span className="violet-gradient-text">
               maximize blockchain opportunities
             </span>
@@ -179,8 +188,8 @@ const BlockChainConsulting = () => {
           <>
             Cowchain works with leading blockchains like Ethereum, Solana,
             Polygon,
-            <br className="hidden xl:block" /> Binance Smart Chain, and more.
-            Whatever your blockchain needs — expansion,
+            <br className="hidden xl:block" /> BNB Chain, and more. Whatever
+            your blockchain needs — expansion,
             <br className="hidden xl:block" /> integration, or optimization —
             our experts are ready to solve it.
             <p>
@@ -198,41 +207,31 @@ const BlockChainConsulting = () => {
         titleClasses="xl:mb-[60px]"
       />
 
-      <KeyFeatures
-        reverse={true}
-        isOneBlock={true}
+      <ExpertiseServices
+        data={blockChainChooseData}
         title={
           <>
-            Why Choose <br className="hidden xl:block" /> Us as Your
-            <br className="hidden xl:block" /> Blockchain
-            <br className="hidden xl:block" /> Consulting
-            <br className="hidden xl:block" /> Partner?
+            Why Choose <br /> Us as Your
+            <br /> Blockchain
+            <br /> Consulting
+            <br /> Partner?
           </>
         }
-        desc={
-          <>
-            Choosing Cowchain means partnering with an industry-leading
-            blockchain consulting company that is committed to delivering
-            innovative solutions. Our approach is centered on understanding the
-            specific challenges and goals of your business, and we tailor our
-            blockchain consulting services to provide practical, actionable
-            results
-            <p>
-              <br />
-            </p>
-            As a trusted blockchain consulting company, we combine deep
-            technical expertise with a strong business focus, ensuring that
-            every solution we deliver is both technically sound and aligned with
-            your long-term strategy. We work alongside your team, offering
-            continuous support and insights throughout the entire project
-            lifecycle
-          </>
+        sectionContainerClasses={"md:flex-row md:gap-5"}
+        titleClasses="md:mb-0 xl:text-[60px] xl:leading-90"
+        containerClasses="xl:grid"
+        itemTitleClasses={"md:text-[20px] leading-90"}
+        descClasses="max-w-[505px]"
+        bg={
+          <Image
+            alt=""
+            className={
+              "pointer-events-none absolute -bottom-[68%] right-0 hidden md:block"
+            }
+            src={dexAdvisoryBg}
+          />
         }
-        descClasses={"max-w-[519px]"}
-        titleBlockClasses="flex-col gap-1 md:gap-[102px] lg:flex-row lg:justify-between"
-        isTextSecondary={true}
       />
-
       <Feedback
         title={
           <>

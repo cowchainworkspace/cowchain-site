@@ -9,6 +9,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Faq from "react-faq-component";
+import { animateScroll as scroll } from "react-scroll";
+import { useOpenMenu } from "../hooks/useOpenMenu";
 import { SocialLinks } from "./SocialLinks";
 
 const faqRows = {
@@ -116,7 +118,13 @@ const faqStyles = {
 export default function Footer({ footerForm }) {
   const [isBorder, setIsBorder] = useState(false);
   const { isRendering } = useLoader();
+  const { setServiceMenuOpen } = useOpenMenu();
   const pathname = usePathname();
+
+  const openServiceMenu = () => {
+    scroll.scrollToTop();
+    setServiceMenuOpen(true);
+  };
 
   useEffect(() => {
     setIsBorder(pathname === "/sitemap" || pathname === "/error");
@@ -146,11 +154,11 @@ export default function Footer({ footerForm }) {
                   <p className="font-roc text-base font-medium !text-white">
                     WHAT WE DO
                   </p>
-                  <Link href="/services">
-                    <p className="text-[#bbb]">
+                  <button type="button" onClick={openServiceMenu}>
+                    <p className="text-left text-[#bbb]">
                       Services &<br></br> Techonologies
                     </p>
-                  </Link>
+                  </button>
                   <Link href="/cases">
                     <p className="text-[#bbb]">Cases</p>
                   </Link>

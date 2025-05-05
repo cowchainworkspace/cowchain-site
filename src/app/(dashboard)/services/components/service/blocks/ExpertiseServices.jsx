@@ -19,7 +19,7 @@ export function ExpertiseServices({
   titleClasses = "",
   descClasses = "",
   cryptoWalletClass,
-  itemTitleClasses,
+  itemTitleClasses = "",
   containerClasses = "",
   sectionContainerClasses = "",
   titleDescClasses = "",
@@ -59,7 +59,7 @@ export function ExpertiseServices({
           {desc && (
             <p
               className={cn(
-                "body relative z-[2]  my-[40px] max-w-[582px] leading-6 !text-[#BBBBBB] md:my-[20px]",
+                "body relative z-10  my-[40px] max-w-[582px] leading-6 !text-[#BBBBBB] md:my-[20px]",
                 titleDescClasses
               )}
             >

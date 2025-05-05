@@ -142,6 +142,7 @@ export function Industries({
                   <h3
                     className={cn(
                       "mb-[22px] max-w-[310px] whitespace-pre-line text-[18px] uppercase !leading-[90%] md:text-[20px]",
+                      expertise.isMainTitle && "pt-6",
                       itemTitleClasses
                     )}
                   >

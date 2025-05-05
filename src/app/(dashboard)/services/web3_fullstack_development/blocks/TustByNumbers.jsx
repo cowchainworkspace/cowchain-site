@@ -40,7 +40,8 @@ export function TustByNumbers({
   desc,
   isBlockChainConsulting = false,
   typographyContainerClasses = "",
-  noBg = false
+  noBg = false,
+  itemDescClasses = ""
 }) {
   return (
     <section className={`relative  ${home && "h-fit md:h-[700px]"}`}>
@@ -189,7 +190,7 @@ export function TustByNumbers({
                         className={cn(
                           "self-start font-roc text-[18px] font-medium uppercase leading-[90%] text-white text-white  md:text-[30px] custom815:text-[36px]",
                           isRwa
-                            ? "md:!mb-[30px] md:leading-[90%]"
+                            ? "whitespace-pre-line md:!mb-[30px] md:leading-[90%]"
                             : " custom1300:text-[46px]"
                         )}
                       >
@@ -203,7 +204,8 @@ export function TustByNumbers({
                       {
                         "!mt-0 max-w-[306px] md:!mt-0": isBlockChainConsulting,
                         "!mt-0 max-w-[333px] md:!mt-0": isRwa
-                      }
+                      },
+                      itemDescClasses
                     )}
                   >
                     {desc}

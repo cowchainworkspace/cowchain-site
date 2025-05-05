@@ -1,31 +1,31 @@
+import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import React from "react";
-import { HeroSection } from "../components/service/blocks/HeroSection";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
-import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
-import { metadata } from "./utils/icoPlatformMetadata";
+import { HeroSection } from "../components/service/blocks/HeroSection";
 import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import { metadata } from "./utils/icoPlatformMetadata";
 
 import {
   icoPlatformBenefits,
-  icoPlatformsFeatures,
-  icoPlatformProcessData,
-  icoPlatformFaqData,
   icoPlatformChooseData,
+  icoPlatformFaqBotData,
+  icoPlatformFaqData,
+  icoPlatformProcessData,
   icoPlatformServicesData,
-  icoPlatformFaqBotData
+  icoPlatformsFeatures
 } from "./utils/data";
 
-import { Industries } from "../components/service/blocks/Industries/index";
-import FAQ from "../components/service/blocks/FAQ";
-import { Feedback } from "../components/service/blocks/Feedback";
-import { OtherServices } from "../components/service/blocks/OtherServices";
+import whiteLabelBg from "@/assets/bg/white-label-ellipse.webp";
+import { CoreFeaturesRWAbg } from "@/assets/svgComponents/CoreFeaturesRWAbg";
+import Contact from "@/components/Contact";
+import Image from "next/image";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
-import { CoreFeaturesRWAbg } from "@/assets/svgComponents/CoreFeaturesRWAbg";
-import whiteLabelBg from "@/assets/bg/white-label-ellipse.webp";
-import Image from "next/image";
-import Contact from "@/components/Contact";
+import FAQ from "../components/service/blocks/FAQ";
+import { Feedback } from "../components/service/blocks/Feedback";
+import { Industries } from "../components/service/blocks/Industries/index";
+import { OtherServices } from "../components/service/blocks/OtherServices";
 
 export { metadata };
 
@@ -80,7 +80,7 @@ const IcoPlatformDevelopment = () => {
           </>
         }
         sectionContainerClasses={"md:flex-row md:gap-5"}
-        titleClasses="mb-6 md:mb-0 xl:text-[60px] xl:leading-90"
+        titleClasses="mb-0 md:mb-0 xl:text-[60px] xl:leading-90"
         containerClasses="xl:grid xl:gap-9"
         bg={
           <Image
@@ -89,6 +89,7 @@ const IcoPlatformDevelopment = () => {
             src={whiteLabelBg}
           />
         }
+        descClasses="max-w-[519px]"
       />
       <Industries
         title={
@@ -108,6 +109,7 @@ const IcoPlatformDevelopment = () => {
         bg={
           <CoreFeaturesRWAbg className="pointer-events-none absolute -bottom-[90%] right-0 hidden h-auto w-[1100px] lg:block" />
         }
+        itemDescClasses={"max-w-[390px]"}
       />
       <ExpertiseServices
         data={icoPlatformProcessData}
@@ -122,7 +124,7 @@ const IcoPlatformDevelopment = () => {
         itemsClasses="grid md:grid-cols-2 gap-6 md:gap-10 xl:gap-x-[82px] min-w-full"
         titleClasses="xl:text-[60px] xl:leading-90"
         itemTitleClasses={"xl:text-[26px] xl:leading-90"}
-        descClasses={"xl:leading-[1.2] mb-0"}
+        descClasses={"xl:leading-[1.2] mb-0 max-w-[545px]"}
       />
       <div className="w-full overflow-hidden">
         <FAQ
@@ -142,24 +144,33 @@ const IcoPlatformDevelopment = () => {
           itemsClasses={"md:py-[65px]"}
           isDoublePadding={true}
           itemTitleClass={"xl:text-xl xl:leading-90 whitespace-pre-line"}
+          faqContentClasses="max-w-[530px]"
         />
       </div>
       <ExpertiseServices
         title={
           <>
-            Why Choose Blockchain <br className="hidden xl:block" /> ICO
-            Platforms?
+            Why Choose Blockchain <br /> ICO Platforms?
           </>
         }
         data={icoPlatformChooseData}
         sectionContainerClasses={"md:flex-row md:gap-5"}
-        titleClasses="mb-6 md:mb-0 xl:text-[60px] xl:leading-90"
-        containerClasses="grid md:gap-6 xl:gap-15"
+        titleClasses="mb-0 xl:text-[60px] xl:leading-90"
+        containerClasses="grid md:gap-6 xl:gap-9"
+        descClasses="max-w-[465px]"
       />
       <Feedback
-        desc="Our clients know they can rely on Cowchain 
-to deliver reliable, secure blockchain solutions. Here’s what they have to say"
+        desc={
+          <>
+            Our clients know they can rely on Cowchain
+            <br className="hidden custom1430:block" /> to deliver reliable,
+            secure blockchain solutions.
+            <br className="hidden custom1430:block" /> Here’s what they have to
+            say
+          </>
+        }
         imageClasses="hidden md:block"
+        descClasses="max-w-[340px]"
       />
       <div className="relative">
         <div className="w-full overflow-hidden">
@@ -199,14 +210,14 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
         <FAQ noBg={true} data={icoPlatformFaqBotData} />
         <Contact
           titleClasses={
-            "uppercase mb-6 md:mb-0 text-[32px§§§§§§§§§§§§§§§§§§§§§§§§§] xl:max-w-[994px] xl:text-[64px]"
+            "uppercase mb-6 md:mb-0 text-[32px] xl:max-w-[994px] xl:text-[64px]"
           }
           title={"The Future of ICO Platforms for Fundraising"}
           desc={
             "ICO platform development services empower businesses to adopt blockchain technology for efficient and secure fundraising. By integrating advanced tools, smart contracts, and global accessibility, these platforms redefine how projects connect with investors. Ready to launch your crypto project? Contact us today to explore tailored ICO development services that align with your vision."
           }
           descriptionClasses={
-            "xl:max-w-[828px] mb-6 md:mb-0 px-4 md:px-0 xl:text-base xl:font-normal xl:leading-6"
+            "xl:max-w-[800px] mb-6 md:mb-0 px-4 md:px-0 xl:text-base xl:font-normal xl:leading-6"
           }
           className={"py-[50px] xl:py-[119px]"}
         />

@@ -40,7 +40,7 @@ const Agnt = () => {
         }
         headerClasses="font-[550] text-[36px]  font-roc text-center leading-[42px] xl:text-[60px] xl:leading-[58.92px]"
         containerClasses="max-w-[769px] text-center"
-        descriptionClasses="md:max-w-[615px] text-xs text-balance tracking-[0] xl:tracking-wider leading-5 xl:text-sm xl:leading-6 font-manrope"
+        descriptionClasses="md:max-w-[615px] custom1430:max-w-full text-xs text-balance tracking-[0] xl:tracking-wider leading-5 xl:text-sm xl:leading-6 font-manrope"
         sectionClasses={"xl:pt-[102px] xl:pb-[120px]"}
       />
       <Banner

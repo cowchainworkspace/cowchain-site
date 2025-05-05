@@ -13,9 +13,9 @@ import ProjectBasedIcon from "@/assets/svgComponents/industries/ProjectBasedIcon
 import SupplyChain from "@/assets/svgComponents/industries/SupplyChainIcon";
 import TestingIcon from "@/assets/svgComponents/industries/TestingIcon";
 
+import { Advanced } from "../../../../../assets/svgComponents/cryptoWallets/Advanced"; 
 import { MultiCurrencySuppIcon } from "../../../../../assets/svgComponents/cryptoWallets/MultiCurrencySuppIcon";
 import { UserFriendlyInter } from "../../../../../assets/svgComponents/cryptoWallets/UserFriendlyInter"; 
-import { Advanced } from "../../../../../assets/svgComponents/cryptoWallets/Advanced"; 
 
 export const DexExpertiseDesc =
   "We believe that a solid foundation in decentralized exchange development is key to creating platforms that not only meet today’s demands but also evolve with the growing needs of the cryptocurrency market";
@@ -124,19 +124,24 @@ export const otherServices = [
 
 export const otherRwaServices = [
   {
-    text: "UI / UX Design",
+    text: "DeFi Development",
     author:
-      "We craft intuitive and aesthetically pleasing UI/UX designs, focusing on functionality and user experience to ensure seamless interactions across platforms"
+      "We build DeFi products that integrate seamlessly with wallet features – from staking dashboards to liquidity pools – enabling users to manage assets, earn yield, and interact with protocols in just a few clicks."
   },
   {
-    text: "DISCOVERY & CONSULTATIONS",
+    text: "Cryptocurrency Exchange Development",
     author:
-      "Our team provides strategic consultations, offering insights on project discovery, business goals, and digital strategies, helping align your web development projects with industry standards"
+      "Our team creates scalable exchange platforms with wallet integration, offering token swaps, order books, liquidity pools, and compliance-ready architecture for secure digital asset trading."
   },
   {
-    text: "White-label Solutions",
+    text: "Full-stack Development Services",
     author:
-      "Our white-label services allow you to provide bespoke solutions under your own brand, avoiding the need for in-house management"
+      "We handle both the interface and backend layers of blockchain apps, allowing wallets to function as core gateways into full DeFi ecosystems, NFT platforms, and custom agent-based logic."
+  },
+  {
+    text: "NFT Game Development",
+    author:
+      "We design wallet-compatible NFT games that let users store, trade, and use in-game assets directly from their wallets, creating a unified gameplay and asset management experience."
   }
 ];
 
@@ -245,16 +250,21 @@ export const walletFeaturesData = [
   {
     title: "Advanced Security Protocols",
     text: "Our wallets incorporate cutting-edge blockchain wallet security features, such as multi-signature authentication, end-to-end encryption, and biometric verification. These measures safeguard users’ funds and private information.",
-    icon: Advanced
+    icon: Advanced,
+    hasBlackBg: true
   },
   {
     title: "User-Friendly Interface",
     text: "We prioritize creating intuitive and accessible designs. From streamlined navigation to clear transaction histories, our crypto wallet software ensures users of all experience levels can manage their assets effortlessly.",
-    icon: UserFriendlyInter
+    icon: UserFriendlyInter,
+    hasBlackBg: true
+
   },
   {
     title: "Multi-Currency Support",
-    text: "Multi-Currency Support Our solutions support a wide range of cryptocurrencies, integrating advanced crypto wallet integration for seamless operation across blockchain networks. This feature makes our wallets adaptable for user needs.",
-    icon: MultiCurrencySuppIcon
+    text: "Our solutions support a wide range of cryptocurrencies, integrating advanced crypto wallet integration for seamless operation across blockchain networks. This feature makes our wallets adaptable for diverse user needs.",
+    icon: MultiCurrencySuppIcon,
+    hasBlackBg: true
+
   }
 ];

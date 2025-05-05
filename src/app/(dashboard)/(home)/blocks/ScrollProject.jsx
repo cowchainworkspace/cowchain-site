@@ -50,13 +50,18 @@ export const ScrollProject = ({
 
         <div className="absolute bottom-[40px] left-[20px] right-[20px] z-[2] flex flex-col items-start gap-y-[14px] custom480:bottom-[30px]  custom480:left-[38px]  md:w-full md:gap-y-4">
           <div className="flex max-w-[420px] flex-wrap  gap-x-[3px] gap-y-[8px] custom480:hidden custom480:items-start  custom480:gap-x-[8px] group-hover:custom480:flex">
-            {tags.map((tag, index) => (
+            {tags.map(({ tagName, isMain }, index) => (
               <div
                 key={index}
                 className="max-h-[34px] rounded-full bg-white px-[16px] py-2"
               >
-                <p className="text-xs font-medium text-black lg:text-sm">
-                  {tag}
+                <p
+                  className={cn(
+                    "text-xs font-medium text-black lg:text-sm",
+                    isMain && "text-sm font-bold"
+                  )}
+                >
+                  {tagName}
                 </p>
               </div>
             ))}

@@ -26,11 +26,13 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ServicesAndTechnologies } from "../app/(dashboard)/(home)/blocks/ServicesAndTechMenu";
 import { ServicesAndTechnologiesMob } from "../app/(dashboard)/(home)/blocks/ServicesAndTechnologiesMob";
+import { useOpenMenu } from "../hooks/useOpenMenu";
 
 export default function Navbar({ isPageNotFound = false }) {
-  const [burgerOpen, setBurgerOpen] = useState(false);
-  const [serviceMenuOpen, setServiceMenuOpen] = useState(false);
+  const { serviceMenuOpen, setServiceMenuOpen } = useOpenMenu();
   const [serviceMobMenuOpen, setServiceMobMenuOpen] = useState(false);
+  const [burgerOpen, setBurgerOpen] = useState(false);
+
   const pathname = usePathname();
 
   const menuRef = useRef(null);

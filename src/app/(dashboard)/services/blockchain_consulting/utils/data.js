@@ -167,46 +167,50 @@ export const BlockchainServiceData = [
   },
   {
     title: "Blockchain Technology Consulting",
-    desc: (
+    desc: 
       <>
-        <p className="text-secondary">
+
           Complex technologies are difficult to navigate through, but with
           blockchain technology consulting services, we ensure that businesses
           have experts who take the mystique out of this process. We guide on
           blockchain platforms and protocols along with tools to help develop
           high-performance applications.
-        </p>
-        <p>
+
+
           <br />
-        </p>
-        <p className="text-secondary">
+          <br />
+
+
+
           Blockchain consulting ensures that you use the best-suited solutions
           for developing smart contracts, decentralized applications, or supply
           chain management systems. Under the blockchain technologies
           consulting, we help a business in identifying what technology stack is
           correct for their particular need.
-        </p>
+
+
       </>
-    )
+    
   },
   {
     title: "Blockchain Business Consulting",
     desc: (
       <>
-        <p className="text-secondary">
+
           Our blockchain consulting ensures that we help businesses infuse
           technology into the operational processes and help businesses with
           strategic insight into how decentralized systems can streamline
           business workflows and improvise customer trust at reduced costs.
-        </p>
-        <p>
+
+
           <br />
-        </p>
-        <p className="text-secondary">
+          <br />
+
+
           Whether it is finance, healthcare, or logistics, blockchain consulting
           will help to tailor the solution to the needs of every industry to
           enhance productivity and operational transparency.
-        </p>
+
       </>
     )
   }
@@ -227,10 +231,22 @@ export const OurWorksData = [
   }
 ];
 
+
+
+export const blockChainChooseData = [
+  {
+    desc: "Choosing Cowchain means partnering with an industry-leading blockchain consulting company that is committed to delivering innovative solutions. Our approach is centered on understanding the specific challenges and goals of your business, and we tailor our blockchain consulting services to provide practical, actionable results"
+  },
+  {
+
+    desc: "As a trusted blockchain consulting company, we combine deep technical expertise with a strong business focus, ensuring that every solution we deliver is both technically sound and aligned with your long-term strategy. We work alongside your team, offering continuous support and insights throughout the entire project lifecycle"
+  },
+]
+
 export const TustByNumbersData = [
   {
     number: 42.26,
-    desc: "Estimated global blockchain market value in 2024",
+    desc: "Estimated global blockchain market value in 2025",
     sighn: "$",
     sufix: "B",
     decimal: 2
@@ -239,7 +255,7 @@ export const TustByNumbersData = [
     number: 82.4,
     desc: (
       <>
-        <p>Expected CAGR* of the blockchain market from 2024 to 2030</p>
+        <p>Expected CAGR* of the blockchain market from 2025 to 2030</p>
         <p>
           <br />
         </p>{" "}

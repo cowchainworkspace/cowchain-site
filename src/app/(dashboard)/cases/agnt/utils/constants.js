@@ -7,16 +7,16 @@ import {
 import {
   solutionFive,
   solutionFour,
+  solutionMobFive,
+  solutionMobFour,
+  solutionMobOne,
+  solutionMobSix,
+  solutionMobThree,
+  solutionMobTwo,
   solutionOne,
   solutionSix,
   solutionThree,
-  solutionTwo, 
-  solutionMobFive,
-  solutionMobSix,
-  solutionMobFour,
-  solutionMobOne,
-  solutionMobThree,
-  solutionMobTwo
+  solutionTwo 
 } from "../../../../../../public/cases/agnt/solutions";
 
 
@@ -249,7 +249,12 @@ export const agntTeam = [
 export const agntProjects = [
   {
     id: 1,
-    tags: ['Web Development', 'Defi', 'Bridge', "NFT"],
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "Bridge" },
+      { isMain: false, tagName: "NFT" }
+    ],
     title: 'RETROBRIDGE',
     desc: 'RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.',
     img: crossChain,
@@ -260,7 +265,11 @@ export const agntProjects = [
   },
   {
     id: 2,
-    tags: ['Web Development', 'Trading', "NFT"],
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "NFT" }
+    ],
     title: 'GMX BLUEBERRY CLUB',
     desc: 'GBC is a next-generation NFT platform that combines customization, trading, and gamification.',
     img: gbc,
@@ -271,7 +280,17 @@ export const agntProjects = [
   },
   {
     id: 3,
-    tags: ["Web Development ", "Mobile App", "GameFi", "Trading", "DEX", "DeFi", "NFT", "Staking", "Crypto Wallet"],
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "Mobile App" },
+      { isMain: false, tagName: "GameFi" },
+      { isMain: false, tagName: "Crypto Wallet" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "DEX" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "NFT" },
+      { isMain: false, tagName: "Staking" }
+    ],
     title: 'STEP APP',
     desc: 'StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.',
     img: m2eNewOne,
