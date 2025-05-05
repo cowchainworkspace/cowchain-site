@@ -1,6 +1,9 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
 import Image from "next/image";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
+import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
@@ -9,17 +12,16 @@ import { HeroSection } from "../components/service/blocks/HeroSection";
 import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
-import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import { metadata } from "./utils/cryptoLotteryMetadata";
 import {
   cryptoLotteryFAQData,
-  otherLotteryServices,
+  howToLaunchLotteryData,
   keyFeaturesLotteryData,
-  whyCryptoLotteryData,
-  howToLaunchLotteryData
+  otherLotteryServices,
+  whyCryptoLotteryData
 } from "./utils/data";
-import Cases from "../../(home)/blocks/Cases";
-import CasesMobile from "../../(home)/blocks/CasesMobile";
-import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+export { metadata };
 
 const CryptoLottery = () => {
   return (

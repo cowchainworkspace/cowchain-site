@@ -82,7 +82,8 @@ export const Feedback = ({
       solutions that meet the unique needs of each project
     </>
   ),
-  imageClasses = ""
+  imageClasses = "",
+  descClasses = ""
 }) => {
   return (
     <section
@@ -112,7 +113,12 @@ export const Feedback = ({
               <h3 className="uppercase text-white lg:text-[42px] custom1430:text-[60px]">
                 {title}
               </h3>
-              <p className=" mt-[30px] max-w-[592px] text-base leading-6 text-[#BBBBBB]">
+              <p
+                className={cn(
+                  " mt-[30px] max-w-[592px] text-base leading-6 text-[#BBBBBB]",
+                  descClasses
+                )}
+              >
                 {desc}
               </p>
               <div className="mt-10 flex flex-col gap-y-4 md:mt-16 lg:mt-24 xl:mt-36">

@@ -3,6 +3,6 @@ export const metadata = {
   description: "Easily launch your White Label Exchange with Cowchain! Customize features, ensure secure transactions, and start your crypto business today.",
   metadataBase: new URL("https://cowchain.io/"),
   alternates: {
-    canonical: "/exchange"
+    canonical: "/services/exchange"
   }
 };

@@ -1,28 +1,27 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
 import Image from "next/image";
+import Cases from "../../(home)/blocks/Cases";
+import CasesMobile from "../../(home)/blocks/CasesMobile";
+import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
 import Achievements from "../components/service/blocks/Achievements";
 import { ExpertiseServices } from "../components/service/blocks/ExpertiseServices";
 import FAQ from "../components/service/blocks/FAQ";
 import { Feedback } from "../components/service/blocks/Feedback";
 import { HeroSection } from "../components/service/blocks/HeroSection";
-import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
-import { CoreFeaturesRWAbg } from "../../../../assets/svgComponents/CoreFeaturesRWAbg";
+import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
 import {
+  benefitsNftGameData,
+  howToGetStartedNftGameData,
   keyFeaturesOfNftData,
-  whyChooseNftGameData,
-  web3DesignTrendsData,
   nftGameFAQData,
   otherNftGameServices,
-  challengesUiUxData,
-  benefitsNftGameData,
-  howToGetStartedNftGameData
+  whyChooseNftGameData
 } from "./utils/data";
-import Cases from "../../(home)/blocks/Cases";
-import CasesMobile from "../../(home)/blocks/CasesMobile";
-import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import { metadata } from "./utils/nftGameMetadata";
+export { metadata };
 
 const NftGameDev = () => {
   return (
@@ -60,6 +59,7 @@ const NftGameDev = () => {
             belongs to the player, not the game server
           </>
         }
+        subClasses="custom1430:max-w-[840px]"
       />
 
       <KeyFeatures
@@ -94,7 +94,7 @@ const NftGameDev = () => {
         data={whyChooseNftGameData}
         topBorder={true}
         itemTitleClasses="lg:text-[20px] leading-[90%]"
-        descClasses="!mb-0"
+        descClasses="!mb-0 custom1430:max-w-[490px]"
         customClasses="lg:flex-col"
         sectionContainerClasses="lg:!flex-col gap-[30px] lg:gap-[50px] xl:gap-[107px]"
         itemsClasses="grid lg:grid-cols-2 lg:grid-rows-1 gap-x-[82px] gap-y-[70px] min-w-full"
@@ -136,9 +136,10 @@ const NftGameDev = () => {
         }
         data={benefitsNftGameData}
         cryptoWalletClass="lg:mb-[80px]"
-        sectionContainerClasses="lg:pb-[102px]"
+        sectionContainerClasses="lg:pb-[102px] md:flex-row"
         itemTitleClasses="lg:text-[20px]"
         titleClasses="xl:!text-[60px] xl:mb-[60px]"
+        descClasses="max-w-[505px]"
       />
 
       <ExpertiseServices
@@ -153,9 +154,11 @@ const NftGameDev = () => {
         topBorder={false}
         bottomBorder={false}
         itemClasses="md:text-[20px]"
+        sectionContainerClasses="md:flex-row"
         cryptoWalletClass="lg:mb-[80px]"
         titleClasses="lg:!text-[60px]"
-        itemTitleClasses="lg:text-[20px] leading-[90px]"
+        itemTitleClasses="lg:text-[20px] leading-[90px] block max-w-[320px]"
+        descClasses="max-w-[500px]"
         bg={
           <CoreFeaturesRWAbg className="pointer-events-none absolute -bottom-[10%] right-0 h-auto w-[1200px]" />
         }
@@ -232,7 +235,11 @@ const NftGameDev = () => {
         </div>
       </div>
 
-      <Contact className="px-[64px] py-[159px] md:pb-[127px] md:pt-[169px]" />
+      <Contact
+        titleClasses={"mb-4 md:mb-0"}
+        descriptionClasses={"mb-4 md:mb-0"}
+        className="px-4 py-[50px] md:pb-[127px] md:pt-[169px]"
+      />
     </section>
   );
 };

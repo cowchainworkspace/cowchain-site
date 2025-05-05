@@ -3,6 +3,6 @@ export const metadata = {
   description: "Create your own ICO effortlessly with our ICO constructor. Customize your platform, launch tokens, and manage fundraising with ease and security.",
   metadataBase: new URL("https://cowchain.io/"),
   alternates: {
-    canonical: "/ico_constructor"
+    canonical: "/services/ico_constructor"
   }
 };
