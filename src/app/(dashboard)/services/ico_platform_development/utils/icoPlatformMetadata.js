@@ -3,6 +3,6 @@ export const metadata = {
   description: "Launch your ICO with Cowchain.io's expert platform development services. Secure, scalable, and tailored solutions for your blockchain project.",
   metadataBase: new URL("https://cowchain.io/"),
   alternates: {
-    canonical: "/ico_platform_development"
+    canonical: "/services/ico_platform_development"
   }
 };
