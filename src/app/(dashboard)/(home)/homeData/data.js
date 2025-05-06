@@ -1,9 +1,3 @@
-import payment from "@/assets/cases/newCases/CryptoExchangeImg.png";
-import hotel from "@/assets/cases/newCases/HotelBusinessImg.png";
-import bridge from "@/assets/cases/newCases/crossChainTransferBridgeImg.png";
-import finance from "@/assets/cases/newCases/cryptoWalletApp2Img.png";
-import wallet from "@/assets/cases/newCases/cryptoWalletAppImg.png";
-import m2e from "@/assets/cases/newCases/m2ePlatformImg.png";
 import bg from "@/assets/homepage/bg.png";
 import linkedin from "@/assets/homepage/linkedin.svg";
 import pic1 from "@/assets/homepage/projects/1.jpg";
@@ -145,68 +139,115 @@ export const benefitsData = [
 
 export const casesData = [
   {
-    title: `agenthub`,
-    link: "",
+    title: "agent.hub",
+    link: "/cases/agnt",
     description:
       "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
     photo: agnt,
-    tags: ["Web Development", "AI Development", "DeFi", "Crypto Wallet", "NFT"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "AI Development" },
+      { isMain: false, tagName: "Crypto Wallet" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "NFT" }
+    ]
   },
   {
     title: "Cross-chain transfer bridge",
-    link: "",
+    link: "/cases/retrobridge",
     description:
       "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
     photo: retroBridge,
-    tags: ["Web Development", "DeFi", "Bridge", "NFT"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "Bridge" },
+      { isMain: false, tagName: "NFT" }
+    ]
   },
   {
     title: "GBC DAPP",
-    link: "",
+    link: "/cases/gbc",
     description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     photo: gbc,
-    tags: ["Web Development", "Trading", "NFT"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "NFT" }
+    ]
   },
   {
     title: "step app",
-    link: "",
+    link: "/cases/step-app",
     description:
       "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
     photo: stepUp,
-    tags: ["Web Development", "Mobile App", "GameFi", "Trading", "DeFi", "NFT", "Staking", "Crypto Wallet"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "Mobile App" },
+      { isMain: false, tagName: "GameFi" },
+      { isMain: false, tagName: "Crypto Wallet" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "DEX" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "NFT" },
+      { isMain: false, tagName: "Staking" }
+    ]
   },
   {
     title: "hybrid",
-    link: "",
+    link: "/cases/hybrid",
     description: "Hybrid is a Layer 2 blockchain on Arbitrum Nitro, integrating the MoE framework  specialized AI agents.",
     photo: hybrid,
-    tags: ["Web Development", "Blockchain Development", "Blockchain Development", "Bridge", "Staking", "L1"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "AI Development" },
+      { isMain: true, tagName: "Blockchain Development" },
+      { isMain: false, tagName: "Bridge" },
+      { isMain: false, tagName: "Staking" },
+      { isMain: false, tagName: "L1" }
+    ]
   },
 ];
 
 export const casesMobileData = [
   {
-    title: `agenthub`,
-    link: "",
+    title: "agent.hub",
+    link: "/cases/agnt",
     description:
       "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
     photo: agnt,
-    tags: ["Web Development", "AI Development", "DeFi", "Crypto Wallet", "NFT"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "AI Development" },
+      { isMain: false, tagName: "Crypto Wallet" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "NFT" }
+    ]
   },
   {
     title: "Cross-chain transfer bridge",
-    link: "",
+    link: "/cases/retrobridge",
     description:
       "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
     photo: retroBridge,
-    tags: ["Web Development", "DeFi", "Bridge", "NFT"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "Bridge" },
+      { isMain: false, tagName: "NFT" }
+    ]
   },
   {
     title: "GBC DAPP",
-    link: "",
+    link: "/cases/gbc",
     description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     photo: gbc,
-    tags: ["Web Development", "Trading", "NFT"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "NFT" }
+    ]
   },
 ];
 
@@ -319,7 +360,7 @@ export const servicesBlocksData = [
         link: "/services/cryptocurrency_exchange"
       },
       { title: "P2P crypto exchange", link: "/services/p2p_crypto_exchange" },
-      { title: "ICO Platform", link: "/services/ico_platform" },
+      { title: "ICO Platform", link: "/services/ico_platform_development" },
       { title: "RWA Tokenization", link: "/services/rwa_tokenization" },
       { title: "NFT Game", link: "/services/nft_game" },
       { title: "Metaverse", link: "/services/metaverse" }

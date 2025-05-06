@@ -1,30 +1,37 @@
 import Tag from "@/components/ui/tag";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
-export const CaseSplash = ({ title, tags, img_mobile, img_desktop, link }) => {
+export const CaseSplash = ({
+  title,
+  tags,
+  img_mobile,
+  img_desktop,
+  link,
+  id
+}) => {
   return (
     <Link
-      href={link}
+      href={link + `?id=${id}`}
       className="group relative flex w-full items-end justify-start border-t border-th-fade"
     >
       <Image
-        src={img_desktop}
-        className="hidden max-h-[560px] w-full object-cover lg:block"
-        alt="Case"
-        width={1920}
-        height={560}
+        src={img_desktop.data[0].attributes.url}
+        width={img_desktop.data[0].attributes.width}
+        height={img_desktop.data[0].attributes.height}
+        className=" hidden max-h-[560px] w-full object-cover lg:block"
+        alt=""
       />
       <Image
-        src={img_mobile}
-        className="block max-h-[560px] min-h-[500px] w-full object-cover lg:hidden"
-        alt="Case"
-        width={1920}
-        height={500}
+        src={img_mobile.data[0].attributes.url}
+        width={img_desktop.data[0].attributes.width}
+        height={img_desktop.data[0].attributes.height}
+        className=" block max-h-[560px] min-h-[500px] w-full object-cover lg:hidden"
+        alt=""
       />
       <div className="absolute  bottom-1/2 right-10 ">
         <Link
-          href={link}
+          href={link + `?id=${id}`}
           className="mx-auto  hidden h-24 w-24 cursor-pointer items-center justify-center rounded-full bg-white text-center font-roc text-sm font-medium uppercase text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:flex lg:h-48 lg:w-48 lg:text-base"
         >
           View Project

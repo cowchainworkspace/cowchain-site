@@ -1,4 +1,3 @@
-
 import axios from 'axios';
 import qs from 'qs';
 
@@ -14,25 +13,21 @@ export async function getArticleBySlug(currentSlug) {
       }
     },
     populate: {
-      banner_img: {
-        populate: ["url"]
-      },
-      author_avatar: {
-        populate: ["url"]
-      },
+      banner_img: true,
+      author_avatar: true,
       article_paragraphs: {
-        populate: "*"
+        populate: '*',
       },
       SEO: {
-        populate: "*"
+        populate: '*',
       },
       article_tag: {
-        fields: ["tag_name"]
+        fields: ['tag_name'],
       }
     },
   }, {
     encodeValuesOnly: true,
-  })
+  });
 
   API_URL.search = queryParams;
   const res = await axios.get(
@@ -108,7 +103,7 @@ export async function updateArticleViews(articleId) {
   }
 }
 
-export async function getMoreArticles(currentSlug) {
+export async function getMoreArticles(currentSlug, pageParam) {
   const queryParams = qs.stringify({
     filters: {
       slug: {
@@ -123,7 +118,7 @@ export async function getMoreArticles(currentSlug) {
     },
     sort: ["date:desc"],
     fields: ['article_title', "slug", "id", "article_description"],
-    pagination: { pageSize: 8 },
+    pagination: { page: pageParam, pageSize: 8 },
  
   }, {
     encodeValuesOnly: true,

@@ -1,14 +1,15 @@
-import FooterForm from "./utils/FooterForm";
 import linkedin from "@/assets/footer/linkedin.svg";
+import mail from "@/assets/footer/mail.svg";
+import medium from "@/assets/footer/medium.svg";
 import telegram from "@/assets/footer/telegram.svg";
 import twitter from "@/assets/footer/twitter.svg";
-import medium from "@/assets/footer/medium.svg";
-import mail from "@/assets/footer/mail.svg";
-import Image from "next/image";
-import upwork from "@/assets/homepage/upwork.svg";
 import clutch from "@/assets/homepage/clutch.svg";
+import upwork from "@/assets/homepage/upwork.svg";
+import Image from "next/image";
+import FooterForm from "./utils/FooterForm";
 
 export function SocialLinks({ footerForm, isMenu }) {
+  const date = new Date();
   return (
     <div
       className={` flex flex-col gap-y-8 ${
@@ -18,7 +19,8 @@ export function SocialLinks({ footerForm, isMenu }) {
     >
       <div className="max-w-[320px]">
         <p className={`text-left ${isMenu && "text-[12px]"} text-[#bbb]`}>
-          © 2024 Сowchain сo. All rights reserved. {!isMenu && <br />}
+          © {date.getFullYear()} Сowchain сo. All rights reserved.{" "}
+          {!isMenu && <br />}
           For business inquiries{" "}
           <a
             className="ml-1 inline text-left md:text-white md:underline"
@@ -37,7 +39,7 @@ export function SocialLinks({ footerForm, isMenu }) {
         >
           <Image
             alt="linkedin"
-            className="w-[54px]"
+            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
             src={linkedin}
           ></Image>
         </a>
@@ -48,7 +50,7 @@ export function SocialLinks({ footerForm, isMenu }) {
         >
           <Image
             alt="telegram"
-            className="w-[54px]"
+            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
             src={telegram}
           ></Image>
         </a>
@@ -59,7 +61,7 @@ export function SocialLinks({ footerForm, isMenu }) {
         >
           <Image
             alt="twitter"
-            className="w-[54px]"
+            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
             src={twitter}
           ></Image>
         </a>
@@ -70,7 +72,7 @@ export function SocialLinks({ footerForm, isMenu }) {
         >
           <Image
             alt="medium"
-            className="w-[54px]"
+            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
             src={medium}
           ></Image>
         </a>
@@ -81,7 +83,7 @@ export function SocialLinks({ footerForm, isMenu }) {
         >
           <Image
             alt="mail"
-            className="w-[54px]"
+            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
             src={mail}
           ></Image>
         </a>
@@ -91,7 +93,7 @@ export function SocialLinks({ footerForm, isMenu }) {
           target="_blank"
         >
           <Image
-            className="w-[54px]"
+            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
             src={upwork}
             alt=""
           ></Image>
@@ -102,7 +104,7 @@ export function SocialLinks({ footerForm, isMenu }) {
           target="_blank"
         >
           <Image
-            className="w-[54px]"
+            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
             src={clutch}
             alt=""
           ></Image>

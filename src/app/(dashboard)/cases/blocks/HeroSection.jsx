@@ -1,13 +1,15 @@
-import React from "react";
 import bg_lg from "@/assets/bg/clients_header_bg_lg.png";
-import Tag from "@/components/ui/tag";
-import { Helmet } from "react-helmet";
-import Image from "next/image";
-import home from "@/assets/icons/home.png";
-import Link from "next/link";
 import arrow from "@/assets/icons/arrow.svg";
+import home from "@/assets/icons/home.png";
+import Tag from "@/components/ui/tag";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { Helmet } from "react-helmet";
+import CasesFilter from "../components/CasesFilter";
+import { casesTags } from "../constants";
 
-export const HeroSection = ({ setTags, tags }) => {
+export const HeroSection = ({ setTag, currentTag }) => {
   return (
     <section className="relative pt-20 lg:pt-[120px]">
       <Helmet>
@@ -31,7 +33,7 @@ export const HeroSection = ({ setTags, tags }) => {
         <h1 className="mt-4 cursor-default text-5xl uppercase text-white lg:mt-6 lg:max-w-[1200px] lg:text-[100px]">
           we offer the diversity of skills
         </h1>
-        <div className="my-14 flex items-center justify-end gap-2 lg:justify-between"></div>
+        <CasesFilter setTag={setTag} tags={casesTags} currentTag={currentTag} />
       </div>
     </section>
   );

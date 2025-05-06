@@ -69,10 +69,10 @@ const Cases = () => {
   return (
     <section
       ref={containerRef}
-      className="relative z-10 hidden h-[546px] border-b border-b-th-fade custom480:block custom480:h-[624px] xl:flex"
+      className="relative z-10 hidden  border-b border-b-th-fade custom480:block custom480:h-[624px] xl:flex"
     >
       <Swiper
-        className="flex h-[546px] custom480:h-[624px] fullSlider:!hidden"
+        className="flex  custom480:h-[624px] fullSlider:!hidden"
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -89,7 +89,7 @@ const Cases = () => {
           casesData.map((project, index) => (
             <SwiperSlide
               key={index}
-              className="h-[546px] max-w-[480px] custom480:h-[624px]"
+              className=" max-w-[480px] custom480:h-[624px]"
             >
               <ScrollProject key={index} index={index} {...project} />
             </SwiperSlide>
@@ -99,10 +99,7 @@ const Cases = () => {
       <div className="hidden w-full justify-center fullSlider:flex">
         {casesData &&
           casesData.map((project, index) => (
-            <div
-              key={index}
-              className="h-[546px]  max-w-[480px] custom480:h-[624px]"
-            >
+            <div key={index} className="max-w-[480px] custom480:h-[624px]">
               <ScrollProject key={index} index={index} {...project} />
             </div>
           ))}

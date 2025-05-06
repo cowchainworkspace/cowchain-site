@@ -32,6 +32,7 @@ const BlogList = ({ isClicking, handleClick }) => {
   );
 
   const totalArticlesInDB = articles?.pages.at(-1).meta.pagination.total;
+
   return (
     <div>
       <section className="container max-w-[1440px] px-0">
@@ -43,7 +44,7 @@ const BlogList = ({ isClicking, handleClick }) => {
                   <Post
                     handleClick={handleClick}
                     key={article.id}
-                    atributes={article.attributes}
+                    atributes={article}
                     isDisabled={isClicking}
                   />
                 ))}
@@ -52,7 +53,7 @@ const BlogList = ({ isClicking, handleClick }) => {
                 {post.data.slice(2).map((article) => (
                   <Post
                     key={article.id}
-                    atributes={article.attributes}
+                    atributes={article}
                     isThreeLines={true}
                     handleClick={handleClick}
                     isDisabled={isClicking}

@@ -34,7 +34,6 @@ export const useGetMorePosts = (currentSlug) => {
     onError: (err) => {
       console.error(err);
     },
- 
   });
 }
 

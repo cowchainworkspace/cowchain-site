@@ -26,11 +26,13 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ServicesAndTechnologies } from "../app/(dashboard)/(home)/blocks/ServicesAndTechMenu";
 import { ServicesAndTechnologiesMob } from "../app/(dashboard)/(home)/blocks/ServicesAndTechnologiesMob";
+import { useOpenMenu } from "../hooks/useOpenMenu";
 
 export default function Navbar({ isPageNotFound = false }) {
-  const [burgerOpen, setBurgerOpen] = useState(false);
-  const [serviceMenuOpen, setServiceMenuOpen] = useState(false);
+  const { serviceMenuOpen, setServiceMenuOpen } = useOpenMenu();
   const [serviceMobMenuOpen, setServiceMobMenuOpen] = useState(false);
+  const [burgerOpen, setBurgerOpen] = useState(false);
+
   const pathname = usePathname();
 
   const menuRef = useRef(null);
@@ -123,10 +125,6 @@ export default function Navbar({ isPageNotFound = false }) {
   };
 
   const anchorLinks = [
-    {
-      title: "Services & Technologies",
-      link: "/services"
-    },
     {
       title: "Cases",
       link: "/cases"
@@ -258,14 +256,12 @@ export default function Navbar({ isPageNotFound = false }) {
           }
         >
           <nav className="hidden w-full max-w-[360px] items-center gap-[80px]  pl-12 lg:flex xl:max-w-md">
-            {/* for future services menu */}
-
-            {/* <p
+            <p
               className="menu-toggle-button navlink mt-1 cursor-pointer"
               onClick={toggleServices}
             >
               Services & Technologies
-            </p> */}
+            </p>
             {anchorLinks.map((link, index) => (
               <Link key={index} href={link.link}>
                 <p className="navlink mt-1">{link.title}</p>
@@ -360,9 +356,7 @@ export default function Navbar({ isPageNotFound = false }) {
                       />
                     ) : (
                       <>
-                        {/* for future services menu */}
-
-                        {/* <div
+                        <div
                           onClick={(e) => {
                             toggleMobServices(e);
                           }}
@@ -376,7 +370,7 @@ export default function Navbar({ isPageNotFound = false }) {
                             src={arrow}
                             alt=""
                           ></Image>
-                        </div> */}
+                        </div>
                         {anchorLinks.map((link, index) => (
                           <Link
                             key={index}

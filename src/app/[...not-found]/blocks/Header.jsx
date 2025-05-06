@@ -37,7 +37,6 @@ export default function Header() {
       /* empty */
     }
     setIsSubmit(true);
-
     reset();
   };
 

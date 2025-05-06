@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/(dashboard)/services/blocks/Blocks": [
+        "./src/app/(dashboard)/services/blocks/Blocks.jsx"
+      ]
     }
   }
 }

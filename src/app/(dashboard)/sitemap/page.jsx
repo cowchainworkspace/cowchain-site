@@ -1,69 +1,12 @@
-import React from "react";
-import { HeroSection } from "./blocks/HeroSections";
-import Link from "next/link";
 import dot from "@/assets/icons/dot.png";
 import Image from "next/image";
-import { Descriptions } from "antd";
+import Link from "next/link";
+import React from "react";
+import { HeroSection } from "./blocks/HeroSections";
+import { casesLinks, links } from "./data/data";
+import { metadata } from "./data/siteMapMetaData";
 
-const links = [
-  {
-    title: "Cowchain main page",
-    link: "/"
-  },
-  {
-    title: "Services & Technologies",
-    link: "/services"
-  },
-  {
-    title: "Cases",
-    link: "/cases"
-  },
-  {
-    title: "Clients",
-    link: "/clients"
-  },
-  {
-    title: "Team",
-    link: "/team"
-  },
-  {
-    title: "Privacy Policy",
-    link: "/policy"
-  }
-];
-
-const casesLinks = [
-  {
-    title: "Exchange wallet app",
-    link: "/cases/payment"
-  },
-  {
-    title: "Integration Blockchain into Hotel business",
-    link: "/cases/hotel"
-  },
-  {
-    title: "Cross-chain Transfer Bridge",
-    link: "/cases/bridge"
-  },
-  {
-    title: "M2E platform",
-    link: "/cases/move"
-  },
-  {
-    title: "Decentralized Crypto Exchange",
-    link: "/cases/finance"
-  },
-  {
-    title: "Crypto wallet app",
-    link: "/cases/wallet"
-  }
-];
-
-export const metadata = {
-  metadataBase: new URL("https://cowchain.io/sitemap"),
-  title: "Decentralized Web3 Development Services | Cowchain",
-  description: `Discover Cowchain's blockchain expertise and its revolutionary impact on decentralized applications and business solutions.`
-};
+export { metadata };
 
 export default function Page() {
   return (

@@ -4,16 +4,14 @@ import Image from "next/image";
 export const TeamCard = ({ name, role, photo, social, index }) => {
   return (
     <div
-      className={cn(
-        "group relative flex min-h-full flex-col  justify-start",
-      )}
+      className={cn("group relative flex min-h-full flex-col  justify-start")}
     >
       <div
-        className="h-[100vh] max-h-[380px] w-[100vw] max-w-[335px] md:max-h-[478px] md:max-w-[404px] self-center bg-cover bg-top bg-no-repeat md:p-8"
+        className="h-[100vh] max-h-[380px] w-[100vw] max-w-[335px] self-center bg-cover bg-top bg-no-repeat md:max-h-[478px] md:max-w-[404px] md:p-8"
         style={{ backgroundImage: `url(${photo.src})` }}
       ></div>
       <div>
-        <div className="flex flex-col mb-[20px] justify-between items-start gap-[2px] md:gap-2 md:px-3 pt-[32px] md:pt-[38px]">
+        <div className="mb-[20px] flex flex-col items-start justify-between gap-[2px] pt-[32px] md:gap-2 md:px-3 md:pt-[38px]">
           <span className="z-10 font-roc text-lg uppercase text-white">
             {name}
           </span>

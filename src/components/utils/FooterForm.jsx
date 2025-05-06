@@ -38,7 +38,7 @@ export default function FooterForm({ classes = "" }) {
     <section className={classes}>
       <form
         onSubmit={handleSubmit(sendFormData)}
-        className={cn("footerform mb-2 flex h-12 max-w-xl items-stretch")}
+        className={cn("footerform z-50 mb-2 flex h-12 max-w-xl items-stretch")}
       >
         <input
           type="email"

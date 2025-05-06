@@ -14,7 +14,8 @@ export const ScrollProject = ({
   mobile = false
 }) => {
   return (
-    <div
+    <Link
+      href={link}
       id={"project-" + id}
       className={cn(
         "project-card group relative flex cursor-pointer justify-center",
@@ -26,7 +27,7 @@ export const ScrollProject = ({
         }
       )}
     >
-      <button
+      <div
         className={cn("relative flex flex-col  items-start md:w-[547px]", {
           "h-[624px] w-[480px]": !mobile,
           " max-w-[375px] md:h-[419px]": mobile,
@@ -49,13 +50,18 @@ export const ScrollProject = ({
 
         <div className="absolute bottom-[40px] left-[20px] right-[20px] z-[2] flex flex-col items-start gap-y-[14px] custom480:bottom-[30px]  custom480:left-[38px]  md:w-full md:gap-y-4">
           <div className="flex max-w-[420px] flex-wrap  gap-x-[3px] gap-y-[8px] custom480:hidden custom480:items-start  custom480:gap-x-[8px] group-hover:custom480:flex">
-            {tags.map((tag, index) => (
+            {tags.map(({ tagName, isMain }, index) => (
               <div
                 key={index}
                 className="max-h-[34px] rounded-full bg-white px-[16px] py-2"
               >
-                <p className="text-xs font-medium text-black lg:text-sm">
-                  {tag}
+                <p
+                  className={cn(
+                    "text-xs font-medium text-black lg:text-sm",
+                    isMain && "text-sm font-bold"
+                  )}
+                >
+                  {tagName}
                 </p>
               </div>
             ))}
@@ -68,7 +74,7 @@ export const ScrollProject = ({
             {description}
           </p>
         </div>
-      </button>
+      </div>
 
       <div
         style={{
@@ -76,6 +82,6 @@ export const ScrollProject = ({
         }}
         className="absolute bottom-0 z-[1] hidden h-full w-full custom480:group-hover:flex"
       ></div>
-    </div>
+    </Link>
   );
 };

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 export const CollapsedIcon = ({ logo, alt }) => {
@@ -9,7 +8,7 @@ export const CollapsedIcon = ({ logo, alt }) => {
     >
       {React.createElement(logo)}
       <div className="tool-text hidden pl-1 text-center md:pl-2">
-        <p className=" text-xs md:text-[14px]">{alt}</p>
+        <p className=" text-xs md:text-sm">{alt}</p>
       </div>
     </div>
   );
