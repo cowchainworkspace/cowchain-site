@@ -12,7 +12,6 @@ import {
   overviewItems,
   pixelVerseProjects,
   pixelVerseSlides,
-  pixelVerseTags,
   pixelVerseTeam
 } from "./utils/constants";
 import { metadata } from "./utils/pixelVerseMetadata";

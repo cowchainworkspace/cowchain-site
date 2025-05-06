@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import RightArrowSvg from "public/svgIcons/RightArrowSvg";
 import React from "react";
@@ -8,7 +7,7 @@ import AgntOverviewItems from "../AgntOverviewItems";
 const AgntProjectOverView = () => {
   return (
     <section>
-      <div className="mx-auto max-w-[1440px] pt-[50px] md:px-8 lg:px-10 xl:pl-[97px] xl:pr-[109px] xl:pt-[118px]">
+      <div className="mx-auto max-w-[1440px] pt-[50px] md:px-8 lg:px-10 xl:py-30 xl:pl-[97px] xl:pr-[109px]">
         <div className="grid gap-[50px] md:grid-cols-2 xl:grid-cols-[1fr_521px] xl:gap-[133px]">
           <div className="flex flex-col px-4 md:px-0">
             <div className="flex flex-col gap-6 xl:gap-[30px]">
@@ -46,13 +45,6 @@ const AgntProjectOverView = () => {
                 <RightArrowSvg />
               </Link>
             </div>
-            <Image
-              src={"/cases/agnt/agent-review.webp"}
-              width={390}
-              height={691}
-              alt="Agent Person"
-              className="ml-auto hidden xl:block"
-            />
           </div>
           <AgntOverviewItems items={overviewAgntItems} />
         </div>

@@ -20,15 +20,12 @@ const faqRows = {
       title: <h2 className="text-[16px] leading-[16px]">WHAT WE DO</h2>,
       content: (
         <div className="footer-links mb-8 mt-4 flex flex-col gap-y-4">
-          <AnchorLink href="#expertise">
+          <button onClick={() => scroll.scrollToTop()}>
             <p>Services & Techonologies</p>
-          </AnchorLink>
-          <AnchorLink href="#projects">
+          </button>
+          <Link href="/cases">
             <p>Cases</p>
-          </AnchorLink>
-          <AnchorLink href="#clients">
-            <p>Clients</p>
-          </AnchorLink>
+          </Link>
         </div>
       )
     },

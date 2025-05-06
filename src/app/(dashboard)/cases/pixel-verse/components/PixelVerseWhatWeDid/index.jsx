@@ -15,7 +15,7 @@ const PixelVerseWhatWeDid = () => {
         </h2>
         <div className="grid gap-5 md:mb-6 md:grid-cols-2 md:gap-10 xl:mb-30">
           <div className="border-t-[0.5px] border-white-50 pt-2 xl:pt-8">
-            <h3 className="mb-2 font-manrope text-xs uppercase leading-5 tracking-[2px] !text-secondary xl:mb-4">
+            <h3 className="mb-2 font-manrope text-xs uppercase leading-5 tracking-[2px] !text-white xl:mb-4 xl:font-medium">
               Business Challenges
             </h3>
             <p className="text-xs font-medium leading-5 text-white-70 xl:text-sm xl:leading-6">
@@ -50,7 +50,7 @@ const PixelVerseWhatWeDid = () => {
           </div>
 
           <div className="border-t-[0.5px] border-white-50 pt-2 xl:pt-8">
-            <h3 className="mb-2 font-manrope text-xs uppercase leading-5 tracking-[2px] text-white xl:mb-4">
+            <h3 className="mb-2 font-manrope text-xs uppercase leading-5 tracking-[2px] text-white xl:mb-4 xl:font-medium">
               results
             </h3>
             <p className="text-xs font-medium leading-5  text-white-70 xl:text-sm xl:leading-6">

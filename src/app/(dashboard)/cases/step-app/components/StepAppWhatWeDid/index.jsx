@@ -5,7 +5,7 @@ const StepAppWhatWeDid = () => {
   return (
     <section className="pt-[50px] xl:pb-[70px] xl:pt-30">
       <div className="mx-auto max-w-[1440px]  md:px-8 lg:px-10 xl:px-[97px]">
-        <h2 className="pl-4 font-roc text-[32px] font-medium leading-90 md:pl-0 xl:mb-[54px] xl:text-[55.24px]">
+        <h2 className="mb-6 pl-4 font-roc text-[32px] font-medium leading-90 md:pl-0 xl:mb-[54px] xl:text-[55.24px]">
           What we did
         </h2>
         <div className="relative mb-[50px] grid gap-6 px-4 md:grid-cols-2 md:px-0 xl:mb-[70px] xl:gap-[37px]">

@@ -32,7 +32,7 @@ const StepApp = () => {
           </>
         }
         headerClasses="font-roc text-[36px] leading-[42px] xl:text-[60px] xl:leading-[64px]"
-        tagContainerClasses="flex-wrap justify-center max-w-[484px]"
+        tagContainerClasses="flex-wrap justify-center max-w-[484px] xl:max-w-[550px]"
         descriptionClasses="max-w-[595px]"
       />
       <Banner

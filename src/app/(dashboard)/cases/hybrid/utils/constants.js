@@ -116,7 +116,7 @@ export const overviewHybridItems = [
           "Atlas Web3 Copilot for on-chain data analysis and market research."
       },
       {
-        itemValueTitle: "Project Support",
+        itemValueTitle: "Supporting tools",
         itemValueDescription:
           "Supporting tools, including a website, explorer, testnet bridge, and more."
       }

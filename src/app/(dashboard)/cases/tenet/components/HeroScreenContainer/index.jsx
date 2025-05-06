@@ -14,7 +14,7 @@ const HeroScreenContainer = () => {
         headerClasses="font-roc text-[36px] text-center
    leading-[42px] xl:text-[60px] xl:leading-[64px]"
         tags={currentData}
-        tagContainerClasses="max-w-[320px] md:max-w-[562px] flex-wrap justify-center"
+        tagContainerClasses="max-w-[320px] md:max-w-[640px] flex-wrap justify-center"
         pageTitle={
           "Tenet: Redefining Liquid Staking with Cosmos-Based Innovation"
         }

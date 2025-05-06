@@ -30,10 +30,14 @@ const ProjectOverview = ({
             <h3 className="font-roc text-[32px] font-medium uppercase leading-90 text-white xl:text-[54px]">
               {projectTitle}
             </h3>
-            <p className="text-left font-manrope text-sm font-[450] leading-6 !text-white-70">
+            <p className="text-left font-manrope text-xs font-[450] leading-5 !text-white-70 xl:text-sm xl:leading-6">
               {projectDescription}
             </p>
-            <Link className="flex gap-4" href={webSiteLink} target="_blank">
+            <Link
+              className="flex items-center gap-4"
+              href={webSiteLink}
+              target="_blank"
+            >
               <span className="font-roc text-lg font-medium uppercase leading-90 text-white underline xl:text-2xl">
                 visit website
               </span>{" "}
