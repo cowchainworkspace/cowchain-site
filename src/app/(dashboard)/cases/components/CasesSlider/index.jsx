@@ -137,7 +137,7 @@ const CasesSlider = ({
                     className={cn(
                       "relative flex-shrink-0 pl-[30px]",
                       isHybrid && lastIndex && "md:last:!mr-[15px]",
-                      isPixelVerse && "ml-[50px] pl-0",
+                      isPixelVerse && "ml-3 pl-0 lg:ml-[50px]",
                       isAgnt && "ml-5 pl-0",
                       itemClasses
                     )}

@@ -255,7 +255,7 @@ export const agntProjects = [
       { isMain: false, tagName: "Bridge" },
       { isMain: false, tagName: "NFT" }
     ],
-    title: 'RETROBRIDGE',
+    title: 'Cross-chain transfer bridge',
     desc: 'RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.',
     img: crossChain,
     textColor: "text-secondary",

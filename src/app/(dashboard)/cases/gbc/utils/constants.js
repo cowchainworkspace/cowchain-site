@@ -30,7 +30,7 @@ import {
   gbcSolutionQuestMobile
 } from "../../../../../../public/cases/gbc/solutions";
 
-import { m2eNew, memolut, reflectNew } from "../../../../../../public/projects";
+import { m2eNewOne, memolut, agent } from "../../../../../../public/projects";
 
 export const gbcTags = [
   {
@@ -384,7 +384,7 @@ export const gbcProjects = [
     ],
     title: "m2e platform",
     desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
-    img: m2eNew,
+    img: m2eNewOne,
     itemClasses: "",
     projectLink: "step-app",
     textColor: "text-secondary",
@@ -401,7 +401,7 @@ export const gbcProjects = [
     title: 'memelut',
     desc: 'Memelut is an all-in-one app that simplifies exploring, trading, and storing memecoins.',
     img: memolut,
-    projectLink: "#",
+    projectLink: "memelut",
     textGap: "md:gap-[24px]",
     cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
   },
@@ -410,17 +410,17 @@ export const gbcProjects = [
     tags: [
       { isMain: true, tagName: "Web Development" },
       { isMain: true, tagName: "AI Development" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "DeFi" }
+      { isMain: false, tagName: "Crypto Wallet" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "NFT" }
     ],
-    title: 'REFLECT',
-    desc: 'Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.',
-    img: reflectNew,
-    projectLink: "#",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
+    title: "agnt.hub",
+    desc: "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
+    img: agent,
     textColor: "text-secondary",
-    tagsContainer: "xl:max-w-[330px]"
-  },
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
+    projectLink: "agnt",
+    tagsWidth: "max-w-[320px] md:max-w-fit"
+  }
 
 ]

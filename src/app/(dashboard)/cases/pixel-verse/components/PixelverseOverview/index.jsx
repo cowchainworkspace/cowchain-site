@@ -1,10 +1,10 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
-import RightArrowSvg from "../../../../../../public/svgIcons/RightArrowSvg";
-import OverviewItems from "../OverviewItems/OverviewItems";
+import RightArrowSvg from "../../../../../../../public/svgIcons//RightArrowSvg";
+import PixelverseOverviewItems from "../PixelverseOverviewItems";
 
-const ProjectOverview = ({
+const PixelverseOverview = ({
   projectTitle,
   projectDescription,
   overviewItems,
@@ -16,7 +16,7 @@ const ProjectOverview = ({
     <section>
       <div
         className={cn(
-          "mx-auto max-w-[1440px] pt-[50px] md:px-8 lg:px-10 lg:pb-[50px] xl:pb-[127px] xl:pl-[97px] xl:pr-[109px] xl:pt-[141px]",
+          "mx-auto max-w-[1440px] py-[50px]  md:px-8 lg:px-10 lg:pb-[50px] xl:pb-[127px] xl:pl-[97px] xl:pr-[109px] xl:pt-[141px]",
           sectionClasses
         )}
       >
@@ -40,11 +40,11 @@ const ProjectOverview = ({
               <RightArrowSvg />
             </Link>
           </div>
-          <OverviewItems overviewItems={overviewItems} />
+          <PixelverseOverviewItems overviewItems={overviewItems} />
         </div>
       </div>
     </section>
   );
 };
 
-export default ProjectOverview;
+export default PixelverseOverview;

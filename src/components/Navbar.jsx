@@ -5,8 +5,6 @@ import bg_clients_lg from "@/assets/bg/clients_navbar_bg_lg.png";
 import bg_clients from "@/assets/bg/clients_navbar_bg_sm.png";
 import bg from "@/assets/bg/navbar_top.png";
 import bg_lg from "@/assets/bg/navbar_top_lg.png";
-import team_bg from "@/assets/bg/team-mobile.png";
-import team from "@/assets/bg/team.png";
 import linkedin from "@/assets/footer/linkedin.svg";
 import mail from "@/assets/footer/mail.svg";
 import medium from "@/assets/footer/medium.svg";
@@ -185,7 +183,6 @@ export default function Navbar({ isPageNotFound = false }) {
       <section
         className={cn("relative z-[21] bg-transparent opacity-0", {
           "pb-36 md:pb-0": isHomePage,
-          "pb-[440px] lg:pb-[670px]": isTeamBg,
           "opacity-100": !isRendering,
           "h-screen overflow-auto": toggleMenu
         })}
@@ -230,22 +227,6 @@ export default function Navbar({ isPageNotFound = false }) {
             )}
             src={bg_clients_lg}
           />
-        )}
-
-        {isTeamBg && (
-          <>
-            <Image
-              className="pointer-events-none absolute right-0 top-0 h-full w-full lg:hidden"
-              alt="gradient"
-              src={team_bg}
-            />
-            <Image
-              className="pointer-events-none absolute top-0 z-[-2] hidden h-full w-full lg:block"
-              alt="gradient"
-              priority
-              src={team}
-            />
-          </>
         )}
 
         <div

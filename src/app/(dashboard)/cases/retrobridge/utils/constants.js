@@ -312,18 +312,19 @@ export const retroBridgeProjects = [
 
   },
   {
-    id: 2,   
+    id: 2,
     tags: [
       { isMain: true, tagName: "Web Development" },
       { isMain: false, tagName: "Trading" },
       { isMain: false, tagName: "NFT" }
     ],
-    title: "GBC DAPP",
+    title: "GMX BLUEBERRY CLUB",
     desc: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     img: gbc,
+    textColor: "text-white",
     projectLink: "gbc",
-    textColor: "text-secondary",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
+      textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
   },
   {
     id: 3,
@@ -334,7 +335,7 @@ export const retroBridgeProjects = [
       { isMain: false, tagName: "DeFi" },
       { isMain: false, tagName: "NFT" }
     ],
-    title: "agenthub",
+    title: "agnt.hub",
     desc: "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
     img: agent,
     textColor: "text-secondary",
