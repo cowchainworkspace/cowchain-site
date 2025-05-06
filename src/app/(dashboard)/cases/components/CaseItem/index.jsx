@@ -2,6 +2,8 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import { CaseDescription } from "./blocks/CaseDescription";
 
 const CaseItem = ({ caseItem }) => {
   const {
@@ -12,25 +14,36 @@ const CaseItem = ({ caseItem }) => {
     caseImage,
     imageHeight,
     containerWidth,
-    tagsWidth
+    tagsWidth,
+    caseMobileImage
   } = caseItem;
   return (
     <Link href={link}>
       <motion.article
-        className="group relative flex w-full overflow-hidden pb-[50px] pl-[70px]"
-        style={{ height: `${imageHeight}px` }}
+        className="group relative flex w-[100vw] overflow-hidden "
         whileHover="hover"
         initial="initial"
         animate="initial"
       >
-        {/* Background image layer */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url("${caseImage.src}")` }}
+
+        <Image
+          src={caseImage.src}
+          alt="case"
+          className="h-auto hidden sm:block w-[100vw]"
+          width={1440}
+          height={560}
+        />
+
+        <Image
+          src={caseMobileImage.src}
+          alt="case"
+          className="h-auto block sm:hidden  w-[100vw]"
+          width={1500 }
+          height={2008}
         />
 
         <motion.div
-          className="bg-case-gradient pointer-events-none absolute inset-0 z-10"
+          className="pointer-events-none hidden sm:block absolute inset-0 z-10 bg-case-gradient"
           variants={{
             initial: { opacity: 0, scale: 1 },
             hover: { opacity: 1, scale: 1.03 }
@@ -39,7 +52,7 @@ const CaseItem = ({ caseItem }) => {
         />
 
         <motion.div
-          className="z-20 mt-auto"
+          className={`absolute bottom-[20px] left-[50px] z-20 hidden w-full lg:bottom-[50px] lg:left-[70px] sm:block`}
           style={{ maxWidth: `${containerWidth}px` }}
           variants={{
             initial: { opacity: 0, y: 20 },
@@ -47,32 +60,25 @@ const CaseItem = ({ caseItem }) => {
           }}
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
-          <ul
-            className="mb-[25px] flex flex-wrap gap-2"
-            style={{ maxWidth: `${tagsWidth}px` }}
-          >
-            {tags.map(({ tagName, isMain }) => (
-              <li key={tagName}>
-                <p
-                  className={cn(
-                    "flex h-8 items-center rounded-[18.41px] bg-white px-[15px] py-2 font-medium leading-[16.57px] text-[12.89] text-black",
-                    isMain && "text-sm font-bold"
-                  )}
-                >
-                  {tagName}
-                </p>
-              </li>
-            ))}
-          </ul>
-
-          <h2 className="mb-6 font-montserrat text-[60px] font-semibold leading-[60px] text-white">
-            {caseName}
-          </h2>
-
-          <p className="font-manrope text-sm font-[450] leading-6 text-white-70">
-            {caseDescription}
-          </p>
+          <CaseDescription
+            tagsWidth={tagsWidth}
+            tags={tags}
+            caseName={caseName}
+            caseDescription={caseDescription}
+          />
         </motion.div>
+
+        <div
+          className={`absolute bottom-[22px] left-[20px] z-20 block w-full  sm:hidden`}
+          style={{ maxWidth: `83%` }}
+        >
+          <CaseDescription
+            tagsWidth={310}
+            tags={tags}
+            caseName={caseName}
+            caseDescription={caseDescription}
+          />
+        </div>
       </motion.article>
     </Link>
   );
