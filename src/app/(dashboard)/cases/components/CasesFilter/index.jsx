@@ -5,7 +5,7 @@ import FilterSvg from "../../../../../../public/svgIcons/filterSvg";
 const CasesFilter = ({ tags, currentTag, setTag }) => {
   return (
     <div>
-      <ul className="mt-15 flex gap-2">
+      <ul className="hidden mt-15 md:flex flex-wrap gap-2">
         {tags.map(({ id, tagName }) => (
           <li key={id}>
             <button
@@ -15,7 +15,7 @@ const CasesFilter = ({ tags, currentTag, setTag }) => {
                 "flex rounded-[40px] border-[0.5px] border-transparent bg-white-15 px-6 py-4 font-roc text-base font-medium uppercase leading-90 text-white",
                 currentTag.toLowerCase() === tagName.toLowerCase() &&
                   "border-white bg-transparent",
-                tagName === "all filters" && "items-center gap-[10px]"
+                tagName === "all filters" && "items-center hidden gap-[10px]"
               )}
             >
               {tagName === "all filters" && <FilterSvg />}
