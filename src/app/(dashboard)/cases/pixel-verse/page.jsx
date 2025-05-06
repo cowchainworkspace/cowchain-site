@@ -23,7 +23,6 @@ const PixelVerse = () => {
   return (
     <section className="relative w-full">
       <HeroScreenContainer />
-
       <Banner
         img={"/cases/PixelVerse/pixel-verse-banner.webp"}
         imgDesc={"Screenshots from PixelVerse application"}
