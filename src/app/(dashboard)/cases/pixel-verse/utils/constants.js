@@ -1,5 +1,4 @@
 import {slideFour, slideOne, slideThree, slideTwo } from "../../../../../../public/cases/PixelVerse/slider";
-import {crossChain, hybrid, m2eNewOne } from "../../../../../../public/projects";
 
 export const pixelVerseTags = [
   {
@@ -209,61 +208,3 @@ export const pixelVerseTeam = [
   }
 ];
 
-export const pixelVerseProjects = [
-
-  {
-    id: 2,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "AI Development" },
-      { isMain: true, tagName: "Blockchain Development" },
-      { isMain: false, tagName: "Bridge" },
-      { isMain: false, tagName: "Staking" },
-      { isMain: false, tagName: "L1" }
-    ],
-    title: 'hybrid',
-    desc: 'Hybrid is a Layer 2 blockchain on Arbitrum Nitro, integrating the MoE framework  specialized AI agents.',
-    img: hybrid,
-    projectLink: "hybrid",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-  },
-  {
-    id: 1,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "Bridge" },
-      { isMain: false, tagName: "NFT" }
-    ],
-    title: 'Cross-chain transfer bridge',
-    desc: 'RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.',
-    img: crossChain,
-    textColor: "text-secondary",
-    projectLink: "retrobridge",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-  },
-  {
-    id: 3,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "Mobile App" },
-      { isMain: false, tagName: "GameFi" },
-      { isMain: false, tagName: "Crypto Wallet" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "DEX" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "NFT" },
-      { isMain: false, tagName: "Staking" }
-    ],
-    title: 'STEP APP',
-    desc: 'StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.',
-    img: m2eNewOne,
-    textColor: "text-secondary",
-    projectLink: "step-app",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-  },
-  
-]

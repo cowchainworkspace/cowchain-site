@@ -30,8 +30,6 @@ import {
   gbcSolutionQuestMobile
 } from "../../../../../../public/cases/gbc/solutions";
 
-import { m2eNewOne, memolut, agent } from "../../../../../../public/projects";
-
 export const gbcTags = [
   {
     id: 1,
@@ -381,58 +379,3 @@ export const gbcTeam = [
   }
 ];
 
-export const gbcProjects = [
-  {
-    id: 1,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "Mobile App" },
-      { isMain: false, tagName: "GameFi" },
-      { isMain: false, tagName: "Crypto Wallet" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "DEX" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "NFT" },
-      { isMain: false, tagName: "Staking" }
-    ],
-    title: "m2e platform",
-    desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
-    img: m2eNewOne,
-    itemClasses: "",
-    projectLink: "step-app",
-    textColor: "text-secondary",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
-  },
-  {
-    id: 2,
-    tags: [
-      { isMain: true, tagName: "Mobile App" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "Crypto Wallet" }
-    ],
-    title: "memelut",
-    desc: "Memelut is an all-in-one app that simplifies exploring, trading, and storing memecoins.",
-    img: memolut,
-    projectLink: "memelut",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
-  },
-  {
-    id: 3,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "AI Development" },
-      { isMain: false, tagName: "Crypto Wallet" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "NFT" }
-    ],
-    title: "agnt.hub",
-    desc: "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
-    img: agent,
-    textColor: "text-secondary",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-    projectLink: "agnt",
-    tagsWidth: "max-w-[320px] md:max-w-fit"
-  }
-];

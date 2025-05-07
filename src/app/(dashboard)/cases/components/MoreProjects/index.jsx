@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { useMediaQuery } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import RightArrowSvg from "../../../../../../public/svgIcons/RightArrowSvg";
@@ -18,11 +19,7 @@ const MoreProjects = ({ projects, headerClasses = "", isReversed }) => {
         >
           More projects
         </h2>
-        <Link
-          className="flex items-center gap-4"
-          href={"/cases"}
-          target="_blank"
-        >
+        <Link className="flex items-center gap-4" href={"/cases"}>
           <span className="font-roc text-lg font-medium uppercase leading-90 text-white underline xl:text-2xl">
             all cases
           </span>{" "}
@@ -53,66 +50,119 @@ const MoreProjects = ({ projects, headerClasses = "", isReversed }) => {
             tagDescClasses = ""
           }) => {
             return (
-              <Link
-                href={projectLink}
-                key={id}
-                className={cn(
-                  "z-10 flex h-[487px] w-full flex-col items-center xl:h-[624px]",
-                  cardClasses
-                )}
-                style={{
-                  backgroundImage: `url(${img.src})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat"
-                }}
-              >
-                <div
+              <Link key={id} href={projectLink}>
+                <motion.article
                   className={cn(
-                    "mt-auto flex w-full flex-col gap-4 md:max-w-[403px] md:gap-6 xl:mt-auto",
-                    itemClasses
+                    "group relative z-10 flex h-[487px] w-full flex-col items-center xl:h-[624px]",
+                    cardClasses
                   )}
+                  initial="initial"
+                  whileHover="hover"
+                  animate="initial"
+                  style={{
+                    backgroundImage: `url(${img.src})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat"
+                  }}
                 >
-                  <div className={cn("flex flex-wrap gap-2", tagsContainer)}>
-                    {tags.map(({ tagName, isMain }) => (
-                      <div
-                        className={cn(
-                          "flex items-center justify-center rounded-20 border-[0.5px] border-white bg-white px-4 py-2",
-                          tagClasses
-                        )}
-                        key={tagName}
-                      >
-                        <p
+                  <motion.div
+                    className="pointer-events-none absolute inset-0 z-[1] hidden sm:block"
+                    variants={{
+                      initial: { opacity: 0 },
+                      hover: { opacity: 1 }
+                    }}
+                    style={{
+                      background:
+                        "linear-gradient(to bottom, transparent 45%, #4D2C91 80%)"
+                    }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                  />
+
+                  <div
+                    className={cn(
+                      "relative z-[5] mt-auto flex w-full flex-col gap-4 md:max-w-[403px] md:gap-6 xl:mt-auto",
+                      itemClasses
+                    )}
+                  >
+                    <motion.div
+                      className={cn(
+                        "hidden flex-wrap gap-2 sm:flex",
+                        tagsContainer
+                      )}
+                      variants={{
+                        initial: { opacity: 0, y: 20 },
+                        hover: { opacity: 1, y: 0 }
+                      }}
+                    >
+                      {tags.map(({ tagName, isMain }) => (
+                        <div
+                          key={tagName}
                           className={cn(
-                            "font-manrope text-sm font-medium leading-[18px] text-black",
-                            isMain && "!font-bold",
-                            tagDescClasses
+                            "flex items-center justify-center rounded-20 border-[0.5px] border-white bg-white px-4 py-2",
+                            tagClasses
                           )}
                         >
-                          {tagName}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                  <div className={cn("flex flex-col gap-4", textGap)}>
-                    <h3
+                          <p
+                            className={cn(
+                              "font-manrope text-sm font-medium leading-[18px] text-black",
+                              isMain && "!font-bold",
+                              tagDescClasses
+                            )}
+                          >
+                            {tagName}
+                          </p>
+                        </div>
+                      ))}
+                    </motion.div>
+
+                    <div
                       className={cn(
-                        "font-roc text-2xl font-medium uppercase leading-90 text-white",
-                        titleClasses
+                        "flex flex-wrap gap-2 sm:hidden",
+                        tagsContainer
                       )}
                     >
-                      {title}
-                    </h3>
-                    <p
-                      className={cn(
-                        "font-manrope text-xs leading-[20px] text-white xl:text-base xl:leading-[22px]",
-                        textColor
-                      )}
-                    >
-                      {desc}
-                    </p>
+                      {tags.map(({ tagName, isMain }) => (
+                        <div
+                          key={tagName}
+                          className={cn(
+                            "flex items-center justify-center rounded-20 border-[0.5px] border-white bg-white px-4 py-2",
+                            tagClasses
+                          )}
+                        >
+                          <p
+                            className={cn(
+                              "font-manrope text-sm font-medium leading-[18px] text-black",
+                              isMain && "!font-bold",
+                              tagDescClasses
+                            )}
+                          >
+                            {tagName}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className={cn("flex flex-col gap-4", textGap)}>
+                      <h3
+                        className={cn(
+                          "font-roc text-2xl font-medium uppercase leading-90 text-white",
+                          titleClasses
+                        )}
+                      >
+                        {title}
+                      </h3>
+                      <p
+                        className={cn(
+                          "font-manrope text-xs leading-[20px] text-white xl:text-base xl:leading-[22px]",
+                          textColor
+                        )}
+                      >
+                        {desc}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </motion.article>
               </Link>
             );
           }

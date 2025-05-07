@@ -15,7 +15,7 @@ const StepAppProjectOverView = () => {
                 Project overview
               </h3>
               <p className="text-left font-manrope text-xs font-[450] leading-5 !text-white-70 xl:text-sm xl:leading-6">
-                StepApp combines fitness, gaming, and blockchain, offering one
+                Step App combines fitness, gaming, and blockchain, offering one
                 of the
                 <br className="hidden custom1430:block" /> most practical
                 blockchain use cases in the move-to-earn space. As a

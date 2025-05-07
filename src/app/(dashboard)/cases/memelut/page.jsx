@@ -6,17 +6,18 @@ import CasesSlider from "../components/CasesSlider";
 import CaseHeroScreen from "../components/HeroScreen";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
+import { relatedMemelutProjects } from "../data";
 import MemelutOverview from "./components/MemelutOverview";
 import MemelutSolutions from "./components/MemelutSolutions";
 import MemelutWhatWeDid from "./components/MemelutWhatWeDid";
+
 import { metadata } from "./utils/memelutMetadata";
 
 import {
-  memelutProjects,
   memelutSlides,
   memelutSolutions,
-  memeluteTags,
-  memelutTeam
+  memelutTeam,
+  memeluteTags
 } from "./utils/constants";
 export { metadata };
 
@@ -80,7 +81,7 @@ const Memelut = () => {
         team={memelutTeam}
         classes={"pt-0 xl:pt-[60px]"}
       />
-      <MoreProjects projects={memelutProjects} isReversed={true} />
+      <MoreProjects projects={relatedMemelutProjects} isReversed={true} />
       <Contact
         className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
         descriptionClasses={"hidden md:block"}

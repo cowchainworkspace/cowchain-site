@@ -5,17 +5,18 @@ import CasesSlider from "../components/CasesSlider";
 import CaseHeroScreen from "../components/HeroScreen";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
+import { relatedAgntProjects } from "../data";
 import AgntProjectOverView from "./components/AgntProjectOverView";
 import AgntSolution from "./components/AgntSolution";
 import AgntWhatWeDid from "./components/AgntWhatWeDid";
 import { metadata } from "./utils/agntMetadata";
 import {
-  agntProjects,
   agntSlides,
   agntSolutions,
   agntTags,
   agntTeam
 } from "./utils/constants";
+
 export { metadata };
 
 const Agnt = () => {
@@ -70,7 +71,7 @@ const Agnt = () => {
         containerClasses={"md:grid-cols-2 xl:grid-cols-[1fr_568px]"}
       />
       <MoreProjects
-        projects={agntProjects}
+        projects={relatedAgntProjects}
         headerClasses="font-roc text-[32px] xl:text-[42px] font-medium leading-90"
       />
       <Contact

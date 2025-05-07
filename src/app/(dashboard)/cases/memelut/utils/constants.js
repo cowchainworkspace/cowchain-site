@@ -19,12 +19,10 @@ import {
   mobMemeluteIntegratedTrding
 } from "../../../../../../public/cases/memelut/solutions/index";
 
-import { kruuu, reflectBg, tenet, m2eNewOne,agent,gbc } from "../../../../../../public/projects";
-
 export const memeluteTags = [
   {
     id: 1,
-    tagLabel: "Web Development"
+    tagLabel: "Mobile App"
   },
   {
     id: 2,
@@ -32,7 +30,7 @@ export const memeluteTags = [
   },
   {
     id: 3,
-    tagLabel: "NFT"
+    tagLabel: "Crypto Wallet"
   }
 ];
 
@@ -256,61 +254,5 @@ export const memelutTeam = [
     id: 3,
     department: "qa",
     people: "Taras Yakushevych"
-  }
-];
-
-export const memelutProjects = [
-  {
-    id: 1,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "Mobile App" },
-      { isMain: false, tagName: "GameFi" },
-      { isMain: false, tagName: "Crypto Wallet" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "DEX" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "NFT" },
-      { isMain: false, tagName: "Staking" }
-    ],
-    title: "m2e platform",
-    desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
-    img: m2eNewOne,
-    projectLink: "step-app",
-    textColor: "text-secondary",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-
-  },
-  {
-    id: 2,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "NFT" }
-    ],
-    title: "GMX BLUEBERRY CLUB",
-    desc: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
-    img: gbc,
-    textColor: "text-white",
-    projectLink: "gbc",
-      textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
-  },
-  {
-    id: 3,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "AI Development" },
-      { isMain: false, tagName: "Crypto Wallet" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "NFT" }
-    ],
-    title: "agnt.hub",
-    desc: "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
-    img: agent,
-    textColor: "text-secondary",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-    projectLink: "agnt",
-    tagsWidth: "max-w-[320px] md:max-w-fit"
   }
 ];

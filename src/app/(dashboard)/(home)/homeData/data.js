@@ -327,10 +327,10 @@ export const servicesBlocksData = [
       { title: "Staking", link: "/services/staking" },
       { title: "Crypto Lottery", link: "/services/crypto_lottery" },
       { title: "Exchange", link: "/services/exchange" },
-      {
-        title: "ITC (Social Trading Platform)",
-        link: "/services/itc_social_trading_platform"
-      }
+      // {
+      //   title: "ITC (Social Trading Platform)",
+      //   link: "/services/itc_social_trading_platform"  // TEMPORARILY HIDE: ITC is hidden until design is finalized
+      // }
     ]
   },
   {
@@ -363,7 +363,7 @@ export const servicesBlocksData = [
       { title: "ICO Platform", link: "/services/ico_platform_development" },
       { title: "RWA Tokenization", link: "/services/rwa_tokenization" },
       { title: "NFT Game", link: "/services/nft_game" },
-      { title: "Metaverse", link: "/services/metaverse" }
+      // { title: "Metaverse", link: "/services/metaverse" }  // TEMPORARILY HIDE: Metaverse is hidden until design is finalized
     ]
   }
 ];
