@@ -6,12 +6,12 @@ import CasesSlider from "../components/CasesSlider";
 import CasesSolutions from "../components/CasesSolutions";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
+import { relatedRetorbridgeProjects } from "../data";
+import HeroScreenContainer from "./components/HeroScreenContainer";
 import Quote from "./components/Quote";
 import RetroBridgeOverview from "./components/RetroBridgeOverview";
 import RetroBridgeWhatWeDid from "./components/RetroBridgeWhatWeDid";
-import HeroScreenContainer from "./components/HeroScreenContainer";
 import {
-  retroBridgeProjects,
   retroBridgeSlides,
   retroBridgeSolutions,
   retroBridgeTeam
@@ -70,7 +70,7 @@ const RetroBridge = () => {
       <MoreProjects
         isReversed
         autoMargin={true}
-        projects={retroBridgeProjects}
+        projects={relatedRetorbridgeProjects}
       />
       <Contact
         className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}

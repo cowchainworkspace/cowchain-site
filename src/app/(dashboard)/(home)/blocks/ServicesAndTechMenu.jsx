@@ -1,7 +1,7 @@
 import { SocialLinks } from "@/components/SocialLinks";
+import Link from "next/link";
 import React from "react";
 import { ArrowForward } from "../../../../assets/svgComponents/ArrowForward";
-import Link from "next/link";
 import { servicesBlocksData, servicesBlocksOtherData } from "../homeData/data";
 
 export const ServicesAndTechnologies = () => {

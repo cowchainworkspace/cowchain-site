@@ -16,7 +16,7 @@ const RetroBridgeOverview = () => {
               RetroBridge was designed to address the growing need for reliable{" "}
               <br className="hidden custom1430:block" />
               multichain solutions in the blockchain ecosystem. Supporting over
-              42 <br className="hidden custom1430:block" /> blockchain networks,
+              51 <br className="hidden custom1430:block" /> blockchain networks,
               including EVM Layer 2 chains and others like
               <br className="hidden custom1430:block" /> StarkNet, Aptos, and
               Cosmos, RetroBridge serves as a dynamic

@@ -1,16 +1,17 @@
+import Contact from "@/components/Contact";
 import Image from "next/image";
 import React from "react";
 import Banner from "../components/Banner";
 import CasesSlider from "../components/CasesSlider";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
-import PixelVerseWhatWeDid from "./components/PixelVerseWhatWeDid";
+import { relatedPixelverseProjects } from "../data";
 import HeroScreenContainer from "./components/HeroScreenContainer";
+import PixelVerseWhatWeDid from "./components/PixelVerseWhatWeDid";
 import PixelverseOverview from "./components/PixelverseOverview";
-import Contact from "@/components/Contact";
+
 import {
   overviewItems,
-  pixelVerseProjects,
   pixelVerseSlides,
   pixelVerseTeam
 } from "./utils/constants";
@@ -80,7 +81,7 @@ const PixelVerse = () => {
       />
       <PixelVerseWhatWeDid />
       <TeamBehind team={pixelVerseTeam} />
-      <MoreProjects projects={pixelVerseProjects} />
+      <MoreProjects projects={relatedPixelverseProjects} />
       <Contact
         descriptionClasses={"hidden md:block"}
         titleClasses={"mb-8 md:mb-0"}

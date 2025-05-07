@@ -32,10 +32,7 @@ const AgntWhatWeDid = () => {
               enabling users to automate trading, analyze trends, and interact
               with AI-driven tools directly inside X. InfoFi capabilities within
               AGNT Connect enhance real-time market insights and on-chain data
-              tracking. The AGNT Marketplace has become a key hub for DeFAI,
-              allowing users to deploy, enhance, and monetize AI agents, making
-              it a prime example of project management cases in AI & Web3
-              innovation.
+              tracking.
             </p>
           </div>
         </div>

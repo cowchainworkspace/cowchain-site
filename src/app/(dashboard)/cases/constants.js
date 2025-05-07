@@ -14,14 +14,14 @@ import {
 import {
   agntMobile,
   brc20Mobile,
+  gbcMobile,
   hybrydMobileIcon,
   memeLutMobileImg,
   pixelverseMobileImg,
   reflectMobileImg,
   retroBridgeMobile,
-  tenetMobileImg,
   stepUpMobile,
-  gbcMobile
+  tenetMobileImg
 } from "../../../../public/cases/main";
 
 export const casesTags = [
@@ -145,23 +145,25 @@ export const cases = [
     imageHeight: 560,
     containerWidth: 848
   },
-  {
-    id: 6,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "AI Development" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "DeFi" }
-    ],
-    caseName: "Reflect",
-    caseDescription:
-      "Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains. By enabling users to manage liquidity, execute swaps, stake assets, and vote on governance proposals directly through chat commands, Reflect enhances simplicity and accessibility in DeFAI.",
-    link: "cases/reflect",
-    caseImage: reflectImage,
-    caseMobileImage: reflectMobileImg,
-    imageHeight: 560,
-    containerWidth: 848
-  },
+
+   // TEMPORARILY HIDE: Reflect case card is hidden until design is finalized
+  // {
+  //   id: 6,
+  //   tags: [
+  //     { isMain: true, tagName: "Web Development" },
+  //     { isMain: true, tagName: "AI Development" },
+  //     { isMain: false, tagName: "Trading" },
+  //     { isMain: false, tagName: "DeFi" }
+  //   ],
+  //   caseName: "Reflect",
+  //   caseDescription:
+  //     "Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains. By enabling users to manage liquidity, execute swaps, stake assets, and vote on governance proposals directly through chat commands, Reflect enhances simplicity and accessibility in DeFAI.",
+  //   link: "cases/reflect",
+  //   caseImage: reflectImage,
+  //   caseMobileImage: reflectMobileImg,
+  //   imageHeight: 560,
+  //   containerWidth: 848
+  // },
   {
     id: 7,
     tags: [
@@ -179,21 +181,23 @@ export const cases = [
     containerWidth: 450
   },
 
-  {
-    id: 8,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: false, tagName: "DeFi" }
-    ],
-    caseName: "BRC20",
-    caseDescription:
-      "BRC20 is the first Launchpad built for the Ordinals ecosystem, redefining how Bitcoin-based assets are distributed and traded.",
-    link: "cases/brc-20",
-    caseImage: brc20Image,
-    caseMobileImage: brc20Mobile,
-    imageHeight: 540,
-    containerWidth: 450
-  },
+   // TEMPORARILY HIDE: BRC20 case card is hidden until design is finalized
+   
+  // {
+  //   id: 8,
+  //   tags: [
+  //     { isMain: true, tagName: "Web Development" },
+  //     { isMain: false, tagName: "DeFi" }
+  //   ],
+  //   caseName: "BRC20",
+  //   caseDescription:
+  //     "BRC20 is the first Launchpad built for the Ordinals ecosystem, redefining how Bitcoin-based assets are distributed and traded.",
+  //   link: "cases/brc-20",
+  //   caseImage: brc20Image,
+  //   caseMobileImage: brc20Mobile,
+  //   imageHeight: 540,
+  //   containerWidth: 450
+  // },
 
   {
     id: 9,

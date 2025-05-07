@@ -6,6 +6,7 @@ import CasesSlider from "../components/CasesSlider";
 import CaseHeroScreen from "../components/HeroScreen";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
+import { relatedGBCProjects } from "../data";
 import GBCOverview from "./components/GBCOverview";
 import GBCRewards from "./components/GBCRewards";
 import GBCSlider from "./components/GBCSlider";
@@ -13,13 +14,7 @@ import GBCSolutions from "./components/GBCSolutions";
 import GBCWhatWeDid from "./components/GBCWhatWeDid";
 import { metadata } from "./utils/gbcMetadata";
 
-import {
-  gbcProjects,
-  gbcSlides,
-  gbcSolutions,
-  gbcTags,
-  gbcTeam
-} from "./utils/constants";
+import { gbcSlides, gbcSolutions, gbcTags, gbcTeam } from "./utils/constants";
 export { metadata };
 
 const GBC = () => {
@@ -78,7 +73,7 @@ const GBC = () => {
         team={gbcTeam}
         classes={"pt-[50px] xl:pt-30"}
       />
-      <MoreProjects projects={gbcProjects} isReversed={true} />
+      <MoreProjects projects={relatedGBCProjects} isReversed={true} />
       <Contact
         className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
         descriptionClasses={"hidden md:block"}

@@ -6,8 +6,6 @@ import {
 
 import {
   solutionFive,
-  solutionFour,
-  solutionMobFive,
   solutionMobFour,
   solutionMobOne,
   solutionMobSix,
@@ -18,9 +16,6 @@ import {
   solutionThree,
   solutionTwo 
 } from "../../../../../../public/cases/agnt/solutions";
-
-
-import { crossChain, gbc, m2eNewOne } from "../../../../../../public/projects";
 
 export const agntTags = [
   {
@@ -199,22 +194,6 @@ export const agntSolutions = [
     }
   },
   {
-    id: 5,
-    title: "AGNT AI Framework",
-    desc: " A modular toolkit for launching interactive AI agents across the Web3 stack.  Protocols and platforms alike can create agents tailored to their UX, with or without a live token. Built-in bonding curve mechanics allow agents to be launched and tokenized directly from inside X.",
-    textBlockWidth: 601,
-    img: {
-      width: 567,
-      height: 134,
-      mobileHeight: 82,
-      mobileWidth: 343,
-      info: "Agnt screens",
-      href: solutionFour,
-      mobileHref: solutionMobFive
-
-    }
-  },
-  {
     id: 6,
     title: "Omnichain AI Agent Deployment",
     desc: "Built AGNT Omnichain Deployer, enabling AI agents to operate across Solana, Base and other EVM chains. AI models dynamically allocate liquidity, execute cross-chain strategies, and adapt in real-time using LayerZero OFT.",
@@ -243,60 +222,10 @@ export const agntTeam = [
     id: 4,
     department: "qa",
     people: "Mykola Ursalov, Ivan Chalienko, Taras Pirus"
+  },
+  {
+    id: 5,
+    department: "project manager",
+    people: "Ivchenko Viacheslav"
   }
 ];
-
-export const agntProjects = [
-  {
-    id: 1,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "Bridge" },
-      { isMain: false, tagName: "NFT" }
-    ],
-    title: 'Cross-chain transfer bridge',
-    desc: 'RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.',
-    img: crossChain,
-    textColor: "text-secondary",
-    projectLink: "retrobridge",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-  },
-  {
-    id: 2,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "NFT" }
-    ],
-    title: 'GMX BLUEBERRY CLUB',
-    desc: 'GBC is a next-generation NFT platform that combines customization, trading, and gamification.',
-    img: gbc,
-    textColor: "text-white",
-    projectLink: "gbc",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-  },
-  {
-    id: 3,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "Mobile App" },
-      { isMain: false, tagName: "GameFi" },
-      { isMain: false, tagName: "Crypto Wallet" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "DEX" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "NFT" },
-      { isMain: false, tagName: "Staking" }
-    ],
-    title: 'STEP APP',
-    desc: 'StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.',
-    img: m2eNewOne,
-    textColor: "text-secondary",
-    projectLink: "step-app",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-  },
-]

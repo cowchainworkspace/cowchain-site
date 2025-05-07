@@ -5,12 +5,12 @@ import CasesSlider from "../components/CasesSlider";
 import CaseHeroScreen from "../components/HeroScreen";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
+import { relatedStepAppProjects } from "../data";
 import StepAppProjectOverView from "./components/StepAppProjectOverView";
 import StepAppSolutions from "./components/StepAppSolutions";
 import StepAppWhatWeDid from "./components/StepAppWhatWeDid";
 
 import {
-  stepAppProjects,
   stepAppSlides,
   stepAppSolutions,
   stepAppTags,
@@ -25,7 +25,7 @@ const StepApp = () => {
         pageTitle={"Step App"}
         heroDescription={
           <>
-            StepApp is an innovative Move-to-Earn platform that rewards users
+            Step App is an innovative Move-to-Earn platform that rewards users
             for physical movement. With over 300,000 active users, 9M unique
             wallets and a presence in 100+ countries, the project exemplifies
             the intersection of fitness and blockchain innovation.
@@ -51,7 +51,7 @@ const StepApp = () => {
       <TeamBehind titleClasses={"xl:text-[55.24px]"} team={stepAppTeam} />
       <MoreProjects
         headerClasses="xl:text-[42px] font-medium font-roc leading-90"
-        projects={stepAppProjects}
+        projects={relatedStepAppProjects}
       />
       <Contact
         className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}

@@ -16,8 +16,6 @@ import {
   stackCoinImageMobile
 } from "../../../../../../public/cases/hybrid/solutions";
 
-import { gbc, pixelVerse, crossChain } from "../../../../../../public/projects";
-
 export const hybridTags = [
   {
     id: 1,
@@ -276,54 +274,4 @@ export const hybridTeam = [
     department: "qa",
     people: "Vitalii Dorokhin"
   }
-];
-
-export const hybridProjects = [
-  {
-    id: 2,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "NFT" }
-    ],
-    title: "GMX BLUEBERRY CLUB",
-    desc: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
-    img: gbc,
-    textColor: "text-white",
-    projectLink: "gbc",
-      textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
-  },
-  {
-    id: 2,
-    tags: [
-      { isMain: true, tagName: "Mobile App" },
-      { isMain: true, tagName: "Telegram Mini Apps" },
-      { isMain: false, tagName: "GameFi" }
-    ],
-    title: "PixelVerse",
-    desc: "PixelVerse is a GameFi ecosystem that merges Web2 accessibility with Web3 innovation through Telegram Mini Apps.",
-    img: pixelVerse,
-    projectLink: "pixel-verse",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[17px]",
-    textColor: "text-secondary",
-
-  },
-  {
-    id: 1,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "Bridge" },
-      { isMain: false, tagName: "NFT" }
-    ],
-    title: "Cross-chain transfer bridge",
-    desc: "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
-    img: crossChain,
-    textColor: "text-secondary",
-    projectLink: "retrobridge",
-      textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
-  },
 ];
