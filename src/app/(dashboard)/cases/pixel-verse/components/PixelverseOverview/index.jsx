@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 import RightArrowSvg from "../../../../../../../public/svgIcons//RightArrowSvg";
-import PixelverseOverviewItems from "../PixelverseOverviewItems";
+import PixelverseOverviewItems from "../PixelVerseOverviewItems";
 
 const PixelverseOverview = ({
   projectTitle,
