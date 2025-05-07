@@ -74,7 +74,7 @@ const Memelut = () => {
         width={1349}
         height={269}
         src="/cases/memelut/memelut-coins-banner.webp"
-        className="mx-auto h-auto w-[100vw] max-w-[1349px]"
+        className="mx-auto h-auto w-[calc(100vw-6px)] max-w-[1349px]"
       />
       <TeamBehind
         headerClasses={"xl:leading-[18.41px] xl:tracking-[1.84px]"}
