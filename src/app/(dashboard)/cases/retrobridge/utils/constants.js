@@ -14,7 +14,7 @@ import {
   wallet,
 } from "../../../../../../public/cases/RetroBridge/solutions";
 
-import { agent, gbc, m2ePlatformImg } from "../../../../../../public/projects";
+import { agent, gbc, m2eNewOne } from "../../../../../../public/projects";
 
 export const retroBridgeTags = [
   {
@@ -305,25 +305,26 @@ export const retroBridgeProjects = [
     ],
     title: "m2e platform",
     desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
-    img: m2ePlatformImg,
+    img: m2eNewOne,
     projectLink: "step-app",
     textColor: "text-secondary",
     cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
 
   },
   {
-    id: 2,   
+    id: 2,
     tags: [
       { isMain: true, tagName: "Web Development" },
       { isMain: false, tagName: "Trading" },
       { isMain: false, tagName: "NFT" }
     ],
-    title: "GBC DAPP",
+    title: "GMX BLUEBERRY CLUB",
     desc: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     img: gbc,
+    textColor: "text-white",
     projectLink: "gbc",
-    textColor: "text-secondary",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
+      textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
   },
   {
     id: 3,
@@ -334,7 +335,7 @@ export const retroBridgeProjects = [
       { isMain: false, tagName: "DeFi" },
       { isMain: false, tagName: "NFT" }
     ],
-    title: "agenthub",
+    title: "agnt.hub",
     desc: "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
     img: agent,
     textColor: "text-secondary",

@@ -1,10 +1,10 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
-import RightArrowSvg from "../../../../../../public/svgIcons/RightArrowSvg";
-import OverviewItems from "../OverviewItems/OverviewItems";
+import RightArrowSvg from "../../../../../../../public/svgIcons//RightArrowSvg";
+import PixelverseOverviewItems from "../PixelverseOverviewItems";
 
-const ProjectOverview = ({
+const PixelverseOverview = ({
   projectTitle,
   projectDescription,
   overviewItems,
@@ -16,7 +16,7 @@ const ProjectOverview = ({
     <section>
       <div
         className={cn(
-          "mx-auto max-w-[1440px] pt-[50px] md:px-8 lg:px-10 lg:pb-[50px] xl:pb-[127px] xl:pl-[97px] xl:pr-[109px] xl:pt-[141px]",
+          "mx-auto max-w-[1440px] py-[50px]  md:px-8 lg:px-10 lg:pb-[50px] xl:pb-[127px] xl:pl-[97px] xl:pr-[109px] xl:pt-[141px]",
           sectionClasses
         )}
       >
@@ -30,25 +30,21 @@ const ProjectOverview = ({
             <h3 className="font-roc text-[32px] font-medium uppercase leading-90 text-white xl:text-[54px]">
               {projectTitle}
             </h3>
-            <p className="text-left font-manrope text-xs font-[450] leading-5 !text-white-70 xl:text-sm xl:leading-6">
+            <p className="text-left font-manrope text-sm font-[450] leading-6 !text-white-70">
               {projectDescription}
             </p>
-            <Link
-              className="flex items-center gap-4"
-              href={webSiteLink}
-              target="_blank"
-            >
+            <Link className="flex gap-4" href={webSiteLink} target="_blank">
               <span className="font-roc text-lg font-medium uppercase leading-90 text-white underline xl:text-2xl">
                 visit website
               </span>{" "}
               <RightArrowSvg />
             </Link>
           </div>
-          <OverviewItems overviewItems={overviewItems} />
+          <PixelverseOverviewItems overviewItems={overviewItems} />
         </div>
       </div>
     </section>
   );
 };
 
-export default ProjectOverview;
+export default PixelverseOverview;

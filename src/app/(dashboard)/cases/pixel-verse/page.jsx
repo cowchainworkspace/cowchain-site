@@ -2,17 +2,16 @@ import Image from "next/image";
 import React from "react";
 import Banner from "../components/Banner";
 import CasesSlider from "../components/CasesSlider";
-import CaseHeroScreen from "../components/HeroScreen";
 import MoreProjects from "../components/MoreProjects";
-import ProjectOverview from "../components/ProjectOverview";
 import TeamBehind from "../components/TeamBehind";
-import PixelVerseAvatarAI from "./components/PixelVerseAvatarAI";
 import PixelVerseWhatWeDid from "./components/PixelVerseWhatWeDid";
+import HeroScreenContainer from "./components/HeroScreenContainer";
+import PixelverseOverview from "./components/PixelverseOverview";
+import Contact from "@/components/Contact";
 import {
   overviewItems,
   pixelVerseProjects,
   pixelVerseSlides,
-  pixelVerseTags,
   pixelVerseTeam
 } from "./utils/constants";
 import { metadata } from "./utils/pixelVerseMetadata";
@@ -22,24 +21,16 @@ export { metadata };
 const PixelVerse = () => {
   return (
     <section className="relative w-full">
-      <CaseHeroScreen
-        tags={pixelVerseTags}
-        pageTitle={"PixelVerse | Cowchain"}
-        heroDescription={
-          "PixelVerse bridges Web2 and Web3 gaming with Telegram Mini Apps like PixelTap, achieving 45 million monthly active users (MAU). Through strategic use of Telegram’s user base, it became a leader in GameFi innovation and engagement."
-        }
-        descriptionClasses="w-[660px]"
-        headerClasses="font-montserrat"
-      />
+      <HeroScreenContainer />
       <Banner
         img={"/cases/PixelVerse/pixel-verse-banner.webp"}
         imgDesc={"Screenshots from PixelVerse application"}
-        classes={"w-full h-[437px]"}
+        classes={"w-full h-[114px] md:h-[200px] lg:h-[300px] xl:h-[437px]"}
       />
-      <ProjectOverview
+      <PixelverseOverview
         projectDescription={
           <>
-            PixelVerse began as a GameFi platform with steady yet modest
+            Pixelverse began as a GameFi platform with steady yet modest
             progress,
             <br className="hidden custom1430:block" /> aiming to optimize its
             ecosystem usability through blockchain innovation.
@@ -50,7 +41,7 @@ const PixelVerse = () => {
             <br className="hidden custom1430:block" /> project solutions to
             expand its reach. The launch of PixelTap redefined this
             <br className="hidden custom1430:block" /> trajectory, allowing
-            PixelVerse to tap into Telegram’s 950 million active users,
+            Pixelverse to tap into Telegram’s 950 million active users,
             <br className="hidden custom1430:block" />
             making its games accessible to both Web2 and Web3 players. This
             strategic
@@ -67,21 +58,34 @@ const PixelVerse = () => {
       <CasesSlider
         images={pixelVerseSlides}
         decorationElement={
-          <Image
-            width={"933"}
-            height={"251"}
-            alt="decoration ellipse"
-            className="absolute  h-full w-full scale-y-150"
-            src={"/cases/PixelVerse/pixel-verse-ellipse.webp"}
-          />
+          <>
+            <Image
+              width={"933"}
+              height={"251"}
+              alt="decoration ellipse"
+              className="absolute hidden h-full  w-full scale-y-150 lg:block"
+              src={"/cases/PixelVerse/pixel-verse-ellipse.webp"}
+            />
+            <Image
+              width={"933"}
+              height={"251"}
+              alt="decoration ellipse"
+              className="absolute h-full  w-full scale-y-150 lg:hidden"
+              src={"/cases/PixelVerse/pixel-verse-ellipse-mobile.webp"}
+            />
+          </>
         }
-        sectionClasses={"!h-[514px]"}
+        sectionClasses={" h-[186px] md:!h-[514px]"}
         isPixelVerse={true}
       />
       <PixelVerseWhatWeDid />
       <TeamBehind team={pixelVerseTeam} />
       <MoreProjects projects={pixelVerseProjects} />
-      <PixelVerseAvatarAI />
+      <Contact
+        descriptionClasses={"hidden md:block"}
+        titleClasses={"mb-8 md:mb-0"}
+        className={"px-5 py-[50px] md:px-0 xl:pb-[163px] xl:pt-[122px]"}
+      />
     </section>
   );
 };

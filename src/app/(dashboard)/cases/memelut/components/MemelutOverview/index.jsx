@@ -33,8 +33,14 @@ const MemelutOverview = ({ containerClasses }) => {
                 notable blockchain use cases, making memecoin trading more
                 accessible.
               </p>
-              <Link className="flex gap-4" href={"https://apps.apple.com/ua/app/memelut-memecoins-crypto/id6569243953"} target="_blank">
-                <span className="text-2xl font-medium uppercase leading-90 text-white underline">
+              <Link
+                className="flex items-center gap-4"
+                href={
+                  "https://apps.apple.com/ua/app/memelut-memecoins-crypto/id6569243953"
+                }
+                target="_blank"
+              >
+                <span className="text-lg font-medium uppercase leading-90 text-white underline xl:text-2xl">
                   visit website
                 </span>{" "}
                 <RightArrowSvg />

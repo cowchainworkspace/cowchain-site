@@ -23,6 +23,7 @@ const CasesMobile = () => {
     <section
       ref={containerRef}
       className="relative z-[2] block custom480:hidden"
+      id="projects"
     >
       {casesMobileData &&
         casesMobileData.map((project, index) => (

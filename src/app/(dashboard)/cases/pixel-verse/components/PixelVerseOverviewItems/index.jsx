@@ -7,9 +7,9 @@ import {
   AccordionPanel
 } from "@chakra-ui/react";
 import React from "react";
-import TopArrowSvg from "../../../../../../public/svgIcons/TopArrowSvg";
+import TopArrowSvg from "../../../../../../../public/svgIcons/TopArrowSvg";
 
-const OverviewItems = ({ overviewItems }) => {
+const PixelverseOverviewItems = ({ overviewItems }) => {
   return (
     <div className=" w-full">
       <Accordion
@@ -51,10 +51,10 @@ const OverviewItems = ({ overviewItems }) => {
                       {itemValue.map(
                         ({ itemValueTitle, itemValueDescription }) => (
                           <div key={itemValueTitle}>
-                            <h4 className="mb-[6px] hidden font-manrope text-xl normal-case leading-[30px] text-white xl:block">
+                            <h4 className="mb-[6px] font-manrope text-xl normal-case leading-[30px] text-white">
                               {itemValueTitle}
                             </h4>
-                            <p className="font-manrope text-sm font-medium leading-6 !text-white xl:!text-white-70">
+                            <p className="font-manrope text-xs font-medium leading-5 text-white-70 xl:text-sm xl:leading-6">
                               {itemValueDescription}
                             </p>
                           </div>
@@ -72,4 +72,4 @@ const OverviewItems = ({ overviewItems }) => {
   );
 };
 
-export default OverviewItems;
+export default PixelverseOverviewItems;

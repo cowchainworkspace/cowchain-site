@@ -26,9 +26,6 @@ const faqRows = {
           <AnchorLink href="#projects">
             <p>Cases</p>
           </AnchorLink>
-          <AnchorLink href="#clients">
-            <p>Clients</p>
-          </AnchorLink>
         </div>
       )
     },

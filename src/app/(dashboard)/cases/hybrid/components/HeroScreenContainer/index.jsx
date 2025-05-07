@@ -16,18 +16,17 @@ const HeroScreenContainer = () => {
         heroDescription={
           <>
             Hybrid is a Layer 2 blockchain on Arbitrum Nitro, integrating the
-            Mixture of Experts (MoE)
-            <br className="hidden custom1430:block" /> framework to power
-            specialized AI agents. By enabling real-time AI execution on-chain,
-            it bridges blockchain and AI-driven solutions. With Atlas – The Web3
-            Copilot, Hybrid simplifies market research, data tracking, and AI
-            monetization, solidifying its role in blockchain innovation.
+            Mixture of Experts (MoE) framework to power specialized AI agents.
+            By enabling real-time AI execution on-chain, it bridges blockchain
+            and AI-driven solutions. With Atlas – The Web3 Copilot, Hybrid
+            simplifies market research, data tracking, and AI monetization,
+            solidifying its role in blockchain innovation.
           </>
         }
         tagContainerClasses={
           "flex-wrap justify-center max-w-[320px] xl:max-w-full"
         }
-        descriptionClasses="md:w-[670px]"
+        descriptionClasses="md:w-[587px]"
         headerClasses="font-roc text-center font-medium text-[36px] leading-[42px] xl:text-[60px] xl:leading-[64px]"
         containerClasses="max-w-[769px]"
         sectionClasses="pb-[50px] xl:pb-[125px]"

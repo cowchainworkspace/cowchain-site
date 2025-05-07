@@ -139,7 +139,7 @@ export const benefitsData = [
 
 export const casesData = [
   {
-    title: "agent.hub",
+    title: "agnt.hub",
     link: "/cases/agnt",
     description:
       "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
@@ -212,7 +212,7 @@ export const casesData = [
 
 export const casesMobileData = [
   {
-    title: "agent.hub",
+    title: "agnt.hub",
     link: "/cases/agnt",
     description:
       "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",

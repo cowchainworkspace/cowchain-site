@@ -14,7 +14,6 @@ const StepAppProjectOverView = () => {
               <h3 className="font-roc text-[32px] font-medium uppercase leading-90 text-white xl:text-[54px]">
                 Project overview
               </h3>
-              <br className="hidden custom1430:block" />
               <p className="text-left font-manrope text-xs font-[450] leading-5 !text-white-70 xl:text-sm xl:leading-6">
                 StepApp combines fitness, gaming, and blockchain, offering one
                 of the
@@ -32,7 +31,7 @@ const StepAppProjectOverView = () => {
                 secure and transparent asset flows.
               </p>
               <Link
-                className="flex gap-4"
+                className="flex items-center gap-4"
                 href={"https://step.app/"}
                 target="_blank"
               >

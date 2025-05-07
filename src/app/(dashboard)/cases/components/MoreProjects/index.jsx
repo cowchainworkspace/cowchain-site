@@ -12,7 +12,7 @@ const MoreProjects = ({ projects, headerClasses = "", isReversed }) => {
       <div className="mx-auto mb-[50px] flex max-w-[1440px] flex-col items-start justify-between gap-6 px-4 md:flex-row md:px-8 xl:mb-[84px] xl:pl-[95px] xl:pr-[99px]">
         <h2
           className={cn(
-            "font-manrope text-[32px] font-semibold uppercase leading-[42px] text-white xl:text-[60px]",
+            "font-manrope text-[32px] font-semibold uppercase leading-[42px] text-white xl:text-[42px]",
             headerClasses
           )}
         >

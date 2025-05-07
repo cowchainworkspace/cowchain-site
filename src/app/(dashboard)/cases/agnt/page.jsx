@@ -38,7 +38,7 @@ const Agnt = () => {
             decentralized AI.
           </>
         }
-        headerClasses="font-[550] text-[36px]  font-roc text-center leading-[42px] xl:text-[60px] xl:leading-[58.92px]"
+        headerClasses="font-medium text-[36px] max-w-[340px] md:max-w-full  font-roc text-center leading-[42px] xl:text-[60px] xl:leading-[64px]"
         containerClasses="max-w-[769px] text-center"
         descriptionClasses="md:max-w-[615px] custom1430:max-w-full text-xs text-balance tracking-[0] xl:tracking-wider leading-5 xl:text-sm xl:leading-6 font-manrope"
         sectionClasses={"xl:pt-[102px] xl:pb-[120px]"}
@@ -71,7 +71,7 @@ const Agnt = () => {
       />
       <MoreProjects
         projects={agntProjects}
-        headerClasses="font-roc text-[42px] font-medium leading-90"
+        headerClasses="font-roc text-[32px] xl:text-[42px] font-medium leading-90"
       />
       <Contact
         descriptionClasses={"hidden md:block"}

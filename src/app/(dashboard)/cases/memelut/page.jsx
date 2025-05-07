@@ -38,7 +38,7 @@ const Memelut = () => {
         }
         containerClasses="relative"
         sectionClasses="lg:pb-[50px]"
-        headerClasses="font-montserrat text-[36px] text-center leading-[42px] xl:text-[64px] xl:leading-[64px]"
+        headerClasses="font-roc text-[36px] text-center leading-[42px] xl:text-[60px] xl:leading-[64px]"
       />
 
       <Banner
@@ -78,7 +78,7 @@ const Memelut = () => {
       <TeamBehind
         headerClasses={"xl:leading-[18.41px] xl:tracking-[1.84px]"}
         team={memelutTeam}
-        classes={"pt-[50px] xl:pt-[60px]"}
+        classes={"pt-0 xl:pt-[60px]"}
       />
       <MoreProjects projects={memelutProjects} isReversed={true} />
       <Contact

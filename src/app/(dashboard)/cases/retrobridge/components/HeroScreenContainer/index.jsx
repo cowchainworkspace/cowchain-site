@@ -22,7 +22,7 @@ const HeroScreenContainer = () => {
           </>
         }
         headerClasses="text-center max-w-[566px] text-[36px] leading-[42px] xl:text-[60px] xl:leading-[64px] uppercase font-foc font-medium"
-        containerClasses="max-w-[671px]"
+        containerClasses="max-w-[641px]"
         descriptionClasses="text-center max-w-[671px]"
         tagContainerClasses="flex-wrap md:flex-nowrap justify-center max-w-[299px] md:max-w-fit"
       />

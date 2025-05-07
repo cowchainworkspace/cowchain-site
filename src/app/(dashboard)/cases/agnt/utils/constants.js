@@ -200,8 +200,8 @@ export const agntSolutions = [
   },
   {
     id: 5,
-    title: "AI Agent Marketplace",
-    desc: "Created AGNT Marketplace, a hub where users can deploy, customize, and scale AI agents with modular upgrades. No-code integrations allow agents to gain new trading logic, automation tools, and risk management features.",
+    title: "AGNT AI Framework",
+    desc: " A modular toolkit for launching interactive AI agents across the Web3 stack.  Protocols and platforms alike can create agents tailored to their UX, with or without a live token. Built-in bonding curve mechanics allow agents to be launched and tokenized directly from inside X.",
     textBlockWidth: 601,
     img: {
       width: 567,
@@ -255,7 +255,7 @@ export const agntProjects = [
       { isMain: false, tagName: "Bridge" },
       { isMain: false, tagName: "NFT" }
     ],
-    title: 'RETROBRIDGE',
+    title: 'Cross-chain transfer bridge',
     desc: 'RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.',
     img: crossChain,
     textColor: "text-secondary",
