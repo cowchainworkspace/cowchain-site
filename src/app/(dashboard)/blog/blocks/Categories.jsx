@@ -21,16 +21,16 @@ const Categories = ({ categories }) => {
   return (
     <div
       className={
-        "z-20 mt-9  flex  max-w-full items-center lg:max-w-full lg:gap-4 xl:max-w-none"
+        "z-20 mt-9  flex  max-w-full items-center lg:max-w-full lg:gap-4 xl:max-w-[1000px] custom1430:max-w-none"
       }
     >
       <PrevButton disabled={prevBtnDisabled} onClick={onPrevButtonClick} />
       <div className={"embla__viewport"} ref={emblaRef}>
         <div className={cn("embla__container flex gap-2")}>
-          {categories?.map(({ id, attributes }) => {
+          {categories?.map(({ id, tag_name }) => {
             return (
               <div key={id}>
-                <Category key={id} title={attributes.tag_name} />
+                <Category key={id} title={tag_name} />
               </div>
             );
           })}

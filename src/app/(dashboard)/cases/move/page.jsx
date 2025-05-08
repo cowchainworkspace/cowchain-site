@@ -3,57 +3,15 @@
 import "./case-studies.css";
 import hotel from "@/assets/case-study/step/1-left.png";
 import hotel_2 from "@/assets/case-study/step/1-right.png";
-import Dubai from "@/assets/icons/dubai";
-import Contact from "@/components/Contact";
 import Chevron from "@/components/icons/chevron";
 import Image from "next/image";
 import Link from "next/link";
 import { ParallaxProvider } from "react-scroll-parallax";
-import Projects from "../components/Projects";
 import { ProjectDetail } from "../components/project-detail";
 import { CaseGallery } from "./blocks/CaseGallery";
 import { CaseMask } from "./blocks/CaseMask";
-import { HeroSection } from "./blocks/HeroSection";
-
-const project_details = [
-  {
-    title: "Tech Stack",
-    content:
-      "React Native, Node.js, Solidity, ethers.js, web3.js, bitcoin.js, Persona KYC, Interac E-transfer, Chat support, email templating"
-  },
-  {
-    title: "project duration",
-    content: "6 months"
-  },
-  {
-    title: "geography",
-    content: (
-      <div className="flex flex-row items-center gap-2">
-        {" "}
-        <Dubai className={"h-3 w-4 "} /> Dubai
-      </div>
-    )
-  }
-];
-
-const team_details = [
-  {
-    title: "development",
-    content: "Vakhtang Chikhladze, Daniil Stoian, Nikita Chernega"
-  },
-  {
-    title: "project management",
-    content: "Viacheslav Ivchenko"
-  },
-  {
-    title: "marketing & Seo",
-    content: "Alexandr Yaremenko"
-  },
-  {
-    title: "ui/ux design",
-    content: "Nadiia Nikiforova"
-  }
-];
+import { projectDetails } from "./moveCaseData/stepCaseData";
+import { teamDetails } from "./moveCaseData/stepCaseData";
 
 // eslint-disable-next-line react/prop-types
 const CaseStudiesStep = () => {
@@ -78,7 +36,7 @@ const CaseStudiesStep = () => {
                   </Link>
                 </div>
                 <div className="border-b-[1px] border-white/50 lg:min-w-[490px]">
-                  {project_details.map((detail, index) => (
+                  {projectDetails.map((detail, index) => (
                     <ProjectDetail key={detail.title + index} {...detail} />
                   ))}
                 </div>
@@ -177,7 +135,7 @@ const CaseStudiesStep = () => {
                   </h1>
                 </div>
                 <div className="border-b-[1px] border-white/50 xl:min-w-[490px]">
-                  {team_details.map((detail, index) => (
+                  {teamDetails.map((detail, index) => (
                     <ProjectDetail key={detail.title + index} {...detail} />
                   ))}
                 </div>

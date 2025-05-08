@@ -14,7 +14,7 @@ export const Post = ({ attributes }) => {
       <div
         className="h-[233px] w-[375px] bg-cover bg-center transition-transform duration-200  group-hover:scale-95 group-hover:scale-95 xl:h-[370px] xl:w-full "
         style={{
-          backgroundImage: `url(${attributes?.preview_article_img?.data?.attributes?.url})`,
+          backgroundImage: `url(${attributes?.preview_article_img?.url})`,
           backgroundPosition: "left",
           backgroundSize: "cover"
         }}

@@ -16,8 +16,23 @@ export default {
       }
     },
     extend: {
+      spacing: {
+        15: "60px",
+        30: "120px"
+      },
+      lineHeight: {
+        90: 0.9
+      },
       fontFamily: {
-        roc: ["roc-grotesk", "sans-serif"]
+        roc: ['roc-grotesk', "sans-serif"],
+        manrope: ["var(--font-manrope)", "sans-serif"],
+        rubik: ["var(--font-rubik)", "sans-serif"],
+        anton: ["var(--font-anton)", "sans-serif"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
+        montserrat: ["var(--font-montserrat)", "sans-serif"]
+      },
+      borderRadius: {
+        20: "20px"
       },
       screens: {
         '1440custom': '1440px',
@@ -40,17 +55,35 @@ export default {
         "th-fade": "#ffffff41",
         "th-grey": "#ffffff71",
         "th-violet": "#EABBFF",
-        secondary: "#BBBBBB"
+        secondary: "#BBBBBB",
+        "white-70": "#FFFFFFB2",
+        "white-50": "#FFFFFF80",
+        "hyper-violet": "#C64EFF",
+        "white-15": "#FFFFFF26"
       },
       backgroundImage: {
         credo: 'url("/assets/credo_bg.jpg")',
-         'faq-gradient': 'linear-gradient(120.5deg, #883DBD 3.74%, #010101 68.54%)',
-        "faq-fullstack-gradient": 'background: linear-gradient(163.81deg, #873CBC 0.26%, #5F2C91 16.97%, #11011F 42.6%, #000000 53.68%)'
+        "faq-gradient":
+          "linear-gradient(120.5deg, #883DBD 3.74%, #010101 68.54%)",
+        "faq-fullstack-gradient":
+          "background: linear-gradient(163.81deg, #873CBC 0.26%, #5F2C91 16.97%, #11011F 42.6%, #000000 53.68%)",
+        "cosmic-plum-fade":
+          "linear-gradient(180deg, rgba(228, 170, 255, 0.6) -5.25%, rgba(156, 52, 205, 0.8) 26.5%, rgba(106, 38, 138, 0.99) 66.5%, rgba(0, 0, 0, 0.71) 100%)",
+        "vintage-blush-gradient":
+          "linear-gradient(180deg, #994782 -5.25%, #CBB4AB 43.54%, #994782 100%)",
+        "vintage-velvet":
+          "linear-gradient(180deg, #B58F5D -5.25%, #4A1D38 43.54%, rgba(0, 0, 0, 0) 100%)",
+        "muted-horizon":
+          "linear-gradient(180deg, #6D8BB1 -5.25%, #CBB4AB 43.54%, rgba(29, 37, 103, 0.42) 100%)",
+        "custom-gradient":
+          "linear-gradient(183.72deg, #4D2C91 -8.83%, #000000 60.23%)",
+          'case-gradient': "radial-gradient(84.94% 218.57% at 15.06% 100%, #000000 0%, rgba(0, 0, 0, 0.4) 100%)",
+         
       },
       width: {
-        'calc-full-plus-329': 'calc(100% + 329px)',
-        'calc-full-minus-271': 'calc(100% - 271px)'
-      },
+        "calc-full-plus-329": "calc(100% + 329px)",
+        "calc-full-minus-271": "calc(100% - 271px)"
+      }
     }
   },
   plugins: [require("tailwindcss/nesting")]

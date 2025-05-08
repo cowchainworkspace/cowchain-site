@@ -1,9 +1,3 @@
-import payment from "@/assets/cases/newCases/CryptoExchangeImg.png";
-import hotel from "@/assets/cases/newCases/HotelBusinessImg.png";
-import bridge from "@/assets/cases/newCases/crossChainTransferBridgeImg.png";
-import finance from "@/assets/cases/newCases/cryptoWalletApp2Img.png";
-import wallet from "@/assets/cases/newCases/cryptoWalletAppImg.png";
-import m2e from "@/assets/cases/newCases/m2ePlatformImg.png";
 import bg from "@/assets/homepage/bg.png";
 import linkedin from "@/assets/homepage/linkedin.svg";
 import pic1 from "@/assets/homepage/projects/1.jpg";
@@ -18,7 +12,12 @@ import gbc from "@/assets/cases/gbcCase.png";
 import hybrid from "@/assets/cases/hybridCase.png";
 import retroBridge from "@/assets/cases/retrobridgeCase.png";
 import stepUp from "@/assets/cases/stepUpCase.png";
+import memolut from "@/assets/cases/memolut.webp"
+import pixelVerse from "@/assets/cases/pixel-verse.webp"
+import tenet from "@/assets/cases/tenet-project.webp"
 
+
+// import {tenet, pixelVerse, memolut} from "../../../../../public/projects"
 export const blocksData = [
   {
     id: 1,
@@ -145,68 +144,154 @@ export const benefitsData = [
 
 export const casesData = [
   {
-    title: `agenthub`,
-    link: "",
+    title: "agnt.hub",
+    link: "/cases/agnt",
     description:
       "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
     photo: agnt,
-    tags: ["Web Development", "AI Development", "DeFi", "Crypto Wallet", "NFT"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "AI Development" },
+      { isMain: false, tagName: "Crypto Wallet" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "NFT" }
+    ]
   },
   {
     title: "Cross-chain transfer bridge",
-    link: "",
+    link: "/cases/retrobridge",
     description:
       "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
     photo: retroBridge,
-    tags: ["Web Development", "DeFi", "Bridge", "NFT"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "Bridge" },
+      { isMain: false, tagName: "NFT" }
+    ]
   },
   {
     title: "GBC DAPP",
-    link: "",
+    link: "/cases/gbc",
     description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     photo: gbc,
-    tags: ["Web Development", "Trading", "NFT"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "NFT" }
+    ]
   },
   {
     title: "step app",
-    link: "",
+    link: "/cases/step-app",
     description:
       "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
     photo: stepUp,
-    tags: ["Web Development", "Mobile App", "GameFi", "Trading", "DeFi", "NFT", "Staking", "Crypto Wallet"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "Mobile App" },
+      { isMain: false, tagName: "GameFi" },
+      { isMain: false, tagName: "Crypto Wallet" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "DEX" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "NFT" },
+      { isMain: false, tagName: "Staking" }
+    ]
   },
   {
     title: "hybrid",
-    link: "",
+    link: "/cases/hybrid",
     description: "Hybrid is a Layer 2 blockchain on Arbitrum Nitro, integrating the MoE framework  specialized AI agents.",
     photo: hybrid,
-    tags: ["Web Development", "Blockchain Development", "Blockchain Development", "Bridge", "Staking", "L1"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "AI Development" },
+      { isMain: true, tagName: "Blockchain Development" },
+      { isMain: false, tagName: "Bridge" },
+      { isMain: false, tagName: "Staking" },
+      { isMain: false, tagName: "L1" }
+    ]
   },
+  {
+    tags: [
+      { isMain: true, tagName: "Mobile App" },
+      { isMain: true, tagName: "Telegram Mini Apps" },
+      { isMain: false, tagName: "GameFi" }
+    ],
+    title: "PixelVerse",
+    description: "PixelVerse is a GameFi ecosystem that merges Web2 accessibility with Web3 innovation through Telegram Mini Apps.",
+    photo: pixelVerse,
+    link: "/cases/pixel-verse",
+  },
+  {
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "Blockchain Development" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "Crypto Wallet" },
+      { isMain: false, tagName: "DEX" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "Bridge" },
+      { isMain: false, tagName: "L1" },
+      { isMain: false, tagName: "Staking" }
+    ],
+    title: "tenet",
+    description: "Tenet is a Cosmos-based Layer-1 blockchain designed to validate networks using LSD/LRT assets.",
+    photo: tenet,
+    link: "/cases/tenet",
+  },
+  {
+    tags: [
+      { isMain: true, tagName: "Mobile App" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "Crypto Wallet" }
+    ],
+    title: "memelut",
+    description: "Memelut is an all-in-one app that simplifies exploring, trading, and storing memecoins.",
+    photo: memolut,
+    link: "/cases/memelut",
+  }
 ];
 
 export const casesMobileData = [
   {
-    title: `agenthub`,
-    link: "",
+    title: "agnt.hub",
+    link: "/cases/agnt",
     description:
       "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
     photo: agnt,
-    tags: ["Web Development", "AI Development", "DeFi", "Crypto Wallet", "NFT"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "AI Development" },
+      { isMain: false, tagName: "Crypto Wallet" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "NFT" }
+    ]
   },
   {
     title: "Cross-chain transfer bridge",
-    link: "",
+    link: "/cases/retrobridge",
     description:
       "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
     photo: retroBridge,
-    tags: ["Web Development", "DeFi", "Bridge", "NFT"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "Bridge" },
+      { isMain: false, tagName: "NFT" }
+    ]
   },
   {
     title: "GBC DAPP",
-    link: "",
+    link: "/cases/gbc",
     description: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
     photo: gbc,
-    tags: ["Web Development", "Trading", "NFT"]
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "NFT" }
+    ]
   },
 ];
 
@@ -286,10 +371,10 @@ export const servicesBlocksData = [
       { title: "Staking", link: "/services/staking" },
       { title: "Crypto Lottery", link: "/services/crypto_lottery" },
       { title: "Exchange", link: "/services/exchange" },
-      {
-        title: "ITC (Social Trading Platform)",
-        link: "/services/itc_social_trading_platform"
-      }
+      // {
+      //   title: "ITC (Social Trading Platform)",
+      //   link: "/services/itc_social_trading_platform"  // TEMPORARILY HIDE: ITC is hidden until design is finalized
+      // }
     ]
   },
   {
@@ -319,10 +404,10 @@ export const servicesBlocksData = [
         link: "/services/cryptocurrency_exchange"
       },
       { title: "P2P crypto exchange", link: "/services/p2p_crypto_exchange" },
-      { title: "ICO Platform", link: "/services/ico_platform" },
+      { title: "ICO Platform", link: "/services/ico_platform_development" },
       { title: "RWA Tokenization", link: "/services/rwa_tokenization" },
       { title: "NFT Game", link: "/services/nft_game" },
-      { title: "Metaverse", link: "/services/metaverse" }
+      // { title: "Metaverse", link: "/services/metaverse" }  // TEMPORARILY HIDE: Metaverse is hidden until design is finalized
     ]
   }
 ];

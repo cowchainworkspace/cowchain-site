@@ -28,7 +28,7 @@ const ArticlesSlider = ({ articles }) => {
           {articles?.map((article) => {
             return (
               <div key={article.id}>
-                <Post key={article.id} attributes={article.attributes} />
+                <Post key={article.id} attributes={article} />
               </div>
             );
           })}

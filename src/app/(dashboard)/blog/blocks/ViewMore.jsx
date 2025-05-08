@@ -1,5 +1,4 @@
 import { DotsLoader } from "@/components/loader/DotsLoader";
-import { Loading } from "@/components/loader/Loading";
 import { cn } from "@/lib/utils";
 
 export const ViewMoreSection = ({

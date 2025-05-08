@@ -54,6 +54,7 @@ export default function HomeContent() {
         desc={
           "At Cowchain, we are a Web3 development company with a proven track record in creating decentralized applications, smart contracts, and blockchain solutions. Our focus is on unlocking new revenue streams for businesses through secure and transparent blockchain integration. Leveraging a wealth of expertise in emerging technologies, the team delivers custom solutions that ensure transparency, security, and a streamlined flow of operations"
         }
+        containerClasses={"xl:py-[126px]"}
       />
       <TustByNumbers
         home
@@ -61,6 +62,7 @@ export default function HomeContent() {
         desc={
           "At Cowchain, we are a Web3 development company with a proven track record in creating decentralized applications, smart contracts, and blockchain solutions. Our focus is on unlocking new revenue streams for businesses through secure and transparent blockchain integration. Leveraging a wealth of expertise in emerging technologies, the team delivers custom solutions that ensure transparency, security, and a streamlined flow of operations"
         }
+        noBg={true}
       />
       <Clients />
       <Industries
@@ -89,6 +91,7 @@ Each solution is crafted with precision,
 and aimed at solving real-world challenges"
           hasIcon={false}
           isSecondary={true}
+          faqGradient={true}
         />
       </div>
       <div className="hidden overflow-hidden md:block">
@@ -140,27 +143,29 @@ and aimed at solving real-world challenges"
             </span>{" "}
             and{" "}
             <span className="violet-gradient-text">
-              deliver <br /> results
+              deliver <br className="hidden xl:block" /> results
             </span>{" "}
-            that aligned <br /> with your requirements
+            that aligned <br className="hidden xl:block" /> with your
+            requirements
           </>
         }
         bg={
-          <Image
-            src={bgEllipse}
-            alt="decoration ellipse"
-            className="absolute -top-[10%] left-0 hidden md:block"
-          />
-        }
-        mobileBg={
-          <Image
-            src={mobileProcessEllipse}
-            alt="decoration ellipse"
-            className="absolute -top-[15%] block md:hidden"
-          />
+          <>
+            <Image
+              src={bgEllipse}
+              alt="decoration ellipse"
+              className="absolute -top-[10%] left-0 hidden md:block"
+            />
+            <Image
+              src={mobileProcessEllipse}
+              alt="decoration ellipse"
+              className="absolute -top-[15%] block md:hidden"
+            />
+          </>
         }
         isHome={true}
-        titleClasses="custom1430:!max-w-[592px]"
+        titleClasses="text-[24px] mt-[42px] xl:mt-[60px] custom1430:!max-w-[592px]"
+        containerClasses="xl:grid xl:gap-14"
       />
 
       <Industries
@@ -174,6 +179,10 @@ and aimed at solving real-world challenges"
         desc={
           "The adaptability of Web3 development allows us to cater to a variety of industries, each gaining significant value from blockchain technologies"
         }
+        containerClasses={
+          "xl:gap-30 custom1430:pr-[189px] xl:pt-[90px] xl:pb-[127px]"
+        }
+        customClasses="md:grid-cols-2 md:gap-y-10 md:gap-x-10 xl:gap-y-[139px] xl:gap-x-[150px] xl:pl-[85px] !mt-0"
         data={servedIndustriesData}
         topBorder={false}
         bottomBorder={false}
@@ -224,21 +233,25 @@ and aimed at solving real-world challenges"
         }
         data={engagementModels}
         bg={
-          <Image
-            src={dexBg}
-            alt="decoration ellipse"
-            className="absolute -top-[20%] left-0 hidden md:block"
-          />
-        }
-        mobileBg={
-          <Image
-            src={mobileProcessEllipse}
-            alt="decoration ellipse"
-            className="absolute -top-[15%] block md:hidden"
-          />
+          <>
+            {" "}
+            <Image
+              src={dexBg}
+              alt="decoration ellipse"
+              className="absolute -top-[20%] left-0 hidden md:block"
+            />
+            <Image
+              src={mobileProcessEllipse}
+              alt="decoration ellipse"
+              className="absolute -top-[15%] block md:hidden"
+            />
+          </>
         }
         tag={"engagement models"}
         isHomeEngagement={true}
+        titleClasses="text-[36px] max-w-[471px]"
+        containerClasses="xl:grid xl:gap-9"
+        descClasses="max-w-[450px]"
       />
       <Industries
         title={
@@ -277,7 +290,10 @@ and aimed at solving real-world challenges"
           quoteClasses={"md:gap-0"}
         />
       </div>
-      <Contact />
+      <Contact
+        descriptionClasses={"mb-4 md:mb-0"}
+        className={"px-[30px] py-[50px] md:px-0 xl:py-[143px]"}
+      />
       <div className="w-full overflow-hidden">
         <FAQ
           noBg={true}

@@ -25,7 +25,7 @@ export default function HeaderContent() {
             YOU TO GROW YOUR <br />
           </h2>
         </div>
-        <div className="flex cursor-default flex-col md:pt-[56px] gap-y-4 md:items-end">
+        <div className="flex cursor-default flex-col gap-y-4 md:items-end md:pt-[56px]">
           <div className="">
             <div className="justify-left flex gap-[24px] md:items-center md:justify-end">
               <div className="flex gap-[12px]">

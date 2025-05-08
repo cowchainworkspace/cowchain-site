@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
 import { useMotionValue } from "framer-motion";
-import { ScrollProject } from "./ScrollProject";
+import React, { useEffect } from "react";
 import useScrollPercentage from "react-scroll-percentage-hook";
-import { casesMobileData } from '../homeData/data'
+import { casesMobileData } from "../homeData/data";
+import { ScrollProject } from "./ScrollProject";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/bundle";
@@ -19,13 +19,21 @@ const CasesMobile = () => {
     scrollPerc.set(percentage.vertical);
   }, [percentage.vertical, scrollPerc]);
 
-
   return (
-    <section ref={containerRef} className="block custom480:hidden">
+    <section
+      ref={containerRef}
+      className="relative z-[2] block custom480:hidden"
+      id="projects"
+    >
       {casesMobileData &&
         casesMobileData.map((project, index) => (
           <div key={index} className="">
-            <ScrollProject key={index} index={index} {...project} mobile={true} />
+            <ScrollProject
+              key={index}
+              index={index}
+              {...project}
+              mobile={true}
+            />
           </div>
         ))}
     </section>

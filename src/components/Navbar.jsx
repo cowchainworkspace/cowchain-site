@@ -5,8 +5,6 @@ import bg_clients_lg from "@/assets/bg/clients_navbar_bg_lg.png";
 import bg_clients from "@/assets/bg/clients_navbar_bg_sm.png";
 import bg from "@/assets/bg/navbar_top.png";
 import bg_lg from "@/assets/bg/navbar_top_lg.png";
-import team_bg from "@/assets/bg/team-mobile.png";
-import team from "@/assets/bg/team.png";
 import linkedin from "@/assets/footer/linkedin.svg";
 import mail from "@/assets/footer/mail.svg";
 import medium from "@/assets/footer/medium.svg";
@@ -26,11 +24,17 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ServicesAndTechnologies } from "../app/(dashboard)/(home)/blocks/ServicesAndTechMenu";
 import { ServicesAndTechnologiesMob } from "../app/(dashboard)/(home)/blocks/ServicesAndTechnologiesMob";
+import { useOpenMenu } from "../hooks/useOpenMenu";
+import { useSetBurgerMenu } from "../hooks/useSetBurgerMenu";
+import { useSetMobServiceMenu } from "../hooks/useSetMobServiceMenu";
+import { useToggleMenu } from "../hooks/useToggleMenu";
 
 export default function Navbar({ isPageNotFound = false }) {
-  const [burgerOpen, setBurgerOpen] = useState(false);
-  const [serviceMenuOpen, setServiceMenuOpen] = useState(false);
-  const [serviceMobMenuOpen, setServiceMobMenuOpen] = useState(false);
+  const { serviceMenuOpen, setServiceMenuOpen } = useOpenMenu();
+  const { serviceMobMenuOpen, setServiceMobMenuOpen } = useSetMobServiceMenu();
+  const { toggleMenu, setToggleMenu } = useToggleMenu();
+  const { burgerOpen, setBurgerOpen } = useSetBurgerMenu();
+
   const pathname = usePathname();
 
   const menuRef = useRef(null);
@@ -58,7 +62,6 @@ export default function Navbar({ isPageNotFound = false }) {
   }, []);
 
   const [openForm, setOpenForm] = useState(false);
-  const [toggleMenu, setToggleMenu] = useState(false);
   const [windowHeight, setWindowheight] = useState("");
   const [isTeamBg, setIsTeamBg] = useState(false);
   const [isGradient, setIsGradient] = useState(true);
@@ -124,10 +127,6 @@ export default function Navbar({ isPageNotFound = false }) {
 
   const anchorLinks = [
     {
-      title: "Services & Technologies",
-      link: "/services"
-    },
-    {
       title: "Cases",
       link: "/cases"
     }
@@ -152,6 +151,7 @@ export default function Navbar({ isPageNotFound = false }) {
   const closeBurger = () => {
     setToggleMenu(false);
     setBurgerOpen(false);
+    setServiceMenuOpen(false);
   };
 
   const handleMobileFormOpen = () => {
@@ -165,9 +165,14 @@ export default function Navbar({ isPageNotFound = false }) {
     setServiceMenuOpen((prevState) => !prevState);
   };
 
-  const toggleMobServices = (e) => {
+  const closeMobServiceMenu = (e) => {
     e.stopPropagation();
-    setServiceMobMenuOpen((prevState) => !prevState);
+    setServiceMobMenuOpen(false);
+  };
+
+  const openMobileServiceMenu = (e) => {
+    e.stopPropagation();
+    setServiceMobMenuOpen(true);
   };
 
   useEffect(() => {
@@ -187,9 +192,7 @@ export default function Navbar({ isPageNotFound = false }) {
       <section
         className={cn("relative z-[21] bg-transparent opacity-0", {
           "pb-36 md:pb-0": isHomePage,
-          "pb-[440px] lg:pb-[670px]": isTeamBg,
-          "opacity-100": !isRendering,
-          "h-screen overflow-auto": toggleMenu
+          "opacity-100": !isRendering
         })}
       >
         {isHomePage ? (
@@ -234,22 +237,6 @@ export default function Navbar({ isPageNotFound = false }) {
           />
         )}
 
-        {isTeamBg && (
-          <>
-            <Image
-              className="pointer-events-none absolute right-0 top-0 h-full w-full lg:hidden"
-              alt="gradient"
-              src={team_bg}
-            />
-            <Image
-              className="pointer-events-none absolute top-0 z-[-2] hidden h-full w-full lg:block"
-              alt="gradient"
-              priority
-              src={team}
-            />
-          </>
-        )}
-
         <div
           className={
             isHomePage
@@ -258,14 +245,12 @@ export default function Navbar({ isPageNotFound = false }) {
           }
         >
           <nav className="hidden w-full max-w-[360px] items-center gap-[80px]  pl-12 lg:flex xl:max-w-md">
-            {/* for future services menu */}
-
-            {/* <p
+            <p
               className="menu-toggle-button navlink mt-1 cursor-pointer"
               onClick={toggleServices}
             >
               Services & Technologies
-            </p> */}
+            </p>
             {anchorLinks.map((link, index) => (
               <Link key={index} href={link.link}>
                 <p className="navlink mt-1">{link.title}</p>
@@ -319,7 +304,7 @@ export default function Navbar({ isPageNotFound = false }) {
                 initial={{ width: 0 }}
                 exit={{ width: 0 }}
                 animate={{ width: "100%", maxWidth: "100%" }}
-                className="absolute right-0 top-0 z-50  min-h-full w-full"
+                className="absolute right-0 top-0 z-50  h-screen min-h-full w-full overflow-auto"
               >
                 <motion.div
                   style={{
@@ -345,7 +330,7 @@ export default function Navbar({ isPageNotFound = false }) {
                       src={menu_close}
                       onClick={(e) => {
                         closeBurger();
-                        toggleMobServices(e);
+                        closeMobServiceMenu(e);
                       }}
                       alt=""
                     ></Image>
@@ -355,16 +340,14 @@ export default function Navbar({ isPageNotFound = false }) {
                   >
                     {serviceMobMenuOpen ? (
                       <ServicesAndTechnologiesMob
-                        toggleMobServices={toggleMobServices}
+                        closeServiceMenu={closeMobServiceMenu}
                         closeBurger={closeBurger}
                       />
                     ) : (
                       <>
-                        {/* for future services menu */}
-
-                        {/* <div
+                        <div
                           onClick={(e) => {
-                            toggleMobServices(e);
+                            openMobileServiceMenu(e);
                           }}
                           className="flex items-center "
                         >
@@ -376,7 +359,7 @@ export default function Navbar({ isPageNotFound = false }) {
                             src={arrow}
                             alt=""
                           ></Image>
-                        </div> */}
+                        </div>
                         {anchorLinks.map((link, index) => (
                           <Link
                             key={index}

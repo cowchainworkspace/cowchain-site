@@ -1,33 +1,33 @@
-import eth from "@/assets/svgComponents/stack/Ethereum";
-import ava from "@/assets/svgComponents/stack/Avalanche";
-import polygon from "@/assets/svgComponents/stack/Polygon";
-import binance from "@/assets/svgComponents/stack/BinanceIcon";
-import nodejs from "@/assets/svgComponents/stack/NodeJsIcon";
-import mongodb from "@/assets/svgComponents/stack/MongodbIcon";
-import postgres from "@/assets/svgComponents/stack/PostgresqlIcon";
-import react from "@/assets/svgComponents/stack/ReactIcon";
-import nextjs from "@/assets/svgComponents/stack/NextJsIcon";
 import aws from "@/assets/svgComponents/stack/AWSStackIcon";
+import ava from "@/assets/svgComponents/stack/Avalanche";
 import azure from "@/assets/svgComponents/stack/AzureIcon";
+import binance from "@/assets/svgComponents/stack/BinanceIcon";
 import bitcoin from "@/assets/svgComponents/stack/BitcoinStackIcon";
+import eth from "@/assets/svgComponents/stack/Ethereum";
 import express from "@/assets/svgComponents/stack/ExpressStackIcon";
 import googleCloud from "@/assets/svgComponents/stack/GoogleCloudStackIcon";
 import javascript from "@/assets/svgComponents/stack/JavascriptStackIcon";
 import microservices from "@/assets/svgComponents/stack/MicroservicesStackIcon";
+import mongodb from "@/assets/svgComponents/stack/MongodbIcon";
 import mysql from "@/assets/svgComponents/stack/MySQLStackIcon";
 import near from "@/assets/svgComponents/stack/NearStackIcon";
 import nest from "@/assets/svgComponents/stack/NestStackIcon";
+import nextjs from "@/assets/svgComponents/stack/NextJsIcon";
+import nodejs from "@/assets/svgComponents/stack/NodeJsIcon";
 import okx from "@/assets/svgComponents/stack/OKXStackIcon";
+import polygon from "@/assets/svgComponents/stack/Polygon";
+import postgres from "@/assets/svgComponents/stack/PostgresqlIcon";
 import privy from "@/assets/svgComponents/stack/PrivyStackIcon";
+import react from "@/assets/svgComponents/stack/ReactIcon";
 import solana from "@/assets/svgComponents/stack/SolanaStackIcon";
 import subgraph from "@/assets/svgComponents/stack/SubgraphStackIcon";
+import ton from "@/assets/svgComponents/stack/TONStackIcon";
 import tailwind from "@/assets/svgComponents/stack/TailwindStackIcon";
 import thirdWeb from "@/assets/svgComponents/stack/ThirdWebStackIcon";
-import ton from "@/assets/svgComponents/stack/TONStackIcon";
 
 export const expertiseData = [
   {
-    title: "Blockchain \n Platforms",
+    title: <>Blockchains</>,
     tools: [
       { logo: eth, alt: "Ethereum" },
       { logo: solana, alt: "Solana" },
@@ -40,7 +40,15 @@ export const expertiseData = [
     ]
   },
   {
-    title: "Front-End  \n  Technologies",
+    title: "Databases",
+    tools: [
+      { logo: mongodb, alt: "MongoDB" },
+      { logo: mysql, alt: "MySQL" },
+      { logo: postgres, alt: "PostgreSQL" }
+    ]
+  },
+  {
+    title: <>Front-End <br/> Technologies</>,
     tools: [
       { logo: react, alt: "React.js" },
       { logo: nextjs, alt: "Next.js" },
@@ -49,7 +57,7 @@ export const expertiseData = [
     ]
   },
   {
-    title: "Back-End  \n  Technologies",
+    title: <>Back-End <br/>  Technologies</>,
     tools: [
       { logo: nodejs, alt: "Node.js" },
       { logo: express, alt: "Express" },
@@ -57,14 +65,7 @@ export const expertiseData = [
       { logo: microservices, alt: "Microservices" }
     ]
   },
-  {
-    title: "Databases",
-    tools: [
-      { logo: mongodb, alt: "MongoDB" },
-      { logo: mysql, alt: "MySQL" },
-      { logo: postgres, alt: "PostgreSQL" }
-    ]
-  },
+  
   {
     title: "Cloud Services",
     tools: [

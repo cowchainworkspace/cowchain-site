@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { blocksData } from "../homeData/data";
+
 export default function ExpandingBlocks({ isSecondary = false }) {
   const [activeBlock, setActiveBlock] = useState(blocksData[1]);
 
@@ -12,30 +13,27 @@ export default function ExpandingBlocks({ isSecondary = false }) {
 
   return (
     <>
-      <section className={`relative  border-t border-t-th-fade`}>
-        <div className="mx-auto max-w-[1440px]">
-          <div className="px-default relative flex flex-col justify-between gap-[91px] pb-[42px] pt-[60px] lg:pb-[61px] lg:pt-[90px]">
-            <div>
-              <h2 className="lg:order-0 mb-4 text-[36px] uppercase text-white sm:text-[60px] md:mb-0 ">
-                Advantages
-                <br /> of Web3 Development
-              </h2>
-              <div className="mt-8  hidden w-full max-w-xl flex-col justify-between customSmall:flex-row md:flex  lg:order-3 lg:ml-auto" />
-              <p
-                className={cn(
-                  "body max-w-[592px] text-base leading-6 md:my-[20px]",
-                  {
-                    "!text-secondary": isSecondary
-                  }
-                )}
-              >
-                Blockchain technology is reshaping industries, offering a range
-                of benefits for businesses ready to embrace decentralized
-                solutions. As a web3 development services company, Cowchain
-                ensures that our solutions address the unique needs of
-                businesses
-              </p>
-            </div>
+      <section className={"relative  border-t border-t-th-fade"}>
+        <div className="px-default relative mx-auto flex max-w-[1440px] flex-col justify-between gap-[91px] pb-[42px] pt-[60px] lg:pb-[61px] lg:pt-[90px]">
+          <div>
+            <h2 className="lg:order-0 mb-4 text-[36px] uppercase text-white sm:text-[60px] md:mb-0 ">
+              Advantages
+              <br /> of Web3 Development
+            </h2>
+            <div className="mt-8  hidden w-full max-w-xl flex-col justify-between customSmall:flex-row md:flex  lg:order-3 lg:ml-auto" />
+            <p
+              className={cn(
+                "body max-w-[592px] text-base leading-6 md:my-[20px]",
+                {
+                  "!text-secondary": isSecondary
+                }
+              )}
+            >
+              Blockchain technology is reshaping industries, offering a range of
+              benefits for businesses ready to embrace decentralized solutions.
+              As a web3 development services company, Cowchain ensures that our
+              solutions address the unique needs of businesses
+            </p>
           </div>
         </div>
       </section>
@@ -55,7 +53,7 @@ export default function ExpandingBlocks({ isSecondary = false }) {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-                className="text-[20px] uppercase text-white sm:text-[60px]"
+                className="font-roc text-[20px] uppercase text-white sm:text-[60px]"
               >
                 {activeBlock.title}
               </motion.h2>
@@ -128,7 +126,7 @@ export default function ExpandingBlocks({ isSecondary = false }) {
                 ) : (
                   <div className="flex w-full items-center justify-center">
                     <p
-                      className="whitespace-nowrap text-wrap text-base font-medium uppercase tracking-wide md:text-lg"
+                      className="whitespace-nowrap text-wrap font-roc text-base font-medium uppercase tracking-wide md:text-lg"
                       style={{
                         writingMode: "vertical-rl",
                         transform: "rotate(180deg)"

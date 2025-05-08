@@ -1,15 +1,53 @@
 import "./index.css";
 import "./home.css";
 import { ClientProvider } from "@/lib/api/client";
+import { Anton, Manrope, Montserrat, Poppins, Rubik } from "next/font/google";
 
-export const metadata = {
-  title: "Web3 Development Services | Cowchain",
-  description: `Unlock the future with Cowchain's Web3 solutions: dApps, DeFi, and metaverse development to transform your business.`,
-};
+import { metadata } from "./rootMetadata";
+
+export const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-manrope"
+});
+
+export const rubik = Rubik({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
+  variable: "--font-rubik"
+});
+
+export const anton = Anton({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-anton"
+});
+
+export const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-poppins"
+});
+
+export const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["500", "600", "400"],
+  style: ["normal"],
+  display: "swap",
+  variable: "--font-montserrat"
+});
+export { metadata };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={` ${rubik.variable} ${poppins.variable} ${montserrat.variable} ${anton.variable} ${manrope.variable}`}
+    >
       <head>
         <link rel="preload" href="/homepage/video.mp4" type="video" />
         <link
@@ -34,17 +72,26 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://use.typekit.net/cqp2qoa.css" />
 
         {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVL9LDFN3V"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-8LWED57JRG"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-EVL9LDFN3V');
+            gtag('config', 'G-8LWED57JRG');
           `
-        }} />
+          }}
+        />
 
         <meta name="theme-color" content="#000000" />
+        <meta
+          property="og:image"
+          content="https://cowchain.io/images/og-image.png"
+        />
       </head>
 
       <body>

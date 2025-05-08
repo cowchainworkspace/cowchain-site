@@ -15,7 +15,6 @@ import { ShareLinks } from "../../blocks/ShareLinks";
 import { ArticleParagraphs } from "../ArticleParagraphs/ArticleParagraphs";
 import { ReviewsSection } from "../ReviewsSection/ReviewsSection";
 import { SideMenu } from "../SideMenu/SideMenu";
-
 import { ThanksReview } from "../ThanksReview/ThanksReview";
 
 const ArticleInfo = () => {
@@ -36,7 +35,7 @@ const ArticleInfo = () => {
         article: review.article,
         article_rating: review.article_rating
       });
-      localStorage.setItem(`review-${data.id}`, slug);
+      localStorage.setItem(`review-${data.documentId}`, slug);
       setReviewItem({ icon, text });
       setTimeout(() => {
         setReviewItem(null);
@@ -47,9 +46,9 @@ const ArticleInfo = () => {
     }
   };
 
-  const hasVoted = localStorage.getItem(`review-${data.id}`);
+  const hasVoted = localStorage.getItem(`review-${data.documentId}`);
 
-  const paragraphs = data.attributes.article_paragraphs.map((paragraph) => {
+  const paragraphs = data.article_paragraphs.map((paragraph) => {
     if (!paragraph.__component.includes("image")) {
       const titleId = crypto.randomUUID();
       const { title, description } = getSplitText(paragraph.text);
@@ -69,26 +68,26 @@ const ArticleInfo = () => {
     return {
       id: paragraph.id,
       component: paragraph.__component,
-      imageUrl: paragraph.paragraph_image.data.attributes.url
+      imageUrl: paragraph.paragraph_image.url
     };
   });
 
   return (
     <div className="relative  min-h-screen bg-black">
-      <OldBreadCrumbs title={data.attributes.article_title} />
+      <OldBreadCrumbs title={data.article_title} />
       <HeroSection
-        tag={data.attributes.article_tag.data.attributes.tag_name}
-        title={data.attributes.article_title}
-        author={data.attributes.author_name.split(",")[0]}
-        readingMinutes={data.attributes.reading_minutes}
-        articleId={data.id}
-        pageViews={data.attributes.article_views}
+        tag={data.article_tag.tag_name}
+        title={data.article_title}
+        author={data.author_name.split(",")[0]}
+        readingMinutes={data.reading_minutes}
+        articleId={data.documentId}
+        pageViews={data.article_views}
       />
       <div className="relative block h-[234px] w-full md:max-h-[560px] md:min-h-[430px] custom-1700:min-h-[600px]">
         {isLessThan1280 ? (
           <Image
             fill
-            src={data.attributes.banner_img.data?.attributes?.url || bannerIg}
+            src={data.banner_img?.url || bannerIg}
             alt="banner image"
             objectFit="cover"
             quality={100}
@@ -98,7 +97,7 @@ const ArticleInfo = () => {
         ) : (
           <div
             style={{
-              backgroundImage: `url(${data.attributes.banner_img.data?.attributes?.url || bannerIg})`,
+              backgroundImage: `url(${data.banner_img?.url || bannerIg})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center"
@@ -115,14 +114,14 @@ const ArticleInfo = () => {
         <div>
           <ArticleParagraphs
             paragraphs={paragraphs}
-            authorIcon={data.attributes.author_avatar.data?.attributes?.url}
-            authorName={data.attributes.author_name}
-            authorInfo={data.attributes.author_info}
+            authorIcon={data.author_avatar.url}
+            authorName={data.author_name}
+            authorInfo={data.author_info}
           />
           {hasVoted !== slug && !reviewItem && (
             <ReviewsSection
               onHandleAddReview={onHandleAddReview}
-              articleId={data.id}
+              articleId={data.documentId}
               isPending={isPending}
             />
           )}

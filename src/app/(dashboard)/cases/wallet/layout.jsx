@@ -1,12 +1,6 @@
-export const metadata = {
-  title: "Crypto Wallet App - Our Case Study | Cowchain",
-  description:
-    "Explore Cowchain’s Crypto Wallet App for secure and simple digital asset management, enhancing user experience.",
-  metadataBase: new URL("https://cowchain.io/"),
-  alternates: {
-    canonical: "/cases/wallet"
-  }
-};
+import { metadata } from "./walletCaseData/walletCaseMetaData";
+
+export { metadata };
 
 export default async function WalletCasesLayout({ children }) {
   return (

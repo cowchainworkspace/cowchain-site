@@ -10,7 +10,7 @@ export const ShareLinks = () => {
   return (
     <div className="mx-auto flex w-[216px] items-center justify-between gap-x-2 md:mx-0 md:justify-between">
       <a
-        href="https://www.linkedin.com/company/cowchain/"
+        href="https://www.linkedin.com/company/cowchaindev/"
         rel="nofollow noreferrer"
         target="_blank"
         className="flex h-[48px] w-[48px] items-center justify-center rounded-[50%]"
