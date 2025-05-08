@@ -19,12 +19,10 @@ import {
   mobMemeluteIntegratedTrding
 } from "../../../../../../public/cases/memelut/solutions/index";
 
-import { kruuu, reflectBg, tenet } from "../../../../../../public/projects";
-
 export const memeluteTags = [
   {
     id: 1,
-    tagLabel: "Web Development"
+    tagLabel: "Mobile App"
   },
   {
     id: 2,
@@ -32,7 +30,7 @@ export const memeluteTags = [
   },
   {
     id: 3,
-    tagLabel: "NFT"
+    tagLabel: "Crypto Wallet"
   }
 ];
 
@@ -256,64 +254,5 @@ export const memelutTeam = [
     id: 3,
     department: "qa",
     people: "Taras Yakushevych"
-  }
-];
-
-export const memelutProjects = [
-  {
-    id: 1,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "AI Development" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "DeFi" }
-    ],
-    title: "REFLECT",
-    desc: "Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.",
-    img: reflectBg,
-    tagClasses: "h-[34px] md:h-[36px]",
-    projectLink: "reflect",
-    textColor: "text-secondary",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
-  },
-  {
-    id: 2,
-    tags: [ { isMain: true, tagName: "Mobile App" }, { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "Crypto Wallet" }],
-    title: "kruu",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .",
-    img: kruuu,
-    tagClasses: "bg-[#C82863]  h-[34px] md:h-[36px]",
-    titleClasses: "text-black",
-    tagDescClasses: "text-white",
-    textColor: "text-black",
-    projectLink: "#",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
-  },
-  {
-    id: 3,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "Blockchain Development" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "Crypto Wallet" },
-      { isMain: false, tagName: "DEX" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "Bridge" },
-      { isMain: false, tagName: "L1" },
-      { isMain: false, tagName: "Staking" }
-    ],
-    title: "tenet",
-    desc: "Tenet is a Cosmos-based Layer-1 blockchain designed to validate networks using LSD/LRT assets.",
-    img: tenet,
-    titleClasses: "text-black",
-    tagClasses: "bg-[#000000] border-[1px] border-white h-[34px] md:h-[36px]",
-    tagDescClasses: "text-white",
-    textColor: "text-black",
-    projectLink: "#",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
   }
 ];

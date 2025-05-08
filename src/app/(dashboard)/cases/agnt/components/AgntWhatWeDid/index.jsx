@@ -9,7 +9,7 @@ const AgntWhatWeDid = () => {
         </h2>
         <div className="relative grid gap-6 md:grid-cols-2 xl:gap-[37px]">
           <div className="border-t-[0.5px] border-white-50 pt-2 xl:pt-[30px]">
-            <h3 className="mb-2 font-manrope text-xs font-normal uppercase leading-5 tracking-[2px]  text-white xl:mb-4">
+            <h3 className="mb-2 font-manrope text-xs font-medium uppercase leading-5 tracking-[2px]  text-white xl:mb-4">
               Business Challenges
             </h3>
             <p className="font-manrope text-xs font-medium leading-5 text-white-70 xl:text-sm xl:leading-6">
@@ -24,7 +24,7 @@ const AgntWhatWeDid = () => {
           </div>
 
           <div className="border-t-[0.5px] border-white-50 pt-2 xl:pt-[30px]">
-            <h3 className="mb-2 font-manrope text-xs font-normal uppercase leading-5 tracking-[2px] text-white xl:mb-4">
+            <h3 className="mb-2 font-manrope text-xs font-medium uppercase leading-5 tracking-[2px] text-white xl:mb-4">
               result
             </h3>
             <p className="font-manrope text-xs font-medium leading-5 text-white-70 xl:text-sm xl:leading-6">
@@ -32,10 +32,7 @@ const AgntWhatWeDid = () => {
               enabling users to automate trading, analyze trends, and interact
               with AI-driven tools directly inside X. InfoFi capabilities within
               AGNT Connect enhance real-time market insights and on-chain data
-              tracking. The AGNT Marketplace has become a key hub for DeFAI,
-              allowing users to deploy, enhance, and monetize AI agents, making
-              it a prime example of project management cases in AI & Web3
-              innovation.
+              tracking.
             </p>
           </div>
         </div>

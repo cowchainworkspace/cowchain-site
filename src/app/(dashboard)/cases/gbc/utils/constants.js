@@ -30,8 +30,6 @@ import {
   gbcSolutionQuestMobile
 } from "../../../../../../public/cases/gbc/solutions";
 
-import { m2eNew, memolut, reflectNew } from "../../../../../../public/projects";
-
 export const gbcTags = [
   {
     id: 1,
@@ -58,19 +56,19 @@ export const overviewGbcItems = [
     itemName: "Project Outcomes",
     itemValue: [
       {
-        itemValueDescription:
+        itemValue:
           "A dynamic dApp project that merges NFT customization, trading, and gamification."
       },
       {
-        itemValueDescription:
+        itemValue:
           "An interactive ecosystem with Sweet Points rewards, boosting user engagement."
       },
       {
-        itemValueDescription:
+        itemValue:
           "Integrated Camp as an additional engagement layer with structured blockchain study and interactive quests."
       },
       {
-        itemValueDescription:
+        itemValue:
           "Stable blockchain deployment supporting secure transactions and optimized performance."
       }
     ]
@@ -78,27 +76,38 @@ export const overviewGbcItems = [
   {
     id: 3,
     itemName: "Project Architecture",
-    itemDesc:
-      "GBC dApp’s modular structure enables a scalable and adaptable NFT ecosystem. Key components include:",
     itemValue: [
       {
-        itemValueDescription:
-          "NFT Customization for equipping and personalizing GBC assets."
+        itemValueTitle: "NFT Customization",
+        itemValueDescription: "For equipping and personalizing GBC assets.",
+        mobileData: "NFT Customization for equipping and personalizing GBC assets"
       },
       {
-        itemValueDescription: "A marketplace for trading of Wearables and NFTs."
+        itemValueTitle: "Wearables Marketplace",
+
+        itemValueDescription: "A marketplace for trading of Wearables and NFTs.",
+        mobileData: "A marketplace for trading of Wearables and NFTs"
       },
       {
+        itemValueTitle: "Sweet Points",
+
         itemValueDescription:
-          "A Sweet Points economy rewarding user activity with in-platform incentives."
+          "A Sweet Points economy rewarding user activity with in-platform incentives.",
+          mobileData: "A Sweet Points economy rewarding user activity with in-platform incentives"
       },
       {
+        itemValueTitle: "Trading Competitions",
+
         itemValueDescription:
-          "Trading competitions to drive market engagement and liquidity."
+          "Trading competitions to drive market engagement and liquidity.",
+          mobileData: "Trading competitions to drive market engagement and liquidity"
       },
       {
+        itemValueTitle: "Camp Hub",
+
         itemValueDescription:
-          "A Camp hub offering quests and structured blockchain study."
+          "A Camp hub offering quests and structured blockchain study.",
+          mobileData: "A Camp hub offering quests and structured blockchain study"
       }
     ]
   }
@@ -181,7 +190,7 @@ export const gbcSolutions = [
       height: 250,
       info: "GBC keys",
       href: gbcSolutionKey,
-      mobileHref: gbcSolutionKeyMobile,
+      mobileHref: gbcSolutionKeyMobile
     }
   },
   {
@@ -197,7 +206,7 @@ export const gbcSolutions = [
       info: "GBC NFT groups",
       leftMargin: "xl:-mr-[30px]",
       href: gbcSolutionGroup,
-      mobileHref: gbcSolutionGroupMobile,
+      mobileHref: gbcSolutionGroupMobile
     }
   },
   {
@@ -213,7 +222,7 @@ export const gbcSolutions = [
       info: "GBC quest",
       leftMargin: "xl:ml-[61px]",
       href: gbcSolutionQuest,
-      mobileHref: gbcSolutionQuestMobile,
+      mobileHref: gbcSolutionQuestMobile
     }
   }
 ];
@@ -349,7 +358,8 @@ export const gbcTeam = [
   {
     id: 1,
     department: "development",
-    people: "Oleh Shutiak, Nazar Ostafiichuk, Ruslan Hrinov, Vladyslav Buzhenko, Vladyslav Atanov, Yaroslav Samoilenko, Daniil Stoian, Danylo Provilsky, Oleh Popovych, Vladyslav Pereder"
+    people:
+      "Oleh Shutiak, Nazar Ostafiichuk, Ruslan Hrinov, Vladyslav Buzhenko, Vladyslav Atanov, Yaroslav Samoilenko, Daniil Stoian, Danylo Provilsky, Oleh Popovych, Vladyslav Pereder"
   },
   {
     id: 2,
@@ -364,63 +374,8 @@ export const gbcTeam = [
   {
     id: 4,
     department: "qa",
-    people: "Yurii Honoskov, Vitalii Dorokhin, Maksym Podoliak, Taras Yakushevych, Evgeniy Kilochek"
+    people:
+      "Yurii Honoskov, Vitalii Dorokhin, Maksym Podoliak, Taras Yakushevych, Evgeniy Kilochek"
   }
 ];
 
-export const gbcProjects = [
-  {
-    id: 1,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "Mobile App" },
-      { isMain: false, tagName: "GameFi" },
-      { isMain: false, tagName: "Crypto Wallet" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "DEX" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "NFT" },
-      { isMain: false, tagName: "Staking" }
-    ],
-    title: "m2e platform",
-    desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
-    img: m2eNew,
-    itemClasses: "",
-    projectLink: "step-app",
-    textColor: "text-secondary",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-  },
-  {
-    id: 2,
-    tags: [
-      { isMain: true, tagName: "Mobile App" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "Crypto Wallet" }
-    ],
-    title: 'memelut',
-    desc: 'Memelut is an all-in-one app that simplifies exploring, trading, and storing memecoins.',
-    img: memolut,
-    projectLink: "#",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
-  },
-  {
-    id: 3,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "AI Development" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "DeFi" }
-    ],
-    title: 'REFLECT',
-    desc: 'Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.',
-    img: reflectNew,
-    projectLink: "#",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-    textColor: "text-secondary",
-    tagsContainer: "xl:max-w-[330px]"
-  },
-
-]

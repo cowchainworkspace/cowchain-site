@@ -8,9 +8,9 @@ import GBCOverviewItems from "../GBCOverviewItems";
 const GBCOverview = () => {
   return (
     <section>
-      <div className="mx-auto max-w-[1440px] pt-[50px] md:px-8 lg:px-10 xl:pb-[145px] xl:pl-[90px] xl:pr-[100px] xl:pt-[120px]">
+      <div className="mx-auto max-w-[1440px] pt-[50px] md:px-8 lg:px-10 xl:py-[120px] xl:pl-[90px] xl:pr-[100px]">
         <div className="grid gap-[50px] md:grid-cols-2 xl:grid-cols-[1fr_521px] xl:gap-[151px]">
-          <div className="flex flex-col gap-[150px]">
+          <div>
             <div className="flex flex-col gap-6 px-4  md:px-0 xl:gap-[30px]">
               <h3 className="font-roc text-[32px] font-medium uppercase leading-90 text-white xl:text-[54px]">
                 Project overview
@@ -36,23 +36,16 @@ const GBCOverview = () => {
                 <br className="hidden custom1430:block" /> volume on OpenSea.
               </p>
               <Link
-                className="flex gap-4"
+                className="flex items-center gap-4"
                 href={" https://hub.findgbc.io/"}
                 target="_blank"
               >
-                <span className="text-2xl font-medium uppercase leading-90 text-white underline">
+                <span className="text-lg font-medium uppercase leading-90 text-white underline xl:text-2xl">
                   visit website
                 </span>{" "}
                 <RightArrowSvg />
               </Link>
             </div>
-            <Image
-              src={"/cases/gbc/overview-img.webp"}
-              width={505}
-              height={444}
-              alt="GBC Person"
-              className="hidden md:block"
-            />
           </div>
           <GBCOverviewItems items={overviewGbcItems} />
         </div>

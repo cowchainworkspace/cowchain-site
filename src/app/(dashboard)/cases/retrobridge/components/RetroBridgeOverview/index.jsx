@@ -12,19 +12,19 @@ const RetroBridgeOverview = () => {
             <h3 className="font-roc text-[32px] font-medium uppercase leading-90 text-white xl:text-[54px]">
               Project overview
             </h3>
-            <p className="text-left font-manrope text-sm font-[450] leading-6 !text-white-70">
-              RetroBridge was designed to address the growing need for reliable
-              multichain
-              <br className="hidden custom1430:block" /> solutions in the
-              blockchain ecosystem. Supporting over 42 blockchain
-              <br className="hidden custom1430:block" /> networks, including EVM
-              Layer 2 chains and others like StarkNet, Aptos, and
-              <br className="hidden custom1430:block" /> Cosmos, RetroBridge
-              serves as a dynamic blockchain supply chain platform for
-              <br className="hidden custom1430:block" /> digital assets.
+            <p className="text-left font-manrope text-xs font-[450] leading-5 !text-white-70 xl:text-sm xl:leading-6">
+              RetroBridge was designed to address the growing need for reliable{" "}
+              <br className="hidden custom1430:block" />
+              multichain solutions in the blockchain ecosystem. Supporting over
+              51 <br className="hidden custom1430:block" /> blockchain networks,
+              including EVM Layer 2 chains and others like
+              <br className="hidden custom1430:block" /> StarkNet, Aptos, and
+              Cosmos, RetroBridge serves as a dynamic
+              <br className="hidden custom1430:block" /> blockchain supply chain
+              platform for digital assets.
             </p>
             <Link
-              className="flex gap-4"
+              className="flex items-center gap-4"
               href={"https://retrobridge.io/"}
               target="_blank"
             >

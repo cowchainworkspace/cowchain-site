@@ -3,13 +3,15 @@ import {
   Accordion,
   AccordionButton,
   AccordionItem,
-  AccordionPanel
+  AccordionPanel,
+  useMediaQuery
 } from "@chakra-ui/react";
 import React from "react";
 import TopArrowSvg from "../../../../../../../public/svgIcons/TopArrowSvg";
 
 import { cn } from "@/lib/utils";
 const GBCOverviewItems = ({ items }) => {
+  const [isMoreThan1280] = useMediaQuery("(min-width: 1280px)");
   return (
     <div className=" w-full">
       <Accordion
@@ -46,24 +48,38 @@ const GBCOverviewItems = ({ items }) => {
                   </div>
                 </AccordionButton>
                 <AccordionPanel>
-                  {itemDesc && (
-                    <p className="mb-[5px] font-manrope text-sm font-normal leading-6 !text-white xl:text-xl xl:font-medium xl:leading-[30px]">
-                      {itemDesc}
-                    </p>
-                  )}
                   {typeof itemValue === "string" ? (
-                    <p className="font-manrope text-sm font-normal leading-6 !text-white xl:text-[18.41px] xl:font-medium xl:leading-[27.62px]">
+                    <p className="font-manrope text-sm font-normal leading-6 !text-white xl:text-xl xl:font-medium xl:leading-[30px]">
                       {itemValue}
                     </p>
                   ) : (
-                    <ul className="flex flex-col gap-[14px] xl:list-disc xl:gap-[10px] xl:pl-8">
-                      {itemValue.map(({ itemValueDescription }) => (
-                        <li key={itemValueDescription}>
-                          <p className="font-manrope text-sm font-normal leading-6 !text-white xl:list-item xl:text-[20px] xl:leading-[30px]">
-                            {itemValueDescription}
-                          </p>
-                        </li>
-                      ))}
+                    <ul className="flex flex-col gap-[14px] xl:gap-[10px] ">
+                      {itemValue.map(
+                        ({
+                          itemValueDescription,
+                          itemValueTitle,
+                          mobileData,
+                          itemValue
+                        }) =>
+                          itemValue ? (
+                            <li>
+                              <p className="font-manrope text-sm font-normal leading-6 !text-white xl:text-xl  xl:leading-[30px]">
+                                {itemValue}
+                              </p>
+                            </li>
+                          ) : (
+                            <li key={itemValueDescription}>
+                              <h3 className="mb-[6px] hidden  font-manrope text-xl leading-[30px] xl:block">
+                                {itemValueTitle}
+                              </h3>
+                              <p className="font-manrope text-sm font-normal leading-6 !text-white  xl:!text-white-70">
+                                {isMoreThan1280
+                                  ? itemValueDescription
+                                  : mobileData}
+                              </p>
+                            </li>
+                          )
+                      )}
                     </ul>
                   )}
                 </AccordionPanel>

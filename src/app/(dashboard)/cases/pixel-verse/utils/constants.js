@@ -1,5 +1,4 @@
 import {slideFour, slideOne, slideThree, slideTwo } from "../../../../../../public/cases/PixelVerse/slider";
-import {coinclub, hybrid, wenix } from "../../../../../../public/projects";
 
 export const pixelVerseTags = [
   {
@@ -14,6 +13,21 @@ export const pixelVerseTags = [
     id: 2,
     tagLabel: "GameFi"
   }
+];
+
+export const pixelVerseMobileTags = [
+  {
+    id: 1,
+    tagLabel: "Mobile App"
+  },
+  {
+    id: 2,
+    tagLabel: "GameFi"
+  },
+  {
+    id: 2,
+    tagLabel: "Telegram Mini-apps"
+  },
 ];
 
 export const overviewItems = [
@@ -67,6 +81,11 @@ export const overviewItems = [
         itemValueTitle: "Social Expansion",
         itemValueDescription:
           "Integration of referral links and user-friendly sharing options to amplify PixelVerse’s visibility and interaction."
+      },
+      {
+        itemValueTitle: "Analytics Dashboard",
+        itemValueDescription:
+          "Insights on user behavior, engagement metrics, and in-app performance, offering a case study in the integration of blockchain applications with actionable data strategies."
       }
     ]
   }
@@ -95,6 +114,8 @@ export const pixelVerseSlides = [
     id: 1,
     width: 722,
     height: 514,
+    mobileWidth: 261,
+    mobileHeight: 186,
     desc: "screen daily rewards",
     href: slideOne
   },
@@ -102,6 +123,8 @@ export const pixelVerseSlides = [
     id: 2,
     width: 262,
     height: 514,
+    mobileWidth: 95,
+    mobileHeight: 186,
     desc: "Mobile screen with rewards",
     href: slideTwo
   },
@@ -109,6 +132,8 @@ export const pixelVerseSlides = [
     id: 3,
     width: 262,
     height: 514,
+    mobileWidth: 95,
+    mobileHeight: 186,
     desc: "Mobile screen with heroes",
     href: slideThree
   },
@@ -116,6 +141,8 @@ export const pixelVerseSlides = [
     id: 4,
     width: 262,
     height: 514,
+    mobileWidth: 95,
+    mobileHeight: 186,
     desc: "Mobile screen with rewards for claiming",
     href: slideFour
   },
@@ -123,6 +150,8 @@ export const pixelVerseSlides = [
     id: 5,
     width: 722,
     height: 514,
+    mobileWidth: 261,
+    mobileHeight: 186,
     desc: "screen daily rewards",
     href: slideOne
   },
@@ -130,6 +159,8 @@ export const pixelVerseSlides = [
     id: 6,
     width: 262,
     height: 514,
+    mobileWidth: 95,
+    mobileHeight: 186,
     desc: "Mobile screen with rewards",
     href: slideTwo
   },
@@ -137,6 +168,9 @@ export const pixelVerseSlides = [
     id: 7,
     width: 262,
     height: 514,
+    mobileWidth: 95,
+    mobileHeight: 186,
+
     desc: "Mobile screen with heroes",
     href: slideThree
   },
@@ -144,6 +178,8 @@ export const pixelVerseSlides = [
     id: 8,
     width: 262,
     height: 514,
+    mobileHeight: 186,
+    mobileWidth: 95,
     desc: "Mobile screen with rewards for claiming",
     href: slideFour
   }
@@ -153,62 +189,22 @@ export const pixelVerseTeam = [
   {
     id: 1,
     department: "development",
-    people: "Alex Markov, Sania Lee, Fiona Zhang"
+    people: "Oleh Shutiak, Oleh Popovych, Dmytro Krasnoholovenko, Danylo Provilsky, Yaroslav Samoilenko, Daniil Stoian, Vadim Zolotarev, Nazar Ostafiichuk, Valeriia Kudriavtseva, Vladyslav Atanov, Ruslan Hrinov, Dmytro Pivkopa"
   },
   {
     id: 2,
     department: "project management",
-    people: "Rachel Lim"
+    people: "Oleksandr Bohdanov"
   },
   {
     id: 3,
-    department: "marketing & Seo",
-    people: "James Koh, Nadia Patel"
+    department: "DevOps",
+    people: "Alexandr Filatov"
   },
   {
     id: 4,
-    department: "ui/ux design",
-    people: "Lara Mendez"
+    department: "QA",
+    people: "Vitalii Dorokhin, Ivan Chalienko, Taras Pirus"
   }
 ];
 
-export const pixelVerseProjects = [
-  {
-    id: 1,
-    tags: [{ isMain: true, tagName: "Mobile App" }, { isMain: false, tagName: "Crypto Wallet" }, { isMain: false, tagName: "Trading" }],
-    title: 'COINCLUB',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
-    img: coinclub,
-    projectLink: "#",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-  },
-  {
-    id: 2,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "AI Development" },
-      { isMain: true, tagName: "Blockchain Development" },
-      { isMain: false, tagName: "Bridge" },
-      { isMain: false, tagName: "Staking" },
-      { isMain: false, tagName: "L1" }
-    ],
-    title: 'hybrid',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
-    img: hybrid,
-    projectLink: "hybrid",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-  },
-  {
-    id: 3,
-    tags: [{ isMain: true, tagName: "Mobile App" }, { isMain: true, tagName: "Telegram Mini Apps" }],
-    title: 'Wenix',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .',
-    img: wenix,
-     projectLink: "#",
-     textGap: "md:gap-[24px]",
-     cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-  },
-  
-]

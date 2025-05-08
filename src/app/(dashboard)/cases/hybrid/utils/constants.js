@@ -16,8 +16,6 @@ import {
   stackCoinImageMobile
 } from "../../../../../../public/cases/hybrid/solutions";
 
-import { coinclub, pixelVerse, wenix } from "../../../../../../public/projects";
-
 export const hybridTags = [
   {
     id: 1,
@@ -116,7 +114,7 @@ export const overviewHybridItems = [
           "Atlas Web3 Copilot for on-chain data analysis and market research."
       },
       {
-        itemValueTitle: "Project Support",
+        itemValueTitle: "Supporting tools",
         itemValueDescription:
           "Supporting tools, including a website, explorer, testnet bridge, and more."
       }
@@ -275,48 +273,5 @@ export const hybridTeam = [
     id: 3,
     department: "qa",
     people: "Vitalii Dorokhin"
-  }
-];
-
-export const hybridProjects = [
-  {
-    id: 1,
-    tags: [ { isMain: true, tagName: "Mobile App" }, { isMain: false, tagName: "Crypto Wallet" }, { isMain: false, tagName: "Trading" }],
-    title: "COINCLUB",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .",
-    img: coinclub,
-    projectLink: "#",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-    textColor: "text-secondary",
-    
-  },
-  {
-    id: 2,
-    tags: [
-      { isMain: true, tagName: "Mobile App" },
-      { isMain: true, tagName: "Telegram Mini Apps" },
-      { isMain: false, tagName: "GameFi" }
-    ],
-    title: "PixelVerse",
-    desc: "PixelVerse is a GameFi ecosystem that merges Web2 accessibility with Web3 innovation through Telegram Mini Apps.",
-    img: pixelVerse,
-    projectLink: "pixel-verse",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[17px]",
-    textColor: "text-secondary",
-
-  },
-  {
-    id: 3,
-    tags: [ { isMain: true, tagName: "Mobile App" }, { isMain: true, tagName: "Telegram Mini Apps" }],
-    title: "Wenix",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum .",
-    img: wenix,
-    projectLink: "#",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-    textColor: "text-secondary",
-
   }
 ];

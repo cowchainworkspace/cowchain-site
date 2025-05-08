@@ -4,17 +4,14 @@ import Banner from "../components/Banner";
 import CasesSlider from "../components/CasesSlider";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
+import { relatedTenetProjects } from "../data";
 import HeroScreenContainer from "./components/HeroScreenContainer";
 import TenetOverview from "./components/TenetOverview";
 import TenetSolutions from "./components/TenetSolutions";
 import TenetWhatWeDid from "./components/TenetWhatWeDid";
 import { metadata } from "./utils/tenetMetadata";
-import {
-  tenetProjects,
-  tenetSlides,
-  tenetSolutions,
-  tenetTeam
-} from "./utils/constants";
+
+import { tenetSlides, tenetSolutions, tenetTeam } from "./utils/constants";
 
 export { metadata };
 
@@ -25,7 +22,7 @@ const Tenet = () => {
       <Banner
         img={"/cases/tenet/tenet-banner-img.webp"}
         classes={
-          "h-[140px] md:h-[290px] lg:h-[380px] xl:h-[535px] md:-mt-[50px] lg:-mt-[153px] xl:-mt-[173px] custom-1700:h-[750px]"
+          "h-[180px] overflow-visible relative z-[50] md:h-[400px] lg:h-[470px] xl:h-[535px] md:-mt-[50px] lg:-mt-[153px] xl:-mt-[173px] custom-1700:h-[750px]   custom1430:h-[600px] custom1700:h-[750px]"
         }
         imgDesc={"Tenet banner"}
       />
@@ -46,7 +43,7 @@ const Tenet = () => {
       />
       <TenetWhatWeDid />
       <TeamBehind team={tenetTeam} />
-      <MoreProjects projects={tenetProjects} />
+      <MoreProjects projects={relatedTenetProjects} />
       <Contact
         className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
         descriptionClasses={"hidden md:block"}

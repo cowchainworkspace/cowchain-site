@@ -22,7 +22,8 @@ export function ExpertiseServices({
   itemTitleClasses = "",
   containerClasses = "",
   sectionContainerClasses = "",
-  titleDescClasses = ""
+  titleDescClasses = "",
+  itemListClasses = ""
 }) {
   return (
     <section
@@ -115,7 +116,7 @@ export function ExpertiseServices({
                   </p>
                 )}
                 {desc && listOfItem && (
-                  <div className="mt-6">
+                  <div className={cn("mt-6", itemListClasses)}>
                     <h3 className="font-manrope text-base leading-[22px] text-secondary">
                       {desc.header}
                     </h3>

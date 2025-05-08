@@ -15,12 +15,6 @@ import {
   solutionTwo
 } from "../../../../../../public/cases/step-app/solutions";
 
-import {
-  crossChain,
-  gbc,
-  reflectNew
-} from "../../../../../../public/projects";
-
 export const stepAppTags = [
   {
     id: 1,
@@ -319,55 +313,4 @@ export const stepAppTeam = [
     department: "ui/ux design",
     people: "Nadiia Nikiforova"
   }
-];
-
-export const stepAppProjects = [
-  {
-    id: 1,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "Bridge" },
-      { isMain: false, tagName: "NFT" }
-    ],
-    title: "RETROBRIDGE",
-    desc: "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
-    img: crossChain,
-    textColor: "text-secondary",
-    projectLink: "retrobridge",
-      textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
-  },
-  {
-    id: 3,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "AI Development" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "DeFi" }
-    ],
-    title: 'REFLECT',
-    desc: 'Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.',
-    img: reflectNew,
-    projectLink: "#",
-    textColor: "text-secondary",
-    tagsContainer: "xl:max-w-[330px]",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
-  },
-  {
-    id: 2,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "NFT" }
-    ],
-    title: "GMX BLUEBERRY CLUB",
-    desc: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
-    img: gbc,
-    textColor: "text-white",
-    projectLink: "gbc",
-      textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
-  },
 ];

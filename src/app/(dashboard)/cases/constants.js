@@ -11,6 +11,19 @@ import {
   tenetImage
 } from "../../../../public/cases/main";
 
+import {
+  agntMobile,
+  brc20Mobile,
+  gbcMobile,
+  hybrydMobileIcon,
+  memeLutMobileImg,
+  pixelverseMobileImg,
+  reflectMobileImg,
+  retroBridgeMobile,
+  stepUpMobile,
+  tenetMobileImg
+} from "../../../../public/cases/main";
+
 export const casesTags = [
   {
     id: 1,
@@ -53,8 +66,9 @@ export const cases = [
       "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X. By combining AI automation, Web3 analytics, and cross-chain execution, the platform enables users to create, deploy, and monetize AI-driven solutions. As part of the DeFAI sector, AGNT.Hub connects AI market strategies with blockchain infrastructure, setting a new standard for decentralized AI.",
     link: "cases/agnt",
     caseImage: agntImage,
+    caseMobileImage: agntMobile,
     imageHeight: 560,
-    containerWidth: 870,
+    containerWidth: 870
   },
   {
     id: 2,
@@ -69,8 +83,9 @@ export const cases = [
       "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers. With $200M in bridged volume and 1M+ successful transactions, it demonstrates the growing demand for interoperability in Web3.",
     link: "cases/retrobridge",
     caseImage: retroBridgeImage,
+    caseMobileImage: retroBridgeMobile,
     imageHeight: 560,
-    containerWidth: 769,
+    containerWidth: 769
   },
   {
     id: 3,
@@ -90,6 +105,7 @@ export const cases = [
       "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement. With over 300,000 active users, 9M unique wallets and a presence in 100+ countries, the project exemplifies the intersection of fitness and blockchain innovation.",
     link: "cases/step-app",
     caseImage: stepAppImage,
+    caseMobileImage: stepUpMobile,
     imageHeight: 560,
     containerWidth: 848,
     tagsWidth: 510
@@ -106,8 +122,9 @@ export const cases = [
       "GMX Blueberry Club (GBC) is a next-generation NFT platform that combines customization, trading, and gamification. It allows users to collect and personalize GBC NFTs, trade assets, earn Sweet Points, and participate in competitions and interactive quests.",
     link: "cases/gbc",
     caseImage: gbcImage,
+    caseMobileImage: gbcMobile,
     imageHeight: 560,
-    containerWidth: 860,
+    containerWidth: 860
   },
   {
     id: 5,
@@ -124,25 +141,29 @@ export const cases = [
       "Hybrid is a Layer 2 blockchain on Arbitrum Nitro, integrating the Mixture of Experts (MoE) framework to power specialized AI agents. By enabling real-time AI execution on-chain, it bridges blockchain and AI-driven solutions. With Atlas – The Web3 Copilot, Hybrid simplifies market research, data tracking, and AI monetization, solidifying its role in blockchain innovation.",
     link: "cases/hybrid",
     caseImage: hybridImage,
+    caseMobileImage: hybrydMobileIcon,
     imageHeight: 560,
-    containerWidth: 848,
+    containerWidth: 848
   },
-  {
-    id: 6,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "AI Development" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "DeFi" }
-    ],
-    caseName: "Reflect",
-    caseDescription:
-      "Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains. By enabling users to manage liquidity, execute swaps, stake assets, and vote on governance proposals directly through chat commands, Reflect enhances simplicity and accessibility in DeFAI.",
-    link: "cases/reflect",
-    caseImage: reflectImage,
-    imageHeight: 560,
-    containerWidth: 848,
-  },
+
+   // TEMPORARILY HIDE: Reflect case card is hidden until design is finalized
+  // {
+  //   id: 6,
+  //   tags: [
+  //     { isMain: true, tagName: "Web Development" },
+  //     { isMain: true, tagName: "AI Development" },
+  //     { isMain: false, tagName: "Trading" },
+  //     { isMain: false, tagName: "DeFi" }
+  //   ],
+  //   caseName: "Reflect",
+  //   caseDescription:
+  //     "Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains. By enabling users to manage liquidity, execute swaps, stake assets, and vote on governance proposals directly through chat commands, Reflect enhances simplicity and accessibility in DeFAI.",
+  //   link: "cases/reflect",
+  //   caseImage: reflectImage,
+  //   caseMobileImage: reflectMobileImg,
+  //   imageHeight: 560,
+  //   containerWidth: 848
+  // },
   {
     id: 7,
     tags: [
@@ -155,25 +176,28 @@ export const cases = [
       "PixelVerse bridges Web2 and Web3 gaming with Telegram Mini Apps like PixelTap, achieving 45 million monthly active users (MAU).",
     link: "cases/pixel-verse",
     caseImage: pixelVerseImage,
+    caseMobileImage: pixelverseMobileImg,
     imageHeight: 560,
-    containerWidth: 450,
+    containerWidth: 450
   },
 
-  {
-    id: 8,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: false, tagName: "DeFi" }
-    ],
-    caseName: "BRC20",
-    caseDescription:
-      "BRC20 is the first Launchpad built for the Ordinals ecosystem, redefining how Bitcoin-based assets are distributed and traded.",
-    link: "cases/brc-20",
-    caseImage: brc20Image,
-    imageHeight: 540,
-    containerWidth: 450,
-    
-  },
+   // TEMPORARILY HIDE: BRC20 case card is hidden until design is finalized
+   
+  // {
+  //   id: 8,
+  //   tags: [
+  //     { isMain: true, tagName: "Web Development" },
+  //     { isMain: false, tagName: "DeFi" }
+  //   ],
+  //   caseName: "BRC20",
+  //   caseDescription:
+  //     "BRC20 is the first Launchpad built for the Ordinals ecosystem, redefining how Bitcoin-based assets are distributed and traded.",
+  //   link: "cases/brc-20",
+  //   caseImage: brc20Image,
+  //   caseMobileImage: brc20Mobile,
+  //   imageHeight: 540,
+  //   containerWidth: 450
+  // },
 
   {
     id: 9,
@@ -187,9 +211,9 @@ export const cases = [
       "Memelut is an all-in-one app that simplifies exploring, trading, and storing memecoins. Designed for the growing $1.5T annual memecoin market, it eliminates the need for multiple apps by integrating a swipe-to-trade experience, social feeds, and secure storage into a single platform.",
     link: "cases/memelut",
     caseImage: memelutImage,
+    caseMobileImage: memeLutMobileImg,
     imageHeight: 560,
-    containerWidth: 730,
-
+    containerWidth: 730
   },
   {
     id: 10,
@@ -209,8 +233,8 @@ export const cases = [
       "Tenet is a Cosmos-based Layer-1 blockchain designed to validate networks using LSD/LRT assets. By integrating LayerZero technology, Tenet enables cross-chain liquidity, governance participation, and diversified staking opportunities across Ethereum, BNB, Polygon, Avalanche, and more.",
     link: "cases/tenet",
     caseImage: tenetImage,
+    caseMobileImage: tenetMobileImg,
     imageHeight: 560,
-    containerWidth: 630,
-
+    containerWidth: 630
   }
 ];

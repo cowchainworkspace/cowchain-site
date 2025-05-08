@@ -16,8 +16,6 @@ import {
   slideTwo
 } from "../../../../../../public/cases/tenet/slider";
 
-import { brc20, memolut, stars } from "../../../../../../public/projects";
-
 export const tenetTags = [
   {
     id: 1,
@@ -286,47 +284,5 @@ export const tenetTeam = [
     id: 4,
     department: "qa",
     people: "Taras Yakushevych"
-  }
-];
-
-export const tenetProjects = [
-  {
-    id: 1,
-    tags: [{ isMain: true, tagName: "Mobile App" }, { isMain: true, tagName: "Telegram Mini Apps" }, { isMain: false, tagName: "Trading" }],
-    title: "STARS",
-    desc: "Primex Finance is a non-custodial Prime Brokerage protocol redefining decentralized finance by enabling leveraged trading.",
-    img: stars,
-    projectLink: "step-app",
-    textColor: "text-black",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[17px]",
-    tagClasses: "bg-black border-black",
-    tagDescClasses: "text-white",
-    titleClasses: "text-black"
-  },
-  {
-    id: 2,
-    tags: [{ isMain: true, tagName: "Web Development" }, { isMain: false, tagName: "DeFi" }],
-    title: "BRC20",
-    desc: "BRC20 is the Launchpad built for the Ordinals ecosystem, redefining how Bitcoin-based assets are distributed and traded.",
-    img: brc20,
-    projectLink: "#",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[17px]"
-  },
-  {
-    id: 3,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "AI Development" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "DeFi" }
-    ],
-    title: "REFLECT",
-    desc: "Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.",
-    img: memolut,
-    projectLink: "#",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[17px]"
   }
 ];

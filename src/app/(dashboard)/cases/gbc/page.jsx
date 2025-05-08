@@ -6,6 +6,7 @@ import CasesSlider from "../components/CasesSlider";
 import CaseHeroScreen from "../components/HeroScreen";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
+import { relatedGBCProjects } from "../data";
 import GBCOverview from "./components/GBCOverview";
 import GBCRewards from "./components/GBCRewards";
 import GBCSlider from "./components/GBCSlider";
@@ -13,13 +14,7 @@ import GBCSolutions from "./components/GBCSolutions";
 import GBCWhatWeDid from "./components/GBCWhatWeDid";
 import { metadata } from "./utils/gbcMetadata";
 
-import {
-  gbcProjects,
-  gbcSlides,
-  gbcSolutions,
-  gbcTags,
-  gbcTeam
-} from "./utils/constants";
+import { gbcSlides, gbcSolutions, gbcTags, gbcTeam } from "./utils/constants";
 export { metadata };
 
 const GBC = () => {
@@ -28,7 +23,7 @@ const GBC = () => {
       <CaseHeroScreen
         pageTitle={"GMX Blueberry Club"}
         tags={gbcTags}
-        descriptionClasses="max-w-[640px] font-manrope"
+        descriptionClasses="max-w-[660px] font-manrope"
         heroDescription={
           <p className="text-center font-manrope text-xs font-[450] leading-5 tracking-wider text-white-70 md:text-sm md:leading-[22.1px]">
             GMX Blueberry Club (GBC) is a next-generation NFT platform that
@@ -38,7 +33,7 @@ const GBC = () => {
           </p>
         }
         containerClasses="relative"
-        headerClasses="font-montserrat text-[36px] text-center leading-[42px] xl:text-[64px] xl:leading-[64px]"
+        headerClasses="font-roc text-[36px] text-center leading-[42px] xl:text-[64px] xl:leading-[64px]"
         bgDecoration={
           <>
             <Image
@@ -78,7 +73,7 @@ const GBC = () => {
         team={gbcTeam}
         classes={"pt-[50px] xl:pt-30"}
       />
-      <MoreProjects projects={gbcProjects} isReversed={true} />
+      <MoreProjects projects={relatedGBCProjects} isReversed={true} />
       <Contact
         className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
         descriptionClasses={"hidden md:block"}

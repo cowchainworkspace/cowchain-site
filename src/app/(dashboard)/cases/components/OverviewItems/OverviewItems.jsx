@@ -43,7 +43,7 @@ const OverviewItems = ({ overviewItems }) => {
                 </AccordionButton>
                 <AccordionPanel>
                   {typeof itemValue === "string" ? (
-                    <p className="font-manrope text-xl font-normal leading-[30px] !text-white">
+                    <p className="font-manrope text-sm font-normal leading-6 !text-white xl:text-xl xl:leading-[30px]">
                       {itemValue}
                     </p>
                   ) : (

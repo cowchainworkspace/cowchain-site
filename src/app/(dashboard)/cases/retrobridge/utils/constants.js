@@ -14,8 +14,6 @@ import {
   wallet,
 } from "../../../../../../public/cases/RetroBridge/solutions";
 
-import { agent, gbc, m2ePlatformImg } from "../../../../../../public/projects";
-
 export const retroBridgeTags = [
   {
     id: 1,
@@ -65,7 +63,7 @@ export const overviewRetroBridgeItems = [
     itemName: "Project Outcomes",
     itemValue: [
       {
-        desc: "Over $200M in bridged transactions."
+        desc: "Over $600M in bridged transactions."
       },
       {
         desc: "1M+ executed cross-chain bridges."
@@ -286,60 +284,5 @@ export const retroBridgeTeam = [
     id: 4,
     department: "ui/ux design",
     people: "Valeriya Bobko"
-  }
-];
-
-export const retroBridgeProjects = [
-  {
-    id: 1,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "Mobile App" },
-      { isMain: false, tagName: "GameFi" },
-      { isMain: false, tagName: "Crypto Wallet" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "DEX" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "NFT" },
-      { isMain: false, tagName: "Staking" }
-    ],
-    title: "m2e platform",
-    desc: "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.",
-    img: m2ePlatformImg,
-    projectLink: "step-app",
-    textColor: "text-secondary",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-
-  },
-  {
-    id: 2,   
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "NFT" }
-    ],
-    title: "GBC DAPP",
-    desc: "GBC is a next-generation NFT platform that combines customization, trading, and gamification.",
-    img: gbc,
-    projectLink: "gbc",
-    textColor: "text-secondary",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-  },
-  {
-    id: 3,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: true, tagName: "AI Development" },
-      { isMain: false, tagName: "Crypto Wallet" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "NFT" }
-    ],
-    title: "agenthub",
-    desc: "AGNT.Hub is the first omnichain ecosystem for AI agents in Web3, also integrated into X.",
-    img: agent,
-    textColor: "text-secondary",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-    projectLink: "agnt",
-    tagsWidth: "max-w-[320px] md:max-w-fit"
   }
 ];

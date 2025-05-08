@@ -31,7 +31,7 @@ const MemelutOverviewItems = ({ items }) => {
                 >
                   <span
                     className={cn(
-                      "font-manrope text-[11.05px] uppercase leading-[18.41px] tracking-[1.84px] text-secondary"
+                      "font-manrope text-xs uppercase leading-5 tracking-[2px] text-secondary"
                     )}
                   >
                     {itemName}
@@ -52,7 +52,7 @@ const MemelutOverviewItems = ({ items }) => {
                     </p>
                   )}
                   {typeof itemValue === "string" ? (
-                    <p className="font-manrope text-sm font-normal leading-6 !text-white xl:text-[18.41px] xl:font-medium xl:leading-[27.62px]">
+                    <p className="font-manrope text-sm font-normal leading-6 !text-white xl:text-xl xl:font-medium xl:leading-[30px]">
                       {itemValue}
                     </p>
                   ) : (

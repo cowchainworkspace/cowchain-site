@@ -93,8 +93,8 @@ const CryptoWalletDev = () => {
         itemTitleClasses="lg:max-w-[350px] xl:text-[18px]"
         data={walletFeaturesData}
         topBorder={false}
-        customClasses="!grid-cols-2 !pr-0 xl:gap-y-[120px] xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
-        itemClasses="!flex-row md:gap-[49px] !min-w-full"
+        customClasses="!grid-cols-2  !pr-0 xl:gap-y-[120px] xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
+        itemClasses="!flex-row gap-4 md:gap-[49px] !min-w-full"
         itemDescClasses={"max-w-[420px]"}
       />
 
