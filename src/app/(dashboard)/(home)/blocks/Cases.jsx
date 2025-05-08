@@ -54,17 +54,11 @@ const Cases = () => {
   }, []);
 
   const handlePrevClick = () => {
-    if (swiperRef.current && currentIndex > 0) {
-      swiperRef.current.slideTo(currentIndex - 1);
-      setCurrentIndex(currentIndex - 1);
-    }
+    swiperRef.current?.slidePrev();
   };
 
   const handleNextClick = () => {
-    if (swiperRef.current && currentIndex < casesData.length - 1) {
-      swiperRef.current.slideTo(currentIndex + 1);
-      setCurrentIndex(currentIndex + 1);
-    }
+    swiperRef.current?.slideNext();
   };
 
   return (
@@ -110,6 +104,28 @@ const Cases = () => {
             </div>
           ))}
       </div>
+
+      <button
+        type="button"
+        style={{
+          background: "linear-gradient(to left, transparent 1%, #AB40FF 160%)"
+        }}
+        onClick={handlePrevClick}
+        className="absolute left-0 top-0 z-50 hidden hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
+      >
+        <Image src={sliderLeftArrow} alt="Next" className="h-8 w-8" />
+      </button>
+
+      <button
+        type="button"
+        style={{
+          background: "linear-gradient(to right, transparent 1%, #AB40FF 160%)"
+        }}
+        onClick={handleNextClick}
+        className="absolute right-0 top-0 z-50 hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
+      >
+        <Image src={sliderRightArrow} alt="Previous" className="h-8 w-8" />
+      </button>
     </section>
   );
 };
