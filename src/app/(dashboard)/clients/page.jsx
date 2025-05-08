@@ -11,7 +11,7 @@ export { metadata };
 
 const Clients = () => {
   return (
-    <section id="clients-wrapper">
+    <section id="clients-wrapper ">
       <div className="relative bg-black">
         <Header />
         <Projects />
