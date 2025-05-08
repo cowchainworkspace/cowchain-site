@@ -255,7 +255,7 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
       <Cases />
       <CasesMobile />
       <div className="w-full overflow-hidden">
-        <FAQ noBg={true} data={icoConstructorFaqBotData} />
+        <FAQ noBg={true} data={icoConstructorFaqBotData} faqHorizontalPadding />
       </div>
 
       <Contact

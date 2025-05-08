@@ -204,7 +204,7 @@ const ICOPlatform = () => {
       <Cases />
       <CasesMobile />
       <div className="w-full overflow-hidden">
-        <FAQ noBg={true} data={faqData} />
+        <FAQ noBg={true} data={faqData} faqHorizontalPadding />
       </div>
       <Contact
         descriptionClasses={"mb-6 md:mb-0"}

@@ -264,7 +264,11 @@ const MobileCryptoWallet = () => {
       <Cases />
       <CasesMobile />
       <div className="w-full overflow-hidden">
-        <FAQ noBg={true} data={cryptWalletGeneralFaqData} />
+        <FAQ
+          noBg={true}
+          data={cryptWalletGeneralFaqData}
+          faqHorizontalPadding
+        />
       </div>
       <Contact
         descriptionClasses={"mb-6 md:mb-0"}

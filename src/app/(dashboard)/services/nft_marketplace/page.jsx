@@ -229,7 +229,7 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
       <Cases />
       <CasesMobile />
       <div className="w-full overflow-hidden">
-        <FAQ noBg={true} data={faqQuestions} />
+        <FAQ noBg={true} data={faqQuestions} faqHorizontalPadding />
       </div>
       <Contact
         descriptionClasses={"mb-6 md:mb-0"}

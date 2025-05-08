@@ -144,6 +144,8 @@ const Web3UiUx = () => {
           faqGradient={true}
           itemTitleClass="xl:!text-[20px]"
           itemsClasses={"py-[40px] md:py-[75px] "}
+          accordionPanelClasses="pb-10 md:pb-[75px]"
+          expandedItemClasses="!pb-6"
           faqContentClasses={"max-w-[545px]"}
         />
       </div>

@@ -163,7 +163,6 @@ const RwaTokenization = () => {
           isTwoHalf={true}
           hasIcon={false}
           faqGradient={true}
-          itemsClasses={"py-[43px]"}
         />
       </div>
 
