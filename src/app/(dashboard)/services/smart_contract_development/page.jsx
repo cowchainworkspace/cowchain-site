@@ -168,6 +168,8 @@ const SmartContractDevelopment = () => {
           }
           data={smartContractsData}
           itemsClasses={"py-[50px]"}
+          accordionPanelClasses="pb-[50px]"
+          expandedItemClasses="!pb-6"
           isTwoHalf={true}
           noBg={true}
           hasIcon={false}

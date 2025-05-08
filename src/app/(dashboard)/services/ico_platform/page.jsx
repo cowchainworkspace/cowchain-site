@@ -178,7 +178,6 @@ const ICOPlatform = () => {
           hasIcon={false}
           faqGradient={true}
           data={icoPlatformFaqData}
-          itemsClasses={"md:py-[43px]"}
           isDoublePadding={true}
           itemTitleClass={"xl:text-xl xl:leading-90 whitespace-pre-line"}
           faqContentClasses="max-w-[540px]"

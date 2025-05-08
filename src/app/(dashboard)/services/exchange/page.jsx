@@ -182,9 +182,10 @@ Whether you’re a startup, enterprise, or Web3 project expanding your ecosystem
           faqGradient={true}
           data={exchangeFAQ}
           itemsClasses={"md:py-[74.5px]"}
+          accordionPanelClasses="md:pb-[74.5px]"
+          expandedItemClasses="!pb-6"
           isDoublePadding={true}
           itemTitleClass={"xl:text-xl xl:leading-90 whitespace-pre-line"}
-          expandedItemClasses="xl:py-[101px]"
         />
       </div>
       <Industries
@@ -229,9 +230,10 @@ Whether you’re a startup, enterprise, or Web3 project expanding your ecosystem
           faqGradient={true}
           data={exchangeCases}
           itemsClasses={"md:py-[43px]"}
+          accordionPanelClasses="md:pb-[43.5px]"
+          expandedItemClasses="!pb-6"
           isDoublePadding={true}
           itemTitleClass={"xl:text-xl xl:leading-90 whitespace-pre-line "}
-          expandedItemClasses="xl:py-[101px]"
           isDisabled={true}
         />
       </div>
@@ -298,7 +300,7 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
       <Cases />
       <CasesMobile />
       <div className="w-full overflow-hidden">
-        <FAQ noBg={true} data={exchangeFAQBottom} />
+        <FAQ noBg={true} data={exchangeFAQBottom} faqHorizontalPadding={true} />
       </div>
       <Contact
         descriptionClasses={"mb-6 md:mb-0"}

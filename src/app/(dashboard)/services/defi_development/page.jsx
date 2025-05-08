@@ -171,6 +171,8 @@ const DefiDevelopment = () => {
           isDoublePadding={true}
           hasIcon={false}
           itemsClasses={"py-10 md:py-[54.5px]"}
+          accordionPanelClasses="pb-10 md:pb-[54.5px]"
+          expandedItemClasses="!pb-6"
           faqGradient={true}
           descriptionClasses="!max-w-[320px] md:max-w-[462px]"
         />

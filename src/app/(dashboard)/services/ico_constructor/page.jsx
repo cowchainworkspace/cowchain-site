@@ -201,6 +201,8 @@ const IcoConstructor = () => {
           faqGradient={true}
           data={icoPlatformFaqData}
           itemsClasses={"md:py-[65px]"}
+          accordionPanelClasses="md:pb-[65px]"
+          expandedItemClasses="!pb-6"
           isDoublePadding={true}
           itemTitleClass={"xl:text-xl xl:leading-90 whitespace-pre-line"}
         />
