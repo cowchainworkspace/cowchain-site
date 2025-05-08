@@ -93,8 +93,8 @@ const CryptoWalletDev = () => {
         itemTitleClasses="lg:max-w-[350px] xl:text-[18px]"
         data={walletFeaturesData}
         topBorder={false}
-        customClasses="!grid-cols-2 !pr-0 xl:gap-y-[120px] xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
-        itemClasses="!flex-row md:gap-[49px] !min-w-full"
+        customClasses="!grid-cols-2  !pr-0 xl:gap-y-[120px] xl:pl-[55px] xl:pr-[60px] xl:mt-[60px]"
+        itemClasses="!flex-row gap-4 md:gap-[49px] !min-w-full"
         itemDescClasses={"max-w-[420px]"}
       />
 
@@ -313,6 +313,7 @@ const CryptoWalletDev = () => {
           "A professionally developed wallet is crucial for navigating the growing digital economy. By leveraging our expertise in crypto wallet services and advanced security, you can create solutions that resonate with users and stand out in the market. Contact us today to explore how our crypto wallet integration and development services can elevate your blockchain projects."
         }
         className="px-4 py-[50px] md:px-[64px] md:py-[107px] "
+        hasNoDesc={false}
       />
     </section>
   );

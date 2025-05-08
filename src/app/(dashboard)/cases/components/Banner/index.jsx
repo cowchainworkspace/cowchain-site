@@ -17,7 +17,13 @@ const Banner = ({ img, imgDesc, classes, decorationElement, bannerTitle }) => {
           alt="background decoration ellipse"
         />
       )}
-      <Image src={img} fill objectFit="cover" alt={imgDesc} />
+      <Image
+        src={img}
+        fill
+        objectFit="cover"
+        objectPosition="center"
+        alt={imgDesc}
+      />
     </div>
   );
 };

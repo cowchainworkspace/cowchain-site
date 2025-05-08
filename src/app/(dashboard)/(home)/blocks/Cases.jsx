@@ -6,6 +6,7 @@ import { casesData } from "../homeData/data";
 
 import { useMotionValue, useTransform } from "framer-motion";
 import { ScrollProject } from "./ScrollProject";
+import { Autoplay } from "swiper/modules";
 
 import useScrollPercentage from "react-scroll-percentage-hook";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -53,17 +54,11 @@ const Cases = () => {
   }, []);
 
   const handlePrevClick = () => {
-    if (swiperRef.current && currentIndex > 0) {
-      swiperRef.current.slideTo(currentIndex - 1);
-      setCurrentIndex(currentIndex - 1);
-    }
+    swiperRef.current?.slidePrev();
   };
 
   const handleNextClick = () => {
-    if (swiperRef.current && currentIndex < casesData.length - 1) {
-      swiperRef.current.slideTo(currentIndex + 1);
-      setCurrentIndex(currentIndex + 1);
-    }
+    swiperRef.current?.slideNext();
   };
 
   return (
@@ -72,6 +67,11 @@ const Cases = () => {
       className="relative z-10 hidden  border-b border-b-th-fade custom480:block custom480:h-[624px] xl:flex"
     >
       <Swiper
+        modules={[Autoplay]}
+        autoplay={{
+          delay: 3000
+        }}
+        loop={true}
         className="flex  custom480:h-[624px] fullSlider:!hidden"
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
@@ -105,32 +105,27 @@ const Cases = () => {
           ))}
       </div>
 
-      {!isBeginning && (
-        <button
-          type="button"
-          style={{
-            background: "linear-gradient(to left, transparent 1%, #AB40FF 160%)"
-          }}
-          onClick={handlePrevClick}
-          className="absolute left-0 top-0 z-50 hidden hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
-        >
-          <Image src={sliderLeftArrow} alt="Next" className="h-8 w-8" />
-        </button>
-      )}
+      <button
+        type="button"
+        style={{
+          background: "linear-gradient(to left, transparent 1%, #AB40FF 160%)"
+        }}
+        onClick={handlePrevClick}
+        className="absolute left-0 top-0 z-50 hidden hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
+      >
+        <Image src={sliderLeftArrow} alt="Next" className="h-8 w-8" />
+      </button>
 
-      {!isEnd && (
-        <button
-          type="button"
-          style={{
-            background:
-              "linear-gradient(to right, transparent 1%, #AB40FF 160%)"
-          }}
-          onClick={handleNextClick}
-          className="absolute right-0 top-0 z-50 hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
-        >
-          <Image src={sliderRightArrow} alt="Previous" className="h-8 w-8" />
-        </button>
-      )}
+      <button
+        type="button"
+        style={{
+          background: "linear-gradient(to right, transparent 1%, #AB40FF 160%)"
+        }}
+        onClick={handleNextClick}
+        className="absolute right-0 top-0 z-50 hidden h-full w-32 cursor-pointer items-center justify-center bg-transparent lg:flex fullSlider:hidden "
+      >
+        <Image src={sliderRightArrow} alt="Previous" className="h-8 w-8" />
+      </button>
     </section>
   );
 };

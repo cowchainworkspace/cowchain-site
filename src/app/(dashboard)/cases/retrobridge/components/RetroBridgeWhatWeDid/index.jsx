@@ -52,7 +52,7 @@ const RetroBridgeWhatWeDid = () => {
               result
             </h3>
             <p className="text-xs font-[450] leading-5 text-white-70  xl:leading-6">
-              RetroBridge now bridges assets across 42+ networks with smart
+              RetroBridge now bridges assets across 51+ networks with smart
               contracts and decentralized protocols. A proprietary API and SDK
               for custom blockchain development streamlines integration. The
               platform combines scalability with a user-friendly experience,

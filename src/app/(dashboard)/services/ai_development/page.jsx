@@ -285,6 +285,7 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
           "xl:max-w-[795px] mb-6 md:mb-0 px-4 md:px-4 xl:px-0 xl:text-base xl:font-normal xl:leading-6"
         }
         className={"px-4 py-[50px] md:px-0 xl:py-[143px]"}
+        hasNoDesc={false}
       />
     </section>
   );

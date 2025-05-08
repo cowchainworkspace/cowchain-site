@@ -7,11 +7,12 @@ import CasesSolutions from "../components/CasesSolutions";
 import MoreProjects from "../components/MoreProjects";
 import ProjectOverview from "../components/ProjectOverview";
 import TeamBehind from "../components/TeamBehind";
+import { relatedHybridProjects } from "../data";
 import BannerTitle from "./components/BannerTitle";
 import HeroScreenContainer from "./components/HeroScreenContainer";
 import HybridWhatWeDid from "./components/HybridWhatWeDid";
+
 import {
-  hybridProjects,
   hybridSlides,
   hybridSolutions,
   hybridTeam,
@@ -105,7 +106,7 @@ const Hybrid = () => {
       <CasesSolutions solutions={hybridSolutions} />
       <HybridWhatWeDid />
       <TeamBehind team={hybridTeam} descClasses={"font-medium"} />
-      <MoreProjects projects={hybridProjects} />
+      <MoreProjects projects={relatedHybridProjects} />
       <Contact
         className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
         descriptionClasses={"hidden md:block"}

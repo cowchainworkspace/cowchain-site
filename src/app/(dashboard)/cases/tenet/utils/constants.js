@@ -16,8 +16,6 @@ import {
   slideTwo
 } from "../../../../../../public/cases/tenet/slider";
 
-import { brc20, stars, pixelVerse, memolut, crossChain } from "../../../../../../public/projects";
-
 export const tenetTags = [
   {
     id: 1,
@@ -287,53 +285,4 @@ export const tenetTeam = [
     department: "qa",
     people: "Taras Yakushevych"
   }
-];
-
-export const tenetProjects = [
-  {
-    id: 2,
-    tags: [
-      { isMain: true, tagName: "Mobile App" },
-      { isMain: true, tagName: "Telegram Mini Apps" },
-      { isMain: false, tagName: "GameFi" }
-    ],
-    title: "PixelVerse",
-    desc: "PixelVerse is a GameFi ecosystem that merges Web2 accessibility with Web3 innovation through Telegram Mini Apps.",
-    img: pixelVerse,
-    projectLink: "pixel-verse",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[17px]",
-    textColor: "text-secondary",
-
-  },
-  {
-    id: 1,
-    tags: [
-      { isMain: true, tagName: "Web Development" },
-      { isMain: false, tagName: "DeFi" },
-      { isMain: false, tagName: "Bridge" },
-      { isMain: false, tagName: "NFT" }
-    ],
-    title: "Cross-chain transfer bridge",
-    desc: "RetroBridge is a blockchain-powered platform enabling seamless cross-chain asset transfers.",
-    img: crossChain,
-    textColor: "text-secondary",
-    projectLink: "retrobridge",
-      textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
-  },
-  {
-    id: 2,
-    tags: [
-      { isMain: true, tagName: "Mobile App" },
-      { isMain: false, tagName: "Trading" },
-      { isMain: false, tagName: "Crypto Wallet" }
-    ],
-    title: 'memelut',
-    desc: 'Memelut is an all-in-one app that simplifies exploring, trading, and storing memecoins.',
-    img: memolut,
-    projectLink: "memelut",
-    textGap: "md:gap-[24px]",
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]"
-  },
 ];

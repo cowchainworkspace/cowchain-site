@@ -6,17 +6,18 @@ import CasesSlider from "../components/CasesSlider";
 import CaseHeroScreen from "../components/HeroScreen";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
+import { relatedMemelutProjects } from "../data";
 import MemelutOverview from "./components/MemelutOverview";
 import MemelutSolutions from "./components/MemelutSolutions";
 import MemelutWhatWeDid from "./components/MemelutWhatWeDid";
+
 import { metadata } from "./utils/memelutMetadata";
 
 import {
-  memelutProjects,
   memelutSlides,
   memelutSolutions,
-  memeluteTags,
-  memelutTeam
+  memelutTeam,
+  memeluteTags
 } from "./utils/constants";
 export { metadata };
 
@@ -73,14 +74,14 @@ const Memelut = () => {
         width={1349}
         height={269}
         src="/cases/memelut/memelut-coins-banner.webp"
-        className="mx-auto h-auto w-[100vw] max-w-[1349px]"
+        className="mx-auto h-auto w-[calc(100vw-6px)] max-w-[1349px]"
       />
       <TeamBehind
         headerClasses={"xl:leading-[18.41px] xl:tracking-[1.84px]"}
         team={memelutTeam}
         classes={"pt-0 xl:pt-[60px]"}
       />
-      <MoreProjects projects={memelutProjects} isReversed={true} />
+      <MoreProjects projects={relatedMemelutProjects} isReversed={true} />
       <Contact
         className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
         descriptionClasses={"hidden md:block"}

@@ -120,7 +120,8 @@ export function Industries({
               className={cn(
                 `z-[10] col-span-1 row-span-1 flex ${itemClasses}  ${expertise.text ? "items-start" : "items-center"}
                   ${isTwoSides || fullGrid || data.length < 4 ? "max-w-full flex-col gap-0 sm:max-w-[307px]" : "gap-5 lg:gap-[49px]"} ${itemClasses}`,
-                itemContainerClasses
+                itemContainerClasses,
+                expertise.isMainTitle && "items-start"
               )}
             >
               {expertise.icon && (
@@ -137,7 +138,12 @@ export function Industries({
                   <expertise.icon className="flex h-[20px] w-[20px] flex-shrink-0 items-center justify-center md:h-[28px] md:w-[28px]" />
                 </div>
               )}
-              <div className="mb-2 flex md:items-center">
+              <div
+                className={cn(
+                  "mb-2 flex md:items-center",
+                  expertise.isMainTitle && "items-start"
+                )}
+              >
                 <div className="">
                   <h3
                     className={cn(

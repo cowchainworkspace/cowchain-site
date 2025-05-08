@@ -1,8 +1,11 @@
 "use client";
 
+import team_bg from "@/assets/bg/team-mobile.png";
+import team from "@/assets/bg/team.png";
 import Tag from "@/components/ui/tag";
 import ContactForm from "@/components/utils/ContactForm";
 import emailjs from "@emailjs/browser";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -41,7 +44,18 @@ export default function Header() {
   };
 
   return (
-    <section className="scrollbar-none relative -mt-[440px] w-full items-center justify-center overflow-hidden pt-20   text-center md:max-w-full    lg:pt-[120px]">
+    <section className="scrollbar-none relative w-full items-center justify-center  pt-20   text-center md:max-w-full    lg:pt-[120px]">
+      <Image
+        className=" pointer-events-none absolute -top-24 left-0 block lg:hidden"
+        alt="gradient"
+        src={team_bg}
+      />
+      <Image
+        className=" pointer-events-none absolute -top-24 left-0 hidden lg:block"
+        alt="gradient"
+        priority
+        src={team}
+      />
       {!isSubmit ? (
         <>
           <div className="relative flex cursor-default flex-col items-center justify-center px-5 pb-8 text-center md:px-8 md:pb-12 lg:items-center lg:px-16 xl:px-24">

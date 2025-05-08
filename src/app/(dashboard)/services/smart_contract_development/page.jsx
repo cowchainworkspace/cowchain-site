@@ -142,27 +142,9 @@ const SmartContractDevelopment = () => {
         desc={
           <>
             <p className="text-[#BBBBBB]">
-              The experts at our smart contract development company are
-              experienced in working with various blockchain networks, which
-              allows us to offer optimal solutions depending on the project
-              requirements
-            </p>
-            <p>
-              <br />
-              <br />
-            </p>
-            <p className="text-[#BBBBBB]">
-              We constantly follow the development of blockchain technologies
-              and supplement our stack with new tools to improve development
-              efficiency
-            </p>
-            <p>
-              <br />
-              <br />
-            </p>
-            <p className="text-[#BBBBBB]">
-              Our developers use advanced technologies and tools to provide
-              smart contract development service
+              Our developers use advanced technologies and tools, including
+              solidity smart contract development services, to deliver
+              high-quality solutions
             </p>
           </>
         }

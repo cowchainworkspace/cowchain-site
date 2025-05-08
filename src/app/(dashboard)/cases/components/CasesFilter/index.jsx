@@ -25,16 +25,23 @@ const CasesFilter = ({ tags, currentTag, setTag }) => {
   }, [isFilterOpen]);
 
   return (
-    <div className="w-fit relative">
-      <ul className="mt-15 flex flex-wrap gap-2">
+    <div className="w-fit w-full relative">
+      <ul className="mt-15 justify-start sm:justify-end w-full custom1430:justify-auto flex flex-wrap gap-2">
         {tags.map(({ id, tagName }) => (
           <li
-            className={cn(tagName !== "all filters" && "hidden sm:block", "relative ")}
+            className={cn(tagName !== "all filters" && "hidden custom1430:block", "relative ")}
             key={id}
           >
             <button
               onClick={() => {
-                if (tagName === "all filters") handleMenuOpen();
+                if (tagName === "all filters") {
+                  handleMenuOpen();
+                  return;
+                };
+                if (currentTag.toLowerCase() === tagName.toLowerCase()) {
+                  setTag("all filters");
+                  return;
+                }
                 setTag(tagName);
               }}
               type="button"
@@ -48,7 +55,7 @@ const CasesFilter = ({ tags, currentTag, setTag }) => {
               {tagName === "all filters" && <FilterSvg />}
               {tagName}
             </button>
-            {isFilterOpen && tagName === "all filters" && <FilterMenu />}
+            {isFilterOpen && tagName === "all filters" && <FilterMenu setTag={setTag} setIsFilterOpen={setIsFilterOpen} />}
           </li>
         ))}
            

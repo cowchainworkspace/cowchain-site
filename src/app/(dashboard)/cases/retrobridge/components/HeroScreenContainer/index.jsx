@@ -2,7 +2,7 @@
 import { useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import CaseHeroScreen from "../../../components/HeroScreen";
-import { retroBridgeTags, retroBridgeMobileTags } from "../../utils/constants";
+import { retroBridgeMobileTags, retroBridgeTags } from "../../utils/constants";
 
 const HeroScreenContainer = () => {
   const [isMoreThan768] = useMediaQuery("(min-width: 768px)");
@@ -16,7 +16,7 @@ const HeroScreenContainer = () => {
         heroDescription={
           <>
             RetroBridge is a blockchain-powered platform enabling seamless
-            cross-chain asset transfers. With $200M in bridged volume and 1M+
+            cross-chain asset transfers. With $600M in bridged volume and 1M+
             successful transactions, it demonstrates the growing demand for
             interoperability in Web3.
           </>

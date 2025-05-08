@@ -1,30 +1,30 @@
-import React from "react";
-import { ArrowForward } from "../../../../assets/svgComponents/ArrowForward";
-import Link from "next/link";
 import {
   Accordion,
-  AccordionItem,
   AccordionButton,
+  AccordionItem,
   AccordionPanel,
   Box
 } from "@chakra-ui/react";
+import Link from "next/link";
+import React from "react";
+import { ArrowForward } from "../../../../assets/svgComponents/ArrowForward";
 import { servicesBlocksData, servicesBlocksOtherData } from "../homeData/data";
 
 export const ServicesAndTechnologiesMob = ({
-  toggleMobServices,
+  closeServiceMenu,
   closeBurger
 }) => {
   return (
     <div className="top-[64px] z-[300] mb-[50px] flex h-full w-full  border-b border-b-th-fade bg-black text-white lg:hidden">
       <div
-        onClick={toggleMobServices}
+        onClick={closeServiceMenu}
         className="flex min-h-[374px] w-[72px] cursor-pointer items-center justify-center border-r border-r-th-fade py-[26px] text-white"
       >
         <span className="violet-gradient-text mx-[26px] -rotate-90 transform whitespace-nowrap text-[24px] font-bold uppercase tracking-wide">
           SERVICES & TECHNOLOGIES
         </span>
       </div>
-      <Accordion defaultIndex={[0]} className="w-full" allowToggle>
+      <Accordion className="w-full" allowToggle>
         {servicesBlocksData.map((block, index) => (
           <AccordionItem
             key={index}
@@ -41,7 +41,10 @@ export const ServicesAndTechnologiesMob = ({
               <ul className="space-y-[6px]">
                 {block.items.map((item, itemIndex) => (
                   <li
-                    onClick={closeBurger}
+                    onClick={(e) => {
+                      closeBurger(e);
+                      closeServiceMenu(e);
+                    }}
                     key={itemIndex}
                     className="flex items-center py-[9px] text-sm opacity-70 hover:text-purple-400"
                   >
@@ -65,12 +68,19 @@ export const ServicesAndTechnologiesMob = ({
             <ul className="space-y-2">
               {servicesBlocksOtherData.map((item, itemIndex) => (
                 <li
-                  onClick={closeBurger}
                   key={itemIndex}
                   className="flex items-center  py-[9px] pl-[26px] text-sm opacity-70  hover:text-purple-400"
                 >
                   <ArrowForward className="mr-2" />
-                  <Link href={item.link}>{item.title}</Link>
+                  <Link
+                    onClick={(e) => {
+                      closeBurger(e);
+                      closeServiceMenu(e);
+                    }}
+                    href={item.link}
+                  >
+                    {item.title}
+                  </Link>
                 </li>
               ))}
             </ul>

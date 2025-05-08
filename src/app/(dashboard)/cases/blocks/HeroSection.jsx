@@ -11,7 +11,7 @@ import { casesTags } from "../constants";
 
 export const HeroSection = ({ setTag, currentTag }) => {
   return (
-    <section className="relative pt-20 lg:pt-[120px]">
+    <section className="relative pt-[38px] md:pt-20 lg:pt-[120px]">
       <Helmet>
         <link rel="canonical" href={"https://cowchain.io/cases"} />
       </Helmet>
