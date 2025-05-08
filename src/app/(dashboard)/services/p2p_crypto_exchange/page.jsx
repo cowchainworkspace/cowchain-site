@@ -234,6 +234,7 @@ const P2pCryptoExhangeDev = () => {
         desc="We help you launch a secure, scalable P2P crypto exchange tailored to your market and vision. Whether you’re starting from scratch or upgrading an MVP, our team is ready to deliver a product your users will trust"
         className="px-4 py-[50px] md:pb-[127px] md:pt-[169px]"
         descriptionClasses={"max-w-[500px] mb-4 md:mb-0"}
+        hasNoDesc={false}
       />
     </section>
   );

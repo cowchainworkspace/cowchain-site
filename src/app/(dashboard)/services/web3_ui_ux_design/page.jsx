@@ -267,6 +267,7 @@ const Web3UiUx = () => {
             "High-quality Web3 UI/UX design services are the foundation of impactful blockchain platforms. From user-centric interfaces to cutting-edge innovations, these designs enhance usability, security, and engagement. Let Cowchain help you transform your vision into reality with tailored Web3 applications that resonate with your audience"
           }
           className="z-10 px-4 py-[50px] md:px-[64px] md:pb-[127px] md:pt-[131px]"
+          hasNoDesc={false}
         />
       </div>
     </section>

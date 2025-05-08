@@ -22,7 +22,7 @@ const Tenet = () => {
       <Banner
         img={"/cases/tenet/tenet-banner-img.webp"}
         classes={
-          "h-[180px] overflow-visible relative z-[50] md:h-[400px] lg:h-[470px] xl:h-[535px] md:-mt-[50px] lg:-mt-[153px] xl:-mt-[173px] custom-1700:h-[750px]   custom1430:h-[600px] custom1700:h-[750px]"
+          "h-[180px] overflow-visible md:h-[400px] lg:h-[470px] xl:h-[535px] md:-mt-[50px] lg:-mt-[153px] xl:-mt-[173px] custom-1700:h-[750px]   custom1430:h-[600px] custom1700:h-[750px]"
         }
         imgDesc={"Tenet banner"}
       />

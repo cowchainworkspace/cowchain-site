@@ -313,6 +313,7 @@ const CryptoWalletDev = () => {
           "A professionally developed wallet is crucial for navigating the growing digital economy. By leveraging our expertise in crypto wallet services and advanced security, you can create solutions that resonate with users and stand out in the market. Contact us today to explore how our crypto wallet integration and development services can elevate your blockchain projects."
         }
         className="px-4 py-[50px] md:px-[64px] md:py-[107px] "
+        hasNoDesc={false}
       />
     </section>
   );

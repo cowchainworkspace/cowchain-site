@@ -228,6 +228,7 @@ const CryptoCurrencyDev = () => {
           "The cryptocurrency market is evolving rapidly, and exchanges must stay ahead with innovative features and high-assurance designs. Whether through advanced crypto trading software or robust crypto wallet integration, the future belongs to platforms that prioritize performance and user-centric designs. Contact us to create a platform that stands out in this dynamic market."
         }
         className="px-4 py-[50px] md:px-[64px] md:py-[131px] "
+        hasNoDesc={false}
       />
     </section>
   );

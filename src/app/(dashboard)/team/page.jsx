@@ -26,7 +26,7 @@ const Team = () => {
         <div className="overflow-hidden">
           <div className="mx-5 mb-[60px] mt-14 flex flex-col gap-4  overflow-visible xl:mx-24 xl:mt-28">
             <Tag
-              className={"mb-[16px] max-w-[166px] text-center sm:max-w-[200px]"}
+              className={"mb-[16px] max-w-fit text-center sm:max-w-[220px]"}
               title={"founded and run by"}
             />
             <div className="flex flex-col justify-between xl:flex-row">
