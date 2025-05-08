@@ -220,6 +220,7 @@ const IcoPlatformDevelopment = () => {
             "xl:max-w-[800px] mb-6 md:mb-0 px-4 md:px-0 xl:text-base xl:font-normal xl:leading-6"
           }
           className={"py-[50px] xl:py-[119px]"}
+          hasNoDesc={false}
         />
       </div>
     </section>

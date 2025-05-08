@@ -12,7 +12,12 @@ import gbc from "@/assets/cases/gbcCase.png";
 import hybrid from "@/assets/cases/hybridCase.png";
 import retroBridge from "@/assets/cases/retrobridgeCase.png";
 import stepUp from "@/assets/cases/stepUpCase.png";
+import memolut from "@/assets/cases/memolut.webp"
+import pixelVerse from "@/assets/cases/pixel-verse.webp"
+import tenet from "@/assets/cases/tenet-project.webp"
 
+
+// import {tenet, pixelVerse, memolut} from "../../../../../public/projects"
 export const blocksData = [
   {
     id: 1,
@@ -208,6 +213,45 @@ export const casesData = [
       { isMain: false, tagName: "L1" }
     ]
   },
+  {
+    tags: [
+      { isMain: true, tagName: "Mobile App" },
+      { isMain: true, tagName: "Telegram Mini Apps" },
+      { isMain: false, tagName: "GameFi" }
+    ],
+    title: "PixelVerse",
+    description: "PixelVerse is a GameFi ecosystem that merges Web2 accessibility with Web3 innovation through Telegram Mini Apps.",
+    photo: pixelVerse,
+    link: "/cases/pixel-verse",
+  },
+  {
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "Blockchain Development" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "Crypto Wallet" },
+      { isMain: false, tagName: "DEX" },
+      { isMain: false, tagName: "DeFi" },
+      { isMain: false, tagName: "Bridge" },
+      { isMain: false, tagName: "L1" },
+      { isMain: false, tagName: "Staking" }
+    ],
+    title: "tenet",
+    description: "Tenet is a Cosmos-based Layer-1 blockchain designed to validate networks using LSD/LRT assets.",
+    photo: tenet,
+    link: "/cases/tenet",
+  },
+  {
+    tags: [
+      { isMain: true, tagName: "Mobile App" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "Crypto Wallet" }
+    ],
+    title: "memelut",
+    description: "Memelut is an all-in-one app that simplifies exploring, trading, and storing memecoins.",
+    photo: memolut,
+    link: "/cases/memelut",
+  }
 ];
 
 export const casesMobileData = [

@@ -58,7 +58,7 @@ export const ScrollProject = ({
                 <p
                   className={cn(
                     "text-xs font-medium text-black lg:text-sm",
-                    isMain && "text-sm font-bold"
+                    isMain && "text-sm font-bold "
                   )}
                 >
                   {tagName}
@@ -67,10 +67,22 @@ export const ScrollProject = ({
             ))}
           </div>
 
-          <span className="text-left font-roc text-lg font-medium uppercase text-white md:text-2xl">
+          <span
+            className={cn(
+              "text-left font-roc text-lg font-medium uppercase text-white md:text-2xl",
+              title.toLowerCase() === "tenet" &&
+                "text-black group-hover:text-white"
+            )}
+          >
             {title}
           </span>
-          <p className="md:body max-w-sm  text-left text-[14px] !text-[#fff]">
+          <p
+            className={cn(
+              "md:body max-w-sm  text-left text-[14px] !text-[#fff]",
+              title.toLowerCase() === "tenet" &&
+                "!text-black group-hover:!text-white"
+            )}
+          >
             {description}
           </p>
         </div>

@@ -37,7 +37,8 @@ const NFTMarketPlace = () => {
             A white label NFT marketplace is a{" "}
             <span className="violet-gradient-text">
               pre-built,
-              <br className="hidden custom1430:block" /> ready-to-use platform
+              <br className="hidden custom1430:block" /> ready-to-use
+              platform{" "}
             </span>
             designed to support
             <br className="hidden custom1430:block" /> the creation, buying, and

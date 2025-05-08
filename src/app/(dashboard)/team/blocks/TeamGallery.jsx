@@ -16,12 +16,12 @@ const TeamCard = ({ name, role, photo, social, check }) => {
       {check === "oleh" ? (
         <>
           <div
-            className="flex h-full hidden max-h-[187px] min-h-[187px]  bg-cover bg-center bg-no-repeat md:flex xl:max-h-[459px] xl:min-h-[459px] xl:w-[400px]"
+            className="flex hidden h-full max-h-[187px] min-h-[187px]  bg-cover bg-center bg-no-repeat md:flex xl:max-h-[459px] xl:min-h-[459px] xl:w-[400px]"
             style={{ backgroundImage: `url(${photo.src})` }}
           />
 
           <div
-            className="flex h-full max-h-[187px] min-h-[187px] md:hidden  bg-cover bg-center bg-no-repeat xl:max-h-[459px] xl:min-h-[459px] xl:w-[400px]"
+            className="flex h-full max-h-[187px] min-h-[187px] bg-cover  bg-center bg-no-repeat md:hidden xl:max-h-[459px] xl:min-h-[459px] xl:w-[400px]"
             style={{ backgroundImage: `url(${olehMobImg.src})` }}
           />
         </>
@@ -60,10 +60,10 @@ const TeamGallery = () => {
   return (
     <section
       id="team"
-      className="relative flex flex-col items-center justify-center px-6 pt-[60px] pb-28 md:pt-[115px]"
+      className="relative flex flex-col items-center justify-center px-6 pb-28 pt-[60px] md:pt-[115px]"
     >
-      <h3 className="mb-[36px] md:mb-20 uppercase">Meet the team</h3>
-      <div className="grid grid-cols-2 gap-x-2 gap-y-6 md:grid-cols-3 lg:col-span-3 xl:gap-x-5 xl:gap-y-20">
+      <h3 className="mb-[36px] uppercase md:mb-20">Meet the team</h3>
+      <div className="grid grid-cols-2 gap-x-2 gap-y-6 md:grid-cols-3 lg:col-span-3  xl:gap-y-20">
         {teamGalleryData.map((member, index) => (
           <TeamCard key={index} {...member} check={member.check} />
         ))}

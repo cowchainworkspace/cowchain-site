@@ -92,7 +92,7 @@ export const DexAppDevData = [
 export const whiteLabelSolutions = [
   {
     title: (
-      <h2 className="whitespace-pre-line  text-[36px] uppercase md:text-start md:text-[40px]">
+      <h2 className="whitespace-pre-line  text-[36px] uppercase md:text-start  md:text-[40px]">
         Our White <br className=" xl:block hidden" /> Label <br className=" xl:block hidden" /> Solutions <br className=" xl:block hidden" /> Include
       </h2>
     ),
