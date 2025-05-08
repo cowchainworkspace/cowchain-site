@@ -1,29 +1,59 @@
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FilterSvg from "../../../../../../public/svgIcons/filterSvg";
+import { FilterMenu } from "./FilterMenu/FilterMenu";
 
 const CasesFilter = ({ tags, currentTag, setTag }) => {
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+  const handleMenuOpen = () => {
+    setIsFilterOpen(!isFilterOpen);
+  };
+
+  useEffect(() => {
+    const isMobile = window.innerWidth < 640; 
+  
+    if (isFilterOpen && isMobile) {
+      document.body.classList.add("scroll-lock");
+    } else {
+      document.body.classList.remove("scroll-lock");
+    }
+  
+    return () => {
+      document.body.classList.remove("scroll-lock");
+    };
+  }, [isFilterOpen]);
+
   return (
-    <div>
-      <ul className="hidden mt-15 md:flex flex-wrap gap-2">
+    <div className="w-fit relative">
+      <ul className="mt-15 flex flex-wrap gap-2">
         {tags.map(({ id, tagName }) => (
-          <li key={id}>
+          <li
+            className={cn(tagName !== "all filters" && "hidden sm:block", "relative ")}
+            key={id}
+          >
             <button
-              onClick={() => setTag(tagName)}
+              onClick={() => {
+                if (tagName === "all filters") handleMenuOpen();
+                setTag(tagName);
+              }}
               type="button"
               className={cn(
                 "flex rounded-[40px] border-[0.5px] border-transparent bg-white-15 px-6 py-4 font-roc text-base font-medium uppercase leading-90 text-white",
                 currentTag.toLowerCase() === tagName.toLowerCase() &&
                   "border-white bg-transparent",
-                tagName === "all filters" && "items-center hidden gap-[10px]"
+                tagName === "all filters" && "items-center gap-[10px]"
               )}
             >
               {tagName === "all filters" && <FilterSvg />}
               {tagName}
             </button>
+            {isFilterOpen && tagName === "all filters" && <FilterMenu />}
           </li>
         ))}
+           
       </ul>
+   
     </div>
   );
 };
