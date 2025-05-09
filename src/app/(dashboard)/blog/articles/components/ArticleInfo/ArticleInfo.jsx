@@ -111,7 +111,7 @@ const ArticleInfo = () => {
 
       <div className="mt-[60px] flex items-start justify-center  gap-[71px] md:mb-[103px] md:mt-20">
         <SideMenu articleTitles={articleTitles} />
-        <div className="w-full overflow-hidden">
+        <div className="overflow-hidden">
           <ArticleParagraphs
             paragraphs={paragraphs}
             authorIcon={data.author_avatar.url}
