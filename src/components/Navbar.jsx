@@ -162,7 +162,7 @@ export default function Navbar({ isPageNotFound = false }) {
 
   const toggleServices = (e) => {
     e.stopPropagation();
-    setServiceMenuOpen((prevState) => !prevState);
+    setServiceMenuOpen(!serviceMenuOpen);
   };
 
   const closeMobServiceMenu = (e) => {
