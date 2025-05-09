@@ -22,6 +22,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import CollapsedHeaderIcon from "../../public/svgIcons/CollapsedHeaderIcon";
 import { ServicesAndTechnologies } from "../app/(dashboard)/(home)/blocks/ServicesAndTechMenu";
 import { ServicesAndTechnologiesMob } from "../app/(dashboard)/(home)/blocks/ServicesAndTechnologiesMob";
 import { useOpenMenu } from "../hooks/useOpenMenu";
@@ -247,10 +248,18 @@ export default function Navbar({ isPageNotFound = false }) {
           <nav className="hidden w-full max-w-[360px] items-center gap-[80px]  pl-12 lg:flex xl:max-w-md">
             <button
               type="button"
-              className="menu-toggle-button navlink mt-1 cursor-pointer"
+              className="menu-toggle-button navlink z-50 mt-1 flex cursor-pointer items-center gap-[15px]"
               onClick={toggleServices}
             >
               Services & Technologies
+              <div
+                className={cn(
+                  "z-10 flex rotate-0 items-center justify-center transition-transform duration-300",
+                  serviceMenuOpen && "-rotate-180"
+                )}
+              >
+                <CollapsedHeaderIcon />
+              </div>
             </button>
             {anchorLinks.map((link, index) => (
               <Link key={index} href={link.link}>
@@ -259,16 +268,19 @@ export default function Navbar({ isPageNotFound = false }) {
             ))}
           </nav>
           <Link
-            href={"/"}
-            className="flex items-center justify-center"
+            href="/"
+            className="z-50 flex items-center justify-center"
             rel="nofollow"
           >
-            <img
-              className="w-32 md:w-36 lg:w-40"
+            <Image
+              src="/homepage/logo_light.svg"
+              alt="Home logo"
               title="Home"
-              alt="Home-1"
-              src={"/homepage/logo_light.svg"}
-            ></img>
+              width={160}
+              height={40}
+              className="h-auto w-32 md:w-36 lg:w-40"
+              priority
+            />
           </Link>
           {toggleMenu ? (
             <Image
@@ -278,12 +290,13 @@ export default function Navbar({ isPageNotFound = false }) {
               alt=""
             ></Image>
           ) : (
-            <Image
-              className="ml-auto w-6 cursor-pointer lg:hidden"
-              alt=""
-              src={menu_open}
+            <button
               onClick={openBurger}
-            ></Image>
+              className="z-20 ml-auto w-6 cursor-pointer lg:hidden"
+              type="button"
+            >
+              <Image alt="" src={menu_open} />
+            </button>
           )}
           <div className="hidden w-full max-w-[360px] items-center justify-end gap-16 lg:flex xl:max-w-md">
             {routerLinks.map((link, index) => (
@@ -292,6 +305,7 @@ export default function Navbar({ isPageNotFound = false }) {
               </Link>
             ))}
             <button
+              type="button"
               onClick={() => setOpenForm(true)}
               className="btn-submit h-16 w-[200px]"
             >

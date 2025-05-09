@@ -59,7 +59,7 @@ export const overviewStepAppItems = [
     id: 1,
     itemName: "tech stack",
     itemValue:
-      "React Native, Node.js, Solidity, Ethers.js, Web3.js, Bitcoin.js, Persona KYC, Interac E-Transfer, Chat support, Email Templating"
+      "Web3.js, Next.js, React, Solidity, Node.js, Nest.js"
   },
   {
     id: 2,
