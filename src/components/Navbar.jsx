@@ -245,12 +245,13 @@ export default function Navbar({ isPageNotFound = false }) {
           }
         >
           <nav className="hidden w-full max-w-[360px] items-center gap-[80px]  pl-12 lg:flex xl:max-w-md">
-            <p
+            <button
+              type="button"
               className="menu-toggle-button navlink mt-1 cursor-pointer"
               onClick={toggleServices}
             >
               Services & Technologies
-            </p>
+            </button>
             {anchorLinks.map((link, index) => (
               <Link key={index} href={link.link}>
                 <p className="navlink mt-1">{link.title}</p>
