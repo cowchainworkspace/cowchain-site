@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 import CasesFilter from "../components/CasesFilter";
 import { casesTags } from "../constants";
 
-export const HeroSection = ({ setTag, currentTag }) => {
+export const HeroSection = ({ setTags, currentTags }) => {
   return (
     <section className="relative pt-[38px] md:pt-20 lg:pt-[120px]">
       <Helmet>
@@ -33,7 +33,7 @@ export const HeroSection = ({ setTag, currentTag }) => {
         <h1 className="mt-4 cursor-default text-5xl uppercase text-white lg:mt-6 lg:max-w-[1200px] lg:text-[100px]">
           we offer the diversity of skills
         </h1>
-        <CasesFilter setTag={setTag} tags={casesTags} currentTag={currentTag} />
+        <CasesFilter setTags={setTags} tags={casesTags} currentTags={currentTags} />
       </div>
     </section>
   );

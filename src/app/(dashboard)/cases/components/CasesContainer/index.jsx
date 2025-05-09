@@ -10,8 +10,8 @@ import ScrollToTop from "../ScrollToTop";
 const CasesContainer = () => {
   const {
     visibleCases,
-    selectedTag,
-    setSelectedTag,
+    selectedTags,
+    setSelectedTags,
     totalFiltered,
     loadMore,
     isLoadingMore,
@@ -20,7 +20,7 @@ const CasesContainer = () => {
   return (
     <section>
       <div className="relative  bg-black">
-        <HeroSection currentTag={selectedTag} setTag={setSelectedTag} />
+        <HeroSection currentTags={selectedTags} setTags={setSelectedTags} />
         <CasesList cases={visibleCases} />
         <LoadMoreCases
           showMoreCases={loadMore}

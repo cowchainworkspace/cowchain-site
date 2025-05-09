@@ -6,9 +6,8 @@ import {
   AccordionPanel,
   Box,
   Text,
-  Button,
+  Button
 } from "@chakra-ui/react";
-import { useState } from "react";
 import { EmptyMark } from "../../../../../../assets/svgComponents/caseFilter/EmptyMark";
 import { CheckedMark } from "../../../../../../assets/svgComponents/caseFilter/CheckedMark";
 import { OpenedCircle } from "../../../../../../assets/svgComponents/caseFilter/OpenedCircle";
@@ -45,42 +44,64 @@ const filtersData = [
   }
 ];
 
-export const FilterMenu = ({ setIsFilterOpen, setTag }) => {
-  const isDark = true;
+export const FilterMenu = ({ setIsFilterOpen, setTags, selectedTags, setselectedTags }) => {
 
-  // State to track selected subcategories
-  const [selectedSubcategories, setSelectedSubcategories] = useState({});
+  const toggleAllInCategory = (i) => {
+    setselectedTags((prev) => {
+      const subcategories = filtersData[i].subcategories;
+      const allIncluded = subcategories.every((sub) => prev.includes(sub));
 
-  const toggleAllInCategory = (category, subcategories) => {
-    setSelectedSubcategories((prev) => {
-      const allSelected = prev[category]?.length === subcategories.length;
-
-      return {
-        ...prev,
-        [category]: allSelected ? [] : [...subcategories]
-      };
+      if (allIncluded) {
+        return prev.filter((tag) => !subcategories.includes(tag));
+      } else {
+        const newTags = [...prev];
+        subcategories.forEach((sub) => {
+          if (!newTags.includes(sub)) {
+            newTags.push(sub);
+          }
+        });
+        return newTags;
+      }
     });
   };
 
-  const toggleSubcategory = (category, sub) => {
-      setSelectedSubcategories((prev) => {
-        const current = prev[category] || [];
-        const isSelected = current.includes(sub);
-        const updated = isSelected
-          ? current.filter((item) => item !== sub)
-          : [...current, sub];
-          setTag(sub)
-        return {
-          ...prev,
-          [category]: updated
-        };
-      });
+  const toggleSubcategory = (sub) => {
+    setselectedTags((prev) => {
+      if (prev.includes(sub)) {
+        return prev.filter((tag) => tag !== sub);
+      } else {
+        return [...prev, sub];
+      }
+    });
+  };
+
+  const handleAllSubClick = (e, category,index) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (index > 1) {
+      toggleSubcategory(category);
+      return;
+    }
+    toggleAllInCategory(index);
+  };
+
+  const handleSubClick = (e, category, sub) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleSubcategory(category, sub);
+  };
+
+  const handleApplyFilters = () => {
+    console.log(selectedTags, "selectedTags.length");
+    if (selectedTags.length > 0) {
+      setTags(selectedTags);
+    }
   };
 
   return (
     <Box
-      bg={isDark ? "black" : "white"}
-      color={isDark ? "white" : "black"}
+      bg={"black"}
+      color={"white"}
       borderRadius="md"
       className="sm:min-h-auto fixed inset-0 z-[30] min-h-full w-full overflow-y-scroll border border-white !px-[20px] !py-[40px] sm:absolute sm:inset-auto sm:right-0 sm:top-[60px] sm:w-auto "
     >
@@ -107,35 +128,24 @@ export const FilterMenu = ({ setIsFilterOpen, setTag }) => {
         {filtersData.map((filter, index) => (
           <AccordionItem key={filter.category} border="none">
             <AccordionButton
-            //   onClick={(e) => e.stopPropagation()}
+              onClick={(e) =>
+                handleAllSubClick(
+                  e,
+                  filter.category,
+                  filter.subcategories,
+                  index
+                )
+              }
               className="mb-[26px] flex min-w-[284px] items-center gap-[24px] text-[16px] font-[500] uppercase leading-[90%]"
               px={0}
               py={2}
             >
               {filter.subcategories.every((sub) =>
-                selectedSubcategories[filter.category]?.includes(sub)
+                selectedTags?.includes(sub)
               ) ? (
-                <EmptyMark
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    if (index > 1) {
-                      toggleSubcategory(filter.category, filter.category);
-                      return;
-                    }
-                    toggleAllInCategory(filter.category, filter.subcategories);
-                  }}
-                />
+                <EmptyMark />
               ) : (
-                <CheckedMark
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    if (index > 1) {
-                      toggleSubcategory(filter.category, filter.category);
-                      return;
-                    }
-                    toggleAllInCategory(filter.category, filter.subcategories);
-                  }}
-                />
+                <CheckedMark />
               )}
 
               <Box
@@ -162,11 +172,10 @@ export const FilterMenu = ({ setIsFilterOpen, setTag }) => {
                     py={1}
                     className="!mb-[26px] ml-[40px] flex items-center gap-[24px] text-[16px] font-[400] uppercase leading-[90%]"
                     onClick={(e) => {
-                      e.stopPropagation();
-                      toggleSubcategory(filter.category, sub);
+                      handleSubClick(e, filter.category, sub);
                     }}
                   >
-                    {selectedSubcategories[filter.category]?.includes(sub) ? (
+                    {selectedTags?.includes(sub) ? (
                       <EmptyMark />
                     ) : (
                       <CheckedMark />
@@ -190,7 +199,7 @@ export const FilterMenu = ({ setIsFilterOpen, setTag }) => {
           color="black"
           fontWeight="bold"
           _hover={{ opacity: 0.85 }}
-          onClick={() => console.log("Selected:", selectedSubcategories)}
+          onClick={handleApplyFilters}
         >
           APPLY FILTERS
         </Button>
@@ -202,9 +211,12 @@ export const FilterMenu = ({ setIsFilterOpen, setTag }) => {
           color="white"
           fontWeight="bold"
           _hover={{ opacity: 0.85 }}
-          onClick={() => console.log("Selected:", selectedSubcategories)}
+          onClick={() => {
+            setTags([]);
+            setselectedTags([]);
+          }}
         >
-          RESET {`(${2})`}
+          RESET {`(${selectedTags.length})`}
         </Button>
       </div>
     </Box>

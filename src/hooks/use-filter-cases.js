@@ -1,18 +1,21 @@
-import {useMemo, useState } from "react"
+import { useMemo, useState } from "react";
 
 export function useFilteredCases(cases) {
-  const [selectedTag, setSelectedTag] = useState('all filters');
+  const [selectedTags, setSelectedTags] = useState([]);
   const [visibleCount, setVisibleCount] = useState(5);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
 
   const filteredCases = useMemo(() => {
-    if (selectedTag === 'all filters') return cases;
+    if (selectedTags.length === 0) return cases;
+
     return cases.filter((item) =>
-      item.tags.some(
-        (tag) => tag.tagName.toLowerCase() === selectedTag.toLowerCase()
+      item.tags.some((tag) =>
+        selectedTags
+          .map((t) => t.toLowerCase())
+          .includes(tag.tagName.toLowerCase())
       )
     );
-  }, [cases, selectedTag]);
+  }, [cases, selectedTags]);
 
   const totalFiltered = filteredCases.length;
   const visibleCases = filteredCases.slice(0, visibleCount);
@@ -31,10 +34,10 @@ export function useFilteredCases(cases) {
   return {
     visibleCases,
     totalFiltered,
-    selectedTag,
-    setSelectedTag,
+    selectedTags,
+    setSelectedTags,
     loadMore,
     isLoadingMore,
-    hasMore: visibleCount < totalFiltered,
+    hasMore: visibleCount < totalFiltered
   };
 }

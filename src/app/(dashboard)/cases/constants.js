@@ -39,7 +39,7 @@ export const casesTags = [
   },
   {
     id: 4,
-    tagName: "Telegram Mini apps"
+    tagName: "Telegram Mini-apps"
   },
   {
     id: 5,
@@ -168,12 +168,12 @@ export const cases = [
     id: 7,
     tags: [
       { isMain: true, tagName: "Mobile App" },
-      { isMain: true, tagName: "Telegram Mini Apps" },
+      { isMain: true, tagName: "Telegram Mini-Apps" },
       { isMain: false, tagName: "GameFi" }
     ],
     caseName: "Pixelverse",
     caseDescription:
-      "PixelVerse bridges Web2 and Web3 gaming with Telegram Mini Apps like PixelTap, achieving 45 million monthly active users (MAU).",
+      "PixelVerse bridges Web2 and Web3 gaming with Telegram Mini-Apps like PixelTap, achieving 45 million monthly active users (MAU).",
     link: "cases/pixel-verse",
     caseImage: pixelVerseImage,
     caseMobileImage: pixelverseMobileImg,
