@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import FilterSvg from "../../../../../../public/svgIcons/filterSvg";
 import { FilterMenu } from "./FilterMenu/FilterMenu";
 
-const CasesFilter = ({ tags, currentTags, setTags }) => {
+const CasesFilter = ({ casesTags, currentTags, setTags }) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedTags, setselectedTags] = useState(currentTags);
 
@@ -26,13 +26,41 @@ const CasesFilter = ({ tags, currentTags, setTags }) => {
   }, [isFilterOpen]);
 
   useEffect(() => {
-    setselectedTags(currentTags)
-  }, [currentTags])
+    setselectedTags(currentTags);
+  }, [currentTags]);
+
+  const handleTagButtonClick = (tags) => {
+    if (tags.length === 1 && tags[0].toLowerCase() === "all filters") {
+      handleMenuOpen();
+      return;
+    }
+
+    const lowerCurrentTags = currentTags.map((tag) => tag.toLowerCase());
+    const lowerTags = tags.map((tag) => tag.toLowerCase());
+
+    const allTagsIncluded = lowerTags.every((tag) =>
+      lowerCurrentTags.includes(tag)
+    );
+
+    if (allTagsIncluded) {
+      setTags((prev) =>
+        prev.filter((tag) => !lowerTags.includes(tag.toLowerCase()))
+      );
+    } else {
+      setTags((prev) => {
+        const lowerPrev = prev.map((tag) => tag.toLowerCase());
+        const newTags = tags.filter(
+          (tag) => !lowerPrev.includes(tag.toLowerCase())
+        );
+        return [...prev, ...newTags];
+      });
+    }
+  };
 
   return (
     <div className="relative w-fit w-full">
       <ul className="custom1430:justify-auto mt-15 flex w-full flex-wrap justify-start gap-2 sm:justify-end">
-        {tags.map(({ id, tagName }) => (
+        {casesTags.map(({ id, tagName, tags }) => (
           <li
             className={cn(
               tagName !== "all filters" && "hidden custom1430:block",
@@ -41,30 +69,15 @@ const CasesFilter = ({ tags, currentTags, setTags }) => {
             key={id}
           >
             <button
-              onClick={() => {
-                if (tagName === "all filters") {
-                  handleMenuOpen();
-                  return;
-                }
-                if (
-                  currentTags
-                    .map((tag) => tag.toLowerCase())
-                    .includes(tagName.toLowerCase())
-                ) {
-                  setTags((prev) =>
-                    prev.filter(
-                      (tag) => tag.toLowerCase() !== tagName.toLowerCase()
-                    )
-                  );
-                } else {
-                  setTags((prev) => [...prev, tagName]);
-                }
-              }}
+              onClick={() => handleTagButtonClick(tags)}
               type="button"
               className={cn(
                 "flex rounded-[40px] border-[0.5px] border-transparent bg-white-15 px-6 py-4 font-roc text-base font-medium uppercase leading-90 text-white",
-                currentTags.map(tag => tag.toLowerCase()).includes(tagName.toLowerCase()) &&
-                "border-white bg-transparent",
+                tags.every((tag) =>
+                  currentTags
+                    .map((t) => t.toLowerCase())
+                    .includes(tag.toLowerCase())
+                ) && "border-white bg-transparent",
                 tagName === "all filters" && "items-center gap-[10px]"
               )}
             >

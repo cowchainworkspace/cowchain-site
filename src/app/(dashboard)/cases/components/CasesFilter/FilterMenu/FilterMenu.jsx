@@ -14,6 +14,7 @@ import { OpenedCircle } from "../../../../../../assets/svgComponents/caseFilter/
 
 const filtersData = [
   {
+    id: 1,
     category: "Web Development",
     subcategories: [
       "GameFi",
@@ -27,26 +28,34 @@ const filtersData = [
     ]
   },
   {
+    id: 2,
     category: "Mobile App",
-    subcategories: ["GameFi", "Trading", "Crypto Wallet"]
+    subcategories: ["Mobile GameFi", "Mobile Trading", "Mobile Crypto Wallet"]
   },
   {
+    id: 3,
     category: "AI Development",
-    subcategories: ["AI Development"]
+    subcategories: ["AI Development", "Mobile AI Development"]
   },
   {
+    id: 4,
     category: "Telegram Mini-Apps",
-    subcategories: ["Telegram Mini-Apps"]
+    subcategories: ["Telegram Mini-Apps", "Mobile Telegram Mini-Apps"]
   },
   {
+    id: 5,
     category: "Blockchain Development",
-    subcategories: ["Blockchain Development"]
+    subcategories: ["Blockchain Development", "Mobile Blockchain Development"]
   }
 ];
 
-export const FilterMenu = ({ setIsFilterOpen, setTags, selectedTags, setselectedTags }) => {
-
-  const toggleAllInCategory = (i) => {
+export const FilterMenu = ({
+  setIsFilterOpen,
+  setTags,
+  selectedTags,
+  setselectedTags
+}) => {
+  const toggleAllInCategory = (category, subcategories, i) => {
     setselectedTags((prev) => {
       const subcategories = filtersData[i].subcategories;
       const allIncluded = subcategories.every((sub) => prev.includes(sub));
@@ -65,7 +74,7 @@ export const FilterMenu = ({ setIsFilterOpen, setTags, selectedTags, setselected
     });
   };
 
-  const toggleSubcategory = (sub) => {
+  const toggleSubcategory = (category, sub) => {
     setselectedTags((prev) => {
       if (prev.includes(sub)) {
         return prev.filter((tag) => tag !== sub);
@@ -75,14 +84,10 @@ export const FilterMenu = ({ setIsFilterOpen, setTags, selectedTags, setselected
     });
   };
 
-  const handleAllSubClick = (e, category,index) => {
+  const handleAllSubClick = (e, category, subcategories, index) => {
     e.preventDefault();
     e.stopPropagation();
-    if (index > 1) {
-      toggleSubcategory(category);
-      return;
-    }
-    toggleAllInCategory(index);
+    toggleAllInCategory(category, subcategories, index);
   };
 
   const handleSubClick = (e, category, sub) => {
@@ -92,10 +97,7 @@ export const FilterMenu = ({ setIsFilterOpen, setTags, selectedTags, setselected
   };
 
   const handleApplyFilters = () => {
-    console.log(selectedTags, "selectedTags.length");
-    if (selectedTags.length > 0) {
-      setTags(selectedTags);
-    }
+    setTags(selectedTags);
   };
 
   return (
@@ -126,7 +128,7 @@ export const FilterMenu = ({ setIsFilterOpen, setTags, selectedTags, setselected
         index={filtersData.map((_, i) => i)}
       >
         {filtersData.map((filter, index) => (
-          <AccordionItem key={filter.category} border="none">
+          <AccordionItem key={filter.id} border="none">
             <AccordionButton
               onClick={(e) =>
                 handleAllSubClick(
@@ -161,9 +163,9 @@ export const FilterMenu = ({ setIsFilterOpen, setTags, selectedTags, setselected
 
             <AccordionPanel pb={4} px={0}>
               {index < 2 &&
-                filter.subcategories.map((sub) => (
+                filter.subcategories.map((sub, i) => (
                   <Box
-                    key={sub}
+                    key={i}
                     display="flex"
                     alignItems="center"
                     cursor="pointer"

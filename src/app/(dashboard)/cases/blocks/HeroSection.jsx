@@ -33,7 +33,7 @@ export const HeroSection = ({ setTags, currentTags }) => {
         <h1 className="mt-4 cursor-default text-5xl uppercase text-white lg:mt-6 lg:max-w-[1200px] lg:text-[100px]">
           we offer the diversity of skills
         </h1>
-        <CasesFilter setTags={setTags} tags={casesTags} currentTags={currentTags} />
+        <CasesFilter setTags={setTags} casesTags={casesTags} currentTags={currentTags} />
       </div>
     </section>
   );
