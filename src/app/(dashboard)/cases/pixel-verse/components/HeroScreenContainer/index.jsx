@@ -15,7 +15,7 @@ const HeroScreenContainer = () => {
         tags={currentData}
         pageTitle={"Pixelverse: Scaling GameFi with Telegram Mini-Apps"}
         heroDescription={
-          "Pixelverse bridges Web2 and Web3 gaming with Telegram Mini Apps like PixelTap, achieving 45 million monthly active users (MAU). Through strategic use of Telegram’s user base, it became a leader in GameFi innovation and engagement."
+          "Pixelverse bridges Web2 and Web3 gaming with Telegram Mini-Apps like PixelTap, achieving 45 million monthly active users (MAU). Through strategic use of Telegram’s user base, it became a leader in GameFi innovation and engagement."
         }
         containerClasses="max-w-[800px]"
         descriptionClasses="max-w-[660px]"

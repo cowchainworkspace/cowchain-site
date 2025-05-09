@@ -3,15 +3,15 @@ import React from "react";
 import { useFilteredCases } from "../../../../../hooks/use-filter-cases";
 import { HeroSection } from "../../blocks/HeroSection";
 import { cases } from "../../constants";
-import CaseList from "../CasesList";
+import CasesList from "../CasesList";
 import LoadMoreCases from "../LoadMoreCases";
 import ScrollToTop from "../ScrollToTop";
 
 const CasesContainer = () => {
   const {
     visibleCases,
-    selectedTag,
-    setSelectedTag,
+    selectedTags,
+    setSelectedTags,
     totalFiltered,
     loadMore,
     isLoadingMore,
@@ -20,8 +20,8 @@ const CasesContainer = () => {
   return (
     <section>
       <div className="relative  bg-black">
-        <HeroSection currentTag={selectedTag} setTag={setSelectedTag} />
-        <CaseList cases={visibleCases} />
+        <HeroSection currentTags={selectedTags} setTags={setSelectedTags} />
+        <CasesList cases={visibleCases} />
         <LoadMoreCases
           showMoreCases={loadMore}
           isLoadingMore={isLoadingMore}
