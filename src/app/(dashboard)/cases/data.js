@@ -71,7 +71,7 @@ const stepApp = {
     { isMain: false, tagName: "Staking" }
   ],
   title: 'STEP APP',
-  desc: 'StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.',
+  desc: 'Step App is an innovative Move-to-Earn platform that rewards users for physical movement.',
   img: m2eNewOne,
   textColor: "text-secondary",
   projectLink: "step-app",
