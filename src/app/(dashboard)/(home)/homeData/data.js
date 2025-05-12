@@ -216,11 +216,11 @@ export const casesData = [
   {
     tags: [
       { isMain: true, tagName: "Mobile App" },
-      { isMain: true, tagName: "Telegram Mini Apps" },
+      { isMain: true, tagName: "Telegram Mini-Apps" },
       { isMain: false, tagName: "GameFi" }
     ],
     title: "PixelVerse",
-    description: "PixelVerse is a GameFi ecosystem that merges Web2 accessibility with Web3 innovation through Telegram Mini Apps.",
+    description: "PixelVerse is a GameFi ecosystem that merges Web2 accessibility with Web3 innovation through Telegram Mini-Apps.",
     photo: pixelVerse,
     link: "/cases/pixel-verse",
   },

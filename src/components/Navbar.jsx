@@ -126,7 +126,7 @@ export default function Navbar() {
           />
           <Link
             href="/"
-            className="z-50 flex items-center justify-center"
+            className="z-[23] flex items-center justify-center"
             rel="nofollow"
           >
             <Image
@@ -147,12 +147,13 @@ export default function Navbar() {
               alt=""
             />
           ) : (
-            <Image
-              className="ml-auto w-6 cursor-pointer lg:hidden"
-              alt=""
-              src={menu_open}
+            <button
               onClick={openBurger}
-            />
+              className="z-[23] ml-auto w-6 cursor-pointer lg:hidden"
+              type="button"
+            >
+              <Image alt="" src={menu_open} />
+            </button>
           )}
 
           <NavbarRoutingLinks setOpenForm={setOpenForm} />

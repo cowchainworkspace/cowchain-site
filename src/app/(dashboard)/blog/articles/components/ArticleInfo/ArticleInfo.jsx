@@ -73,7 +73,7 @@ const ArticleInfo = () => {
   });
 
   return (
-    <div className="relative  min-h-screen bg-black">
+    <div className="relative  min-h-screen  bg-black">
       <OldBreadCrumbs title={data.article_title} />
       <HeroSection
         tag={data.article_tag.tag_name}
@@ -111,7 +111,7 @@ const ArticleInfo = () => {
 
       <div className="mt-[60px] flex items-start justify-center  gap-[71px] md:mb-[103px] md:mt-20">
         <SideMenu articleTitles={articleTitles} />
-        <div>
+        <div className="overflow-hidden">
           <ArticleParagraphs
             paragraphs={paragraphs}
             authorIcon={data.author_avatar.url}
