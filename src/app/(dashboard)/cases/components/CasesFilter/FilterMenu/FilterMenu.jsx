@@ -98,7 +98,44 @@ export const FilterMenu = ({
 
   const handleApplyFilters = () => {
     setTags(selectedTags);
+    setIsFilterOpen(false)
   };
+
+  const selectedCount = (() => {
+    const groupCategoryIds = [3, 4, 5];
+    let count = 0;
+    let seenSubcategories = new Set();
+  
+    filtersData.forEach((filter) => {
+      const isGrouped = groupCategoryIds.includes(filter.id);
+  
+      if (isGrouped) {
+        const allIncluded = filter.subcategories.every((sub) =>
+          selectedTags.includes(sub)
+        );
+        if (allIncluded) {
+          count += 1;
+          filter.subcategories.forEach((sub) => seenSubcategories.add(sub));
+        } else {
+          filter.subcategories.forEach((sub) => {
+            if (selectedTags.includes(sub)) {
+              count += 1;
+              seenSubcategories.add(sub);
+            }
+          });
+        }
+      } else {
+        filter.subcategories.forEach((sub) => {
+          if (selectedTags.includes(sub) && !seenSubcategories.has(sub)) {
+            count += 1;
+            seenSubcategories.add(sub);
+          }
+        });
+      }
+    });
+  
+    return count;
+  })();
 
   return (
     <Box
@@ -218,7 +255,7 @@ export const FilterMenu = ({
             setselectedTags([]);
           }}
         >
-          RESET {`(${selectedTags.length})`}
+          RESET ({selectedCount})
         </Button>
       </div>
     </Box>
