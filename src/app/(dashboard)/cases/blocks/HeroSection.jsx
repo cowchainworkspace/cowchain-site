@@ -17,7 +17,7 @@ export const HeroSection = ({ setTag, currentTag }) => {
       </Helmet>
       <Image
         alt="Header Background"
-        className="absolute right-0 top-0 min-h-[150%] min-w-[200vw] md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
+        className="absolute -top-24 right-0 min-h-[150%] min-w-[200vw] md:-top-16 md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
         src={bg_lg}
       />
       <div className="relative flex flex-col px-5 pb-8 md:px-8 md:pb-12 lg:px-16 xl:px-24">

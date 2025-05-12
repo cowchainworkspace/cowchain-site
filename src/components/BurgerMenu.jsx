@@ -15,11 +15,9 @@ const BurgerMenu = ({
   sideVariants,
   toggleMenu,
   serviceMobMenuOpen,
-  windowHeight,
   closeMobServiceMenu,
   closeBurger,
   openMobileServiceMenu,
-  linkVariants,
   handleMobileFormOpen
 }) => {
   return (
@@ -29,7 +27,7 @@ const BurgerMenu = ({
           initial={{ width: 0, opacity: 0 }}
           animate={{ width: "100%", opacity: 1 }}
           exit={{ width: 0, opacity: 0 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
           style={{ zIndex: 200 }}
           className="absolute right-0 top-0 z-50 h-screen overflow-auto bg-black"
         >
@@ -38,7 +36,7 @@ const BurgerMenu = ({
               minHeight: "100dvh",
               height: `${!serviceMobMenuOpen ? "100dvh" : "auto"}`
             }}
-            className="relative flex flex-col overflow-y-scroll bg-black pb-8"
+            className="relative flex flex-col overflow-x-hidden overflow-y-scroll bg-black pb-8"
             initial="closed"
             animate={toggleMenu ? "open" : "closed"}
             variants={sideVariants}
@@ -103,7 +101,6 @@ const BurgerMenu = ({
                       key={index * 4}
                       href={link.link}
                       onClick={closeBurger}
-                      variants={linkVariants}
                     >
                       <div className="flex items-center">
                         <p className="font-roc text-base font-medium uppercase text-white">

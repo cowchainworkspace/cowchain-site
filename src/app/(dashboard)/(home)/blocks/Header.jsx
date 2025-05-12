@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
 
 const Video = dynamic(() => import("./Video"));
 const HeaderContent = dynamic(() => import("./HeaderContent"));
