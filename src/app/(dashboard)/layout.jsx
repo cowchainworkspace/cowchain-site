@@ -1,5 +1,7 @@
 "use client";
 
+import homeDescTopBg from "@/assets/homepage/desctop-home.webp";
+import homeMobileBg from "@/assets/homepage/home-bg-header-mobile.webp";
 import { Loading } from "@/components/loader/Loading";
 import { useLoader } from "@/hooks/useLoader";
 import { cn } from "@/lib/utils";
@@ -17,7 +19,7 @@ const Footer = dynamic(() => import("@/components/Footer"), {
 });
 
 export default function DashboardLayout({ children }) {
-  const { isRendering, setIsLoading, setIsRendering } = useLoader();
+  const { isRendering } = useLoader();
 
   const pathname = usePathname();
   return (
@@ -34,7 +36,7 @@ export default function DashboardLayout({ children }) {
               className={cn(
                 "absolute left-0 top-0 z-10 hidden w-full md:block"
               )}
-              src={"/desctop-home.png"}
+              src={homeDescTopBg}
             />
             <Image
               quality={100}
@@ -44,7 +46,7 @@ export default function DashboardLayout({ children }) {
               )}
               width={443}
               height={326}
-              src={"/home-bg-header-mobile.png"}
+              src={homeMobileBg}
               alt=""
             />
           </>

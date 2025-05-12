@@ -1,7 +1,5 @@
-import bg_top from "@/assets/bg/header_top.png";
-import bg_top_lg from "@/assets/bg/header_top_lg.png";
 import dynamic from "next/dynamic";
-import Image from "next/image";
+import { Suspense } from "react";
 
 const Video = dynamic(() => import("./Video"));
 const HeaderContent = dynamic(() => import("./HeaderContent"));

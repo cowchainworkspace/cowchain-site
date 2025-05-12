@@ -26,15 +26,17 @@ const BurgerMenu = ({
     <AnimatePresence>
       {toggleMenu && (
         <motion.div
-          initial={{ width: 0 }}
-          exit={{ width: 0 }}
-          animate={{ width: "100%", maxWidth: "100%" }}
-          className="absolute right-0 top-0 z-50  h-screen min-h-full w-full overflow-auto"
+          initial={{ width: 0, opacity: 0 }}
+          animate={{ width: "100%", opacity: 1 }}
+          exit={{ width: 0, opacity: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          style={{ zIndex: 200 }}
+          className="absolute right-0 top-0 z-50 h-screen overflow-auto bg-black"
         >
           <motion.div
             style={{
-              minHeight: `${windowHeight}px`,
-              height: `${!serviceMobMenuOpen ? `${windowHeight}px` : "auto"}`
+              minHeight: "100dvh",
+              height: `${!serviceMobMenuOpen ? "100dvh" : "auto"}`
             }}
             className="relative flex flex-col overflow-y-scroll bg-black pb-8"
             initial="closed"
@@ -83,13 +85,7 @@ const BurgerMenu = ({
                     <Image className="mb-1 ml-auto w-6" src={arrow} alt="" />
                   </button>
                   {anchorLinks.map((link, index) => (
-                    <Link
-                      key={index}
-                      href={link.link}
-                      onClick={closeBurger}
-                      // variants={linkVariants}
-                      // whiletap={{ scale: 0.95 }}
-                    >
+                    <Link key={index} href={link.link} onClick={closeBurger}>
                       <div className="flex items-center">
                         <p className="font-roc text-base font-medium uppercase text-white">
                           {link.title}
@@ -108,8 +104,6 @@ const BurgerMenu = ({
                       href={link.link}
                       onClick={closeBurger}
                       variants={linkVariants}
-                      whilehover={{ scale: 1.1 }}
-                      whiletap={{ scale: 0.95 }}
                     >
                       <div className="flex items-center">
                         <p className="font-roc text-base font-medium uppercase text-white">
