@@ -1,15 +1,15 @@
 // FilterMenu.tsx
 import {
   Accordion,
-  AccordionItem,
   AccordionButton,
+  AccordionItem,
   AccordionPanel,
   Box,
-  Text,
-  Button
+  Button,
+  Text
 } from "@chakra-ui/react";
-import { EmptyMark } from "../../../../../../assets/svgComponents/caseFilter/EmptyMark";
 import { CheckedMark } from "../../../../../../assets/svgComponents/caseFilter/CheckedMark";
+import { EmptyMark } from "../../../../../../assets/svgComponents/caseFilter/EmptyMark";
 import { OpenedCircle } from "../../../../../../assets/svgComponents/caseFilter/OpenedCircle";
 
 const filtersData = [
@@ -98,17 +98,17 @@ export const FilterMenu = ({
 
   const handleApplyFilters = () => {
     setTags(selectedTags);
-    setIsFilterOpen(false)
+    setIsFilterOpen(false);
   };
 
   const selectedCount = (() => {
     const groupCategoryIds = [3, 4, 5];
     let count = 0;
     let seenSubcategories = new Set();
-  
+
     filtersData.forEach((filter) => {
       const isGrouped = groupCategoryIds.includes(filter.id);
-  
+
       if (isGrouped) {
         const allIncluded = filter.subcategories.every((sub) =>
           selectedTags.includes(sub)
@@ -133,7 +133,7 @@ export const FilterMenu = ({
         });
       }
     });
-  
+
     return count;
   })();
 
@@ -142,7 +142,8 @@ export const FilterMenu = ({
       bg={"black"}
       color={"white"}
       borderRadius="md"
-      className="sm:min-h-auto fixed inset-0 z-[30] min-h-full w-full overflow-y-scroll border border-white !px-[20px] !py-[40px] sm:absolute sm:inset-auto sm:right-0 sm:top-[60px] sm:w-auto "
+      style={{ zIndex: 50 }}
+      className="sm:min-h-auto  fixed inset-0 min-h-full w-full overflow-y-scroll border border-white !px-[20px] !py-[40px] sm:absolute sm:inset-auto sm:right-0 sm:top-[60px] sm:w-auto "
     >
       <div className="flex w-full items-center justify-between">
         {" "}

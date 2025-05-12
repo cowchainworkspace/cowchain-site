@@ -4,7 +4,7 @@ import React from "react";
 import { ArrowForward } from "../../../../assets/svgComponents/ArrowForward";
 import { servicesBlocksData, servicesBlocksOtherData } from "../homeData/data";
 
-export const ServicesAndTechnologies = () => {
+export const ServicesAndTechnologies = ({ closeServiceMenu }) => {
   return (
     <div className="absolute top-[64px] z-[300] hidden h-[423px] w-full border-b border-b-th-fade bg-black text-white lg:flex">
       <div className="pointer-events-none flex h-[423px] w-[112px] items-center justify-center">
@@ -26,13 +26,15 @@ export const ServicesAndTechnologies = () => {
           </div>
           <ul className="mt-4 space-y-2 pl-[32px]">
             {block.items.map((item, itemIndex) => (
-              <li
+              <Link
+                href={item.link}
+                onClick={closeServiceMenu}
                 key={itemIndex}
                 className="flex cursor-pointer items-center text-[12px] opacity-70 hover:text-purple-400"
               >
                 <ArrowForward className="mr-[6px]" />
-                <Link href={item.link}>{item.title}</Link>
-              </li>
+                <span>{item.title}</span>
+              </Link>
             ))}
           </ul>
         </div>
@@ -44,13 +46,15 @@ export const ServicesAndTechnologies = () => {
         </div>
         <ul className="mt-4 space-y-2 pl-[32px]">
           {servicesBlocksOtherData.map((item, itemIndex) => (
-            <li
+            <Link
+              href={item.link}
               key={itemIndex}
+              onClick={closeServiceMenu}
               className="flex cursor-pointer items-center text-[12px] opacity-70 hover:text-purple-400"
             >
               <ArrowForward className="mr-[6px]" />
-              <Link href={item.link}>{item.title}</Link>
-            </li>
+              <span>{item.title}</span>
+            </Link>
           ))}
         </ul>
         <div className="flex h-full w-full items-end justify-end p-[30px]">
