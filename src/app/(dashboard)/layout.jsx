@@ -42,7 +42,7 @@ export default function DashboardLayout({ children }) {
   return (
     <section className="relative">
       <div className="scrollbar-none relative bg-black">
-        {!isRendering && pathname === "/" && (
+        {pathname === "/" && (
           <>
             <Image
               width={1455}
@@ -51,7 +51,8 @@ export default function DashboardLayout({ children }) {
               sizes="(max-width: 640px) 100vw, 100vw"
               alt=""
               className={cn(
-                "absolute left-0 top-0 z-10 hidden w-full md:block"
+                "absolute left-0 top-0 z-10 hidden w-full opacity-100 md:block"
+                // isRendering && "opacity-0"
               )}
               src={homeDescTopBg}
             />
@@ -60,6 +61,7 @@ export default function DashboardLayout({ children }) {
               priority
               className={cn(
                 "pointer-events-none absolute left-0 top-0 z-10 block h-auto w-full md:hidden"
+                // isRendering && "opacity-0"
               )}
               width={443}
               height={326}
@@ -69,7 +71,8 @@ export default function DashboardLayout({ children }) {
           </>
         )}
         <Navbar />
-        <LoaderWrapper>{children}</LoaderWrapper>
+        {children}
+        {/* <LoaderWrapper>{children}</LoaderWrapper> */}
         <Footer footerForm={pathname !== "/blog" ? false : true} />
       </div>
       <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />

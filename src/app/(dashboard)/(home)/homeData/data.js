@@ -10,14 +10,12 @@ import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
 import agnt from "@/assets/cases/agntCase.png";
 import gbc from "@/assets/cases/gbcCase.png";
 import hybrid from "@/assets/cases/hybridCase.png";
-import retroBridge from "@/assets/cases/retrobridgeCase.png";
-import stepUp from "@/assets/cases/stepUpCase.png";
 import memolut from "@/assets/cases/memolut.webp"
 import pixelVerse from "@/assets/cases/pixel-verse.webp"
+import retroBridge from "@/assets/cases/retrobridgeCase.png";
+import stepUp from "@/assets/cases/stepUpCase.png";
 import tenet from "@/assets/cases/tenet-project.webp"
 
-
-// import {tenet, pixelVerse, memolut} from "../../../../../public/projects"
 export const blocksData = [
   {
     id: 1,

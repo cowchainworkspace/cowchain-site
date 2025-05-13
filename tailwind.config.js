@@ -24,7 +24,7 @@ export default {
         90: 0.9
       },
       fontFamily: {
-        roc: ['roc-grotesk', "sans-serif"],
+        roc: ['var(--font-roc)', "sans-serif"],
         manrope: ["var(--font-manrope)", "sans-serif"],
         rubik: ["var(--font-rubik)", "sans-serif"],
         anton: ["var(--font-anton)", "sans-serif"],

@@ -1,14 +1,14 @@
+import { cn } from "@/lib/utils";
 import {
   Accordion,
-  AccordionItem,
   AccordionButton,
+  AccordionItem,
   AccordionPanel
 } from "@chakra-ui/react";
-import Open from "components/icons/open";
-import CloseCircle from "components/icons/close-circle";
-import { cn } from "@/lib/utils";
 import Check from "components/icons/check";
 import CheckFill from "components/icons/check-fill";
+import CloseCircle from "components/icons/close-circle";
+import Open from "components/icons/open";
 
 const treeData = [
   {
@@ -123,6 +123,7 @@ export const AllFilters = ({ setTags, tags }) => {
                         {tree.children.map((children) => {
                           return (
                             <button
+                              type="button"
                               key={children.title}
                               onClick={() =>
                                 handleClick(
