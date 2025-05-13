@@ -23,12 +23,12 @@ const BRC20 = () => {
       <CaseHeroScreen
         pageTitle={"BRC20: Pioneering Ordinals Launchpad Innovation"}
         tags={brc20Tags}
-        descriptionClasses="max-w-[660px] font-manrope"
+        descriptionClasses="max-w-[320px] md:max-w-[660px] font-manrope"
         heroDescription={
           "BRC20 is the first Launchpad built for the Ordinals ecosystem, redefining how Bitcoin-based assets are distributed and traded."
         }
         containerClasses="relative"
-        headerClasses="font-roc text-[36px] text-center leading-[42px] xl:text-[64px] xl:leading-[64px]"
+        headerClasses="font-roc text-[36px] text-center leading-[42px] xl:text-[60px] xl:leading-[64px]"
       />
       <Banner
         img={"/cases/brc20/banner-brc-20.webp"}
@@ -70,7 +70,7 @@ const BRC20 = () => {
       <TeamBehind
         team={brc20Team}
         headerClasses={"text-xs leading-5 tracking-[2px]"}
-        descClasses={"xl:text-[18.41px] xl:leading-[27.62px]"}
+        descClasses={"xl:text-xl xl:leading-[30px]"}
         classes={"xl:px-[97px]"}
         titleClasses={"xl:text-[55.24px]"}
         containerClasses={"md:grid-cols-2 xl:grid-cols-[1fr_600px]"}

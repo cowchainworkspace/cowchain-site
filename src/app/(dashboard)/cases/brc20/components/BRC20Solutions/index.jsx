@@ -3,11 +3,11 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 
-const CasesSolutions = ({ solutions, classes }) => {
+const BRC20Solutions = ({ solutions, classes }) => {
   return (
     <section className="overflow-hidden py-[50px] xl:pb-[26px] xl:pt-[120px]">
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-10 xl:px-[100px]">
-        <h2 className="mb-6 font-roc text-[32px] font-medium uppercase leading-90 text-white xl:mb-1 xl:text-[54px]">
+        <h2 className="mb-6 font-roc text-[32px] font-medium uppercase leading-90 text-white xl:hidden">
           solutions
         </h2>
         <div className="grid w-full gap-14 md:grid-cols-2  xl:grid-cols-1  xl:gap-[100px] ">
@@ -62,16 +62,16 @@ const CasesSolutions = ({ solutions, classes }) => {
                 </div>
                 <div
                   className={cn(
-                    "flex  w-full justify-start",
-                    index === 1 && "h-[165px] justify-center bg-[#0D0E12] py-1 "
+                    "flex  w-full justify-start xl:hidden",
+                    index === 1 &&
+                      "h-[165px] justify-center  bg-[#0D0E12] py-1 "
                   )}
                 >
                   <Image
                     width={img.mobileWidth}
                     height={img.mobileHeight}
-                    src={img.href}
+                    src={img.mobileHref}
                     alt={img.info}
-                    className={"xl:hidden"}
                   />
                 </div>
                 <div
@@ -95,4 +95,4 @@ const CasesSolutions = ({ solutions, classes }) => {
   );
 };
 
-export default CasesSolutions;
+export default BRC20Solutions;

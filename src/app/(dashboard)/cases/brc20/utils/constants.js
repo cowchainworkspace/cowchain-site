@@ -4,7 +4,7 @@ import {
  slideTwo
 } from "../../../../../../public/cases/brc20/slider";
 import {
-brc20SolutionFour, brc20SolutionOne, brc20SolutionThree, brc20SolutionTwo
+brc20SolutionFour, brc20SolutionMobFour, brc20SolutionMobOne, brc20SolutionMobThree, brc20SolutionMobTwo, brc20SolutionOne, brc20SolutionThree, brc20SolutionTwo 
 } from "../../../../../../public/cases/brc20/solutions";
 
 export const brc20Tags = [
@@ -130,6 +130,7 @@ export const brc20Solutions = [
       height: 296,
       info: "Participate pop up",
       href: brc20SolutionOne,
+      mobileHref: brc20SolutionMobOne
 
     }
   },
@@ -145,6 +146,7 @@ export const brc20Solutions = [
       height: 309,
       info: "BRC20 White hive",
       href: brc20SolutionTwo,
+      mobileHref: brc20SolutionMobTwo
 
     }
   },
@@ -160,7 +162,7 @@ export const brc20Solutions = [
       height: 290,
       info: "GBC NFT groups",
       href: brc20SolutionThree,
-
+      mobileHref: brc20SolutionMobThree
     },
           imageClasses: "xl:-mr-[50px]",
 
@@ -177,6 +179,7 @@ export const brc20Solutions = [
       height: 314,
       info: "GBC quest",
       href: brc20SolutionFour,
+      mobileHref: brc20SolutionMobFour
 
     },
     imageClasses: "xl:-ml-[61px]",
