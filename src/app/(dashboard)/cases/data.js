@@ -71,7 +71,7 @@ const stepApp = {
     { isMain: false, tagName: "Staking" }
   ],
   title: 'STEP APP',
-  desc: 'StepApp is an innovative Move-to-Earn platform that rewards users for physical movement.',
+  desc: 'Step App is an innovative Move-to-Earn platform that rewards users for physical movement.',
   img: m2eNewOne,
   textColor: "text-secondary",
   projectLink: "step-app",
@@ -104,11 +104,11 @@ const pixelverse = {
   id: 6,
   tags: [
     { isMain: true, tagName: "Mobile App" },
-    { isMain: true, tagName: "Telegram Mini Apps" },
+    { isMain: true, tagName: "Telegram Mini-Apps" },
     { isMain: false, tagName: "GameFi" }
   ],
   title: "PixelVerse",
-  desc: "PixelVerse is a GameFi ecosystem that merges Web2 accessibility with Web3 innovation through Telegram Mini Apps.",
+  desc: "PixelVerse is a GameFi ecosystem that merges Web2 accessibility with Web3 innovation through Telegram Mini-Apps.",
   img: pixelVerse,
   projectLink: "pixel-verse",
   textGap: "md:gap-[24px]",

@@ -179,7 +179,9 @@ const P2pCryptoExhangeDev = () => {
           hasIcon={false}
           faqGradient={true}
           itemTitleClass="xl:!text-[20px]"
-          itemsClasses={"py-[40px] md:py-[45px] "}
+          itemsClasses={"py-10 md:py-[45px] "}
+          accordionPanelClasses="pb-10 md:pb-[45px]"
+          expandedItemClasses="!pb-6"
         />
       </div>
       <Feedback

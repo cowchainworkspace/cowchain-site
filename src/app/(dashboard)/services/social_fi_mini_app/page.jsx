@@ -168,14 +168,12 @@ a ton telegram network or building a niche group, the app supports your goals"
           noBg={true}
           descClasses={"max-w-[798px] !mt-[60px]"}
         />
-         <Image
-        src={dexBg}
-        alt="decoration ellipse"
-        className="pointer-events-none absolute -bottom-[140%] left-0 z-[0] w-auto md:h-[1600px]"
-      />
+        <Image
+          src={dexBg}
+          alt="decoration ellipse"
+          className="pointer-events-none absolute -bottom-[140%] left-0 z-[0] w-auto md:h-[1600px]"
+        />
       </div>
-
-     
 
       <ExpertiseServices
         title={
@@ -196,7 +194,7 @@ of the box — ready to scale with your vision"
       <div className="w-full overflow-hidden">
         <FAQ
           desc={
-            "See how simple installation for users and intuitive community management for admin can be with the Social TG Mini-App  at the same time"
+            "See how simple installation for users and intuitive community management for admin can be with the Social TG Mini-App at the same time"
           }
           title={
             <>
@@ -210,7 +208,7 @@ of the box — ready to scale with your vision"
           isTwoHalf={true}
           hasIcon={false}
           faqGradient={true}
-          itemsClasses={"py-10 md:py-[43px]"}
+          // itemsClasses={"py-10 md:py-[43px]"}
           titleClasses="custom1430:text-[42px]"
         />
       </div>

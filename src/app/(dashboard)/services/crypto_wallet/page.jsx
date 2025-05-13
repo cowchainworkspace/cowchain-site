@@ -147,7 +147,9 @@ const CryptoWalletDev = () => {
           hasIcon={false}
           faqGradient={true}
           itemTitleClass="xl:!text-[20px]"
-          itemsClasses={"md:py-[74px] "}
+          accordionPanelClasses="md:pb-[74px]"
+          expandedItemClasses="!pb-6"
+          itemsClasses={"md:py-[74px]"}
         />
       </div>
 

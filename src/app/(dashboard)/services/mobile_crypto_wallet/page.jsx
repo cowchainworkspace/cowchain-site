@@ -183,6 +183,8 @@ const MobileCryptoWallet = () => {
           titleClasses="custom1430:text-[42px]"
           data={cryptWalletFaqData}
           itemsClasses={"md:py-[50px]"}
+          accordionPanelClasses="md:pb-[50px]"
+          expandedItemClasses="!pb-6"
           isDoublePadding={true}
           itemTitleClass={"xl:text-xl xl:leading-90 whitespace-pre-line"}
           faqContentClasses="max-w-[540px]"
@@ -262,7 +264,11 @@ const MobileCryptoWallet = () => {
       <Cases />
       <CasesMobile />
       <div className="w-full overflow-hidden">
-        <FAQ noBg={true} data={cryptWalletGeneralFaqData} />
+        <FAQ
+          noBg={true}
+          data={cryptWalletGeneralFaqData}
+          faqHorizontalPadding
+        />
       </div>
       <Contact
         descriptionClasses={"mb-6 md:mb-0"}

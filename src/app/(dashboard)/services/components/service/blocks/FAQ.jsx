@@ -52,7 +52,8 @@ export default function FAQ({
   itemTitleClass,
   expandedItemClasses = "",
   isDisabled = false,
-  faqContentClasses = ""
+  faqContentClasses = "",
+  accordionPanelClasses = ""
 }) {
   const [screenWidth, setScreenWidth] = useState();
   const lastIndex = data.length - 1;
@@ -155,120 +156,123 @@ export default function FAQ({
                           " bg-[url('/assets/faq-main-gradient.webp')]"
                       )}
                     />
-                    <div
+
+                    <AccordionButton
                       className={cn(
-                        "max-w-[893px] px-5 py-[43px] md:pl-8 xl:pl-[88px] xl:pr-[60px]",
-                        faqHorizontalPadding && "xl:!px-[60px]",
+                        "relative max-w-[893px] px-5 py-[43px] md:pl-8 xl:pl-[88px] xl:pr-[60px]",
                         itemsClasses,
+                        isExpanded && "pb-6",
+                        faqHorizontalPadding && "xl:!px-[60px]",
                         isExpanded && expandedItemClasses
                       )}
                     >
-                      <AccordionButton className={cn("relative")}>
-                        <div className="mr-0 w-full text-left md:mr-auto">
-                          <span
-                            className={cn(
-                              "block !w-full max-w-[260px] text-left  font-roc",
-                              "text-[14px] font-medium uppercase !leading-none text-white md:max-w-[623px] md:text-[18px] lg:!leading-none",
-                              itemTitleClass
-                            )}
-                          >
-                            {faq.title}
-                          </span>
-                        </div>
-                        {hasIcon && (
-                          <div className={` ${!faq ? "hidden" : "block"}`}>
-                            {isExpanded ? (
-                              <div
-                                className="flex items-center justify-end md:justify-end"
-                                style={{
-                                  width: 50
-                                }}
-                              >
-                                <svg
-                                  width={screenWidth > 768 ? "50" : "32"}
-                                  height={screenWidth > 768 ? "50" : "32"}
-                                  viewBox="0 0 32 32"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <circle cx="16" cy="16" r="16" fill="white" />
-                                  <path
-                                    d="M12.2656 16H19.7323"
-                                    stroke="black"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                  />
-                                </svg>
-                              </div>
-                            ) : (
-                              <div
-                                className="flex items-center justify-end md:justify-end"
-                                style={{
-                                  width: 50
-                                }}
-                              >
-                                <svg
-                                  width={screenWidth > 768 ? "50" : "32"}
-                                  height={screenWidth > 768 ? "50" : "32"}
-                                  viewBox="0 0 32 32"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <circle
-                                    cx="16"
-                                    cy="16"
-                                    r="15.75"
-                                    stroke="white"
-                                    strokeOpacity="0.5"
-                                    strokeWidth="0.5"
-                                  />
-                                  <path
-                                    d="M16 12.2666V19.7333"
-                                    stroke="white"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                  />
-                                  <path
-                                    d="M12.2656 16H19.7323"
-                                    stroke="white"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                  />
-                                </svg>
-                              </div>
-                            )}
-                          </div>
-                        )}
-                      </AccordionButton>
-                      <AccordionPanel
-                        className={cn("opacity-0  will-change-transform", {
-                          "pt-6 opacity-100": isExpanded
-                        })}
-                      >
-                        <div>
-                          {Array.isArray(faq.content) ? (
-                            <ul>
-                              {faq.content.map((item, index) => (
-                                <li key={index}>
-                                  <p className="max-w-2xl !leading-[160%] !text-[#bbb] lg:!leading-[175%]">
-                                    {`- ${item};`}
-                                  </p>
-                                </li>
-                              ))}
-                            </ul>
-                          ) : (
-                            <p
-                              className={cn(
-                                "max-w-2xl !leading-[140%] !text-[#bbb] ",
-                                faqContentClasses
-                              )}
+                      <div className="mr-0 w-full text-left md:mr-auto">
+                        <span
+                          className={cn(
+                            "block !w-full max-w-[260px] text-left  font-roc",
+                            "text-[14px] font-medium uppercase !leading-none text-white md:max-w-[623px] md:text-[18px] lg:!leading-none",
+                            itemTitleClass
+                          )}
+                        >
+                          {faq.title}
+                        </span>
+                      </div>
+                      {hasIcon && (
+                        <div className={` ${!faq ? "hidden" : "block"}`}>
+                          {isExpanded ? (
+                            <div
+                              className="flex items-center justify-end md:justify-end"
+                              style={{
+                                width: 50
+                              }}
                             >
-                              {faq.content}
-                            </p>
+                              <svg
+                                width={screenWidth > 768 ? "50" : "32"}
+                                height={screenWidth > 768 ? "50" : "32"}
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <circle cx="16" cy="16" r="16" fill="white" />
+                                <path
+                                  d="M12.2656 16H19.7323"
+                                  stroke="black"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            </div>
+                          ) : (
+                            <div
+                              className="flex items-center justify-end md:justify-end"
+                              style={{
+                                width: 50
+                              }}
+                            >
+                              <svg
+                                width={screenWidth > 768 ? "50" : "32"}
+                                height={screenWidth > 768 ? "50" : "32"}
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <circle
+                                  cx="16"
+                                  cy="16"
+                                  r="15.75"
+                                  stroke="white"
+                                  strokeOpacity="0.5"
+                                  strokeWidth="0.5"
+                                />
+                                <path
+                                  d="M16 12.2666V19.7333"
+                                  stroke="white"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                                <path
+                                  d="M12.2656 16H19.7323"
+                                  stroke="white"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            </div>
                           )}
                         </div>
-                      </AccordionPanel>
-                    </div>
+                      )}
+                    </AccordionButton>
+                    <AccordionPanel
+                      className={cn(
+                        "relative  max-w-[893px]  px-5 pb-[43px] opacity-0  will-change-transform md:pl-8 xl:pl-[88px] xl:pr-[60px]",
+                        isExpanded && "opacity-100",
+                        faqHorizontalPadding && "xl:!px-[60px]",
+                        isExpanded && accordionPanelClasses
+                      )}
+                    >
+                      <div>
+                        {Array.isArray(faq.content) ? (
+                          <ul>
+                            {faq.content.map((item, index) => (
+                              <li key={index}>
+                                <p className="max-w-2xl !leading-[160%] !text-[#bbb] lg:!leading-[175%]">
+                                  {`- ${item};`}
+                                </p>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p
+                            className={cn(
+                              "max-w-2xl !leading-[140%] !text-[#bbb] ",
+                              faqContentClasses
+                            )}
+                          >
+                            {faq.content}
+                          </p>
+                        )}
+                      </div>
+                    </AccordionPanel>
                   </div>
                 )}
               </AccordionItem>

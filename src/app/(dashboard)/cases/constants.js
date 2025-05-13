@@ -27,27 +27,42 @@ import {
 export const casesTags = [
   {
     id: 1,
-    tagName: "Web Development"
+    tagName: "Web Development",
+    tags: [
+      "GameFi",
+      "Trading",
+      "Crypto Wallet",
+      "DEX",
+      "DeFi",
+      "Bridge",
+      "NFT",
+      "Staking"
+    ]
   },
   {
     id: 2,
-    tagName: "Mobile App"
+    tagName: "Mobile App",
+    tags: ["Mobile GameFi", "Mobile Trading", "Mobile Crypto Wallet"]
   },
   {
     id: 3,
-    tagName: "AI Development"
+    tagName: "AI Development",
+    tags: ["AI Development", "Mobile AI Development"]
   },
   {
     id: 4,
-    tagName: "Telegram Mini apps"
+    tagName: "Telegram Mini-Apps",
+    tags: ["Telegram Mini-Apps", "Mobile Telegram Mini-Apps"]
   },
   {
     id: 5,
-    tagName: "Blockchain Development"
+    tagName: "Blockchain Development",
+    tags: ["Blockchain Development", "Mobile Blockchain Development"]
   },
   {
     id: 6,
-    tagName: "all filters"
+    tagName: "all filters",
+    tags: ["all filters"]
   }
 ];
 
@@ -60,6 +75,13 @@ export const cases = [
       { isMain: false, tagName: "Crypto Wallet" },
       { isMain: false, tagName: "DeFi" },
       { isMain: false, tagName: "NFT" }
+    ],
+    filterTags: [
+      { tagName: "Web Development" },
+      { tagName: "AI Development" },
+      { tagName: "Crypto Wallet" },
+      { tagName: "DeFi" },
+      { tagName: "NFT" }
     ],
     caseName: "AGNT.Hub",
     caseDescription:
@@ -77,6 +99,12 @@ export const cases = [
       { isMain: false, tagName: "DeFi" },
       { isMain: false, tagName: "Bridge" },
       { isMain: false, tagName: "NFT" }
+    ],
+    filterTags: [
+      { tagName: "Web Development" },
+      { tagName: "Bridge" },
+      { tagName: "DeFi" },
+      { tagName: "NFT" }
     ],
     caseName: "Retrobridge",
     caseDescription:
@@ -100,6 +128,24 @@ export const cases = [
       { isMain: false, tagName: "NFT" },
       { isMain: false, tagName: "Staking" }
     ],
+    filterTags: [
+      { tagName: "Web Development" },
+      { tagName: "Mobile App" },
+      { tagName: "GameFi" },
+      { tagName: "Crypto Wallet" },
+      { tagName: "Trading" },
+      { tagName: "DEX" },
+      { tagName: "DeFi" },
+      { tagName: "NFT" },
+      { tagName: "Staking" },
+      { tagName: "Mobile GameFi" },
+      { tagName: "Mobile Crypto Wallet" },
+      { tagName: "Mobile Trading" },
+      { tagName: "Mobile DEX" },
+      { tagName: "Mobile DeFi" },
+      { tagName: "Mobile NFT" },
+      { tagName: "Mobile Staking" }
+    ],
     caseName: "Step app",
     caseDescription:
       "StepApp is an innovative Move-to-Earn platform that rewards users for physical movement. With over 300,000 active users, 9M unique wallets and a presence in 100+ countries, the project exemplifies the intersection of fitness and blockchain innovation.",
@@ -116,6 +162,11 @@ export const cases = [
       { isMain: true, tagName: "Web Development" },
       { isMain: false, tagName: "Trading" },
       { isMain: false, tagName: "NFT" }
+    ],
+    filterTags: [
+      { tagName: "Web Development" },
+      { tagName: "Trading" },
+      { tagName: "NFT" }
     ],
     caseName: "GMX Blueberry Club",
     caseDescription:
@@ -136,6 +187,14 @@ export const cases = [
       { isMain: false, tagName: "Staking" },
       { isMain: false, tagName: "L1" }
     ],
+    filterTags: [
+      { tagName: "Web Development" },
+      { tagName: "AI Development" },
+      { tagName: "Blockchain Development" },
+      { tagName: "Bridge" },
+      { tagName: "Staking" },
+      { tagName: "L1" }
+    ],
     caseName: "Hybrid",
     caseDescription:
       "Hybrid is a Layer 2 blockchain on Arbitrum Nitro, integrating the Mixture of Experts (MoE) framework to power specialized AI agents. By enabling real-time AI execution on-chain, it bridges blockchain and AI-driven solutions. With Atlas – The Web3 Copilot, Hybrid simplifies market research, data tracking, and AI monetization, solidifying its role in blockchain innovation.",
@@ -146,7 +205,7 @@ export const cases = [
     containerWidth: 848
   },
 
-   // TEMPORARILY HIDE: Reflect case card is hidden until design is finalized
+  // TEMPORARILY HIDE: Reflect case card is hidden until design is finalized
   // {
   //   id: 6,
   //   tags: [
@@ -168,12 +227,17 @@ export const cases = [
     id: 7,
     tags: [
       { isMain: true, tagName: "Mobile App" },
-      { isMain: true, tagName: "Telegram Mini Apps" },
+      { isMain: true, tagName: "Telegram Mini-Apps" },
       { isMain: false, tagName: "GameFi" }
+    ],
+    filterTags: [
+      { tagName: "Mobile App" },
+      { tagName: "Mobile Telegram Mini-Apps" },
+      { tagName: "Mobile GameFi" }
     ],
     caseName: "Pixelverse",
     caseDescription:
-      "PixelVerse bridges Web2 and Web3 gaming with Telegram Mini Apps like PixelTap, achieving 45 million monthly active users (MAU).",
+      "PixelVerse bridges Web2 and Web3 gaming with Telegram Mini-Apps like PixelTap, achieving 45 million monthly active users (MAU).",
     link: "cases/pixel-verse",
     caseImage: pixelVerseImage,
     caseMobileImage: pixelverseMobileImg,
@@ -181,8 +245,8 @@ export const cases = [
     containerWidth: 450
   },
 
-   // TEMPORARILY HIDE: BRC20 case card is hidden until design is finalized
-   
+  // TEMPORARILY HIDE: BRC20 case card is hidden until design is finalized
+
   // {
   //   id: 8,
   //   tags: [
@@ -206,6 +270,11 @@ export const cases = [
       { isMain: false, tagName: "Trading" },
       { isMain: false, tagName: "Crypto Wallet" }
     ],
+    filterTags: [
+      { tagName: "Mobile App" },
+      { tagName: "Mobile Trading" },
+      { tagName: "Mobile Crypto Wallet" }
+    ],
     caseName: "Memelut",
     caseDescription:
       "Memelut is an all-in-one app that simplifies exploring, trading, and storing memecoins. Designed for the growing $1.5T annual memecoin market, it eliminates the need for multiple apps by integrating a swipe-to-trade experience, social feeds, and secure storage into a single platform.",
@@ -227,6 +296,17 @@ export const cases = [
       { isMain: false, tagName: "Bridge" },
       { isMain: false, tagName: "L1" },
       { isMain: false, tagName: "Staking" }
+    ],
+    filterTags: [
+      { tagName: "Web Development" },
+      { tagName: "Blockchain Development" },
+      { tagName: "Trading" },
+      { tagName: "Crypto Wallet" },
+      { tagName: "DEX" },
+      { tagName: "DeFi" },
+      { tagName: "Bridge" },
+      { tagName: "L1" },
+      { tagName: "Staking" }
     ],
     caseName: "Tenet",
     caseDescription:

@@ -9,7 +9,7 @@ const HybridWhatWeDid = () => {
   return (
     <section className="pb-[50px] xl:pb-30">
       <div className="mx-auto max-w-[1440px] xl:pl-[96px] xl:pr-[100px]">
-        <div className="grid  grid-cols-2 gap-[27px] md:hidden ">
+        <div className="grid grid-cols-2 justify-items-center gap-[27px] md:hidden ">
           <Image
             src={robotOne}
             width={166}
@@ -75,14 +75,12 @@ const HybridWhatWeDid = () => {
               width={551}
               height={551}
               alt="robot with a smile on the yellow background"
-              // className="size-[300px]"
             />
             <Image
               src={robotTwo}
               width={555}
               height={555}
               alt="robot with a disappointed on the yellow background"
-              // className="size-[300px]"
             />
           </div>
         </div>

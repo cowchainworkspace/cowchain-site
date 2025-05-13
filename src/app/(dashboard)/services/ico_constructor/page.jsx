@@ -201,6 +201,8 @@ const IcoConstructor = () => {
           faqGradient={true}
           data={icoPlatformFaqData}
           itemsClasses={"md:py-[65px]"}
+          accordionPanelClasses="md:pb-[65px]"
+          expandedItemClasses="!pb-6"
           isDoublePadding={true}
           itemTitleClass={"xl:text-xl xl:leading-90 whitespace-pre-line"}
         />
@@ -253,7 +255,7 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
       <Cases />
       <CasesMobile />
       <div className="w-full overflow-hidden">
-        <FAQ noBg={true} data={icoConstructorFaqBotData} />
+        <FAQ noBg={true} data={icoConstructorFaqBotData} faqHorizontalPadding />
       </div>
 
       <Contact

@@ -28,7 +28,7 @@ const Hybrid = () => {
       <HeroScreenContainer />
       <Banner
         img={"/cases/hybrid/cases-hybrid-banner.webp"}
-        classes={"h-[141px] md:h-[200px] lg:h-[300px] xl:h-[540px]"}
+        classes={"h-[151px] md:h-[200px] lg:h-[300px] xl:h-[540px]"}
         imgDesc={"hybrid banner image"}
         decorationElement={
           <>

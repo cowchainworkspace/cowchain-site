@@ -57,20 +57,21 @@ const AgntSolution = ({ solutions, classes }) => {
                     {desc}
                   </p>
                 </div>
-
-                <div
-                  className={cn("relative flex-shrink-0", imageClasses)}
-                  style={{
-                    width: `${isMoreThan1280 ? img.width : img.mobileWidth}px`,
-                    height: `${isMoreThan1280 ? img.height : img.mobileHeight}px`
-                  }}
-                >
-                  <Image
-                    src={isMoreThan1280 ? img.href : img.mobileHref}
-                    alt={img.info}
-                    fill
-                    className="object-contain"
-                  />
+                <div className="flex w-full justify-center xl:w-fit xl:justify-normal">
+                  <div
+                    className={cn("relative flex-shrink-0 ", imageClasses)}
+                    style={{
+                      width: `${isMoreThan1280 ? img.width : img.mobileWidth}px`,
+                      height: `${isMoreThan1280 ? img.height : img.mobileHeight}px`
+                    }}
+                  >
+                    <Image
+                      src={isMoreThan1280 ? img.href : img.mobileHref}
+                      alt={img.info}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
               </div>
             )

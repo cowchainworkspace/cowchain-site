@@ -189,7 +189,9 @@ const WhiteLabelDev = () => {
           noBg={true}
           isSecondary={true}
           isTwoHalf={true}
-          itemsClasses={"md:!py-[90px]"}
+          itemsClasses={"md:py-[90px]"}
+          accordionPanelClasses="md:pb-[90px]"
+          expandedItemClasses="!pb-6"
           hasIcon={false}
           faqGradient={true}
           titleClasses="max-w-[396px]"

@@ -16,6 +16,7 @@ const AnchorLink = dynamic(() => import("react-anchor-link-smooth-scroll"), {
 
 const items = [
   {
+    id: 1,
     title: "WHAT WE DO",
     links: [
       {
@@ -25,10 +26,12 @@ const items = [
     ]
   },
   {
+    id: 2,
     title: "AGENCY",
     links: [{ label: "Team", href: "/team", isAnchor: false }]
   },
   {
+    id: 3,
     title: "HELP",
     links: [
       { label: "Contact Us", href: "#contact", isAnchor: true },
@@ -44,8 +47,8 @@ export const FaqAccordion = ({ openServicePage }) => {
 
   return (
     <Accordion allowToggle>
-      {items.map((item, idx) => (
-        <AccordionItem border="none" key={idx} className=" pb-10 last:pb-0">
+      {items.map((item) => (
+        <AccordionItem border="none" key={item.id} className=" pb-10 last:pb-0">
           {({ isExpanded }) => (
             <>
               <h2>

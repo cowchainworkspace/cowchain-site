@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useEffect } from "react";
 import poster from "@/assets/homepage/thumbnail.png";
+import { useEffect, useRef } from "react";
 
 const Video = () => {
   const vidRef = useRef();
@@ -16,11 +16,10 @@ const Video = () => {
       playsInline
       muted
       loop
-      controls=""
       src={"/homepage/video.mp4"}
       preload="auto"
       poster={poster}
-    ></video>
+    />
   );
 };
 

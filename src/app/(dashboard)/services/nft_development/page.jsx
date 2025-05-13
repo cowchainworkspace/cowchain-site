@@ -112,6 +112,8 @@ const NftDevelopment = () => {
           noBg={true}
           hasIcon={false}
           itemsClasses={"md:py-[54.5px]"}
+          accordionPanelClasses="md:pb-[54.5px]"
+          expandedItemClasses="!pb-6"
           faqGradient={true}
           titleClasses="custom1430:text-[42px]"
           descriptionClasses="!max-w-[320px] lg:!max-w-[462px]"

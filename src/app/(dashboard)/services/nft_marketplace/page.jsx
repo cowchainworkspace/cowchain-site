@@ -116,6 +116,8 @@ const NFTMarketPlace = () => {
           faqGradient={true}
           data={nftPlatformsFaqData}
           itemsClasses={"md:py-[55.5px]"}
+          accordionPanelClasses="md:pb-[55.5px]"
+          expandedItemClasses="!pb-6"
           isDoublePadding={true}
           itemTitleClass={"xl:text-xl xl:leading-90 whitespace-pre-line"}
         />
@@ -198,7 +200,9 @@ const NFTMarketPlace = () => {
           hasIcon={false}
           faqGradient={true}
           data={nftPlatformsFaqCommunityData}
-          itemsClasses={"md:py-[55px]"}
+          itemsClasses={"md:py-[57px]"}
+          accordionPanelClasses="md:pb-[57px]"
+          expandedItemClasses="!pb-6"
           isDoublePadding={true}
           itemTitleClass={"xl:text-xl xl:leading-90 whitespace-pre-line"}
           faqContentClasses="max-w-[440px]"
@@ -225,7 +229,7 @@ to deliver reliable, secure blockchain solutions. Here’s what they have to say
       <Cases />
       <CasesMobile />
       <div className="w-full overflow-hidden">
-        <FAQ noBg={true} data={faqQuestions} />
+        <FAQ noBg={true} data={faqQuestions} faqHorizontalPadding />
       </div>
       <Contact
         descriptionClasses={"mb-6 md:mb-0"}
