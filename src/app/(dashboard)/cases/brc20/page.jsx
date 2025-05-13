@@ -10,12 +10,14 @@ import { relatedBRC20Projects } from "../data";
 import BRC20Overview from "./components/BRC20Overview";
 import BRC20Solutions from "./components/BRC20Solutions";
 import BRC20WhatWeDid from "./components/BRC20WhatWeDid";
+import { metadata } from "./utils/brc20Metadata";
 import {
   brc20Slides,
   brc20Solutions,
   brc20Tags,
   brc20Team
 } from "./utils/constants";
+export { metadata };
 
 const BRC20 = () => {
   return (

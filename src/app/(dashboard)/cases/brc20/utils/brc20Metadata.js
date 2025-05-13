@@ -1,8 +1,8 @@
 export const metadata = {
-  title: "Case Studies Project GBC dApp: Real-World Results",
-  description: "Discover how Cowchain's GBC dApp delivered real-world results. Explore case studies showcasing innovative blockchain solutions and success.",
+  title: "BRC20 Project Cases – Insights and Success Stories",
+  description: "Discover BRC20 project cases on Cowchain.io. Explore insights, success stories, and innovative blockchain solutions tailored for your needs.",
   metadataBase: new URL("https://cowchain.io/"),
   alternates: {
-    canonical: "/cases/gbc"
+    canonical: "/cases/brc20"
   }
 };
