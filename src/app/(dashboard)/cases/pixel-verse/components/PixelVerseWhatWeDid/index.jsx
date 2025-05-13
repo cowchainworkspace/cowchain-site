@@ -4,7 +4,6 @@ import {
   weDidFirst,
   weDidSecond
 } from "../../../../../../../public/cases/PixelVerse";
-import { businessChallenges } from "../../utils/constants";
 
 const PixelVerseWhatWeDid = () => {
   return (
