@@ -1,15 +1,15 @@
 "use client";
 
-import Popup from "reactjs-popup";
-import modal_close from "../../assets/homepage/closeButtonIcon.svg";
-import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
-import bg from "./../../assets/homepage/form/formBg.svg";
 import { useState } from "react";
-import ThankYouWindow from "./ThankYouWindow";
-import dagerous from "./../../assets/dangerous.svg";
+import { useForm } from "react-hook-form";
+import Popup from "reactjs-popup";
+import modal_close from "../../assets/homepage/closeButtonIcon.svg";
 import chackBox from "./../../assets/checkBox.svg";
+import dagerous from "./../../assets/dangerous.svg";
+import bg from "./../../assets/homepage/form/formBg.svg";
+import ThankYouWindow from "./ThankYouWindow";
 
 export default function ContactForm({ modalOpen, setModalOpen }) {
   const {
@@ -71,7 +71,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
           <div className="modal p-x-[20px] relative flex h-full  min-w-full gap-[20px] font-roc">
             <div className="flex w-[335px]  flex-col items-center gap-[32px] md:w-[633px]">
               <div className="relative w-full text-center md:text-left">
-                <p className=" text-center text-[36px] font-medium text-white md:text-left md:text-5xl md:text-[60px]">
+                <p className="text-left  text-[36px] font-medium text-white md:text-left md:text-center md:text-5xl md:text-[60px]">
                   CONTACT US
                 </p>
               </div>
@@ -259,7 +259,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
             </div>
 
             <div
-              className="hidden h-[50px] w-[50px] items-center justify-center md:flex"
+              className="absolute right-0 top-[13px] size-7 items-center justify-center md:static md:flex md:h-[50px] md:w-[50px]"
               style={{
                 border: "1px rgba(255, 255, 255, 0.5) solid",
                 borderRadius: "50%"
