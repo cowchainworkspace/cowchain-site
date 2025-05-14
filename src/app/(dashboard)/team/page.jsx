@@ -17,7 +17,7 @@ export { metadata };
 
 const Team = () => {
   return (
-    <section className=" ">
+    <section className="  ">
       <div className="scrollbar-none bg-black">
         <HeroSection />
         <Values />
