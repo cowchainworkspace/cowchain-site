@@ -3,8 +3,8 @@ import dynamic from "next/dynamic";
 const Header = dynamic(() => import("./blocks/Header"));
 const HomeContent = dynamic(() => import("./blocks/home-content"));
 import {
-  jsonLdFaq,
   jsonLdContacts,
+  jsonLdFaq,
   jsonLdVideo,
   metadata
 } from "./homeData/data";
@@ -27,7 +27,7 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdVideo) }}
       />
       <Header />
-      <HomeContent />{" "}
+      <HomeContent />
     </div>
   );
 }

@@ -1,147 +1,65 @@
 "use client";
 
-import arrow from "@/assets/arrow_right.svg";
-import bg_clients_lg from "@/assets/bg/clients_navbar_bg_lg.png";
-import bg_clients from "@/assets/bg/clients_navbar_bg_sm.png";
-import bg from "@/assets/bg/navbar_top.png";
-import bg_lg from "@/assets/bg/navbar_top_lg.png";
-import linkedin from "@/assets/footer/linkedin.svg";
-import mail from "@/assets/footer/mail.svg";
-import medium from "@/assets/footer/medium.svg";
-import telegram from "@/assets/footer/telegram.svg";
-import twitter from "@/assets/footer/twitter.svg";
-import bg_home from "@/assets/homepage/home-mobile.png";
 import menu_close from "@/assets/homepage/modal_close.svg";
 import menu_open from "@/assets/menu_open.svg";
-import ContactForm from "@/components/utils/ContactForm";
 import { useLoader } from "@/hooks/useLoader";
 import { cn } from "@/lib/utils";
-import emailjs from "emailjs-com";
-import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { ServicesAndTechnologies } from "../app/(dashboard)/(home)/blocks/ServicesAndTechMenu";
-import { ServicesAndTechnologiesMob } from "../app/(dashboard)/(home)/blocks/ServicesAndTechnologiesMob";
+import { useOpenForm } from "../hooks/useOpenForm";
 import { useOpenMenu } from "../hooks/useOpenMenu";
 import { useSetBurgerMenu } from "../hooks/useSetBurgerMenu";
 import { useSetMobServiceMenu } from "../hooks/useSetMobServiceMenu";
 import { useToggleMenu } from "../hooks/useToggleMenu";
 
-export default function Navbar({ isPageNotFound = false }) {
+import BurgerMenu from "./BurgerMenu";
+import NavbarAnchorLinks from "./NavbarAnchorLinks";
+import NavbarRoutingLinks from "./NavbarRoutingLinks";
+
+const sideVariants = {
+  open: {
+    transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+  },
+  closed: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 }
+  }
+};
+
+export default function Navbar() {
   const { serviceMenuOpen, setServiceMenuOpen } = useOpenMenu();
   const { serviceMobMenuOpen, setServiceMobMenuOpen } = useSetMobServiceMenu();
   const { toggleMenu, setToggleMenu } = useToggleMenu();
-  const { burgerOpen, setBurgerOpen } = useSetBurgerMenu();
-
+  const { setBurgerOpen } = useSetBurgerMenu();
+  const { setOpenForm } = useOpenForm();
+  const { isRendering } = useLoader();
   const pathname = usePathname();
 
   const menuRef = useRef(null);
 
-  useEffect(() => {
-    setServiceMenuOpen(false);
-  }, [pathname]);
+  const handleClickOutside = (event) => {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(event.target) &&
+      !event.target.closest(".menu-toggle-button")
+    ) {
+      setServiceMenuOpen(false);
+    }
+  };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(event.target) &&
-        !event.target.closest(".menu-toggle-button")
-      ) {
-        setServiceMenuOpen(false);
-      }
-    };
-
     document.addEventListener("mousedown", handleClickOutside);
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
-  const [openForm, setOpenForm] = useState(false);
-  const [windowHeight, setWindowheight] = useState("");
-  const [isTeamBg, setIsTeamBg] = useState(false);
-  const [isGradient, setIsGradient] = useState(true);
-  const [isHomePage, setIsHomePage] = useState(true);
-
-  const { isRendering, setIsLoading, setIsRendering } = useLoader();
-
-  useEffect(() => {
-    emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY);
-    emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
-
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 500);
-    setTimeout(() => {
-      setIsRendering(false);
-    }, 700);
-  }, []);
-
-  useEffect(() => {
-    setWindowheight(window.innerHeight);
-    setIsHomePage(pathname === "/");
-    setIsGradient(
-      pathname === "/cases" ||
-        pathname === "/clients" ||
-        pathname === "/policy" ||
-        pathname === "/services"
-    );
-    setIsTeamBg(pathname === "/team" || pathname === "/sitemap");
-
-    if (pathname === "/team") {
-      setIsGradient(false);
-      setIsHomePage(false);
-    }
-    isPageNotFound && setIsTeamBg(true);
-  }, [pathname, isTeamBg, setIsGradient, setIsHomePage]);
-
-  const sideVariants = {
-    open: {
-      transition: { staggerChildren: 0.07, delayChildren: 0.2 }
-    },
-    closed: {
-      transition: { staggerChildren: 0.05, staggerDirection: -1 }
-    }
+  const closeServiceMenu = (e) => {
+    e.stopPropagation();
+    setServiceMenuOpen(false);
   };
-
-  const linkVariants = {
-    open: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        y: { stiffness: 1000, velocity: -100 }
-      }
-    },
-    closed: {
-      y: 50,
-      opacity: 0,
-      transition: {
-        y: { stiffness: 1000 }
-      }
-    }
-  };
-
-  const anchorLinks = [
-    {
-      title: "Cases",
-      link: "/cases"
-    }
-  ];
-
-  const routerLinks = [
-    {
-      title: "Team",
-      link: "/team"
-    },
-    {
-      title: "Blog",
-      link: "/blog"
-    }
-  ];
 
   const openBurger = () => {
     setToggleMenu(true);
@@ -162,7 +80,7 @@ export default function Navbar({ isPageNotFound = false }) {
 
   const toggleServices = (e) => {
     e.stopPropagation();
-    setServiceMenuOpen((prevState) => !prevState);
+    setServiceMenuOpen(!serviceMenuOpen);
   };
 
   const closeMobServiceMenu = (e) => {
@@ -190,84 +108,36 @@ export default function Navbar({ isPageNotFound = false }) {
   return (
     <>
       <section
-        className={cn("relative z-[21] bg-transparent opacity-0", {
-          "pb-36 md:pb-0": isHomePage,
-          "opacity-100": !isRendering
+        className={cn("relative z-[23] bg-transparent opacity-0", {
+          "opacity-100": !isRendering,
+          "pb-36 md:pb-0": pathname === "/"
         })}
       >
-        {isHomePage ? (
-          <>
-            <Image
-              priority
-              srcSet={`${bg} 360w, ${bg} 480w, ${bg} 720w, ${bg_lg} 1920w`}
-              sizes="(max-width: 640px) 100vw, 100vw"
-              alt=""
-              className={cn(
-                "absolute bottom-0 left-0 hidden h-full w-full md:block",
-                {
-                  hidden: !isGradient
-                }
-              )}
-              src={bg_lg}
-            />
-            <Image
-              quality={100}
-              priority
-              className={cn(
-                "pointer-events-none absolute bottom-0 left-0 block h-full w-full md:hidden",
-                {
-                  hidden: isGradient
-                }
-              )}
-              src={bg_home}
-              alt=""
-            />
-          </>
-        ) : (
-          <Image
-            srcSet={`${bg_clients} 360w, ${bg_clients} 480w, ${bg_clients} 720w, ${bg_clients_lg} 1920w`}
-            alt=""
-            className={cn(
-              "absolute bottom-0 right-0 min-h-[140%] min-w-[200vw] md:min-w-full",
-              {
-                hidden: !isGradient
-              }
-            )}
-            src={bg_clients_lg}
-          />
-        )}
-
         <div
           className={
-            isHomePage
+            pathname === "/"
               ? "navbar-wrapper relative flex h-24 items-center justify-between gap-x-8   px-4 md:h-16 md:border-b  md:border-th-fade md:border-b-th-fade md:px-8 lg:px-0"
               : "navbar-wrapper  relative flex h-24 items-center justify-between gap-x-8 px-4 md:h-16 md:border-b md:border-th-fade md:px-8 lg:px-0"
           }
         >
-          <nav className="hidden w-full max-w-[360px] items-center gap-[80px]  pl-12 lg:flex xl:max-w-md">
-            <p
-              className="menu-toggle-button navlink mt-1 cursor-pointer"
-              onClick={toggleServices}
-            >
-              Services & Technologies
-            </p>
-            {anchorLinks.map((link, index) => (
-              <Link key={index} href={link.link}>
-                <p className="navlink mt-1">{link.title}</p>
-              </Link>
-            ))}
-          </nav>
+          <NavbarAnchorLinks
+            serviceMenuOpen={serviceMenuOpen}
+            toggleServices={toggleServices}
+          />
           <Link
-            href={"/"}
-            className="flex items-center justify-center"
+            href="/"
+            className="z-[23] flex items-center justify-center"
             rel="nofollow"
           >
-            <img
-              className="w-32 md:w-36 lg:w-40"
+            <Image
+              src="/homepage/logo_light.svg"
+              alt="Home logo"
               title="Home"
-              alt="Home-1"
-              src={"/homepage/logo_light.svg"}
-            ></img>
+              width={160}
+              height={40}
+              className="h-auto w-32 md:w-36 lg:w-40"
+              priority
+            />
           </Link>
           {toggleMenu ? (
             <Image
@@ -275,200 +145,33 @@ export default function Navbar({ isPageNotFound = false }) {
               src={menu_close}
               onClick={closeBurger}
               alt=""
-            ></Image>
+            />
           ) : (
-            <Image
-              className="ml-auto w-6 cursor-pointer lg:hidden"
-              alt=""
-              src={menu_open}
-              onClick={openBurger}
-            ></Image>
-          )}
-          <div className="hidden w-full max-w-[360px] items-center justify-end gap-16 lg:flex xl:max-w-md">
-            {routerLinks.map((link, index) => (
-              <Link key={index * 4} href={link.link}>
-                <p className="navlink mt-1">{link.title}</p>
-              </Link>
-            ))}
             <button
-              onClick={() => setOpenForm(true)}
-              className="btn-submit h-16 w-[200px]"
+              onClick={openBurger}
+              className="z-[23] ml-auto w-6 cursor-pointer lg:hidden"
+              type="button"
             >
-              GET IN TOUCH
+              <Image alt="" src={menu_open} />
             </button>
-          </div>
-          <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />
-          <AnimatePresence>
-            {toggleMenu && (
-              <motion.div
-                initial={{ width: 0 }}
-                exit={{ width: 0 }}
-                animate={{ width: "100%", maxWidth: "100%" }}
-                className="absolute right-0 top-0 z-50  h-screen min-h-full w-full overflow-auto"
-              >
-                <motion.div
-                  style={{
-                    minHeight: `${windowHeight}px`,
-                    height: `${!serviceMobMenuOpen ? `${windowHeight}px` : "auto"}`
-                  }}
-                  className="relative flex flex-col overflow-y-scroll bg-black pb-8"
-                  initial="closed"
-                  animate={toggleMenu ? "open" : "closed"}
-                  variants={sideVariants}
-                >
-                  <motion.div className="relative flex h-24 items-center border-b border-b-th-fade px-4 md:h-16">
-                    <a href="/" rel="nofollow">
-                      <img
-                        className="w-32"
-                        title="Home"
-                        alt="Home-1"
-                        src={"/homepage/logo_light.svg"}
-                      ></img>
-                    </a>
-                    <Image
-                      className="ml-auto w-8 cursor-pointer lg:hidden"
-                      src={menu_close}
-                      onClick={(e) => {
-                        closeBurger();
-                        closeMobServiceMenu(e);
-                      }}
-                      alt=""
-                    ></Image>
-                  </motion.div>
-                  <motion.nav
-                    className={`${!serviceMobMenuOpen ? "mt-8 px-4" : "h-full"}  flex  flex-col gap-y-6 `}
-                  >
-                    {serviceMobMenuOpen ? (
-                      <ServicesAndTechnologiesMob
-                        closeServiceMenu={closeMobServiceMenu}
-                        closeBurger={closeBurger}
-                      />
-                    ) : (
-                      <>
-                        <div
-                          onClick={(e) => {
-                            openMobileServiceMenu(e);
-                          }}
-                          className="flex items-center "
-                        >
-                          <p className="cursor-pointer font-roc text-base font-medium uppercase text-white">
-                            Services & Technologies
-                          </p>
-                          <Image
-                            className="mb-1 ml-auto w-6"
-                            src={arrow}
-                            alt=""
-                          ></Image>
-                        </div>
-                        {anchorLinks.map((link, index) => (
-                          <Link
-                            key={index}
-                            href={link.link}
-                            onClick={closeBurger}
-                            variants={linkVariants}
-                            whiletap={{ scale: 0.95 }}
-                          >
-                            <div className="flex items-center">
-                              <p className="font-roc text-base font-medium uppercase text-white">
-                                {link.title}
-                              </p>
-                              <Image
-                                className="mb-1 ml-auto w-6"
-                                src={arrow}
-                                alt=""
-                              ></Image>
-                            </div>
-                          </Link>
-                        ))}
-                        {routerLinks.map((link, index) => (
-                          <Link
-                            key={index * 4}
-                            href={link.link}
-                            onClick={closeBurger}
-                            variants={linkVariants}
-                            whilehover={{ scale: 1.1 }}
-                            whiletap={{ scale: 0.95 }}
-                          >
-                            <div className="flex items-center">
-                              <p className="font-roc text-base font-medium uppercase text-white">
-                                {link.title}
-                              </p>
-                              <Image
-                                className="mb-1 ml-auto w-6"
-                                src={arrow}
-                                alt=""
-                              ></Image>
-                            </div>
-                          </Link>
-                        ))}
-                      </>
-                    )}
-                  </motion.nav>
-                  <button
-                    className="btn-submit mx-4 mt-auto text-center"
-                    onClick={handleMobileFormOpen}
-                  >
-                    GET IN TOUCH
-                  </button>
-                  <motion.div className="mx-auto mt-8 flex items-center justify-center gap-x-2">
-                    <a
-                      href="https://www.linkedin.com/company/cowchain/"
-                      rel="nofollow noreferrer"
-                      target="_blank"
-                    >
-                      <Image
-                        className="w-14"
-                        alt="linkedIn"
-                        src={linkedin}
-                      ></Image>
-                    </a>
-                    <a
-                      href="https://t.me/cowchain_team"
-                      rel="nofollow noreferrer"
-                      target="_blank"
-                    >
-                      <Image
-                        className="w-14"
-                        alt="telegram"
-                        src={telegram}
-                      ></Image>
-                    </a>
-                    <a
-                      href="https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw"
-                      rel="nofollow noreferrer"
-                      target="_blank"
-                    >
-                      <Image
-                        className="w-14"
-                        alt="twitter"
-                        src={twitter}
-                      ></Image>
-                    </a>
-                    <a
-                      href="https://medium.com/"
-                      rel="nofollow noreferrer"
-                      target="_blank"
-                    >
-                      <Image className="w-14" alt="medium" src={medium}></Image>
-                    </a>
-                    <a
-                      href="mailto:sales@cowchain.io"
-                      rel="nofollow noreferrer"
-                      target="_blank"
-                    >
-                      <Image className="w-14" alt="mail" src={mail}></Image>
-                    </a>
-                  </motion.div>
-                </motion.div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          )}
+
+          <NavbarRoutingLinks setOpenForm={setOpenForm} />
+
+          <BurgerMenu
+            toggleMenu={toggleMenu}
+            sideVariants={sideVariants}
+            closeBurger={closeBurger}
+            closeMobServiceMenu={closeMobServiceMenu}
+            openMobileServiceMenu={openMobileServiceMenu}
+            serviceMobMenuOpen={serviceMobMenuOpen}
+            handleMobileFormOpen={handleMobileFormOpen}
+          />
         </div>
       </section>
-      <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />
       {serviceMenuOpen && (
         <div ref={menuRef}>
-          <ServicesAndTechnologies setServiceMenuOpen={setServiceMenuOpen} />
+          <ServicesAndTechnologies closeServiceMenu={closeServiceMenu} />
         </div>
       )}
     </>

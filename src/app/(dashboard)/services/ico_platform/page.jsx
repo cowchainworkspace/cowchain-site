@@ -178,7 +178,6 @@ const ICOPlatform = () => {
           hasIcon={false}
           faqGradient={true}
           data={icoPlatformFaqData}
-          itemsClasses={"md:py-[43px]"}
           isDoublePadding={true}
           itemTitleClass={"xl:text-xl xl:leading-90 whitespace-pre-line"}
           faqContentClasses="max-w-[540px]"
@@ -205,7 +204,7 @@ const ICOPlatform = () => {
       <Cases />
       <CasesMobile />
       <div className="w-full overflow-hidden">
-        <FAQ noBg={true} data={faqData} />
+        <FAQ noBg={true} data={faqData} faqHorizontalPadding />
       </div>
       <Contact
         descriptionClasses={"mb-6 md:mb-0"}

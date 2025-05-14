@@ -1,22 +1,19 @@
+import bgImage from "@/assets/blog/bg-blog-ds.webp";
+import bgMobileImage from "@/assets/blog/bg-blog-mobile.webp";
 import Tag from "@/components/ui/tag";
-import React from "react";
-import team_bg from "@/assets/bg/team-mobile.png";
-import team from "@/assets/bg/team.png";
 import Image from "next/image";
+import React from "react";
 
 export const HeroSection = () => {
   return (
     <section className="scrollbar-none relative  w-full  border-b border-b-th-fade pt-20 md:max-w-full  lg:pt-[141px]">
       <Image
-        className=" pointer-events-none absolute -top-24 left-0 block lg:hidden"
-        alt="gradient"
-        src={team_bg}
+        src={bgImage}
+        className=" pointer-events-none absolute -top-24 left-0 hidden md:block"
       />
       <Image
-        className=" pointer-events-none absolute -top-24 left-0 hidden lg:block"
-        alt="gradient"
-        priority
-        src={team}
+        src={bgMobileImage}
+        className="pointer-events-none absolute -top-24 right-0 w-full  md:hidden"
       />
       <div className="relative flex cursor-default flex-col items-start justify-center px-5 pb-8 md:px-8 md:pb-12 lg:items-center lg:px-16 xl:px-24">
         <Tag title={"team"} className={"z-[20] mb-4 md:mb-8"} />

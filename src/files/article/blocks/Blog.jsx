@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import arrow from "../../../assets/arrow_right.svg";
-import { blogData } from "../../../data/blogData";
 import arrow_btn from "../../../assets/homepage/arrow-btn.png";
+import { blogData } from "../../../data/blogData";
 import { Post } from "../components/Post";
 
 export const Blog = () => {
@@ -14,6 +14,7 @@ export const Blog = () => {
   return (
     <section id="blog" className="relative">
       <button
+        type="button"
         id="blog-scroll"
         className="absolute right-24 top-1/3 z-30 hidden h-[50px] w-[50px] md:block"
         onClick={() => {

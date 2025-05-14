@@ -178,6 +178,8 @@ const BlockChainConsulting = () => {
           hasIcon={false}
           faqGradient={true}
           itemsClasses={"py-10 md:py-[55px]"}
+          accordionPanelClasses="pb-10 md:pb-[55px]"
+          expandedItemClasses="!pb-6"
         />
       </div>
 

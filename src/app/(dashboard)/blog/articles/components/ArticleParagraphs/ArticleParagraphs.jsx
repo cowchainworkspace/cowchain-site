@@ -1,4 +1,4 @@
-import { ellipseBg, ellipseBgMb } from "@/assets/article/index";
+import { ellipseBg } from "@/assets/article/index";
 import rightArrow from "@/assets/article/rightArrow.svg";
 import FooterForm from "@/components/utils/FooterForm";
 import Image from "next/image";
@@ -11,7 +11,7 @@ export const ArticleParagraphs = ({
   authorInfo
 }) => {
   return (
-    <div className="mb-20 md:mb-[100px] md:overflow-hidden">
+    <div className="mb-20">
       {paragraphs.map((paragraph, index) => {
         if (paragraph.component.includes("image")) {
           return (
@@ -57,12 +57,13 @@ export const ArticleParagraphs = ({
                   className="-z-1 pointer-events-none absolute -top-[110px] hidden scale-150 md:block"
                 />
                 <Image
-                  src={ellipseBgMb}
-                  width={546}
-                  height={526}
+                  src="/decoration-ellipse-blog-mobile.webp"
                   alt="background decoration"
-                  className="pointer-events-none absolute -top-[300px] w-screen md:hidden"
+                  width={600}
+                  height={550}
+                  className="pointer-events-none absolute -top-30 scale-[1.8] custom480:-top-[190px]  custom480:scale-150 md:hidden"
                 />
+
                 <h3 className="font z-10 mb-2 text-center text-lg font-medium uppercase ">
                   Subscribe to our newsletter
                 </h3>

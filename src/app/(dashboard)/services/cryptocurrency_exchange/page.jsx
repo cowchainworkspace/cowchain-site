@@ -157,6 +157,8 @@ const CryptoCurrencyDev = () => {
           faqGradient={true}
           itemTitleClass="xl:!text-[20px]"
           itemsClasses={"py-[50px] "}
+          accordionPanelClasses="md:pb-[50px]"
+          expandedItemClasses="!pb-6"
           titleClasses="custom1430:text-[42px]"
           faqContentClasses="max-w-[546px]"
         />

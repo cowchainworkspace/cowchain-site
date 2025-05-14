@@ -142,6 +142,8 @@ const IcoPlatformDevelopment = () => {
           faqGradient={true}
           data={icoPlatformFaqData}
           itemsClasses={"md:py-[65px]"}
+          accordionPanelClasses="md:pb-[65px]"
+          expandedItemClasses="!pb-6"
           isDoublePadding={true}
           itemTitleClass={"xl:text-xl xl:leading-90 whitespace-pre-line"}
           faqContentClasses="max-w-[530px]"
@@ -207,7 +209,7 @@ const IcoPlatformDevelopment = () => {
           alt="decoration ellipse"
           className="pointer-events-none absolute -bottom-[10%] -top-[25%] left-0 hidden h-[1600px]  w-auto  md:block"
         />
-        <FAQ noBg={true} data={icoPlatformFaqBotData} />
+        <FAQ noBg={true} data={icoPlatformFaqBotData} faqHorizontalPadding />
         <Contact
           titleClasses={
             "uppercase mb-6 md:mb-0 text-[32px] xl:max-w-[994px] xl:text-[64px]"
