@@ -26,7 +26,6 @@ export default {
       fontFamily: {
         roc: ['var(--font-roc)', "sans-serif"],
         manrope: ["var(--font-manrope)", "sans-serif"],
-        rubik: ["var(--font-rubik)", "sans-serif"],
         anton: ["var(--font-anton)", "sans-serif"],
         poppins: ["var(--font-poppins)", "sans-serif"],
         montserrat: ["var(--font-montserrat)", "sans-serif"]

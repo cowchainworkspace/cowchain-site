@@ -40,13 +40,6 @@ export const manrope = Manrope({
   variable: "--font-manrope"
 });
 
-export const rubik = Rubik({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  display: "swap",
-  variable: "--font-rubik"
-});
-
 export const anton = Anton({
   subsets: ["latin"],
   weight: "400",
@@ -74,7 +67,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={` ${rubik.variable} ${poppins.variable} ${montserrat.variable} ${anton.variable} ${manrope.variable} ${roc.variable}`}
+      className={`${poppins.variable} ${montserrat.variable} ${anton.variable} ${manrope.variable} ${roc.variable}`}
     >
       <head>
         <link rel="preload" href="/homepage/video.mp4" type="video" />
@@ -97,13 +90,12 @@ export default function RootLayout({ children }) {
         />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        {/* <link rel="stylesheet" href="https://use.typekit.net/cqp2qoa.css" /> */}
 
         {/* Google tag (gtag.js) */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-8LWED57JRG"
-        ></script>
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

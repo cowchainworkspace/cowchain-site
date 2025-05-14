@@ -1,14 +1,14 @@
-import Michael from "@/assets/homepage/team/newTeam/michaelImg.png";
-import Viacheslav from "@/assets/homepage/team/newTeam/viacheslavImg.png";
-import Oleh from "@/assets/homepage/team/newTeam/olehImg.png";
-import Vlad from "@/assets/homepage/team/newTeam/vladImg.png";
-import Alexandra from "@/assets/homepage/team/newTeam/alexandraImg.png";
-import Alex from "@/assets/homepage/team/newTeam/alexImg.png";
-import Hanna from "@/assets/homepage/team/newTeam/hannaImg.png";
-import Ruslan from "@/assets/homepage/team/newTeam/ruslanImg.png";
-import Olexandr from "@/assets/homepage/team/newTeam/olexandrIng.png";
-import newEmploye from "@/assets/homepage/team/newTeam/addEmployesImg.png";
 import linkedin from "@/assets/homepage/linkedin.svg";
+import newEmploye from "@/assets/homepage/team/newTeam/addEmployesImg.png";
+import Alex from "@/assets/homepage/team/newTeam/alexImg.png";
+import Alexandra from "@/assets/homepage/team/newTeam/alexandraImg.png";
+import Hanna from "@/assets/homepage/team/newTeam/hannaImg.png";
+import Michael from "@/assets/homepage/team/newTeam/michaelImg.png";
+import Oleh from "@/assets/homepage/team/newTeam/olehImg.png";
+import Olexandr from "@/assets/homepage/team/newTeam/olexandrIng.png";
+import Ruslan from "@/assets/homepage/team/newTeam/ruslanImg.png";
+import Viacheslav from "@/assets/homepage/team/newTeam/viacheslavImg.png";
+import Vlad from "@/assets/homepage/team/newTeam/vladImg.png";
 
 export const teamGalleryData = [
     {
@@ -35,7 +35,7 @@ export const teamGalleryData = [
     },
     {
       name: "Oleh",
-      role: "Head of Development",
+      role: "CTO",
       photo: Oleh,
       social: {
         network: "LinkedIn",

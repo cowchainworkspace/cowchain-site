@@ -9,10 +9,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-
-export default function Header() {
+import { useLoader } from "../hooks/useLoader";
+export default function NotFoundHeader() {
   const [openForm, setOpenForm] = useState(false);
   const [isSubmit, setIsSubmit] = useState(false);
+  const { setIsLoading, setIsRendering } = useLoader();
+
   const {
     register,
     handleSubmit,
@@ -21,6 +23,12 @@ export default function Header() {
   } = useForm();
 
   useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+    setTimeout(() => {
+      setIsRendering(false);
+    }, 700);
     if (isSubmit) {
       setTimeout(() => {
         window.location.href = "/";
@@ -140,7 +148,7 @@ export default function Header() {
           <Tag className={"mb-4 cursor-pointer md:mb-8"} title={"Our blog"} />
         </Link>
 
-        <button onClick={() => setOpenForm(true)} href={"/"}>
+        <button type="button" onClick={() => setOpenForm(true)} href={"/"}>
           <Tag className={"mb-4 cursor-pointer md:mb-8"} title={"Contact us"} />
         </button>
         <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />

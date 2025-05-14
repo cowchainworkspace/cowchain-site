@@ -438,7 +438,7 @@ export const teamData = [
   },
   {
     name: "Oleh",
-    role: "Head of Development",
+    role: "CTO",
     photo: OlehImg,
     social: {
       network: "LinkedIn",
@@ -505,7 +505,7 @@ export const jsonLdContacts = {
   url: "{page_URL}",
   sameAs: [
     "https://twitter.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw",
-    "https://www.linkedin.com/company/cowchain/"
+    "https://www.linkedin.com/company/cowchaindev/"
   ]
 };
 

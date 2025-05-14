@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { blocksData } from "../homeData/data";
 
 export default function ExpandingBlocks({ isSecondary = false }) {
@@ -70,9 +70,8 @@ export default function ExpandingBlocks({ isSecondary = false }) {
         </div>
         <div className="px-default mx-auto  flex h-[411px] max-w-[1440px] border-t border-t-th-fade md:border-0">
           {blocksData.map((block, index) => (
-            <>
+            <Fragment key={block.id}>
               <motion.div
-                key={block.id}
                 layout
                 transition={{ duration: 0.6, ease: "easeInOut" }}
                 onClick={() => handleClick(block)}
@@ -153,7 +152,7 @@ export default function ExpandingBlocks({ isSecondary = false }) {
                   </p>
                 </div>
               </div>
-            </>
+            </Fragment>
           ))}
         </div>
       </div>

@@ -1,5 +1,4 @@
 "use client";
-import bannerIg from "@/assets/blog/articles/splash.png";
 import FooterForm from "@/components/utils/FooterForm";
 import { articleOptions, useMutatePost } from "@/hooks/use-strapi";
 import { getSplitText } from "@/lib/utils";
@@ -87,7 +86,7 @@ const ArticleInfo = () => {
         {isLessThan1280 ? (
           <Image
             fill
-            src={data.banner_img?.url || bannerIg}
+            src={data.banner_img?.url}
             alt="banner image"
             objectFit="cover"
             quality={100}
@@ -97,7 +96,7 @@ const ArticleInfo = () => {
         ) : (
           <div
             style={{
-              backgroundImage: `url(${data.banner_img?.url || bannerIg})`,
+              backgroundImage: `url(${data.banner_img?.url})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center"

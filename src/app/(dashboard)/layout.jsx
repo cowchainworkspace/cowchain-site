@@ -1,6 +1,5 @@
 "use client";
 import homeDescTopBg from "@/assets/homepage/desctop-home.webp";
-import homeMobileBg from "@/assets/homepage/home-bg-header-mobile.webp";
 import { Loading } from "@/components/loader/Loading";
 import ContactForm from "@/components/utils/ContactForm";
 import { useLoader } from "@/hooks/useLoader";
@@ -9,7 +8,7 @@ import emailjs from "emailjs-com";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useOpenForm } from "../../hooks/useOpenForm";
 import LoaderWrapper from "./loaderWrapper";
 
@@ -22,7 +21,7 @@ const Footer = dynamic(() => import("@/components/Footer"), {
 });
 
 export default function DashboardLayout({ children }) {
-  const { isRendering, setIsLoading, setIsRendering } = useLoader();
+  const { setIsLoading, setIsRendering } = useLoader();
   const { openForm, setOpenForm } = useOpenForm();
 
   const pathname = usePathname();
@@ -52,7 +51,6 @@ export default function DashboardLayout({ children }) {
               alt=""
               className={cn(
                 "absolute left-0 top-0 z-10 hidden w-full opacity-100 md:block"
-                // isRendering && "opacity-0"
               )}
               src={homeDescTopBg}
             />
@@ -61,18 +59,16 @@ export default function DashboardLayout({ children }) {
               priority
               className={cn(
                 "pointer-events-none absolute left-0 top-0 z-10 block h-auto w-full md:hidden"
-                // isRendering && "opacity-0"
               )}
               width={443}
               height={326}
-              src={homeMobileBg}
+              src={"/home-bg-header-mobile.webp"}
               alt=""
             />
           </>
         )}
         <Navbar />
-        {children}
-        {/* <LoaderWrapper>{children}</LoaderWrapper> */}
+        <LoaderWrapper>{children}</LoaderWrapper>
         <Footer footerForm={pathname !== "/blog" ? false : true} />
       </div>
       <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />
