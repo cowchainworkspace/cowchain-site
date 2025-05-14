@@ -8,6 +8,10 @@ export { default as pixelVerseImage } from "./pixel-verse.webp"
 export { default as brc20Image } from "./brc-20.webp"
 export { default as memelutImage } from "./memelut.webp"
 export { default as tenetImage } from "./tenet.webp"
+export { default as starsImage } from "./stars-banner-img.webp"
+
+
+
 
 export { default as agntMobile } from "./mobile/AgntMobile.webp"
 export { default as brc20Mobile } from "./mobile/brc20Mobile.webp"
@@ -19,6 +23,8 @@ export { default as retroBridgeMobile } from "./mobile/retroBridgeMobile.webp"
 export { default as tenetMobileImg } from "./mobile/tenetMobileImg.webp"
 export { default as stepUpMobile } from "./mobile/stepUpMobile.webp"
 export { default as gbcMobile } from "./mobile/gbcMobile.webp"
+export { default as starsMobile } from "./mobile/stars.webp"
+
 
 
 

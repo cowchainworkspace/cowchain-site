@@ -1,4 +1,4 @@
-import {agent, crossChain, gbc as gbcImage, hybrid as hybridImage, m2eNewOne, memolut, pixelVerse, tenet as tenetImage } from "./../../../../public/projects"
+import {agent, brc20 as brc20Img, crossChain, gbc as gbcImage, hybrid as hybridImage, m2eNewOne, memolut, pixelVerse, reflectNewOne, stars as starsImage, tenet as tenetImage } from "./../../../../public/projects"
 
 const getRelatedProjects = (project, allProjects) => {
   return allProjects.filter(p =>
@@ -117,7 +117,7 @@ const pixelverse = {
   relatedSlugs: ["memelut", "gbc", "step-app"],
 }
 
-const hybrid = {
+export const hybrid = {
     id: 7,
     tags: [
       { isMain: true, tagName: "Web Development" },
@@ -136,7 +136,7 @@ const hybrid = {
     relatedSlugs: ["agnt", "tenet", "retrobridge"],
 }
 
-const tenet = 
+export const tenet = 
   {
     id: 8,
     tags: [
@@ -163,7 +163,61 @@ const tenet =
     relatedSlugs: ["memelut", "step-app", "hybrid"],
   }
 
-const allProjects = [memelut, gbc, tenet, retrobridge, agnt, pixelverse, stepApp, hybrid]
+  const brc20 = {
+    id:9, 
+    tags: [
+          { isMain: true, tagName: "Web Development" },
+          { isMain: true, tagName: "AI Development" },
+          { isMain: false, tagName: "Trading" },
+          { isMain: false, tagName: "DeFi" }
+        ],
+        title: "brc20",
+      desc: "BRC20 is the Launchpad built for the Ordinals ecosystem, redefining how Bitcoin-based assets are distributed and traded.",
+      textGap: "md:gap-[24px]",
+      cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
+      img: brc20Img,
+      projectLink: "brc20",
+      relatedSlugs: ["pixel-verse", "stars", "agnt"],
+  }
+
+  const stars = {
+    id:10,
+    tags: [
+      { isMain: true, tagName: "Mobile App" },
+      { isMain: true, tagName: "Telegram Mini-Apps" },
+      { isMain: false, tagName: "Trading" },
+    ],
+    title: "stars",
+    desc: "Primex Finance is a non-custodial Prime Brokerage protocol redefining decentralized finance by enabling leveraged trading.",
+    projectLink: "stars",
+    titleClasses: "text-black",
+    tagClasses: "bg-[#000000]  h-[34px] !border-0",
+    tagDescClasses: "text-white",
+    textColor: "text-black",
+    textGap: "md:gap-[24px]",
+    img: starsImage,
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[17px]",
+    relatedSlugs: ["reflect", "tenet", "hybrid"  ],
+  }
+
+export const reflect = {
+    id: 11,
+    tags: [
+          { isMain: true, tagName: "Web Development" },
+          { isMain: true, tagName: "AI Development" },
+          { isMain: false, tagName: "Trading" },
+          { isMain: false, tagName: "DeFi" }
+        ],
+    title: 'reflect',
+    desc: 'Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains.',
+    img: reflectNewOne,
+    projectLink: "reflect",
+    textGap: "md:gap-[24px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
+    relatedSlugs: ["reflect", "gbc", "step-app"],
+}
+
+const allProjects = [memelut, gbc, tenet, retrobridge, agnt, pixelverse, stepApp, hybrid, brc20, stars, reflect]
 
 
 export const relatedRetorbridgeProjects = getRelatedProjects(retrobridge, allProjects);
@@ -174,3 +228,4 @@ export const relatedHybridProjects = getRelatedProjects(hybrid, allProjects);
 export const relatedStepAppProjects = getRelatedProjects(stepApp, allProjects);
 export const relatedMemelutProjects = getRelatedProjects(memelut, allProjects);
 export const relatedTenetProjects = getRelatedProjects(tenet, allProjects);
+

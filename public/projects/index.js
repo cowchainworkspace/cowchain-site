@@ -16,6 +16,9 @@ export { default as tenet } from "./tenet-project.webp";
 export { default as kruuu } from "./kruuu-project.webp";
 export { default as reflectBg } from "./reflect-case-bg.webp";
 export { default as m2eNewOne } from "./m2e-new-one.webp";
+export { default as reflectNewOne } from "./reflect-new.webp";
+
+
 
 
 
