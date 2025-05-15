@@ -245,23 +245,21 @@ export const cases = [
     containerWidth: 450
   },
 
-  // TEMPORARILY HIDE: BRC20 case card is hidden until design is finalized
-
-  // {
-  //   id: 8,
-  //   tags: [
-  //     { isMain: true, tagName: "Web Development" },
-  //     { isMain: false, tagName: "DeFi" }
-  //   ],
-  //   caseName: "BRC20",
-  //   caseDescription:
-  //     "BRC20 is the first Launchpad built for the Ordinals ecosystem, redefining how Bitcoin-based assets are distributed and traded.",
-  //   link: "cases/brc-20",
-  //   caseImage: brc20Image,
-  //   caseMobileImage: brc20Mobile,
-  //   imageHeight: 540,
-  //   containerWidth: 450
-  // },
+  {
+    id: 8,
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: false, tagName: "DeFi" }
+    ],
+    caseName: "BRC20",
+    caseDescription:
+      "BRC20 is the first Launchpad built for the Ordinals ecosystem, redefining how Bitcoin-based assets are distributed and traded.",
+    link: "cases/brc20",
+    caseImage: brc20Image,
+    caseMobileImage: brc20Mobile,
+    imageHeight: 540,
+    containerWidth: 450
+  },
 
   {
     id: 9,
