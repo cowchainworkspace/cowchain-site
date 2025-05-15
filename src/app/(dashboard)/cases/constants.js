@@ -7,6 +7,7 @@ import {
   pixelVerseImage,
   reflectImage,
   retroBridgeImage,
+  starsImage,
   stepAppImage,
   tenetImage
 } from "../../../../public/cases/main";
@@ -20,6 +21,7 @@ import {
   pixelverseMobileImg,
   reflectMobileImg,
   retroBridgeMobile,
+  starsMobile,
   stepUpMobile,
   tenetMobileImg
 } from "../../../../public/cases/main";
@@ -312,6 +314,27 @@ export const cases = [
     link: "cases/tenet",
     caseImage: tenetImage,
     caseMobileImage: tenetMobileImg,
+    imageHeight: 560,
+    containerWidth: 630
+  },
+  {
+    id: 11,
+    tags: [
+      { isMain: true, tagName: "Mobile App" },
+      { isMain: true, tagName: "Telegram Mini-Apps" },
+      { isMain: false, tagName: "Trading" },
+    ],
+    filterTags: [
+      { tagName: "Mobile App" },
+      { tagName: "Mobile Telegram Mini-Apps" },
+      { tagName: "Trading" }
+    ],
+    caseName: "Stars",
+    caseDescription:
+      "Stars is a Telegram mini app where users earn points by completing simple, community-focused tasks. Built for mass onboarding, Stars combines game-like simplicity with powerful mechanics that keep users engaged.",
+    link: "cases/stars",
+    caseImage: starsImage,
+    caseMobileImage: starsMobile,
     imageHeight: 560,
     containerWidth: 630
   }
