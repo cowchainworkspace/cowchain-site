@@ -2,21 +2,42 @@ import "./index.css";
 import "./home.css";
 import { ClientProvider } from "@/lib/api/client";
 import { Anton, Manrope, Montserrat, Poppins, Rubik } from "next/font/google";
+import localFont from "next/font/local";
 
 import { metadata } from "./rootMetadata";
+
+const roc = localFont({
+  src: [
+    {
+      path: "../fonts/roc-grotesc/fonnts.com-Roc_Grotesk_Regular.otf",
+      weight: "400",
+      style: "normal"
+    },
+    {
+      path: "../fonts/roc-grotesc/fonnts.com-Roc_Grotesk_Medium.otf",
+      weight: "500",
+      style: "normal"
+    },
+    {
+      path: "../fonts/roc-grotesc/fonnts.com-Roc_Grotesk_Bold.otf",
+      weight: "600",
+      style: "normal"
+    },
+    {
+      path: "../fonts/roc-grotesc/fonnts.com-Roc_Grotesk_ExtraBold.otf",
+      weight: "700",
+      style: "normal"
+    }
+  ],
+  display: "swap",
+  variable: "--font-roc"
+});
 
 export const manrope = Manrope({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
   variable: "--font-manrope"
-});
-
-export const rubik = Rubik({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  display: "swap",
-  variable: "--font-rubik"
 });
 
 export const anton = Anton({
@@ -46,7 +67,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={` ${rubik.variable} ${poppins.variable} ${montserrat.variable} ${anton.variable} ${manrope.variable}`}
+      className={`${poppins.variable} ${montserrat.variable} ${anton.variable} ${manrope.variable} ${roc.variable}`}
     >
       <head>
         <link rel="preload" href="/homepage/video.mp4" type="video" />
@@ -69,13 +90,12 @@ export default function RootLayout({ children }) {
         />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <link rel="stylesheet" href="https://use.typekit.net/cqp2qoa.css" />
 
         {/* Google tag (gtag.js) */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-8LWED57JRG"
-        ></script>
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

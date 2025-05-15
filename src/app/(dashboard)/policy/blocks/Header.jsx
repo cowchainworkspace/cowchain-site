@@ -1,13 +1,13 @@
-import React from "react";
 import bg_lg from "@/assets/bg/clients_header_bg_lg.png";
 import Image from "next/image";
+import React from "react";
 
 const Header = () => {
   return (
     <section id="clients-header" className="relative">
       <Image
         alt="Header Background"
-        className="absolute right-0 top-0 min-h-[150%] min-w-[200vw] md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
+        className="absolute -top-24 right-0 min-h-[150%] min-w-[200vw] md:-top-16 md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
         src={bg_lg}
       />
       <div className="relative  flex flex-col pb-16 md:pb-32 lg:pb-14 lg:pt-16">

@@ -10,14 +10,12 @@ import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
 import agnt from "@/assets/cases/agntCase.png";
 import gbc from "@/assets/cases/gbcCase.png";
 import hybrid from "@/assets/cases/hybridCase.png";
-import retroBridge from "@/assets/cases/retrobridgeCase.png";
-import stepUp from "@/assets/cases/stepUpCase.png";
 import memolut from "@/assets/cases/memolut.webp"
 import pixelVerse from "@/assets/cases/pixel-verse.webp"
+import retroBridge from "@/assets/cases/retrobridgeCase.png";
+import stepUp from "@/assets/cases/stepUpCase.png";
 import tenet from "@/assets/cases/tenet-project.webp"
 
-
-// import {tenet, pixelVerse, memolut} from "../../../../../public/projects"
 export const blocksData = [
   {
     id: 1,
@@ -440,7 +438,7 @@ export const teamData = [
   },
   {
     name: "Oleh",
-    role: "Head of Development",
+    role: "CTO",
     photo: OlehImg,
     social: {
       network: "LinkedIn",
@@ -507,7 +505,7 @@ export const jsonLdContacts = {
   url: "{page_URL}",
   sameAs: [
     "https://twitter.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw",
-    "https://www.linkedin.com/company/cowchain/"
+    "https://www.linkedin.com/company/cowchaindev/"
   ]
 };
 

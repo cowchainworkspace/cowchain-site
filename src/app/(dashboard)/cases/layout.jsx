@@ -1,7 +1,3 @@
-import { metadata } from "./casesData/data";
-
-export { metadata };
-
 export default async function CasesLayout({ children }) {
   return (
     <section>

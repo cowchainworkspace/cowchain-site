@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { HeroSection } from "../../blocks/HeroSection";
 import BlogContact from "../BlogContact/BlogContact";
 import BlogList from "../BlogList";
@@ -22,7 +22,9 @@ const BlogInfo = () => {
     >
       <OldBreadCrumbs />
       <HeroSection />
-      <BlogList isClicking={isClicking} handleClick={handleClick} />
+      <Suspense>
+        <BlogList isClicking={isClicking} handleClick={handleClick} />
+      </Suspense>
       <BlogContact className="px-6 pb-[60px] pt-[72px] md:py-[140px]" />
     </div>
   );

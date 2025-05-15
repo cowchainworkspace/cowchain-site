@@ -18,7 +18,10 @@ const Clients = () => {
         <Feedback />
         <Credo />
         <Cases />
-        <Contact />
+        <Contact
+          className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
+          titleClasses={"mb-8 md:mb-0"}
+        />
       </div>
     </section>
   );

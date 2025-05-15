@@ -97,6 +97,7 @@ export const FaqAccordion = ({ openServicePage }) => {
                     if (!link.href) {
                       return (
                         <button
+                          key={link.label}
                           onClick={openServicePage}
                           type="button"
                           className="text-left align-middle text-base "
@@ -106,14 +107,14 @@ export const FaqAccordion = ({ openServicePage }) => {
                       );
                     }
                     if (link.isAnchor) {
-                      <AnchorLink key={i} href={link.href}>
+                      <AnchorLink key={link.label} href={link.href}>
                         <p className="text-left align-middle text-base !text-secondary">
                           {link.label}
                         </p>
                       </AnchorLink>;
                     }
                     return (
-                      <Link key={i} href={link.href} passHref>
+                      <Link key={link.label} href={link.href} passHref>
                         <p className="text-left align-middle text-base !text-secondary">
                           {link.label}
                         </p>
