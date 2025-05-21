@@ -229,3 +229,4 @@ export const relatedStepAppProjects = getRelatedProjects(stepApp, allProjects);
 export const relatedMemelutProjects = getRelatedProjects(memelut, allProjects);
 export const relatedTenetProjects = getRelatedProjects(tenet, allProjects);
 export const relatedBRC20Projects = getRelatedProjects(brc20, allProjects);
+export const relatedReflectProjects = getRelatedProjects(reflect, allProjects);

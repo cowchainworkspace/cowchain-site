@@ -206,25 +206,23 @@ export const cases = [
     imageHeight: 560,
     containerWidth: 848
   },
-
-  // TEMPORARILY HIDE: Reflect case card is hidden until design is finalized
-  // {
-  //   id: 6,
-  //   tags: [
-  //     { isMain: true, tagName: "Web Development" },
-  //     { isMain: true, tagName: "AI Development" },
-  //     { isMain: false, tagName: "Trading" },
-  //     { isMain: false, tagName: "DeFi" }
-  //   ],
-  //   caseName: "Reflect",
-  //   caseDescription:
-  //     "Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains. By enabling users to manage liquidity, execute swaps, stake assets, and vote on governance proposals directly through chat commands, Reflect enhances simplicity and accessibility in DeFAI.",
-  //   link: "cases/reflect",
-  //   caseImage: reflectImage,
-  //   caseMobileImage: reflectMobileImg,
-  //   imageHeight: 560,
-  //   containerWidth: 848
-  // },
+  {
+    id: 6,
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "AI Development" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "DeFi" }
+    ],
+    caseName: "Reflect",
+    caseDescription:
+      "Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains. By enabling users to manage liquidity, execute swaps, stake assets, and vote on governance proposals directly through chat commands, Reflect enhances simplicity and accessibility in DeFAI.",
+    link: "cases/reflect",
+    caseImage: reflectImage,
+    caseMobileImage: reflectMobileImg,
+    imageHeight: 560,
+    containerWidth: 848
+  },
   {
     id: 7,
     tags: [
