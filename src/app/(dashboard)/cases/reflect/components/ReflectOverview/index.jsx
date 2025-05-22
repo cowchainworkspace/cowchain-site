@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import RightArrowSvg from "../../../../../../../public/svgIcons/RightArrowSvg";
-import { overviewMemelutItems } from "../../utils/constants";
-import MemelutOverviewItems from "../MemelutOverviewItems";
+import { overviewReflectItems } from "../../utils/constants";
+import ReflectOverviewItems from "../ReflectOverviewItems";
 import { cn } from "@/lib/utils";
 
-const MemelutOverview = ({ containerClasses }) => {
+const ReflectOverview = ({ containerClasses }) => {
   return (
     <section>
       <div
@@ -35,7 +35,7 @@ const MemelutOverview = ({ containerClasses }) => {
               <Link
                 className="flex items-center gap-4"
                 href={
-                  "https://apps.apple.com/ua/app/memelut-memecoins-crypto/id6569243953"
+                  "https://reflect.now"
                 }
                 target="_blank"
               >
@@ -46,11 +46,11 @@ const MemelutOverview = ({ containerClasses }) => {
               </Link>
             </div>
           </div>
-          <MemelutOverviewItems items={overviewMemelutItems} />
+          <ReflectOverviewItems items={overviewReflectItems} />
         </div>
       </div>
     </section>
   );
 };
 
-export default MemelutOverview;
+export default ReflectOverview;

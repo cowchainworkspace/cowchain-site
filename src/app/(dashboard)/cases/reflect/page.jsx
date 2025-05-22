@@ -1,27 +1,26 @@
 import Contact from "@/components/Contact";
-import Image from "next/image";
 import React from "react";
 import Banner from "../components/Banner";
 import CasesSlider from "../components/CasesSlider";
 import CaseHeroScreen from "../components/HeroScreen";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
-import { relatedMemelutProjects } from "../data";
-import MemelutOverview from "./components/MemelutOverview";
-import MemelutSolutions from "./components/MemelutSolutions";
-import MemelutWhatWeDid from "./components/MemelutWhatWeDid";
+import { relatedReflectProjects } from "../data";
+import ReflectOverview from "./components/ReflectOverview";
+import ReflectSolutions from "./components/ReflectSolutions";
+import ReflectWhatWeDid from "./components/ReflectWhatWeDid";
 
-import { metadata } from "./utils/memelutMetadata";
+import { metadata } from "./utils/reflectMetadata";
 
 import {
   reflectSlides,
-  memelutSolutions,
-  memelutTeam,
+  reflectSolutions,
+  reflectTeam,
   reflectTags
 } from "./utils/constants";
 export { metadata };
 
-const Memelut = () => {
+const Reflect = () => {
   return (
     <section>
       <CaseHeroScreen
@@ -45,9 +44,9 @@ const Memelut = () => {
       <Banner
         img={"/cases/reflect/reflect-banner.webp"}
         classes={"h-[145px] md:h-[300px] lg:h-[400px] xl:h-[560px]"}
-        imgDesc={"Memelut banner"}
+        imgDesc={"Reflect banner"}
       />
-      <MemelutOverview containerClasses="pb-[22px] md:pb-[120px]" />
+      <ReflectOverview containerClasses="pb-[22px] md:pb-[120px]" />
 
       <CasesSlider
         sectionClasses={"h-[157px] mb-0 md:mb-[63px]  md:h-[492px]"}
@@ -57,8 +56,8 @@ const Memelut = () => {
 
       <div className="mx-auto w-full max-w-[1246px] px-4 md:px-10 xl:px-0">
         {" "}
-        <MemelutSolutions
-          solutions={memelutSolutions}
+        <ReflectSolutions
+          solutions={reflectSolutions}
           classes="md:gap-[69px] xl:last:-mt-0"
           containerClasses="w-full"
           gridClass="xl:gap-0"
@@ -76,13 +75,13 @@ const Memelut = () => {
         className={"mx-auto block h-[170px] max-w-[375px] sm:hidden "}
         src="/cases/reflect/mob-reflect-second-banner.webp"
       />
-      <MemelutWhatWeDid />
+      <ReflectWhatWeDid />
       <TeamBehind
         headerClasses={"xl:leading-[18.41px] xl:tracking-[1.84px]"}
-        team={memelutTeam}
+        team={reflectTeam}
         classes={"pt-0 xl:pt-[60px]"}
       />
-      <MoreProjects projects={relatedMemelutProjects} isReversed={true} />
+      <MoreProjects projects={relatedReflectProjects} isReversed={true} />
       <Contact
         className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
         descriptionClasses={"hidden md:block"}
@@ -92,4 +91,4 @@ const Memelut = () => {
   );
 };
 
-export default Memelut;
+export default Reflect;

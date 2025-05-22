@@ -4,7 +4,7 @@ import { useMediaQuery } from "@chakra-ui/react";
 import Image from "next/image";
 import React, { Fragment } from "react";
 
-const MemelutSolutions = ({
+const ReflectSolutions = ({
   solutions,
   classes,
   containerClasses,
@@ -85,4 +85,4 @@ const MemelutSolutions = ({
   );
 };
 
-export default MemelutSolutions;
+export default ReflectSolutions;

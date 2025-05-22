@@ -9,7 +9,7 @@ import React from "react";
 import TopArrowSvg from "../../../../../../../public/svgIcons/TopArrowSvg";
 
 import { cn } from "@/lib/utils";
-const MemelutOverviewItems = ({ items }) => {
+const ReflectOverviewItems = ({ items }) => {
   return (
     <div className=" w-full">
       <Accordion
@@ -76,4 +76,4 @@ const MemelutOverviewItems = ({ items }) => {
   );
 };
 
-export default MemelutOverviewItems;
+export default ReflectOverviewItems;

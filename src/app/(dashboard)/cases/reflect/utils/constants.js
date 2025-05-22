@@ -16,21 +16,6 @@ import {
   mobReflectVelodrome
 } from "../../../../../../public/cases/reflect/solutions";
 
-export const memeluteTags = [
-  {
-    id: 1,
-    tagLabel: "Mobile App"
-  },
-  {
-    id: 2,
-    tagLabel: "Trading"
-  },
-  {
-    id: 3,
-    tagLabel: "Crypto Wallet"
-  }
-];
-
 export const reflectTags = [
   {
     id: 1,
@@ -55,7 +40,7 @@ export const reflectTags = [
   },
 ];
 
-export const overviewMemelutItems = [
+export const overviewReflectItems = [
   {
     id: 1,
     itemName: "tech stack",
@@ -111,7 +96,7 @@ export const reflectSlides = [
     height: 492,
     mobileHeight: 158,
     mobileWidth: 261,
-    desc: "Memelut Screen",
+    desc: "Reflect Screen",
     href: firstSlideReflect
   },
   {
@@ -120,7 +105,7 @@ export const reflectSlides = [
     height: 492,
     mobileHeight: 158,
     mobileWidth: 261,
-    desc: "Memelut Screen",
+    desc: "Reflect Screen",
     href: secondSlideReflect
   },
   {
@@ -129,12 +114,12 @@ export const reflectSlides = [
     height: 492,
     mobileHeight: 158,
     mobileWidth: 261,
-    desc: "Memelut Wallet screen",
+    desc: "Reflect screen",
     href: thirdSlideReflect
   }
 ];
 
-export const memelutSolutions = [
+export const reflectSolutions = [
   {
     id: 1,
     title: "AI-Powered DeFi Automation",
@@ -214,7 +199,7 @@ export const memelutSolutions = [
   }
 ];
 
-export const memelutTeam = [
+export const reflectTeam = [
   {
     id: 1,
     department: "development",

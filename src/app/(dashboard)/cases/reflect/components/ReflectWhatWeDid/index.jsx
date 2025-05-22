@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const MemelutWhatWeDid = () => {
+const ReflectWhatWeDid = () => {
   return (
     <section className="py-[50px] xl:py-30">
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 xl:px-[97px]">
@@ -48,4 +48,4 @@ const MemelutWhatWeDid = () => {
   );
 };
 
-export default MemelutWhatWeDid;
+export default ReflectWhatWeDid;
