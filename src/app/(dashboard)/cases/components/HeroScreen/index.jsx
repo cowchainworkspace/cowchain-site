@@ -37,7 +37,7 @@ const CaseHeroScreen = ({
         )}
       >
         {bgDecoration}
-        <div className={cn("flex gap-2", tagContainerClasses)}>
+        <div className={cn("flex gap-2 justify-center flex-wrap", tagContainerClasses)}>
           {tags.map(({ tagLabel, id }) => (
             <CaseTag key={id} tagLabel={tagLabel} />
           ))}
