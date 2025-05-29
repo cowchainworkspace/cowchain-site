@@ -1,11 +1,11 @@
 "use client";
 
+import { useGetItems } from "@/hooks/use-strapi";
+import { cn } from "@/lib/utils";
+import Markdown from "markdown-to-jsx";
+import Image from "next/image";
 import React, { createElement } from "react";
 import { ExpertiseBlock } from "./components/expertise";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import { useGetItems } from "@/hooks/use-strapi";
-import Markdown from "markdown-to-jsx";
 
 const expertiseData = [
   {
@@ -33,12 +33,15 @@ export default function Networks({ margin = "mt-[calc(35vh_+_1.5625vh)]" }) {
   return (
     <section
       id="expertise"
-      className={cn("relative border-b border-b-th-fade border-t border-t-th-fade  md:mt-0", margin)}
+      className={cn(
+        "relative border-b border-t border-b-th-fade border-t-th-fade  md:mt-0",
+        margin
+      )}
     >
       <div className="relative z-20 grid lg:grid-cols-2">
         <div className="relative grid grid-cols-1 pt-14 md:border-r md:border-r-th-fade">
           <Image
-            alt=""
+            alt="Background decoration ellipse"
             width={530}
             height={377}
             className="absolute -top-60 right-0 -z-10 md:hidden"
@@ -67,7 +70,11 @@ export default function Networks({ margin = "mt-[calc(35vh_+_1.5625vh)]" }) {
         <div className="grid lg:grid-cols-1">
           <div className="grid md:grid-cols-2">
             {data?.data.map((expertise, index) => (
-              <ExpertiseBlock key={index * 2} index={index} {...expertise.attributes} />
+              <ExpertiseBlock
+                key={index * 2}
+                index={index}
+                {...expertise.attributes}
+              />
             ))}
           </div>
         </div>

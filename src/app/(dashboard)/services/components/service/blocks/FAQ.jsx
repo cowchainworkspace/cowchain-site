@@ -75,7 +75,7 @@ export default function FAQ({
           className="absolute -top-[380px] bottom-0 left-0 right-0 z-[-3] overflow-hidden"
         >
           <Image
-            alt=""
+            alt="Background decoration ellipse"
             width={1380}
             height={1330}
             style={{ pointerEvents: "none" }}

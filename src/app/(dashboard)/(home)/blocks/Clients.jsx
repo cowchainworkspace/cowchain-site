@@ -30,7 +30,7 @@ export default function Clients() {
   return (
     <section className="relative border-t border-t-th-fade">
       <Image
-        alt=""
+        alt="Background decoration ellipse"
         className="pointer-events-none absolute -top-[38%] right-0 z-[0] hidden h-screen md:-top-[45%] md:block md:h-min  lg:-top-[65%]"
         src={bg_lg}
       />
@@ -48,7 +48,11 @@ export default function Clients() {
               <p className="header uppercase text-white underline">
                 VIEW ALL PROJECTS
               </p>
-              <Image className="w-6" src={arrow} alt="" />
+              <Image
+                className="w-6"
+                src={arrow}
+                alt="Background decoration ellipse"
+              />
             </div>
           </Link>
           <div className="mt-8 flex w-full max-w-xl flex-col justify-between customSmall:flex-row lg:order-3 lg:ml-auto">
@@ -111,7 +115,7 @@ export default function Clients() {
                 ALL PROJECTS
               </p>
 
-              <Image className="w-6" src={arrow} alt="" />
+              <Image className="w-6" src={arrow} alt="Navigation arrow" />
             </div>
           </Link>
         </div>

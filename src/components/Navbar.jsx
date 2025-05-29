@@ -131,7 +131,7 @@ export default function Navbar() {
           >
             <Image
               src="/homepage/logo_light.svg"
-              alt="Home logo"
+              alt="Cowchain company logo"
               title="Home"
               width={160}
               height={40}
@@ -144,7 +144,7 @@ export default function Navbar() {
               className="ml-auto w-6 cursor-pointer lg:hidden"
               src={menu_close}
               onClick={closeBurger}
-              alt=""
+              alt="Menu close button"
             />
           ) : (
             <button
@@ -152,7 +152,7 @@ export default function Navbar() {
               className="z-[23] ml-auto w-6 cursor-pointer lg:hidden"
               type="button"
             >
-              <Image alt="" src={menu_open} />
+              <Image alt="Menu open button" src={menu_open} />
             </button>
           )}
 

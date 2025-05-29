@@ -27,7 +27,7 @@ export const HeroSection = ({
         />
       </Helmet>
       <Image
-        alt=""
+        alt="Background decoration ellipse"
         className={cn(
           "absolute -top-24 right-0  min-h-[150%] min-w-[200vw] md:min-h-[130%] md:min-w-full ",
           isRwa

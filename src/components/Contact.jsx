@@ -35,12 +35,12 @@ export default function Contact({
       <Image
         className="pointer-events-none absolute left-1/2  top-[45%] hidden  -translate-x-1/2 -translate-y-1/2  md:block"
         src={bgEllipse}
-        alt=""
+        alt="Background decoration ellipse"
       />
       <Image
         className="pointer-events-none absolute left-1/2 top-[40%]  h-auto w-full -translate-x-1/2 -translate-y-1/2 md:hidden"
         src={bgMb}
-        alt=""
+        alt="Background decoration ellipse"
       />
       <div className="relative">
         <div className="flex flex-col text-center md:gap-10">

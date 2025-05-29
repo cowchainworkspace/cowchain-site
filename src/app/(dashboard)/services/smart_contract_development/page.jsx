@@ -69,7 +69,7 @@ const SmartContractDevelopment = () => {
       <ExpertiseServices
         bg={
           <Image
-            alt=""
+            alt="Background decoration ellipse"
             className="absolute -bottom-[900px] left-0 hidden  h-screen md:block md:h-min "
             src={servideBG}
           />

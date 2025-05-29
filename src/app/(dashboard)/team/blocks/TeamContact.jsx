@@ -17,7 +17,7 @@ const TeamContact = ({ className }) => {
         srcSet={`${bg} 360w, ${bg} 480w, ${bg} 720w, ${bg_lg} 1920w`}
         className="absolute left-1/2 top-[200px] min-w-[250vw] -translate-x-1/2  -translate-y-1/2 transform sm:min-w-[100vw] md:top-[300px]"
         src={bg_lg}
-        alt=""
+        alt="Background decoration ellipse"
       />
 
       <div className="relative grid grid-cols-1">

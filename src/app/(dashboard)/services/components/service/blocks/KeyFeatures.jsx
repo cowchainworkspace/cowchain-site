@@ -64,7 +64,7 @@ export function KeyFeatures({
     >
       {!noBg && (
         <Image
-          alt=""
+          alt="Background decoration ellipse"
           className={cn(
             "pointer-events-none absolute -bottom-[38%] right-0 hidden md:block",
             imageClasses

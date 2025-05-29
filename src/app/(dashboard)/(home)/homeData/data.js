@@ -1,12 +1,3 @@
-import bg from "@/assets/homepage/bg.png";
-import linkedin from "@/assets/homepage/linkedin.svg";
-import pic1 from "@/assets/homepage/projects/1.jpg";
-import pic2 from "@/assets/homepage/projects/2.jpg";
-import pic3 from "@/assets/homepage/projects/3.jpg";
-import MichaelImg from "@/assets/homepage/team/newTeam/michaelImg.png";
-import OlehImg from "@/assets/team/executives/OlehImg2.png";
-import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
-
 import agnt from "@/assets/cases/agntCase.png";
 import gbc from "@/assets/cases/gbcCase.png";
 import hybrid from "@/assets/cases/hybridCase.png";
@@ -15,6 +6,15 @@ import pixelVerse from "@/assets/cases/pixel-verse.webp"
 import retroBridge from "@/assets/cases/retrobridgeCase.png";
 import stepUp from "@/assets/cases/stepUpCase.png";
 import tenet from "@/assets/cases/tenet-project.webp"
+import bg from "@/assets/homepage/bg.png";
+import linkedin from "@/assets/homepage/linkedin.svg";
+import pic1 from "@/assets/homepage/projects/1.jpg";
+import pic2 from "@/assets/homepage/projects/2.jpg";
+import pic3 from "@/assets/homepage/projects/3.jpg";
+import MichaelImg from "@/assets/homepage/team/newTeam/michaelImg.png";
+import thumbNail from "@/assets/homepage/thumbnail.png"
+import OlehImg from "@/assets/team/executives/OlehImg2.png";
+import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
 
 export const blocksData = [
   {
@@ -514,7 +514,7 @@ export const jsonLdVideo = {
   "@type": "VideoObject",
   name: "Cownchain Logo Animation",
   description: "Cownchain Logo Animation",
-  thumbnailUrl: ["@/assets/homepage/thumbnail.png"],
+  thumbnailUrl: [thumbNail],
   uploadDate: "	20240228T190000-0500",
   duration: "PT1M6S",
   contentUrl: "/homepage/video.mp4",

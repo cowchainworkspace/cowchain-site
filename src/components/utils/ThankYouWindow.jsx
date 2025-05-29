@@ -1,12 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/closeButtonIcon.svg";
-import Image from "next/image";
 import bg from "./../../assets/homepage/form/formBg.svg";
 
-export default function ThankYouWindow({ modalThanksOpen, setModalThanksOpen }) {
-
+export default function ThankYouWindow({
+  modalThanksOpen,
+  setModalThanksOpen
+}) {
   return (
     <Popup
       open={modalThanksOpen}
@@ -18,14 +20,14 @@ export default function ThankYouWindow({ modalThanksOpen, setModalThanksOpen }) 
     >
       <Image
         className="absolute left-[-350px] top-[-300px] z-[-1] min-h-[1100px] min-w-[900px] md:left-[-500px] md:top-[-900px] md:min-h-[2000px] md:min-w-[1500px]"
-        alt=""
+        alt=" Background decoration ellipse"
         src={bg}
       />
 
       <div className="modal p-x-[20px] relative flex h-full min-w-full max-w-7xl gap-[20px]">
         <div className="flex w-[335px]  flex-col items-center gap-[32px] md:w-[633px]">
           <div className="text-center md:text-left">
-            <p className="mb-[16px] text-center uppercase text-[36px] font-bold text-white md:text-left md:text-5xl md:text-[60px]">
+            <p className="mb-[16px] text-center text-[36px] font-bold uppercase text-white md:text-left md:text-5xl md:text-[60px]">
               Thank you for <br /> contact us!
             </p>
             <p
@@ -36,8 +38,6 @@ export default function ThankYouWindow({ modalThanksOpen, setModalThanksOpen }) 
               Our manager will get in contact with you shortly
             </p>
           </div>
-
-         
         </div>
 
         <div
@@ -49,7 +49,7 @@ export default function ThankYouWindow({ modalThanksOpen, setModalThanksOpen }) 
         >
           <Image
             className="cursor-pointer"
-            alt=""
+            alt="Close modal window icon"
             onClick={() => setModalThanksOpen(false)}
             src={modal_close}
           />

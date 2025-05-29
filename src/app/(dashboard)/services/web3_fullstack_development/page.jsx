@@ -157,7 +157,7 @@ const FullStackDevelopment = () => {
         descClasses="max-w-[475px]"
         bg={
           <Image
-            alt=""
+            alt="Background decoration ellipse"
             className="absolute -bottom-[45%] left-0 hidden h-screen  md:block md:block md:h-min "
             src={servideBG}
           />

@@ -94,7 +94,7 @@ const Team = () => {
             <Image
               src={quote}
               className="absolute left-[80px] top-[120px] block hidden h-[104px] w-auto lg:block xl:left-[80px] xl:top-[50px] xl:h-[154px] xl:w-[194px]"
-              alt=""
+              alt="quote"
             />
 
             <div className="mb-[27px] mt-[20px]">
@@ -113,13 +113,13 @@ const Team = () => {
             <Image
               src={michaelMicImg}
               className="relative z-[1] h-[323px] w-[305px] self-end lg:h-[499px] lg:w-[442px]"
-              alt=""
+              alt="MIchael owner of Cowchain company"
             />
 
             <Image
               src={quoteBg}
               className="xl:min-h-auto xl:min-w-auto pointer-events-none absolute bottom-[-450px] right-[-300px] z-[0] min-h-[1500px] min-w-[1000px] lg:bottom-[-550px] lg:right-[-600px]"
-              alt=""
+              alt="MIchael owner of Cowchain company"
             />
           </div>
           <TeamGallery />

@@ -46,7 +46,7 @@ export const WhiteLabelCases = ({
           <Link href="/cases" className="z-[2] lg:order-1 lg:block xl:ml-auto">
             <div className="flex items-center gap-x-2">
               <p className="header uppercase text-white underline">All Cases</p>
-              <Image className="w-6" src={arrow} alt="" />
+              <Image className="w-6" src={arrow} alt="Arrow right image" />
             </div>
           </Link>
         </div>

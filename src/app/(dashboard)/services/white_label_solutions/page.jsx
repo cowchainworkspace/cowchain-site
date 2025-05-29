@@ -92,9 +92,9 @@ const WhiteLabelDev = () => {
             like custom web app creation, platform integration, or ongoing
             maintenance while keeping <br className="hidden lg:block" /> your
             brand at the forefront.
-            <p>
+            <span className="block">
               <br />
-            </p>
+            </span>
             Why is this important? It lets you focus on winning new clients and
             growing your business, while experts
             <br className="hidden lg:block" /> handle the technical work behind
@@ -146,9 +146,9 @@ const WhiteLabelDev = () => {
             you gain access to a skilled team that ensures professional
             <br className="hidden lg:block" /> results while maintaining full
             control over branding and client relationships
-            <p>
+            <span className="block">
               <br />
-            </p>
+            </span>
             Additionally, our services are fully customizable. From complex
             applications and feature-rich
             <br className="hidden lg:block" /> platforms to simple landing

@@ -56,10 +56,10 @@ const ReflectOverviewItems = ({ items }) => {
                       {itemValue}
                     </p>
                   ) : (
-                    <ul className="flex flex-col gap-[14px] xl:list-disc xl:gap-[10px] xl:pl-8">
+                    <ul className="flex flex-col gap-[14px] xl:gap-[10px] ">
                       {itemValue.map(({ itemValueDescription }) => (
                         <li key={itemValueDescription}>
-                          <p className="font-manrope text-sm font-normal leading-6 !text-white xl:list-item xl:text-[20px] xl:leading-[30px]">
+                          <p className="font-manrope text-sm font-normal leading-6 !text-white xl:text-[20px] xl:leading-[30px]">
                             {itemValueDescription}
                           </p>
                         </li>

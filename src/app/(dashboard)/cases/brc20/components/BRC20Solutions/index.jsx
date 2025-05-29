@@ -64,7 +64,8 @@ const BRC20Solutions = ({ solutions, classes }) => {
                   className={cn(
                     "flex  w-full justify-start xl:hidden",
                     index === 1 &&
-                      "h-[165px] justify-center  bg-[#0D0E12] py-1 "
+                      "h-[165px] justify-center  bg-[#0D0E12] py-1 ",
+                    index === 0 && "justify-center"
                   )}
                 >
                   <Image
