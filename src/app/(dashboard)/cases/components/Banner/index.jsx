@@ -23,6 +23,7 @@ const Banner = ({ img, imgDesc, classes, decorationElement, bannerTitle }) => {
         objectFit="cover"
         objectPosition="center"
         alt={imgDesc}
+        priority
       />
     </div>
   );

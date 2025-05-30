@@ -48,7 +48,7 @@ export default function DashboardLayout({ children }) {
               height={375}
               priority
               sizes="(max-width: 640px) 100vw, 100vw"
-              alt=""
+              alt="Background decoration ellipse"
               className={cn(
                 "absolute left-0 top-0 z-10 hidden w-full opacity-100 md:block"
               )}
@@ -63,7 +63,7 @@ export default function DashboardLayout({ children }) {
               width={443}
               height={326}
               src={"/home-bg-header-mobile.webp"}
-              alt=""
+              alt="Background decoration ellipse"
             />
           </>
         )}

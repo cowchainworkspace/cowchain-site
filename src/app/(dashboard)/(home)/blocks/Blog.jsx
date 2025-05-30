@@ -1,7 +1,7 @@
+import Image from "next/image";
 import React from "react";
 import arrow from "../../../assets/arrow_right.svg";
 import BlogCarousel from "../components/blog-carousel";
-import Image from "next/image";
 
 export const Blog = () => {
   return (
@@ -16,7 +16,7 @@ export const Blog = () => {
               <p className="header uppercase text-white underline">
                 ALL ARTICLES
               </p>
-              <Image className="w-6" src={arrow} alt=""></Image>
+              <Image className="w-6" src={arrow} alt="Navigation arroe" />
             </div>
           </a>
         </div>

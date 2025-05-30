@@ -214,6 +214,20 @@ export const cases = [
       { isMain: false, tagName: "Trading" },
       { isMain: false, tagName: "DeFi" }
     ],
+    filterTags: [
+      {
+        tagName: "Web Development"
+      },
+      {
+        tagName: "AI Development"
+      },
+      {
+        tagName: "Trading"
+      },
+      {
+        tagName: "DeFi"
+      }
+    ],
     caseName: "Reflect",
     caseDescription:
       "Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains. By enabling users to manage liquidity, execute swaps, stake assets, and vote on governance proposals directly through chat commands, Reflect enhances simplicity and accessibility in DeFAI.",
@@ -250,6 +264,14 @@ export const cases = [
     tags: [
       { isMain: true, tagName: "Web Development" },
       { isMain: false, tagName: "DeFi" }
+    ],
+    filterTags: [
+      {
+        tagName: "Web Development"
+      },
+      {
+        tagName: "DeFi"
+      }
     ],
     caseName: "BRC20",
     caseDescription:
@@ -320,7 +342,7 @@ export const cases = [
     tags: [
       { isMain: true, tagName: "Mobile App" },
       { isMain: true, tagName: "Telegram Mini-Apps" },
-      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "Trading" }
     ],
     filterTags: [
       { tagName: "Mobile App" },
@@ -337,3 +359,5 @@ export const cases = [
     containerWidth: 630
   }
 ];
+
+

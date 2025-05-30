@@ -4,16 +4,16 @@ import {
   thirdSlideReflect
 } from "../../../../../../public/cases/reflect/slider";
 import {
-  reflectCrossPlatformAi,
-  reflectAiPowered,
-  reflectGovernance,
-  reflectRealTimePortfolio,
-  reflectVelodrome,
   mobReflectAiPowered,
   mobReflectCrossPlatformAi,
   mobReflectGovernance,
   mobReflectRealTimePortfolio,
-  mobReflectVelodrome
+  mobReflectVelodrome,
+  reflectAiPowered,
+  reflectCrossPlatformAi,
+  reflectGovernance,
+  reflectRealTimePortfolio,
+  reflectVelodrome
 } from "../../../../../../public/cases/reflect/solutions";
 
 export const reflectTags = [
@@ -27,16 +27,12 @@ export const reflectTags = [
   },
   {
     id: 3,
-    tagLabel: "Crypto Wallet"
+    tagLabel: "Trading"
   },
   
   {
     id: 4,
     tagLabel: "DeFi"
-  },
-  {
-    id: 5,
-    tagLabel: "NFT"
   },
 ];
 

@@ -21,7 +21,7 @@ export const Blog = ({ slug }) => {
               <p className="header uppercase text-white underline">
                 ALL ARTICLES
               </p>
-              <Image className="w-6" src={arrow} alt="" />
+              <Image className="w-6" src={arrow} alt="Navigation arrow" />
             </div>
           </a>
         </div>

@@ -65,7 +65,7 @@ const StarsSolutions = ({ classes }) => {
                     {desc}
                   </p>
                 </div>
-                <div className="flex h-fit justify-center xl:hidden">
+                <div className="flex h-fit w-full justify-start xl:hidden">
                   <Image
                     width={img.mobileWidth}
                     height={img.mobileHeight}

@@ -21,7 +21,7 @@ export const ArticleParagraphs = ({
                 height={560}
                 width={600}
                 className="my-[50px] block max-h-[260px] w-full object-cover"
-                alt=""
+                alt="Paragraph image"
               />
             </div>
           );

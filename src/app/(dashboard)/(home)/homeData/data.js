@@ -1,12 +1,3 @@
-import bg from "@/assets/homepage/bg.png";
-import linkedin from "@/assets/homepage/linkedin.svg";
-import pic1 from "@/assets/homepage/projects/1.jpg";
-import pic2 from "@/assets/homepage/projects/2.jpg";
-import pic3 from "@/assets/homepage/projects/3.jpg";
-import MichaelImg from "@/assets/homepage/team/newTeam/michaelImg.png";
-import OlehImg from "@/assets/team/executives/OlehImg2.png";
-import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
-
 import agnt from "@/assets/cases/agntCase.png";
 import gbc from "@/assets/cases/gbcCase.png";
 import hybrid from "@/assets/cases/hybridCase.png";
@@ -15,6 +6,15 @@ import pixelVerse from "@/assets/cases/pixel-verse.webp"
 import retroBridge from "@/assets/cases/retrobridgeCase.png";
 import stepUp from "@/assets/cases/stepUpCase.png";
 import tenet from "@/assets/cases/tenet-project.webp"
+import bg from "@/assets/homepage/bg.png";
+import linkedin from "@/assets/homepage/linkedin.svg";
+import pic1 from "@/assets/homepage/projects/1.jpg";
+import pic2 from "@/assets/homepage/projects/2.jpg";
+import pic3 from "@/assets/homepage/projects/3.jpg";
+import MichaelImg from "@/assets/homepage/team/newTeam/michaelImg.png";
+import thumbNail from "@/assets/homepage/thumbnail.png"
+import OlehImg from "@/assets/team/executives/OlehImg2.png";
+import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
 
 export const blocksData = [
   {
@@ -496,25 +496,33 @@ export const jsonLdFaq = {
 };
 
 export const jsonLdContacts = {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": "Organization",
-  brand: "Cowchain",
-  logo: "/logo-light.svg",
-  name: "cowchain.io",
-  email: "sales@cowchain.io",
-  url: "{page_URL}",
-  sameAs: [
-    "https://twitter.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw",
-    "https://www.linkedin.com/company/cowchaindev/"
+  "name": "CowChain",
+  "url": "https://cowchain.io/",
+  "logo": "/logo-light.svg",
+  "description": "CowChain is a blockchain-based platform focused on secure and efficient transactions. Explore innovative solutions for decentralized systems.",
+  "foundingDate": "2020",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "email": "support@cowchain.io",
+    "availableLanguage": ["English"]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/cowchain/",
+    "https://t.me/cowchain_team",
+    "https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw",
+    "https://cowchain.medium.com/"
   ]
-};
+} 
 
 export const jsonLdVideo = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
   name: "Cownchain Logo Animation",
   description: "Cownchain Logo Animation",
-  thumbnailUrl: ["@/assets/homepage/thumbnail.png"],
+  thumbnailUrl: [thumbNail],
   uploadDate: "	20240228T190000-0500",
   duration: "PT1M6S",
   contentUrl: "/homepage/video.mp4",

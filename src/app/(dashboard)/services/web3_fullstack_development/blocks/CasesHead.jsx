@@ -1,7 +1,6 @@
 "use client";
 
 import arrow from "@/assets/arrow_right.svg";
-import bg_lg from "@/assets/bg/home-clients.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -26,7 +25,7 @@ export function CasesHead() {
               <p className="header uppercase text-white underline">
                 OTHER Cases
               </p>
-              <Image className="w-6" src={arrow} alt=""></Image>
+              <Image className="w-6" src={arrow} alt="Arrow right image" />
             </div>
           </Link>
         </div>

@@ -200,7 +200,7 @@ export const brc20Team = [
   },
   {
     id: 3,
-    department: "devops",
+    department: "qa",
     people: "Ivan Chalienko, Taras Yakushevych"
   }
 ];

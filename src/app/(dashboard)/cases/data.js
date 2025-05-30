@@ -214,7 +214,7 @@ export const reflect = {
     projectLink: "reflect",
     textGap: "md:gap-[24px]",
     cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
-    relatedSlugs: ["reflect", "gbc", "step-app"],
+    relatedSlugs: ["stars", "gbc", "step-app"],
 }
 
 const allProjects = [memelut, gbc, tenet, retrobridge, agnt, pixelverse, stepApp, hybrid, brc20, stars, reflect]

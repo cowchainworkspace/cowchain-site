@@ -56,5 +56,61 @@ export const getSplitText = (text) => {
 };
 
 
+export const setBreadcrumbSchema = (sectionTitle, sectionUrl, itemTitle, slug) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@id": "https://cowchain.io/",
+          name: "Home"
+        }
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@id": `https://cowchain.io/${sectionUrl}/`,
+          name: sectionTitle
+        }
+      },
+        {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@id": `https://cowchain.io/cases/${slug}`,
+          name: itemTitle
+        }
+      }
+    ]
+  };
+};
 
 
+export const setBreadcrumbSchemaServices = ( itemTitle, slug) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@id": "https://cowchain.io/",
+          name: "Home"
+        }
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@id": `https://cowchain.io/services/${slug}`,
+          name: itemTitle
+        }
+      },
+    ]
+  };
+};

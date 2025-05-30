@@ -3,6 +3,6 @@ export const metadata = {
   description: "Looking for a full stack development company? ⭐️ Cowchain offers comprehensive full stack development services, from front-end to back-end solutions",
     metadataBase: new URL("https://cowchain.io/"),
     alternates: {
-      canonical: "/services/full_stack_development"
+      canonical: "/services/web3_fullstack_development"
     }
   };

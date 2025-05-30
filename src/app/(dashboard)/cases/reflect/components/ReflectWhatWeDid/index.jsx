@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 const ReflectWhatWeDid = () => {
@@ -14,15 +13,16 @@ const ReflectWhatWeDid = () => {
               business CHALLENGEs
             </h3>
             <p className="font-semiBold text-xs font-[450] leading-5 text-white-70 md:text-sm md:leading-[22.1px]">
-              DeFi interactions are often complex, requiring users to{" "}
-              <br className="hidden custom1400:block" /> navigate multiple
-              interfaces to execute trades, stake tokens, or claim rewards.
-              Reflect aimed to simplify this process by{" "}
-              <br className="hidden custom1400:block" /> enabling AI-driven
-              automation across multiple chains while maintaining security and{" "}
-              <br className="hidden custom1400:block" /> reliability. The
+              DeFi interactions are often complex, requiring users to navigate
+              multiple interfaces to
+              <br className="hidden custom1430:block" /> execute trades, stake
+              tokens, or claim rewards. Reflect aimed to simplify this process
+              by
+              <br className="hidden custom1430:block" /> enabling AI-driven
+              automation across multiple chains while maintaining security and
+              <br className="hidden custom1430:block" /> reliability. The
               challenge was ensuring smooth blockchain integration while
-              optimizing <br className="hidden custom1400:block" /> execution
+              optimizing <br className="hidden custom1430:block" /> execution
               speed.
             </p>
           </div>

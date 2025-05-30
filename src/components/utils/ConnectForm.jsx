@@ -1,8 +1,8 @@
-import Popup from "reactjs-popup";
-import modal_close from "../../assets/homepage/modal_close.svg";
-import { useForm } from "react-hook-form";
 import { send } from "emailjs-com";
 import Image from "next/image";
+import { useForm } from "react-hook-form";
+import Popup from "reactjs-popup";
+import modal_close from "../../assets/homepage/modal_close.svg";
 
 const ConnectForm = ({ modalOpen, setModalOpen }) => {
   const {
@@ -41,7 +41,7 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
         <div className="flex">
           <Image
             className="ml-auto w-8 cursor-pointer"
-            alt=""
+            alt="Close modal icon"
             onClick={() => setModalOpen(false)}
             src={modal_close}
           />
@@ -53,8 +53,8 @@ const ConnectForm = ({ modalOpen, setModalOpen }) => {
             </h1>
             <p className="max-w-[385px] text-sm text-secondary lg:text-base">
               We often look for new talents, so if you are interested in working
-              in Cowchain, send your CV and we will get in touch if you are
-              a great fit.
+              in Cowchain, send your CV and we will get in touch if you are a
+              great fit.
             </p>
           </div>
 

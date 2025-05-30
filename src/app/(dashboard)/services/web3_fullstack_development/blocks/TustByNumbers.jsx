@@ -47,7 +47,7 @@ export function TustByNumbers({
     <section className={`relative  ${home && "h-fit md:h-[700px]"}`}>
       {!noBg && (
         <Image
-          alt=""
+          alt="Background decoration ellipse"
           className="pointer-events-none absolute -bottom-[38%] left-0 hidden h-screen md:-bottom-[45%] md:block md:h-min lg:-bottom-[120%]"
           src={FSTrustBuyNumbBg}
         />
@@ -221,7 +221,7 @@ export function TustByNumbers({
                 ALL PROJECTS
               </p>
 
-              <Image className="w-6" src={arrow} alt=""></Image>
+              <Image className="w-6" src={arrow} alt="Arrow right image" />
             </div>
           </Link>
         </div>
