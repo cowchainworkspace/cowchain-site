@@ -1,6 +1,6 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
-import { setBreadcrumbSchema } from "@/lib/utils";
+import { setBreadcrumbSchemaServices } from "@/lib/utils";
 import Image from "next/image";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
@@ -29,12 +29,11 @@ import {
 export { metadata };
 
 const CryptoWalletDev = () => {
-  const breadcrumbList = setBreadcrumbSchema(
-    "Services",
-    "services",
+  const breadcrumbList = setBreadcrumbSchemaServices(
     "Crypto Wallet Development Services",
     "crypto_wallet"
   );
+
   return (
     <>
       <script

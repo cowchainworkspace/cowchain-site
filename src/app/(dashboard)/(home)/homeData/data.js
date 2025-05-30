@@ -496,18 +496,26 @@ export const jsonLdFaq = {
 };
 
 export const jsonLdContacts = {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": "Organization",
-  brand: "Cowchain",
-  logo: "/logo-light.svg",
-  name: "cowchain.io",
-  email: "sales@cowchain.io",
-  url: "{page_URL}",
-  sameAs: [
-    "https://twitter.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw",
-    "https://www.linkedin.com/company/cowchaindev/"
+  "name": "CowChain",
+  "url": "https://cowchain.io/",
+  "logo": "/logo-light.svg",
+  "description": "CowChain is a blockchain-based platform focused on secure and efficient transactions. Explore innovative solutions for decentralized systems.",
+  "foundingDate": "2020",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "email": "support@cowchain.io",
+    "availableLanguage": ["English"]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/cowchain/",
+    "https://t.me/cowchain_team",
+    "https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw",
+    "https://cowchain.medium.com/"
   ]
-};
+} 
 
 export const jsonLdVideo = {
   "@context": "https://schema.org",

@@ -66,7 +66,7 @@ export const setBreadcrumbSchema = (sectionTitle, sectionUrl, itemTitle, slug) =
         position: 1,
         item: {
           "@id": "https://cowchain.io/",
-          name: "Cowchain | Home"
+          name: "Home"
         }
       },
       {
@@ -89,3 +89,28 @@ export const setBreadcrumbSchema = (sectionTitle, sectionUrl, itemTitle, slug) =
   };
 };
 
+
+export const setBreadcrumbSchemaServices = ( itemTitle, slug) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@id": "https://cowchain.io/",
+          name: "Home"
+        }
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@id": `https://cowchain.io/services/${slug}`,
+          name: itemTitle
+        }
+      },
+    ]
+  };
+};

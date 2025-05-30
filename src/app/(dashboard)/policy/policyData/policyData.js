@@ -60,3 +60,26 @@ export const policy = [
       text: "The company reserves to make changes to its privacy policy in these situations;1- If governmental authorizations want customer information.2- In lawful liabilities, the company can share customer information with authorities.3- In necessary situations for customer security."
     }
   ];
+
+export const policyBreadCrumbList = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@id": "https://cowchain.io/",
+          name: "Home"
+        }
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@id": `https://cowchain.io/policy`,
+          name: "Policy"
+        }
+      },
+    ]
+  };

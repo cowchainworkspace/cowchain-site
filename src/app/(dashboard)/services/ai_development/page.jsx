@@ -13,7 +13,7 @@ import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
 
-import { setBreadcrumbSchema } from "@/lib/utils";
+import { setBreadcrumbSchemaServices } from "@/lib/utils";
 import { metadata } from "./utils/aiDevelopmentMetadata";
 import {
   aiDevelopmentBenefits,
@@ -28,9 +28,7 @@ import {
 export { metadata };
 
 const AIDevelopment = () => {
-  const breadcrumbList = setBreadcrumbSchema(
-    "Services",
-    "services",
+  const breadcrumbList = setBreadcrumbSchemaServices(
     "AI Development Services",
     "ai_development"
   );
