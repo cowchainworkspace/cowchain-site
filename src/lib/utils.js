@@ -65,6 +65,7 @@ export const setBreadcrumbSchema = (sectionTitle, sectionUrl, itemTitle, slug) =
         "@type": "ListItem",
         position: 1,
         item: {
+          "@type": "WebPage",
           "@id": "https://cowchain.io/",
           name: "Home"
         }
@@ -73,6 +74,7 @@ export const setBreadcrumbSchema = (sectionTitle, sectionUrl, itemTitle, slug) =
         "@type": "ListItem",
         position: 2,
         item: {
+          "@type": "WebPage",
           "@id": `https://cowchain.io/${sectionUrl}/`,
           name: sectionTitle
         }
@@ -81,6 +83,7 @@ export const setBreadcrumbSchema = (sectionTitle, sectionUrl, itemTitle, slug) =
         "@type": "ListItem",
         position: 3,
         item: {
+          "@type": "WebPage",
           "@id": `https://cowchain.io/cases/${slug}`,
           name: itemTitle
         }
@@ -90,27 +93,29 @@ export const setBreadcrumbSchema = (sectionTitle, sectionUrl, itemTitle, slug) =
 };
 
 
-export const setBreadcrumbSchemaServices = ( itemTitle, slug) => {
+const getBreadcrumbSchema = (slug, itemTitle) => {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
+    "itemListElement": [
       {
         "@type": "ListItem",
-        position: 1,
-        item: {
+        "position": 1,
+        "item": {
+          "@type": "WebPage",
           "@id": "https://cowchain.io/",
-          name: "Home"
+          "name": "Home"
         }
       },
       {
         "@type": "ListItem",
-        position: 2,
-        item: {
+        "position": 2,
+        "item": {
+          "@type": "WebPage",
           "@id": `https://cowchain.io/services/${slug}`,
-          name: itemTitle
+          "name": itemTitle
         }
-      },
+      }
     ]
   };
 };
