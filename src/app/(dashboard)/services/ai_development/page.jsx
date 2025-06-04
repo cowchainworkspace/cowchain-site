@@ -13,7 +13,7 @@ import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
 
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
 import { metadata } from "./utils/aiDevelopmentMetadata";
 import {
   aiDevelopmentBenefits,
@@ -24,6 +24,7 @@ import {
   aiDevelopmentStability,
   aiPlatformServiceData
 } from "./utils/data";
+import { aiDevelopmentSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
 
@@ -32,12 +33,17 @@ const AIDevelopment = () => {
     "AI Development Services",
     "ai_development"
   );
+  const serviceSchema = getServiceSchema(aiDevelopmentSchema);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section>
         <HeroSection

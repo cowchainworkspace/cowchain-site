@@ -19,7 +19,8 @@ import { IndustriesDexData } from "./utils/data";
 import { DexAppDevData } from "./utils/data";
 import { EngagementDevData, faqDexData } from "./utils/data";
 import { metadata } from "./utils/dexDevMetadata";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { dexDevelopmentSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const DexDevelopment = () => {
@@ -27,12 +28,17 @@ const DexDevelopment = () => {
     "Decentralized Exchange Development Company",
     "dex_development"
   );
+  const serviceSchema = getServiceSchema(dexDevelopmentSchema);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section className="overflow-visible">
         <HeroSection

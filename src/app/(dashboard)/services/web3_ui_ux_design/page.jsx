@@ -23,7 +23,8 @@ import {
   web3DesignTrendsData
 } from "./utils/data";
 import { metadata } from "./utils/web3UXMetadata";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { web3DesignSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
 
@@ -33,11 +34,17 @@ const Web3UiUx = () => {
     "web3_ui_ux_design"
   );
 
+  const serviceSchema = getServiceSchema(web3DesignSchema);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section className="overflow-visible">
         <HeroSection

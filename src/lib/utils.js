@@ -123,13 +123,12 @@ export const setBreadcrumbSchemaServices = ( itemTitle, slug) => {
   };
 };
 
-export const getServiceSchema = (serviceInformation, serviceUrl) => {
+export const getServiceSchema = ({serviceName, serviceDescription, serviceType, serviceUrl}) => {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Blockchain Solutions and Services",
-    description:
-      "Comprehensive blockchain development services, including smart contracts, decentralized apps, and secure transactions.",
+    name: serviceName,
+    description: serviceDescription,
     provider: {
       "@type": "Organization",
       name: "CowChain",
@@ -142,7 +141,7 @@ export const getServiceSchema = (serviceInformation, serviceUrl) => {
         "https://cowchain.medium.com/"
       ]
     },
-    serviceType: serviceInformation,
+    serviceType: serviceType,
     areaServed: {
       "@type": "Country",
       name: "Worldwide"

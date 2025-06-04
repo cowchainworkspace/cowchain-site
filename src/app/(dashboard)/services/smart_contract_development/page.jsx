@@ -24,7 +24,8 @@ import {
   smartContractsData
 } from "./utils/data";
 import { metadata } from "./utils/smartContractDevMetadata";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { smartContractSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
 
@@ -33,11 +34,18 @@ const SmartContractDevelopment = () => {
     "Smart Contract Development Services",
     "smart_contract_development"
   );
+
+  const serviceSchema = getServiceSchema(smartContractSchema);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section>
         <HeroSection

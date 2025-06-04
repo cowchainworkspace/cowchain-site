@@ -23,7 +23,8 @@ import {
   cryptWalletTypes
 } from "./utils/data";
 import { metadata } from "./utils/mobileCryptoWalletMetadata";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { cryptoWalletMobileSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
 
@@ -32,12 +33,17 @@ const MobileCryptoWallet = () => {
     "Mobile Crypto Wallet",
     "mobile_crypto_wallet"
   );
+  const serviceSchema = getServiceSchema(cryptoWalletMobileSchema);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section>
         <HeroSection

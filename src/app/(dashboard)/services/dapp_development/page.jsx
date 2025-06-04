@@ -24,7 +24,8 @@ import { DappExpertiseData } from "./utils/data";
 import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { dappDevelopmentSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
 
@@ -33,12 +34,17 @@ const DappDevelopment = () => {
     "dApp Development Services",
     "dapp_development"
   );
+  const serviceSchema = getServiceSchema(dappDevelopmentSchema);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section>
         <HeroSection

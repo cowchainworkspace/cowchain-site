@@ -21,7 +21,8 @@ import CasesMobile from "../../(home)/blocks/CasesMobile";
 import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
 import { metadata } from "./utils/SocialMiniAppMetaData";
 import { CoreFeaturesRWAbg } from "@/assets/svgComponents/CoreFeaturesRWAbg";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { fiMiniAppSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
 
@@ -30,9 +31,14 @@ const SicialMiniApp = () => {
     "Social TG Mini-App",
     "social_fi_mini_app"
   );
+  const serviceSchema = getServiceSchema(fiMiniAppSchema);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}

@@ -19,7 +19,8 @@ import {
   faqQuestions,
   whiteLabelSolutions
 } from "./utils/data";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { whiteLabelSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const WhiteLabelDev = () => {
@@ -27,12 +28,17 @@ const WhiteLabelDev = () => {
     "White Label Web Development Services",
     "white_label_solutions"
   );
+  const serviceSchema = getServiceSchema(whiteLabelSchema);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section className="overflow-visible">
         <HeroSection
