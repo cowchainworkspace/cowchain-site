@@ -131,7 +131,7 @@ export const getServiceSchema = ({serviceName, serviceDescription, serviceType, 
     description: serviceDescription,
     provider: {
       "@type": "Organization",
-      name: "CowChain",
+      name: "Cowchain",
       url: "https://cowchain.io/",
       logo: "/logo-light.svg",
       sameAs: [
