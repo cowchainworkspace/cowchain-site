@@ -153,6 +153,7 @@ const CasesSlider = ({
                       alt={desc}
                       objectFit="contain"
                       className="embla__slide__number h-full w-full"
+                      loading="lazy"
                     />
                   </div>
                 );

@@ -11,12 +11,14 @@ import AgntProjectOverView from "./components/AgntProjectOverView";
 import AgntSolution from "./components/AgntSolution";
 import AgntWhatWeDid from "./components/AgntWhatWeDid";
 import { metadata } from "./utils/agntMetadata";
+
 import {
   agntSlides,
   agntSolutions,
   agntTags,
   agntTeam
 } from "./utils/constants";
+import Head from "next/head";
 
 export { metadata };
 
