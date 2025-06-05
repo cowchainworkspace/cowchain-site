@@ -1,4 +1,4 @@
-import {agent, brc20 as brc20Img, crossChain, gbc as gbcImage, hybrid as hybridImage, m2eNewOne, memolut, pixelVerse, reflectNewOne, stars as starsImage, tenet as tenetImage } from "./../../../../public/projects"
+import {agent, brc20 as brc20Img, crossChain, gbc as gbcImage, hybrid as hybridImage, m2eNewOne, memolut, pixelVerse, reflectNewOne, stars as starsImage, tenet as tenetImage } from "@/assets/projects"
 
 const getRelatedProjects = (project, allProjects) => {
   return allProjects.filter(p =>

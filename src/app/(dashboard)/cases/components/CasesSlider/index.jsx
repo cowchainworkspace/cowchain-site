@@ -149,11 +149,12 @@ const CasesSlider = ({
                     <Image
                       src={href}
                       width={width}
-                      height={width}
+                      height={height}
                       alt={desc}
                       objectFit="contain"
                       className="embla__slide__number h-full w-full"
                       loading="lazy"
+                      priority={false}
                     />
                   </div>
                 );

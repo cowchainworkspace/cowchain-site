@@ -69,7 +69,7 @@ export default function DashboardLayout({ children }) {
         )}
         <Navbar />
 
-        <LoaderWrapper> {children}</LoaderWrapper>
+        <LoaderWrapper> {children} </LoaderWrapper>
         <Footer footerForm={pathname !== "/blog" ? false : true} />
       </div>
       <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />

@@ -1,4 +1,4 @@
-import bg_lg from "@/assets/bg/clients_header_bg_lg.png";
+import bg_lg from "@/assets/bg/clients_header_bg_lg.webp";
 import bgMobileImage from "@/assets/blog/bg-blog-mobile.webp";
 import arrow from "@/assets/icons/arrow.svg";
 import home from "@/assets/icons/home.png";

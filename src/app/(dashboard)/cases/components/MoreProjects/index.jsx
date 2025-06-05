@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import RightArrowSvg from "../../../../../../public/svgIcons/RightArrowSvg";
+import Image from "next/image";
 
 const MoreProjects = ({ projects, headerClasses = "", isReversed }) => {
   const [isMoreThan1280] = useMediaQuery("(min-width: 1280px)");
@@ -59,13 +60,17 @@ const MoreProjects = ({ projects, headerClasses = "", isReversed }) => {
                   initial="initial"
                   whileHover="hover"
                   animate="initial"
-                  style={{
-                    backgroundImage: `url(${img.src})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat"
-                  }}
                 >
+                  <div className="absolute h-full w-full">
+                    <Image
+                      src={img}
+                      alt="Background"
+                      fill
+                      className="object-cover"
+                      loading="lazy"
+                      priority={false}
+                    />
+                  </div>
                   <motion.div
                     className="pointer-events-none absolute inset-0 z-[1] hidden sm:block"
                     variants={{

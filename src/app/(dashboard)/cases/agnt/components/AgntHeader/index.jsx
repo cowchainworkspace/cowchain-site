@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import CaseHeroScreen from "../../../components/HeroScreen";
-import bannerImg from "@/assets/agnt/banner-image.webp";
+import bannerImg from "@/assets/cases/agnt/banner-image.webp";
 import { agntTags } from "../../utils/constants";
 import dynamic from "next/dynamic";
-import bannerImgMobile from "@/assets/agnt/agnt-mobile.webp";
+import bannerImgMobile from "@/assets/cases/agnt/agnt-mobile.webp";
 import { useMediaQuery } from "@chakra-ui/react";
 
 const Banner = dynamic(() => import("../../../components/Banner"));
