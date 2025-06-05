@@ -1,4 +1,4 @@
-export const ViewMoreSection = ({ casesCount, count, setCount }) => {
+export const ViewMoreSection = ({ casesCount, setCount }) => {
   return (
     <section id="view_more" className="relative overflow-hidden">
       <div className="relative grid grid-cols-1">
