@@ -20,6 +20,7 @@ import {
   memelutTeam,
   memeluteTags
 } from "./utils/constants";
+import MemelutBannerContainer from "./components/MemelutBannerContainer";
 export { metadata };
 
 const Memelut = () => {
@@ -53,12 +54,7 @@ const Memelut = () => {
           sectionClasses="lg:pb-[50px]"
           headerClasses="font-roc text-[36px] text-center leading-[42px] xl:text-[60px] xl:leading-[64px]"
         />
-
-        <Banner
-          img={"/cases/memelut/memelut-banner.webp"}
-          classes={"h-[104px] md:h-[200px] lg:h-[300px] xl:h-[402px]"}
-          imgDesc={"Memelut banner"}
-        />
+        <MemelutBannerContainer />
         <MemelutOverview containerClasses="xl:pb-[120px]" />
         <CasesSlider
           sectionClasses={"h-[226px] md:mb-[120px] py-5 md:py-0 md:h-[443px]"}
@@ -75,11 +71,7 @@ const Memelut = () => {
             gridClass="xl:gap-[50px]"
           />
         </div>
-        <Banner
-          img={"/cases/memelut/memelut-second-banner.webp"}
-          classes={"h-[113px] md:h-[200px] lg:h-[300px] xl:h-[452px] "}
-          imgDesc={"Memelut banner"}
-        />
+
         <MemelutWhatWeDid />
 
         <Image
@@ -87,13 +79,18 @@ const Memelut = () => {
           height={269}
           src="/cases/memelut/memelut-coins-banner.webp"
           className="mx-auto h-auto w-[calc(100vw-6px)] max-w-[1349px]"
+          loading="lazy"
+          priority={false}
         />
+
         <TeamBehind
           headerClasses={"xl:leading-[18.41px] xl:tracking-[1.84px]"}
           team={memelutTeam}
           classes={"pt-0 xl:pt-[60px]"}
         />
+
         <MoreProjects projects={relatedMemelutProjects} isReversed={true} />
+
         <Contact
           className={"px-5 py-[50px] md:px-0 xl:py-[143px]"}
           descriptionClasses={"hidden md:block"}
