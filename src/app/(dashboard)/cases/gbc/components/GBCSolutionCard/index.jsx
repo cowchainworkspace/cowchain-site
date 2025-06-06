@@ -11,6 +11,8 @@ const GBCSolutionCard = () => {
           src={"/cases/gbc/lollipop-car-img.png"}
           alt="lollipop"
           className="size-[91px] xl:h-[145px] xl:w-[153px]"
+          loading="lazy"
+          priority={false}
         />
       </div>
       <div className="flex flex-1 flex-col gap-3 xl:gap-5">

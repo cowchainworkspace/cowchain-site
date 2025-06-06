@@ -36,11 +36,15 @@ export default function Contact({
         className="pointer-events-none absolute left-1/2  top-[45%] hidden  -translate-x-1/2 -translate-y-1/2  md:block"
         src={bgEllipse}
         alt="Background decoration ellipse"
+        loading="lazy"
+        priority={false}
       />
       <Image
         className="pointer-events-none absolute left-1/2 top-[40%]  h-auto w-full -translate-x-1/2 -translate-y-1/2 md:hidden"
         src={bgMb}
         alt="Background decoration ellipse"
+        loading="lazy"
+        priority={false}
       />
       <div className="relative">
         <div className="flex flex-col text-center md:gap-10">

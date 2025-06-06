@@ -1,7 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
-import ContactForm from "../../../../../components/utils/ContactForm";
 import CaseTag from "../CaseTag";
 import CasesBackButton from "../CasesBackButton";
 import HeroButton from "../HeroButton/HeroButton";
@@ -18,7 +17,7 @@ const CaseHeroScreen = ({
   bgDecoration,
   tagContainerClasses = ""
 }) => {
-  const { openForm, setOpenForm } = useOpenForm();
+  const { setOpenForm } = useOpenForm();
 
   return (
     <section

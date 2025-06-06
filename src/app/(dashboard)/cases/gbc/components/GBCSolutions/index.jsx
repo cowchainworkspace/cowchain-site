@@ -57,6 +57,8 @@ const GBCSolutions = ({ solutions, classes }) => {
                   src={isLargerThan1280 ? img.href : img.mobileHref}
                   alt={img.info}
                   className={img.leftMargin}
+                  loading="lazy"
+                  priority={false}
                 />
               )}
             </div>

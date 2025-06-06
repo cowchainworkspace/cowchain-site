@@ -13,9 +13,12 @@ import GBCSlider from "./components/GBCSlider";
 import GBCSolutions from "./components/GBCSolutions";
 import GBCWhatWeDid from "./components/GBCWhatWeDid";
 import { metadata } from "./utils/gbcMetadata";
-
 import { setBreadcrumbSchema } from "@/lib/utils";
 import { gbcSlides, gbcSolutions, gbcTags, gbcTeam } from "./utils/constants";
+import bannerImg from "@/assets/cases/gbc/gbc-banner.webp";
+import leftDecorImage from "@/assets/cases/gbc/candy-one.png";
+import rightDecorImage from "@/assets/cases/gbc/candy-two.png";
+
 export { metadata };
 
 const GBC = () => {
@@ -51,14 +54,14 @@ const GBC = () => {
               <Image
                 width={56}
                 height={56}
-                src={"/cases/gbc/candy-one.png"}
+                src={leftDecorImage}
                 className="absolute -left-10 top-[35%] hidden scale-150 lg:block"
                 alt={"lollipop"}
               />
               <Image
                 width={78}
                 height={79}
-                src={"/cases/gbc/candy-two.png"}
+                src={rightDecorImage}
                 className="absolute -right-10 bottom-0 hidden scale-150 lg:block"
                 alt={"lollipop"}
               />
@@ -66,7 +69,7 @@ const GBC = () => {
           }
         />
         <Banner
-          img={"/cases/gbc/gbc-banner.webp"}
+          img={bannerImg}
           classes={"h-[140px] md:h-[200px] lg:h-[300px] xl:h-[500px]"}
           imgDesc={"GBC banner"}
         />

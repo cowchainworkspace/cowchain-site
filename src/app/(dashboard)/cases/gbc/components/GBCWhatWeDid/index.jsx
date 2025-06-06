@@ -15,6 +15,8 @@ const GBCWhatWeDid = () => {
             height={138}
             alt={"gbc with lollipop"}
             className="absolute -right-[16px] -top-[78%] hidden xl:block"
+            loading="lazy"
+            priority={false}
           />
           <div className="border-t-[0.5px] border-white-50 pt-2 xl:pt-8">
             <h3 className="mb-2 font-manrope text-xs font-normal uppercase leading-5 tracking-[2px]  text-white md:mb-4 xl:font-medium">
