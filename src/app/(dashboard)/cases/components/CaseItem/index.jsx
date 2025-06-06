@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,12 +6,12 @@ import { CaseDescription } from "./blocks/CaseDescription";
 
 const CaseItem = ({ caseItem }) => {
   const {
+    id,
     tags,
     caseName,
     caseDescription,
     link,
     caseImage,
-    imageHeight,
     containerWidth,
     tagsWidth,
     caseMobileImage
@@ -31,6 +30,7 @@ const CaseItem = ({ caseItem }) => {
           className="hidden h-auto w-[100vw] sm:block"
           width={1440}
           height={560}
+          loading={id !== 1 ? "lazy" : "eager"}
         />
 
         <Image
@@ -39,6 +39,7 @@ const CaseItem = ({ caseItem }) => {
           className="block h-auto w-[100vw]  sm:hidden"
           width={1500}
           height={2008}
+          priority={id === 1}
         />
 
         <motion.div
