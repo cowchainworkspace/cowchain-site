@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import img from "@/assets/cases/gbc/gbc-wwd-img.webp";
 
 const GBCWhatWeDid = () => {
   return (
@@ -10,7 +11,7 @@ const GBCWhatWeDid = () => {
         </h2>
         <div className="relative grid gap-6 md:grid-cols-2 xl:gap-[37px]">
           <Image
-            src={"/cases/gbc/gbc-wwd-img.webp"}
+            src={img}
             width={148}
             height={138}
             alt={"gbc with lollipop"}

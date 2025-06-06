@@ -2,7 +2,7 @@ import {
   firstSlideReflect,
   secondSlideReflect,
   thirdSlideReflect
-} from "../../../../../../public/cases/reflect/slider";
+} from "@/assets/cases/reflect/slider";
 import {
   mobReflectAiPowered,
   mobReflectCrossPlatformAi,
@@ -14,7 +14,7 @@ import {
   reflectGovernance,
   reflectRealTimePortfolio,
   reflectVelodrome
-} from "../../../../../../public/cases/reflect/solutions";
+} from "@/assets/cases/reflect/solutions";
 
 export const reflectTags = [
   {

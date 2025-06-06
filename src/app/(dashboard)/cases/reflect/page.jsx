@@ -1,8 +1,6 @@
 import Contact from "@/components/Contact";
 import React from "react";
-import Banner from "../components/Banner";
 import CasesSlider from "../components/CasesSlider";
-import CaseHeroScreen from "../components/HeroScreen";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
 import { relatedReflectProjects } from "../data";
@@ -16,9 +14,9 @@ import { setBreadcrumbSchema } from "@/lib/utils";
 import {
   reflectSlides,
   reflectSolutions,
-  reflectTags,
   reflectTeam
 } from "./utils/constants";
+import ReflectHeaderContainer from "./components/ReflectHeaderContainer";
 export { metadata };
 
 const Reflect = () => {
@@ -36,29 +34,7 @@ const Reflect = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
       <section>
-        <CaseHeroScreen
-          pageTitle={"Reflect: DeFAI Automation for Droms"}
-          tags={reflectTags}
-          descriptionClasses="max-w-[640px] font-manrope"
-          heroDescription={
-            <span className="text-center font-manrope text-xs font-[450] leading-5 tracking-wider text-white-70 md:text-sm md:leading-[22.1px]">
-              Reflect is an AI agent designed to streamline DeFi interactions
-              across Velodrome, Aerodrome, and 10+ additional chains. By
-              enabling users to manage liquidity, execute swaps, stake assets,
-              and vote on governance proposals directly through chat commands,
-              Reflect enhances simplicity and accessibility in DeFAI.
-            </span>
-          }
-          containerClasses="relative"
-          sectionClasses="lg:pb-[50px]"
-          headerClasses="font-roc text-[36px] text-center leading-[42px] xl:text-[60px] xl:leading-[64px]"
-        />
-
-        <Banner
-          img={"/cases/reflect/reflect-banner.webp"}
-          classes={"h-[145px] md:h-[300px] lg:h-[400px] xl:h-[560px]"}
-          imgDesc={"Reflect banner"}
-        />
+        <ReflectHeaderContainer />
         <ReflectOverview containerClasses="pb-[22px] md:pb-[120px]" />
 
         <CasesSlider
