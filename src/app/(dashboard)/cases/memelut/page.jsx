@@ -1,15 +1,14 @@
 import Contact from "@/components/Contact";
 import Image from "next/image";
 import React from "react";
-import Banner from "../components/Banner";
 import CasesSlider from "../components/CasesSlider";
-import CaseHeroScreen from "../components/HeroScreen";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
 import { relatedMemelutProjects } from "../data";
 import MemelutOverview from "./components/MemelutOverview";
 import MemelutSolutions from "./components/MemelutSolutions";
 import MemelutWhatWeDid from "./components/MemelutWhatWeDid";
+import dynamic from "next/dynamic";
 
 import { metadata } from "./utils/memelutMetadata";
 
@@ -17,12 +16,13 @@ import { setBreadcrumbSchema } from "@/lib/utils";
 import {
   memelutSlides,
   memelutSolutions,
-  memelutTeam,
-  memeluteTags
+  memelutTeam
 } from "./utils/constants";
-import MemelutBannerContainer from "./components/MemelutBannerContainer";
 export { metadata };
 
+const MemelutHeaderContainer = dynamic(
+  () => import("./components/MemelutHeaderContainer")
+);
 const Memelut = () => {
   const breadcrumbList = setBreadcrumbSchema(
     "Cases",
@@ -37,24 +37,7 @@ const Memelut = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
       <section>
-        <CaseHeroScreen
-          pageTitle={"Memelut: The Tinder of Memecoins"}
-          tags={memeluteTags}
-          descriptionClasses="max-w-[640px] font-manrope"
-          heroDescription={
-            <p className="text-center font-manrope text-xs font-[450] leading-5 tracking-wider text-white-70 md:text-sm md:leading-[22.1px]">
-              Memelut is an all-in-one app that simplifies exploring, trading,
-              and storing memecoins. Designed for the growing $1.5T annual
-              memecoin market, it eliminates the need for multiple apps by
-              integrating a swipe-to-trade experience, social feeds, and secure
-              storage into a single platform.
-            </p>
-          }
-          containerClasses="relative"
-          sectionClasses="lg:pb-[50px]"
-          headerClasses="font-roc text-[36px] text-center leading-[42px] xl:text-[60px] xl:leading-[64px]"
-        />
-        <MemelutBannerContainer />
+        <MemelutHeaderContainer />
         <MemelutOverview containerClasses="xl:pb-[120px]" />
         <CasesSlider
           sectionClasses={"h-[226px] md:mb-[120px] py-5 md:py-0 md:h-[443px]"}

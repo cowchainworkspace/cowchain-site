@@ -1,12 +1,13 @@
 "use client";
 import { useMediaQuery } from "@chakra-ui/react";
 import React from "react";
+import Banner from "../../../components/Banner";
 
 const MemelutBannerContainer = () => {
   const [isMoreThan768] = useMediaQuery("(min-width: 768px)");
   const currentBanner = isMoreThan768
     ? "/cases/memelut/memelut-banner.webp"
-    : "/cases/memolut-banner-mob.png";
+    : "/cases/memelut/memolut-banner-mob.png";
 
   return (
     <Banner
