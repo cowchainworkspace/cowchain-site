@@ -1,7 +1,7 @@
 import "./index.css";
 import "./home.css";
 import { ClientProvider } from "@/lib/api/client";
-import { Anton, Manrope, Montserrat, Poppins, Rubik } from "next/font/google";
+import { Anton, Manrope, Montserrat, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 
 import { metadata } from "./rootMetadata";

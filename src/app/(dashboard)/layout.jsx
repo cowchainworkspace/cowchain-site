@@ -35,7 +35,7 @@ export default function DashboardLayout({ children }) {
     }, 500);
     setTimeout(() => {
       setIsRendering(false);
-    }, 700);
+    }, 600);
   }, []);
 
   return (
