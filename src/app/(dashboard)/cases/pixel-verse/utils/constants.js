@@ -1,4 +1,4 @@
-import {slideFour, slideOne, slideThree, slideTwo } from "../../../../../../public/cases/PixelVerse/slider";
+import {slideFour, slideOne, slideThree, slideTwo } from "@/assets/cases/PixelVerse/slider";
 
 export const pixelVerseTags = [
   {

@@ -3,7 +3,7 @@ import React from "react";
 import {
   weDidFirst,
   weDidSecond
-} from "../../../../../../../public/cases/PixelVerse";
+} from "../../../../../../assets/cases/PixelVerse";
 
 const PixelVerseWhatWeDid = () => {
   return (
