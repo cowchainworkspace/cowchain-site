@@ -10,7 +10,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { useOpenForm } from "../../hooks/useOpenForm";
-// import LoaderWrapper from "./loaderWrapper";
+import LoaderWrapper from "./loaderWrapper";
 
 const Navbar = dynamic(() => import("@/components/Navbar"), {
   loading: () => <Loading />
@@ -30,12 +30,17 @@ export default function DashboardLayout({ children }) {
     emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY);
     emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
 
-    // setTimeout(() => {
-    //   setIsLoading(false);
-    // }, 500);
-    // setTimeout(() => {
-    //   setIsRendering(false);
-    // }, 600);
+    if (pathname === "/") {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
+      setTimeout(() => {
+        setIsRendering(false);
+      }, 600);
+    } else {
+      setIsLoading(false);
+      setIsRendering(false);
+    }
   }, []);
 
   return (
@@ -68,8 +73,10 @@ export default function DashboardLayout({ children }) {
           </>
         )}
         <Navbar />
-        {children}
-        {/* <LoaderWrapper> {} </LoaderWrapper> */}
+
+        <LoaderWrapper isDisabledLoader={pathname !== "/"}>
+          {children}
+        </LoaderWrapper>
         <Footer footerForm={pathname !== "/blog" ? false : true} />
       </div>
       <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />
