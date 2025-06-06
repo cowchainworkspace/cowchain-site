@@ -29,7 +29,9 @@ export default function DashboardLayout({ children }) {
   useEffect(() => {
     emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY);
     emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
+  }, []);
 
+  useEffect(() => {
     if (pathname === "/") {
       setTimeout(() => {
         setIsLoading(false);
@@ -41,7 +43,7 @@ export default function DashboardLayout({ children }) {
       setIsLoading(false);
       setIsRendering(false);
     }
-  }, []);
+  }, [pathname]);
 
   return (
     <section className="relative">
