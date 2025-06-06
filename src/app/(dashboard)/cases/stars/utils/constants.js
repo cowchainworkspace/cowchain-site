@@ -5,7 +5,7 @@ import {
   starsSolutionOne,
   starsSolutionThree,
   starsSolutionTwo
-} from "../../../../../../public/cases/stars/solutions";
+} from "@/assets/cases/stars/solutions";
 
 import {
   starsMobSlideFive,
@@ -19,7 +19,7 @@ import {
   starsSlideOne,
   starsSlideThree,
   starsSlideTwo
-} from "../../../../../../public/cases/stars/slider";
+} from "@/assets/cases/stars/slider";
 
 export const starsTags = [
   {
