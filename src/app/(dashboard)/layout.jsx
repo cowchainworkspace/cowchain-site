@@ -10,7 +10,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { useOpenForm } from "../../hooks/useOpenForm";
-import LoaderWrapper from "./loaderWrapper";
+// import LoaderWrapper from "./loaderWrapper";
 
 const Navbar = dynamic(() => import("@/components/Navbar"), {
   loading: () => <Loading />
@@ -30,12 +30,12 @@ export default function DashboardLayout({ children }) {
     emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY);
     emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
 
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 500);
-    setTimeout(() => {
-      setIsRendering(false);
-    }, 600);
+    // setTimeout(() => {
+    //   setIsLoading(false);
+    // }, 500);
+    // setTimeout(() => {
+    //   setIsRendering(false);
+    // }, 600);
   }, []);
 
   return (
@@ -50,7 +50,7 @@ export default function DashboardLayout({ children }) {
               sizes="(max-width: 640px) 100vw, 100vw"
               alt="Background decoration ellipse"
               className={cn(
-                "absolute left-0 top-0 z-10 hidden w-full opacity-100 md:block"
+                "absolute left-0 top-0 z-10 hidden w-full md:block"
               )}
               src={homeDescTopBg}
             />
@@ -68,8 +68,8 @@ export default function DashboardLayout({ children }) {
           </>
         )}
         <Navbar />
-
-        <LoaderWrapper> {children} </LoaderWrapper>
+        {children}
+        {/* <LoaderWrapper> {} </LoaderWrapper> */}
         <Footer footerForm={pathname !== "/blog" ? false : true} />
       </div>
       <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />
