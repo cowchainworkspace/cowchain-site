@@ -25,7 +25,8 @@ import {
   icoPlatformAdvantages,
   icoPlatformFaqData
 } from "./utils/data";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { icoConstructorSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const IcoConstructor = () => {
@@ -33,12 +34,17 @@ const IcoConstructor = () => {
     "ICO Constructor",
     "ico_constructor"
   );
+  const serviceSchema = getServiceSchema(icoConstructorSchema);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section>
         <HeroSection

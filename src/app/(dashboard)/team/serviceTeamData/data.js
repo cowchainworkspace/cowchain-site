@@ -175,6 +175,7 @@ export const teamGalleryData = [
         "@type": "ListItem",
         position: 1,
         item: {
+          "@type": "WebPage",
           "@id": "https://cowchain.io/",
           name: "Home"
         }
@@ -183,6 +184,7 @@ export const teamGalleryData = [
         "@type": "ListItem",
         position: 2,
         item: {
+          "@type": "WebPage",
           "@id": `https://cowchain.io/team`,
           name: "Team"
         }

@@ -23,7 +23,8 @@ import {
   nftPlatformsSteps
 } from "./utils/data";
 import { metadata } from "./utils/nftMarketPlaceMetadata";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { nftMarketPlaceSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
 
@@ -32,11 +33,17 @@ const NFTMarketPlace = () => {
     "White Label NFT Marketplace",
     "nft_marketplace"
   );
+  const serviceSchema = getServiceSchema(nftMarketPlaceSchema);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section>
         <HeroSection title={"NFT Marketplace"} />

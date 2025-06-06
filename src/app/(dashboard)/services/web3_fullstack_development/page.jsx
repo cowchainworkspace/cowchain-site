@@ -22,7 +22,8 @@ import { DevProcessData } from "./utils/data";
 import { chooseUsData } from "./utils/data";
 import { otherFullStackServiceData } from "./utils/data";
 import { faqData } from "./utils/data";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { fullStackSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
 
@@ -31,12 +32,17 @@ const FullStackDevelopment = () => {
     "Full-Stack Development Services",
     "web3_fullstack_development"
   );
+  const serviceSchema = getServiceSchema(fullStackSchema);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section className="overflow-visible">
         <HeroSection

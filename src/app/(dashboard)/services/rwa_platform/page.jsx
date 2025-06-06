@@ -20,7 +20,8 @@ import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
 import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
 import { metadata } from "./utils/RwaPlatformMetaData";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { rwaPlatformSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
 
@@ -29,12 +30,17 @@ const RwaPlatform = () => {
     "RWA Platform",
     "rwa_platform"
   );
+  const serviceSchema = getServiceSchema(rwaPlatformSchema);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section className="overflow-visible">
         <HeroSection

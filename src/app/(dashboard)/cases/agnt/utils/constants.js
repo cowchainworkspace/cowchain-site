@@ -2,7 +2,7 @@ import {
   slideOne,
   slideThree,
   slideTwo
-} from "../../../../../../public/cases/agnt/slider";
+} from "@/assets/cases/agnt/slider";
 
 import {
   solutionFive,
@@ -15,7 +15,7 @@ import {
   solutionSix,
   solutionThree,
   solutionTwo 
-} from "../../../../../../public/cases/agnt/solutions";
+} from "@/assets/cases/agnt/solutions";
 
 export const agntTags = [
   {

@@ -21,7 +21,8 @@ import {
   steByStepStakingData
 } from "./utils/data";
 import { metadata } from "./utils/stackingMetaData";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { stakingSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const Staking = () => {
@@ -29,11 +30,17 @@ const Staking = () => {
     "Staking Platform",
     "staking"
   );
+  const serviceSchema = getServiceSchema(stakingSchema);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section className="overflow-visible">
         <HeroSection

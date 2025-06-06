@@ -27,7 +27,8 @@ import {
 } from "./utils/data";
 import Image from "next/image";
 import { ServiceStack } from "../components/service/blocks/stack";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { exchangeSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
 
@@ -36,12 +37,17 @@ const Exchange = () => {
     "White Label Exchange",
     "exchange"
   );
+  const serviceSchema = getServiceSchema(exchangeSchema);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section>
         <HeroSection

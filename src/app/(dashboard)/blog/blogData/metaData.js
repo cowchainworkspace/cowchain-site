@@ -15,6 +15,7 @@ export const blogBreadCrumbList = {
         "@type": "ListItem",
         position: 1,
         item: {
+          "@type": "WebPage",
           "@id": "https://cowchain.io/",
           name: "Home"
         }
@@ -23,6 +24,7 @@ export const blogBreadCrumbList = {
         "@type": "ListItem",
         position: 2,
         item: {
+          "@type": "WebPage",
           "@id": `https://cowchain.io/blog`,
           name: "Cowchain Blog"
         }

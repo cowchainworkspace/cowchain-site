@@ -1,7 +1,7 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import dexAdvisoryBg from "@/assets/bg/dexAdvisoryBg.svg";
 import Contact from "@/components/Contact";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
 import Image from "next/image";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
@@ -27,6 +27,7 @@ import {
   consultingProcessData,
   otherBlockChainServices
 } from "./utils/data";
+import { blockChainSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const BlockChainConsulting = () => {
@@ -34,6 +35,7 @@ const BlockChainConsulting = () => {
     "Blockchain Consulting Services & Solutions",
     "blockchain_consulting"
   );
+  const serviceSchema = getServiceSchema(blockChainSchema);
 
   return (
     <>
@@ -41,6 +43,11 @@ const BlockChainConsulting = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+
       <section className="overflow-visible">
         <HeroSection
           title={"Blockchain Consulting Services & Solutions"}
@@ -280,7 +287,7 @@ const BlockChainConsulting = () => {
           data={EngagementDevData}
           topBorder={false}
           isTwoSides={true}
-          titleClasses="!text-[60px]"
+          titleClasses="text-[36px] xl:!text-[60px]"
           bg={
             <Image
               src={dexBg}

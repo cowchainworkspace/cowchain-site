@@ -69,6 +69,7 @@ export const policyBreadCrumbList = {
         "@type": "ListItem",
         position: 1,
         item: {
+          "@type": "WebPage",
           "@id": "https://cowchain.io/",
           name: "Home"
         }
@@ -77,6 +78,7 @@ export const policyBreadCrumbList = {
         "@type": "ListItem",
         position: 2,
         item: {
+          "@type": "WebPage",
           "@id": `https://cowchain.io/policy`,
           name: "Policy"
         }

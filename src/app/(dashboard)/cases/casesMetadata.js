@@ -6,3 +6,28 @@ export const metadata = {
     canonical: "/cases"
   }
 };
+
+  export const casesBreadCrumbList = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "WebPage",
+          "@id": "https://cowchain.io/",
+          name: "Home"
+        }
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "WebPage",
+          "@id": `https://cowchain.io/cases`,
+          name: "Cases"
+        }
+      },
+    ]
+  };

@@ -1,14 +1,11 @@
 "use client";
 
-import bg_lg from "@/assets/bg/clients_header_bg_lg.png";
-import arrow from "@/assets/icons/arrow.svg";
-import home from "@/assets/icons/home.png";
+import bg_lg from "@/assets/bg/clients_header_bg_lg.webp";
+import bg_sm from "@/assets/bg/clients_header_bg_sm.webp";
 import Tag from "@/components/ui/tag";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { Helmet } from "react-helmet";
 
 export const HeroSection = ({
   title,
@@ -20,12 +17,6 @@ export const HeroSection = ({
 }) => {
   return (
     <section className={cn("relative overflow-visible  lg:pt-[120px]")}>
-      <Helmet>
-        <link
-          rel="canonical"
-          href={"https://cowchain.io/services/dex_development"}
-        />
-      </Helmet>
       <Image
         alt="Background decoration ellipse"
         className={cn(
@@ -34,7 +25,14 @@ export const HeroSection = ({
             ? "lg:min-h-[200%] xl:max-h-[200%]"
             : "lg:min-h-[120%] xl:max-h-[85%]"
         )}
+        priority
         src={bg_lg}
+      />
+      <Image
+        alt="Background decoration ellipse"
+        className={cn("absolute -top-24 right-0  min-h-[150%] w-full")}
+        priority
+        src={bg_sm}
       />
       <div
         className={cn(

@@ -23,7 +23,8 @@ import {
 } from "./utils/data";
 import { BenefitsTokenizationData } from "./utils/data";
 import { metadata } from "./utils/rwaTokenizationMetadata";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { rwaTokenizationSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
 
@@ -32,12 +33,17 @@ const RwaTokenization = () => {
     "RWA Tokenization Services",
     "rwa_tokenization"
   );
+  const serviceSchema = getServiceSchema(rwaTokenizationSchema);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section className="overflow-visible">
         <HeroSection

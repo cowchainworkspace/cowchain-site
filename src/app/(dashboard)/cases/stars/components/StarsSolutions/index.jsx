@@ -8,7 +8,7 @@ const StarsSolutions = ({ classes }) => {
   return (
     <section className="overflow-hidden py-[50px] xl:py-[120px]">
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-10 xl:px-[97px]">
-        <h2 className="mb-6 font-roc text-[32px] font-medium uppercase leading-90 text-white xl:mb-[58px] xl:text-center xl:text-[54px]">
+        <h2 className="mx-auto mb-6 max-w-[343px] font-roc text-[32px] font-medium uppercase leading-90 text-white md:mx-0 md:max-w-full xl:mb-[58px] xl:text-center xl:text-[54px]">
           Custom Telegram Mini App Development
         </h2>
         <div className=" hidden w-full justify-center xl:mb-[100px] xl:flex">
@@ -20,7 +20,7 @@ const StarsSolutions = ({ classes }) => {
           </p>
         </div>
 
-        <div className="grid w-full gap-14 md:grid-cols-2  xl:grid-cols-1  xl:gap-[100px] ">
+        <div className="mx-auto grid w-full max-w-[343px]  gap-14 md:mx-0 md:max-w-full md:grid-cols-2 xl:grid-cols-1  xl:gap-[100px] ">
           {starsSolutions.map(
             (
               {

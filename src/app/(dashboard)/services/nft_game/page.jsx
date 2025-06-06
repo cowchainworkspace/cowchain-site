@@ -21,7 +21,8 @@ import {
   whyChooseNftGameData
 } from "./utils/data";
 import { metadata } from "./utils/nftGameMetadata";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { nftGameSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const NftGameDev = () => {
@@ -29,12 +30,17 @@ const NftGameDev = () => {
     "NFT Game Development Services",
     "nft_game"
   );
+  const serviceSchema = getServiceSchema(nftGameSchema);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section className="overflow-visible">
         <HeroSection

@@ -5,6 +5,7 @@ import ContactForm from "../../../../../components/utils/ContactForm";
 import CaseTag from "../CaseTag";
 import CasesBackButton from "../CasesBackButton";
 import HeroButton from "../HeroButton/HeroButton";
+import { useOpenForm } from "@/hooks/useOpenForm";
 
 const CaseHeroScreen = ({
   tags,
@@ -17,7 +18,8 @@ const CaseHeroScreen = ({
   bgDecoration,
   tagContainerClasses = ""
 }) => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const { openForm, setOpenForm } = useOpenForm();
+
   return (
     <section
       className={cn(
@@ -37,7 +39,12 @@ const CaseHeroScreen = ({
         )}
       >
         {bgDecoration}
-        <div className={cn("flex gap-2 justify-center flex-wrap", tagContainerClasses)}>
+        <div
+          className={cn(
+            "flex flex-wrap justify-center gap-2",
+            tagContainerClasses
+          )}
+        >
           {tags.map(({ tagLabel, id }) => (
             <CaseTag key={id} tagLabel={tagLabel} />
           ))}
@@ -58,9 +65,8 @@ const CaseHeroScreen = ({
         >
           {heroDescription}
         </p>
-        <HeroButton openModal={setModalOpen} />
+        <HeroButton openModal={setOpenForm} />
       </div>
-      <ContactForm modalOpen={modalOpen} setModalOpen={setModalOpen} />
     </section>
   );
 };

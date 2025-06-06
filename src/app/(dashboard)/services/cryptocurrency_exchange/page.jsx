@@ -23,7 +23,8 @@ import {
   otherCryptoCurrencyServices,
   walletProcessData
 } from "./utils/data";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { cryptoExchangeSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const CryptoCurrencyDev = () => {
@@ -32,11 +33,17 @@ const CryptoCurrencyDev = () => {
     "cryptocurrency_exchange"
   );
 
+  const serviceSchema = getServiceSchema(cryptoExchangeSchema);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section className="overflow-visible">
         <HeroSection

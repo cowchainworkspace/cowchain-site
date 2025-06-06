@@ -10,7 +10,7 @@ import {
   starsImage,
   stepAppImage,
   tenetImage
-} from "../../../../public/cases/main";
+} from "@/assets/cases/main";
 
 import {
   agntMobile,
@@ -24,7 +24,7 @@ import {
   starsMobile,
   stepUpMobile,
   tenetMobileImg
-} from "../../../../public/cases/main";
+} from "@/assets/cases/main";
 
 export const casesTags = [
   {

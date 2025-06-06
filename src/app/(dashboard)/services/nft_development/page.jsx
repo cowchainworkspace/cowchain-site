@@ -21,7 +21,8 @@ import {
   nftProcessData,
   nftServicesData
 } from "./utils/data";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { nftDevelopmentSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
 
@@ -30,12 +31,17 @@ const NftDevelopment = () => {
     "NFT Development Company",
     "nft_development"
   );
+  const serviceSchema = getServiceSchema(nftDevelopmentSchema);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section>
         <HeroSection

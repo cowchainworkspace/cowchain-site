@@ -28,7 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     "src/assets/svgComponents/industries/SmartContractIcon.jsx",
-    "src/app/(dashboard)/(home)/blocks/ServicesAndTechMenu.jsx"
-, "src/app/(dashboard)/cases/components/CasesFilter/FilterMenu/FilterMenu.jsx"  ],
+    "src/app/(dashboard)/(home)/blocks/ServicesAndTechMenu.jsx",
+    "src/app/(dashboard)/cases/components/CasesFilter/FilterMenu/FilterMenu.jsx"
+  ],
   "exclude": ["node_modules"]
 }

@@ -23,7 +23,8 @@ import { metadata } from "./utils/defiDevMetadata";
 import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import { defiDevelopmentSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const DefiDevelopment = () => {
@@ -31,11 +32,17 @@ const DefiDevelopment = () => {
     "DeFi Development Company",
     "defi_development"
   );
+  const serviceSchema = getServiceSchema(defiDevelopmentSchema);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section>
         <HeroSection

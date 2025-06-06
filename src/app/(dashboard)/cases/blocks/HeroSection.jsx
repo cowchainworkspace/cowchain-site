@@ -1,4 +1,4 @@
-import bg_lg from "@/assets/bg/clients_header_bg_lg.png";
+import bg_lg from "@/assets/bg/clients_header_bg_lg.webp";
 import bgMobileImage from "@/assets/blog/bg-blog-mobile.webp";
 import arrow from "@/assets/icons/arrow.svg";
 import home from "@/assets/icons/home.png";
@@ -16,11 +16,13 @@ export const HeroSection = ({ setTags, currentTags }) => {
         alt="Header Background"
         className="absolute right-0 hidden min-h-[150%] min-w-[200vw] md:-top-16 md:block md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
         src={bg_lg}
+        priority
       />
       <Image
         src={bgMobileImage}
         className="pointer-events-none absolute -top-24 right-0 w-full  md:hidden"
         alt="Background decoration image"
+        priority
       />
       <div className="z-5 relative flex flex-col px-5 pb-8 sm:relative md:px-8 md:pb-12 lg:px-16 xl:px-24">
         <div className="mb-6 flex gap-4">

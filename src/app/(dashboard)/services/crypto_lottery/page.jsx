@@ -1,6 +1,6 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
-import { setBreadcrumbSchemaServices } from "@/lib/utils";
+import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
 import Image from "next/image";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
@@ -22,6 +22,7 @@ import {
   otherLotteryServices,
   whyCryptoLotteryData
 } from "./utils/data";
+import { cryptoLotterySchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const CryptoLottery = () => {
@@ -29,11 +30,17 @@ const CryptoLottery = () => {
     "Crypto Lottery",
     "crypto_lottery"
   );
+  const serviceSchema = getServiceSchema(cryptoLotterySchema);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <section className="overflow-visible">
         <HeroSection
