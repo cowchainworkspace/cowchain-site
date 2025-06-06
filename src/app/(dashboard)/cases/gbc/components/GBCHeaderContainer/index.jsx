@@ -1,13 +1,18 @@
+"use client";
 import React from "react";
 import bannerImg from "@/assets/cases/gbc/gbc-banner.webp";
+import bannerImgMobile from "@/assets/cases/gbc/gbc-banner-mobile.webp";
 import leftDecorImage from "@/assets/cases/gbc/candy-one.png";
 import rightDecorImage from "@/assets/cases/gbc/candy-two.png";
 import Banner from "../../../components/Banner";
 import CaseHeroScreen from "../../../components/HeroScreen";
 import Image from "next/image";
 import { gbcTags } from "../../utils/constants";
+import { useMediaQuery } from "@chakra-ui/react";
 
 const GBCHeaderContainer = () => {
+  const [isMoreThan768] = useMediaQuery("(min-width: 768px)");
+  const currentBannerImg = isMoreThan768 ? bannerImg : bannerImgMobile;
   return (
     <>
       <CaseHeroScreen
@@ -15,12 +20,12 @@ const GBCHeaderContainer = () => {
         tags={gbcTags}
         descriptionClasses="max-w-[660px] font-manrope"
         heroDescription={
-          <p className="text-center font-manrope text-xs font-[450] leading-5 tracking-wider text-white-70 md:text-sm md:leading-[22.1px]">
+          <span className="text-center font-manrope text-xs font-[450] leading-5 tracking-wider text-white-70 md:text-sm md:leading-[22.1px]">
             GMX Blueberry Club (GBC) is a next-generation NFT platform that
             combines customization, trading, and gamification. It allows users
             to collect and personalize GBC NFTs, trade assets, earn Sweet
             Points, and participate in competitions and interactive quests.
-          </p>
+          </span>
         }
         containerClasses="relative"
         headerClasses="font-roc text-[36px] text-center leading-[42px] xl:text-[64px] xl:leading-[64px]"
@@ -44,7 +49,7 @@ const GBCHeaderContainer = () => {
         }
       />
       <Banner
-        img={bannerImg}
+        img={currentBannerImg}
         classes={"h-[140px] md:h-[200px] lg:h-[300px] xl:h-[500px]"}
         imgDesc={"GBC banner"}
       />
