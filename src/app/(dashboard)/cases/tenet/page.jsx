@@ -41,6 +41,7 @@ const Tenet = () => {
         />
         <TenetSolutions solutions={tenetSolutions} />
         <Banner
+          isHighPriority={false}
           img={"/cases/tenet/tenet-img-banner-two.webp"}
           classes={
             "h-[173px] md:h-[360px]  lg:h-[450px] xl:h-[670px]  custom-1700:h-[750px]"
