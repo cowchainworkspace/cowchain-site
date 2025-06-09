@@ -8,20 +8,19 @@ import Link from "next/link";
 import React from "react";
 import CasesFilter from "../components/CasesFilter";
 import { casesTags } from "../constants";
+import { useMediaQuery } from "@chakra-ui/react";
 
 export const HeroSection = ({ setTags, currentTags }) => {
+  const [isMoreThan768] = useMediaQuery("(min-width: 768px)");
+
   return (
     <section className="relative pt-[38px] md:pt-20 lg:pt-[120px]">
       <Image
+        width={375}
+        height={541}
         alt="Header Background"
-        className="absolute right-0 hidden min-h-[150%] min-w-[200vw] md:-top-16 md:block md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
-        src={bg_lg}
-        priority
-      />
-      <Image
-        src={bgMobileImage}
-        className="pointer-events-none absolute -top-24 right-0 w-full  md:hidden"
-        alt="Background decoration image"
+        className="absolute -top-24 right-0 h-auto w-full md:-top-16 md:block md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
+        src={isMoreThan768 ? bg_lg : bgMobileImage}
         priority
       />
       <div className="z-5 relative flex flex-col px-5 pb-8 sm:relative md:px-8 md:pb-12 lg:px-16 xl:px-24">

@@ -30,8 +30,8 @@ const CaseItem = ({ caseItem }) => {
           src={isMoreThan768 ? caseImage : caseMobileImage}
           alt="case"
           className="block h-auto w-[100vw] "
-          width={isMoreThan768 ? 1440 : 500}
-          height={isMoreThan768 ? 560 : 1100}
+          width={isMoreThan768 ? 1440 : 375}
+          height={isMoreThan768 ? 560 : 502}
           priority={id === 1}
         />
 
