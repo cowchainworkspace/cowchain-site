@@ -21,7 +21,7 @@ const Footer = dynamic(() => import("@/components/Footer"), {
 });
 
 export default function DashboardLayout({ children }) {
-  const { setIsLoading, setIsRendering } = useLoader();
+  // const { setIsLoading, setIsRendering } = useLoader(); //TEMPORARY for TESTING PURPOSES
   const { openForm, setOpenForm } = useOpenForm();
 
   const pathname = usePathname();
