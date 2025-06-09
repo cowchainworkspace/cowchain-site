@@ -2,7 +2,7 @@
 import homeDescTopBg from "@/assets/homepage/desctop-home.webp";
 import { Loading } from "@/components/loader/Loading";
 import ContactForm from "@/components/utils/ContactForm";
-import { useLoader } from "@/hooks/useLoader";
+// import { useLoader } from "@/hooks/useLoader"; //TEMPORARY for TESTING PURPOSES
 import { cn } from "@/lib/utils";
 import emailjs from "emailjs-com";
 import dynamic from "next/dynamic";
@@ -10,7 +10,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { useOpenForm } from "../../hooks/useOpenForm";
-import LoaderWrapper from "./loaderWrapper";
+// import LoaderWrapper from "./loaderWrapper"; //TEMPORARY for TESTING PURPOSES
 
 const Navbar = dynamic(() => import("@/components/Navbar"), {
   loading: () => <Loading />
@@ -31,19 +31,20 @@ export default function DashboardLayout({ children }) {
     emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
   }, []);
 
-  useEffect(() => {
-    if (pathname === "/") {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 500);
-      setTimeout(() => {
-        setIsRendering(false);
-      }, 600);
-    } else {
-      setIsLoading(false);
-      setIsRendering(false);
-    }
-  }, [pathname]);
+  //TEMPORARY for TESTING PURPOSES
+  // useEffect(() => {
+  //   if (pathname === "/") {
+  //     setTimeout(() => {
+  //       setIsLoading(false);
+  //     }, 500);
+  //     setTimeout(() => {
+  //       setIsRendering(false);
+  //     }, 600);
+  //   } else {
+  //     setIsLoading(false);
+  //     setIsRendering(false);
+  //   }
+  // }, [pathname]);
 
   return (
     <section className="relative">
@@ -75,10 +76,9 @@ export default function DashboardLayout({ children }) {
           </>
         )}
         <Navbar />
-
-        <LoaderWrapper isDisabledLoader={pathname !== "/"}>
-          {children}
-        </LoaderWrapper>
+        {children}
+        {/* <LoaderWrapper isDisabledLoader={pathname !== "/"}> */}
+        {/* </LoaderWrapper> */}
         <Footer footerForm={pathname !== "/blog" ? false : true} />
       </div>
       <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />
