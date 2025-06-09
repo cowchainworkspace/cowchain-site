@@ -2,7 +2,7 @@
 import homeDescTopBg from "@/assets/homepage/desctop-home.webp";
 import { Loading } from "@/components/loader/Loading";
 import ContactForm from "@/components/utils/ContactForm";
-// import { useLoader } from "@/hooks/useLoader"; //TEMPORARY for TESTING PURPOSES
+import { useLoader } from "@/hooks/useLoader";
 import { cn } from "@/lib/utils";
 import emailjs from "emailjs-com";
 import dynamic from "next/dynamic";
@@ -10,7 +10,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { useOpenForm } from "../../hooks/useOpenForm";
-// import LoaderWrapper from "./loaderWrapper"; //TEMPORARY for TESTING PURPOSES
+import LoaderWrapper from "./loaderWrapper";
 
 const Navbar = dynamic(() => import("@/components/Navbar"), {
   loading: () => <Loading />
@@ -21,7 +21,7 @@ const Footer = dynamic(() => import("@/components/Footer"), {
 });
 
 export default function DashboardLayout({ children }) {
-  // const { setIsLoading, setIsRendering } = useLoader(); //TEMPORARY for TESTING PURPOSES
+  const { setIsLoading, setIsRendering } = useLoader();
   const { openForm, setOpenForm } = useOpenForm();
 
   const pathname = usePathname();
@@ -31,20 +31,19 @@ export default function DashboardLayout({ children }) {
     emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
   }, []);
 
-  //TEMPORARY for TESTING PURPOSES
-  // useEffect(() => {
-  //   if (pathname === "/") {
-  //     setTimeout(() => {
-  //       setIsLoading(false);
-  //     }, 500);
-  //     setTimeout(() => {
-  //       setIsRendering(false);
-  //     }, 600);
-  //   } else {
-  //     setIsLoading(false);
-  //     setIsRendering(false);
-  //   }
-  // }, [pathname]);
+  useEffect(() => {
+    if (pathname === "/") {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
+      setTimeout(() => {
+        setIsRendering(false);
+      }, 600);
+    } else {
+      setIsLoading(false);
+      setIsRendering(false);
+    }
+  }, [pathname]);
 
   return (
     <section className="relative">
@@ -76,9 +75,9 @@ export default function DashboardLayout({ children }) {
           </>
         )}
         <Navbar />
-        {children}
-        {/* <LoaderWrapper isDisabledLoader={pathname !== "/"}> */}
-        {/* </LoaderWrapper> */}
+        <LoaderWrapper isDisabledLoader={pathname !== "/"}>
+          {children}
+        </LoaderWrapper>
         <Footer footerForm={pathname !== "/blog" ? false : true} />
       </div>
       <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />
