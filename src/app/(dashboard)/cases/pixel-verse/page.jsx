@@ -1,15 +1,13 @@
 import Contact from "@/components/Contact";
 import Image from "next/image";
 import React from "react";
-import Banner from "../components/Banner";
 import CasesSlider from "../components/CasesSlider";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
 import { relatedPixelverseProjects } from "../data";
-import HeroScreenContainer from "./components/HeroScreenContainer";
 import PixelVerseWhatWeDid from "./components/PixelVerseWhatWeDid";
 import PixelverseOverview from "./components/PixelverseOverview";
-
+import PixelVerseHeaderContainer from "./components/PixelVerseHeaderContainer";
 import { setBreadcrumbSchema } from "@/lib/utils";
 import {
   overviewItems,
@@ -34,12 +32,7 @@ const PixelVerse = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
       <section className="relative w-full">
-        <HeroScreenContainer />
-        <Banner
-          img={"/cases/PixelVerse/pixel-verse-banner.webp"}
-          imgDesc={"Screenshots from PixelVerse application"}
-          classes={"w-full h-[114px] md:h-[200px] lg:h-[300px] xl:h-[437px]"}
-        />
+        <PixelVerseHeaderContainer />
         <PixelverseOverview
           projectDescription={
             <>
@@ -78,6 +71,8 @@ const PixelVerse = () => {
                 alt="decoration ellipse"
                 className="absolute hidden h-full  w-full scale-y-150 lg:block"
                 src={"/cases/PixelVerse/pixel-verse-ellipse.webp"}
+                loading="lazy"
+                priority={false}
               />
               <Image
                 width={"933"}
@@ -85,6 +80,8 @@ const PixelVerse = () => {
                 alt="decoration ellipse"
                 className="absolute h-full  w-full scale-y-150 lg:hidden"
                 src={"/cases/PixelVerse/pixel-verse-ellipse-mobile.webp"}
+                loading="lazy"
+                priority={false}
               />
             </>
           }

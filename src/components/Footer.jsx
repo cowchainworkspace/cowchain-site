@@ -47,8 +47,7 @@ export default function Footer({ footerForm }) {
     <>
       <section
         id="footer"
-        className={cn("relative opacity-0", {
-          "opacity-100": !isRendering,
+        className={cn("relative opacity-100", {
           "border-t border-t-th-fade": isBorder
         })}
       >

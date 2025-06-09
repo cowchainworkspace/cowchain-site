@@ -61,6 +61,8 @@ const BRC20 = () => {
                 height={"251"}
                 alt="decoration ellipse"
                 className="absolute  hidden h-full w-full scale-y-150 md:block"
+                loading="lazy"
+                priority={false}
               />
               <Image
                 width={361}
@@ -68,6 +70,8 @@ const BRC20 = () => {
                 src={"/cases/hybrid/hybrid-ellipse-mobile.webp"}
                 alt="decoration ellipse"
                 className="absolute  top-0 h-full w-full scale-y-125 md:hidden"
+                loading="lazy"
+                priority={false}
               />
             </>
           }

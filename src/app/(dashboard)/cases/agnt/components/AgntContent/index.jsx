@@ -5,7 +5,7 @@ import AgntSolution from "../AgntSolution";
 import CasesSlider from "../../../components/CasesSlider";
 import TeamBehind from "../../../components/TeamBehind";
 import MoreProjects from "../../../components/MoreProjects";
-
+import bottomBanner from "@/assets/cases/agnt/agent-line.webp";
 import { agntSlides, agntSolutions, agntTeam } from "../../utils/constants";
 import { relatedAgntProjects } from "../../../data";
 import Banner from "../../../components/Banner";
@@ -24,7 +24,7 @@ const AgntContent = () => {
       />
       <AgntSolution solutions={agntSolutions} />
       <Banner
-        img={"/cases/agnt/agent-line.webp"}
+        img={bottomBanner}
         classes={"h-[35px] md:h-[50px] xl:h-[73px] w-full"}
       />
       <AgntWhatWeDid />

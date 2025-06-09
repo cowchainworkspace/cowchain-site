@@ -73,6 +73,8 @@ const BRC20Solutions = ({ solutions, classes }) => {
                     height={img.mobileHeight}
                     src={img.mobileHref}
                     alt={img.info}
+                    loading="lazy"
+                    priority={false}
                   />
                 </div>
                 <div
@@ -85,7 +87,13 @@ const BRC20Solutions = ({ solutions, classes }) => {
                     height: `${img.height}px`
                   }}
                 >
-                  <Image src={img.href} fill className="object-contain" />
+                  <Image
+                    src={img.href}
+                    fill
+                    className="object-contain"
+                    loading="lazy"
+                    priority={false}
+                  />
                 </div>
               </div>
             )

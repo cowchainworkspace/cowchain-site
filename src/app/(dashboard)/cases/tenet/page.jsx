@@ -31,13 +31,7 @@ const Tenet = () => {
       />
       <section>
         <HeroScreenContainer />
-        <Banner
-          img={"/cases/tenet/tenet-banner-img.webp"}
-          classes={
-            "h-[180px] overflow-visible md:h-[400px] lg:h-[470px] xl:h-[535px] md:-mt-[50px] lg:-mt-[153px] xl:-mt-[173px] custom-1700:h-[750px]   custom1430:h-[600px] custom1700:h-[750px]"
-          }
-          imgDesc={"Tenet banner"}
-        />
+
         <TenetOverview />
         <CasesSlider
           sectionClasses={"h-[174px]  md:py-0 lg:h-[469px]"}
@@ -47,6 +41,7 @@ const Tenet = () => {
         />
         <TenetSolutions solutions={tenetSolutions} />
         <Banner
+          isHighPriority={false}
           img={"/cases/tenet/tenet-img-banner-two.webp"}
           classes={
             "h-[173px] md:h-[360px]  lg:h-[450px] xl:h-[670px]  custom-1700:h-[750px]"

@@ -8,7 +8,8 @@ const Banner = ({
   classes,
   decorationElement,
   bannerTitle,
-  decorationImage
+  decorationImage,
+  isHighPriority = true
 }) => {
   return (
     <div className={cn(`relative w-full ${classes}`)}>
@@ -21,7 +22,7 @@ const Banner = ({
         objectFit="cover"
         objectPosition="center"
         alt={imgDesc}
-        priority
+        priority={isHighPriority}
       />
     </div>
   );

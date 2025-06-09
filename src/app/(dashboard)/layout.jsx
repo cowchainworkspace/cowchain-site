@@ -29,14 +29,21 @@ export default function DashboardLayout({ children }) {
   useEffect(() => {
     emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY);
     emailjs.init(process.env.NEXT_PUBLIC_REACT_APP_DEV_EMAILJS_PUBLIC_KEY);
-
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 500);
-    setTimeout(() => {
-      setIsRendering(false);
-    }, 700);
   }, []);
+
+  useEffect(() => {
+    if (pathname === "/") {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
+      setTimeout(() => {
+        setIsRendering(false);
+      }, 600);
+    } else {
+      setIsLoading(false);
+      setIsRendering(false);
+    }
+  }, [pathname]);
 
   return (
     <section className="relative">
@@ -50,7 +57,7 @@ export default function DashboardLayout({ children }) {
               sizes="(max-width: 640px) 100vw, 100vw"
               alt="Background decoration ellipse"
               className={cn(
-                "absolute left-0 top-0 z-10 hidden w-full opacity-100 md:block"
+                "absolute left-0 top-0 z-10 hidden w-full md:block"
               )}
               src={homeDescTopBg}
             />
@@ -69,7 +76,9 @@ export default function DashboardLayout({ children }) {
         )}
         <Navbar />
 
-        <LoaderWrapper> {children} </LoaderWrapper>
+        <LoaderWrapper isDisabledLoader={pathname !== "/"}>
+          {children}
+        </LoaderWrapper>
         <Footer footerForm={pathname !== "/blog" ? false : true} />
       </div>
       <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />

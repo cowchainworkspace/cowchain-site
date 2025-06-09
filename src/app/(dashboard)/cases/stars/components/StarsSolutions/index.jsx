@@ -71,6 +71,8 @@ const StarsSolutions = ({ classes }) => {
                     height={img.mobileHeight}
                     src={img.mobileHref}
                     alt={img.info}
+                    loading="lazy"
+                    priority={false}
                   />
                 </div>
 
@@ -84,7 +86,13 @@ const StarsSolutions = ({ classes }) => {
                     height: `${img.height}px`
                   }}
                 >
-                  <Image src={img.href} fill className="object-contain" />
+                  <Image
+                    src={img.href}
+                    fill
+                    className="object-contain"
+                    loading="lazy"
+                    priority={false}
+                  />
                 </div>
               </div>
             )
