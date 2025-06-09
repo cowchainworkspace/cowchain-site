@@ -57,6 +57,8 @@ const RetroBridge = () => {
                 height={251}
                 alt="decoration ellipse"
                 className="absolute hidden h-full w-full scale-y-150 lg:block"
+                loading="lazy"
+                priority={false}
               />
               <Image
                 src={"/cases/RetroBridge/retrobridge-ellipse-slider-bg.webp"}
@@ -64,6 +66,8 @@ const RetroBridge = () => {
                 height={64}
                 alt="decoration ellipse"
                 className="absolute h-full w-full scale-y-150 lg:hidden"
+                loading="lazy"
+                priority={false}
               />
             </>
           }

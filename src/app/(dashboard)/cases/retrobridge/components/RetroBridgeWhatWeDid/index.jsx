@@ -17,6 +17,8 @@ const RetroBridgeWhatWeDid = () => {
               width={384}
               height={500}
               alt="screenshot of the game"
+              loading="lazy"
+              priority={false}
             />
           </div>
           <div className="relative h-[140px] w-full overflow-hidden bg-muted-horizon md:h-[250px] lg:h-[350px] xl:h-[500px]">
@@ -26,6 +28,8 @@ const RetroBridgeWhatWeDid = () => {
               width={384}
               height={500}
               alt="screenshot of the game"
+              loading="lazy"
+              priority={false}
             />
           </div>
         </div>
