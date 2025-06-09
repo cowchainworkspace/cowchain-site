@@ -42,6 +42,7 @@ const StepAppWhatWeDid = () => {
             height={695}
             alt="Step app flash cards"
             className="hidden xl:block"
+            loading="lazy"
           />
           <Image
             src={"/cases/step-app/we-did-img-mobile.webp"}
@@ -49,6 +50,7 @@ const StepAppWhatWeDid = () => {
             height={227}
             alt="Step app flash cards"
             className="block xl:hidden"
+            loading="lazy"
           />
         </div>
       </div>

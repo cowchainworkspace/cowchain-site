@@ -1,25 +1,29 @@
+import Image from "next/image";
 import React from "react";
 import Popup from "reactjs-popup";
-import modal_close from "../../assets/homepage/modal_close.svg";
 import error from "../../assets/footer/error.svg";
 import success from "../../assets/footer/success.svg";
-import Image from "next/image";
+import modal_close from "../../assets/homepage/modal_close.svg";
 
 const ModalPopup = ({ isOpen, toggleOpen, isError }) => {
   const successText = (
     <div className="flex flex-col">
-      <Image alt="" className="mx-auto w-12" src={success}></Image>
+      <Image
+        alt="Mission complete icon"
+        className="mx-auto w-12"
+        src={success}
+      />
       <p className="mt-4 text-center font-roc text-2xl font-medium uppercase text-white">
-        Thanks! <br></br>
-        Your request was sent successfully. <br></br> We will contact you in
-        next 48 ours!
+        Thanks! <br />
+        Your request was sent successfully. <br /> We will contact you in next
+        48 ours!
       </p>
     </div>
   );
 
   const errorText = (
     <div className="flex flex-col">
-      <Image alt="" className="mx-auto w-12" src={error}></Image>
+      <Image alt="Cross icon" className="mx-auto w-12" src={error} />
       <p className="mt-4 text-center font-roc text-xl font-normal text-[#bbb]">
         Sorry, an error occured...
       </p>
@@ -45,7 +49,7 @@ const ModalPopup = ({ isOpen, toggleOpen, isError }) => {
         <div className="flex">
           <Image
             className="ml-auto w-8 cursor-pointer"
-            alt=""
+            alt="Open modal icon"
             onClick={toggleOpen}
             src={modal_close}
           />

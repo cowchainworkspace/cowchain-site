@@ -6,10 +6,8 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/closeButtonIcon.svg";
-import chackBox from "./../../assets/checkBox.svg";
 import dagerous from "./../../assets/dangerous.svg";
 import bg from "./../../assets/homepage/form/formBg.svg";
-import ThankYouWindow from "./ThankYouWindow";
 
 export default function ContactForm({ modalOpen, setModalOpen }) {
   const {
@@ -64,7 +62,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
         <div className="md:px-[20px] md:py-[50px] lg:p-[100px]">
           <Image
             className="pointer-events-none absolute left-[-350px] top-[-300px] z-[-1] min-h-[1100px] min-w-[900px] md:left-[-500px] md:top-[-900px] md:min-h-[2000px] md:min-w-[1500px]"
-            alt=""
+            alt="Background decoration ellipse"
             src={bg}
           />
 
@@ -165,7 +163,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
               <div className="ml-[16px] h-[72px] w-[335px] self-end md:w-[308px]">
                 {errors.fullName && (
                   <div className="flex items-center  gap-[10px]">
-                    <Image src={dagerous} />
+                    <Image src={dagerous} alt="cross icon" />
                     <div
                       className="text-bottom text-white-400 text-[12px] leading-[17px]"
                       style={{
@@ -179,7 +177,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
 
                 {errors.details && (
                   <div className="flex items-center  gap-[10px]">
-                    <Image src={dagerous} />
+                    <Image src={dagerous} alt="cross icon" />
                     <div
                       className="text-bottom text-white-400 text-[12px] leading-[17px]"
                       style={{
@@ -192,7 +190,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                 )}
                 {errors.company && (
                   <div className="flex items-center  gap-[10px]">
-                    <Image src={dagerous} />
+                    <Image src={dagerous} alt="cross icon" />
                     <div
                       className="text-bottom text-white-400 text-[12px] leading-[17px]"
                       style={{
@@ -205,7 +203,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                 )}
                 {errors.email?.type === "required" && (
                   <div className="flex items-center  gap-[10px]">
-                    <Image src={dagerous} />
+                    <Image src={dagerous} alt="cross icon" />
                     <div
                       className="text-bottom text-white-400 text-[12px] leading-[17px]"
                       style={{
@@ -218,7 +216,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                 )}
                 {errors.email?.type === "pattern" && (
                   <div className="flex items-center  gap-[10px]">
-                    <Image src={dagerous} />
+                    <Image src={dagerous} alt="cross icon" />
                     <div
                       className="text-bottom text-white-400 text-[12px] leading-[17px]"
                       style={{
@@ -231,7 +229,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                 )}
                 {errors.email?.type === "maxLength" && (
                   <div className="flex items-center gap-[10px]">
-                    <Image src={dagerous} />
+                    <Image src={dagerous} alt="cross icon" />
                     <div
                       className="text-bottom text-white-400 text-[12px] leading-[17px]"
                       style={{
@@ -244,7 +242,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                 )}
                 {errors.privacyPolicy && (
                   <div className="flex items-center  gap-[10px]">
-                    <Image src={dagerous} />
+                    <Image src={dagerous} alt="cross icon" />
                     <div
                       className="text-bottom text-white-400 text-[12px] leading-[17px]"
                       style={{
@@ -267,7 +265,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
             >
               <Image
                 className="cursor-pointer"
-                alt=""
+                alt="Close modal icon"
                 onClick={() => setModalOpen(false)}
                 src={modal_close}
               />
@@ -286,7 +284,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
       >
         <Image
           className="pointer-events-none absolute left-[-350px] top-[-1400px] z-[-1] min-h-[3100px] min-w-[900px] md:left-[-500px] md:top-[-900px] md:min-h-[2000px] md:min-w-[1500px]"
-          alt=""
+          alt="Background decoration ellipse"
           src={bg}
         />
 

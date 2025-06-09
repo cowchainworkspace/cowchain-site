@@ -1,6 +1,8 @@
 import { metadata } from "./casesMetadata";
-import CasesContainer from "./components/CasesContainer";
 export { metadata };
+import dynamic from "next/dynamic";
+
+const CasesContainer = dynamic(() => import("./components/CasesContainer"));
 
 const Cases = () => {
   return <CasesContainer />;

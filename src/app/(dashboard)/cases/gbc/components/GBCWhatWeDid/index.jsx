@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import img from "@/assets/cases/gbc/gbc-wwd-img.webp";
 
 const GBCWhatWeDid = () => {
   return (
@@ -10,11 +11,13 @@ const GBCWhatWeDid = () => {
         </h2>
         <div className="relative grid gap-6 md:grid-cols-2 xl:gap-[37px]">
           <Image
-            src={"/cases/gbc/gbc-wwd-img.webp"}
+            src={img}
             width={148}
             height={138}
             alt={"gbc with lollipop"}
             className="absolute -right-[16px] -top-[78%] hidden xl:block"
+            loading="lazy"
+            priority={false}
           />
           <div className="border-t-[0.5px] border-white-50 pt-2 xl:pt-8">
             <h3 className="mb-2 font-manrope text-xs font-normal uppercase leading-5 tracking-[2px]  text-white md:mb-4 xl:font-medium">

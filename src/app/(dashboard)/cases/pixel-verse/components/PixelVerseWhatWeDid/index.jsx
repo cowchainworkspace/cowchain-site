@@ -3,8 +3,7 @@ import React from "react";
 import {
   weDidFirst,
   weDidSecond
-} from "../../../../../../../public/cases/PixelVerse";
-import { businessChallenges } from "../../utils/constants";
+} from "../../../../../../assets/cases/PixelVerse";
 
 const PixelVerseWhatWeDid = () => {
   return (

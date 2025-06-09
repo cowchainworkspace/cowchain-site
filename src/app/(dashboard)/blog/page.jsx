@@ -1,10 +1,16 @@
-import { metadata } from "./blogData/metaData";
+import { metadata, blogBreadCrumbList } from "./blogData/metaData";
 import BlogInfo from "./components/BlogInfo/BlogInfo";
 export { metadata };
 export default async function Blog() {
   return (
-    <section>
-      <BlogInfo />
-    </section>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogBreadCrumbList) }}
+      />
+      <section>
+        <BlogInfo />
+      </section>
+    </>
   );
 }

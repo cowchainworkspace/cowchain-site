@@ -31,6 +31,8 @@ const GBCSlider = () => {
                       height={height}
                       alt={imgDesc}
                       className="mb-[15px]"
+                      loading="lazy"
+                      priority={false}
                     />
                     <h3 className="mb-2 align-[text-top] font-poppins text-[12.89px] leading-none text-[#FFFFFF80]">
                       {tag}

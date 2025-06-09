@@ -19,6 +19,8 @@ const Quote = () => {
           height={166}
           src={"/cases/RetroBridge/retrobridge-icon.png"}
           className="absolute -right-[120px] -top-[83px] h-[166px] w-30"
+          loading="lazy"
+          priority={false}
         />
       </div>
     </section>

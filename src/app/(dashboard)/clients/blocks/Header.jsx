@@ -1,16 +1,16 @@
-import React from "react";
 import bg_lg from "@/assets/bg/clients_header_bg_lg.png";
-import Image from "next/image";
-import home from "@/assets/icons/home.png";
 import arrow from "@/assets/icons/arrow.svg";
+import home from "@/assets/icons/home.png";
+import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 const Header = () => {
   return (
     <section id="clients-header" className="relative pt-20 lg:pt-[120px]">
       <Image
         alt="Header Background"
-        className="absolute right-0 top-0 min-h-[150%] min-w-[200vw] md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
+        className="absolute -top-24 right-0 min-h-[150%] min-w-[200vw] md:-top-16 md:min-h-[130%] md:min-w-full lg:min-h-[120%] xl:max-h-[85%]"
         src={bg_lg}
       />
 

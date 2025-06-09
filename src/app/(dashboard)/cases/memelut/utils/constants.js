@@ -4,7 +4,7 @@ import {
   FourthslideMemelut,
   SecondslideMemelut,
   ThirdslideMemelut
-} from "../../../../../../public/cases/memelut/slider";
+} from "@/assets/cases/memelut/slider";
 import {
   memelutDirectMessage,
   memelutSecureWallet,
@@ -17,7 +17,7 @@ import {
   mobMemelutSocialTrading,
   mobMemelutSwipeTrade,
   mobMemeluteIntegratedTrding
-} from "../../../../../../public/cases/memelut/solutions/index";
+} from "@/assets/cases/memelut/solutions/index";
 
 export const memeluteTags = [
   {

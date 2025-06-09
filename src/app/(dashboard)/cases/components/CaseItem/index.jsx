@@ -1,22 +1,23 @@
-import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { CaseDescription } from "./blocks/CaseDescription";
+import { useMediaQuery } from "@chakra-ui/react";
 
 const CaseItem = ({ caseItem }) => {
   const {
+    id,
     tags,
     caseName,
     caseDescription,
     link,
     caseImage,
-    imageHeight,
     containerWidth,
     tagsWidth,
     caseMobileImage
   } = caseItem;
+  const [isMoreThan768] = useMediaQuery("(min-width: 768px)");
   return (
     <Link href={link}>
       <motion.article
@@ -26,19 +27,12 @@ const CaseItem = ({ caseItem }) => {
         animate="initial"
       >
         <Image
-          src={caseImage.src}
+          src={isMoreThan768 ? caseImage : caseMobileImage}
           alt="case"
-          className="hidden h-auto w-[100vw] sm:block"
-          width={1440}
-          height={560}
-        />
-
-        <Image
-          src={caseMobileImage.src}
-          alt="case"
-          className="block h-auto w-[100vw]  sm:hidden"
-          width={1500}
-          height={2008}
+          className="block h-auto w-[100vw] "
+          width={isMoreThan768 ? 1440 : 375}
+          height={isMoreThan768 ? 560 : 502}
+          priority={id === 1}
         />
 
         <motion.div

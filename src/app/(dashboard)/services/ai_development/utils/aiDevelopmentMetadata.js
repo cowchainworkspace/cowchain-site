@@ -3,6 +3,6 @@ export const metadata = {
   description: "Explore AI Development Services at CowChain. Get custom AI solutions tailored to your business needs. Boost efficiency and innovation with our expertise.",
   metadataBase: new URL("https://cowchain.io/"),
   alternates: {
-    canonical: "/services/ico_platform"
+    canonical: "/services/ai_development"
   }
 };

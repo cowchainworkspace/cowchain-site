@@ -52,7 +52,7 @@ const Quote = ({ text, author, index }) => {
         <div className="flex items-center gap-x-4">
           <div className="flex items-center gap-x-1">
             {[0, 1, 2, 3, 4].map((n, index) => (
-              <Image key={index} className="w-4" src={star} alt=""></Image>
+              <Image key={index} className="w-4" src={star} alt="Star image" />
             ))}
           </div>
           <p className="markup mt-1 !font-normal text-white">5.0</p>
@@ -104,7 +104,7 @@ export const Feedback = ({
                 src={bg}
                 aria-hidden="true"
                 role="presentation"
-                alt=""
+                alt="Background decoration ellipse"
               />
             )}
 
@@ -128,7 +128,11 @@ export const Feedback = ({
                     rel="nofollow noreferrer"
                     target="_blank"
                   >
-                    <Image className="w-12 md:w-16" src={clutch} alt="" />
+                    <Image
+                      className="w-12 md:w-16"
+                      src={clutch}
+                      alt="Star image"
+                    />
                   </a>
                   <div>
                     <div className="flex items-center gap-x-4">
@@ -139,7 +143,7 @@ export const Feedback = ({
                             key={index}
                             className="w-4"
                             src={star}
-                            alt=""
+                            alt="Star image"
                           />
                         ))}
                       </div>
@@ -152,10 +156,18 @@ export const Feedback = ({
                     rel="nofollow noreferrer"
                     target="_blank"
                   >
-                    <Image className="w-12 md:w-16" src={upwork} alt="" />
+                    <Image
+                      className="w-12 md:w-16"
+                      src={upwork}
+                      alt="Star image"
+                    />
                   </a>
                   <div className="flex items-center gap-[8px]">
-                    <Image className="w-[35px]" src={topRated} alt="" />
+                    <Image
+                      className="w-[35px]"
+                      src={topRated}
+                      alt="Star image"
+                    />
                     <p className="markup mt-1 text-[16px] text-white">
                       Top Rated Plus
                     </p>
