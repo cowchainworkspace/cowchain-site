@@ -54,7 +54,7 @@ export default function NotFoundHeader() {
   return (
     <section className="scrollbar-none relative w-full items-center justify-center  pt-20   text-center md:max-w-full    lg:pt-[120px]">
       <Image
-        className=" pointer-events-none absolute -top-24 left-0 block lg:hidden"
+        className=" pointer-events-none absolute -top-24 left-0 block w-full  lg:hidden"
         alt="gradient"
         src={team_bg}
       />
