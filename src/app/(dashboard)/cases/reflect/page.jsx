@@ -7,6 +7,8 @@ import { relatedReflectProjects } from "../data";
 import ReflectOverview from "./components/ReflectOverview";
 import ReflectSolutions from "./components/ReflectSolutions";
 import ReflectWhatWeDid from "./components/ReflectWhatWeDid";
+import reflectImg from "@/assets/cases/reflect/reflect-second-banner.webp";
+import reflectImgMOb from "@/assets/cases/reflect/mob-reflect-second-banner.webp";
 
 import { metadata } from "./utils/reflectMetadata";
 
@@ -53,16 +55,18 @@ const Reflect = () => {
         </div>
         <img
           className="mx-auto hidden h-auto w-full max-w-[1440px] sm:block"
-          src="/cases/reflect/reflect-second-banner.webp"
+          src={reflectImg.src}
           alt="Reflect banner"
+          loading="lazy"
         />
 
         <img
           width={375}
           height={170}
           className={"mx-auto block h-[170px] max-w-[375px] sm:hidden "}
-          src="/cases/reflect/mob-reflect-second-banner.webp"
+          src={reflectImgMOb.src}
           alt="Reflect banner"
+          loading="lazy"
         />
         <ReflectWhatWeDid />
         <TeamBehind

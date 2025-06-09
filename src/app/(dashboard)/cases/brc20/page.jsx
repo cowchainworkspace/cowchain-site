@@ -84,6 +84,7 @@ const BRC20 = () => {
           img={"/cases/brc20/brc20-banner-img-two.webp"}
           classes={"h-[140px] md:h-[200px] lg:h-[300px] xl:h-[685px]"}
           imgDesc={"BRC20 banner"}
+          isHighPriority={false}
         />
         <BRC20WhatWeDid />
         <TeamBehind
