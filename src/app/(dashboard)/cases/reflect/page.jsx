@@ -19,6 +19,7 @@ import {
   reflectTeam
 } from "./utils/constants";
 import ReflectHeaderContainer from "./components/ReflectHeaderContainer";
+import Image from "next/image";
 export { metadata };
 
 const Reflect = () => {
@@ -53,14 +54,16 @@ const Reflect = () => {
             gridClass="xl:gap-0"
           />
         </div>
-        <img
+        <Image
+          width={1440}
+          height={507}
           className="mx-auto hidden h-auto w-full max-w-[1440px] sm:block"
           src={reflectImg.src}
           alt="Reflect banner"
           loading="lazy"
         />
 
-        <img
+        <Image
           width={375}
           height={170}
           className={"mx-auto block h-[170px] max-w-[375px] sm:hidden "}
