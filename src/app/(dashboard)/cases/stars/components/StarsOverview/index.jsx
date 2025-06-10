@@ -34,7 +34,7 @@ const StarsOverview = () => {
               </p>
               <Link
                 className="flex items-center gap-4"
-                href={" https://hub.findgbc.io/"}
+                href={"https://t.me/Stars_MeBot"}
                 target="_blank"
               >
                 <span className="text-lg font-medium uppercase leading-90 text-white underline xl:text-2xl">
