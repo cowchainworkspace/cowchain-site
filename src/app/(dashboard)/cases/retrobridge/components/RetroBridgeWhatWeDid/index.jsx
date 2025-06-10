@@ -60,8 +60,7 @@ const RetroBridgeWhatWeDid = () => {
               contracts and decentralized protocols. A proprietary API and SDK
               for custom blockchain development streamlines integration. The
               platform combines scalability with a user-friendly experience,
-              making cross-chain transfers more
-              <br className="hidden custom1430:block" /> accessible.
+              making cross-chain transfers more accessible.
             </p>
           </div>
         </div>
