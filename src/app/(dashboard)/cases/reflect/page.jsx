@@ -7,9 +7,7 @@ import { relatedReflectProjects } from "../data";
 import ReflectOverview from "./components/ReflectOverview";
 import ReflectSolutions from "./components/ReflectSolutions";
 import ReflectWhatWeDid from "./components/ReflectWhatWeDid";
-import reflectImg from "@/assets/cases/reflect/reflect-second-banner.webp";
-import reflectImgMOb from "@/assets/cases/reflect/mob-reflect-second-banner.webp";
-
+import BotBannerContainer from "./components/BotBannerContainer";
 import { metadata } from "./utils/reflectMetadata";
 
 import { setBreadcrumbSchema } from "@/lib/utils";
@@ -19,7 +17,6 @@ import {
   reflectTeam
 } from "./utils/constants";
 import ReflectHeaderContainer from "./components/ReflectHeaderContainer";
-import Image from "next/image";
 export { metadata };
 
 const Reflect = () => {
@@ -54,23 +51,7 @@ const Reflect = () => {
             gridClass="xl:gap-0"
           />
         </div>
-        <Image
-          width={1440}
-          height={507}
-          className="mx-auto hidden h-auto w-full max-w-[1440px] sm:block"
-          src={reflectImg.src}
-          alt="Reflect banner"
-          loading="lazy"
-        />
-
-        <Image
-          width={375}
-          height={170}
-          className={"mx-auto block h-[170px] max-w-[375px] sm:hidden "}
-          src={reflectImgMOb.src}
-          alt="Reflect banner"
-          loading="lazy"
-        />
+        <BotBannerContainer />
         <ReflectWhatWeDid />
         <TeamBehind
           headerClasses={"xl:leading-[18.41px] xl:tracking-[1.84px]"}

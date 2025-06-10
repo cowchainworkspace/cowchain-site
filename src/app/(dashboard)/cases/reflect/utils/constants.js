@@ -180,7 +180,7 @@ export const reflectSolutions = [
   },
   {
     id: 4,
-    title: "Governance & Voting Automatio",
+    title: "Governance & Voting Automation",
     desc: "Enabled AI execution of staking, emissions claims, and governance voting, reducing manual effort and ensuring active participation.",
     textBlockWidth: 603,
     img: {
@@ -188,7 +188,7 @@ export const reflectSolutions = [
       mobileWidth: 343,
       width: 530,
       height: 372,
-      info: "Governance & Voting Automatio",
+      info: "Governance & Voting Automation",
       href: reflectGovernance,
       mobileHref: mobReflectGovernance
     }

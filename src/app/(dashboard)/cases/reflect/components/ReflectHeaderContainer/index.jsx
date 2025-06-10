@@ -4,12 +4,8 @@ import CaseHeroScreen from "../../../components/HeroScreen";
 import Banner from "../../../components/Banner";
 import { reflectTags } from "../../utils/constants";
 import bannerImg from "@/assets/cases/reflect/reflect-banner.webp";
-import bannerImgMobile from "@/assets/cases/reflect/banner-reflect-mob.webp";
-import { useMediaQuery } from "@chakra-ui/react";
 
 const ReflectHeaderContainer = () => {
-  const [isMoreThan768px] = useMediaQuery("(min-width: 768px)");
-  const currentBanner = isMoreThan768px ? bannerImg : bannerImgMobile;
   return (
     <>
       <CaseHeroScreen
@@ -31,7 +27,7 @@ const ReflectHeaderContainer = () => {
       />
 
       <Banner
-        img={currentBanner}
+        img={bannerImg}
         classes={"h-[145px] md:h-[300px] lg:h-[400px] xl:h-[560px]"}
         imgDesc={"Reflect banner"}
       />
