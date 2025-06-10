@@ -188,7 +188,7 @@ export const tenet =
       { isMain: false, tagName: "Trading" },
     ],
     title: "stars",
-    desc: "Stars is a Telegram mini app where users earn points by completing simple, community-focused tasks. Stars combines game-like simplicity with powerful mechanics that keep users engaged.",
+    desc: "Stars is a Telegram mini app where users earn points by completing simple, community-focused tasks.",
     projectLink: "stars",
     titleClasses: "text-black group-hover:text-white",
     tagClasses: "bg-white  h-[34px] !border-0",

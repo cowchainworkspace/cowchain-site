@@ -56,10 +56,10 @@ const RetroBridgeOverviewItems = ({ items }) => {
                       {itemValue}
                     </p>
                   ) : (
-                    <ul className="flex flex-col gap-[14px] xl:list-disc xl:pl-8">
+                    <ul className="flex flex-col gap-[14px]">
                       {itemValue.map(({ desc }) => (
                         <li key={desc}>
-                          <p className="font-manrope  text-sm font-normal leading-6 !text-white xl:list-item xl:pl-2 xl:text-xl xl:font-medium xl:leading-[30px]">
+                          <p className="font-manrope  text-sm font-normal leading-6 !text-white xl:text-xl xl:font-medium xl:leading-[30px]">
                             {desc}
                           </p>
                         </li>

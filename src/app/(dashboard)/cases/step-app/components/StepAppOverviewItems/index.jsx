@@ -52,11 +52,11 @@ const StepAppOverviewItems = ({ items }) => {
                       {itemValue}
                     </p>
                   ) : (
-                    <ul className="flex flex-col gap-[14px] xl:list-disc xl:pl-8">
+                    <ul className="flex flex-col gap-[14px]">
                       {itemValue.map((item) => {
                         return (
                           <li key={item}>
-                            <p className="list-item font-manrope text-sm  font-normal leading-6 !text-white xl:pl-2 xl:text-xl xl:leading-[30px]">
+                            <p className="font-manrope text-sm  font-normal leading-6 !text-white xl:text-xl xl:leading-[30px]">
                               {item}
                             </p>
                           </li>
