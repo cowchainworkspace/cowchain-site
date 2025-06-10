@@ -196,7 +196,7 @@ export const tenet =
     textColor: "text-black group-hover:text-white",
     textGap: "md:gap-[24px]",
     img: starsImage,
-    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[17px]",
+    cardClasses: "pb-4 px-4 xl:px-0 xl:pb-[30px]",
     relatedSlugs: ["reflect", "tenet", "hybrid"  ],
   }
 
