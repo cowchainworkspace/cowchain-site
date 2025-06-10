@@ -15,6 +15,8 @@ import {
   pixelVerseTeam
 } from "./utils/constants";
 import { metadata } from "./utils/pixelVerseMetadata";
+import ellipseMobile from "@/assets/cases/PixelVerse/pixel-verse-ellipse-mobile.webp";
+import ellipse from "@/assets/cases/PixelVerse/pixel-verse-ellipse.webp";
 
 export { metadata };
 
@@ -70,7 +72,7 @@ const PixelVerse = () => {
                 height={"251"}
                 alt="decoration ellipse"
                 className="absolute hidden h-full  w-full scale-y-150 lg:block"
-                src={"/cases/PixelVerse/pixel-verse-ellipse.webp"}
+                src={ellipse}
                 loading="lazy"
                 priority={false}
               />
@@ -79,7 +81,7 @@ const PixelVerse = () => {
                 height={"251"}
                 alt="decoration ellipse"
                 className="absolute h-full  w-full scale-y-150 lg:hidden"
-                src={"/cases/PixelVerse/pixel-verse-ellipse-mobile.webp"}
+                src={ellipseMobile}
                 loading="lazy"
                 priority={false}
               />

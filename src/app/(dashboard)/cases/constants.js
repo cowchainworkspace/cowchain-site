@@ -347,7 +347,7 @@ export const cases = [
     filterTags: [
       { tagName: "Mobile App" },
       { tagName: "Mobile Telegram Mini-Apps" },
-      { tagName: "Trading" }
+      { tagName: "Mobile Trading" }
     ],
     caseName: "Stars",
     caseDescription:
