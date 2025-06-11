@@ -47,18 +47,15 @@ export default function Footer({ footerForm }) {
     <>
       <section
         id="footer"
-        className={cn("relative opacity-0", {
-          "opacity-100": !isRendering,
+        className={cn("relative opacity-100", {
           "border-t border-t-th-fade": isBorder
         })}
       >
         <div className="grid grid-cols-1 md:grid-cols-2">
           <SocialLinks footerForm={footerForm} />
-
           <div className="px-default border-b border-b-th-fade py-[60px] lg:hidden">
             <FaqAccordion openServicePage={openMobileMenu} />
           </div>
-
           <div className="px-default hidden border-b border-b-th-fade py-[65px] lg:block">
             <div className="grid grid-cols-3 gap-x-8">
               <div className="footer-links h-full">
@@ -105,7 +102,7 @@ export default function Footer({ footerForm }) {
                       <p className="text-[#bbb]">FAQs</p>
                     </AnchorLink>
                   )}
-                  <div className="flex-grow"></div>
+                  <div className="flex-grow" />
                 </div>
               </div>
             </div>
@@ -113,7 +110,11 @@ export default function Footer({ footerForm }) {
 
           <div className=" px-2 py-3 md:col-span-2 md:py-8">
             <a href="/">
-              <Image className="w-full" src={logofont} alt=""></Image>
+              <Image
+                className="w-full"
+                src={logofont}
+                alt="Cowchain company logo"
+              />
             </a>
           </div>
         </div>

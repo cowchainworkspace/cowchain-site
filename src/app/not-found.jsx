@@ -1,14 +1,13 @@
-"use client";
-
 import Navbar from "@/components/Navbar";
+import NotFoundHeader from "../components/NotFoundHeader";
 import LoaderWrapper from "./(dashboard)/loaderWrapper";
-import Header from "./[...not-found]/blocks/Header";
-export default function Page() {
+
+export default function NotFound() {
   return (
     <section>
-      <Navbar isPageNotFound={true} />
+      <Navbar />
       <LoaderWrapper>
-        <Header />
+        <NotFoundHeader />
       </LoaderWrapper>
     </section>
   );

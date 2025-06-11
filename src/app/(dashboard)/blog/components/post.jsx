@@ -36,7 +36,7 @@ export const Post = ({
         width={672}
         className="mb-8 max-h-[360px] w-full self-center object-contain transition-transform duration-200 group-hover:scale-95 md:aspect-video  md:h-auto md:object-fill"
         src={preview_article_img?.url}
-        alt=""
+        alt={article_tag.tag_name}
       />
 
       <div className=" absolute right-5  items-center justify-center opacity-0  transition-opacity duration-300 group-hover:opacity-100">

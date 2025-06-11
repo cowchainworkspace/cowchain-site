@@ -26,7 +26,7 @@ export function ServiceStack({
     >
       {!home && (
         <Image
-          alt=""
+          alt="Background decoration ellipse"
           className="absolute -top-24 left-0 hidden md:block"
           src={dexStackBg}
         />

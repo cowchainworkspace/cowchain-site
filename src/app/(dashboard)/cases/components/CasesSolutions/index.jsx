@@ -70,6 +70,8 @@ const CasesSolutions = ({ solutions, classes, isRetroBridge }) => {
                     src={img.href}
                     alt={img.info}
                     className={"xl:hidden"}
+                    loading="lazy"
+                    priority={false}
                   />
                 )}
                 <div
@@ -82,7 +84,13 @@ const CasesSolutions = ({ solutions, classes, isRetroBridge }) => {
                     height: `${img.height}px`
                   }}
                 >
-                  <Image src={img.href} fill className="object-contain" />
+                  <Image
+                    src={img.href}
+                    fill
+                    className="object-contain"
+                    loading="lazy"
+                    priority={false}
+                  />
                 </div>
               </div>
             )

@@ -1,4 +1,4 @@
-@import "/node_modules/react-modal-video/scss/modal-video.scss";
+@import "react-modal-video/css/modal-video.min.css";
 
 @tailwind base;
 @tailwind components;

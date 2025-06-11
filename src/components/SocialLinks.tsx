@@ -41,10 +41,10 @@ export function SocialLinks({ footerForm, isMenu }) {
             alt="linkedin"
             className="w-[42px] min-w-[42px] custom1200:w-[54px]"
             src={linkedin}
-          ></Image>
+          />
         </a>
         <a
-          href="https://t.me/cowchain_team"
+          href="https://t.me/Johnatan17"
           rel="nofollow noreferrer"
           target="_blank"
         >
@@ -52,7 +52,7 @@ export function SocialLinks({ footerForm, isMenu }) {
             alt="telegram"
             className="w-[42px] min-w-[42px] custom1200:w-[54px]"
             src={telegram}
-          ></Image>
+          />
         </a>
         <a
           href="https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw"
@@ -63,7 +63,7 @@ export function SocialLinks({ footerForm, isMenu }) {
             alt="twitter"
             className="w-[42px] min-w-[42px] custom1200:w-[54px]"
             src={twitter}
-          ></Image>
+          />
         </a>
         <a
           href="https://cowchain.medium.com/"
@@ -74,7 +74,7 @@ export function SocialLinks({ footerForm, isMenu }) {
             alt="medium"
             className="w-[42px] min-w-[42px] custom1200:w-[54px]"
             src={medium}
-          ></Image>
+          />
         </a>
         <a
           href="mailto:sales@cowchain.io"
@@ -85,7 +85,7 @@ export function SocialLinks({ footerForm, isMenu }) {
             alt="mail"
             className="w-[42px] min-w-[42px] custom1200:w-[54px]"
             src={mail}
-          ></Image>
+          />
         </a>
         <a
           href="https://www.upwork.com/ag/cowchain/"
@@ -95,8 +95,8 @@ export function SocialLinks({ footerForm, isMenu }) {
           <Image
             className="w-[42px] min-w-[42px] custom1200:w-[54px]"
             src={upwork}
-            alt=""
-          ></Image>
+            alt="UpWork service Icon"
+          />
         </a>
         <a
           href="https://clutch.co/profile/cowchain"
@@ -106,8 +106,8 @@ export function SocialLinks({ footerForm, isMenu }) {
           <Image
             className="w-[42px] min-w-[42px] custom1200:w-[54px]"
             src={clutch}
-            alt=""
-          ></Image>
+            alt="Clutch service Icon"
+          />
         </a>
       </div>
     </div>

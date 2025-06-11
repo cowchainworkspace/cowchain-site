@@ -1,10 +1,10 @@
-import React from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import { usePrevNextButtons } from "./embla-buttons";
-import { blogData } from "data/blogData";
-import { Post } from "./post";
 import { cn } from "@/lib/utils";
+import { blogData } from "data/blogData";
+import useEmblaCarousel from "embla-carousel-react";
+import React from "react";
 import arrow_btn from "../../../assets/homepage/arrow-btn.png";
+import { usePrevNextButtons } from "./embla-buttons";
+import { Post } from "./post";
 
 const EmblaCarousel = (props) => {
   const { options } = props;
@@ -29,6 +29,7 @@ const EmblaCarousel = (props) => {
 
       <div className="absolute right-[5rem] top-1/2 z-10 flex translate-y-[-50%] items-center gap-10 ">
         <button
+          type="button"
           onClick={onNextButtonClick}
           disabled={nextBtnDisabled}
           id="blog-scroll"
@@ -39,12 +40,17 @@ const EmblaCarousel = (props) => {
             }
           )}
         >
-          <Image className="h-full w-full" src={arrow_btn} alt="" />
+          <Image
+            className="h-full w-full"
+            src={arrow_btn}
+            alt="Next arrow navigation"
+          />
         </button>
       </div>
 
       <div className="absolute left-[2rem] top-1/2 z-10 flex translate-y-[-50%] items-center gap-10 ">
         <button
+          type="button"
           onClick={onPrevButtonClick}
           disabled={prevBtnDisabled}
           id="blog-scroll"
@@ -55,7 +61,11 @@ const EmblaCarousel = (props) => {
             }
           )}
         >
-          <Image className="h-full w-full rotate-180" src={arrow_btn} alt="" />
+          <Image
+            className="h-full w-full rotate-180"
+            src={arrow_btn}
+            alt="Previous arrow navigation"
+          />
         </button>
       </div>
 

@@ -7,9 +7,10 @@ import {
   pixelVerseImage,
   reflectImage,
   retroBridgeImage,
+  starsImage,
   stepAppImage,
   tenetImage
-} from "../../../../public/cases/main";
+} from "@/assets/cases/main";
 
 import {
   agntMobile,
@@ -20,9 +21,10 @@ import {
   pixelverseMobileImg,
   reflectMobileImg,
   retroBridgeMobile,
+  starsMobile,
   stepUpMobile,
   tenetMobileImg
-} from "../../../../public/cases/main";
+} from "@/assets/cases/main";
 
 export const casesTags = [
   {
@@ -204,25 +206,37 @@ export const cases = [
     imageHeight: 560,
     containerWidth: 848
   },
-
-  // TEMPORARILY HIDE: Reflect case card is hidden until design is finalized
-  // {
-  //   id: 6,
-  //   tags: [
-  //     { isMain: true, tagName: "Web Development" },
-  //     { isMain: true, tagName: "AI Development" },
-  //     { isMain: false, tagName: "Trading" },
-  //     { isMain: false, tagName: "DeFi" }
-  //   ],
-  //   caseName: "Reflect",
-  //   caseDescription:
-  //     "Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains. By enabling users to manage liquidity, execute swaps, stake assets, and vote on governance proposals directly through chat commands, Reflect enhances simplicity and accessibility in DeFAI.",
-  //   link: "cases/reflect",
-  //   caseImage: reflectImage,
-  //   caseMobileImage: reflectMobileImg,
-  //   imageHeight: 560,
-  //   containerWidth: 848
-  // },
+  {
+    id: 6,
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: true, tagName: "AI Development" },
+      { isMain: false, tagName: "Trading" },
+      { isMain: false, tagName: "DeFi" }
+    ],
+    filterTags: [
+      {
+        tagName: "Web Development"
+      },
+      {
+        tagName: "AI Development"
+      },
+      {
+        tagName: "Trading"
+      },
+      {
+        tagName: "DeFi"
+      }
+    ],
+    caseName: "Reflect",
+    caseDescription:
+      "Reflect is an AI agent designed to streamline DeFi interactions across Velodrome, Aerodrome, and 10+ additional chains. By enabling users to manage liquidity, execute swaps, stake assets, and vote on governance proposals directly through chat commands, Reflect enhances simplicity and accessibility in DeFAI.",
+    link: "cases/reflect",
+    caseImage: reflectImage,
+    caseMobileImage: reflectMobileImg,
+    imageHeight: 560,
+    containerWidth: 848
+  },
   {
     id: 7,
     tags: [
@@ -245,23 +259,29 @@ export const cases = [
     containerWidth: 450
   },
 
-  // TEMPORARILY HIDE: BRC20 case card is hidden until design is finalized
-
-  // {
-  //   id: 8,
-  //   tags: [
-  //     { isMain: true, tagName: "Web Development" },
-  //     { isMain: false, tagName: "DeFi" }
-  //   ],
-  //   caseName: "BRC20",
-  //   caseDescription:
-  //     "BRC20 is the first Launchpad built for the Ordinals ecosystem, redefining how Bitcoin-based assets are distributed and traded.",
-  //   link: "cases/brc-20",
-  //   caseImage: brc20Image,
-  //   caseMobileImage: brc20Mobile,
-  //   imageHeight: 540,
-  //   containerWidth: 450
-  // },
+  {
+    id: 8,
+    tags: [
+      { isMain: true, tagName: "Web Development" },
+      { isMain: false, tagName: "DeFi" }
+    ],
+    filterTags: [
+      {
+        tagName: "Web Development"
+      },
+      {
+        tagName: "DeFi"
+      }
+    ],
+    caseName: "BRC20",
+    caseDescription:
+      "BRC20 is the first Launchpad built for the Ordinals ecosystem, redefining how Bitcoin-based assets are distributed and traded.",
+    link: "cases/brc20",
+    caseImage: brc20Image,
+    caseMobileImage: brc20Mobile,
+    imageHeight: 540,
+    containerWidth: 450
+  },
 
   {
     id: 9,
@@ -316,5 +336,28 @@ export const cases = [
     caseMobileImage: tenetMobileImg,
     imageHeight: 560,
     containerWidth: 630
+  },
+  {
+    id: 11,
+    tags: [
+      { isMain: true, tagName: "Mobile App" },
+      { isMain: true, tagName: "Telegram Mini-Apps" },
+      { isMain: false, tagName: "Trading" }
+    ],
+    filterTags: [
+      { tagName: "Mobile App" },
+      { tagName: "Mobile Telegram Mini-Apps" },
+      { tagName: "Mobile Trading" }
+    ],
+    caseName: "Stars",
+    caseDescription:
+      "Stars is a Telegram mini app where users earn points by completing simple, community-focused tasks. Built for mass onboarding, Stars combines game-like simplicity with powerful mechanics that keep users engaged.",
+    link: "cases/stars",
+    caseImage: starsImage,
+    caseMobileImage: starsMobile,
+    imageHeight: 560,
+    containerWidth: 630
   }
 ];
+
+

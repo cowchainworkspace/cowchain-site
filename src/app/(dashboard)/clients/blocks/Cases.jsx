@@ -1,12 +1,13 @@
 "use client";
 
-import marsan from "@/assets/cases/marsan.png";
 import eva from "@/assets/cases/eva.png";
-import triend_mobile from "@/assets/cases/triend-mobile.png";
+import finance_mobile from "@/assets/cases/finance-mobile.png";
+import marsan from "@/assets/cases/marsan.png";
 import retrobridge_mobile from "@/assets/cases/retrobridge-mobile.png";
 import step from "@/assets/cases/step.png";
-import finance_mobile from "@/assets/cases/finance-mobile.png";
+import triend_mobile from "@/assets/cases/triend-mobile.png";
 import { useScroll } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import React, {
   useRef,
   useState,
@@ -15,7 +16,6 @@ import React, {
   useEffect
 } from "react";
 import ResizeObserver from "resize-observer-polyfill";
-import { motion, useTransform, useSpring, useMotionValue } from "framer-motion";
 
 import useScrollPercentage from "react-scroll-percentage-hook";
 
@@ -101,18 +101,17 @@ const Cases = () => {
           style={{ x: spring }}
           className="cases_wrapper relative flex gap-x-2 overflow-x-scroll p-2 md:gap-x-4 md:overflow-x-visible lg:py-8"
         >
-          {casesData &&
-            casesData.map((project, index) => (
-              <div
-                key={index}
-                style={{
-                  backgroundImage: `url(${project.pic.src})`
-                }}
-                className="relative flex h-64 w-full min-w-[256px] max-w-[256px] bg-cover bg-center bg-no-repeat p-6 md:p-8 lg:h-[30vw] lg:min-w-[30vw] lg:p-10"
-              >
-                <h2 className="mt-auto max-w-xs text-white">{project.title}</h2>
-              </div>
-            ))}
+          {casesData?.map((project, index) => (
+            <div
+              key={project.title}
+              style={{
+                backgroundImage: `url(${project.pic.src})`
+              }}
+              className="relative flex h-64 w-full min-w-[256px] max-w-[256px] bg-cover bg-center bg-no-repeat p-6 md:p-8 lg:h-[30vw] lg:min-w-[30vw] lg:p-10"
+            >
+              <h2 className="mt-auto max-w-xs text-white">{project.title}</h2>
+            </div>
+          ))}
         </motion.div>
       </div>
       <div

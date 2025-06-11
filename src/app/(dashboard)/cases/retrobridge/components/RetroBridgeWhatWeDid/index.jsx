@@ -17,6 +17,8 @@ const RetroBridgeWhatWeDid = () => {
               width={384}
               height={500}
               alt="screenshot of the game"
+              loading="lazy"
+              priority={false}
             />
           </div>
           <div className="relative h-[140px] w-full overflow-hidden bg-muted-horizon md:h-[250px] lg:h-[350px] xl:h-[500px]">
@@ -26,6 +28,8 @@ const RetroBridgeWhatWeDid = () => {
               width={384}
               height={500}
               alt="screenshot of the game"
+              loading="lazy"
+              priority={false}
             />
           </div>
         </div>
@@ -37,7 +41,7 @@ const RetroBridgeWhatWeDid = () => {
             <h3 className="mb-2 font-manrope text-xs font-medium uppercase leading-5 tracking-[2px] text-white xl:mb-4 xl:text-sm">
               business challenges
             </h3>
-            <p className="text-xs font-[450] leading-5 text-white-70 xl:text-sm xl:leading-6 ">
+            <p className="text-xs font-normal leading-5 text-white-70 xl:text-sm xl:leading-6 ">
               Cross-chain transactions introduce security risks, inconsistent
               execution rules, and integration barriers across networks.
               Supporting multiple networks meant adapting to different smart
@@ -51,13 +55,12 @@ const RetroBridgeWhatWeDid = () => {
             <h3 className="mb-2 font-manrope text-xs font-medium uppercase leading-5 tracking-[2px] text-white xl:mb-4 ">
               result
             </h3>
-            <p className="text-xs font-[450] leading-5 text-white-70  xl:leading-6">
+            <p className="text-xs font-normal leading-5 text-white-70  xl:text-sm xl:leading-6">
               RetroBridge now bridges assets across 51+ networks with smart
               contracts and decentralized protocols. A proprietary API and SDK
               for custom blockchain development streamlines integration. The
               platform combines scalability with a user-friendly experience,
-              making cross-chain transfers more
-              <br className="hidden custom1430:block" /> accessible.
+              making cross-chain transfers more accessible.
             </p>
           </div>
         </div>

@@ -5,12 +5,12 @@ import {
   gbcRewardsOne,
   gbcRewardsThree,
   gbcRewardsTwo
-} from "../../../../../../public/cases/gbc/rewards";
+} from "@/assets/cases/gbc/rewards";
 import {
   gbcSlideOne,
   gbcSlideThree,
   gbcSlideTwo
-} from "../../../../../../public/cases/gbc/slider";
+} from "@/assets/cases/gbc/slider";
 import {
   gbcClubSlideEight,
   gbcClubSlideFive,
@@ -20,7 +20,7 @@ import {
   gbcClubSlideSix,
   gbcClubSlideThree,
   gbcClubSlideTwo
-} from "../../../../../../public/cases/gbc/slides";
+} from "@/assets/cases/gbc/slides";
 import {
   gbcSolutionGroup,
   gbcSolutionGroupMobile,
@@ -28,7 +28,7 @@ import {
   gbcSolutionKeyMobile,
   gbcSolutionQuest,
   gbcSolutionQuestMobile
-} from "../../../../../../public/cases/gbc/solutions";
+} from "@/assets/cases/gbc/solutions";
 
 export const gbcTags = [
   {

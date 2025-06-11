@@ -1,14 +1,14 @@
-import Michael from "@/assets/homepage/team/newTeam/michaelImg.png";
-import Viacheslav from "@/assets/homepage/team/newTeam/viacheslavImg.png";
-import Oleh from "@/assets/homepage/team/newTeam/olehImg.png";
-import Vlad from "@/assets/homepage/team/newTeam/vladImg.png";
-import Alexandra from "@/assets/homepage/team/newTeam/alexandraImg.png";
-import Alex from "@/assets/homepage/team/newTeam/alexImg.png";
-import Hanna from "@/assets/homepage/team/newTeam/hannaImg.png";
-import Ruslan from "@/assets/homepage/team/newTeam/ruslanImg.png";
-import Olexandr from "@/assets/homepage/team/newTeam/olexandrIng.png";
-import newEmploye from "@/assets/homepage/team/newTeam/addEmployesImg.png";
 import linkedin from "@/assets/homepage/linkedin.svg";
+import newEmploye from "@/assets/homepage/team/newTeam/addEmployesImg.png";
+import Alex from "@/assets/homepage/team/newTeam/alexImg.png";
+import Alexandra from "@/assets/homepage/team/newTeam/alexandraImg.png";
+import Hanna from "@/assets/homepage/team/newTeam/hannaImg.png";
+import Michael from "@/assets/homepage/team/newTeam/michaelImg.png";
+import Oleh from "@/assets/homepage/team/newTeam/olehImg.png";
+import Olexandr from "@/assets/homepage/team/newTeam/olexandrIng.png";
+import Ruslan from "@/assets/homepage/team/newTeam/ruslanImg.png";
+import Viacheslav from "@/assets/homepage/team/newTeam/viacheslavImg.png";
+import Vlad from "@/assets/homepage/team/newTeam/vladImg.png";
 
 export const teamGalleryData = [
     {
@@ -35,7 +35,7 @@ export const teamGalleryData = [
     },
     {
       name: "Oleh",
-      role: "Head of Development",
+      role: "CTO",
       photo: Oleh,
       social: {
         network: "LinkedIn",
@@ -166,3 +166,28 @@ export const teamGalleryData = [
       text: "In our worldview, there’s a huge difference between being Web3 developers and developers of Web3. Web3 devs know how to implement blockchain technologies. Devs of Web3 code meaningful products that add value to the community and push the industry forward. We are the devs of Web3."
     }
   ];
+
+  export const teamBreadCrumbList = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "WebPage",
+          "@id": "https://cowchain.io/",
+          name: "Home"
+        }
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "WebPage",
+          "@id": `https://cowchain.io/team`,
+          name: "Team"
+        }
+      },
+    ]
+  };

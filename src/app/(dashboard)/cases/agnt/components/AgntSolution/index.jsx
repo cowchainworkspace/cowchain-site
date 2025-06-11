@@ -70,6 +70,8 @@ const AgntSolution = ({ solutions, classes }) => {
                       alt={img.info}
                       fill
                       className="object-contain"
+                      loading="lazy"
+                      priority={false}
                     />
                   </div>
                 </div>

@@ -25,6 +25,8 @@ const GBCRewards = () => {
                 height={pass.height}
                 alt={pass.imgDesc}
                 className="size-[110px] md:size-[177px]"
+                loading="lazy"
+                priority={false}
               />
               <h4 className="align-[text-top] font-roc text-[16.08px] font-bold leading-none text-white">
                 {pass.title}
@@ -47,6 +49,8 @@ const GBCRewards = () => {
                   height={height}
                   alt={imgDesc}
                   className="size-[100px] md:size-[140px]"
+                  loading="lazy"
+                  priority={false}
                 />
                 <h4 className="align-[text-top] text-[12.87px] font-bold leading-none text-white">
                   {title}

@@ -1,28 +1,28 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import HybridSvg from "public/svgIcons/HybridSvg";
 import React from "react";
 
-const Banner = ({ img, imgDesc, classes, decorationElement, bannerTitle }) => {
+const Banner = ({
+  img,
+  imgDesc,
+  classes,
+  decorationElement,
+  bannerTitle,
+  decorationImage,
+  isHighPriority = true
+}) => {
   return (
-    <div className={cn(`relative ${classes}`)}>
+    <div className={cn(`relative w-full ${classes}`)}>
       {decorationElement}
       {bannerTitle}
-      {bannerTitle && (
-        <Image
-          width={442}
-          height={219}
-          src={"/cases/hybrid/cases-hybrid-ellipse.webp"}
-          className="absolute left-10 top-10 z-50 h-[56] w-[112px] md:left-[65px] md:top-[83px] lg:top-[140px] lg:h-[219px] lg:h-[219px] lg:w-[442px] lg:w-[442px] lg:scale-150 xl:left-[77px]"
-          alt="background decoration ellipse"
-        />
-      )}
+      {decorationImage}
       <Image
         src={img}
         fill
         objectFit="cover"
         objectPosition="center"
         alt={imgDesc}
+        priority={isHighPriority}
       />
     </div>
   );

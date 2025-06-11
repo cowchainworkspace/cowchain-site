@@ -57,7 +57,7 @@ const BurgerMenu = ({
                   closeBurger();
                   closeMobServiceMenu(e);
                 }}
-                alt=""
+                alt="Close menu icon"
               />
             </motion.div>
             <motion.nav
@@ -80,7 +80,11 @@ const BurgerMenu = ({
                     <p className="cursor-pointer font-roc text-base font-medium uppercase text-white">
                       Services & Technologies
                     </p>
-                    <Image className="mb-1 ml-auto w-6" src={arrow} alt="" />
+                    <Image
+                      className="mb-1 ml-auto w-6"
+                      src={arrow}
+                      alt="Arrow image"
+                    />
                   </button>
                   {anchorLinks.map((link, index) => (
                     <Link key={index} href={link.link} onClick={closeBurger}>
@@ -91,7 +95,7 @@ const BurgerMenu = ({
                         <Image
                           className="mb-1 ml-auto w-6"
                           src={arrow}
-                          alt=""
+                          alt="Arrow image"
                         />
                       </div>
                     </Link>
@@ -109,7 +113,7 @@ const BurgerMenu = ({
                         <Image
                           className="mb-1 ml-auto w-6"
                           src={arrow}
-                          alt=""
+                          alt="Arrow image"
                         />
                       </div>
                     </Link>
