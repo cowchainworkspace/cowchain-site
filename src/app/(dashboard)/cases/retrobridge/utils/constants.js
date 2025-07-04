@@ -86,7 +86,7 @@ export const overviewRetroBridgeItems = [
         desc: "A testnet bridge and faucet for risk-free testing."
       },
       {
-        desc: "A dApp explorer for tracking transactions."
+        desc: "A dApp explorer for discovering Web3 apps, filtered by chain and category."
       },
       {
         desc: "NFT-backed project phases for user engagement."
@@ -250,7 +250,7 @@ export const retroBridgeSolutions = [
   {
     id: 6,
     title: "dApp Explorer",
-    desc: "Developed a dApp explorer enabling users to track transactions and blockchain activities efficiently, positioning the project as one of the standout blockchain case studies in cross-chain technology.",
+    desc: "Developed a dApp explorer that lets users browse integrated dApps across supported chains, sorted by category, popularity, and network, positioning the product as one of the most comprehensive blockchain case studies in cross-chain discovery.",
     textBlockWidth: 605,
     img: {
       width: 374,
