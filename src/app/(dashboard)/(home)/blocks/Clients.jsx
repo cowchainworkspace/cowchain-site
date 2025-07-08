@@ -16,14 +16,18 @@ import step from "@/assets/svgComponents/clientsLogo/Step";
 import tenet from "@/assets/svgComponents/clientsLogo/Tenet";
 
 export const logos = [
-  { name: "RetroBridge", logo: retroBridge },
-  { name: "Step", logo: step },
-  { name: "GBC", logo: gbc },
-  { name: "Pixel", logo: pixel },
-  { name: "Hybrid", logo: hybrid },
-  { name: "Agnt", logo: agnt },
-  { name: "Brc20", logo: brc20 },
-  { name: "Tenet", logo: tenet }
+  {
+    name: "RetroBridge",
+    logo: retroBridge,
+    linkUrl: "https://retrobridge.io/"
+  },
+  { name: "Step", logo: step, linkUrl: "https://step.app/" },
+  { name: "GBC", logo: gbc, linkUrl: "https://app.findgbc.com/" },
+  { name: "Pixel", logo: pixel, linkUrl: "https://www.pixelverse.xyz/" },
+  { name: "Hybrid", logo: hybrid, linkUrl: "https://buildonhybrid.com/" },
+  { name: "Agnt", logo: agnt, linkUrl: "https://agnthub.ai/" },
+  { name: "Brc20", logo: brc20, linkUrl: "https://brc20.com/" },
+  { name: "Tenet", logo: tenet, linkUrl: "https://tenet.org/" }
 ];
 
 export default function Clients() {
@@ -122,12 +126,15 @@ export default function Clients() {
 
         <div className="mt-[37px] grid w-full grid-cols-4 gap-[35px]">
           {logos.map((brand) => (
-            <div
+            <Link
+              href={brand.linkUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               key={brand.name}
               className="flex h-[40px] w-[60px] items-center justify-center  sm:h-[50px] sm:w-[130px] md:h-[60px] md:w-[150px] custom1200:h-[116px] custom1200:w-[300px]"
             >
               <brand.logo className="w-[60px] sm:w-[100px] custom1200:w-[140px]" />
-            </div>
+            </Link>
           ))}
         </div>
       </div>

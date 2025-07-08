@@ -358,16 +358,16 @@ export const servicesBlocksData = [
     items: [
       {
         title: "Explore White Label Solutions",
-        link: "/services/white_label_solutions"
+        link: "/services/white-label-solutions"
       },
-      { title: "RWA platform", link: "/services/rwa_platform" },
-      { title: "Social-fi mini-app", link: "/services/social_fi_mini_app" },
-      { title: "Mobile crypto wallet", link: "/services/mobile_crypto_wallet" },
-      { title: "ICO constructor", link: "/services/ico_constructor" },
-      { title: "ICO platform", link: "/services/ico_platform" },
-      { title: "NFT Marketplace", link: "/services/nft_marketplace" },
+      { title: "RWA platform", link: "/services/rwa-platform" },
+      { title: "Social-fi mini-app", link: "/services/social-fi-mini-app" },
+      { title: "Mobile crypto wallet", link: "/services/mobile-crypto-wallet" },
+      { title: "ICO constructor", link: "/services/ico-constructor" },
+      { title: "ICO platform", link: "/services/ico-platform" },
+      { title: "NFT Marketplace", link: "/services/nft-marketplace" },
       { title: "Staking", link: "/services/staking" },
-      { title: "Crypto Lottery", link: "/services/crypto_lottery" },
+      { title: "Crypto Lottery", link: "/services/crypto-lottery" },
       { title: "Exchange", link: "/services/exchange" },
       // {
       //   title: "ITC (Social Trading Platform)",
@@ -380,39 +380,39 @@ export const servicesBlocksData = [
     items: [
       {
         title: "Web3 Full-stack Development",
-        link: "/services/web3_fullstack_development"
+        link: "/services/web3-fullstack-development"
       },
-      { title: "NFT Development", link: "/services/nft_development" },
-      { title: "dApp Development", link: "/services/dapp_development" },
-      { title: "DeFi Development", link: "/services/defi_development" },
+      { title: "NFT Development", link: "/services/nft-development" },
+      { title: "dApp Development", link: "/services/dapp-development" },
+      { title: "DeFi Development", link: "/services/defi-development" },
       {
         title: "Smart Contract Development",
-        link: "/services/smart_contract_development"
+        link: "/services/smart-contract-development"
       },
-      { title: "AI Development", link: "/services/ai_development" }
+      { title: "AI Development", link: "/services/ai-development" }
     ]
   },
   {
     title: "SERVICES",
     items: [
-      { title: "DEX Development", link: "/services/dex_development" },
-      { title: "Crypto Wallet", link: "/services/crypto_wallet" },
+      { title: "DEX Development", link: "/services/dex-development" },
+      { title: "Crypto Wallet", link: "/services/crypto-wallet" },
       {
         title: "Cryptocurrency Exchange",
-        link: "/services/cryptocurrency_exchange"
+        link: "/services/cryptocurrency-exchange"
       },
-      { title: "P2P crypto exchange", link: "/services/p2p_crypto_exchange" },
-      { title: "ICO Platform", link: "/services/ico_platform_development" },
-      { title: "RWA Tokenization", link: "/services/rwa_tokenization" },
-      { title: "NFT Game", link: "/services/nft_game" },
+      { title: "P2P crypto exchange", link: "/services/p2p-crypto-exchange" },
+      { title: "ICO Platform", link: "/services/ico-platform-development" },
+      { title: "RWA Tokenization", link: "/services/rwa-tokenization" },
+      { title: "NFT Game", link: "/services/nft-game" },
       // { title: "Metaverse", link: "/services/metaverse" }  // TEMPORARILY HIDE: Metaverse is hidden until design is finalized
     ]
   }
 ];
 
 export const servicesBlocksOtherData = [
-  { title: "Web3 UI/UX design", link: "/services/web3_ui_ux_design" },
-  { title: "Blockchain consulting", link: "/services/blockchain_consulting" }
+  { title: "Web3 UI/UX design", link: "/services/web3-ui-ux-design" },
+  { title: "Blockchain consulting", link: "/services/blockchain-consulting" }
 ];
 
 export const teamData = [

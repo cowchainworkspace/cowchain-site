@@ -12,7 +12,7 @@ import { Industries } from "../components/service/blocks/Industries/index";
 import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { ServiceStack } from "../components/service/blocks/stack";
-import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import { WhiteLabelCases } from "../white-label-solutions/blocks/WhiteLabelCases";
 import {
   advantagesStakingData,
   essentialStakingData,
