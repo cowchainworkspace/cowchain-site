@@ -25,7 +25,7 @@ export const routerLinks = [
 export const burgerMenuIconsLinks = [
   {
     id: 1,
-    url: "https://www.linkedin.com/company/cowchain/",
+    url: "https://www.linkedin.com/company/cowchaindev/",
     image: linkedin
   },
   {

@@ -33,7 +33,7 @@ export function SocialLinks({ footerForm, isMenu }) {
       {footerForm && <FooterForm />}
       <div className="flex flex-wrap items-center gap-x-2 gap-y-2 md:mx-0 md:justify-start">
         <a
-          href="https://www.linkedin.com/company/cowchain/"
+          href="https://www.linkedin.com/company/cowchaindev/"
           rel="nofollow noreferrer"
           target="_blank"
         >

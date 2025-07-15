@@ -58,7 +58,7 @@ const Team = () => {
                   </p>
                   <div className=" mt-[16px] flex items-center  justify-start  gap-x-4 xl:mt-4 ">
                     <a
-                      href="https://www.linkedin.com/company/cowchain/"
+                      href="https://www.linkedin.com/company/cowchaindev/"
                       rel="nofollow noreferrer"
                       target="_blank"
                     >
