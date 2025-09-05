@@ -1,6 +1,7 @@
 import { routerLinks } from "@/lib/constants/navbar";
 import Link from "next/link";
 import React from "react";
+import { trackEvent } from "./utils/event-track";
 
 const NavbarRoutingLinks = ({ setOpenForm }) => {
   return (
@@ -12,7 +13,10 @@ const NavbarRoutingLinks = ({ setOpenForm }) => {
       ))}
       <button
         type="button"
-        onClick={() => setOpenForm(true)}
+        onClick={() => {
+          trackEvent();
+          setOpenForm(true);
+        }}
         className="btn-submit h-16 w-[200px]"
       >
         GET IN TOUCH
