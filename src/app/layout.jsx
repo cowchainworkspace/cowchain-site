@@ -94,15 +94,16 @@ export default function RootLayout({ children }) {
         {/* Google tag (gtag.js) */}
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-8LWED57JRG"
+          src="https://www.googletagmanager.com/gtag/js?id=G-GRXT374LRZ"
         />
+
         <script
           dangerouslySetInnerHTML={{
             __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-8LWED57JRG');
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){dataLayer.push(arguments);}
+           gtag('js', new Date());
+           gtag('config', 'G-GRXT374LRZ');
           `
           }}
         />
