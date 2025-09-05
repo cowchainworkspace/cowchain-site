@@ -135,7 +135,7 @@ export const getServiceSchema = ({serviceName, serviceDescription, serviceType, 
       url: "https://cowchain.io/",
       logo: "/logo-light.svg",
       sameAs: [
-        "https://www.linkedin.com/company/cowchain/",
+        "https://www.linkedin.com/company/cowchaindev/",
         "https://t.me/Johnatan17",
         "https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw",
         "https://cowchain.medium.com/"
