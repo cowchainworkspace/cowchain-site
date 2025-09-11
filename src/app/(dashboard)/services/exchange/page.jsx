@@ -11,7 +11,7 @@ import { OtherServices } from "../components/service/blocks/OtherServices";
 import { Feedback } from "../components/service/blocks/Feedback";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
-import { WhiteLabelCases } from "../white_label_solutions/blocks/WhiteLabelCases";
+import { WhiteLabelCases } from "../white-label-solutions/blocks/WhiteLabelCases";
 import { metadata } from "./utils/exchangeMetadata";
 import {
   exchangeFeatures,

@@ -18,6 +18,7 @@ import { useToggleMenu } from "../hooks/useToggleMenu";
 import BurgerMenu from "./BurgerMenu";
 import NavbarAnchorLinks from "./NavbarAnchorLinks";
 import NavbarRoutingLinks from "./NavbarRoutingLinks";
+import { trackEvent } from "./utils/event-track";
 
 const sideVariants = {
   open: {
@@ -73,6 +74,7 @@ export default function Navbar() {
   };
 
   const handleMobileFormOpen = () => {
+    trackEvent();
     setToggleMenu(false);
     setBurgerOpen(false);
     setOpenForm(true);

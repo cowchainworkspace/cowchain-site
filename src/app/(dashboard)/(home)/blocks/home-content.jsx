@@ -13,7 +13,7 @@ import { Industries } from "../../services/components/service/blocks/Industries"
 import { KeyFeatures } from "../../services/components/service/blocks/KeyFeatures";
 import { OtherServices } from "../../services/components/service/blocks/OtherServices";
 import { ServiceStack } from "../../services/components/service/blocks/stack";
-import { TustByNumbers } from "../../services/web3_fullstack_development/blocks/TustByNumbers";
+import { TustByNumbers } from "../../services/web3-fullstack-development/blocks/TustByNumbers";
 import {
   FSExpertiseData,
   TustByNumbersData,

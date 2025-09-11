@@ -6,7 +6,7 @@ import ContactForm from "@/components/utils/ContactForm";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { useState } from "react";
-
+import { trackEvent } from "@/components/utils/event-track";
 export default function Contact({ className }) {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -33,7 +33,10 @@ export default function Contact({ className }) {
           <button
             type="button"
             className="btn-contact mx-auto lg:h-48 lg:w-48"
-            onClick={() => setModalOpen(true)}
+            onClick={() => {
+              trackEvent();
+              setModalOpen(true);
+            }}
           >
             Get in touch
           </button>
