@@ -110,7 +110,7 @@ export default function Navbar() {
   return (
     <>
       <section
-        className={cn("relative z-[23] bg-transparent opacity-100", {
+        className={cn("relative z-[23] bg-transparent opacity-100 ", {
           "pb-36 md:pb-0": pathname === "/"
         })}
       >
