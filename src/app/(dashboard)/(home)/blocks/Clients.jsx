@@ -69,7 +69,7 @@ export default function Clients() {
                  leading-[36px] md:max-h-[48px] md:text-[48px] md:leading-[48px]"
                 />
               </div>
-              <p className="body1 mt-2 uppercase">Techonologies</p>
+              <p className="body1 mt-2 uppercase">Technologies</p>
             </div>
             <div>
               <div className="flex items-center">
