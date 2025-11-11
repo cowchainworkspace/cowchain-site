@@ -86,6 +86,51 @@ export async function getArticles(currentTag, pageParam) {
   return res.data;
 }
 
+
+export async function getAllArticles() {
+  const FIELDS = [
+    'slug',
+    'id',
+  ];
+
+  const PAGE_SIZE = 100; // uses your Strapi maxLimit if configured; will still work if Strapi caps it lower
+
+  const fetchPage = async (page) => {
+    const url = new URL(API_URL.href);
+    url.search = qs.stringify(
+      {
+        fields: FIELDS,
+        pagination: { page, pageSize: PAGE_SIZE },
+      },
+      { encodeValuesOnly: true }
+    );
+
+    const res = await axios.get(url.href, {
+      headers: { Authorization: `Bearer ${STRAPI_TOKEN}` },
+    });
+
+    if (!res.data) throw new Error('Articles not found');
+    return res.data; 
+  };
+
+  // 1) Get first page to discover total pageCount
+  const first = await fetchPage(1);
+  const all = Array.isArray(first.data) ? [...first.data] : [];
+  const pageCount = first?.meta?.pagination?.pageCount ?? 1;
+
+  // 2) Fetch remaining pages sequentially (simple & reliable)
+  for (let page = 2; page <= pageCount; page += 1) {
+    const next = await fetchPage(page);
+    if (Array.isArray(next.data)) all.push(...next.data);
+  }
+
+  return {
+    data: all,
+    meta: first.meta, 
+  };
+}
+
+
 export async function updateArticleViews(articleId) {
   try {
     const response = await axios.patch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles/${articleId}/view`, {}, {
