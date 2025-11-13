@@ -129,22 +129,41 @@ const BurgerMenu = ({
               GET IN TOUCH
             </button>
             <motion.div className="mx-auto mt-8 flex items-center justify-center gap-x-2">
-              {burgerMenuIconsLinks.map(({ id, url, image }) => (
-                <Link
-                  href={url}
-                  key={id}
-                  rel="nofollow noreferrer"
-                  target="_blank"
-                >
-                  <Image
-                    className="w-14"
-                    width={14}
-                    height={14}
-                    alt="linkedIn"
-                    src={image}
-                  />
-                </Link>
-              ))}
+              {burgerMenuIconsLinks.map(({ id, url, image }) => {
+                if (id === 3) {
+                  return (
+                    <Link
+                      href={url}
+                      key={id}
+                      rel="nofollow noreferrer"
+                      target="_blank"
+                      className="flex size-[56px] items-center justify-center rounded-full border border-[0.5px] border-white/50"
+                    >
+                      <Image
+                        alt="twitter"
+                        className="size-[18px]"
+                        src={image}
+                      />
+                    </Link>
+                  );
+                }
+                return (
+                  <Link
+                    href={url}
+                    key={id}
+                    rel="nofollow noreferrer"
+                    target="_blank"
+                  >
+                    <Image
+                      className="w-14"
+                      width={14}
+                      height={14}
+                      alt="linkedIn"
+                      src={image}
+                    />
+                  </Link>
+                );
+              })}
             </motion.div>
           </motion.div>
         </motion.div>
