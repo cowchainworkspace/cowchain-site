@@ -2,7 +2,7 @@ import linkedin from "@/assets/footer/linkedin.svg";
 import mail from "@/assets/footer/mail.svg";
 import medium from "@/assets/footer/medium.svg";
 import telegram from "@/assets/footer/telegram.svg";
-import twitter from "@/assets/footer/twitter.svg";
+import twitter from "@/assets/footer/x-icon.svg";
 import clutch from "@/assets/homepage/clutch.svg";
 import upwork from "@/assets/homepage/upwork.svg";
 import Image from "next/image";
@@ -44,7 +44,7 @@ export function SocialLinks({ footerForm, isMenu }) {
           />
         </a>
         <a
-          href="https://t.me/Johnatan17"
+          href="https://t.me/Ruslan_Cowchain_HeadBD"
           rel="nofollow noreferrer"
           target="_blank"
         >
@@ -55,15 +55,12 @@ export function SocialLinks({ footerForm, isMenu }) {
           />
         </a>
         <a
-          href="https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw"
+          href="https://x.com/cow_chain"
           rel="nofollow noreferrer"
           target="_blank"
+          className="flex size-[42px] items-center justify-center rounded-full border border-[0.5px] border-white/50 custom1200:size-[54px]"
         >
-          <Image
-            alt="twitter"
-            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
-            src={twitter}
-          />
+          <Image alt="twitter" className="size-[18px]" src={twitter} />
         </a>
         <a
           href="https://cowchain.medium.com/"
