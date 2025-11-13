@@ -2,7 +2,7 @@ import linkedin from "@/assets/footer/linkedin.svg";
 import mail from "@/assets/footer/mail.svg";
 import medium from "@/assets/footer/medium.svg";
 import telegram from "@/assets/footer/telegram.svg";
-import twitter from "@/assets/footer/twitter.svg";
+import twitter from "@/assets/footer/x-icon.svg";
 
 export const anchorLinks = [
   {
@@ -30,12 +30,12 @@ export const burgerMenuIconsLinks = [
   },
   {
     id: 2,
-    url: "https://t.me/Johnatan17",
+    url: "https://t.me/Ruslan_Cowchain_HeadBD",
     image: telegram
   },
   {
     id: 3,
-    url: "https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw",
+    url: "https://x.com/cow_chain",
     image: twitter
   },
   {

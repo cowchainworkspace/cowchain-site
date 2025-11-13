@@ -1,4 +1,4 @@
-import facebook from "@/assets/article/facebookIcon.svg";
+import facebook from "@/assets/footer/x-icon.svg";
 import linkedin from "@/assets/article/linkedin-icon.svg";
 import medium from "@/assets/article/medium-article.svg";
 import telegram from "@/assets/article/telegram-icon.svg";
@@ -19,7 +19,7 @@ export const ShareLinks = () => {
         <Image alt="linkedin" className="w-[14px] lg:w-[14px]" src={linkedin} />
       </a>
       <a
-        href="https://t.me/Johnatan17"
+        href="https://t.me/Ruslan_Cowchain_HeadBD"
         rel="nofollow noreferrer"
         target="_blank"
         className="flex h-[48px] w-[48px] items-center justify-center rounded-[50%]"
