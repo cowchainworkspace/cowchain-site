@@ -50,7 +50,7 @@ export function SocialLinks({ footerForm, isMenu }) {
         >
           <Image
             alt="telegram"
-            className="w-[42px] min-w-[42px] custom1200:w-[54px]"
+            className="w-[42px]  min-w-[42px] custom1200:w-[54px]"
             src={telegram}
           />
         </a>
