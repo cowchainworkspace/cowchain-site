@@ -4,7 +4,7 @@ video {
   bottom: auto;
   left: auto;
   right: auto;
-  @apply top-[10vh] w-[120%] max-w-4xl sm:top-[5vh] md:top-auto md:w-full;
+  @apply top-[10vh] w-[120%] max-w-4xl sm:top-[5vh] md:top-auto md:w-[80%];
 }
 
 .video-wrapper {
