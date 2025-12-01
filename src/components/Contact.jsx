@@ -60,7 +60,7 @@ export default function Contact({
           {!hasNoDesc && (
             <p
               className={cn(
-                "mx-auto max-w-[550px] text-[14px] font-[400] leading-[22px] text-[#BBBBBB]",
+                "mx-auto max-w-[550px]  text-[14px] font-[400] leading-[22px] text-[#BBBBBB]",
                 descriptionClasses
               )}
             >
