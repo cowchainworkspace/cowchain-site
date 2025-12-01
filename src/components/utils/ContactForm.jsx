@@ -85,29 +85,9 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                 className="flex w-full flex-col gap-y-[24px] max-md:gap-y-4"
                 noValidate
               >
-                <div className="relative z-50 grid grid-cols-2 gap-3">
-                  <SelectValue
-                    items={projectType}
-                    control={control}
-                    name={"projectType"}
-                    arialLabelledby={"project-type"}
-                    labelName={"Project Type*"}
-                    selectValue={projectValue}
-                  />
-
-                  <SelectValue
-                    items={projectPrice}
-                    control={control}
-                    name={"projectPrice"}
-                    arialLabelledby={"project-price"}
-                    labelName={"Project Budget*"}
-                    selectValue={projectPriceValue}
-                  />
-                </div>
-
-                <div className="flex h-[318px] flex-col gap-y-[12px] md:h-[170px] md:flex-row md:gap-x-[16px] md:gap-y-0">
+                <div className="flex h-[318px] flex-col gap-y-[12px] max-md:h-fit md:h-[170px] md:flex-row md:gap-x-[16px] md:gap-y-0">
                   <div className="flex h-full w-full flex-col justify-between gap-y-[12px] md:gap-y-[16px]">
-                    <div className="relative h-full w-full">
+                    <div className="relative h-full w-full max-md:h-[46px]">
                       <input
                         className={`contact-input-overlay h-full w-full`}
                         type="text"
@@ -117,7 +97,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                       />
                     </div>
 
-                    <div className="relative h-full w-full">
+                    <div className="relative h-full w-full max-md:h-[46px]">
                       <input
                         className={`contact-input-overlay h-full w-full`}
                         type="email"
@@ -138,7 +118,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                       />
                     </div>
 
-                    <div className="relative h-full w-full">
+                    <div className="relative h-full w-full max-md:h-[46px]">
                       <input
                         className={`contact-input-overlay h-full w-full`}
                         type="text"
@@ -149,6 +129,26 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                     </div>
                   </div>
 
+                  <div className="relative z-50 grid grid-cols-2 gap-3 md:hidden">
+                    <SelectValue
+                      items={projectType}
+                      control={control}
+                      name={"projectType"}
+                      arialLabelledby={"project-type"}
+                      labelName={"Project Type*"}
+                      selectValue={projectValue}
+                    />
+
+                    <SelectValue
+                      items={projectPrice}
+                      control={control}
+                      name={"projectPrice"}
+                      arialLabelledby={"project-price"}
+                      labelName={"Project Budget*"}
+                      selectValue={projectPriceValue}
+                    />
+                  </div>
+
                   <div className="relative min-h-[144px] w-full md:h-full">
                     <textarea
                       className={`contact-input-overlay area-input h-[170px] h-full w-full resize-none`}
@@ -157,6 +157,26 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                       onChange={() => handleInputChange("details")}
                     />
                   </div>
+                </div>
+
+                <div className="relative z-50 -mt-2 grid grid-cols-2 gap-3 max-md:hidden">
+                  <SelectValue
+                    items={projectType}
+                    control={control}
+                    name={"projectType"}
+                    arialLabelledby={"project-type"}
+                    labelName={"Project Type*"}
+                    selectValue={projectValue}
+                  />
+
+                  <SelectValue
+                    items={projectPrice}
+                    control={control}
+                    name={"projectPrice"}
+                    arialLabelledby={"project-price"}
+                    labelName={"Project Budget*"}
+                    selectValue={projectPriceValue}
+                  />
                 </div>
 
                 <div className="flex h-[108px] flex-col gap-[16px] md:h-[46px] md:flex-row">
