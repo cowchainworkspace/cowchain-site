@@ -8,14 +8,28 @@ import Popup from "reactjs-popup";
 import modal_close from "../../assets/homepage/closeButtonIcon.svg";
 import dagerous from "./../../assets/dangerous.svg";
 import bg from "./../../assets/homepage/form/formBg.svg";
+import SelectValue from "./SelectValue";
+
+const projectType = [
+  "Web Development",
+  "Mobile App",
+  "AI Development",
+  "Telegram Mini-Apps",
+  "Blockchain development",
+  "Other"
+];
+
+const projectPrice = ["$5-10K", "$10-50K", "$50K-$100K", "$100K+"];
 
 export default function ContactForm({ modalOpen, setModalOpen }) {
   const {
     register,
     handleSubmit,
     reset,
+    control,
     formState: { errors },
-    clearErrors
+    clearErrors,
+    watch
   } = useForm();
 
   const [modalThanksOpen, setModalThanksOpen] = useState(false);
@@ -23,10 +37,10 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
   const sendFormData = async (data) => {
     try {
       emailjs.send(
-        process.env.NEXT_PUBLIC_REACT_APP_SERVICE_ID,
-        process.env.NEXT_PUBLIC_REACT_APP_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
         data,
-        process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
     } catch (e) {}
     reset();
@@ -38,17 +52,9 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
     clearErrors(fieldName);
   };
 
-  const checkboxes = [
-    "Web Development",
-    "smart contracts",
-    "blockchain development",
-    "mobile development",
-    "dapp development",
-    "consultancy",
-    "Other"
-  ];
+  const projectValue = watch("projectType");
+  const projectPriceValue = watch("projectPrice");
 
-  const radioBtns = ["$10-15K", "$25-35K", "$50K +", "Other"];
   return (
     <>
       <Popup
@@ -59,7 +65,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
         lockScroll
         nested
       >
-        <div className="md:px-[20px] md:py-[50px] lg:p-[100px]">
+        <div className="no-scrollbar overflow-y-scroll max-md:h-screen md:px-[20px] md:py-[50px] lg:p-[100px]">
           <Image
             className="pointer-events-none absolute left-[-350px] top-[-300px] z-[-1] min-h-[1100px] min-w-[900px] md:left-[-500px] md:top-[-900px] md:min-h-[2000px] md:min-w-[1500px]"
             alt="Background decoration ellipse"
@@ -67,21 +73,21 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
           />
 
           <div className="modal p-x-[20px] relative flex h-full  min-w-full gap-[20px] font-roc">
-            <div className="flex w-[335px]  flex-col items-center gap-[32px] md:w-[633px]">
+            <div className="flex w-[335px]  flex-col items-center gap-4 md:w-[633px] md:gap-[32px]">
               <div className="relative w-full text-center md:text-left">
                 <p className="text-left  text-[36px] font-medium text-white md:text-left md:text-center md:text-5xl md:text-[60px]">
-                  CONTACT US
+                  Let's make Web3 work for you
                 </p>
               </div>
 
               <form
                 onSubmit={handleSubmit(sendFormData)}
-                className="flex w-full flex-col gap-y-[32px]"
+                className="flex w-full flex-col gap-y-[24px] max-md:gap-y-4"
                 noValidate
               >
-                <div className="flex h-[318px] flex-col gap-y-[12px] md:h-[170px] md:flex-row md:gap-x-[16px] md:gap-y-0">
+                <div className="flex h-[318px] flex-col gap-y-[12px] max-md:h-fit md:h-[170px] md:flex-row md:gap-x-[16px] md:gap-y-0">
                   <div className="flex h-full w-full flex-col justify-between gap-y-[12px] md:gap-y-[16px]">
-                    <div className="relative h-full w-full">
+                    <div className="relative h-full w-full max-md:h-[46px]">
                       <input
                         className={`contact-input-overlay h-full w-full`}
                         type="text"
@@ -91,7 +97,7 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                       />
                     </div>
 
-                    <div className="relative h-full w-full">
+                    <div className="relative h-full w-full max-md:h-[46px]">
                       <input
                         className={`contact-input-overlay h-full w-full`}
                         type="email"
@@ -112,25 +118,65 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                       />
                     </div>
 
-                    <div className="relative h-full w-full">
+                    <div className="relative h-full w-full max-md:h-[46px]">
                       <input
                         className={`contact-input-overlay h-full w-full`}
                         type="text"
-                        placeholder="Your Company (optional)"
+                        placeholder="Company name (optional)"
                         {...register("company")}
                         onChange={() => handleInputChange("company")}
                       />
                     </div>
                   </div>
 
+                  <div className="relative z-50 grid grid-cols-2 gap-3 md:hidden">
+                    <SelectValue
+                      items={projectType}
+                      control={control}
+                      name={"projectType"}
+                      arialLabelledby={"project-type"}
+                      labelName={"Project Type*"}
+                      selectValue={projectValue}
+                    />
+
+                    <SelectValue
+                      items={projectPrice}
+                      control={control}
+                      name={"projectPrice"}
+                      arialLabelledby={"project-price"}
+                      labelName={"Project Budget*"}
+                      selectValue={projectPriceValue}
+                    />
+                  </div>
+
                   <div className="relative min-h-[144px] w-full md:h-full">
                     <textarea
-                      className={`contact-input-overlay area-input h-[170px] h-full w-full`}
-                      placeholder="Your Comment*"
+                      className={`contact-input-overlay area-input h-[170px] h-full w-full resize-none`}
+                      placeholder="Briefly describe your project*"
                       {...register("details", { required: true })}
                       onChange={() => handleInputChange("details")}
                     />
                   </div>
+                </div>
+
+                <div className="relative z-50 -mt-2 grid grid-cols-2 gap-3 max-md:hidden">
+                  <SelectValue
+                    items={projectType}
+                    control={control}
+                    name={"projectType"}
+                    arialLabelledby={"project-type"}
+                    labelName={"Project Type*"}
+                    selectValue={projectValue}
+                  />
+
+                  <SelectValue
+                    items={projectPrice}
+                    control={control}
+                    name={"projectPrice"}
+                    arialLabelledby={"project-price"}
+                    labelName={"Project Budget*"}
+                    selectValue={projectPriceValue}
+                  />
                 </div>
 
                 <div className="flex h-[108px] flex-col gap-[16px] md:h-[46px] md:flex-row">
@@ -240,6 +286,34 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
                     </div>
                   </div>
                 )}
+                {errors.projectPrice && (
+                  <div className="flex items-center  gap-[10px]">
+                    <Image src={dagerous} alt="cross icon" />
+                    <div
+                      className="text-bottom text-white-400 text-[12px] leading-[17px]"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.5)"
+                      }}
+                    >
+                      Please, select project budget!
+                    </div>
+                  </div>
+                )}
+
+                {errors.projectType && (
+                  <div className="flex items-center  gap-[10px]">
+                    <Image src={dagerous} alt="cross icon" />
+                    <div
+                      className="text-bottom text-white-400 text-[12px] leading-[17px]"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.5)"
+                      }}
+                    >
+                      Please, select project type!
+                    </div>
+                  </div>
+                )}
+
                 {errors.privacyPolicy && (
                   <div className="flex items-center  gap-[10px]">
                     <Image src={dagerous} alt="cross icon" />
