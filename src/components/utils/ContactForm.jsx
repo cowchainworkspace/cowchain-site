@@ -37,10 +37,10 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
   const sendFormData = async (data) => {
     try {
       emailjs.send(
-        process.env.NEXT_PUBLIC_REACT_APP_SERVICE_ID,
-        process.env.NEXT_PUBLIC_REACT_APP_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
         data,
-        process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
     } catch (e) {}
     reset();
