@@ -7,6 +7,38 @@ import HealthcareIcon from "@/assets/svgComponents/industries/HelthcareIcon";
 import BlockchainIcon from "@/assets/svgComponents/industries/LaunchMaitenanceIcon";
 import SupplyIcon from "@/assets/svgComponents/industries/SupplyChainIcon";
 import WhiteLabel from "@/assets/svgComponents/industries/WhiteLabel";
+import {SerchElementsIcon, SmartphoneIcon, FaceIcon, ArrowsIcon} from "@/assets/icons/homepage/heroscreen"; 
+
+import agnt from "@/assets/svgComponents/clientsLogo/Agnt";
+import brc20 from "@/assets/svgComponents/clientsLogo/Brc20";
+import gbc from "@/assets/svgComponents/clientsLogo/GBC";
+import hybrid from "@/assets/svgComponents/clientsLogo/Hybrid";
+import pixel from "@/assets/svgComponents/clientsLogo/Pixel";
+import retroBridge from "@/assets/svgComponents/clientsLogo/RetroBridge";
+import step from "@/assets/svgComponents/clientsLogo/Step";
+import tenet from "@/assets/svgComponents/clientsLogo/Tenet";
+import wefi from "@/assets/svgComponents/clientsLogo/Wefi";
+import kite from "@/assets/svgComponents/clientsLogo/Kite";
+
+export const projectLogos = [
+  { name: "Kite", logo: kite, linkUrl: "https://kite.com/" },
+    { name: "Pixel", logo: pixel, linkUrl: "https://www.pixelverse.xyz/" },
+     { name: "Brc20", logo: brc20, linkUrl: "https://brc20.com/" },
+     { name: "Tenet", logo: tenet, linkUrl: "https://tenet.org/" },
+  {
+    name: "RetroBridge",
+    logo: retroBridge,
+    linkUrl: "https://retrobridge.io/"
+  },
+  { name: "Hybrid", logo: hybrid, linkUrl: "https://buildonhybrid.com/" },
+  { name: "Step", logo: step, linkUrl: "https://step.app/" },
+  { name: "GBC", logo: gbc, linkUrl: "https://app.findgbc.com/" },
+  { name: "Wefi", logo: wefi, linkUrl: "https://wefi.com/" },
+  
+  { name: "Agnt", logo: agnt, linkUrl: "https://agnthub.ai/" },
+ 
+  
+];
 
 export const servedIndustriesData = [
   {
@@ -273,5 +305,30 @@ export const mobileFaqHomeData = [
     id: 5,
     title: 'Can Web3 Solutions Be Integrated \n with Existing Systems?',
     content: 'Yes, our Web3 development company ensures seamless integration of blockchain solutions with your existing systems.',
+  },
+]
+
+
+
+export const heroScreenData = [
+  {
+    icon: ArrowsIcon,
+    title: 'Product-led Engineering',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    icon: FaceIcon,
+    title: 'User Acquisition  focused developement',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    icon: SmartphoneIcon,
+    title: 'MVP Development',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    icon: SerchElementsIcon,
+    title: 'Complex Architecture solvers',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
 ]
