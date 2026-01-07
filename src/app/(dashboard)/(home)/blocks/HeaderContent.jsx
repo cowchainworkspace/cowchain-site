@@ -25,8 +25,15 @@ export default function HeaderContent() {
           <Video className="xl:w-[34.72vw] w-[500px] -top-[100%] xl:-top-[9vw] h-auto -right-[89px]" />
         </div>
       </div>
+      <div className="w-full relative lg:hidden mt-auto">
+        <ProjectsLine />
+      </div>
+
+
       <HeroScreenItems />
-      <ProjectsLine />
+      <div className="w-full hidden lg:block">
+        <ProjectsLine />
+      </div>
     </>
   );
 }
