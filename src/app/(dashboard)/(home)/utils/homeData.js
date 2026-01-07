@@ -21,7 +21,7 @@ import wefi from "@/assets/svgComponents/clientsLogo/Wefi";
 import kite from "@/assets/svgComponents/clientsLogo/Kite";
 
 export const projectLogos = [
-  { name: "Kite", logo: kite, linkUrl: "https://kite.com/" },
+  { name: "Kite", logo: kite, linkUrl: "https://gokite.ai/" },
     { name: "Pixel", logo: pixel, linkUrl: "https://www.pixelverse.xyz/" },
      { name: "Brc20", logo: brc20, linkUrl: "https://brc20.com/" },
      { name: "Tenet", logo: tenet, linkUrl: "https://tenet.org/" },
@@ -314,21 +314,21 @@ export const heroScreenData = [
   {
     icon: ArrowsIcon,
     title: 'Product-led Engineering',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    content: 'We build what users actually use, not what looks good in docs. Faster releases, fewer rewrites, better adoption and retention.',
   },
   {
     icon: FaceIcon,
     title: 'User Acquisition  focused developement',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    content: 'We ship flows that drive signups and activation, instead of vanity features. Event tracking and funnel fixes included, so drop offs get fixed fast.',
   },
   {
     icon: SmartphoneIcon,
     title: 'MVP Development',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    content: 'We deliver an MVP you can demo, ship, and iterate fast. Built to validate demand and prove traction before you scale spend.',
   },
   {
     icon: SerchElementsIcon,
     title: 'Complex Architecture solvers',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    content: 'We untangle scaling, latency, and infra debt when products stall. Refactors and integrations that hold in production under real traffic.',
   },
 ]

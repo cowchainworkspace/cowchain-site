@@ -27,7 +27,7 @@ export default function HeroScreenItems() {
         const isExpanded = expandedCard === index;
 
         return (
-          <div key={title} className={cn("flex flex-1 h-fit", isMoreThan1023 && "h-[262px]")}>
+          <div key={title} className={cn("flex flex-1 h-fit", isMoreThan1023 && "h-[278px]")}>
             <motion.article
               initial="collapsed"
               animate={isExpanded ? "expanded" : "collapsed"}
@@ -43,7 +43,7 @@ export default function HeroScreenItems() {
               }}
               variants={{
                 collapsed: { height: isMoreThan1023 ? 189 : 134 },
-                expanded: { height: isMoreThan1023 ? 262 : 234 },
+                expanded: { height: isMoreThan1023 ? 278 : 234 },
               }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className={cn(
@@ -67,7 +67,7 @@ export default function HeroScreenItems() {
                     expanded: { opacity: 1, height: "auto", marginTop: 0 }
                   }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="text-[16px] font-manrope text-[#BBBBBB] font-normal leading-[22px] max-w-[276px]"
+                  className="text-[16px] font-manrope text-[#BBBBBB] font-normal leading-[22px] custom1400:max-w-[276px]"
                 >
                   {content}
                 </motion.p>
