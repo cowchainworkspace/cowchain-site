@@ -15,8 +15,7 @@ video {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
   /* z-index: 10; */
 }
 
@@ -84,7 +83,7 @@ video {
   opacity: 0;
 }
 
-.tool-icon-container:hover > .tool-text {
+.tool-icon-container:hover>.tool-text {
   @apply block;
   visibility: visible;
   opacity: 1;
@@ -99,16 +98,14 @@ video {
   transition:
     visibility 0s,
     opacity 0.3s ease-in-out;
-  background: linear-gradient(
-    164deg,
-    #873cbc 0.26%,
-    #5f2c91 16.97%,
-    #11011f 42.6%,
-    transparent 53.68%
-  );
+  background: linear-gradient(164deg,
+      #873cbc 0.26%,
+      #5f2c91 16.97%,
+      #11011f 42.6%,
+      transparent 53.68%);
 }
 
-.expertise_wrapper:hover > .expertise_wrapper_bg {
+.expertise_wrapper:hover>.expertise_wrapper_bg {
   visibility: visible;
   opacity: 1;
 }
@@ -131,15 +128,17 @@ video {
 }
 
 .project-card {
-  flex: 1 1 33%; /* Исходный размер элемента */
-  transition: flex 1s ease; /* Плавная анимация transform */
+  flex: 1 1 33%;
+  /* Исходный размер элемента */
+  transition: flex 1s ease;
+  /* Плавная анимация transform */
 }
 
 .project-card.expanded {
   flex: 1 1 50%;
 }
 
-.project-card > .project-overlay {
+.project-card>.project-overlay {
   visibility: hidden;
   opacity: 0;
   transition:
@@ -148,20 +147,21 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .project-card:hover > .project-overlay {
+  .project-card:hover>.project-overlay {
     visibility: visible;
     opacity: 1;
   }
 }
 
-.team_card_wrapper > .team_card_overlay {
+.team_card_wrapper>.team_card_overlay {
   visibility: hidden;
   opacity: 0;
   transition:
     visibility 0s,
     opacity 0.5s linear;
 }
-.team_card_wrapper:hover > .team_card_overlay {
+
+.team_card_wrapper:hover>.team_card_overlay {
   visibility: visible;
   opacity: 1;
 }
@@ -171,8 +171,10 @@ video {
 }
 
 .blog_wrapper {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
   scroll-behavior: smooth;
 }
 
@@ -183,6 +185,7 @@ video {
 .chakra-collapse p {
   @apply text-th-grey;
 }
+
 .vertical-text {
   writing-mode: vertical-lr;
 }
@@ -190,12 +193,11 @@ video {
 .faq-home-gradient {
   background: linear-gradient(180deg, #461683 0%, rgba(0, 0, 0, 0) 100%);
 }
+
 .faq-home-gradient-mb {
-  background: linear-gradient(
-    163.81deg,
-    #873cbc 0.26%,
-    #5f2c91 16.97%,
-    #11011f 42.6%,
-    #000000 53.68%
-  );
+  background: linear-gradient(163.81deg,
+      #873cbc 0.26%,
+      #5f2c91 16.97%,
+      #11011f 42.6%,
+      #000000 53.68%);
 }

@@ -3,15 +3,15 @@
 import poster from "@/assets/homepage/thumbnail.png";
 import { useEffect, useRef } from "react";
 
-const Video = () => {
+const Video = ({className}) => {
   const vidRef = useRef();
   useEffect(() => {
     vidRef.current.play();
   }, []);
   return (
     <video
+      className={className}
       ref={vidRef}
-      className="-mt-[20px]  md:mt-0"
       id="bg_vid"
       playsInline
       muted
