@@ -1,15 +1,24 @@
 import { heroScreenData } from "../utils/homeData";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMediaQuery } from "@chakra-ui/react";
 
 
 
 export default function HeroScreenItems() {
+
   const [expandedCard, setExpandedCard] = useState(0);
   const [isMoreThan1023] = useMediaQuery("(min-width: 1024px)");
   const [isMoreThan1280] = useMediaQuery("(min-width: 1280px)");
+
+  useEffect(() => {
+    if (isMoreThan1280) {
+      setExpandedCard(null);
+    } else {
+      setExpandedCard(0);
+    }
+  }, [isMoreThan1280]);
   return (
     <div className="w-full flex mt-auto max-md:flex-col md:grid md:grid-cols-2 lg:flex">
       <div className="border-t-[0.5px] border-[#FFFFFF80]  hidden custom1400:block  h-[189px] mt-auto w-[79px] shrink-0" />
