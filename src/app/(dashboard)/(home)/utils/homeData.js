@@ -14,26 +14,47 @@ import brc20 from "@/assets/svgComponents/clientsLogo/Brc20";
 import gbc from "@/assets/svgComponents/clientsLogo/GBC";
 import hybrid from "@/assets/svgComponents/clientsLogo/Hybrid";
 import pixel from "@/assets/svgComponents/clientsLogo/Pixel";
-import retroBridge from "@/assets/svgComponents/clientsLogo/RetroBridge";
 import step from "@/assets/svgComponents/clientsLogo/Step";
 import tenet from "@/assets/svgComponents/clientsLogo/Tenet";
-import wefi from "@/assets/svgComponents/clientsLogo/Wefi";
-import kite from "@/assets/svgComponents/clientsLogo/Kite";
+import wefiIcon from "@/assets/svgComponents/clientsLogo/WefiIcon";
+import kiteIcon from "@/assets/svgComponents/clientsLogo/KiteIcon";
+import retroBridgeIcon from "@/assets/svgComponents/clientsLogo/RetrobridgeIcon";
+
 
 export const projectLogos = [
-  { name: "Kite", logo: kite, linkUrl: "https://gokite.ai/" },
+  { name: "Kite", logo: kiteIcon, linkUrl: "https://gokite.ai/" },
     { name: "Pixel", logo: pixel, linkUrl: "https://www.pixelverse.xyz/" },
      { name: "Brc20", logo: brc20, linkUrl: "https://brc20.com/" },
      { name: "Tenet", logo: tenet, linkUrl: "https://tenet.org/" },
   {
     name: "RetroBridge",
-    logo: retroBridge,
+    logo: retroBridgeIcon,
     linkUrl: "https://retrobridge.io/"
   },
   { name: "Hybrid", logo: hybrid, linkUrl: "https://buildonhybrid.com/" },
   { name: "Step", logo: step, linkUrl: "https://step.app/" },
   { name: "GBC", logo: gbc, linkUrl: "https://app.findgbc.com/" },
-  { name: "Wefi", logo: wefi, linkUrl: "https://wefi.com/" },
+  { name: "Wefi", logo: wefiIcon, linkUrl: "https://wefi.com/" },
+  
+  { name: "Agnt", logo: agnt, linkUrl: "https://agnthub.ai/" },
+ 
+  
+];
+
+export const projectLogosBobile = [
+  { name: "Kite", logo: kiteIcon, linkUrl: "https://gokite.ai/" },
+    { name: "Pixel", logo: pixel, linkUrl: "https://www.pixelverse.xyz/" },
+     { name: "Brc20", logo: brc20, linkUrl: "https://brc20.com/" },
+     { name: "Tenet", logo: tenet, linkUrl: "https://tenet.org/" },
+  {
+    name: "RetroBridge",
+    logo: retroBridgeIcon,
+    linkUrl: "https://retrobridge.io/"
+  },
+  { name: "Hybrid", logo: hybrid, linkUrl: "https://buildonhybrid.com/" },
+  { name: "Step", logo: step, linkUrl: "https://step.app/" },
+  { name: "GBC", logo: gbc, linkUrl: "https://app.findgbc.com/" },
+  { name: "Wefi", logo: wefiIcon, linkUrl: "https://wefi.com/" },
   
   { name: "Agnt", logo: agnt, linkUrl: "https://agnthub.ai/" },
  
