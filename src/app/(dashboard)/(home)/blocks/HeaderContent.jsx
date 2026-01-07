@@ -1,62 +1,32 @@
-import playIcon from "@/assets/icons/homepage/linkedInIcon.svg";
-import michaelAvatar from "@/assets/icons/homepage/michaelAvatarImg.png";
-import Image from "next/image";
+"use client"
+
 import React from "react";
+const Video = dynamic(() => import("./Video"));
+import dynamic from "next/dynamic";
+
+import ProjectsLine from "./ProjectsLine";
+import HeroScreenItems from "./HeroScreenItems";
 
 export default function HeaderContent() {
+
   return (
     <>
-      <h1 className="relative z-[22] mt-8 hidden cursor-default bg-[transparent] uppercase  md:ml-[55px] md:mt-[103px] md:block lg:mt-24">
-        LET’s make Web3 tech <br />
-        work for you
-      </h1>
-      <h1 className="relative z-[22] mt-8 block cursor-default bg-[transparent] text-[38px]  font-medium uppercase leading-[44px] md:mt-16 md:hidden lg:mt-24">
-        LET’s make Web3 tech work
-        <br /> for you
-      </h1>
+      <div className=" lg:mt-[83px] lg:grid lg:grid-cols-[2fr_1fr]  w-full mx-auto px-5 xl:!px-[79px] max-md:mb-[276px] max-lg:mb-[376px]">
+        <div className="relative mb-[24px] max-lg:pt-[83px] lg:items flex max-md:gap-3 gap-6 max-md:flex-col-reverse flex-col md:mb-0 md:gap-x-1 custom1200:max-w-[823px]">
+          <p className="font-semibold leading-[18px] max-md:text-sm max-md:max-w-[200px] !text-[#BBBBBB] text-base z-[22]">Stop Managing Developers. Start Shipping Products.</p>
+          <h1 className="uppercase relative z-[22] font-[500] text-[24px] custom1200:text-[40px] custom1200:leading-[0.9]">
+            The proactive engineering partner for ambitious Web3 & FinTech founders.
+            We rescue stalled projects and accelerate launches.
+          </h1>
+          <Video className="w-[500px] lg:hidden h-auto -right-[89px] max-md:w-[450px] max-xl:left-1/2 top-1/2 max-xl:-translate-x-1/2" />
 
-      <div className="mt-auto grid grid-cols-1 lg:grid-cols-2">
-        <div className="relative mb-[24px] flex items-center md:mb-0 md:gap-x-1">
-          <h2 className="text-[16px] font-[500] md:text-[24px] custom1200:text-[32px] custom1200:leading-[29px]">
-            BEING FULLY IMMERSED IN WEB3, <br />
-            WE'RE NOT JUST DEVS — WE'RE <br />
-            PRODUCT VISIONARIES WORKING <br />
-            AS AN IN-HOUSE TEAM WITH <br />
-            YOU TO GROW YOUR <br />
-          </h2>
         </div>
-        <div className="flex cursor-default flex-col gap-y-4 md:items-end md:pt-[56px]">
-          <div className="">
-            <div className="justify-left flex gap-[24px] md:items-center md:justify-end">
-              <div className="flex gap-[12px]">
-                <Image
-                  alt="linkedin"
-                  className="h-[42px] w-[42px]"
-                  src={michaelAvatar}
-                ></Image>
-
-                <a
-                  className=""
-                  href="https://www.linkedin.com/in/onchainmichael"
-                >
-                  <Image
-                    alt="linkedin"
-                    className="h-[42px] w-[42px]"
-                    src={playIcon}
-                  ></Image>
-                </a>
-              </div>
-
-              <div className="flex flex-col gap-y-1">
-                <p className="body1 mb-[6px] text-base  leading-[18px] md:mb-0">
-                  Mykhailo Adzhoiev
-                </p>
-                <p className="text-sm text-secondary md:mb-0">Founder & CEO</p>
-              </div>
-            </div>
-          </div>
+        <div className="relative w-full max-lg:hidden">
+          <Video className="xl:w-[34.72vw] w-[500px] -top-[100%] xl:-top-[9vw] h-auto -right-[89px]" />
         </div>
       </div>
+      <HeroScreenItems />
+      <ProjectsLine />
     </>
   );
 }
