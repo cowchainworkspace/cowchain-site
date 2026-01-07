@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 
 import ProjectsLine from "./ProjectsLine";
 import HeroScreenItems from "./HeroScreenItems";
+import ProjectsLineMobile from "./ProjectsLineMobile";
 
 export default function HeaderContent() {
 
@@ -25,15 +26,11 @@ export default function HeaderContent() {
           <Video className="xl:w-[34.72vw] w-[500px] -top-[100%] xl:-top-[9vw] h-auto -right-[89px]" />
         </div>
       </div>
-      <div className="w-full relative lg:hidden mt-auto">
-        <ProjectsLine />
-      </div>
+      <ProjectsLineMobile keyPrefix="mobile-" />
 
 
       <HeroScreenItems />
-      <div className="w-full hidden lg:block">
-        <ProjectsLine />
-      </div>
+      <ProjectsLine keyPrefix="desktop-" />
     </>
   );
 }
