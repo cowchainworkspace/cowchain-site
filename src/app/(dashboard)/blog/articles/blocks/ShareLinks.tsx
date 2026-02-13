@@ -19,7 +19,7 @@ export const ShareLinks = () => {
         <Image alt="linkedin" className="w-[14px] lg:w-[14px]" src={linkedin} />
       </a>
       <a
-        href="https://t.me/Ruslan_Cowchain_HeadBD"
+        href="https://t.me/Dorian_Cowchain"
         rel="nofollow noreferrer"
         target="_blank"
         className="flex h-[48px] w-[48px] items-center justify-center rounded-[50%]"
