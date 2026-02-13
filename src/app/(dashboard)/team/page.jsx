@@ -69,7 +69,7 @@ const Team = () => {
                       ></Image>
                     </a>
                     <a
-                      href="https://t.me/Ruslan_Cowchain_HeadBD"
+                      href="https://t.me/Dorian_Cowchain"
                       rel="nofollow noreferrer"
                       target="_blank"
                     >

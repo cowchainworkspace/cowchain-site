@@ -511,7 +511,7 @@ export const jsonLdContacts = {
   },
   "sameAs": [
     "https://www.linkedin.com/company/cowchaindev/",
-    "https://t.me/Johnatan17",
+    "https://t.me/Dorian_Cowchain",
     "https://x.com/cow_chain?s=21&t=GzCtGwm3Tlc6X48xYesJlw",
     "https://cowchain.medium.com/"
   ]
