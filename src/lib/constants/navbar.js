@@ -30,7 +30,7 @@ export const burgerMenuIconsLinks = [
   },
   {
     id: 2,
-    url: "https://t.me/Ruslan_Cowchain_HeadBD",
+    url: "https://t.me/yyuriivnaa",
     image: telegram
   },
   {
