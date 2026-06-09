@@ -1,5 +1,5 @@
 import Contact from "@/components/Contact";
-import { setBreadcrumbSchema } from "@/lib/utils";
+import { getCaseSchema, setBreadcrumbSchema } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 import Banner from "../components/Banner";
@@ -27,12 +27,19 @@ const RetroBridge = () => {
     "Retrobridge",
     "retrobridge"
   );
+  const caseSchema = getCaseSchema("Retrobridge", "retrobridge", metadata?.description);
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+      {caseSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchema) }}
+        />
+      )}
       <section>
         <HeroScreenContainer />
         <Banner

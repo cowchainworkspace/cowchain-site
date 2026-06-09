@@ -1,6 +1,10 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import Image from "next/image";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
@@ -32,10 +36,11 @@ export { metadata };
 const CryptoWalletDev = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "Crypto Wallet Development Services",
-    "crypto_wallet"
+    "crypto-wallet"
   );
 
   const serviceSchema = getServiceSchema(cryptoWalletSchema);
+  const faqSchema = getFaqSchema(cryptoWalletFAQData);
 
   return (
     <>
@@ -43,6 +48,12 @@ const CryptoWalletDev = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

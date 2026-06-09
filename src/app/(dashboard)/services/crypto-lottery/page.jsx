@@ -1,6 +1,10 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import Contact from "@/components/Contact";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import Image from "next/image";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
@@ -28,9 +32,10 @@ export { metadata };
 const CryptoLottery = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "Crypto Lottery",
-    "crypto_lottery"
+    "crypto-lottery"
   );
   const serviceSchema = getServiceSchema(cryptoLotterySchema);
+  const faqSchema = getFaqSchema(cryptoLotteryFAQData);
 
   return (
     <>
@@ -38,6 +43,12 @@ const CryptoLottery = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

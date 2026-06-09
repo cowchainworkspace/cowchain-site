@@ -25,16 +25,21 @@ import {
   icoPlatformAdvantages,
   icoPlatformFaqData
 } from "./utils/data";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { icoConstructorSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const IcoConstructor = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "ICO Constructor",
-    "ico_constructor"
+    "ico-constructor"
   );
   const serviceSchema = getServiceSchema(icoConstructorSchema);
+  const faqSchema = getFaqSchema(icoPlatformFaqData);
 
   return (
     <>
@@ -42,6 +47,12 @@ const IcoConstructor = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

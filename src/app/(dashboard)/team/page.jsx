@@ -15,12 +15,50 @@ import { metadata } from "./serviceTeamData/teamMetaData";
 import { teamBreadCrumbList } from "./serviceTeamData/data";
 export { metadata };
 
+// Leadership Person schema — establishes the real experts behind Cowchain
+// (E-E-A-T), a signal both search and LLMs use when deciding who to trust.
+const leadershipSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      name: "Mykhailo Adzhoiev",
+      jobTitle: "CEO & Founder",
+      worksFor: { "@id": "https://cowchain.io/#organization" },
+      url: "https://www.linkedin.com/in/onchainmichael",
+      sameAs: ["https://www.linkedin.com/in/onchainmichael"]
+    },
+    {
+      "@type": "Person",
+      name: "Viacheslav Ivchenko",
+      jobTitle: "COO",
+      worksFor: { "@id": "https://cowchain.io/#organization" },
+      url: "https://www.linkedin.com/in/slava-ivchenko/",
+      sameAs: ["https://www.linkedin.com/in/slava-ivchenko/"]
+    },
+    {
+      "@type": "Person",
+      name: "Oleh Shutiak",
+      jobTitle: "CTO",
+      worksFor: { "@id": "https://cowchain.io/#organization" },
+      url: "https://www.linkedin.com/in/oleh-shutiak-%F0%9F%87%BA%F0%9F%87%A6-92786b229",
+      sameAs: [
+        "https://www.linkedin.com/in/oleh-shutiak-%F0%9F%87%BA%F0%9F%87%A6-92786b229"
+      ]
+    }
+  ]
+};
+
 const Team = () => {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(teamBreadCrumbList) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(leadershipSchema) }}
       />
       <section className=" ">
         <div className="scrollbar-none bg-black">

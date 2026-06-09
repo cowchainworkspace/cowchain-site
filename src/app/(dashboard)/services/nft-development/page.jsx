@@ -21,7 +21,11 @@ import {
   nftProcessData,
   nftServicesData
 } from "./utils/data";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { nftDevelopmentSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
@@ -29,9 +33,10 @@ export { metadata };
 const NftDevelopment = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "NFT Development Company",
-    "nft_development"
+    "nft-development"
   );
   const serviceSchema = getServiceSchema(nftDevelopmentSchema);
+  const faqSchema = getFaqSchema(faqNftData);
 
   return (
     <>
@@ -39,6 +44,12 @@ const NftDevelopment = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

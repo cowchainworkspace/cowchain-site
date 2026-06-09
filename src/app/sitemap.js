@@ -73,7 +73,37 @@ export default async function sitemap() {
       changeFrequency: "weekly",
       priority: 0.5
     },
+    {
+      url: "https://cowchain.io/cases/reflect",
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.5
+    },
+    {
+      url: "https://cowchain.io/cases/stars",
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.5
+    },
 
+    {
+      url: "https://cowchain.io/services/ai-agent-development",
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7
+    },
+    {
+      url: "https://cowchain.io/services/stablecoin-development",
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7
+    },
+    {
+      url: "https://cowchain.io/services/depin-development",
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7
+    },
     {
       url: "https://cowchain.io/services/ai-development",
       lastModified: now,
@@ -233,6 +263,12 @@ export default async function sitemap() {
     },
     {
       url: "https://cowchain.io/team",
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.4
+    },
+    {
+      url: "https://cowchain.io/clients",
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.4

@@ -23,16 +23,26 @@ import { metadata } from "./utils/defiDevMetadata";
 import { WhiteLabelCases } from "../white-label-solutions/blocks/WhiteLabelCases";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getHowToSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { defiDevelopmentSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const DefiDevelopment = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "DeFi Development Company",
-    "defi_development"
+    "defi-development"
   );
   const serviceSchema = getServiceSchema(defiDevelopmentSchema);
+  const faqSchema = getFaqSchema(faqDefiData);
+  const howToSchema = getHowToSchema(
+    "Our DeFi Development Process",
+    defiProcessData
+  );
 
   return (
     <>
@@ -44,6 +54,18 @@ const DefiDevelopment = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+      {howToSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
+      )}
       <section>
         <HeroSection
           title={"DeFi Development Company"}

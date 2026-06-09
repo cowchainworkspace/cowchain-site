@@ -21,7 +21,11 @@ import CasesMobile from "../../(home)/blocks/CasesMobile";
 import { WhiteLabelCases } from "../white-label-solutions/blocks/WhiteLabelCases";
 import { metadata } from "./utils/SocialMiniAppMetaData";
 import { CoreFeaturesRWAbg } from "@/assets/svgComponents/CoreFeaturesRWAbg";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { fiMiniAppSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
@@ -29,9 +33,10 @@ export { metadata };
 const SicialMiniApp = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "Social TG Mini-App",
-    "social_fi_mini_app"
+    "social-fi-mini-app"
   );
   const serviceSchema = getServiceSchema(fiMiniAppSchema);
+  const faqSchema = getFaqSchema(stakingFAQData);
 
   return (
     <>
@@ -41,8 +46,14 @@ const SicialMiniApp = () => {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <section className="overflow-visible">
         <HeroSection
           title={

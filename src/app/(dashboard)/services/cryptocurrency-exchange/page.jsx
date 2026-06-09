@@ -23,17 +23,22 @@ import {
   otherCryptoCurrencyServices,
   walletProcessData
 } from "./utils/data";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { cryptoExchangeSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const CryptoCurrencyDev = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "Cryptocurrency Exchange Development Services",
-    "cryptocurrency_exchange"
+    "cryptocurrency-exchange"
   );
 
   const serviceSchema = getServiceSchema(cryptoExchangeSchema);
+  const faqSchema = getFaqSchema(cryptoCurrencyFAQData);
 
   return (
     <>
@@ -41,6 +46,12 @@ const CryptoCurrencyDev = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

@@ -26,7 +26,11 @@ import FAQ from "../components/service/blocks/FAQ";
 import { Feedback } from "../components/service/blocks/Feedback";
 import { Industries } from "../components/service/blocks/Industries/index";
 import { OtherServices } from "../components/service/blocks/OtherServices";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { icoPlatformDevelopmentSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
@@ -34,9 +38,10 @@ export { metadata };
 const IcoPlatformDevelopment = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "ICO Platform Development Services",
-    "ico_platform_development"
+    "ico-platform-development"
   );
   const serviceSchema = getServiceSchema(icoPlatformDevelopmentSchema);
+  const faqSchema = getFaqSchema(icoPlatformFaqData);
 
   return (
     <>
@@ -44,6 +49,12 @@ const IcoPlatformDevelopment = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

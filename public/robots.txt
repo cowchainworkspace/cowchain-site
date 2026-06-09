@@ -1,25 +1,63 @@
-User-agent: *
+# Cowchain — crawl policy
+# Search and AI/LLM crawlers are explicitly welcome to index and cite this site.
 
+User-agent: *
+Allow: /
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.svg
+Allow: /*.woff
+Allow: /*.woff2
+Allow: /*.ttf
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+
+# AI / LLM crawlers (Generative Engine Optimization)
+User-agent: GPTBot
 Allow: /
 
-Allow: /*.js
+User-agent: OAI-SearchBot
+Allow: /
 
-Allow: /*.css
+User-agent: ChatGPT-User
+Allow: /
 
-Allow: /*.png
+User-agent: ClaudeBot
+Allow: /
 
-Allow: /*.svg
+User-agent: Claude-Web
+Allow: /
 
-Allow: /*.woff
+User-agent: anthropic-ai
+Allow: /
 
-Allow: /*.woff2
+User-agent: PerplexityBot
+Allow: /
 
-Allow: /*.ttf
+User-agent: Perplexity-User
+Allow: /
 
-Allow: /*.jpg
+User-agent: Google-Extended
+Allow: /
 
-Allow: /*.jpeg
+User-agent: Applebot-Extended
+Allow: /
 
-Allow: /*.gif
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
 
 Sitemap: https://cowchain.io/sitemap.xml

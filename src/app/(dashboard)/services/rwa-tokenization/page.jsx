@@ -23,7 +23,11 @@ import {
 } from "./utils/data";
 import { BenefitsTokenizationData } from "./utils/data";
 import { metadata } from "./utils/rwaTokenizationMetadata";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { rwaTokenizationSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
@@ -31,9 +35,10 @@ export { metadata };
 const RwaTokenization = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "RWA Tokenization Services",
-    "rwa_tokenization"
+    "rwa-tokenization"
   );
   const serviceSchema = getServiceSchema(rwaTokenizationSchema);
+  const faqSchema = getFaqSchema(rwaTokenizationFAQData);
 
   return (
     <>
@@ -45,6 +50,12 @@ const RwaTokenization = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <section className="overflow-visible">
         <HeroSection
           isRwa={true}

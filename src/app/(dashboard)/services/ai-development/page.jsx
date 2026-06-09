@@ -13,7 +13,11 @@ import { KeyFeatures } from "../components/service/blocks/KeyFeatures";
 import { OtherServices } from "../components/service/blocks/OtherServices";
 import { WhiteLabelCases } from "../white-label-solutions/blocks/WhiteLabelCases";
 
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { metadata } from "./utils/aiDevelopmentMetadata";
 import {
   aiDevelopmentBenefits,
@@ -31,9 +35,10 @@ export { metadata };
 const AIDevelopment = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "AI Development Services",
-    "ai_development"
+    "ai-development"
   );
   const serviceSchema = getServiceSchema(aiDevelopmentSchema);
+  const faqSchema = getFaqSchema(aiDevelopmentFaqData);
 
   return (
     <>
@@ -41,6 +46,12 @@ const AIDevelopment = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

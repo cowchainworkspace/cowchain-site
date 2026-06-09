@@ -19,16 +19,21 @@ import {
   faqQuestions,
   whiteLabelSolutions
 } from "./utils/data";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { whiteLabelSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const WhiteLabelDev = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "White Label Web Development Services",
-    "white_label_solutions"
+    "white-label-solutions"
   );
   const serviceSchema = getServiceSchema(whiteLabelSchema);
+  const faqSchema = getFaqSchema(faqQuestions);
 
   return (
     <>
@@ -36,6 +41,12 @@ const WhiteLabelDev = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

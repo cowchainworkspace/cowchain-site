@@ -12,7 +12,7 @@ import dynamic from "next/dynamic";
 
 import { metadata } from "./utils/memelutMetadata";
 
-import { setBreadcrumbSchema } from "@/lib/utils";
+import { getCaseSchema, setBreadcrumbSchema } from "@/lib/utils";
 import {
   memelutSlides,
   memelutSolutions,
@@ -32,12 +32,19 @@ const Memelut = () => {
     "Memelut",
     "memelut"
   );
+  const caseSchema = getCaseSchema("Memelut", "memelut", metadata?.description);
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+      {caseSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchema) }}
+        />
+      )}
       <section>
         <MemelutHeaderContainer />
         <MemelutContent />

@@ -24,7 +24,11 @@ import {
   smartContractsData
 } from "./utils/data";
 import { metadata } from "./utils/smartContractDevMetadata";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { smartContractSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
@@ -32,13 +36,20 @@ export { metadata };
 const SmartContractDevelopment = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "Smart Contract Development Services",
-    "smart_contract_development"
+    "smart-contract-development"
   );
 
   const serviceSchema = getServiceSchema(smartContractSchema);
+  const faqSchema = getFaqSchema(faqNftData);
 
   return (
     <>
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}

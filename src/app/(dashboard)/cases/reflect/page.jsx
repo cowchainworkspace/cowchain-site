@@ -10,7 +10,7 @@ import ReflectWhatWeDid from "./components/ReflectWhatWeDid";
 import BotBannerContainer from "./components/BotBannerContainer";
 import { metadata } from "./utils/reflectMetadata";
 
-import { setBreadcrumbSchema } from "@/lib/utils";
+import { getCaseSchema, setBreadcrumbSchema } from "@/lib/utils";
 import {
   reflectSlides,
   reflectSolutions,
@@ -26,6 +26,7 @@ const Reflect = () => {
     "Reflect",
     "reflect"
   );
+  const caseSchema = getCaseSchema("Reflect", "reflect", metadata?.description);
 
   return (
     <>
@@ -33,6 +34,12 @@ const Reflect = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+      {caseSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchema) }}
+        />
+      )}
       <section>
         <ReflectHeaderContainer />
         <ReflectOverview containerClasses="pb-[22px] md:pb-[120px]" />

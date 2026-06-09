@@ -1,7 +1,11 @@
 import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import dexAdvisoryBg from "@/assets/bg/dexAdvisoryBg.svg";
 import Contact from "@/components/Contact";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import Image from "next/image";
 import Cases from "../../(home)/blocks/Cases";
 import CasesMobile from "../../(home)/blocks/CasesMobile";
@@ -33,9 +37,10 @@ export { metadata };
 const BlockChainConsulting = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "Blockchain Consulting Services & Solutions",
-    "blockchain_consulting"
+    "blockchain-consulting"
   );
   const serviceSchema = getServiceSchema(blockChainSchema);
+  const faqSchema = getFaqSchema(consultingFAQData);
 
   return (
     <>
@@ -43,6 +48,12 @@ const BlockChainConsulting = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

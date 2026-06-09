@@ -11,7 +11,7 @@ import TenetSolutions from "./components/TenetSolutions";
 import TenetWhatWeDid from "./components/TenetWhatWeDid";
 import { metadata } from "./utils/tenetMetadata";
 
-import { setBreadcrumbSchema } from "@/lib/utils";
+import { getCaseSchema, setBreadcrumbSchema } from "@/lib/utils";
 import { tenetSlides, tenetSolutions, tenetTeam } from "./utils/constants";
 
 export { metadata };
@@ -20,15 +20,22 @@ const Tenet = () => {
   const breadcrumbList = setBreadcrumbSchema(
     "Cases",
     "cases",
-    "Retrobridge",
-    "retrobridge"
+    "Tenet",
+    "tenet"
   );
+  const caseSchema = getCaseSchema("Tenet", "tenet", metadata?.description);
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+      {caseSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchema) }}
+        />
+      )}
       <section>
         <HeroScreenContainer />
 

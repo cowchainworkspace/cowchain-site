@@ -268,6 +268,22 @@ export const web3DevData = [
     content: `Our Web3 development company also provides AI development services, building intelligent systems and autonomous agents for blockchain products. From AI-powered automation to personalized user experiences, we help businesses unlock smarter Web3 solutions.`
   },
   {
+    title: "AI Agents & Agentic Payments",
+    content: `In 2026, AI agents have become real users of the blockchain. Cowchain builds autonomous on-chain agents with their own agentic wallets and machine-to-machine payments (x402) — agents that hold assets, execute transactions, and act on smart contracts within guardrails you control.`
+  },
+  {
+    title: "RWA Tokenization",
+    content: `Real-world asset tokenization is one of the fastest-growing areas in Web3, bringing treasuries, funds, real estate, and invoices on-chain. Cowchain builds tokenization solutions and full RWA platforms with fractional ownership, 24/7 settlement, and programmable compliance.`
+  },
+  {
+    title: "Stablecoin & Payments Development",
+    content: `Stablecoins have become the internet's settlement layer, moving more value annually than major card networks. Cowchain develops fiat-backed, crypto-collateralized, and yield-bearing stablecoins, plus the payment rails for cross-border settlement, treasury, and merchant payments.`
+  },
+  {
+    title: "DePIN Development",
+    content: `Decentralized Physical Infrastructure Networks reward people for supplying real hardware — compute, storage, bandwidth, and sensors. Cowchain designs the token economics, device onboarding, proof-of-physical-work, and marketplaces that turn physical capacity into a sustainable network.`
+  },
+  {
     title: "Blockchain Security and Audits",
     content: `Maintaining the integrity of blockchain platforms is critical. Cowchain delivers thorough blockchain security audits, identifying and mitigating potential risks. Regular security updates ensure that your platform remains a step ahead of emerging threats`
   }
@@ -298,6 +314,21 @@ export const faqHomeData = [
     id: 5,
     title: 'Can Web3 Solutions Be Integrated with Existing Systems?',
     content: 'Yes, our Web3 development company ensures seamless integration of blockchain solutions with your existing systems.',
+  },
+  {
+    id: 6,
+    title: 'What Is RWA Tokenization, and Can Cowchain Build It?',
+    content: 'RWA (real-world asset) tokenization represents assets like treasuries, funds, real estate, or invoices as blockchain tokens, enabling fractional ownership, 24/7 transfer, and programmable compliance. It is one of 2026’s largest trends. Cowchain builds both RWA tokenization solutions and full RWA platforms for issuing and trading these assets.',
+  },
+  {
+    id: 7,
+    title: 'Does Cowchain Develop Stablecoins and Payment Systems?',
+    content: 'Yes. We build fiat-backed, crypto-collateralized, and yield-bearing stablecoins, plus the payment rails around them: cross-border settlement, treasury operations, merchant checkout, and mass payouts.',
+  },
+  {
+    id: 8,
+    title: 'What Are On-Chain AI Agents, and Do You Build Them?',
+    content: 'On-chain AI agents pair an AI model with their own crypto wallet, so they can decide and execute real blockchain transactions within limits you set — trading, paying for services, or acting on smart contracts. We build these agents together with the agentic wallets, guardrails, and machine-to-machine payment rails (x402) that keep their autonomy safe.',
   },
 ]
 

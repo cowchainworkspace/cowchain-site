@@ -21,16 +21,21 @@ import {
   whyChooseNftGameData
 } from "./utils/data";
 import { metadata } from "./utils/nftGameMetadata";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { nftGameSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const NftGameDev = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "NFT Game Development Services",
-    "nft_game"
+    "nft-game"
   );
   const serviceSchema = getServiceSchema(nftGameSchema);
+  const faqSchema = getFaqSchema(nftGameFAQData);
 
   return (
     <>
@@ -38,6 +43,12 @@ const NftGameDev = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

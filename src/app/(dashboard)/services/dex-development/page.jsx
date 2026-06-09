@@ -19,16 +19,21 @@ import { IndustriesDexData } from "./utils/data";
 import { DexAppDevData } from "./utils/data";
 import { EngagementDevData, faqDexData } from "./utils/data";
 import { metadata } from "./utils/dexDevMetadata";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { dexDevelopmentSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const DexDevelopment = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "Decentralized Exchange Development Company",
-    "dex_development"
+    "dex-development"
   );
   const serviceSchema = getServiceSchema(dexDevelopmentSchema);
+  const faqSchema = getFaqSchema(faqDexData);
 
   return (
     <>
@@ -36,6 +41,12 @@ const DexDevelopment = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

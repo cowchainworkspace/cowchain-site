@@ -27,7 +27,11 @@ import {
 } from "./utils/data";
 import Image from "next/image";
 import { ServiceStack } from "../components/service/blocks/stack";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { exchangeSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
@@ -38,6 +42,7 @@ const Exchange = () => {
     "exchange"
   );
   const serviceSchema = getServiceSchema(exchangeSchema);
+  const faqSchema = getFaqSchema(exchangeFAQ);
 
   return (
     <>
@@ -45,6 +50,12 @@ const Exchange = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

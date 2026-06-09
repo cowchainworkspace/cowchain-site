@@ -21,7 +21,11 @@ import {
   steByStepStakingData
 } from "./utils/data";
 import { metadata } from "./utils/stackingMetaData";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { stakingSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
@@ -31,6 +35,7 @@ const Staking = () => {
     "staking"
   );
   const serviceSchema = getServiceSchema(stakingSchema);
+  const faqSchema = getFaqSchema(stakingFAQData);
 
   return (
     <>
@@ -38,6 +43,12 @@ const Staking = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

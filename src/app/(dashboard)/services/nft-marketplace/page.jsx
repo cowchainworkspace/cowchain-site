@@ -23,7 +23,11 @@ import {
   nftPlatformsSteps
 } from "./utils/data";
 import { metadata } from "./utils/nftMarketPlaceMetadata";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { nftMarketPlaceSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
@@ -31,9 +35,10 @@ export { metadata };
 const NFTMarketPlace = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "White Label NFT Marketplace",
-    "nft_marketplace"
+    "nft-marketplace"
   );
   const serviceSchema = getServiceSchema(nftMarketPlaceSchema);
+  const faqSchema = getFaqSchema(nftPlatformsFaqData);
 
   return (
     <>
@@ -41,6 +46,12 @@ const NFTMarketPlace = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

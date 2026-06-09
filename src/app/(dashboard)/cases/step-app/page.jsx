@@ -1,5 +1,5 @@
 import Contact from "@/components/Contact";
-import { setBreadcrumbSchema } from "@/lib/utils";
+import { getCaseSchema, setBreadcrumbSchema } from "@/lib/utils";
 import React from "react";
 import Banner from "../components/Banner";
 import CasesSlider from "../components/CasesSlider";
@@ -27,6 +27,7 @@ export default function StepApp({ params }) {
     "Step App",
     "step-app"
   );
+  const caseSchema = getCaseSchema("Step App", "step-app", metadata?.description);
 
   return (
     <>
@@ -34,6 +35,12 @@ export default function StepApp({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+      {caseSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchema) }}
+        />
+      )}
       <section>
         <CaseHeroScreen
           tags={stepAppTags}

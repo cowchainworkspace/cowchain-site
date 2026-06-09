@@ -23,7 +23,11 @@ import {
   cryptWalletTypes
 } from "./utils/data";
 import { metadata } from "./utils/mobileCryptoWalletMetadata";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { cryptoWalletMobileSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
@@ -31,9 +35,10 @@ export { metadata };
 const MobileCryptoWallet = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "Mobile Crypto Wallet",
-    "mobile_crypto_wallet"
+    "mobile-crypto-wallet"
   );
   const serviceSchema = getServiceSchema(cryptoWalletMobileSchema);
+  const faqSchema = getFaqSchema(cryptWalletFaqData);
 
   return (
     <>
@@ -41,6 +46,12 @@ const MobileCryptoWallet = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

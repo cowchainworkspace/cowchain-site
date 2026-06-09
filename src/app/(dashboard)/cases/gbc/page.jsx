@@ -1,7 +1,7 @@
 import React from "react";
 
 import { metadata } from "./utils/gbcMetadata";
-import { setBreadcrumbSchema } from "@/lib/utils";
+import { getCaseSchema, setBreadcrumbSchema } from "@/lib/utils";
 import dynamic from "next/dynamic";
 
 export { metadata };
@@ -18,12 +18,19 @@ const GBC = () => {
     "GMX Blueberry Club",
     "gbc"
   );
+  const caseSchema = getCaseSchema("GMX Blueberry Club", "gbc", metadata?.description);
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+      {caseSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchema) }}
+        />
+      )}
       <GBCHeaderContainer />
       <GBCContent />
       <section></section>

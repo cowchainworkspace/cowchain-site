@@ -8,7 +8,7 @@ import { relatedPixelverseProjects } from "../data";
 import PixelVerseWhatWeDid from "./components/PixelVerseWhatWeDid";
 import PixelverseOverview from "./components/PixelverseOverview";
 import PixelVerseHeaderContainer from "./components/PixelVerseHeaderContainer";
-import { setBreadcrumbSchema } from "@/lib/utils";
+import { getCaseSchema, setBreadcrumbSchema } from "@/lib/utils";
 import {
   overviewItems,
   pixelVerseSlides,
@@ -25,14 +25,21 @@ const PixelVerse = () => {
     "Cases",
     "cases",
     "Pixelverse",
-    "pixelverse"
+    "pixel-verse"
   );
+  const caseSchema = getCaseSchema("Pixelverse", "pixel-verse", metadata?.description);
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+      {caseSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchema) }}
+        />
+      )}
       <section className="relative w-full">
         <PixelVerseHeaderContainer />
         <PixelverseOverview

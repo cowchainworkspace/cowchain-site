@@ -1,5 +1,5 @@
 import Contact from "@/components/Contact";
-import { setBreadcrumbSchema } from "@/lib/utils";
+import { getCaseSchema, setBreadcrumbSchema } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 import Banner from "../components/Banner";
@@ -27,6 +27,7 @@ const BRC20 = () => {
     "BRC20",
     "brc20"
   );
+  const caseSchema = getCaseSchema("BRC20", "brc20", metadata?.description);
 
   return (
     <>
@@ -34,6 +35,12 @@ const BRC20 = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+      {caseSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchema) }}
+        />
+      )}
       <section>
         <CaseHeroScreen
           pageTitle={"BRC20: Pioneering Ordinals Launchpad Innovation"}

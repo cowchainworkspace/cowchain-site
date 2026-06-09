@@ -22,16 +22,21 @@ import {
   whyChoosep2pData
 } from "./utils/data";
 import { metadata } from "./utils/p2pCryptoExchangeMetadata";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { p2pExchangeSchema } from "@/lib/constants/servicesSchemas";
 export { metadata };
 
 const P2pCryptoExhangeDev = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "P2P Crypto Exchange Development Services",
-    "p2p_crypto_exchange"
+    "p2p-crypto-exchange"
   );
   const serviceSchema = getServiceSchema(p2pExchangeSchema);
+  const faqSchema = getFaqSchema(p2pFAQData);
 
   return (
     <>
@@ -39,6 +44,12 @@ const P2pCryptoExhangeDev = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

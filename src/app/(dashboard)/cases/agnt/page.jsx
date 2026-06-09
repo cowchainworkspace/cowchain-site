@@ -1,4 +1,4 @@
-import { setBreadcrumbSchema } from "@/lib/utils";
+import { getCaseSchema, setBreadcrumbSchema } from "@/lib/utils";
 import React from "react";
 import { metadata } from "./utils/agntMetadata";
 import dynamic from "next/dynamic";
@@ -14,6 +14,7 @@ const Agnt = () => {
     "AGNT.Hub",
     "agnt"
   );
+  const caseSchema = getCaseSchema("AGNT.Hub", "agnt", metadata?.description);
 
   return (
     <>
@@ -21,6 +22,12 @@ const Agnt = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+      {caseSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchema) }}
+        />
+      )}
       <section>
         <AgntHeader />
         <AgntContent />

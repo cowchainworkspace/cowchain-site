@@ -12,7 +12,7 @@ import BannerTitle from "./components/BannerTitle";
 import HeroScreenContainer from "./components/HeroScreenContainer";
 import HybridWhatWeDid from "./components/HybridWhatWeDid";
 
-import { setBreadcrumbSchema } from "@/lib/utils";
+import { getCaseSchema, setBreadcrumbSchema } from "@/lib/utils";
 import {
   hybridSlides,
   hybridSolutions,
@@ -30,6 +30,7 @@ const Hybrid = () => {
     "Hybrid",
     "hybrid"
   );
+  const caseSchema = getCaseSchema("Hybrid", "hybrid", metadata?.description);
 
   return (
     <>
@@ -37,6 +38,12 @@ const Hybrid = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+      {caseSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchema) }}
+        />
+      )}
       <section className="w-full">
         <HeroScreenContainer />
         <Banner

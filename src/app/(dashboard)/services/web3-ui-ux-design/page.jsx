@@ -23,7 +23,11 @@ import {
   web3DesignTrendsData
 } from "./utils/data";
 import { metadata } from "./utils/web3UXMetadata";
-import { getServiceSchema, setBreadcrumbSchemaServices } from "@/lib/utils";
+import {
+  getFaqSchema,
+  getServiceSchema,
+  setBreadcrumbSchemaServices
+} from "@/lib/utils";
 import { web3DesignSchema } from "@/lib/constants/servicesSchemas";
 
 export { metadata };
@@ -31,10 +35,11 @@ export { metadata };
 const Web3UiUx = () => {
   const breadcrumbList = setBreadcrumbSchemaServices(
     "Web3 UI/UX Design Services",
-    "web3_ui_ux_design"
+    "web3-ui-ux-design"
   );
 
   const serviceSchema = getServiceSchema(web3DesignSchema);
+  const faqSchema = getFaqSchema(web3DesignFAQData);
 
   return (
     <>
@@ -42,6 +47,12 @@ const Web3UiUx = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+            {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

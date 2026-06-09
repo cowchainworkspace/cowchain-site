@@ -1,5 +1,5 @@
 import Contact from "@/components/Contact";
-import { setBreadcrumbSchema } from "@/lib/utils";
+import { getCaseSchema, setBreadcrumbSchema } from "@/lib/utils";
 import React from "react";
 import MoreProjects from "../components/MoreProjects";
 import TeamBehind from "../components/TeamBehind";
@@ -20,6 +20,7 @@ const Stars = () => {
     "Stars",
     "stars"
   );
+  const caseSchema = getCaseSchema("Stars", "stars", metadata?.description);
 
   return (
     <>
@@ -27,6 +28,12 @@ const Stars = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
       />
+      {caseSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchema) }}
+        />
+      )}
       <section>
         <StarsHeaderContainer />
         <StarsOverview />

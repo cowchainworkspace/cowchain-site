@@ -389,7 +389,8 @@ export const servicesBlocksData = [
         title: "Smart Contract Development",
         link: "/services/smart-contract-development"
       },
-      { title: "AI Development", link: "/services/ai-development" }
+      { title: "AI Development", link: "/services/ai-development" },
+      { title: "AI Agent Development", link: "/services/ai-agent-development" }
     ]
   },
   {
@@ -404,6 +405,11 @@ export const servicesBlocksData = [
       { title: "P2P crypto exchange", link: "/services/p2p-crypto-exchange" },
       { title: "ICO Platform", link: "/services/ico-platform-development" },
       { title: "RWA Tokenization", link: "/services/rwa-tokenization" },
+      {
+        title: "Stablecoin & Payments",
+        link: "/services/stablecoin-development"
+      },
+      { title: "DePIN Development", link: "/services/depin-development" },
       { title: "NFT Game", link: "/services/nft-game" },
       // { title: "Metaverse", link: "/services/metaverse" }  // TEMPORARILY HIDE: Metaverse is hidden until design is finalized
     ]
@@ -457,7 +463,7 @@ export const jsonLdFaq = {
       name: "What is Web3 development, and how is it different from traditional web development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Web3 development represents the evolution of web technologies towards decentralized"
+        text: "Web3 development is the practice of building applications on decentralized blockchain networks instead of centralized servers. Unlike traditional (Web2) development, where a single company controls the data and infrastructure, Web3 apps use smart contracts, on-chain ownership, and cryptographic identity so users control their own assets and data. Cowchain has delivered 150+ Web3 projects across Ethereum, Polygon, and BNB Chain since 2020."
       }
     },
     {
@@ -490,6 +496,30 @@ export const jsonLdFaq = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Web3 development agencies prioritize security throughout the development process. This includes rigorous smart contract auditing, following best practices for secure coding, implementing encryption protocols, conducting penetration testing, and keeping abreast of the latest security standards."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is RWA tokenization and can Cowchain build it?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "RWA (real-world asset) tokenization represents assets like treasuries, funds, real estate, or invoices as blockchain tokens, enabling fractional ownership, 24/7 transfer, and programmable compliance. It is one of 2026's largest trends, with tens of billions of dollars in tokenized assets on-chain. Cowchain builds both RWA tokenization solutions and full RWA platforms for issuing and trading these assets."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Does Cowchain develop stablecoins and stablecoin payment systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Cowchain develops fiat-backed, crypto-collateralized, and yield-bearing stablecoins, plus the payment rails around them: cross-border settlement, treasury operations, merchant checkout, and mass payouts. Stablecoins settled an estimated $46 trillion+ in 2025, and clearer regulation is pushing them into mainstream payments in 2026."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What are on-chain AI agents and does Cowchain build them?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "On-chain AI agents are autonomous programs that pair an AI model with their own crypto wallet, so they can make decisions and execute them as real blockchain transactions within owner-defined limits — trading, paying for services, or acting on smart contracts. With agentic wallets and machine-to-machine payment standards like x402 maturing in 2026, Cowchain builds these agents together with the wallets, guardrails, and payment rails that make their autonomy safe."
       }
     }
   ]

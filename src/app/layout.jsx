@@ -5,6 +5,7 @@ import { Anton, Manrope, Montserrat, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 
 import { metadata } from "./rootMetadata";
+import { organizationSchema, websiteSchema } from "@/lib/utils";
 
 const roc = localFont({
   src: [
@@ -109,9 +110,17 @@ export default function RootLayout({ children }) {
         />
 
         <meta name="theme-color" content="#000000" />
-        <meta
-          property="og:image"
-          content="https://cowchain.io/images/og-image.png"
+
+        {/* Site-wide entity graph for search engines and LLM crawlers */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema)
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
 
