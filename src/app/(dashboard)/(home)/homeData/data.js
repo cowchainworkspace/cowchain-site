@@ -12,7 +12,6 @@ import pic1 from "@/assets/homepage/projects/1.jpg";
 import pic2 from "@/assets/homepage/projects/2.jpg";
 import pic3 from "@/assets/homepage/projects/3.jpg";
 import MichaelImg from "@/assets/homepage/team/newTeam/michaelImg.png";
-import thumbNail from "@/assets/homepage/thumbnail.png"
 import OlehImg from "@/assets/team/executives/OlehImg2.png";
 import ViacheclavImgpng from "@/assets/team/executives/ViacheclavImgpng.png";
 
@@ -550,17 +549,13 @@ export const jsonLdContacts = {
 export const jsonLdVideo = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  name: "Cownchain Logo Animation",
-  description: "Cownchain Logo Animation",
-  thumbnailUrl: [thumbNail],
-  uploadDate: "	20240228T190000-0500",
+  name: "Cowchain Logo Animation",
+  description: "Cowchain Logo Animation",
+  thumbnailUrl: ["https://cowchain.io/images/og-image.png"],
+  uploadDate: "2024-02-28T19:00:00-05:00",
   duration: "PT1M6S",
-  contentUrl: "/homepage/video.mp4",
-  embedUrl: "/homepage/video.mp4",
-  interactionStatistic: {
-    "@type": "InteractionCounter",
-    interactionType: { "@type": "WatchAction" }
-  }
+  contentUrl: "https://cowchain.io/homepage/video.mp4",
+  embedUrl: "https://cowchain.io/homepage/video.mp4"
 };
 
 export const metadata = {
