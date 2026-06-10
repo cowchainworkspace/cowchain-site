@@ -9,6 +9,7 @@ import modal_close from "../../assets/homepage/closeButtonIcon.svg";
 import dagerous from "./../../assets/dangerous.svg";
 import bg from "./../../assets/homepage/form/formBg.svg";
 import SelectValue from "./SelectValue";
+import { track } from "@/lib/track";
 
 const projectType = [
   "Web Development",
@@ -42,6 +43,19 @@ export default function ContactForm({ modalOpen, setModalOpen }) {
         data,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
+    } catch (e) {}
+    try {
+      const pages = JSON.parse(sessionStorage.getItem("cc_pages") || "[]");
+      track({
+        type: "form",
+        fullName: data.fullName,
+        email: data.email,
+        company: data.company,
+        projectType: data.projectType,
+        projectPrice: data.projectPrice,
+        details: data.details,
+        pages
+      });
     } catch (e) {}
     reset();
     setModalOpen(false);

@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import { useOpenForm } from "../../hooks/useOpenForm";
 import LoaderWrapper from "./loaderWrapper";
 import MobileCtaBar from "@/components/MobileCtaBar";
+import SiteTracker from "@/components/SiteTracker";
 
 const Navbar = dynamic(() => import("@/components/Navbar"), {
   loading: () => <Loading />
@@ -83,6 +84,7 @@ export default function DashboardLayout({ children }) {
       </div>
       <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />
       <MobileCtaBar />
+      <SiteTracker />
     </section>
   );
 }
