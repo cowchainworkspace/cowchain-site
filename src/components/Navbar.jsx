@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ServicesAndTechnologies } from "../app/(dashboard)/(home)/blocks/ServicesAndTechMenu";
 import { useOpenForm } from "../hooks/useOpenForm";
 import { useOpenMenu } from "../hooks/useOpenMenu";
@@ -39,6 +39,14 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const menuRef = useRef(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleClickOutside = (event) => {
     if (
@@ -110,9 +118,13 @@ export default function Navbar() {
   return (
     <>
       <section
-        className={cn("relative z-[23] bg-transparent opacity-100 ", {
-          "pb-36 md:pb-0": pathname === "/"
-        })}
+        className={cn(
+          "relative z-[23] bg-transparent opacity-100 lg:sticky lg:top-0 lg:transition-colors lg:duration-300",
+          {
+            "pb-36 md:pb-0": pathname === "/",
+            "lg:bg-black/80 lg:backdrop-blur-md": scrolled
+          }
+        )}
       >
         <div
           className={
