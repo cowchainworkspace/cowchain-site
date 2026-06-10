@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { useOpenForm } from "../../hooks/useOpenForm";
 import LoaderWrapper from "./loaderWrapper";
+import MobileCtaBar from "@/components/MobileCtaBar";
 
 const Navbar = dynamic(() => import("@/components/Navbar"), {
   loading: () => <Loading />
@@ -81,6 +82,7 @@ export default function DashboardLayout({ children }) {
         <Footer footerForm={pathname !== "/blog" ? false : true} />
       </div>
       <ContactForm modalOpen={openForm} setModalOpen={setOpenForm} />
+      <MobileCtaBar />
     </section>
   );
 }
