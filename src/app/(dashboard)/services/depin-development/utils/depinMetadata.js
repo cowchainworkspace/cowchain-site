@@ -16,13 +16,11 @@ export const metadata = {
     siteName: "Cowchain",
     title,
     description,
-    images: ["https://cowchain.io/images/og-image.png"]
   },
   twitter: {
     card: "summary_large_image",
     site: "@cow_chain",
     title,
     description,
-    images: ["https://cowchain.io/images/og-image.png"]
   }
 };

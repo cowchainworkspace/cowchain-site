@@ -8,14 +8,12 @@ export const metadata = {
     siteName: "Cowchain",
     title: "White Label Web Development Services | Cowchain",
     description: "Elevate your offerings with our customizable white label solutions. Cowchain provides expert, customizable solutions that allow you to deliver exceptional websites.",
-    images: ["https://cowchain.io/images/og-image.png"]
   },
   twitter: {
     card: "summary_large_image",
     site: "@cow_chain",
     title: "White Label Web Development Services | Cowchain",
     description: "Elevate your offerings with our customizable white label solutions. Cowchain provides expert, customizable solutions that allow you to deliver exceptional websites.",
-    images: ["https://cowchain.io/images/og-image.png"]
   },
     alternates: {
       canonical: "/services/white-label-solutions"

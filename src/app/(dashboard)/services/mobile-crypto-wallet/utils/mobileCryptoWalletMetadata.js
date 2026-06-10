@@ -8,14 +8,12 @@ export const metadata = {
     siteName: "Cowchain",
     title: "Secure Mobile Crypto Wallet – Easy Access & Safe Storage",
     description: "Enjoy secure and easy access to your crypto assets with our mobile wallet. Store, manage, and transfer cryptocurrencies safely, anytime, anywhere.",
-    images: ["https://cowchain.io/images/og-image.png"]
   },
   twitter: {
     card: "summary_large_image",
     site: "@cow_chain",
     title: "Secure Mobile Crypto Wallet – Easy Access & Safe Storage",
     description: "Enjoy secure and easy access to your crypto assets with our mobile wallet. Store, manage, and transfer cryptocurrencies safely, anytime, anywhere.",
-    images: ["https://cowchain.io/images/og-image.png"]
   },
   alternates: {
     canonical: "/services/mobile-crypto-wallet"

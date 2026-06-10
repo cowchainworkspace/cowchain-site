@@ -8,14 +8,12 @@ export const metadata = {
     siteName: "Cowchain",
     title: "Create Your Own ICO Easily with Our ICO Constructor",
     description: "Create your own ICO effortlessly with our ICO constructor. Customize your platform, launch tokens, and manage fundraising with ease and security.",
-    images: ["https://cowchain.io/images/og-image.png"]
   },
   twitter: {
     card: "summary_large_image",
     site: "@cow_chain",
     title: "Create Your Own ICO Easily with Our ICO Constructor",
     description: "Create your own ICO effortlessly with our ICO constructor. Customize your platform, launch tokens, and manage fundraising with ease and security.",
-    images: ["https://cowchain.io/images/og-image.png"]
   },
   alternates: {
     canonical: "/services/ico-constructor"
