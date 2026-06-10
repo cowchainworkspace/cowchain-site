@@ -8,14 +8,12 @@ export const metadata = {
     siteName: "Cowchain",
     title: "Create Your White Label NFT Marketplace Today",
     description: "Launch your White Label NFT Marketplace with Cowchain! Customize your platform, enable secure transactions, and start your NFT business today.",
-    images: ["https://cowchain.io/images/og-image.png"]
   },
   twitter: {
     card: "summary_large_image",
     site: "@cow_chain",
     title: "Create Your White Label NFT Marketplace Today",
     description: "Launch your White Label NFT Marketplace with Cowchain! Customize your platform, enable secure transactions, and start your NFT business today.",
-    images: ["https://cowchain.io/images/og-image.png"]
   },
     alternates: {
       canonical: "/services/nft-marketplace"

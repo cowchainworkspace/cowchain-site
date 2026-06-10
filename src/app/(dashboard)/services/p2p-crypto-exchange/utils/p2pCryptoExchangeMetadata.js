@@ -8,14 +8,12 @@ export const metadata = {
     siteName: "Cowchain",
     title: "P2P Crypto Exchange Development Services for Your Needs",
     description: "Build secure and scalable P2P crypto exchanges with Cowchain.io. Discover custom development services tailored to your blockchain needs.",
-    images: ["https://cowchain.io/images/og-image.png"]
   },
   twitter: {
     card: "summary_large_image",
     site: "@cow_chain",
     title: "P2P Crypto Exchange Development Services for Your Needs",
     description: "Build secure and scalable P2P crypto exchanges with Cowchain.io. Discover custom development services tailored to your blockchain needs.",
-    images: ["https://cowchain.io/images/og-image.png"]
   },
     alternates: {
       canonical: "/services/p2p-crypto-exchange"

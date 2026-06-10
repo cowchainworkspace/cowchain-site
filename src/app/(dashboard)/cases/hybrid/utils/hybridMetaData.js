@@ -8,14 +8,12 @@ export const metadata = {
     siteName: "Cowchain",
     title: "Hybrid: Revolutionizing Blockchain and AI Integration",
     description: "Hybrid is a Layer 2 blockchain on Arbitrum Nitro using MoE AI agents for real-time on-chain AI, with Atlas - a Web3 copilot for market research.",
-    images: ["https://cowchain.io/images/og-image.png"]
   },
   twitter: {
     card: "summary_large_image",
     site: "@cow_chain",
     title: "Hybrid: Revolutionizing Blockchain and AI Integration",
     description: "Hybrid is a Layer 2 blockchain on Arbitrum Nitro using MoE AI agents for real-time on-chain AI, with Atlas - a Web3 copilot for market research.",
-    images: ["https://cowchain.io/images/og-image.png"]
   },
   alternates: {
     canonical: "/cases/hybrid"

@@ -19,21 +19,12 @@ export const metadata = {
     url: "https://cowchain.io/",
     siteName: "Cowchain",
     title,
-    description: socialDescription,
-    images: [
-      {
-        url: "https://cowchain.io/images/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Cowchain — Web3 Development Company"
-      }
-    ]
+    description: socialDescription
   },
   twitter: {
     card: "summary_large_image",
     site: "@cow_chain",
     title,
     description: socialDescription,
-    images: ["https://cowchain.io/images/og-image.png"]
   }
 };

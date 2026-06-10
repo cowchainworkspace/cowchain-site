@@ -8,14 +8,12 @@ export const metadata = {
     siteName: "Cowchain",
     title: "Full-Stack Development Services | Cowchain",
     description: "Cowchain is a Web3 full-stack development company that has shipped 150+ blockchain products since 2020 — front-end, back-end, smart contracts and infrastructure in one team.",
-    images: ["https://cowchain.io/images/og-image.png"]
   },
   twitter: {
     card: "summary_large_image",
     site: "@cow_chain",
     title: "Full-Stack Development Services | Cowchain",
     description: "Cowchain is a Web3 full-stack development company that has shipped 150+ blockchain products since 2020 — front-end, back-end, smart contracts and infrastructure in one team.",
-    images: ["https://cowchain.io/images/og-image.png"]
   },
     alternates: {
       canonical: "/services/web3-fullstack-development"
