@@ -29,7 +29,7 @@ export default function Image() {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 64, fontWeight: 700, lineHeight: 1.05, maxWidth: 1000 }}>
+          <div style={{ display: "flex", fontSize: 64, fontWeight: 700, lineHeight: 1.05, maxWidth: 1000 }}>
             Web3 Development Company
           </div>
           <div style={{ display: "flex", fontSize: 30, color: "#c4b5fd", marginTop: 24, maxWidth: 1000 }}>
