@@ -71,7 +71,6 @@ export default function RootLayout({ children }) {
       className={`${poppins.variable} ${montserrat.variable} ${anton.variable} ${manrope.variable} ${roc.variable}`}
     >
       <head>
-        <link rel="preload" href="/homepage/video.mp4" type="video" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
