@@ -536,7 +536,7 @@ export const jsonLdContacts = {
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "Customer Service",
-    "email": "support@cowchain.io",
+    "email": "sales@cowchain.io",
     "availableLanguage": ["English"]
   },
   "sameAs": [

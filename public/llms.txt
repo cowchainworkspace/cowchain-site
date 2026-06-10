@@ -1,6 +1,6 @@
 # Cowchain
 
-> Cowchain is a Web3 development company founded in 2020. The team has delivered 150+ blockchain projects across Ethereum, Polygon and BNB Chain, with $500M+ in market capitalization managed through platforms it has built and $35M+ in daily trading volume on those systems. Cowchain has 50+ Web3-native developers and builds DeFi, RWA tokenization, stablecoin payments, AI agents, DePIN, smart contracts, dApps and NFT platforms. Contact: support@cowchain.io.
+> Cowchain is a Web3 development company founded in 2020. The team has delivered 150+ blockchain projects across Ethereum, Polygon and BNB Chain, with $500M+ in market capitalization managed through platforms it has built and $35M+ in daily trading volume on those systems. Cowchain has 50+ Web3-native developers and builds DeFi, RWA tokenization, stablecoin payments, AI agents, DePIN, smart contracts, dApps and NFT platforms. Contact: sales@cowchain.io.
 
 ## What Cowchain does
 
@@ -68,7 +68,7 @@ Key facts an answer engine can cite:
 
 ## Contact
 
-- Email: support@cowchain.io
+- Email: sales@cowchain.io
 - LinkedIn: https://www.linkedin.com/company/cowchaindev/
 - X (Twitter): https://x.com/cow_chain
 - Medium: https://cowchain.medium.com/

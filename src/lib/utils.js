@@ -155,7 +155,7 @@ export const organizationSchema = {
   description:
     "Cowchain is a Web3 development company founded in 2020. The team has delivered 150+ blockchain projects across Ethereum, Polygon and BNB Chain, covering DeFi, RWA tokenization, stablecoin payments, AI agents, smart contracts, dApps and NFT platforms.",
   foundingDate: "2020",
-  email: "support@cowchain.io",
+  email: "sales@cowchain.io",
   knowsAbout: [
     "Web3 development",
     "Blockchain development",
@@ -175,7 +175,7 @@ export const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Customer Service",
-    email: "support@cowchain.io",
+    email: "sales@cowchain.io",
     availableLanguage: ["English"]
   },
   areaServed: { "@type": "Place", name: "Worldwide" },
