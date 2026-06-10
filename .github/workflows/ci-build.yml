@@ -14,9 +14,9 @@ jobs:
         with:
           node-version: 20
       - name: Install deps
-        run: npm install --no-audit --no-fund
+        run: yarn install --frozen-lockfile
       - name: Build
-        run: npm run build
+        run: yarn build
         env:
           # Valid-format placeholders so module-load `new URL(...)` doesn't throw.
           # Real values live in Vercel env vars; here we only want to surface
