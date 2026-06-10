@@ -4,6 +4,18 @@ import { track, trackBeacon } from "@/lib/track";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 
+function isLikelyBot() {
+  try {
+    if (navigator.webdriver) return true;
+    const ua = navigator.userAgent || "";
+    return /bot|crawl|spider|spyder|slurp|headless|puppeteer|playwright|selenium|phantom|lighthouse|monitor|scrap/i.test(
+      ua
+    );
+  } catch (e) {
+    return false;
+  }
+}
+
 function deviceLabel() {
   const ua = navigator.userAgent || "";
   const mobile = /Mobi|Android|iPhone|iPad|iPod/i.test(ua);
@@ -33,7 +45,8 @@ export default function SiteTracker() {
           type: "enter",
           page: window.location.pathname,
           referrer: document.referrer || "",
-          device: deviceLabel()
+          device: deviceLabel(),
+          bot: isLikelyBot()
         });
       }
     } catch (e) {}

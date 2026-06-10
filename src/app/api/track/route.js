@@ -7,6 +7,9 @@ const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
 export const dynamic = "force-dynamic";
 
+const BOT_RE =
+  /bot|crawl|spider|spyder|slurp|headless|puppeteer|playwright|selenium|phantom|lighthouse|monitor|scrap|facebookexternalhit|gptbot|claudebot|perplexity|bingbot|googlebot|yandex|ahrefs|semrush/i;
+
 function country(headers) {
   const code = (headers.get("x-vercel-ip-country") || "").toUpperCase();
   if (!code || code.length !== 2) return "Unknown";
@@ -24,6 +27,7 @@ function format(p, loc) {
   if (p.type === "enter") {
     return [
       "🟢 Новый визит",
+      p.bot ? "🤖 Бот" : "👤 Человек",
       `📍 ${loc}`,
       `🔗 Вход: ${p.page || "/"}`,
       `↩️ Источник: ${p.referrer || "прямой"}`,
@@ -71,6 +75,10 @@ export async function POST(request) {
   } catch (e) {
     return Response.json({ error: "bad json" }, { status: 400 });
   }
+
+  // Combine the client-side hint with a server-side User-Agent check.
+  const ua = request.headers.get("user-agent") || "";
+  payload.bot = payload.bot === true || BOT_RE.test(ua);
 
   const text = format(payload, country(request.headers));
   if (!text) return Response.json({ error: "unknown type" }, { status: 400 });
