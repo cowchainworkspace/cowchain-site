@@ -11,7 +11,13 @@ export default async function Blog({ searchParams }) {
 
   // Server-render the first page of the article list so the blog index is
   // visible to search and LLM crawlers (BlogList reads the same query key).
-  await queryClient.prefetchInfiniteQuery(blogOptions(tag));
+  // Guarded so a Strapi outage at build time can't fail the build; the client
+  // query then hydrates/fetches on the browser as a fallback.
+  try {
+    await queryClient.prefetchInfiniteQuery(blogOptions(tag));
+  } catch (err) {
+    console.error("blog: failed to prefetch articles from Strapi", err);
+  }
 
   return (
     <>

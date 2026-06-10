@@ -2,12 +2,18 @@ import { getAllArticles } from "@/lib/api/articles";
 
 export default async function sitemap() {
   const now = new Date();
-  const blogs = await getAllArticles();
-  const blogsData = blogs.data.map(({ slug }) => ({
-    url: `https://cowchain.io/blog/articles/${slug}`,
-    lastModified: now,
-    priority: 0.6
-  }));
+  // Don't let a Strapi outage at build time fail the whole sitemap / build.
+  let blogsData = [];
+  try {
+    const blogs = await getAllArticles();
+    blogsData = (blogs?.data || []).map(({ slug }) => ({
+      url: `https://cowchain.io/blog/articles/${slug}`,
+      lastModified: now,
+      priority: 0.6
+    }));
+  } catch (err) {
+    console.error("sitemap: failed to load articles from Strapi", err);
+  }
   return [
     {
       url: "https://cowchain.io/",

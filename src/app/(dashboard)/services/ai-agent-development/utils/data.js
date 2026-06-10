@@ -13,20 +13,14 @@ export const aiAgentBenefits = [
   {
     title: "Agents that transact, not just chat",
     desc: "Give an AI agent its own wallet so it can execute swaps, pay for APIs, rebalance positions, and settle on-chain — autonomously, within limits you define.",
-    icon: InfinitySvg,
-    hasBlackBg: true
   },
   {
     title: "Machine-to-machine payments",
     desc: "Agents pay each other for data, compute, and services in real time using emerging standards like the x402 payment protocol adopted across major cloud and AI platforms.",
-    icon: SpeedSvg,
-    hasBlackBg: true
   },
   {
     title: "Verifiable, on-chain actions",
     desc: "Every agent decision that touches money is auditable on-chain — with spending caps, allow-lists, and human-in-the-loop guardrails baked in.",
-    icon: SecureSvg,
-    hasBlackBg: true
   }
 ];
 

@@ -14,20 +14,14 @@ export const stablecoinBenefits = [
   {
     title: "Near-instant settlement",
     desc: "Move value 24/7 in seconds instead of waiting on bank cut-off times, correspondent chains, or weekend delays. Stablecoins settled an estimated $46T+ in 2025 — more than Visa.",
-    icon: SpeedSvg,
-    hasBlackBg: true
   },
   {
     title: "Lower payment costs",
     desc: "Cut cross-border and FX fees dramatically by replacing intermediaries with on-chain transfers, while keeping a full, auditable transaction trail.",
-    icon: ReduceSvg,
-    hasBlackBg: true
   },
   {
     title: "Programmable money",
     desc: "Embed compliance, escrow, streaming payroll, and automated treasury logic directly into the token and payment flow with smart contracts.",
-    icon: InfinitySvg,
-    hasBlackBg: true
   }
 ];
 

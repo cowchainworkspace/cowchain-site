@@ -13,20 +13,14 @@ export const depinBenefits = [
   {
     title: "Hardware that earns",
     desc: "Token incentives reward real-world contributors — GPUs, storage, bandwidth, hotspots, sensors — turning idle infrastructure into a revenue-sharing network.",
-    icon: InfinitySvg,
-    hasBlackBg: true
   },
   {
     title: "Capital-light scaling",
     desc: "Crowdsource physical supply instead of buying it. DePIN networks bootstrap real capacity faster and cheaper than centralized build-outs.",
-    icon: ReduceSvg,
-    hasBlackBg: true
   },
   {
     title: "Verifiable real-world work",
     desc: "Proof-of-physical-work and oracle attestation make sure rewards map to genuine contribution — not gamed metrics.",
-    icon: SecureSvg,
-    hasBlackBg: true
   }
 ];
 
