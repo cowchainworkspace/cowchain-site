@@ -4,6 +4,7 @@ import dexBg from "@/assets/bg/dex-ellipse-bg.webp";
 import bgEllipse from "@/assets/bg/home-ellipse-bg.webp";
 import mobileProcessEllipse from "@/assets/homepage/ellipse-home-bg-process.webp";
 import Contact from "@/components/Contact";
+import CtaStrip from "@/components/CtaStrip";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ExpertiseServices } from "../../services/components/service/blocks/ExpertiseServices";
@@ -64,6 +65,7 @@ export default function HomeContent() {
         }
         noBg={true}
       />
+      <CtaStrip text={<>Have a Web3 project in mind?</>} />
       <Clients />
       <Industries
         isTwoSides={true}
@@ -126,6 +128,7 @@ and aimed at solving real-world challenges"
         />
       </div>
 
+      <CtaStrip text={<>Ready to start building?</>} />
       <ServiceStack home />
       <Advantages isSecondary={true} />
       <ExpertiseServices
@@ -219,6 +222,7 @@ and aimed at solving real-world challenges"
       <Cases />
       <CasesMobile />
       <Feedback />
+      <CtaStrip text={<>Let&apos;s build your project together</>} />
       <Team />
       <ExpertiseServices
         topBorder={false}
