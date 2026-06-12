@@ -100,7 +100,7 @@ export default function JoinForm() {
       </AnimatePresence>
 
       {/* Project cases marquee, reused from the home page */}
-      <div className="relative z-10 w-full pt-0 lg:pt-24">
+      <div className="relative z-10 w-full">
         <ProjectsLine keyPrefix="jobs-" />
         <ProjectsLineMobile keyPrefix="jobs-" />
       </div>
