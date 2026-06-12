@@ -4,6 +4,8 @@
 
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+// Job applications go to a separate group; falls back to the main chat if unset.
+const JOBS_CHAT_ID = process.env.TELEGRAM_JOBS_CHAT_ID || CHAT_ID;
 
 export const dynamic = "force-dynamic";
 
@@ -61,6 +63,14 @@ function format(p, loc) {
       lines.push(`🔗 Смотрел: ${p.pages.join(" → ")}`);
     return lines.join("\n");
   }
+  if (p.type === "job") {
+    const lines = ["💼 Заявка на роботу!", `📍 ${loc}`];
+    if (p.fullName) lines.push(`👤 ${p.fullName}`);
+    if (p.telegram) lines.push(`✈️ ${p.telegram}`);
+    if (p.position) lines.push(`🧩 Позиція: ${p.position}`);
+    if (p.skills) lines.push(`🛠 Вміє: ${p.skills}`);
+    return lines.join("\n");
+  }
   return null;
 }
 
@@ -83,12 +93,14 @@ export async function POST(request) {
   const text = format(payload, country(request.headers));
   if (!text) return Response.json({ error: "unknown type" }, { status: 400 });
 
+  const chatId = payload.type === "job" ? JOBS_CHAT_ID : CHAT_ID;
+
   try {
     await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        chat_id: CHAT_ID,
+        chat_id: chatId,
         text,
         disable_web_page_preview: true
       })
