@@ -27,6 +27,14 @@ function country(headers) {
   return `${flag} ${name}`;
 }
 
+// Normalise a Telegram handle: prefix "@" when the user omitted it. Links
+// (t.me/..., https://...) are left untouched.
+function tgHandle(v) {
+  const s = String(v || "").trim();
+  if (!s || s.startsWith("@") || /^(https?:\/\/|t\.me\/)/i.test(s)) return s;
+  return `@${s}`;
+}
+
 // Real client IP as seen by Vercel's edge (first hop in x-forwarded-for).
 function clientIp(headers) {
   const xff = headers.get("x-forwarded-for") || "";
@@ -99,7 +107,7 @@ function format(p, loc) {
   if (p.type === "job") {
     const lines = ["💼 Заявка на роботу!", `📍 ${loc}`];
     if (p.fullName) lines.push(`👤 ${p.fullName}`);
-    if (p.telegram) lines.push(`✈️ ${p.telegram}`);
+    if (p.telegram) lines.push(`✈️ ${tgHandle(p.telegram)}`);
     if (p.position) lines.push(`🧩 Позиція: ${p.position}`);
     if (p.skills) lines.push(`🛠 Вміє: ${p.skills}`);
     if (p._isp) lines.push(`🌐 ${p._isp}`);
