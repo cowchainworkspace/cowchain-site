@@ -112,11 +112,18 @@ export default function JoinForm() {
           transition={EASE}
           className="lg:sticky lg:top-40 lg:self-start"
         >
-          <h1 className="mb-4 text-left text-[34px] font-medium leading-[1.05] text-white sm:text-4xl md:text-5xl lg:text-[60px]">
-            Cowchain is looking for talents!
+          <h1 className="text-left font-medium leading-[1.02] text-white">
+            <span className="block text-[44px] sm:text-5xl md:text-6xl lg:text-[72px]">
+              Cowchain
+            </span>
+            <span className="mt-3 block text-xl font-normal text-white/90 sm:text-2xl md:text-3xl">
+              is looking for talents!
+            </span>
           </h1>
-          <p className="max-w-[440px] text-sm text-secondary sm:text-base">
-            Fill the form and we will contact you.
+          <p className="mt-5 max-w-[440px] text-sm text-secondary sm:text-base">
+            Tell us about yourself — we&apos;re always excited to meet people
+            who love building cool things. Fill out the form and we&apos;ll get
+            in touch.
           </p>
         </motion.div>
 
