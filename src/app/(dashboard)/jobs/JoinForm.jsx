@@ -1,5 +1,7 @@
 "use client";
 
+import ProjectsLine from "@/app/(dashboard)/(home)/blocks/ProjectsLine";
+import ProjectsLineMobile from "@/app/(dashboard)/(home)/blocks/ProjectsLineMobile";
 import bg from "@/assets/homepage/form/formBg.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
@@ -97,7 +99,13 @@ export default function JoinForm() {
         )}
       </AnimatePresence>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-5 pb-20 pt-28 sm:px-6 sm:pt-32 md:px-8 md:pb-28 lg:grid-cols-2 lg:gap-20 lg:px-16 lg:pt-40">
+      {/* Project cases marquee, reused from the home page */}
+      <div className="relative z-10 w-full pt-20 lg:pt-24">
+        <ProjectsLine keyPrefix="jobs-" />
+        <ProjectsLineMobile keyPrefix="jobs-" />
+      </div>
+
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-5 pb-20 pt-10 sm:px-6 sm:pt-14 md:px-8 md:pb-28 lg:grid-cols-2 lg:gap-20 lg:px-16 lg:pt-20">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -105,12 +113,10 @@ export default function JoinForm() {
           className="lg:sticky lg:top-40 lg:self-start"
         >
           <h1 className="mb-4 text-left text-[34px] font-medium leading-[1.05] text-white sm:text-4xl md:text-5xl lg:text-[60px]">
-            Join Cowchain
+            Cowchain is looking for talents!
           </h1>
           <p className="max-w-[440px] text-sm text-secondary sm:text-base">
-            Leave your application — tell us which position you&apos;re
-            interested in and what you can do in crypto. If you&apos;re a good
-            fit, we&apos;ll reach out to you on Telegram.
+            Fill the form and we will contact you.
           </p>
         </motion.div>
 
