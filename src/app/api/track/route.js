@@ -65,6 +65,22 @@ async function accurateGeo(ip) {
   }
 }
 
+// Render UTM tags (source/medium/campaign/term/content) as a compact line,
+// e.g. "🏷 utm: source=clutch.co · medium=referral_profile". Null if none.
+function utmLine(utm) {
+  if (!utm || typeof utm !== "object") return null;
+  const ORDER = ["source", "medium", "campaign", "term", "content"];
+  const keys = Object.keys(utm);
+  const ordered = [
+    ...ORDER.filter((k) => k in utm),
+    ...keys.filter((k) => !ORDER.includes(k))
+  ];
+  const parts = ordered
+    .filter((k) => utm[k])
+    .map((k) => `${k}=${utm[k]}`);
+  return parts.length ? `🏷 utm: ${parts.join(" · ")}` : null;
+}
+
 function format(p, loc) {
   if (p.type === "enter") {
     return [
@@ -73,6 +89,7 @@ function format(p, loc) {
       `📍 ${loc}`,
       `🔗 Вход: ${p.page || "/"}`,
       `↩️ Источник: ${p.referrer || "прямой"}`,
+      utmLine(p.utm),
       p.device ? `💻 ${p.device}` : null
     ]
       .filter(Boolean)

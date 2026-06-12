@@ -16,6 +16,23 @@ function isLikelyBot() {
   }
 }
 
+// Pull utm_* params out of the landing URL (e.g. ?utm_source=clutch.co
+// &utm_medium=referral_profile). Returns an object of present keys, or null.
+function utmParams() {
+  try {
+    const sp = new URLSearchParams(window.location.search);
+    const utm = {};
+    for (const [k, v] of sp.entries()) {
+      if (k.toLowerCase().startsWith("utm_") && v) {
+        utm[k.toLowerCase().slice(4)] = v;
+      }
+    }
+    return Object.keys(utm).length ? utm : null;
+  } catch (e) {
+    return null;
+  }
+}
+
 function deviceLabel() {
   const ua = navigator.userAgent || "";
   const mobile = /Mobi|Android|iPhone|iPad|iPod/i.test(ua);
@@ -45,6 +62,7 @@ export default function SiteTracker() {
           type: "enter",
           page: window.location.pathname,
           referrer: document.referrer || "",
+          utm: utmParams(),
           device: deviceLabel(),
           bot: isLikelyBot()
         });
