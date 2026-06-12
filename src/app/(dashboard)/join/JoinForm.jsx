@@ -176,7 +176,7 @@ export default function JoinForm() {
               aria-invalid={errors.position ? "true" : "false"}
             >
               <option value="" disabled>
-                Which position interests you?
+                Choose position
               </option>
               {POSITIONS.map((p) => (
                 <option key={p} value={p} className="bg-black">
@@ -222,7 +222,7 @@ export default function JoinForm() {
             <textarea
               className="text_input w-full resize-none"
               rows={4}
-              placeholder="What can you do in crypto?"
+              placeholder="Describe your experience in crypto"
               {...register("skills", { required: true, maxLength: 1000 })}
               aria-invalid={errors.skills ? "true" : "false"}
             />
