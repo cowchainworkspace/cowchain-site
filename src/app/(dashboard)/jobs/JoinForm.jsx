@@ -1,6 +1,8 @@
 "use client";
 
+import bg from "@/assets/homepage/form/formBg.svg";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -70,7 +72,16 @@ export default function JoinForm() {
   };
 
   return (
-    <section className="relative min-h-screen bg-black">
+    <section className="relative min-h-screen overflow-hidden bg-black">
+      {/* Decorative gradient ellipse, reused from the contact form */}
+      <Image
+        aria-hidden
+        priority
+        src={bg}
+        alt=""
+        className="pointer-events-none absolute left-1/2 top-[-260px] z-0 w-[680px] max-w-none -translate-x-1/2 select-none opacity-70 sm:top-[-360px] sm:w-[900px] md:left-[-360px] md:top-[-520px] md:translate-x-0 md:w-[1300px] md:opacity-100"
+      />
+
       {/* Success notification */}
       <AnimatePresence>
         {toast && (
@@ -79,25 +90,27 @@ export default function JoinForm() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -24 }}
             transition={EASE}
-            className="fixed left-1/2 top-6 z-[100] -translate-x-1/2 border border-white bg-black px-6 py-4 text-center font-roc text-sm uppercase text-white shadow-lg"
+            className="fixed inset-x-4 top-5 z-[100] mx-auto max-w-md border border-white bg-black/90 px-5 py-4 text-center font-roc text-xs uppercase leading-relaxed text-white shadow-lg backdrop-blur-sm sm:text-sm md:left-1/2 md:right-auto md:inset-x-auto md:-translate-x-1/2"
           >
-            Заявку надіслано! Ми звʼяжемось з тобою в Telegram.
+            Application sent! We&apos;ll reach out to you on Telegram.
           </motion.div>
         )}
       </AnimatePresence>
 
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 py-24 md:px-8 lg:grid-cols-2 lg:gap-20 lg:px-16 lg:py-32">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-5 pb-20 pt-28 sm:px-6 sm:pt-32 md:px-8 md:pb-28 lg:grid-cols-2 lg:gap-20 lg:px-16 lg:pt-40">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={EASE}
+          className="lg:sticky lg:top-40 lg:self-start"
         >
-          <h1 className="mb-5 text-left text-4xl uppercase text-white md:text-5xl">
-            Приєднуйся до Cowchain
+          <h1 className="mb-4 text-left text-[34px] font-medium leading-[1.05] text-white sm:text-4xl md:text-5xl lg:text-[60px]">
+            Join Cowchain
           </h1>
-          <p className="max-w-[420px] text-sm text-secondary lg:text-base">
-            Залиш заявку — розкажи, яка позиція тобі цікава та що вмієш у крипті.
-            Якщо підходиш, ми звʼяжемось з тобою в Telegram.
+          <p className="max-w-[440px] text-sm text-secondary sm:text-base">
+            Leave your application — tell us which position you&apos;re
+            interested in and what you can do in crypto. If you&apos;re a good
+            fit, we&apos;ll reach out to you on Telegram.
           </p>
         </motion.div>
 
@@ -106,30 +119,30 @@ export default function JoinForm() {
           initial="hidden"
           animate="show"
           onSubmit={handleSubmit(onSubmit)}
-          className="userform flex flex-col gap-y-6"
+          className="userform flex w-full flex-col gap-y-5 sm:gap-y-6"
           noValidate
         >
           <input type="text" autoFocus="autofocus" className="hidden" />
 
           <motion.div variants={item} className="flex flex-col gap-y-2">
             <input
-              className="text_input"
+              className="text_input w-full"
               type="text"
-              placeholder="Імʼя"
+              placeholder="Full Name"
               {...register("fullName", { required: true, maxLength: 60 })}
               aria-invalid={errors.fullName ? "true" : "false"}
             />
             {errors.fullName?.type === "required" && (
-              <span className="error-span">Будь ласка, вкажіть імʼя!</span>
+              <span className="error-span">Please, enter your name!</span>
             )}
             {errors.fullName?.type === "maxLength" && (
-              <span className="error-span">Занадто довге імʼя</span>
+              <span className="error-span">Name is too long</span>
             )}
           </motion.div>
 
           <motion.div variants={item} className="flex flex-col gap-y-2">
             <input
-              className="text_input"
+              className="text_input w-full"
               type="text"
               placeholder="Telegram (@username)"
               {...register("telegram", { required: true, maxLength: 60 })}
@@ -137,20 +150,20 @@ export default function JoinForm() {
             />
             {errors.telegram?.type === "required" && (
               <span className="error-span">
-                Будь ласка, вкажіть Telegram-акаунт!
+                Please, enter your Telegram account!
               </span>
             )}
           </motion.div>
 
           <motion.div variants={item} className="flex flex-col gap-y-2">
             <select
-              className="text_input"
+              className="text_input w-full"
               defaultValue=""
               {...register("position", { required: true })}
               aria-invalid={errors.position ? "true" : "false"}
             >
               <option value="" disabled>
-                Яка позиція цікава?
+                Which position interests you?
               </option>
               {POSITIONS.map((p) => (
                 <option key={p} value={p} className="bg-black">
@@ -159,7 +172,7 @@ export default function JoinForm() {
               ))}
             </select>
             {errors.position?.type === "required" && (
-              <span className="error-span">Будь ласка, оберіть позицію!</span>
+              <span className="error-span">Please, select a position!</span>
             )}
 
             {/* Manual entry when the role isn't in the list */}
@@ -173,9 +186,9 @@ export default function JoinForm() {
                   className="overflow-hidden"
                 >
                   <input
-                    className="text_input mt-4 w-full"
+                    className="text_input mt-3 w-full sm:mt-4"
                     type="text"
-                    placeholder="Вкажіть позицію"
+                    placeholder="Enter your position"
                     {...register("positionOther", {
                       required: isOther,
                       maxLength: 80
@@ -184,7 +197,7 @@ export default function JoinForm() {
                   />
                   {errors.positionOther?.type === "required" && (
                     <span className="error-span mt-2 block">
-                      Будь ласка, вкажіть позицію!
+                      Please, enter your position!
                     </span>
                   )}
                 </motion.div>
@@ -194,19 +207,19 @@ export default function JoinForm() {
 
           <motion.div variants={item} className="flex flex-col gap-y-2">
             <textarea
-              className="text_input resize-none"
+              className="text_input w-full resize-none"
               rows={4}
-              placeholder="Що вмієш у крипті?"
+              placeholder="What can you do in crypto?"
               {...register("skills", { required: true, maxLength: 1000 })}
               aria-invalid={errors.skills ? "true" : "false"}
             />
             {errors.skills?.type === "required" && (
               <span className="error-span">
-                Будь ласка, опишіть свій досвід!
+                Please, describe your experience!
               </span>
             )}
             {errors.skills?.type === "maxLength" && (
-              <span className="error-span">Занадто довгий опис</span>
+              <span className="error-span">Description is too long</span>
             )}
           </motion.div>
 
@@ -214,7 +227,7 @@ export default function JoinForm() {
             variants={item}
             type="submit"
             disabled={loading}
-            className="btn-submit my-4 disabled:cursor-not-allowed disabled:opacity-60"
+            className="btn-submit my-2 w-full disabled:cursor-not-allowed disabled:opacity-60 sm:my-4"
           >
             {loading ? (
               <span className="flex items-center gap-2">
@@ -227,10 +240,10 @@ export default function JoinForm() {
                     repeat: Infinity
                   }}
                 />
-                Надсилаємо…
+                Sending…
               </span>
             ) : (
-              "Надіслати заявку"
+              "Send application"
             )}
           </motion.button>
         </motion.form>
