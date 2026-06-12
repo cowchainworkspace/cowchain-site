@@ -1,5 +1,7 @@
 // Receives visit/session/form events from the client and forwards a formatted
-// notification to a Telegram chat. Country is derived from Vercel geo headers.
+// notification to a Telegram chat. Country is derived from Vercel geo headers
+// for high-volume events; submissions (form/job) additionally do an accurate
+// external geo lookup, since Vercel occasionally mislabels regional IP blocks.
 // No-ops gracefully if the Telegram env vars aren't set.
 
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
@@ -23,6 +25,36 @@ function country(headers) {
     ...[...code].map((c) => 127397 + c.charCodeAt(0))
   );
   return `${flag} ${name}`;
+}
+
+// Real client IP as seen by Vercel's edge (first hop in x-forwarded-for).
+function clientIp(headers) {
+  const xff = headers.get("x-forwarded-for") || "";
+  return xff.split(",")[0].trim() || headers.get("x-real-ip") || "";
+}
+
+// Accurate geo via an external lookup. Used only for submissions, where the
+// extra latency is fine and the correct country actually matters. Returns a
+// "flag Country (City, Region)" string, or null on any failure/timeout.
+async function accurateGeo(ip) {
+  if (!ip) return null;
+  try {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 2500);
+    const res = await fetch(`https://ipwho.is/${ip}`, { signal: ctrl.signal });
+    clearTimeout(timer);
+    const d = await res.json();
+    if (!d || d.success === false || !d.country) return null;
+    const flag = d.flag && d.flag.emoji ? d.flag.emoji : "";
+    const place = [d.city, d.region].filter(Boolean).join(", ");
+    const isp = d.connection && d.connection.isp ? d.connection.isp : "";
+    return {
+      loc: `${flag} ${d.country}${place ? ` (${place})` : ""}`.trim(),
+      isp
+    };
+  } catch (e) {
+    return null;
+  }
 }
 
 function format(p, loc) {
@@ -59,6 +91,7 @@ function format(p, loc) {
     if (p.projectType) lines.push(`🧩 ${p.projectType}`);
     if (p.projectPrice) lines.push(`💰 ${p.projectPrice}`);
     if (p.details) lines.push(`💬 ${p.details}`);
+    if (p._isp) lines.push(`🌐 ${p._isp}`);
     if (Array.isArray(p.pages) && p.pages.length)
       lines.push(`🔗 Смотрел: ${p.pages.join(" → ")}`);
     return lines.join("\n");
@@ -69,6 +102,7 @@ function format(p, loc) {
     if (p.telegram) lines.push(`✈️ ${p.telegram}`);
     if (p.position) lines.push(`🧩 Позиція: ${p.position}`);
     if (p.skills) lines.push(`🛠 Вміє: ${p.skills}`);
+    if (p._isp) lines.push(`🌐 ${p._isp}`);
     return lines.join("\n");
   }
   return null;
@@ -90,7 +124,17 @@ export async function POST(request) {
   const ua = request.headers.get("user-agent") || "";
   payload.bot = payload.bot === true || BOT_RE.test(ua);
 
-  const text = format(payload, country(request.headers));
+  // Fast Vercel header by default; accurate external lookup for submissions.
+  let loc = country(request.headers);
+  if (payload.type === "form" || payload.type === "job") {
+    const geo = await accurateGeo(clientIp(request.headers));
+    if (geo) {
+      loc = geo.loc;
+      payload._isp = geo.isp;
+    }
+  }
+
+  const text = format(payload, loc);
   if (!text) return Response.json({ error: "unknown type" }, { status: 400 });
 
   const chatId = payload.type === "job" ? JOBS_CHAT_ID : CHAT_ID;
